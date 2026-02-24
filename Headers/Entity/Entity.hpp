@@ -15,9 +15,13 @@ protected:
     const char* name;
 
 public:
+    Entity() = default;
     Entity(const char* n) : name(n) {};
 
     void setScene(Scene* scene);
+
+    void setName(const char* n) {name = n;}
+    const char* getName() {return this->name;}
 
     virtual void processEvent(EventA* event);
     virtual void processEvent(CustomEvent* event);

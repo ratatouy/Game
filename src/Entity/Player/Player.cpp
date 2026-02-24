@@ -7,7 +7,6 @@
 
 void Player::update() {
     // std::cout << "Player Updating" << std::endl;
-    attack();
     sprites->update();
 }
 
@@ -20,6 +19,8 @@ void Player::attack() {
     std::cout << "Raptorjesus von Behfeur calls upon his Rechauffeur in hope to anihilate his ArchNemesis" << std::endl;
     std::cout << "\"RECHAUFFEUR STRKE !!!!\"" << std::endl;
 
-    current_scene->addEntity(new Projectile("pr", transform->getPosition(), {1,0}), "pr");
+    Projectile* player_proj = new Projectile("player_proj", transform->getPosition(), {0.5f,0.f});
+    player_proj->sprites->AddSprite("Sprites/cato.png");
+    current_scene->addEntity(player_proj);
     transform->rotate(45);
 }

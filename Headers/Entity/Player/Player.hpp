@@ -15,7 +15,7 @@ class Player : public Entity {
 public:
     Player(const char* name) : Entity(name) {};
     Player(const char* name, TransformableComponent* transform) : Entity(name), transform(transform) {};
-    Player(const char* name, TransformableComponent* transform, EntitySpriteComponent* sprites) : Entity(name), transform(transform), sprites(sprites) {};
+    Player(const char* n, TransformableComponent* tr, EntitySpriteComponent* spr) : Entity(n), transform(tr), sprites(spr) {};
     
     void setTransformable(TransformableComponent* transform) {this->transform = transform;}
     void setEntitySprite(EntitySpriteComponent* sprites) {this->sprites = sprites;}

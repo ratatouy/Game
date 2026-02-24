@@ -4,7 +4,7 @@
 bool RenderEngine::instantiated_ = false;
 
 
-RenderEngine::RenderEngine(const char* title = "Game", int width = 0, int height = 0)
+RenderEngine::RenderEngine(const char* title, int width, int height)
 {
     if (instantiated_) {
         throw std::runtime_error("RenderEngine already instantiated");

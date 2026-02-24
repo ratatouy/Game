@@ -22,7 +22,7 @@ public:
 
     void setEventHandler(EventHandler* EventHandler);
 
-    void addEntity(Entity* entity, const char* name);
+    void addEntity(Entity* entity);
 
     Entity* getEntity(const char* name);
 
