@@ -9,13 +9,22 @@
 
 class Scene; // Forward Declaration of Scene
 
+
+/**
+ \class Entity
+
+ \brief Base class for all entities. All entities have
+ 
+ \warning "update" and "render" methods NEED to be overrided
+ 
+ */
 class Entity {
 protected:
     Scene* current_scene;
     const char* name;
 
 public:
-    Entity() = default;
+    Entity() = delete;
     Entity(const char* n) : name(n) {};
 
     void setScene(Scene* scene);

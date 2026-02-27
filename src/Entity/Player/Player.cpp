@@ -7,20 +7,20 @@
 
 void Player::update() {
     // std::cout << "Player Updating" << std::endl;
-    sprites->update();
+    entitySprite_->update();
 }
 
 void Player::render(sf::RenderWindow* window) {
     // std::cout << "Player Rendering" << std::endl;
-    this->sprites->render(window);
+    this->entitySprite_->render(window);
 }
 
 void Player::attack() {
     std::cout << "Raptorjesus von Behfeur calls upon his Rechauffeur in hope to anihilate his ArchNemesis" << std::endl;
     std::cout << "\"RECHAUFFEUR STRKE !!!!\"" << std::endl;
 
-    Projectile* player_proj = new Projectile("player_proj", transform->getPosition(), {0.5f,0.f});
+    Projectile* player_proj = new Projectile("player_proj", transformable_->getPosition(), {0.5f,0.f});
     player_proj->sprites->AddSprite("Sprites/cato.png");
     current_scene->addEntity(player_proj);
-    transform->rotate(45);
+    transformable_->rotate(45);
 }

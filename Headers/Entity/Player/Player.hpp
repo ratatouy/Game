@@ -11,26 +11,78 @@
 #include "Events/CustomEvent.hpp"
 #include "Events/CustomEvents/HitEvent.hpp"
 
+
+/**
+ * @class Player
+ */
 class Player : public Entity {
+
+
+protected:
+    TransformableComponent* transformable_;
+    EntitySpriteComponent* entitySprite_;
+
+
 public:
-    Player(const char* name) : Entity(name) {};
-    Player(const char* name, TransformableComponent* transform) : Entity(name), transform(transform) {};
-    Player(const char* n, TransformableComponent* tr, EntitySpriteComponent* spr) : Entity(n), transform(tr), sprites(spr) {};
+    /**
+     * @brief Lowest Constructor @memberof Player
+     \param[in] name Name of the Player
+     */
+    public: Player(const char* name) : Entity(name) {};
+
+
+    /**
+     * @brief Intermediate Transformable Constructor @memberof Player
+     * 
+     * @param name Name of the Player
+     * @param transformable Pointer to the TransformableComponent to attach to the player
+     */
+    Player(const char* name, TransformableComponent* transformable) : Entity(name), transformable_(transformable) {};
+
+
+    /**
+     * @brief Full Constructor
+     * 
+     * @param name Name of the Player
+     * @param transformable Pointer to the TransformableComponent to attach to the player
+     * @param entitySprite Pointer to the EntitySpriteComponent to attache to the player
+     */
+    Player(const char* name, TransformableComponent* transformable, EntitySpriteComponent* entitySprite) : Entity(name), transformable_(transformable), entitySprite_(entitySprite) {};
     
-    void setTransformable(TransformableComponent* transform) {this->transform = transform;}
-    void setEntitySprite(EntitySpriteComponent* sprites) {this->sprites = sprites;}
 
-    TransformableComponent* getTransformable() {return transform;}
-    EntitySpriteComponent* getEntitySprite() {return sprites;}
+    /** @brief Transformable Setter */
+    void setTransformable(TransformableComponent* transformable) {this->transformable_ = transformable;}
+    /** @brief EntitySprite Setter */
+    void setEntitySprite(EntitySpriteComponent* entitySprite) {this->entitySprite_ = entitySprite;}
 
+
+    /** @brief Transformable Getter */
+    TransformableComponent* getTransformable() {return transformable_;}
+    /** @brief EntitySprite Getter */
+    EntitySpriteComponent* getEntitySprite() {return entitySprite_;}
+
+
+
+    /**
+     * @brief Updates the Player
+     * 
+     * @note Order of Updating is : \\n
+     * - IDK
+     */
     void update() override;
+
+
+
+    /**
+     * @brief Renders the player
+     * 
+     * @param window Pointer to the RenderWindow
+     */
     void render(sf::RenderWindow* window) override;
 
-    void attack();
 
-private:
-    TransformableComponent* transform;
-    EntitySpriteComponent* sprites;
+
+    void attack();
 };
 
 #endif

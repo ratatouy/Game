@@ -30,6 +30,7 @@ int main() {
     raptorTransform->setScale({0.3f, 0.3f});
     EntitySpriteComponent* raptorSprite = new EntitySpriteComponent(raptorTransform);
     raptorSprite->AddSprite("Sprites/raptorjesus.jpeg");
+
     Player* raptor = new Player("raptor", raptorTransform, raptorSprite);
 
 
