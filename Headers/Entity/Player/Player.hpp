@@ -50,7 +50,10 @@ public:
     Player(const char* name, TransformableComponent* transformable, EntitySpriteComponent* entitySprite) : Entity(name), transformable_(transformable), entitySprite_(entitySprite) {};
     
 
-    /** @brief Transformable Setter */
+    /** @brief Transformable Setter
+     * 
+     * @param transformable Pointer to the TransformableComponent to attach to the player
+    */
     void setTransformable(TransformableComponent* transformable) {this->transformable_ = transformable;}
     /** @brief EntitySprite Setter */
     void setEntitySprite(EntitySpriteComponent* entitySprite) {this->entitySprite_ = entitySprite;}
@@ -66,7 +69,7 @@ public:
     /**
      * @brief Updates the Player
      * 
-     * @note Order of Updating is : \\n
+     * @note Order of Updating is :
      * - IDK
      */
     void update() override;

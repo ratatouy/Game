@@ -1,0 +1,4 @@
+<map id="EntitySpriteComponent" name="EntitySpriteComponent">
+<area shape="rect" id="node1" title="Component for the sprites of an entity." alt="" coords="14,95,187,121"/>
+<area shape="rect" id="node2" href="$class_transformable_component.html" title="Component for Transformable objects, allows for those transformations :" alt="" coords="5,5,196,32"/>
+</map>

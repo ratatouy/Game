@@ -1,0 +1,142 @@
+\hypertarget{class_projectile}{}\doxysection{Projectile Class Reference}
+\label{class_projectile}\index{Projectile@{Projectile}}
+
+
+{\ttfamily \#include $<$Projectile.\+hpp$>$}
+
+
+
+Inheritance diagram for Projectile\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{class_projectile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Projectile\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_projectile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projectile_a0bfe3550849143820e5532915db52461}{Projectile}} (const char $\ast$n, sf\+::\+Vector2f p=\{0, 0\}, sf\+::\+Vector2f sp=\{0, 0\})
+\item 
+void \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{update}} () override
+\item 
+void \mbox{\hyperlink{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}{render}} (sf\+::\+Render\+Window $\ast$window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$ \mbox{\hyperlink{class_projectile_aec950c0a5435681274cba86dc181794a}{transformable}}
+\item 
+\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$ \mbox{\hyperlink{class_projectile_ad6d24ac6af7e648e6cc7b508f08a1cbf}{sprites}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Projectile.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projectile_a0bfe3550849143820e5532915db52461}\label{class_projectile_a0bfe3550849143820e5532915db52461}} 
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}}
+{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{n,  }\item[{sf\+::\+Vector2f}]{p = {\ttfamily \{0,0\}},  }\item[{sf\+::\+Vector2f}]{sp = {\ttfamily \{0,0\}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Projectile.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_projectile_a0bfe3550849143820e5532915db52461_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}\label{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}} 
+\index{Projectile@{Projectile}!render@{render}}
+\index{render@{render}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Projectile\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_ad87af2e77fbcda048f7543bfb43ddaaf}{Entity}}.
+
+
+
+Definition at line 19 of file Projectile.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_projectile_ac41ad56034b53e739619fabbd5e49652}\label{class_projectile_ac41ad56034b53e739619fabbd5e49652}} 
+\index{Projectile@{Projectile}!update@{update}}
+\index{update@{update}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Projectile\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{Entity}}.
+
+
+
+Definition at line 12 of file Projectile.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_projectile_ac41ad56034b53e739619fabbd5e49652_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projectile_ad6d24ac6af7e648e6cc7b508f08a1cbf}\label{class_projectile_ad6d24ac6af7e648e6cc7b508f08a1cbf}} 
+\index{Projectile@{Projectile}!sprites@{sprites}}
+\index{sprites@{sprites}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}}$\ast$ Projectile\+::sprites}
+
+
+
+Definition at line 16 of file Projectile.\+hpp.
+
+\mbox{\Hypertarget{class_projectile_aec950c0a5435681274cba86dc181794a}\label{class_projectile_aec950c0a5435681274cba86dc181794a}} 
+\index{Projectile@{Projectile}!transformable@{transformable}}
+\index{transformable@{transformable}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{transformable}{transformable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}$\ast$ Projectile\+::transformable}
+
+
+
+Definition at line 15 of file Projectile.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\+Entity/\+Projectile/\mbox{\hyperlink{_projectile_8hpp}{Projectile.\+hpp}}\item 
+src/\+Entity/\+Projectiles/\mbox{\hyperlink{_projectile_8cpp}{Projectile.\+cpp}}\end{DoxyCompactItemize}

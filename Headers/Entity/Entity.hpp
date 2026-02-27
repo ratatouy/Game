@@ -13,7 +13,7 @@ class Scene; // Forward Declaration of Scene
 /**
  \class Entity
 
- \brief Base class for all entities. All entities have
+ \brief Base class for all entities
  
  \warning "update" and "render" methods NEED to be overrided
  

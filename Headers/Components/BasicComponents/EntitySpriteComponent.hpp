@@ -6,7 +6,7 @@
 
 /** @class EntitySpriteComponent @extends Component
  * 
- * @brief Component for Entity Sprites
+ * @brief Component for the sprites of an entity
  * 
  * @details made to support multiple sprites attached to a single entity
  */

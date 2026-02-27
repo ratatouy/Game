@@ -1,0 +1,216 @@
+\hypertarget{class_entity}{}\doxysection{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+
+
+Base class for all entities.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+
+
+Inheritance diagram for Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_entity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_entity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a3170dc9c4995e5bd8e28601807350df9}{Entity}} ()=delete
+\item 
+\mbox{\hyperlink{class_entity_a3fa64de5efd95b13653a1d36394e8c3a}{Entity}} (const char $\ast$n)
+\item 
+void \mbox{\hyperlink{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}{set\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+\item 
+void \mbox{\hyperlink{class_entity_ad5779dd3bb11ff854f37d15dd965ed90}{set\+Name}} (const char $\ast$n)
+\item 
+const char $\ast$ \mbox{\hyperlink{class_entity_a5dc4c35cc28ca7895348607f3e4894c3}{get\+Name}} ()
+\item 
+virtual void \mbox{\hyperlink{class_entity_a2e9231145130595a7ea8903c0035a3b1}{process\+Event}} (\mbox{\hyperlink{class_event_a}{EventA}} $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_entity_ae46468a51bb678ff6bfadbd8111d731b}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_entity_ad87af2e77fbcda048f7543bfb43ddaaf}{render}} (sf\+::\+Render\+Window $\ast$window)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_entity_a48ca158bf622fc10c60c7cbd3aa9bcc3}{current\+\_\+scene}}
+\item 
+const char $\ast$ \mbox{\hyperlink{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}{name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all entities. 
+
+\begin{DoxyWarning}{Warning}
+\char`\"{}update\char`\"{} and \char`\"{}render\char`\"{} methods NEED to be overrided 
+\end{DoxyWarning}
+
+
+Definition at line 21 of file Entity.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_entity_a3170dc9c4995e5bd8e28601807350df9}\label{class_entity_a3170dc9c4995e5bd8e28601807350df9}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_entity_a3fa64de5efd95b13653a1d36394e8c3a}\label{class_entity_a3fa64de5efd95b13653a1d36394e8c3a}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 28 of file Entity.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_a5dc4c35cc28ca7895348607f3e4894c3}\label{class_entity_a5dc4c35cc28ca7895348607f3e4894c3}} 
+\index{Entity@{Entity}!getName@{getName}}
+\index{getName@{getName}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const char$\ast$ Entity\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 33 of file Entity.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_entity_a5dc4c35cc28ca7895348607f3e4894c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_entity_ae46468a51bb678ff6bfadbd8111d731b}\label{class_entity_ae46468a51bb678ff6bfadbd8111d731b}} 
+\index{Entity@{Entity}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Entity\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_ennemy_aaea8bc5fcf41d2bf5771416b70a587dc}{Ennemy}}.
+
+
+
+Definition at line 8 of file Entity.\+cpp.
+
+\mbox{\Hypertarget{class_entity_a2e9231145130595a7ea8903c0035a3b1}\label{class_entity_a2e9231145130595a7ea8903c0035a3b1}} 
+\index{Entity@{Entity}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Entity\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_a}{EventA}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 7 of file Entity.\+cpp.
+
+\mbox{\Hypertarget{class_entity_ad87af2e77fbcda048f7543bfb43ddaaf}\label{class_entity_ad87af2e77fbcda048f7543bfb43ddaaf}} 
+\index{Entity@{Entity}!render@{render}}
+\index{render@{render}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Entity\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}{Projectile}}, \mbox{\hyperlink{class_player_a817e52c7cee2cd8a563e1d1b66fbd79c}{Player}}, and \mbox{\hyperlink{class_ennemy_a04bf6b840b4e464875649bc0dfe5d4af}{Ennemy}}.
+
+
+
+Definition at line 12 of file Entity.\+cpp.
+
+\mbox{\Hypertarget{class_entity_ad5779dd3bb11ff854f37d15dd965ed90}\label{class_entity_ad5779dd3bb11ff854f37d15dd965ed90}} 
+\index{Entity@{Entity}!setName@{setName}}
+\index{setName@{setName}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Entity\+::set\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file Entity.\+hpp.
+
+\mbox{\Hypertarget{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}\label{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}} 
+\index{Entity@{Entity}!setScene@{setScene}}
+\index{setScene@{setScene}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{setScene()}{setScene()}}
+{\footnotesize\ttfamily void Entity\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file Entity.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}\label{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}} 
+\index{Entity@{Entity}!update@{update}}
+\index{update@{update}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Entity\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{Projectile}}, \mbox{\hyperlink{class_player_a6912bb6e48efb5845d59f0f4582827ef}{Player}}, and \mbox{\hyperlink{class_ennemy_a35b503a1ea239fd8b570012bab798dc3}{Ennemy}}.
+
+
+
+Definition at line 10 of file Entity.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_entity_a48ca158bf622fc10c60c7cbd3aa9bcc3}\label{class_entity_a48ca158bf622fc10c60c7cbd3aa9bcc3}} 
+\index{Entity@{Entity}!current\_scene@{current\_scene}}
+\index{current\_scene@{current\_scene}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{current\_scene}{current\_scene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Entity\+::current\+\_\+scene\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Entity.\+hpp.
+
+\mbox{\Hypertarget{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}\label{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}} 
+\index{Entity@{Entity}!name@{name}}
+\index{name@{name}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const char$\ast$ Entity\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Entity.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\+Entity/\mbox{\hyperlink{_entity_8hpp}{Entity.\+hpp}}\item 
+src/\+Entity/\mbox{\hyperlink{_entity_8cpp}{Entity.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="Player" name="Player">
+<area shape="rect" id="node1" title=" " alt="" coords="145,273,208,300"/>
+<area shape="rect" id="node2" href="$class_entity.html" title="Base class for all entities." alt="" coords="49,184,109,211"/>
+<area shape="rect" id="node3" href="$class_scene.html" title=" " alt="" coords="30,95,91,121"/>
+<area shape="rect" id="node4" href="$class_event_handler.html" title="Manages the event queue." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node5" href="$class_entity_sprite_component.html" title="Component for the sprites of an entity." alt="" coords="305,184,478,211"/>
+<area shape="rect" id="node6" href="$class_transformable_component.html" title="Component for Transformable objects, allows for those transformations :" alt="" coords="120,95,311,121"/>
+</map>

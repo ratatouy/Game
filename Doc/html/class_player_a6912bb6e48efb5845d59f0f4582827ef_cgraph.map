@@ -1,0 +1,8 @@
+<map id="Player::update" name="Player::update">
+<area shape="rect" id="node1" title="Updates the Player." alt="" coords="5,111,121,138"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="169,104,343,145"/>
+<area shape="rect" id="node3" href="$class_transformable_component.html#a22e3bfff7be1c64caabd4cce2338874f" title=" " alt="" coords="391,5,581,47"/>
+<area shape="rect" id="node4" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="391,71,581,112"/>
+<area shape="rect" id="node5" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="391,136,581,177"/>
+<area shape="rect" id="node6" href="$class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="391,201,581,243"/>
+</map>

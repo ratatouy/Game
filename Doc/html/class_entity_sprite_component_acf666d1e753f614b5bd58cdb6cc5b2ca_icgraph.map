@@ -1,0 +1,6 @@
+<map id="EntitySpriteComponent::render" name="EntitySpriteComponent::render">
+<area shape="rect" id="node1" title="Renders the Entity Sprites." alt="" coords="187,49,360,90"/>
+<area shape="rect" id="node2" href="$class_ennemy.html#a04bf6b840b4e464875649bc0dfe5d4af" title=" " alt="" coords="10,5,134,32"/>
+<area shape="rect" id="node3" href="$class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c" title="Renders the player." alt="" coords="15,56,129,83"/>
+<area shape="rect" id="node4" href="$class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b" title=" " alt="" coords="5,107,139,133"/>
+</map>

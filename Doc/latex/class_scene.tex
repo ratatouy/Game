@@ -1,0 +1,289 @@
+\hypertarget{class_scene}{}\doxysection{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+
+
+Inheritance diagram for Scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{class_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{class_scene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\item 
+\mbox{\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene}} ()
+\item 
+void \mbox{\hyperlink{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}{set\+Event\+Handler}} (\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$\mbox{\hyperlink{class_event_handler}{Event\+Handler}})
+\item 
+void \mbox{\hyperlink{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}{add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_a3c200511f7f00c8184a7d6281a508e2c}{get\+Entity}} (const char $\ast$name)
+\item 
+virtual void \mbox{\hyperlink{class_scene_af25d320c2355ab99f2cbeb91fd689789}{process\+Event}} (\mbox{\hyperlink{class_event_a}{EventA}} $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}{process\+Event\+Func}} (\mbox{\hyperlink{class_event_a}{EventA}} $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_scene_a4654dfc8ab44c744171caa43fc22bbab}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_scene_a0db76b56a0c7637f4a20900ab90aa266}{process\+Event\+Func}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}{throw\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d}{update\+Entity}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a80dd06f2778de55f455b0299502f26f7}{render}} (sf\+::\+Render\+Window $\ast$window)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_scene_aac63d0d2ba6e0d67420298f75c31a345}{event\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file Scene.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\label{class_scene_ad10176d75a9cc0da56626f682d083507}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Scene.\+cpp.
+
+\mbox{\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}} 
+\index{Scene@{Scene}!````~Scene@{$\sim$Scene}}
+\index{````~Scene@{$\sim$Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scene()}{~Scene()}}
+{\footnotesize\ttfamily Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Scene.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}\label{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}} 
+\index{Scene@{Scene}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily void Scene\+::add\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a3c200511f7f00c8184a7d6281a508e2c}\label{class_scene_a3c200511f7f00c8184a7d6281a508e2c}} 
+\index{Scene@{Scene}!getEntity@{getEntity}}
+\index{getEntity@{getEntity}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Scene\+::get\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file Scene.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_scene_a3c200511f7f00c8184a7d6281a508e2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a4654dfc8ab44c744171caa43fc22bbab}\label{class_scene_a4654dfc8ab44c744171caa43fc22bbab}} 
+\index{Scene@{Scene}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 51 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a4654dfc8ab44c744171caa43fc22bbab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_af25d320c2355ab99f2cbeb91fd689789}\label{class_scene_af25d320c2355ab99f2cbeb91fd689789}} 
+\index{Scene@{Scene}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_a}{EventA}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 41 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_af25d320c2355ab99f2cbeb91fd689789_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_af25d320c2355ab99f2cbeb91fd689789_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a0db76b56a0c7637f4a20900ab90aa266}\label{class_scene_a0db76b56a0c7637f4a20900ab90aa266}} 
+\index{Scene@{Scene}!processEventFunc@{processEventFunc}}
+\index{processEventFunc@{processEventFunc}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Scene\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 32 of file Scene.\+hpp.
+
+\mbox{\Hypertarget{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}\label{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}} 
+\index{Scene@{Scene}!processEventFunc@{processEventFunc}}
+\index{processEventFunc@{processEventFunc}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Scene\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_a}{EventA}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_menu_scene_ac5baca2b2cc554a5acca8e7313e554fb}{Menu\+Scene}}.
+
+
+
+Definition at line 30 of file Scene.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a80dd06f2778de55f455b0299502f26f7}\label{class_scene_a80dd06f2778de55f455b0299502f26f7}} 
+\index{Scene@{Scene}!render@{render}}
+\index{render@{render}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Scene\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file Scene.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_scene_a80dd06f2778de55f455b0299502f26f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}\label{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}} 
+\index{Scene@{Scene}!setEventHandler@{setEventHandler}}
+\index{setEventHandler@{setEventHandler}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setEventHandler()}{setEventHandler()}}
+{\footnotesize\ttfamily void Scene\+::set\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$}]{Event\+Handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Scene.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}\label{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}} 
+\index{Scene@{Scene}!throwEvent@{throwEvent}}
+\index{throwEvent@{throwEvent}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{throwEvent()}{throwEvent()}}
+{\footnotesize\ttfamily void Scene\+::throw\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event}{Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a7671ad25a45d0dfee2ee110a2dae588a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d}\label{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d}} 
+\index{Scene@{Scene}!updateEntity@{updateEntity}}
+\index{updateEntity@{updateEntity}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{updateEntity()}{updateEntity()}}
+{\footnotesize\ttfamily void Scene\+::update\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file Scene.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_aac63d0d2ba6e0d67420298f75c31a345}\label{class_scene_aac63d0d2ba6e0d67420298f75c31a345}} 
+\index{Scene@{Scene}!eventHandler@{eventHandler}}
+\index{eventHandler@{eventHandler}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{eventHandler}{eventHandler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_handler}{Event\+Handler}}$\ast$ Scene\+::event\+Handler}
+
+
+
+Definition at line 18 of file Scene.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\+Scenes/\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\item 
+src/\+Scenes/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

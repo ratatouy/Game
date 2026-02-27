@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_event.html" title="Abstract class for all events." alt="" coords="5,31,64,57"/>
+<area shape="rect" id="node2" href="$class_custom_event.html" title=" " alt="" coords="112,5,221,32"/>
+<area shape="rect" id="node4" href="$class_event_a.html" title="Custom Event class for events, for user Custom Events." alt="" coords="133,56,201,83"/>
+<area shape="rect" id="node3" href="$class_hit_event.html" title=" " alt="" coords="269,5,348,32"/>
+</map>

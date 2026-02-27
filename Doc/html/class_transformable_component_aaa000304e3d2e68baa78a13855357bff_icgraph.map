@@ -1,0 +1,10 @@
+<map id="TransformableComponent::getRotation" name="TransformableComponent::getRotation">
+<area shape="rect" id="node1" title=" " alt="" coords="551,133,741,175"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title="Adds a sprite to the entity." alt="" coords="329,83,503,124"/>
+<area shape="rect" id="node6" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="329,165,503,207"/>
+<area shape="rect" id="node3" href="$class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title="Adds a sprite to the entity with a source rectangle." alt="" coords="108,5,281,47"/>
+<area shape="rect" id="node4" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="139,71,251,98"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,60,123"/>
+<area shape="rect" id="node7" href="$class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="137,173,253,199"/>
+<area shape="rect" id="node8" href="$class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="127,223,263,250"/>
+</map>
