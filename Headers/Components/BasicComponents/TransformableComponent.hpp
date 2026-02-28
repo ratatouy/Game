@@ -3,44 +3,107 @@
 
 #include <SFML/Graphics.hpp>
 
-/** @class TransformableComponent @extends Component
+/** Class to manage transformations
  * 
- * @brief Component for Transformable objects, allows for those transformations :
+ * @details Created in order to support more complex transformations
+ * 
+ * @note For now it supports :
  * - Translation 
  * - Rotation
  * - Scaling
- * 
- * @warning CPP file is empty bc it uses sfml's Transformable Class
  */
 class TransformableComponent {
 private:
-    sf::Transformable transformable; // Global ID of The Component Type //
+    sf::Transformable transformable_; // Global ID of The Component Type //
 
 
 public:
-    // Constructors //
-    TransformableComponent() : transformable(sf::Transformable()) {};
-    TransformableComponent(sf::Transformable transformable) : transformable(transformable) {};
+    /** Empty Constructor */
+    TransformableComponent() : transformable_(sf::Transformable()) {};
 
-    // Destructor //
+
+
+    /** Highest Constructor
+     * 
+     * @param transformable Reference to the Entity's Transformable Component
+     */
+    TransformableComponent(sf::Transformable transformable) : transformable_(transformable) {};
+
+
+
+    /** Default Destructor */
     ~TransformableComponent() = default;
 
 
-    // Getters & Setters //
-    // Directly Calling sfml Transform methods //
-    const sf::Vector2f getPosition() {return transformable.getPosition();};
-    const float getRotation() {return transformable.getRotation();};
-    const sf::Vector2f getScale() {return transformable.getScale();};
-    const sf::Vector2f getOrigin() {return transformable.getOrigin();};
+    /** Position Getter
+     * 
+     * @return The position
+    */
+    const sf::Vector2f getPosition() {return transformable_.getPosition();};
 
-    void setPosition(sf::Vector2f position) {transformable.setPosition(position);};
-    void setRotation(float angle) {transformable.setRotation(angle);};
-    void setScale(sf::Vector2f scale) {transformable.setScale(scale);};
 
-    void setOrigin(sf::Vector2f origin) {transformable.setOrigin(origin);};
+    /** Rotation Getter
+     * 
+     * @return The rotation
+     */
+    const float getRotation() {return transformable_.getRotation();};
 
-    // Other sfml Transform methods //
-    void rotate(float angle) {transformable.rotate(angle);};
+
+    /** Scale Getter
+     * 
+     * @return The scale
+     */
+    const sf::Vector2f getScale() {return transformable_.getScale();};
+
+
+    /** Origin Getter
+     * 
+     * @return The origin
+     */
+    const sf::Vector2f getOrigin() {return transformable_.getOrigin();};
+
+    
+
+    /** Position Setter
+     * 
+     * @param position The new position
+     */
+    void setPosition(sf::Vector2f position) {transformable_.setPosition(position);};
+
+    /** Rotation Setter
+     * 
+     * @param angle The new rotation angle
+     */
+    void setRotation(float angle) {transformable_.setRotation(angle);};
+
+
+    /** Scale Setter
+     * 
+     * @param scale The new scale
+     */
+    void setScale(sf::Vector2f scale) {transformable_.setScale(scale);};
+
+
+    /** Origin Setter
+     * 
+     * @param origin The new origin
+     */
+    void setOrigin(sf::Vector2f origin) {transformable_.setOrigin(origin);};
+
+
+
+    /** Rotate the transformable clockwise
+     * 
+     * @param angle Angle to rotate
+     */
+    void rotate(float angle) {transformable_.rotate(angle);};
+
+
+    /** Move the transformable
+     * 
+     * @param movement Movement to apply
+     */
+    void move(sf::Vector2f movement) {transformable_.move(movement);};
 };
 
 #endif

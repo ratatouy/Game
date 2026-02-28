@@ -1,5 +1,5 @@
 <map id="EntitySpriteComponent::update" name="EntitySpriteComponent::update">
-<area shape="rect" id="node1" title="Updates the Entity Sprites." alt="" coords="5,104,179,145"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,104,179,145"/>
 <area shape="rect" id="node2" href="$class_transformable_component.html#a22e3bfff7be1c64caabd4cce2338874f" title=" " alt="" coords="227,5,417,47"/>
 <area shape="rect" id="node3" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="227,71,417,112"/>
 <area shape="rect" id="node4" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="227,136,417,177"/>

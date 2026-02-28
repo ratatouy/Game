@@ -2,11 +2,6 @@
 \label{class_entity}\index{Entity@{Entity}}
 
 
-Base class for all entities.  
-
-
-
-
 {\ttfamily \#include $<$Entity.\+hpp$>$}
 
 
@@ -32,11 +27,11 @@ Collaboration diagram for Entity\+:\nopagebreak
 \item 
 \mbox{\hyperlink{class_entity_a3170dc9c4995e5bd8e28601807350df9}{Entity}} ()=delete
 \item 
-\mbox{\hyperlink{class_entity_a3fa64de5efd95b13653a1d36394e8c3a}{Entity}} (const char $\ast$n)
+\mbox{\hyperlink{class_entity_a59e211574f0e67279934df788cc03df7}{Entity}} (const char $\ast$\mbox{\hyperlink{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}{name}})
 \item 
 void \mbox{\hyperlink{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}{set\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
 \item 
-void \mbox{\hyperlink{class_entity_ad5779dd3bb11ff854f37d15dd965ed90}{set\+Name}} (const char $\ast$n)
+void \mbox{\hyperlink{class_entity_a78ccaeac4d798bf0b78ee48b317b5e2f}{set\+Name}} (const char $\ast$\mbox{\hyperlink{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}{name}})
 \item 
 const char $\ast$ \mbox{\hyperlink{class_entity_a5dc4c35cc28ca7895348607f3e4894c3}{get\+Name}} ()
 \item 
@@ -58,14 +53,9 @@ const char $\ast$ \mbox{\hyperlink{class_entity_a425e6dbab1090334cd621b47ff2bc2e
 
 
 \doxysubsection{Detailed Description}
-Base class for all entities. 
+Base class for all entities 
 
-\begin{DoxyWarning}{Warning}
-\char`\"{}update\char`\"{} and \char`\"{}render\char`\"{} methods NEED to be overrided 
-\end{DoxyWarning}
-
-
-Definition at line 21 of file Entity.\+hpp.
+Definition at line 14 of file Entity.\+hpp.
 
 
 
@@ -76,12 +66,19 @@ Definition at line 21 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
-\mbox{\Hypertarget{class_entity_a3fa64de5efd95b13653a1d36394e8c3a}\label{class_entity_a3fa64de5efd95b13653a1d36394e8c3a}} 
+\mbox{\Hypertarget{class_entity_a59e211574f0e67279934df788cc03df7}\label{class_entity_a59e211574f0e67279934df788cc03df7}} 
 \index{Entity@{Entity}!Entity@{Entity}}
 \index{Entity@{Entity}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Lowest Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the entity \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 28 of file Entity.\+hpp.
@@ -95,9 +92,14 @@ Definition at line 28 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
 {\footnotesize\ttfamily const char$\ast$ Entity\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Get the name of the entity
+
+\begin{DoxyReturn}{Returns}
+Name of the entity 
+\end{DoxyReturn}
 
 
-Definition at line 33 of file Entity.\+hpp.
+Definition at line 49 of file Entity.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -144,15 +146,22 @@ Reimplemented in \mbox{\hyperlink{class_projectile_ae7a60d5c8da58bcb33076d627a80
 
 Definition at line 12 of file Entity.\+cpp.
 
-\mbox{\Hypertarget{class_entity_ad5779dd3bb11ff854f37d15dd965ed90}\label{class_entity_ad5779dd3bb11ff854f37d15dd965ed90}} 
+\mbox{\Hypertarget{class_entity_a78ccaeac4d798bf0b78ee48b317b5e2f}\label{class_entity_a78ccaeac4d798bf0b78ee48b317b5e2f}} 
 \index{Entity@{Entity}!setName@{setName}}
 \index{setName@{setName}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void Entity\+::set\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Entity\+::set\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the name of the entity
 
 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the entity \\
+\hline
+\end{DoxyParams}
 
-Definition at line 32 of file Entity.\+hpp.
+
+Definition at line 42 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}\label{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}} 
 \index{Entity@{Entity}!setScene@{setScene}}
@@ -160,6 +169,13 @@ Definition at line 32 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{setScene()}{setScene()}}
 {\footnotesize\ttfamily void Entity\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
 
+Set the current scene of the entity
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Pointer to the scene \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 5 of file Entity.\+cpp.
@@ -194,9 +210,9 @@ Definition at line 10 of file Entity.\+cpp.
 \doxysubsubsection{\texorpdfstring{current\_scene}{current\_scene}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Entity\+::current\+\_\+scene\hspace{0.3cm}{\ttfamily [protected]}}
 
+Pointer to the current scene 
 
-
-Definition at line 23 of file Entity.\+hpp.
+Definition at line 17 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}\label{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}} 
 \index{Entity@{Entity}!name@{name}}
@@ -204,9 +220,9 @@ Definition at line 23 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{name}{name}}
 {\footnotesize\ttfamily const char$\ast$ Entity\+::name\hspace{0.3cm}{\ttfamily [protected]}}
 
+Name of the entity 
 
-
-Definition at line 24 of file Entity.\+hpp.
+Definition at line 18 of file Entity.\+hpp.
 
 
 

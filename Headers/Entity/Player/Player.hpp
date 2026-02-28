@@ -7,8 +7,6 @@
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 #include "Components/BasicComponents/TransformableComponent.hpp"
 
-#include "Events/Event.hpp"
-#include "Events/CustomEvent.hpp"
 #include "Events/CustomEvents/HitEvent.hpp"
 
 

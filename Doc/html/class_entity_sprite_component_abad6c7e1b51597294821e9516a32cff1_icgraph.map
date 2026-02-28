@@ -1,6 +1,6 @@
 <map id="EntitySpriteComponent::AddSprite" name="EntitySpriteComponent::AddSprite">
-<area shape="rect" id="node1" title="Adds a sprite to the entity." alt="" coords="329,64,503,105"/>
-<area shape="rect" id="node2" href="$class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title="Adds a sprite to the entity with a source rectangle." alt="" coords="108,5,281,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="329,64,503,105"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title=" " alt="" coords="108,5,281,47"/>
 <area shape="rect" id="node3" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="139,71,251,98"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,60,123"/>
 </map>

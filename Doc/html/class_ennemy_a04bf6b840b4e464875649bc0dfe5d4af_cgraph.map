@@ -1,4 +1,4 @@
 <map id="Ennemy::render" name="Ennemy::render">
 <area shape="rect" id="node1" title=" " alt="" coords="5,13,129,39"/>
-<area shape="rect" id="node2" href="$class_entity_sprite_component.html#acf666d1e753f614b5bd58cdb6cc5b2ca" title="Renders the Entity Sprites." alt="" coords="177,5,351,47"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#acf666d1e753f614b5bd58cdb6cc5b2ca" title=" " alt="" coords="177,5,351,47"/>
 </map>

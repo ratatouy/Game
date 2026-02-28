@@ -1,6 +1,6 @@
 <map id="TransformableComponent::getOrigin" name="TransformableComponent::getOrigin">
 <area shape="rect" id="node1" title=" " alt="" coords="411,23,601,65"/>
-<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="189,23,363,65"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="189,23,363,65"/>
 <area shape="rect" id="node3" href="$class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="15,5,131,32"/>
 <area shape="rect" id="node4" href="$class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="5,56,141,83"/>
 </map>

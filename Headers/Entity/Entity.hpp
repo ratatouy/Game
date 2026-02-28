@@ -10,26 +10,42 @@
 class Scene; // Forward Declaration of Scene
 
 
-/**
- \class Entity
-
- \brief Base class for all entities
- 
- \warning "update" and "render" methods NEED to be overrided
- 
- */
+/** Base class for all entities */
 class Entity {
+
 protected:
-    Scene* current_scene;
-    const char* name;
+    Scene* current_scene; /**< Pointer to the current scene */
+    const char* name;     /**< Name of the entity */
+
 
 public:
     Entity() = delete;
-    Entity(const char* n) : name(n) {};
 
+    /** Lowest Constructor
+     * 
+     * @param name Name of the entity
+     */
+    Entity(const char* name) : name(name) {};
+
+
+    /** Set the current scene of the entity
+     * 
+     * @param scene Pointer to the scene
+     */
     void setScene(Scene* scene);
 
-    void setName(const char* n) {name = n;}
+
+    /** Set the name of the entity
+     * 
+     * @param name Name of the entity
+     */
+    void setName(const char* name) {this->name = name;}
+
+
+    /** Get the name of the entity
+     * 
+     * @returns Name of the entity
+     */
     const char* getName() {return this->name;}
 
     virtual void processEvent(EventA* event);

@@ -86,26 +86,16 @@ $(document).ready(function(){initNavTree('class_entity_sprite_component.html',''
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_entity_sprite_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">EntitySpriteComponent Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Component for the sprites of an entity.  
+<p>Component to manage the sprites of an entity.  
  <a href="class_entity_sprite_component.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for EntitySpriteComponent:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_entity_sprite_component__coll__graph.png" border="0" usemap="#a_entity_sprite_component_coll__map" alt="Collaboration graph"/></div>
-<map name="a_entity_sprite_component_coll__map" id="a_entity_sprite_component_coll__map">
-<area shape="rect" title="Component for the sprites of an entity." alt="" coords="14,95,187,121"/>
-<area shape="rect" href="class_transformable_component.html" title="Component for Transformable objects, allows for those transformations :" alt="" coords="5,5,196,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -114,17 +104,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb4ad7ece3f5d3000e189ebb23cdf175"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#adb4ad7ece3f5d3000e189ebb23cdf175">~EntitySpriteComponent</a> ()</td></tr>
 <tr class="separator:adb4ad7ece3f5d3000e189ebb23cdf175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad6c7e1b51597294821e9516a32cff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1">AddSprite</a> (std::string filepath)</td></tr>
-<tr class="memdesc:abad6c7e1b51597294821e9516a32cff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a sprite to the entity.  <a href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1">More...</a><br /></td></tr>
 <tr class="separator:abad6c7e1b51597294821e9516a32cff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add8325ee20bd2d204f6bb40d970fb058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058">AddSprite</a> (std::string filepath, sf::IntRect SrcRect)</td></tr>
-<tr class="memdesc:add8325ee20bd2d204f6bb40d970fb058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a sprite to the entity with a source rectangle.  <a href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058">More...</a><br /></td></tr>
 <tr class="separator:add8325ee20bd2d204f6bb40d970fb058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf114df3c560607e335572cbda6ded77"><td class="memItemLeft" align="right" valign="top">sf::Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#aaf114df3c560607e335572cbda6ded77">GetThisSprite</a> (int spriteIndex)</td></tr>
-<tr class="separator:aaf114df3c560607e335572cbda6ded77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad57654739ff9de33ca92c02c8ee53278"><td class="memItemLeft" align="right" valign="top">sf::Transformable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#ad57654739ff9de33ca92c02c8ee53278">GetThisSpriteLocalTransform</a> (int spriteIndex)</td></tr>
-<tr class="separator:ad57654739ff9de33ca92c02c8ee53278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9659f8414471377d482217c0f4b7212e"><td class="memItemLeft" align="right" valign="top">const sf::Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a9659f8414471377d482217c0f4b7212e">GetThisSprite</a> (unsigned int spriteIndex)</td></tr>
+<tr class="separator:a9659f8414471377d482217c0f4b7212e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd8736f640b46f33cb3d3c626e45f09"><td class="memItemLeft" align="right" valign="top">const sf::Transformable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a6bd8736f640b46f33cb3d3c626e45f09">GetThisSpriteLocalTransformable</a> (int spriteIndex)</td></tr>
+<tr class="separator:a6bd8736f640b46f33cb3d3c626e45f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1207552e09041cb04588a74131babab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5">SetThisSpriteLocalPosition</a> (int spriteIndex, sf::Vector2f position)</td></tr>
-<tr class="memdesc:a1207552e09041cb04588a74131babab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local Transforms.  <a href="class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5">More...</a><br /></td></tr>
 <tr class="separator:a1207552e09041cb04588a74131babab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385cf72043acd5f996024ad1bc1f8cb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a385cf72043acd5f996024ad1bc1f8cb6">SetThisSpriteLocalRotation</a> (int spriteIndex, float angle)</td></tr>
 <tr class="separator:a385cf72043acd5f996024ad1bc1f8cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,28 +120,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a167229f02959e590116a6d20d9500cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a167229f02959e590116a6d20d9500cf8">SetThisSpriteLocalTransform</a> (int spriteIndex, sf::Vector2f position, float angle, sf::Vector2f scale)</td></tr>
 <tr class="separator:a167229f02959e590116a6d20d9500cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ecdfaededab0a5fa61763bccf16021a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">update</a> ()</td></tr>
-<tr class="memdesc:a2ecdfaededab0a5fa61763bccf16021a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <a class="el" href="class_entity.html" title="Base class for all entities.">Entity</a> Sprites.  <a href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">More...</a><br /></td></tr>
 <tr class="separator:a2ecdfaededab0a5fa61763bccf16021a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf666d1e753f614b5bd58cdb6cc5b2ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#acf666d1e753f614b5bd58cdb6cc5b2ca">render</a> (sf::RenderWindow *window)</td></tr>
-<tr class="memdesc:acf666d1e753f614b5bd58cdb6cc5b2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the <a class="el" href="class_entity.html" title="Base class for all entities.">Entity</a> Sprites.  <a href="class_entity_sprite_component.html#acf666d1e753f614b5bd58cdb6cc5b2ca">More...</a><br /></td></tr>
+<tr class="memitem:acf666d1e753f614b5bd58cdb6cc5b2ca"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#acf666d1e753f614b5bd58cdb6cc5b2ca">render</a> (sf::RenderWindow *window)</td></tr>
 <tr class="separator:acf666d1e753f614b5bd58cdb6cc5b2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a9235afd8061ea6605a402a6fa6dda770"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a9235afd8061ea6605a402a6fa6dda770">sprites</a></td></tr>
-<tr class="separator:a9235afd8061ea6605a402a6fa6dda770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43b4cf84223f42566573cfffcf90d22d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Transformable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a43b4cf84223f42566573cfffcf90d22d">localSpriteTransformables</a></td></tr>
-<tr class="separator:a43b4cf84223f42566573cfffcf90d22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06725c0a59b8962b89781adba26f2e39"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Texture * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a06725c0a59b8962b89781adba26f2e39">textures</a></td></tr>
-<tr class="separator:a06725c0a59b8962b89781adba26f2e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9ad182b9953b0fd7944085f570e15e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity_sprite_component.html#a6e9ad182b9953b0fd7944085f570e15e">entityTransformable</a></td></tr>
-<tr class="separator:a6e9ad182b9953b0fd7944085f570e15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Component for the sprites of an entity. </p>
-<p>made to support multiple sprites attached to a single entity </p>
+<div class="textblock"><p>Component to manage the sprites of an entity. </p>
+<p>Created in order to support multiple sprites attached to a single entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00013">13</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00016">16</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad7d27bb5f88886b04eb159222135949d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7d27bb5f88886b04eb159222135949d">&#9670;&nbsp;</a></span>EntitySpriteComponent()</h2>
@@ -179,14 +153,15 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Lowest Constructor</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">transformable</td><td>Reference to the <a class="el" href="class_entity.html" title="Base class for all entities.">Entity</a>'s Transformable Component </td></tr>
+    <tr><td class="paramname">transformable</td><td>Reference to the <a class="el" href="class_entity.html">Entity</a>'s Transformable Component </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00023">23</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00030">30</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 
 </div>
 </div>
@@ -204,8 +179,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Default Destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00015">15</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00007">7</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
 
 </div>
 </div>
@@ -225,29 +201,28 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Adds a sprite to the entity. </p>
+<p>Adds a sprite to the entity</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filepath</td><td>Path to the texture</td></tr>
     <tr><td class="paramname">filepath</td><td>Path to the texture</td></tr>
   </table>
   </dd>
 </dl>
-<ul>
+<p>Implementation :</p><ul>
 <li>Load the texture</li>
 <li>Create the sprite</li>
 <li>Set the sprite's position, rotation and scale to the entity's position, rotation and scale</li>
-<li>Add the sprite and texture to the vectors </li>
+<li>Add the sprite's local Transformable to the "localSpriteTransformables_" vector</li>
+<li>Add the sprite and texture to the "sprites_" and "textures_" vectors </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00032">32</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00020">20</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_cgraph.png" border="0" usemap="#aclass_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_cgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_cgraph" id="aclass_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_cgraph">
-<area shape="rect" title="Adds a sprite to the entity." alt="" coords="5,71,179,112"/>
+<area shape="rect" title=" " alt="" coords="5,71,179,112"/>
 <area shape="rect" href="class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="227,5,417,47"/>
 <area shape="rect" href="class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="227,71,417,112"/>
 <area shape="rect" href="class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="227,136,417,177"/>
@@ -258,8 +233,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_icgraph.png" border="0" usemap="#aclass_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_icgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_icgraph" id="aclass_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_icgraph">
-<area shape="rect" title="Adds a sprite to the entity." alt="" coords="329,64,503,105"/>
-<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title="Adds a sprite to the entity with a source rectangle." alt="" coords="108,5,281,47"/>
+<area shape="rect" title=" " alt="" coords="329,64,503,105"/>
+<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title=" " alt="" coords="108,5,281,47"/>
 <area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="139,71,251,98"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,60,123"/>
 </map>
@@ -292,30 +267,23 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Adds a sprite to the entity with a source rectangle. </p>
+<p>Adds a sprite to the entity with a source rectangle</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filepath</td><td>Path to the texture </td></tr>
-    <tr><td class="paramname">SrcRect</td><td>Source Rectangle</td></tr>
-    <tr><td class="paramname">filepath</td><td>Path to the texture </td></tr>
-    <tr><td class="paramname">SrcRect</td><td>Source rectangle</td></tr>
+    <tr><td class="paramname">SrcRect</td><td>Source rectangle </td></tr>
   </table>
   </dd>
 </dl>
-<ul>
-<li>Call AddSprite(filepath)</li>
-<li>Set the sprite's texture rectangle </li>
-</ul>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00066">66</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00045">45</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058_cgraph.png" border="0" usemap="#aclass_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058_cgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058_cgraph" id="aclass_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058_cgraph">
-<area shape="rect" title="Adds a sprite to the entity with a source rectangle." alt="" coords="5,71,179,112"/>
-<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title="Adds a sprite to the entity." alt="" coords="227,71,400,112"/>
+<area shape="rect" title=" " alt="" coords="5,71,179,112"/>
+<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title=" " alt="" coords="227,71,400,112"/>
 <area shape="rect" href="class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="448,5,639,47"/>
 <area shape="rect" href="class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="448,71,639,112"/>
 <area shape="rect" href="class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="448,136,639,177"/>
@@ -324,8 +292,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="aaf114df3c560607e335572cbda6ded77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf114df3c560607e335572cbda6ded77">&#9670;&nbsp;</a></span>GetThisSprite()</h2>
+<a id="a9659f8414471377d482217c0f4b7212e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9659f8414471377d482217c0f4b7212e">&#9670;&nbsp;</a></span>GetThisSprite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +302,43 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::Sprite* EntitySpriteComponent::GetThisSprite </td>
+          <td class="memname">const sf::Sprite* EntitySpriteComponent::GetThisSprite </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>spriteIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a pointer to a sprite of Index "spriteIndex"</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the sprites vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Requested Sprite </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00061">61</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6bd8736f640b46f33cb3d3c626e45f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd8736f640b46f33cb3d3c626e45f09">&#9670;&nbsp;</a></span>GetThisSpriteLocalTransformable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::Transformable* EntitySpriteComponent::GetThisSpriteLocalTransformable </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>spriteIndex</em></td><td>)</td>
@@ -347,48 +351,16 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the local Transformable of a sprite</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the sprites vector </td></tr>
+    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the "sprites_" vector</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Requested Transformable </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00044">44</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad57654739ff9de33ca92c02c8ee53278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad57654739ff9de33ca92c02c8ee53278">&#9670;&nbsp;</a></span>GetThisSpriteLocalTransform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::Transformable* EntitySpriteComponent::GetThisSpriteLocalTransform </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>spriteIndex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the sprites vector </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00050">50</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00071">71</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,27 +379,21 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Renders the <a class="el" href="class_entity.html" title="Base class for all entities.">Entity</a> Sprites. </p>
-<p>Renders the sprite.</p>
+<p>Renders the entity's sprites</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">window</td><td>Pointer to the Render Window</td></tr>
-    <tr><td class="paramname">window</td><td>Pointer to the window</td></tr>
+    <tr><td class="paramname">window</td><td>Pointer to the Render Window </td></tr>
   </table>
   </dd>
 </dl>
-<p>For each sprite in the sprites vector :</p><ul>
-<li>Draw the sprite on the window </li>
-</ul>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00113">113</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00079">79</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca_icgraph.png" border="0" usemap="#aclass_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca_icgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca_icgraph" id="aclass_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca_icgraph">
-<area shape="rect" title="Renders the Entity Sprites." alt="" coords="187,49,360,90"/>
+<area shape="rect" title=" " alt="" coords="187,49,360,90"/>
 <area shape="rect" href="class_ennemy.html#a04bf6b840b4e464875649bc0dfe5d4af" title=" " alt="" coords="10,5,134,32"/>
 <area shape="rect" href="class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c" title="Renders the player." alt="" coords="15,56,129,83"/>
 <area shape="rect" href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b" title=" " alt="" coords="5,107,139,133"/>
@@ -441,6 +407,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void EntitySpriteComponent::SetThisSpriteLocalPosition </td>
@@ -460,17 +429,28 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Set the local position of a sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the "sprites_" vector </td></tr>
+    <tr><td class="paramname">position</td><td>New position </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Local Transforms. </p>
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00077">77</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00080">80</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_a1207552e09041cb04588a74131babab5_icgraph.png" border="0" usemap="#aclass_entity_sprite_component_a1207552e09041cb04588a74131babab5_icgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_a1207552e09041cb04588a74131babab5_icgraph" id="aclass_entity_sprite_component_a1207552e09041cb04588a74131babab5_icgraph">
-<area shape="rect" title="Local Transforms." alt="" coords="268,5,471,47"/>
+<area shape="rect" title=" " alt="" coords="268,5,471,47"/>
 <area shape="rect" href="class_entity_sprite_component.html#a167229f02959e590116a6d20d9500cf8" title=" " alt="" coords="5,5,220,47"/>
 </map>
 </div>
@@ -482,6 +462,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void EntitySpriteComponent::SetThisSpriteLocalRotation </td>
@@ -501,9 +484,22 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Set the local rotation of a sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the "sprites_" vector </td></tr>
+    <tr><td class="paramname">angle</td><td>New rotation angle </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00078">78</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00089">89</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -521,6 +517,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void EntitySpriteComponent::SetThisSpriteLocalScale </td>
@@ -540,9 +539,22 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Set the local scale of a sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the "sprites_" vector </td></tr>
+    <tr><td class="paramname">scale</td><td>New scale </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00079">79</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00098">98</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -592,15 +604,25 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set the local transform of a sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteIndex</td><td>Index of the sprite in the "sprites_" vector </td></tr>
+    <tr><td class="paramname">position</td><td>New position </td></tr>
+    <tr><td class="paramname">angle</td><td>New rotation angle </td></tr>
+    <tr><td class="paramname">scale</td><td>New scale </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00080">80</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00053">53</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_a167229f02959e590116a6d20d9500cf8_cgraph.png" border="0" usemap="#aclass_entity_sprite_component_a167229f02959e590116a6d20d9500cf8_cgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_a167229f02959e590116a6d20d9500cf8_cgraph" id="aclass_entity_sprite_component_a167229f02959e590116a6d20d9500cf8_cgraph">
 <area shape="rect" title=" " alt="" coords="5,71,220,112"/>
-<area shape="rect" href="class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5" title="Local Transforms." alt="" coords="269,5,472,47"/>
+<area shape="rect" href="class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5" title=" " alt="" coords="269,5,472,47"/>
 <area shape="rect" href="class_entity_sprite_component.html#a385cf72043acd5f996024ad1bc1f8cb6" title=" " alt="" coords="268,71,473,112"/>
 <area shape="rect" href="class_entity_sprite_component.html#ae76247a27bc98af47971ea690a802a85" title=" " alt="" coords="278,136,463,177"/>
 </map>
@@ -622,19 +644,16 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Updates all of the sprites</p>
+<p>Implementation : By summing the entity's position, rotation &amp; origin with the sprite's local position and rotation , Multiplying the entity's scale with the sprite's local scale </p>
 
-<p>Updates the <a class="el" href="class_entity.html" title="Base class for all entities.">Entity</a> Sprites. </p>
-<p>Updates the sprite's position, rotation and scale.</p>
-<p>updates the position, rotation and scale of the sprites Calculates the Sprite Transform using the <a class="el" href="class_entity.html" title="Base class for all entities.">Entity</a> and Local Transforms</p>
-<p>By summing the entity's position, rotation &amp; origin with the sprite's local position and rotation , Multiplying the entity's scale with the sprite's local scale </p>
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00092">92</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8cpp_source.html#l00064">64</a> of file <a class="el" href="_entity_sprite_component_8cpp_source.html">EntitySpriteComponent.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_cgraph.png" border="0" usemap="#aclass_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_cgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_cgraph" id="aclass_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_cgraph">
-<area shape="rect" title="Updates the Entity Sprites." alt="" coords="5,104,179,145"/>
+<area shape="rect" title=" " alt="" coords="5,104,179,145"/>
 <area shape="rect" href="class_transformable_component.html#a22e3bfff7be1c64caabd4cce2338874f" title=" " alt="" coords="227,5,417,47"/>
 <area shape="rect" href="class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="227,71,417,112"/>
 <area shape="rect" href="class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="227,136,417,177"/>
@@ -646,76 +665,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_icgraph.png" border="0" usemap="#aclass_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_icgraph" alt=""/></div>
 <map name="aclass_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_icgraph" id="aclass_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_icgraph">
-<area shape="rect" title="Updates the Entity Sprites." alt="" coords="189,23,363,65"/>
+<area shape="rect" title=" " alt="" coords="189,23,363,65"/>
 <area shape="rect" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="15,5,131,32"/>
 <area shape="rect" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="5,56,141,83"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6e9ad182b9953b0fd7944085f570e15e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e9ad182b9953b0fd7944085f570e15e">&#9670;&nbsp;</a></span>entityTransformable</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_transformable_component.html">TransformableComponent</a>* EntitySpriteComponent::entityTransformable</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00018">18</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a43b4cf84223f42566573cfffcf90d22d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43b4cf84223f42566573cfffcf90d22d">&#9670;&nbsp;</a></span>localSpriteTransformables</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;sf::Transformable&gt; EntitySpriteComponent::localSpriteTransformables</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00016">16</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9235afd8061ea6605a402a6fa6dda770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9235afd8061ea6605a402a6fa6dda770">&#9670;&nbsp;</a></span>sprites</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;sf::Sprite&gt; EntitySpriteComponent::sprites</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00015">15</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a06725c0a59b8962b89781adba26f2e39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06725c0a59b8962b89781adba26f2e39">&#9670;&nbsp;</a></span>textures</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;sf::Texture*&gt; EntitySpriteComponent::textures</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_entity_sprite_component_8hpp_source.html#l00017">17</a> of file <a class="el" href="_entity_sprite_component_8hpp_source.html">EntitySpriteComponent.hpp</a>.</p>
 
 </div>
 </div>

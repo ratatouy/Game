@@ -92,9 +92,6 @@ $(document).ready(function(){initNavTree('class_transformable_component.html',''
 </div><!--header-->
 <div class="contents">
 
-<p>Component for Transformable objects, allows for those transformations :  
- <a href="class_transformable_component.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -123,15 +120,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f0fca3a97c469a31f6c5938afe72fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3510aeb7b79049431ce86726b72421d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7">rotate</a> (float angle)</td></tr>
 <tr class="separator:a3510aeb7b79049431ce86726b72421d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4e36540e794da841bc3f07f91f55da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transformable_component.html#afb4e36540e794da841bc3f07f91f55da">move</a> (sf::Vector2f movement)</td></tr>
+<tr class="separator:afb4e36540e794da841bc3f07f91f55da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Component for Transformable objects, allows for those transformations : </p>
-<ul>
+<div class="textblock"><p>Class to manage transformations</p>
+<p>Created in order to support more complex transformations</p>
+<dl class="section note"><dt>Note</dt><dd>For now it supports :<ul>
 <li>Translation</li>
 <li>Rotation</li>
-<li>Scaling</li>
+<li>Scaling </li>
 </ul>
-<dl class="section warning"><dt>Warning</dt><dd>CPP file is empty bc it uses sfml's Transformable Class </dd></dl>
+</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00015">15</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -157,6 +157,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Empty Constructor </p>
 
 <p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00022">22</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 
@@ -185,8 +186,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Highest Constructor</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transformable</td><td>Reference to the <a class="el" href="class_entity.html">Entity</a>'s Transformable Component </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00023">23</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00030">30</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 
 </div>
 </div>
@@ -212,6 +220,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Default Destructor </p>
 
 </div>
 </div>
@@ -238,15 +247,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Origin Getter</p>
+<dl class="section return"><dt>Returns</dt><dd>The origin </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00034">34</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00063">63</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_transformable_component_a22e3bfff7be1c64caabd4cce2338874f_icgraph.png" border="0" usemap="#aclass_transformable_component_a22e3bfff7be1c64caabd4cce2338874f_icgraph" alt=""/></div>
 <map name="aclass_transformable_component_a22e3bfff7be1c64caabd4cce2338874f_icgraph" id="aclass_transformable_component_a22e3bfff7be1c64caabd4cce2338874f_icgraph">
 <area shape="rect" title=" " alt="" coords="411,23,601,65"/>
-<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="189,23,363,65"/>
+<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="189,23,363,65"/>
 <area shape="rect" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="15,5,131,32"/>
 <area shape="rect" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="5,56,141,83"/>
 </map>
@@ -276,19 +287,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Position Getter</p>
+<dl class="section return"><dt>Returns</dt><dd>The position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00031">31</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00042">42</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_transformable_component_aa5fced3000d00f219a8675c93a4eca20_icgraph.png" border="0" usemap="#aclass_transformable_component_aa5fced3000d00f219a8675c93a4eca20_icgraph" alt=""/></div>
 <map name="aclass_transformable_component_aa5fced3000d00f219a8675c93a4eca20_icgraph" id="aclass_transformable_component_aa5fced3000d00f219a8675c93a4eca20_icgraph">
 <area shape="rect" title=" " alt="" coords="551,148,741,189"/>
-<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title="Adds a sprite to the entity." alt="" coords="329,60,503,101"/>
+<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title=" " alt="" coords="329,60,503,101"/>
 <area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="139,122,251,149"/>
-<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="329,177,503,219"/>
+<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="329,177,503,219"/>
 <area shape="rect" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="127,239,263,266"/>
-<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title="Adds a sprite to the entity with a source rectangle." alt="" coords="108,5,281,47"/>
+<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title=" " alt="" coords="108,5,281,47"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,60,123"/>
 <area shape="rect" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="137,185,253,211"/>
 </map>
@@ -318,17 +331,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Rotation Getter</p>
+<dl class="section return"><dt>Returns</dt><dd>The rotation </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00032">32</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00049">49</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_transformable_component_aaa000304e3d2e68baa78a13855357bff_icgraph.png" border="0" usemap="#aclass_transformable_component_aaa000304e3d2e68baa78a13855357bff_icgraph" alt=""/></div>
 <map name="aclass_transformable_component_aaa000304e3d2e68baa78a13855357bff_icgraph" id="aclass_transformable_component_aaa000304e3d2e68baa78a13855357bff_icgraph">
 <area shape="rect" title=" " alt="" coords="551,133,741,175"/>
-<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title="Adds a sprite to the entity." alt="" coords="329,83,503,124"/>
-<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="329,165,503,207"/>
-<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title="Adds a sprite to the entity with a source rectangle." alt="" coords="108,5,281,47"/>
+<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title=" " alt="" coords="329,83,503,124"/>
+<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="329,165,503,207"/>
+<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title=" " alt="" coords="108,5,281,47"/>
 <area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="139,71,251,98"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,60,123"/>
 <area shape="rect" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="137,173,253,199"/>
@@ -360,23 +375,60 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Scale Getter</p>
+<dl class="section return"><dt>Returns</dt><dd>The scale </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00033">33</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00056">56</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724_icgraph.png" border="0" usemap="#aclass_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724_icgraph" alt=""/></div>
 <map name="aclass_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724_icgraph" id="aclass_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724_icgraph">
 <area shape="rect" title=" " alt="" coords="551,133,741,175"/>
-<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title="Adds a sprite to the entity." alt="" coords="329,83,503,124"/>
-<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates the Entity Sprites." alt="" coords="329,165,503,207"/>
-<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title="Adds a sprite to the entity with a source rectangle." alt="" coords="108,5,281,47"/>
+<area shape="rect" href="class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title=" " alt="" coords="329,83,503,124"/>
+<area shape="rect" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="329,165,503,207"/>
+<area shape="rect" href="class_entity_sprite_component.html#add8325ee20bd2d204f6bb40d970fb058" title=" " alt="" coords="108,5,281,47"/>
 <area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="139,71,251,98"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,60,123"/>
 <area shape="rect" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef" title="Updates the Player." alt="" coords="137,173,253,199"/>
 <area shape="rect" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="127,223,263,250"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="afb4e36540e794da841bc3f07f91f55da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb4e36540e794da841bc3f07f91f55da">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TransformableComponent::move </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>movement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Move the transformable</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">movement</td><td>Movement to apply </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00106">106</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,8 +455,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Rotate the transformable clockwise</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>Angle to rotate </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00043">43</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00099">99</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -442,8 +501,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Origin Setter</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>The new origin </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00040">40</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00091">91</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 
 </div>
 </div>
@@ -470,8 +536,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Position Setter</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The new position </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00036">36</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00071">71</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -509,8 +582,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Rotation Setter</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>The new rotation angle </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00037">37</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00077">77</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,8 +617,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Scale Setter</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The new scale </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00038">38</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_transformable_component_8hpp_source.html#l00084">84</a> of file <a class="el" href="_transformable_component_8hpp_source.html">TransformableComponent.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

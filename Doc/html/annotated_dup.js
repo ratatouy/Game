@@ -9,7 +9,6 @@ var annotated_dup =
     [ "EventHandler", "class_event_handler.html", "class_event_handler" ],
     [ "HitData", "struct_hit_data.html", "struct_hit_data" ],
     [ "HitEvent", "class_hit_event.html", "class_hit_event" ],
-    [ "LocalTranform", "struct_local_tranform.html", "struct_local_tranform" ],
     [ "MenuScene", "class_menu_scene.html", "class_menu_scene" ],
     [ "PhysicEngine", "class_physic_engine.html", "class_physic_engine" ],
     [ "Player", "class_player.html", "class_player" ],

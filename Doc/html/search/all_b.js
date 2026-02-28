@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['physicengine_57',['PhysicEngine',['../class_physic_engine.html',1,'PhysicEngine'],['../class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6',1,'PhysicEngine::PhysicEngine()']]],
-  ['physicengine_2ecpp_58',['PhysicEngine.cpp',['../_physic_engine_8cpp.html',1,'']]],
-  ['physicengine_2ehpp_59',['PhysicEngine.hpp',['../_physic_engine_8hpp.html',1,'']]],
-  ['player_60',['Player',['../class_player.html',1,'Player'],['../class_player.html#a18974c94990a0a4825cebd4c60b30c89',1,'Player::Player(const char *name, TransformableComponent *transformable, EntitySpriteComponent *entitySprite)'],['../class_player.html#ad041a54972e591526f64c574488cab15',1,'Player::Player(const char *name, TransformableComponent *transformable)'],['../class_player.html#a9f3279d6dcc02343e85b9b6ac201e5b2',1,'Player::Player(const char *name)']]],
-  ['player_2ecpp_61',['Player.cpp',['../_player_8cpp.html',1,'']]],
-  ['player_2ehpp_62',['Player.hpp',['../_player_8hpp.html',1,'']]],
-  ['position_63',['position',['../struct_local_tranform.html#a9938857125517ecfcecd6feef50b8b40',1,'LocalTranform']]],
-  ['processevent_64',['processEvent',['../class_ennemy.html#aaea8bc5fcf41d2bf5771416b70a587dc',1,'Ennemy::processEvent()'],['../class_entity.html#a2e9231145130595a7ea8903c0035a3b1',1,'Entity::processEvent(EventA *event)'],['../class_entity.html#ae46468a51bb678ff6bfadbd8111d731b',1,'Entity::processEvent(CustomEvent *event)'],['../class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1',1,'EventHandler::processEvent()'],['../class_scene.html#af25d320c2355ab99f2cbeb91fd689789',1,'Scene::processEvent(EventA *event)'],['../class_scene.html#a4654dfc8ab44c744171caa43fc22bbab',1,'Scene::processEvent(CustomEvent *event)']]],
-  ['processeventfunc_65',['processEventFunc',['../class_menu_scene.html#ac5baca2b2cc554a5acca8e7313e554fb',1,'MenuScene::processEventFunc()'],['../class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f',1,'Scene::processEventFunc(EventA *event)'],['../class_scene.html#a0db76b56a0c7637f4a20900ab90aa266',1,'Scene::processEventFunc(CustomEvent *event)']]],
-  ['projectile_66',['Projectile',['../class_projectile.html',1,'Projectile'],['../class_projectile.html#a0bfe3550849143820e5532915db52461',1,'Projectile::Projectile()']]],
-  ['projectile_2ecpp_67',['Projectile.cpp',['../_projectile_8cpp.html',1,'']]],
-  ['projectile_2ehpp_68',['Projectile.hpp',['../_projectile_8hpp.html',1,'']]]
+  ['render_66',['render',['../class_entity_sprite_component.html#acf666d1e753f614b5bd58cdb6cc5b2ca',1,'EntitySpriteComponent::render()'],['../class_ennemy.html#a04bf6b840b4e464875649bc0dfe5d4af',1,'Ennemy::render()'],['../class_entity.html#ad87af2e77fbcda048f7543bfb43ddaaf',1,'Entity::render()'],['../class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c',1,'Player::render()'],['../class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b',1,'Projectile::render()'],['../class_scene.html#a80dd06f2778de55f455b0299502f26f7',1,'Scene::render()']]],
+  ['renderengine_67',['RenderEngine',['../class_render_engine.html',1,'RenderEngine'],['../class_render_engine.html#a9247dbba2d91d3b9c9fbeeaebe687a54',1,'RenderEngine::RenderEngine(const char *title=&quot;Game&quot;, int width=920, int height=480)'],['../class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9',1,'RenderEngine::RenderEngine(const RenderEngine &amp;)=delete']]],
+  ['renderengine_2ecpp_68',['RenderEngine.cpp',['../_render_engine_8cpp.html',1,'']]],
+  ['renderengine_2ehpp_69',['RenderEngine.hpp',['../_render_engine_8hpp.html',1,'']]],
+  ['rotate_70',['rotate',['../class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7',1,'TransformableComponent']]]
 ];

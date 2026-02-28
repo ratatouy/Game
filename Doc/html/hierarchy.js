@@ -14,7 +14,6 @@ var hierarchy =
     ] ],
     [ "EventHandler", "class_event_handler.html", null ],
     [ "HitData", "struct_hit_data.html", null ],
-    [ "LocalTranform", "struct_local_tranform.html", null ],
     [ "PhysicEngine", "class_physic_engine.html", null ],
     [ "RenderEngine", "class_render_engine.html", null ],
     [ "Scene", "class_scene.html", [

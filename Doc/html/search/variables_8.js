@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['scale_230',['scale',['../struct_local_tranform.html#acb2a1ffb48f43e5e859414059fc68052',1,'LocalTranform']]],
-  ['sprites_231',['sprites',['../class_entity_sprite_component.html#a9235afd8061ea6605a402a6fa6dda770',1,'EntitySpriteComponent::sprites()'],['../class_projectile.html#ad6d24ac6af7e648e6cc7b508f08a1cbf',1,'Projectile::sprites()']]]
+  ['target_227',['target',['../struct_hit_data.html#aa75d1986b9426e16b056addd8f13d5b0',1,'HitData']]],
+  ['transformable_228',['transformable',['../class_projectile.html#aec950c0a5435681274cba86dc181794a',1,'Projectile']]],
+  ['transformable_5f_229',['transformable_',['../class_player.html#a5627b20aec63bb9a77bc7cf104449b3e',1,'Player']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_227',['name',['../class_entity.html#a425e6dbab1090334cd621b47ff2bc2ea',1,'Entity']]]
+  ['sprites_220',['sprites',['../class_projectile.html#ad6d24ac6af7e648e6cc7b508f08a1cbf',1,'Projectile']]]
 ];

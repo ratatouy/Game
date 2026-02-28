@@ -4,79 +4,131 @@
 #include <SFML/Graphics.hpp>
 #include "Components/BasicComponents/TransformableComponent.hpp"
 
-/** @class EntitySpriteComponent @extends Component
+/**
+ * @file EntitySpriteComponent.hpp
+ */
+
+/** 
+ * @brief Component to manage the sprites of an entity.
  * 
- * @brief Component for the sprites of an entity
- * 
- * @details made to support multiple sprites attached to a single entity
+ * @details Created in order to support multiple sprites attached to a single entity.
  */
 class EntitySpriteComponent {
-public:
-    std::vector<sf::Sprite> sprites;                            // All the Sprites, their Transform is the sum of Local and Entity Transformables//
-    std::vector<sf::Transformable> localSpriteTransformables;   // This is the list of Local Transforms //
-    std::vector<sf::Texture*> textures;                         // Textures for the Sprites //
-    TransformableComponent* entityTransformable;                // Reference to the Entity's Transformable Component //
 
-    /** Constructor 
+private:
+    std::vector<sf::Sprite> sprites_;                            /**< All the Sprites. Their Transform is the sum of the Local and the Entity Transformables */
+    std::vector<sf::Transformable> localSpriteTransformables_;   /**< List of each sprite's local Transformable                                              */
+    std::vector<sf::Texture*> textures_;                         /**< List of textures for the Sprites                                                       */
+    TransformableComponent* entityTransformable_;                /**< Reference to the Entity's Transformable Component                                      */
+
+
+public:
+    /** Lowest Constructor
+     * 
      * @param transformable Reference to the Entity's Transformable Component
      */
-    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable(transformable) {};
-    // Destructor //
+    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable) {};
+    
+    
+
+    /** Default Destructor */
     ~EntitySpriteComponent();
 
 
-    /**
+    /** Adds a sprite to the entity
+     * 
      * @param filepath Path to the texture
      */
     void AddSprite(std::string filepath);
 
 
-    /** 
+
+    /** Adds a sprite to the entity with a source rectangle
+     * 
      * @param filepath Path to the texture
-     * @param SrcRect Source Rectangle
-    */
+     * @param SrcRect Source rectangle
+     */
     void AddSprite(std::string filepath, sf::IntRect SrcRect);
 
 
-    /**
+
+    /** Returns a pointer to a sprite of Index "spriteIndex"
+     * 
      * @param spriteIndex Index of the sprite in the sprites vector
+     * 
+     * @returns Pointer to the Requested Sprite
      */
-    sf::Sprite* GetThisSprite(int spriteIndex)                      {return &sprites[spriteIndex];};
+    const sf::Sprite* GetThisSprite(unsigned int spriteIndex)  {return &sprites_[spriteIndex];};
 
 
-    /**
-     * @param spriteIndex Index of the sprite in the sprites vector
+
+    /** Get the local Transformable of a sprite
+     * 
+     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * 
+     * @returns Pointer to the Requested Transformable
      */
-    sf::Transformable* GetThisSpriteLocalTransform(int spriteIndex) {return &localSpriteTransformables[spriteIndex];};
+    const sf::Transformable* GetThisSpriteLocalTransformable(int spriteIndex) {return &localSpriteTransformables_[spriteIndex];};
 
 
-    // Directly Calling sfml Transform methods //
-    void SetThisSpriteLocalPosition(int spriteIndex, sf::Vector2f position);
-    void SetThisSpriteLocalRotation(int spriteIndex, float angle);
-    void SetThisSpriteLocalScale(int spriteIndex, sf::Vector2f scale);
+
+    /** Set the local position of a sprite
+     * 
+     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * @param position New position
+     */
+    void SetThisSpriteLocalPosition(int spriteIndex, sf::Vector2f position) { localSpriteTransformables_[spriteIndex].setOrigin(-position); };
+
+
+
+    /** Set the local rotation of a sprite
+     * 
+     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * @param angle New rotation angle
+     */
+    void SetThisSpriteLocalRotation(int spriteIndex, float angle) { localSpriteTransformables_[spriteIndex].setRotation(angle); };
+
+
+
+    /** Set the local scale of a sprite
+     * 
+     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * @param scale New scale
+     */
+    void SetThisSpriteLocalScale(int spriteIndex, sf::Vector2f scale) { localSpriteTransformables_[spriteIndex].setScale(scale); };
+
+
+
+    /** Set the local transform of a sprite
+     * 
+     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * @param position New position
+     * @param angle New rotation angle
+     * @param scale New scale
+     */
     void SetThisSpriteLocalTransform(int spriteIndex, sf::Vector2f position, float angle, sf::Vector2f scale);
 
 
-    /**
-     * @brief Updates the Entity Sprites
-     * 
-     * @details updates the position, rotation and scale of the sprites
-     * Calculates the Sprite Transform using the Entity and Local Transforms
-     */
+
+    /** Updates all of the sprites */
     void update();
 
 
-    /**
-     * @brief Renders the Entity Sprites
+
+    /** Renders the entity's sprites
      * 
      * @param window Pointer to the Render Window
      */
-    void render(sf::RenderWindow* window);
+    const void render(sf::RenderWindow* window);
+
 
 
 private:
-    /** 
+    /** Loads a texture
+     * 
      * @param filepath Path to the texture
+     * 
+     * @returns Pointer to the texture, nullptr if it can't be loaded
     */
     sf::Texture* _LoadTexture(std::string filepath);
 };

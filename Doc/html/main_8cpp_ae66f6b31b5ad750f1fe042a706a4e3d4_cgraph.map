@@ -1,7 +1,7 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title=" " alt="" coords="5,372,60,399"/>
 <area shape="rect" id="node2" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="379,49,510,76"/>
-<area shape="rect" id="node5" href="$class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title="Adds a sprite to the entity." alt="" coords="358,217,531,258"/>
+<area shape="rect" id="node5" href="$class_entity_sprite_component.html#abad6c7e1b51597294821e9516a32cff1" title=" " alt="" coords="358,217,531,258"/>
 <area shape="rect" id="node9" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="149,144,261,171"/>
 <area shape="rect" id="node11" href="$class_scene.html#a3c200511f7f00c8184a7d6281a508e2c" title=" " alt="" coords="141,245,269,272"/>
 <area shape="rect" id="node12" href="$class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688" title=" " alt="" coords="108,296,301,323"/>
