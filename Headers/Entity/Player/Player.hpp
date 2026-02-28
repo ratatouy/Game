@@ -10,58 +10,34 @@
 #include "Events/CustomEvents/HitEvent.hpp"
 
 
-/**
- * @class Player
- */
+/** class for the Player Entity */
 class Player : public Entity {
 
 
-protected:
-    TransformableComponent* transformable_;
-    EntitySpriteComponent* entitySprite_;
-
-
 public:
-    /**
-     * @brief Lowest Constructor @memberof Player
-     \param[in] name Name of the Player
+    /** Lowest Constructor
+     * 
+     * @param name Name of the Player
      */
     public: Player(const char* name) : Entity(name) {};
 
 
-    /**
-     * @brief Intermediate Transformable Constructor @memberof Player
+    /** Intermediate Transformable Constructor
      * 
      * @param name Name of the Player
      * @param transformable Pointer to the TransformableComponent to attach to the player
      */
-    Player(const char* name, TransformableComponent* transformable) : Entity(name), transformable_(transformable) {};
+    Player(const char* name, TransformableComponent* transformable) : Entity(name, transformable) {};
 
 
-    /**
-     * @brief Full Constructor
+    /** Full Constructor
      * 
      * @param name Name of the Player
      * @param transformable Pointer to the TransformableComponent to attach to the player
      * @param entitySprite Pointer to the EntitySpriteComponent to attache to the player
      */
-    Player(const char* name, TransformableComponent* transformable, EntitySpriteComponent* entitySprite) : Entity(name), transformable_(transformable), entitySprite_(entitySprite) {};
+    Player(const char* name, TransformableComponent* transformable, EntitySpriteComponent* entitySprite) : Entity(name, transformable, entitySprite) {};
     
-
-    /** @brief Transformable Setter
-     * 
-     * @param transformable Pointer to the TransformableComponent to attach to the player
-    */
-    void setTransformable(TransformableComponent* transformable) {this->transformable_ = transformable;}
-    /** @brief EntitySprite Setter */
-    void setEntitySprite(EntitySpriteComponent* entitySprite) {this->entitySprite_ = entitySprite;}
-
-
-    /** @brief Transformable Getter */
-    TransformableComponent* getTransformable() {return transformable_;}
-    /** @brief EntitySprite Getter */
-    EntitySpriteComponent* getEntitySprite() {return entitySprite_;}
-
 
 
     /**
