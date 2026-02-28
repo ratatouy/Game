@@ -8,7 +8,7 @@
  * @details Created in order to support more complex transformations
  * 
  * @note For now it supports :
- * - Translation 
+ * - Translation
  * - Rotation
  * - Scaling
  */

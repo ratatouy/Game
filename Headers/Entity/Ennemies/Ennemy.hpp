@@ -12,20 +12,16 @@
 
 
 class Ennemy : public Entity {
+
+private:
+    int health_;
+
+
 public:
-    int health;
-
-    Ennemy(const char* n, int h = 7) : Entity(n), health(h) {}
-    Ennemy(const char* name, TransformableComponent* transform, int h = 7) : Entity(name), transform(transform), health(h) {};
-    Ennemy(const char* name, TransformableComponent* transform, EntitySpriteComponent* sprites, int h = 7) : Entity(name), transform(transform), sprites(sprites), health(h) {};
+    Ennemy(const char* name, int health = 7) : Entity(name), health_(health) {}
+    Ennemy(const char* name, TransformableComponent* transform, int health = 7) : Entity(name, transform), health_(health) {};
+    Ennemy(const char* name, TransformableComponent* transform, EntitySpriteComponent* sprites, int health = 7) : Entity(name, transform, sprites), health_(health) {};
     
-    
-    void setTransformable(TransformableComponent* transform) {this->transform = transform;}
-    void setEntitySprite(EntitySpriteComponent* sprites) {this->sprites = sprites;}
-
-    TransformableComponent* getTransformable() {return transform;}
-    EntitySpriteComponent* getEntitySprite() {return sprites;}
-
 
     void update() override;
     void render(sf::RenderWindow* window) override;
@@ -33,10 +29,6 @@ public:
     void processEvent(CustomEvent* event) override;
 
     void getHit(int damage);
-
-private:
-    TransformableComponent* transform;
-    EntitySpriteComponent* sprites;
 };
 
 #endif

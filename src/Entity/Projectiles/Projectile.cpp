@@ -1,22 +1,22 @@
 #include "Entity/Projectile/Projectile.hpp"
 #include <iostream>
 
-Projectile::Projectile(const char* n, sf::Vector2f p, sf::Vector2f sp) : Entity(n), speed(sp)
+Projectile::Projectile(const char* name, sf::Vector2f position, sf::Vector2f speed) : Entity(name), speed_(speed)
 {
-    transformable = new TransformableComponent();
-    transformable->setPosition(p);
+    transformable_ = new TransformableComponent();
+    transformable_->setPosition(position);
 
-    sprites = new EntitySpriteComponent(transformable);
+    entitySprite_ = new EntitySpriteComponent(transformable_);
 };
 
 void Projectile::update()
 {
-    transformable->setPosition(transformable->getPosition() + speed);
-    transformable->rotate(1);
-    sprites->update();
+    transformable_->setPosition(transformable_->getPosition() + speed_);
+    transformable_->rotate(1);
+    entitySprite_->update();
 }
 
 void Projectile::render(sf::RenderWindow* window)
 {
-    this->sprites->render(window);
+    entitySprite_->render(window);
 }

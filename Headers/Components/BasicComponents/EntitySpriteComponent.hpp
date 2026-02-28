@@ -20,14 +20,15 @@ private:
     std::vector<sf::Transformable> localSpriteTransformables_;   /**< List of each sprite's local Transformable                                              */
     std::vector<sf::Texture*> textures_;                         /**< List of textures for the Sprites                                                       */
     TransformableComponent* entityTransformable_;                /**< Reference to the Entity's Transformable Component                                      */
+    bool visible_;                                               /**< Whether the sprite is visible or not                                                   */
 
-
+    
 public:
     /** Lowest Constructor
      * 
      * @param transformable Reference to the Entity's Transformable Component
      */
-    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable) {};
+    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable), visible_(true) {};
     
     
 
@@ -39,7 +40,7 @@ public:
      * 
      * @param filepath Path to the texture
      */
-    void AddSprite(std::string filepath);
+    void AddSprite(const char* filepath);
 
 
 
@@ -48,7 +49,7 @@ public:
      * @param filepath Path to the texture
      * @param SrcRect Source rectangle
      */
-    void AddSprite(std::string filepath, sf::IntRect SrcRect);
+    void AddSprite(const char* filepath, sf::IntRect SrcRect);
 
 
 
@@ -70,6 +71,12 @@ public:
      */
     const sf::Transformable* GetThisSpriteLocalTransformable(int spriteIndex) {return &localSpriteTransformables_[spriteIndex];};
 
+
+    /** Set the visibility of the sprite
+     * 
+     * @param visible New visibility
+     */
+    void setVisible(bool visible) {visible_ = visible;}
 
 
     /** Set the local position of a sprite

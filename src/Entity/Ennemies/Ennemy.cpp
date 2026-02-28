@@ -10,7 +10,7 @@ void Ennemy::processEvent(CustomEvent* event) {
     if (H) {
         HitData* data = (HitData*) H->getData();
 
-        if (strcmp(data->target, name) == 0) {
+        if (strcmp(data->target, name_) == 0) {
             HitData* Hd = (HitData*) H->getData();
             getHit(data->damage);
         }
@@ -23,7 +23,7 @@ void Ennemy::getHit(int damage) {
     std::cout << "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << std::endl;
     std::cout << "ARCHNEMESIS | Lilimanjaro's Scream Bends °Ti¤e & S_p@Ce !!!" << std::endl;
     std::cout << "he dies" << std::endl;
-    health -= damage;
+    health_ -= damage;
 }
 
 void Ennemy::update() {
@@ -32,5 +32,5 @@ void Ennemy::update() {
 
 void Ennemy::render(sf::RenderWindow* window) {
     // std::cout << "Ennemy Rendering" << std::endl;
-    this->sprites->render(window);
+    entitySprite_->render(window);
 }

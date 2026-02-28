@@ -20,7 +20,6 @@ set(SOURCE_FILES
     src/Events/CustomEvents/HitEvent.cpp
     src/Events/EventHandler.cpp
 
-    src/Entity/Entity.cpp
     src/Entity/Player/Player.cpp
     src/Entity/Ennemies/Ennemy.cpp
     src/Entity/Projectiles/Projectile.cpp

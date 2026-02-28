@@ -9,14 +9,12 @@
 
 class Projectile : public Entity {
 private:
-    sf::Vector2f speed;
+    sf::Vector2f speed_;
+
 
 public:
-    TransformableComponent* transformable;
-    EntitySpriteComponent* sprites;
+    Projectile(const char* name, sf::Vector2f position = {0,0}, sf::Vector2f speed = {0,0});
 
-
-    Projectile(const char* n, sf::Vector2f p = {0,0}, sf::Vector2f sp = {0,0});
 
     void update() override;
 

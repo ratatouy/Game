@@ -17,7 +17,7 @@ EntitySpriteComponent::~EntitySpriteComponent() {
  * - Add the sprite's local Transformable to the "localSpriteTransformables_" vector
  * - Add the sprite and texture to the "sprites_" and "textures_" vectors
  */
-void EntitySpriteComponent::AddSprite(std::string filepath)
+void EntitySpriteComponent::AddSprite(const char* filepath)
 {
     try {
         sf::Texture* texture = _LoadTexture(filepath);
@@ -42,7 +42,7 @@ void EntitySpriteComponent::AddSprite(std::string filepath)
 
 
 
-void EntitySpriteComponent::AddSprite(std::string filepath, sf::IntRect SrcRect)
+void EntitySpriteComponent::AddSprite(const char* filepath, sf::IntRect SrcRect)
 {
     AddSprite(filepath);
     sprites_.back().setTextureRect(SrcRect);
@@ -76,10 +76,13 @@ void EntitySpriteComponent::update() {
 
 
 
-void EntitySpriteComponent::render(sf::RenderWindow* window)
+const void EntitySpriteComponent::render(sf::RenderWindow* window)
 {
-    for (auto sprite : sprites_)
-        window->draw(sprite);
+    if (visible_)
+    {
+        for (auto sprite : sprites_)
+            window->draw(sprite);
+    }
 };
 
 

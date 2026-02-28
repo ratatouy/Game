@@ -12,7 +12,7 @@ void Player::update() {
 
 void Player::render(sf::RenderWindow* window) {
     // std::cout << "Player Rendering" << std::endl;
-    this->entitySprite_->render(window);
+    entitySprite_->render(window);
 }
 
 void Player::attack() {
@@ -20,7 +20,7 @@ void Player::attack() {
     std::cout << "\"RECHAUFFEUR STRKE !!!!\"" << std::endl;
 
     Projectile* player_proj = new Projectile("player_proj", transformable_->getPosition(), {0.5f,0.f});
-    player_proj->sprites->AddSprite("Sprites/cato.png");
-    current_scene->addEntity(player_proj);
+    player_proj->getEntitySprite()->AddSprite("Sprites/cato.png");
+    current_scene_->addEntity(player_proj);
     transformable_->rotate(45);
 }
