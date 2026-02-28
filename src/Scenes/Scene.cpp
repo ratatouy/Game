@@ -1,5 +1,6 @@
 #include "Scenes/Scene.hpp"
 #include "Events/EventHandler.hpp"
+#include "Engine/RenderEngine.hpp"
 
 #include <string.h>
 #include <iostream>
@@ -9,28 +10,23 @@ Scene::Scene() {};
 Scene::~Scene()
 {
     // std::cout << "Destroy Scene" << std::endl;
-    for (auto ent : entityMap) {
+    for (auto ent : entityMap_) {
         delete ent.second;
     }
-    delete eventHandler;
-};
-
-void Scene::setEventHandler(EventHandler* handler)
-{
-    eventHandler = handler;
+    delete eventHandler_;
 };
 
 
 void Scene::addEntity(Entity* entity)
 {
-    entityMap[entity->getName()] = entity; // doesn't check for duplicity //
+    entityMap_[entity->getName()] = entity; // doesn't check for duplicity //
     entity->setScene(this);
 }
 
 
 Entity* Scene::getEntity(const char* name)
 {
-    for (auto ent : entityMap) {
+    for (auto ent : entityMap_) {
         if(strcmp(ent.first, name) == 0)
             return ent.second;
     }
@@ -40,7 +36,7 @@ Entity* Scene::getEntity(const char* name)
 
 void Scene::processEvent(EventA* event)
 {;
-    for (auto entity : entityMap)
+    for (auto entity : entityMap_)
     {
         entity.second->processEvent(event);
     }
@@ -50,7 +46,7 @@ void Scene::processEvent(EventA* event)
 
 void Scene::processEvent(CustomEvent* event)
 {
-    for (auto entity : entityMap)
+    for (auto entity : entityMap_)
     {
         entity.second->processEvent(event);
     }
@@ -60,22 +56,34 @@ void Scene::processEvent(CustomEvent* event)
 
 void Scene::throwEvent(Event* event)
 {
-    eventHandler->addEvent(event);
+    eventHandler_->addEvent(event);
 }
 
 
-void Scene::updateEntity()
+void Scene::update()
 {
-    for (std::pair<const char*, Entity*> entity_pair : entityMap)
+    updateEntities();
+}
+
+
+void Scene::render()
+{
+    renderEntities();
+}
+
+
+void Scene::updateEntities()
+{
+    for (std::pair<const char*, Entity*> entity_pair : entityMap_)
     {
         entity_pair.second->update();
     }
 }
 
-void Scene::render(sf::RenderWindow* window)
+void Scene::renderEntities()
 {
-    for (auto entity : entityMap)
+    for (auto entity : entityMap_)
     {
-        entity.second->render(window);
+        entity.second->render(renderEngine_->getWindow());
     }
 }

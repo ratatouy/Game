@@ -1,5 +1,5 @@
 #include "Engine/RenderEngine.hpp"
-
+#include "Scenes/Scene.hpp"
 
 bool RenderEngine::instantiated_ = false;
 
@@ -11,11 +11,11 @@ RenderEngine::RenderEngine(const char* title, int width, int height)
     }
     instantiated_ = true;
 
-    window = new sf::RenderWindow(sf::VideoMode(width, height), title);
+    window_ = new sf::RenderWindow(sf::VideoMode(width, height), title);
 }
 
 RenderEngine::~RenderEngine()
 {
-    delete window;
+    delete window_;
     instantiated_ = false;
 }

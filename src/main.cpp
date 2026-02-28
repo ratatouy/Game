@@ -15,7 +15,7 @@
 #include "Engine/RenderEngine.hpp"
 
 int main() {
-    PhysicEngine* pEngine = new PhysicEngine(0);
+    // PhysicEngine* pEngine = new PhysicEngine(0);
     RenderEngine* rEngine = new RenderEngine("Game", 920, 480);
 
 
@@ -24,6 +24,12 @@ int main() {
 
     menu->setEventHandler(evHandler);
     evHandler->setCurrentScene(menu);
+
+    rEngine->setScene(menu);
+    menu->setRenderEngine(rEngine);
+
+    // pEngine->setScene(menu);
+    // menu->setPhysicEngine(pEngine);
 
 
     TransformableComponent* raptorTransform = new TransformableComponent();
@@ -63,8 +69,8 @@ int main() {
         }
 
         rEngine->getWindow()->clear(sf::Color(125,0,125,0));
-        menu->updateEntity();
-        menu->render(rEngine->getWindow());
+        menu->update();
+        menu->render();
         rEngine->getWindow()->display();
     }
 
