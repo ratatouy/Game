@@ -32,7 +32,7 @@ set(SOURCE_FILES
 
 add_executable(main ${SOURCE_FILES})
 target_compile_features(main PRIVATE cxx_std_17)
-target_include_directories(main PRIVATE Headers)
+target_include_directories(main PRIVATE includes)
 target_link_libraries(main PRIVATE sfml-graphics sfml-window sfml-system)
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT main)
