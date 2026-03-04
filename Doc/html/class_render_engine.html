@@ -104,12 +104,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8481c5152d04db388170c404d193b6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22709e8d62956c56b981d4d5d3ee1fc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">~RenderEngine</a> ()</td></tr>
 <tr class="separator:a22709e8d62956c56b981d4d5d3ee1fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087c9d22abb6553de2f4320e11a0a033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a087c9d22abb6553de2f4320e11a0a033">setScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="separator:a087c9d22abb6553de2f4320e11a0a033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8db646d82d91a8595c22f1d7d61688"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">getWindow</a> ()</td></tr>
 <tr class="separator:aec8db646d82d91a8595c22f1d7d61688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed9d9c64a09c163f99b9f200e740cd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#aaed9d9c64a09c163f99b9f200e740cd3">addShaderObject</a> (const char *filepath, sf::Shader::Type type)</td></tr>
+<tr class="separator:aaed9d9c64a09c163f99b9f200e740cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7bdec0aacc36aa2ea89f3efa89f70a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#aa7bdec0aacc36aa2ea89f3efa89f70a3">update</a> (float deltaTime)</td></tr>
+<tr class="separator:aa7bdec0aacc36aa2ea89f3efa89f70a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a4c17a370573bc19c797e4e0f966bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">render</a> ()</td></tr>
+<tr class="separator:a53a4c17a370573bc19c797e4e0f966bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00007">7</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00010">10</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9247dbba2d91d3b9c9fbeeaebe687a54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9247dbba2d91d3b9c9fbeeaebe687a54">&#9670;&nbsp;</a></span>RenderEngine() <span class="overload">[1/2]</span></h2>
@@ -143,7 +151,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00007">7</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00009">9</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -188,11 +196,41 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00017">17</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00019">19</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaed9d9c64a09c163f99b9f200e740cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed9d9c64a09c163f99b9f200e740cd3">&#9670;&nbsp;</a></span>addShaderObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::addShaderObject </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Shader::Type&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00026">26</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+
+</div>
+</div>
 <a id="aec8db646d82d91a8595c22f1d7d61688"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec8db646d82d91a8595c22f1d7d61688">&#9670;&nbsp;</a></span>getWindow()</h2>
 
@@ -216,14 +254,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00015">15</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00034">34</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph.png" border="0" usemap="#aclass_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph" alt=""/></div>
 <map name="aclass_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph" id="aclass_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,301,32"/>
+<area shape="rect" title=" " alt="" coords="475,5,668,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe" title=" " alt="" coords="267,31,427,57"/>
+<area shape="rect" href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1" title=" " alt="" coords="108,31,219,57"/>
 </map>
 </div>
 
@@ -255,8 +295,84 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a53a4c17a370573bc19c797e4e0f966bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a4c17a370573bc19c797e4e0f966bb">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00073">73</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a087c9d22abb6553de2f4320e11a0a033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087c9d22abb6553de2f4320e11a0a033">&#9670;&nbsp;</a></span>setScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::setScene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00031">31</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph.png" border="0" usemap="#aclass_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph" alt=""/></div>
+<map name="aclass_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph" id="aclass_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,287,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa7bdec0aacc36aa2ea89f3efa89f70a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7bdec0aacc36aa2ea89f3efa89f70a3">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderEngine::update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00057">57</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Headers/Engine/<a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a></li>
+<li>includes/Engine/<a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a></li>
 <li>src/Engine/<a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a></li>
 </ul>
 </div><!-- contents -->

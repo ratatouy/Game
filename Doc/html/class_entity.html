@@ -110,9 +110,10 @@ Collaboration diagram for Entity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_entity__coll__graph.png" border="0" usemap="#a_entity_coll__map" alt="Collaboration graph"/></div>
 <map name="a_entity_coll__map" id="a_entity_coll__map">
-<area shape="rect" title=" " alt="" coords="31,184,91,211"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="30,95,91,121"/>
-<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="5,5,116,32"/>
+<area shape="rect" title=" " alt="" coords="203,95,263,121"/>
+<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
+<area shape="rect" href="class_scene.html" title=" " alt="" coords="203,5,264,32"/>
+<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="289,5,479,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -120,37 +121,59 @@ Collaboration diagram for Entity:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3170dc9c4995e5bd8e28601807350df9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3170dc9c4995e5bd8e28601807350df9">Entity</a> ()=delete</td></tr>
 <tr class="separator:a3170dc9c4995e5bd8e28601807350df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e211574f0e67279934df788cc03df7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a59e211574f0e67279934df788cc03df7">Entity</a> (const char *<a class="el" href="class_entity.html#a425e6dbab1090334cd621b47ff2bc2ea">name</a>)</td></tr>
+<tr class="memitem:a59e211574f0e67279934df788cc03df7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a59e211574f0e67279934df788cc03df7">Entity</a> (const char *name)</td></tr>
 <tr class="separator:a59e211574f0e67279934df788cc03df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c912b86f9d0b1c7299239212d9a0ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af0c912b86f9d0b1c7299239212d9a0ca">Entity</a> (const char *name, <a class="el" href="class_transformable_component.html">TransformableComponent</a> *transformable)</td></tr>
+<tr class="separator:af0c912b86f9d0b1c7299239212d9a0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd75374db786223239daa5010b4cbdf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abd75374db786223239daa5010b4cbdf3">Entity</a> (const char *name, <a class="el" href="class_transformable_component.html">TransformableComponent</a> *transformable, <a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *entitySprite)</td></tr>
+<tr class="separator:abd75374db786223239daa5010b4cbdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad840fa8abf45ea14ed5ff7239f2268ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">setScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
 <tr class="separator:ad840fa8abf45ea14ed5ff7239f2268ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78ccaeac4d798bf0b78ee48b317b5e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a78ccaeac4d798bf0b78ee48b317b5e2f">setName</a> (const char *<a class="el" href="class_entity.html#a425e6dbab1090334cd621b47ff2bc2ea">name</a>)</td></tr>
+<tr class="memitem:a78ccaeac4d798bf0b78ee48b317b5e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a78ccaeac4d798bf0b78ee48b317b5e2f">setName</a> (const char *name)</td></tr>
 <tr class="separator:a78ccaeac4d798bf0b78ee48b317b5e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797c5fbf96c08f0959e67c4432ffe125"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a797c5fbf96c08f0959e67c4432ffe125">setTransformable</a> (<a class="el" href="class_transformable_component.html">TransformableComponent</a> *transformable)</td></tr>
+<tr class="separator:a797c5fbf96c08f0959e67c4432ffe125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c19692f28142f36b311e3ee1ad9de77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a4c19692f28142f36b311e3ee1ad9de77">setEntitySprite</a> (<a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *entitySprite)</td></tr>
+<tr class="separator:a4c19692f28142f36b311e3ee1ad9de77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dc4c35cc28ca7895348607f3e4894c3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3">getName</a> ()</td></tr>
 <tr class="separator:a5dc4c35cc28ca7895348607f3e4894c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e9231145130595a7ea8903c0035a3b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2e9231145130595a7ea8903c0035a3b1">processEvent</a> (<a class="el" href="class_event_a.html">EventA</a> *event)</td></tr>
-<tr class="separator:a2e9231145130595a7ea8903c0035a3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46468a51bb678ff6bfadbd8111d731b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ae46468a51bb678ff6bfadbd8111d731b">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
-<tr class="separator:ae46468a51bb678ff6bfadbd8111d731b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00b6eeaf99b35c8f8b10b5fbfc1baf4f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a00b6eeaf99b35c8f8b10b5fbfc1baf4f">update</a> ()</td></tr>
-<tr class="separator:a00b6eeaf99b35c8f8b10b5fbfc1baf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad87af2e77fbcda048f7543bfb43ddaaf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ad87af2e77fbcda048f7543bfb43ddaaf">render</a> (sf::RenderWindow *window)</td></tr>
-<tr class="separator:ad87af2e77fbcda048f7543bfb43ddaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2edbfe01d432af851512cb021caa6a75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2edbfe01d432af851512cb021caa6a75">getCurrentScene</a> ()</td></tr>
+<tr class="separator:a2edbfe01d432af851512cb021caa6a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0550d41d7e7ec5f868d30a84b0f6d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aec0550d41d7e7ec5f868d30a84b0f6d2">getTransformable</a> ()</td></tr>
+<tr class="separator:aec0550d41d7e7ec5f868d30a84b0f6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1082a3ee77f8235d11aee6a6b7b5b822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822">getEntitySprite</a> ()</td></tr>
+<tr class="separator:a1082a3ee77f8235d11aee6a6b7b5b822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3aa68e07ed624c03459a605353ca98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ade3aa68e07ed624c03459a605353ca98">processEvent</a> (<a class="el" href="class_event_a.html">EventA</a> *event)</td></tr>
+<tr class="separator:ade3aa68e07ed624c03459a605353ca98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37cb335962ddb32dafd558405088ceda"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a37cb335962ddb32dafd558405088ceda">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
+<tr class="separator:a37cb335962ddb32dafd558405088ceda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed73e98b980b85833428c935cc1c69f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aed73e98b980b85833428c935cc1c69f8">update</a> ()</td></tr>
+<tr class="separator:aed73e98b980b85833428c935cc1c69f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc21bc8c791274305898a2b13e624692"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">render</a> (sf::RenderWindow *window)</td></tr>
+<tr class="separator:abc21bc8c791274305898a2b13e624692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a48ca158bf622fc10c60c7cbd3aa9bcc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a48ca158bf622fc10c60c7cbd3aa9bcc3">current_scene</a></td></tr>
-<tr class="separator:a48ca158bf622fc10c60c7cbd3aa9bcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a425e6dbab1090334cd621b47ff2bc2ea"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a425e6dbab1090334cd621b47ff2bc2ea">name</a></td></tr>
-<tr class="separator:a425e6dbab1090334cd621b47ff2bc2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91027be8d125eb57c233dd631b226e4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">current_scene_</a></td></tr>
+<tr class="separator:a91027be8d125eb57c233dd631b226e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac765a424fb46628fc30523f040910f23"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac765a424fb46628fc30523f040910f23">name_</a></td></tr>
+<tr class="separator:ac765a424fb46628fc30523f040910f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02237639c1c2a57ceea70b935bfba45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa02237639c1c2a57ceea70b935bfba45">transformable_</a></td></tr>
+<tr class="separator:aa02237639c1c2a57ceea70b935bfba45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bb0324b8d46cf95529bd340c383585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a80bb0324b8d46cf95529bd340c383585">entitySprite_</a></td></tr>
+<tr class="separator:a80bb0324b8d46cf95529bd340c383585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for all entities </p>
+<div class="textblock"><p>Base class for all entities</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_transformable_component.html">TransformableComponent</a> </dd>
+<dd>
+<a class="el" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity.">EntitySpriteComponent</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>An <a class="el" href="class_entity.html">Entity</a> is an object that has an update and a render method </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00014">14</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00023">23</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3170dc9c4995e5bd8e28601807350df9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3170dc9c4995e5bd8e28601807350df9">&#9670;&nbsp;</a></span>Entity() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3170dc9c4995e5bd8e28601807350df9">&#9670;&nbsp;</a></span>Entity() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +198,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a59e211574f0e67279934df788cc03df7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59e211574f0e67279934df788cc03df7">&#9670;&nbsp;</a></span>Entity() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e211574f0e67279934df788cc03df7">&#9670;&nbsp;</a></span>Entity() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,11 +228,178 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00028">28</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00041">41</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af0c912b86f9d0b1c7299239212d9a0ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c912b86f9d0b1c7299239212d9a0ca">&#9670;&nbsp;</a></span>Entity() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Entity::Entity </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td>
+          <td class="paramname"><em>transformable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Intermediate Transformable Constructor</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the entity </td></tr>
+    <tr><td class="paramname">transformable</td><td>Pointer to the <a class="el" href="class_transformable_component.html">TransformableComponent</a> to attach to the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00049">49</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abd75374db786223239daa5010b4cbdf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd75374db786223239daa5010b4cbdf3">&#9670;&nbsp;</a></span>Entity() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Entity::Entity </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td>
+          <td class="paramname"><em>transformable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td>
+          <td class="paramname"><em>entitySprite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Full Constructor</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the entity </td></tr>
+    <tr><td class="paramname">transformable</td><td>Pointer to the <a class="el" href="class_transformable_component.html">TransformableComponent</a> to attach to the entity </td></tr>
+    <tr><td class="paramname">entitySprite</td><td>Pointer to the <a class="el" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity.">EntitySpriteComponent</a> to attach to the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00058">58</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2edbfe01d432af851512cb021caa6a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2edbfe01d432af851512cb021caa6a75">&#9670;&nbsp;</a></span>getCurrentScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Entity::getCurrentScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the current scene of the entity</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the current scene </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00103">103</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1082a3ee77f8235d11aee6a6b7b5b822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1082a3ee77f8235d11aee6a6b7b5b822">&#9670;&nbsp;</a></span>getEntitySprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a>* Entity::getEntitySprite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the EntitySprite Component of the entity</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the EntitySprite Component </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00117">117</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity_a1082a3ee77f8235d11aee6a6b7b5b822_icgraph.png" border="0" usemap="#aclass_entity_a1082a3ee77f8235d11aee6a6b7b5b822_icgraph" alt=""/></div>
+<map name="aclass_entity_a1082a3ee77f8235d11aee6a6b7b5b822_icgraph" id="aclass_entity_a1082a3ee77f8235d11aee6a6b7b5b822_icgraph">
+<area shape="rect" title=" " alt="" coords="268,5,432,32"/>
+<area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="108,5,220,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a5dc4c35cc28ca7895348607f3e4894c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dc4c35cc28ca7895348607f3e4894c3">&#9670;&nbsp;</a></span>getName()</h2>
 
@@ -235,7 +425,7 @@ Protected Attributes</h2></td></tr>
 <p>Get the name of the entity</p>
 <dl class="section return"><dt>Returns</dt><dd>Name of the entity </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00049">49</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00096">96</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -250,8 +440,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae46468a51bb678ff6bfadbd8111d731b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae46468a51bb678ff6bfadbd8111d731b">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[1/2]</span></h2>
+<a id="aec0550d41d7e7ec5f868d30a84b0f6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0550d41d7e7ec5f868d30a84b0f6d2">&#9670;&nbsp;</a></span>getTransformable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +450,36 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Entity::processEvent </td>
+          <td class="memname"><a class="el" href="class_transformable_component.html">TransformableComponent</a>* Entity::getTransformable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Transformable Component of the entity</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Transformable Component </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00110">110</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a37cb335962ddb32dafd558405088ceda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37cb335962ddb32dafd558405088ceda">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Entity::processEvent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_custom_event.html">CustomEvent</a> *&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
@@ -269,19 +488,19 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_ennemy.html#aaea8bc5fcf41d2bf5771416b70a587dc">Ennemy</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8cpp_source.html#l00008">8</a> of file <a class="el" href="_entity_8cpp_source.html">Entity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00122">122</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a2e9231145130595a7ea8903c0035a3b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e9231145130595a7ea8903c0035a3b1">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[2/2]</span></h2>
+<a id="ade3aa68e07ed624c03459a605353ca98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade3aa68e07ed624c03459a605353ca98">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +509,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Entity::processEvent </td>
+          <td class="memname">virtual void Entity::processEvent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_event_a.html">EventA</a> *&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
@@ -299,17 +518,17 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_entity_8cpp_source.html#l00007">7</a> of file <a class="el" href="_entity_8cpp_source.html">Entity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00121">121</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad87af2e77fbcda048f7543bfb43ddaaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad87af2e77fbcda048f7543bfb43ddaaf">&#9670;&nbsp;</a></span>render()</h2>
+<a id="abc21bc8c791274305898a2b13e624692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc21bc8c791274305898a2b13e624692">&#9670;&nbsp;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,7 +537,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Entity::render </td>
+          <td class="memname">virtual void Entity::render </td>
           <td>(</td>
           <td class="paramtype">sf::RenderWindow *&#160;</td>
           <td class="paramname"><em>window</em></td><td>)</td>
@@ -327,14 +546,49 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">Projectile</a>, <a class="el" href="class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c">Player</a>, and <a class="el" href="class_ennemy.html#a04bf6b840b4e464875649bc0dfe5d4af">Ennemy</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8cpp_source.html#l00012">12</a> of file <a class="el" href="_entity_8cpp_source.html">Entity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00125">125</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c19692f28142f36b311e3ee1ad9de77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c19692f28142f36b311e3ee1ad9de77">&#9670;&nbsp;</a></span>setEntitySprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::setEntitySprite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td>
+          <td class="paramname"><em>entitySprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the EntitySprite Component of the entity</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entitySprite</td><td>Pointer to the EntitySprite Component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00088">88</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +623,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00042">42</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00074">74</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -378,6 +632,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Entity::setScene </td>
@@ -387,6 +644,11 @@ Here is the caller graph for this function:</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Set the current scene of the entity</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -396,7 +658,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8cpp_source.html#l00005">5</a> of file <a class="el" href="_entity_8cpp_source.html">Entity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00067">67</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -411,8 +673,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a00b6eeaf99b35c8f8b10b5fbfc1baf4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00b6eeaf99b35c8f8b10b5fbfc1baf4f">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a797c5fbf96c08f0959e67c4432ffe125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797c5fbf96c08f0959e67c4432ffe125">&#9670;&nbsp;</a></span>setTransformable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -421,7 +683,42 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Entity::update </td>
+          <td class="memname">void Entity::setTransformable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td>
+          <td class="paramname"><em>transformable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Transformable Component of the entity</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transformable</td><td>Pointer to the Transformable Component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00081">81</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aed73e98b980b85833428c935cc1c69f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed73e98b980b85833428c935cc1c69f8">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Entity::update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -429,20 +726,20 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">Projectile</a>, <a class="el" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef">Player</a>, and <a class="el" href="class_ennemy.html#a35b503a1ea239fd8b570012bab798dc3">Ennemy</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8cpp_source.html#l00010">10</a> of file <a class="el" href="_entity_8cpp_source.html">Entity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00124">124</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a48ca158bf622fc10c60c7cbd3aa9bcc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48ca158bf622fc10c60c7cbd3aa9bcc3">&#9670;&nbsp;</a></span>current_scene</h2>
+<a id="a91027be8d125eb57c233dd631b226e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91027be8d125eb57c233dd631b226e4e">&#9670;&nbsp;</a></span>current_scene_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +748,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Entity::current_scene</td>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Entity::current_scene_</td>
         </tr>
       </table>
   </td>
@@ -462,12 +759,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to the current scene </p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00017">17</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00026">26</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a425e6dbab1090334cd621b47ff2bc2ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a425e6dbab1090334cd621b47ff2bc2ea">&#9670;&nbsp;</a></span>name</h2>
+<a id="a80bb0324b8d46cf95529bd340c383585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bb0324b8d46cf95529bd340c383585">&#9670;&nbsp;</a></span>entitySprite_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +773,33 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* Entity::name</td>
+          <td class="memname"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a>* Entity::entitySprite_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pointer to the EntitySprite Component <br  />
+ </p>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00030">30</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac765a424fb46628fc30523f040910f23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac765a424fb46628fc30523f040910f23">&#9670;&nbsp;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* Entity::name_</td>
         </tr>
       </table>
   </td>
@@ -487,13 +810,37 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Name of the entity </p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00018">18</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00027">27</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>Headers/Entity/<a class="el" href="_entity_8hpp_source.html">Entity.hpp</a></li>
-<li>src/Entity/<a class="el" href="_entity_8cpp_source.html">Entity.cpp</a></li>
+<a id="aa02237639c1c2a57ceea70b935bfba45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02237639c1c2a57ceea70b935bfba45">&#9670;&nbsp;</a></span>transformable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transformable_component.html">TransformableComponent</a>* Entity::transformable_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pointer to the Transformable Component </p>
+
+<p class="definition">Definition at line <a class="el" href="_entity_8hpp_source.html#l00029">29</a> of file <a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>includes/Entity/<a class="el" href="_entity_8hpp_source.html">Entity.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

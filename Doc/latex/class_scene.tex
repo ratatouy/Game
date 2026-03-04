@@ -13,15 +13,6 @@ Inheritance diagram for Scene\+:\nopagebreak
 \includegraphics[width=153pt]{class_scene__inherit__graph}
 \end{center}
 \end{figure}
-
-
-Collaboration diagram for Scene\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=192pt]{class_scene__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,9 +20,9 @@ Collaboration diagram for Scene\+:\nopagebreak
 \item 
 \mbox{\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene}} ()
 \item 
-void \mbox{\hyperlink{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}{set\+Event\+Handler}} (\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$\mbox{\hyperlink{class_event_handler}{Event\+Handler}})
+void \mbox{\hyperlink{class_scene_abb23401dd887424e48b3016a6f33a5e1}{set\+Render\+Engine}} (\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$render\+Engine)
 \item 
-void \mbox{\hyperlink{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}{add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+void \mbox{\hyperlink{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}{set\+Event\+Handler}} (\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$\mbox{\hyperlink{class_event_handler}{Event\+Handler}})
 \item 
 \mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_a3c200511f7f00c8184a7d6281a508e2c}{get\+Entity}} (const char $\ast$name)
 \item 
@@ -45,21 +36,22 @@ virtual void \mbox{\hyperlink{class_scene_a0db76b56a0c7637f4a20900ab90aa266}{pro
 \item 
 void \mbox{\hyperlink{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}{throw\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
 \item 
-void \mbox{\hyperlink{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d}{update\+Entity}} ()
+void \mbox{\hyperlink{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}{add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
 \item 
-void \mbox{\hyperlink{class_scene_a80dd06f2778de55f455b0299502f26f7}{render}} (sf\+::\+Render\+Window $\ast$window)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_scene_aa24c7e636c10e4e42650c1374b90bb80}{update}} ()
 \item 
-\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_scene_aac63d0d2ba6e0d67420298f75c31a345}{event\+Handler}}
+void \mbox{\hyperlink{class_scene_a71feeabe831f8755af8adbef941188c4}{update\+Entities}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a41145ff1608c7967525af3ff4fb9aabe}{render\+Entities}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{render}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 16 of file Scene.\+hpp.
+Definition at line 20 of file Scene.\+hpp.
 
 
 
@@ -72,7 +64,7 @@ Definition at line 16 of file Scene.\+hpp.
 
 
 
-Definition at line 7 of file Scene.\+cpp.
+Definition at line 8 of file Scene.\+cpp.
 
 \mbox{\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}} 
 \index{Scene@{Scene}!````~Scene@{$\sim$Scene}}
@@ -82,7 +74,7 @@ Definition at line 7 of file Scene.\+cpp.
 
 
 
-Definition at line 9 of file Scene.\+cpp.
+Definition at line 10 of file Scene.\+cpp.
 
 
 
@@ -95,7 +87,7 @@ Definition at line 9 of file Scene.\+cpp.
 
 
 
-Definition at line 24 of file Scene.\+cpp.
+Definition at line 20 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -119,7 +111,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 31 of file Scene.\+cpp.
+Definition at line 27 of file Scene.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -136,7 +128,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 51 of file Scene.\+cpp.
+Definition at line 47 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -153,7 +145,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 41 of file Scene.\+cpp.
+Definition at line 37 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -177,7 +169,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 32 of file Scene.\+hpp.
+Definition at line 44 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}\label{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}} 
 \index{Scene@{Scene}!processEventFunc@{processEventFunc}}
@@ -191,7 +183,7 @@ Reimplemented in \mbox{\hyperlink{class_menu_scene_ac5baca2b2cc554a5acca8e7313e5
 
 
 
-Definition at line 30 of file Scene.\+hpp.
+Definition at line 42 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -200,38 +192,86 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_a80dd06f2778de55f455b0299502f26f7}\label{class_scene_a80dd06f2778de55f455b0299502f26f7}} 
+\mbox{\Hypertarget{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}\label{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}} 
 \index{Scene@{Scene}!render@{render}}
 \index{render@{render}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
-{\footnotesize\ttfamily void Scene\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Scene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 75 of file Scene.\+cpp.
+Definition at line 69 of file Scene.\+cpp.
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=240pt]{class_scene_a80dd06f2778de55f455b0299502f26f7_icgraph}
+\includegraphics[width=240pt]{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a41145ff1608c7967525af3ff4fb9aabe}\label{class_scene_a41145ff1608c7967525af3ff4fb9aabe}} 
+\index{Scene@{Scene}!renderEntities@{renderEntities}}
+\index{renderEntities@{renderEntities}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{renderEntities()}{renderEntities()}}
+{\footnotesize\ttfamily void Scene\+::render\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a41145ff1608c7967525af3ff4fb9aabe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a41145ff1608c7967525af3ff4fb9aabe_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}\label{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}} 
 \index{Scene@{Scene}!setEventHandler@{setEventHandler}}
 \index{setEventHandler@{setEventHandler}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{setEventHandler()}{setEventHandler()}}
-{\footnotesize\ttfamily void Scene\+::set\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$}]{Event\+Handler }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Scene\+::set\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$}]{Event\+Handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 18 of file Scene.\+cpp.
+Definition at line 34 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=290pt]{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_abb23401dd887424e48b3016a6f33a5e1}\label{class_scene_abb23401dd887424e48b3016a6f33a5e1}} 
+\index{Scene@{Scene}!setRenderEngine@{setRenderEngine}}
+\index{setRenderEngine@{setRenderEngine}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setRenderEngine()}{setRenderEngine()}}
+{\footnotesize\ttfamily void Scene\+::set\+Render\+Engine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$}]{render\+Engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file Scene.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_scene_abb23401dd887424e48b3016a6f33a5e1_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}\label{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}} 
@@ -242,7 +282,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 61 of file Scene.\+cpp.
+Definition at line 57 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -251,39 +291,50 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_scene_a7671ad25a45d0dfee2ee110a2dae588a_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d}\label{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d}} 
-\index{Scene@{Scene}!updateEntity@{updateEntity}}
-\index{updateEntity@{updateEntity}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{updateEntity()}{updateEntity()}}
-{\footnotesize\ttfamily void Scene\+::update\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_scene_aa24c7e636c10e4e42650c1374b90bb80}\label{class_scene_aa24c7e636c10e4e42650c1374b90bb80}} 
+\index{Scene@{Scene}!update@{update}}
+\index{update@{update}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Definition at line 67 of file Scene.\+cpp.
+Definition at line 63 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_scene_aa24c7e636c10e4e42650c1374b90bb80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_scene_aa24c7e636c10e4e42650c1374b90bb80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a71feeabe831f8755af8adbef941188c4}\label{class_scene_a71feeabe831f8755af8adbef941188c4}} 
+\index{Scene@{Scene}!updateEntities@{updateEntities}}
+\index{updateEntities@{updateEntities}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{updateEntities()}{updateEntities()}}
+{\footnotesize\ttfamily void Scene\+::update\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file Scene.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=271pt]{class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d_icgraph}
+\includegraphics[width=350pt]{class_scene_a71feeabe831f8755af8adbef941188c4_icgraph}
 \end{center}
 \end{figure}
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_scene_aac63d0d2ba6e0d67420298f75c31a345}\label{class_scene_aac63d0d2ba6e0d67420298f75c31a345}} 
-\index{Scene@{Scene}!eventHandler@{eventHandler}}
-\index{eventHandler@{eventHandler}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{eventHandler}{eventHandler}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_event_handler}{Event\+Handler}}$\ast$ Scene\+::event\+Handler}
-
-
-
-Definition at line 18 of file Scene.\+hpp.
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Headers/\+Scenes/\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\item 
+includes/\+Scenes/\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\item 
 src/\+Scenes/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

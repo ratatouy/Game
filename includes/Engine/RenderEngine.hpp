@@ -11,8 +11,12 @@ class RenderEngine {
 
 private:
     static bool instantiated_;
+
     sf::RenderWindow* window_;
     Scene* currentScene_;
+
+    std::vector<std::pair<sf::Sprite*, sf::Shader*>> shader_objects_;
+    sf::Clock clock_;
 
 
 public:
@@ -29,6 +33,13 @@ public:
 
     sf::RenderWindow* getWindow() {return window_;}
 
+
+    void addShaderObject(const char* filepath, sf::Shader::Type type);
+
+
+    void update(float deltaTime);
+
+    void render();
 };
 
 #endif

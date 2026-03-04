@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ratatouy&#39;s SFML Game Project: Headers/Entity/Projectile/Projectile.hpp Source File</title>
+<title>Ratatouy&#39;s SFML Game Project: includes/Entity/Projectile/Projectile.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,40 +99,34 @@ $(document).ready(function(){initNavTree('_projectile_8hpp_source.html',''); ini
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_projectile.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_projectile.html">Projectile</a> : <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    sf::Vector2f speed;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    sf::Vector2f speed_;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_projectile.html#aec950c0a5435681274cba86dc181794a">   15</a></span>&#160;    <a class="code" href="class_transformable_component.html">TransformableComponent</a>* <a class="code" href="class_projectile.html#aec950c0a5435681274cba86dc181794a">transformable</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_projectile.html#ad6d24ac6af7e648e6cc7b508f08a1cbf">   16</a></span>&#160;    <a class="code" href="class_entity_sprite_component.html">EntitySpriteComponent</a>* <a class="code" href="class_projectile.html#ad6d24ac6af7e648e6cc7b508f08a1cbf">sprites</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_projectile.html#a2146c34f553c3726f76571b268af1e7f">Projectile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, sf::Vector2f position = {0,0}, sf::Vector2f speed = {0,0});</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_projectile.html#a0bfe3550849143820e5532915db52461">Projectile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* n, sf::Vector2f p = {0,0}, sf::Vector2f sp = {0,0});</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">update</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">update</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">render</a>(sf::RenderWindow* window) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">render</a>(sf::RenderWindow* window) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_entity_8hpp_html"><div class="ttname"><a href="_entity_8hpp.html">Entity.hpp</a></div></div>
 <div class="ttc" id="a_entity_sprite_component_8hpp_html"><div class="ttname"><a href="_entity_sprite_component_8hpp.html">EntitySpriteComponent.hpp</a></div></div>
 <div class="ttc" id="a_transformable_component_8hpp_html"><div class="ttname"><a href="_transformable_component_8hpp.html">TransformableComponent.hpp</a></div></div>
-<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00014">Entity.hpp:14</a></div></div>
-<div class="ttc" id="aclass_entity_sprite_component_html"><div class="ttname"><a href="class_entity_sprite_component.html">EntitySpriteComponent</a></div><div class="ttdoc">Component to manage the sprites of an entity.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8hpp_source.html#l00016">EntitySpriteComponent.hpp:16</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00023">Entity.hpp:23</a></div></div>
 <div class="ttc" id="aclass_projectile_html"><div class="ttname"><a href="class_projectile.html">Projectile</a></div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8hpp_source.html#l00010">Projectile.hpp:10</a></div></div>
-<div class="ttc" id="aclass_projectile_html_a0bfe3550849143820e5532915db52461"><div class="ttname"><a href="class_projectile.html#a0bfe3550849143820e5532915db52461">Projectile::Projectile</a></div><div class="ttdeci">Projectile(const char *n, sf::Vector2f p={0, 0}, sf::Vector2f sp={0, 0})</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00004">Projectile.cpp:4</a></div></div>
+<div class="ttc" id="aclass_projectile_html_a2146c34f553c3726f76571b268af1e7f"><div class="ttname"><a href="class_projectile.html#a2146c34f553c3726f76571b268af1e7f">Projectile::Projectile</a></div><div class="ttdeci">Projectile(const char *name, sf::Vector2f position={0, 0}, sf::Vector2f speed={0, 0})</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00004">Projectile.cpp:4</a></div></div>
 <div class="ttc" id="aclass_projectile_html_ac41ad56034b53e739619fabbd5e49652"><div class="ttname"><a href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">Projectile::update</a></div><div class="ttdeci">void update() override</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00012">Projectile.cpp:12</a></div></div>
-<div class="ttc" id="aclass_projectile_html_ad6d24ac6af7e648e6cc7b508f08a1cbf"><div class="ttname"><a href="class_projectile.html#ad6d24ac6af7e648e6cc7b508f08a1cbf">Projectile::sprites</a></div><div class="ttdeci">EntitySpriteComponent * sprites</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8hpp_source.html#l00016">Projectile.hpp:16</a></div></div>
 <div class="ttc" id="aclass_projectile_html_ae7a60d5c8da58bcb33076d627a800c7b"><div class="ttname"><a href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">Projectile::render</a></div><div class="ttdeci">void render(sf::RenderWindow *window) override</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00019">Projectile.cpp:19</a></div></div>
-<div class="ttc" id="aclass_projectile_html_aec950c0a5435681274cba86dc181794a"><div class="ttname"><a href="class_projectile.html#aec950c0a5435681274cba86dc181794a">Projectile::transformable</a></div><div class="ttdeci">TransformableComponent * transformable</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8hpp_source.html#l00015">Projectile.hpp:15</a></div></div>
-<div class="ttc" id="aclass_transformable_component_html"><div class="ttname"><a href="class_transformable_component.html">TransformableComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="_transformable_component_8hpp_source.html#l00015">TransformableComponent.hpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="dir_42223c7a705cf10e40e6d6595e86b6f7.html">Entity</a></li><li class="navelem"><a class="el" href="dir_d23f8bb02abb82e5bdbc5ff77003a415.html">Projectile</a></li><li class="navelem"><a class="el" href="_projectile_8hpp.html">Projectile.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_ae37fa6e79b25bbd9e89947658df1a5b.html">Entity</a></li><li class="navelem"><a class="el" href="dir_ada98e5244625e06b66cf708fa5f04e3.html">Projectile</a></li><li class="navelem"><a class="el" href="_projectile_8hpp.html">Projectile.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

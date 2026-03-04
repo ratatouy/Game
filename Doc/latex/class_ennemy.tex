@@ -19,25 +19,17 @@ Collaboration diagram for Ennemy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=194pt]{class_ennemy__coll__graph}
+\includegraphics[width=350pt]{class_ennemy__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_ennemy_a3cf41024b85f8360f54beb2805e7c74b}{Ennemy}} (const char $\ast$n, int h=7)
+\mbox{\hyperlink{class_ennemy_a42a354239c3b07e2a2d5a7ecd4abb2c2}{Ennemy}} (const char $\ast$name, int health=7)
 \item 
-\mbox{\hyperlink{class_ennemy_a7ebc09780bd13ba4d7df576772c5c0f5}{Ennemy}} (const char $\ast$\mbox{\hyperlink{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}{name}}, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transform, int h=7)
+\mbox{\hyperlink{class_ennemy_a68413fe16af0080a553a23117b6112b0}{Ennemy}} (const char $\ast$name, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transform, int health=7)
 \item 
-\mbox{\hyperlink{class_ennemy_a2eb8dc1712854129cabb440f1710b3d0}{Ennemy}} (const char $\ast$\mbox{\hyperlink{class_entity_a425e6dbab1090334cd621b47ff2bc2ea}{name}}, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transform, \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$sprites, int h=7)
-\item 
-void \mbox{\hyperlink{class_ennemy_ab93ba16725ca01b8fd31c825f3629761}{set\+Transformable}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transform)
-\item 
-void \mbox{\hyperlink{class_ennemy_a427ac542c0908798b54e659c55a68afa}{set\+Entity\+Sprite}} (\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$sprites)
-\item 
-\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$ \mbox{\hyperlink{class_ennemy_a8c99f0970fabe837c45627f0f998110d}{get\+Transformable}} ()
-\item 
-\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$ \mbox{\hyperlink{class_ennemy_a9419e1f97eed0e36bfaccc01afc0b933}{get\+Entity\+Sprite}} ()
+\mbox{\hyperlink{class_ennemy_a2d77e41154ffc414d35281897d206d01}{Ennemy}} (const char $\ast$name, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transform, \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$sprites, int health=7)
 \item 
 void \mbox{\hyperlink{class_ennemy_a35b503a1ea239fd8b570012bab798dc3}{update}} () override
 \item 
@@ -46,11 +38,6 @@ void \mbox{\hyperlink{class_ennemy_a04bf6b840b4e464875649bc0dfe5d4af}{render}} (
 void \mbox{\hyperlink{class_ennemy_aaea8bc5fcf41d2bf5771416b70a587dc}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event) override
 \item 
 void \mbox{\hyperlink{class_ennemy_a4784be82a5ce923d1494477c55bbc297}{get\+Hit}} (int damage)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-int \mbox{\hyperlink{class_ennemy_a326d016c6936e15a95204ff6b306b398}{health}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -63,49 +50,39 @@ Definition at line 14 of file Ennemy.\+hpp.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_ennemy_a3cf41024b85f8360f54beb2805e7c74b}\label{class_ennemy_a3cf41024b85f8360f54beb2805e7c74b}} 
+\mbox{\Hypertarget{class_ennemy_a42a354239c3b07e2a2d5a7ecd4abb2c2}\label{class_ennemy_a42a354239c3b07e2a2d5a7ecd4abb2c2}} 
 \index{Ennemy@{Ennemy}!Ennemy@{Ennemy}}
 \index{Ennemy@{Ennemy}!Ennemy@{Ennemy}}
 \doxysubsubsection{\texorpdfstring{Ennemy()}{Ennemy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Ennemy\+::\+Ennemy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{n,  }\item[{int}]{h = {\ttfamily 7} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Ennemy\+::\+Ennemy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{int}]{health = {\ttfamily 7} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 18 of file Ennemy.\+hpp.
+Definition at line 21 of file Ennemy.\+hpp.
 
-\mbox{\Hypertarget{class_ennemy_a7ebc09780bd13ba4d7df576772c5c0f5}\label{class_ennemy_a7ebc09780bd13ba4d7df576772c5c0f5}} 
+\mbox{\Hypertarget{class_ennemy_a68413fe16af0080a553a23117b6112b0}\label{class_ennemy_a68413fe16af0080a553a23117b6112b0}} 
 \index{Ennemy@{Ennemy}!Ennemy@{Ennemy}}
 \index{Ennemy@{Ennemy}!Ennemy@{Ennemy}}
 \doxysubsubsection{\texorpdfstring{Ennemy()}{Ennemy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Ennemy\+::\+Ennemy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transform,  }\item[{int}]{h = {\ttfamily 7} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Ennemy\+::\+Ennemy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transform,  }\item[{int}]{health = {\ttfamily 7} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 19 of file Ennemy.\+hpp.
+Definition at line 22 of file Ennemy.\+hpp.
 
-\mbox{\Hypertarget{class_ennemy_a2eb8dc1712854129cabb440f1710b3d0}\label{class_ennemy_a2eb8dc1712854129cabb440f1710b3d0}} 
+\mbox{\Hypertarget{class_ennemy_a2d77e41154ffc414d35281897d206d01}\label{class_ennemy_a2d77e41154ffc414d35281897d206d01}} 
 \index{Ennemy@{Ennemy}!Ennemy@{Ennemy}}
 \index{Ennemy@{Ennemy}!Ennemy@{Ennemy}}
 \doxysubsubsection{\texorpdfstring{Ennemy()}{Ennemy()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Ennemy\+::\+Ennemy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transform,  }\item[{\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$}]{sprites,  }\item[{int}]{h = {\ttfamily 7} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Ennemy\+::\+Ennemy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transform,  }\item[{\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$}]{sprites,  }\item[{int}]{health = {\ttfamily 7} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 20 of file Ennemy.\+hpp.
+Definition at line 23 of file Ennemy.\+hpp.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_ennemy_a9419e1f97eed0e36bfaccc01afc0b933}\label{class_ennemy_a9419e1f97eed0e36bfaccc01afc0b933}} 
-\index{Ennemy@{Ennemy}!getEntitySprite@{getEntitySprite}}
-\index{getEntitySprite@{getEntitySprite}!Ennemy@{Ennemy}}
-\doxysubsubsection{\texorpdfstring{getEntitySprite()}{getEntitySprite()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}}$\ast$ Ennemy\+::get\+Entity\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 27 of file Ennemy.\+hpp.
-
 \mbox{\Hypertarget{class_ennemy_a4784be82a5ce923d1494477c55bbc297}\label{class_ennemy_a4784be82a5ce923d1494477c55bbc297}} 
 \index{Ennemy@{Ennemy}!getHit@{getHit}}
 \index{getHit@{getHit}!Ennemy@{Ennemy}}
@@ -123,16 +100,6 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=335pt]{class_ennemy_a4784be82a5ce923d1494477c55bbc297_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_ennemy_a8c99f0970fabe837c45627f0f998110d}\label{class_ennemy_a8c99f0970fabe837c45627f0f998110d}} 
-\index{Ennemy@{Ennemy}!getTransformable@{getTransformable}}
-\index{getTransformable@{getTransformable}!Ennemy@{Ennemy}}
-\doxysubsubsection{\texorpdfstring{getTransformable()}{getTransformable()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}$\ast$ Ennemy\+::get\+Transformable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 26 of file Ennemy.\+hpp.
-
 \mbox{\Hypertarget{class_ennemy_aaea8bc5fcf41d2bf5771416b70a587dc}\label{class_ennemy_aaea8bc5fcf41d2bf5771416b70a587dc}} 
 \index{Ennemy@{Ennemy}!processEvent@{processEvent}}
 \index{processEvent@{processEvent}!Ennemy@{Ennemy}}
@@ -141,7 +108,7 @@ Definition at line 26 of file Ennemy.\+hpp.
 
 
 
-Reimplemented from \mbox{\hyperlink{class_entity_ae46468a51bb678ff6bfadbd8111d731b}{Entity}}.
+Reimplemented from \mbox{\hyperlink{class_entity_a37cb335962ddb32dafd558405088ceda}{Entity}}.
 
 
 
@@ -162,7 +129,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Reimplemented from \mbox{\hyperlink{class_entity_ad87af2e77fbcda048f7543bfb43ddaaf}{Entity}}.
+Reimplemented from \mbox{\hyperlink{class_entity_abc21bc8c791274305898a2b13e624692}{Entity}}.
 
 
 
@@ -175,26 +142,6 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=339pt]{class_ennemy_a04bf6b840b4e464875649bc0dfe5d4af_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_ennemy_a427ac542c0908798b54e659c55a68afa}\label{class_ennemy_a427ac542c0908798b54e659c55a68afa}} 
-\index{Ennemy@{Ennemy}!setEntitySprite@{setEntitySprite}}
-\index{setEntitySprite@{setEntitySprite}!Ennemy@{Ennemy}}
-\doxysubsubsection{\texorpdfstring{setEntitySprite()}{setEntitySprite()}}
-{\footnotesize\ttfamily void Ennemy\+::set\+Entity\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$}]{sprites }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 24 of file Ennemy.\+hpp.
-
-\mbox{\Hypertarget{class_ennemy_ab93ba16725ca01b8fd31c825f3629761}\label{class_ennemy_ab93ba16725ca01b8fd31c825f3629761}} 
-\index{Ennemy@{Ennemy}!setTransformable@{setTransformable}}
-\index{setTransformable@{setTransformable}!Ennemy@{Ennemy}}
-\doxysubsubsection{\texorpdfstring{setTransformable()}{setTransformable()}}
-{\footnotesize\ttfamily void Ennemy\+::set\+Transformable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 23 of file Ennemy.\+hpp.
-
 \mbox{\Hypertarget{class_ennemy_a35b503a1ea239fd8b570012bab798dc3}\label{class_ennemy_a35b503a1ea239fd8b570012bab798dc3}} 
 \index{Ennemy@{Ennemy}!update@{update}}
 \index{update@{update}!Ennemy@{Ennemy}}
@@ -203,7 +150,7 @@ Definition at line 23 of file Ennemy.\+hpp.
 
 
 
-Reimplemented from \mbox{\hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{Entity}}.
+Reimplemented from \mbox{\hyperlink{class_entity_aed73e98b980b85833428c935cc1c69f8}{Entity}}.
 
 
 
@@ -211,20 +158,7 @@ Definition at line 29 of file Ennemy.\+cpp.
 
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_ennemy_a326d016c6936e15a95204ff6b306b398}\label{class_ennemy_a326d016c6936e15a95204ff6b306b398}} 
-\index{Ennemy@{Ennemy}!health@{health}}
-\index{health@{health}!Ennemy@{Ennemy}}
-\doxysubsubsection{\texorpdfstring{health}{health}}
-{\footnotesize\ttfamily int Ennemy\+::health}
-
-
-
-Definition at line 16 of file Ennemy.\+hpp.
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Headers/\+Entity/\+Ennemies/\mbox{\hyperlink{_ennemy_8hpp}{Ennemy.\+hpp}}\item 
+includes/\+Entity/\+Ennemies/\mbox{\hyperlink{_ennemy_8hpp}{Ennemy.\+hpp}}\item 
 src/\+Entity/\+Ennemies/\mbox{\hyperlink{_ennemy_8cpp}{Ennemy.\+cpp}}\end{DoxyCompactItemize}

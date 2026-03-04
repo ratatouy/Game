@@ -8,9 +8,11 @@ var class_scene =
     [ "processEvent", "class_scene.html#af25d320c2355ab99f2cbeb91fd689789", null ],
     [ "processEventFunc", "class_scene.html#a0db76b56a0c7637f4a20900ab90aa266", null ],
     [ "processEventFunc", "class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f", null ],
-    [ "render", "class_scene.html#a80dd06f2778de55f455b0299502f26f7", null ],
+    [ "render", "class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1", null ],
+    [ "renderEntities", "class_scene.html#a41145ff1608c7967525af3ff4fb9aabe", null ],
     [ "setEventHandler", "class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34", null ],
+    [ "setRenderEngine", "class_scene.html#abb23401dd887424e48b3016a6f33a5e1", null ],
     [ "throwEvent", "class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a", null ],
-    [ "updateEntity", "class_scene.html#ae41d8347a5ca25f6dec93001f4d8ce7d", null ],
-    [ "eventHandler", "class_scene.html#aac63d0d2ba6e0d67420298f75c31a345", null ]
+    [ "update", "class_scene.html#aa24c7e636c10e4e42650c1374b90bb80", null ],
+    [ "updateEntities", "class_scene.html#a71feeabe831f8755af8adbef941188c4", null ]
 ];

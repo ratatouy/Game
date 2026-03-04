@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['health_218',['health',['../class_ennemy.html#a326d016c6936e15a95204ff6b306b398',1,'Ennemy']]]
+  ['name_5f_221',['name_',['../class_entity.html#ac765a424fb46628fc30523f040910f23',1,'Entity']]]
 ];

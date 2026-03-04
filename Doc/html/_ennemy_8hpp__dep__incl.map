@@ -1,4 +1,4 @@
-<map id="Headers/Entity/Ennemies/Ennemy.hpp" name="Headers/Entity/Ennemies/Ennemy.hpp">
+<map id="includes/Entity/Ennemies/Ennemy.hpp" name="includes/Entity/Ennemies/Ennemy.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="63,5,250,47"/>
 <area shape="rect" id="node2" href="$_ennemy_8cpp.html" title=" " alt="" coords="5,95,156,136"/>
 <area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="180,102,285,129"/>

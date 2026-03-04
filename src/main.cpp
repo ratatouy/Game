@@ -35,7 +35,7 @@ int main() {
     TransformableComponent* raptorTransform = new TransformableComponent();
     raptorTransform->setScale({0.3f, 0.3f});
     EntitySpriteComponent* raptorSprite = new EntitySpriteComponent(raptorTransform);
-    raptorSprite->AddSprite("Sprites/raptorjesus.jpeg");
+    raptorSprite->AddSprite("assets/Sprites/raptorjesus.jpeg");
 
     Player* raptor = new Player("raptor", raptorTransform, raptorSprite);
 
@@ -44,7 +44,7 @@ int main() {
     liliTransformable->setPosition({400, 0});
     liliTransformable->setScale({0.5f, 0.5f});
     EntitySpriteComponent* liliSprite = new EntitySpriteComponent(liliTransformable);
-    liliSprite->AddSprite("Sprites/lilimanjaro.jpg");
+    liliSprite->AddSprite("assets/Sprites/lilimanjaro.jpg");
     Ennemy* lili = new Ennemy("lili", liliTransformable, liliSprite);
 
 

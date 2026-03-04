@@ -16,13 +16,15 @@ Component to manage the sprites of an entity.
 \item 
 \mbox{\hyperlink{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175}{$\sim$\+Entity\+Sprite\+Component}} ()
 \item 
-void \mbox{\hyperlink{class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1}{Add\+Sprite}} (std\+::string filepath)
+void \mbox{\hyperlink{class_entity_sprite_component_a95e0b3c037cb3a6f9017e5bcb5e012df}{Add\+Sprite}} (const char $\ast$filepath)
 \item 
-void \mbox{\hyperlink{class_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058}{Add\+Sprite}} (std\+::string filepath, sf\+::\+Int\+Rect Src\+Rect)
+void \mbox{\hyperlink{class_entity_sprite_component_a8a030891becaaae3ea59dda9ba2c50d9}{Add\+Sprite}} (const char $\ast$filepath, sf\+::\+Int\+Rect Src\+Rect)
 \item 
 const sf\+::\+Sprite $\ast$ \mbox{\hyperlink{class_entity_sprite_component_a9659f8414471377d482217c0f4b7212e}{Get\+This\+Sprite}} (unsigned int sprite\+Index)
 \item 
 const sf\+::\+Transformable $\ast$ \mbox{\hyperlink{class_entity_sprite_component_a6bd8736f640b46f33cb3d3c626e45f09}{Get\+This\+Sprite\+Local\+Transformable}} (int sprite\+Index)
+\item 
+void \mbox{\hyperlink{class_entity_sprite_component_a796e62c0dca462d49a70a298957a4e9d}{set\+Visible}} (bool visible)
 \item 
 void \mbox{\hyperlink{class_entity_sprite_component_a1207552e09041cb04588a74131babab5}{Set\+This\+Sprite\+Local\+Position}} (int sprite\+Index, sf\+::\+Vector2f position)
 \item 
@@ -34,7 +36,7 @@ void \mbox{\hyperlink{class_entity_sprite_component_a167229f02959e590116a6d20d95
 \item 
 void \mbox{\hyperlink{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}{update}} ()
 \item 
-const void \mbox{\hyperlink{class_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca}{render}} (sf\+::\+Render\+Window $\ast$window)
+const void \mbox{\hyperlink{class_entity_sprite_component_aeddda3afeb0c89ee6d145d0df0decbeb}{render}} (sf\+::\+Render\+Window $\ast$window)
 \end{DoxyCompactItemize}
 
 
@@ -63,7 +65,7 @@ Lowest Constructor
 \end{DoxyParams}
 
 
-Definition at line 30 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 31 of file Entity\+Sprite\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175}\label{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!````~EntitySpriteComponent@{$\sim$EntitySpriteComponent}}
@@ -78,11 +80,11 @@ Definition at line 7 of file Entity\+Sprite\+Component.\+cpp.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1}\label{class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1}} 
+\mbox{\Hypertarget{class_entity_sprite_component_a95e0b3c037cb3a6f9017e5bcb5e012df}\label{class_entity_sprite_component_a95e0b3c037cb3a6f9017e5bcb5e012df}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!AddSprite@{AddSprite}}
 \index{AddSprite@{AddSprite}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{AddSprite()}{AddSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
 
 Adds a sprite to the entity
 
@@ -106,21 +108,21 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_cgraph}
+\includegraphics[width=350pt]{class_entity_sprite_component_a95e0b3c037cb3a6f9017e5bcb5e012df_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_abad6c7e1b51597294821e9516a32cff1_icgraph}
+\includegraphics[width=350pt]{class_entity_sprite_component_a95e0b3c037cb3a6f9017e5bcb5e012df_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058}\label{class_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058}} 
+\mbox{\Hypertarget{class_entity_sprite_component_a8a030891becaaae3ea59dda9ba2c50d9}\label{class_entity_sprite_component_a8a030891becaaae3ea59dda9ba2c50d9}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!AddSprite@{AddSprite}}
 \index{AddSprite@{AddSprite}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{AddSprite()}{AddSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath,  }\item[{sf\+::\+Int\+Rect}]{Src\+Rect }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Int\+Rect}]{Src\+Rect }\end{DoxyParamCaption})}
 
 Adds a sprite to the entity with a source rectangle
 
@@ -139,7 +141,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_add8325ee20bd2d204f6bb40d970fb058_cgraph}
+\includegraphics[width=350pt]{class_entity_sprite_component_a8a030891becaaae3ea59dda9ba2c50d9_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_entity_sprite_component_a9659f8414471377d482217c0f4b7212e}\label{class_entity_sprite_component_a9659f8414471377d482217c0f4b7212e}} 
@@ -160,7 +162,7 @@ Pointer to the Requested Sprite
 \end{DoxyReturn}
 
 
-Definition at line 61 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 62 of file Entity\+Sprite\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_entity_sprite_component_a6bd8736f640b46f33cb3d3c626e45f09}\label{class_entity_sprite_component_a6bd8736f640b46f33cb3d3c626e45f09}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!GetThisSpriteLocalTransformable@{GetThisSpriteLocalTransformable}}
@@ -180,13 +182,13 @@ Pointer to the Requested Transformable
 \end{DoxyReturn}
 
 
-Definition at line 71 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 72 of file Entity\+Sprite\+Component.\+hpp.
 
-\mbox{\Hypertarget{class_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca}\label{class_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca}} 
+\mbox{\Hypertarget{class_entity_sprite_component_aeddda3afeb0c89ee6d145d0df0decbeb}\label{class_entity_sprite_component_aeddda3afeb0c89ee6d145d0df0decbeb}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!render@{render}}
 \index{render@{render}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
-{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const void Entity\+Sprite\+Component\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})}
 
 Renders the entity\textquotesingle{}s sprites
 
@@ -203,7 +205,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=346pt]{class_entity_sprite_component_acf666d1e753f614b5bd58cdb6cc5b2ca_icgraph}
+\includegraphics[width=346pt]{class_entity_sprite_component_aeddda3afeb0c89ee6d145d0df0decbeb_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_entity_sprite_component_a1207552e09041cb04588a74131babab5}\label{class_entity_sprite_component_a1207552e09041cb04588a74131babab5}} 
@@ -223,7 +225,7 @@ Set the local position of a sprite
 \end{DoxyParams}
 
 
-Definition at line 80 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 87 of file Entity\+Sprite\+Component.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -249,7 +251,7 @@ Set the local rotation of a sprite
 \end{DoxyParams}
 
 
-Definition at line 89 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 96 of file Entity\+Sprite\+Component.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -275,7 +277,7 @@ Set the local scale of a sprite
 \end{DoxyParams}
 
 
-Definition at line 98 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 105 of file Entity\+Sprite\+Component.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -314,6 +316,23 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_entity_sprite_component_a167229f02959e590116a6d20d9500cf8_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_entity_sprite_component_a796e62c0dca462d49a70a298957a4e9d}\label{class_entity_sprite_component_a796e62c0dca462d49a70a298957a4e9d}} 
+\index{EntitySpriteComponent@{EntitySpriteComponent}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!EntitySpriteComponent@{EntitySpriteComponent}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the visibility of the sprite
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & New visibility \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file Entity\+Sprite\+Component.\+hpp.
+
 \mbox{\Hypertarget{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}\label{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!update@{update}}
 \index{update@{update}!EntitySpriteComponent@{EntitySpriteComponent}}
@@ -344,5 +363,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Headers/\+Components/\+Basic\+Components/\mbox{\hyperlink{_entity_sprite_component_8hpp}{Entity\+Sprite\+Component.\+hpp}}\item 
+includes/\+Components/\+Basic\+Components/\mbox{\hyperlink{_entity_sprite_component_8hpp}{Entity\+Sprite\+Component.\+hpp}}\item 
 src/\+Components/\mbox{\hyperlink{_entity_sprite_component_8cpp}{Entity\+Sprite\+Component.\+cpp}}\end{DoxyCompactItemize}

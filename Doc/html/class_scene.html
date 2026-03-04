@@ -86,7 +86,6 @@ $(document).ready(function(){initNavTree('class_scene.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Scene Class Reference</div>  </div>
@@ -103,15 +102,6 @@ Inheritance diagram for Scene:</div>
 <area shape="rect" href="class_menu_scene.html" title=" " alt="" coords="5,80,103,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Scene:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_scene__coll__graph.png" border="0" usemap="#a_scene_coll__map" alt="Collaboration graph"/></div>
-<map name="a_scene_coll__map" id="a_scene_coll__map">
-<area shape="rect" title=" " alt="" coords="30,95,91,121"/>
-<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="5,5,116,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -119,10 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad10176d75a9cc0da56626f682d083507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8cec2e32546713915f8c6303c951f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a> ()</td></tr>
 <tr class="separator:a3b8cec2e32546713915f8c6303c951f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb23401dd887424e48b3016a6f33a5e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#abb23401dd887424e48b3016a6f33a5e1">setRenderEngine</a> (<a class="el" href="class_render_engine.html">RenderEngine</a> *renderEngine)</td></tr>
+<tr class="separator:abb23401dd887424e48b3016a6f33a5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d8b229ab26de9142a86bdd6b01ab34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34">setEventHandler</a> (<a class="el" href="class_event_handler.html">EventHandler</a> *<a class="el" href="class_event_handler.html">EventHandler</a>)</td></tr>
 <tr class="separator:aa3d8b229ab26de9142a86bdd6b01ab34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4bd06a9af64934a38bf75e8b6f1435e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">addEntity</a> (<a class="el" href="class_entity.html">Entity</a> *entity)</td></tr>
-<tr class="separator:ab4bd06a9af64934a38bf75e8b6f1435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c200511f7f00c8184a7d6281a508e2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">getEntity</a> (const char *name)</td></tr>
 <tr class="separator:a3c200511f7f00c8184a7d6281a508e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af25d320c2355ab99f2cbeb91fd689789"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">processEvent</a> (<a class="el" href="class_event_a.html">EventA</a> *event)</td></tr>
@@ -135,19 +125,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0db76b56a0c7637f4a20900ab90aa266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7671ad25a45d0dfee2ee110a2dae588a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">throwEvent</a> (<a class="el" href="class_event.html">Event</a> *event)</td></tr>
 <tr class="separator:a7671ad25a45d0dfee2ee110a2dae588a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41d8347a5ca25f6dec93001f4d8ce7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ae41d8347a5ca25f6dec93001f4d8ce7d">updateEntity</a> ()</td></tr>
-<tr class="separator:ae41d8347a5ca25f6dec93001f4d8ce7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80dd06f2778de55f455b0299502f26f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a80dd06f2778de55f455b0299502f26f7">render</a> (sf::RenderWindow *window)</td></tr>
-<tr class="separator:a80dd06f2778de55f455b0299502f26f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aac63d0d2ba6e0d67420298f75c31a345"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_event_handler.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aac63d0d2ba6e0d67420298f75c31a345">eventHandler</a></td></tr>
-<tr class="separator:aac63d0d2ba6e0d67420298f75c31a345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4bd06a9af64934a38bf75e8b6f1435e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">addEntity</a> (<a class="el" href="class_entity.html">Entity</a> *entity)</td></tr>
+<tr class="separator:ab4bd06a9af64934a38bf75e8b6f1435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24c7e636c10e4e42650c1374b90bb80"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aa24c7e636c10e4e42650c1374b90bb80">update</a> ()</td></tr>
+<tr class="separator:aa24c7e636c10e4e42650c1374b90bb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71feeabe831f8755af8adbef941188c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a71feeabe831f8755af8adbef941188c4">updateEntities</a> ()</td></tr>
+<tr class="separator:a71feeabe831f8755af8adbef941188c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41145ff1608c7967525af3ff4fb9aabe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe">renderEntities</a> ()</td></tr>
+<tr class="separator:a41145ff1608c7967525af3ff4fb9aabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddf2d16f371ee9533b3faf1dd5ddfb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1">render</a> ()</td></tr>
+<tr class="separator:a4ddf2d16f371ee9533b3faf1dd5ddfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00016">16</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00020">20</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad10176d75a9cc0da56626f682d083507"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad10176d75a9cc0da56626f682d083507">&#9670;&nbsp;</a></span>Scene()</h2>
@@ -164,7 +155,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00007">7</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00008">8</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 
 </div>
 </div>
@@ -183,7 +174,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00009">9</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00010">10</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 
 </div>
 </div>
@@ -204,7 +195,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00024">24</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00020">20</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -244,7 +235,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00031">31</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00027">27</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -281,7 +272,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00051">51</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00047">47</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -318,7 +309,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00041">41</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00037">37</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -364,7 +355,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00032">32</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00044">44</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +385,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="class_menu_scene.html#ac5baca2b2cc554a5acca8e7313e554fb">MenuScene</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00030">30</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00042">42</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -408,8 +399,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a80dd06f2778de55f455b0299502f26f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80dd06f2778de55f455b0299502f26f7">&#9670;&nbsp;</a></span>render()</h2>
+<a id="a4ddf2d16f371ee9533b3faf1dd5ddfb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddf2d16f371ee9533b3faf1dd5ddfb1">&#9670;&nbsp;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,20 +408,67 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void Scene::render </td>
           <td>(</td>
-          <td class="paramtype">sf::RenderWindow *&#160;</td>
-          <td class="paramname"><em>window</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00075">75</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00069">69</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_cgraph.png" border="0" usemap="#aclass_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_cgraph" alt=""/></div>
+<map name="aclass_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_cgraph" id="aclass_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe" title=" " alt="" coords="164,5,324,32"/>
+<area shape="rect" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688" title=" " alt="" coords="372,5,565,32"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_scene_a80dd06f2778de55f455b0299502f26f7_icgraph.png" border="0" usemap="#aclass_scene_a80dd06f2778de55f455b0299502f26f7_icgraph" alt=""/></div>
-<map name="aclass_scene_a80dd06f2778de55f455b0299502f26f7_icgraph" id="aclass_scene_a80dd06f2778de55f455b0299502f26f7_icgraph">
+<div class="center"><img src="class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_icgraph.png" border="0" usemap="#aclass_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_icgraph" alt=""/></div>
+<map name="aclass_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_icgraph" id="aclass_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1_icgraph">
 <area shape="rect" title=" " alt="" coords="108,5,219,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a41145ff1608c7967525af3ff4fb9aabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41145ff1608c7967525af3ff4fb9aabe">&#9670;&nbsp;</a></span>renderEntities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::renderEntities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00083">83</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_a41145ff1608c7967525af3ff4fb9aabe_cgraph.png" border="0" usemap="#aclass_scene_a41145ff1608c7967525af3ff4fb9aabe_cgraph" alt=""/></div>
+<map name="aclass_scene_a41145ff1608c7967525af3ff4fb9aabe_cgraph" id="aclass_scene_a41145ff1608c7967525af3ff4fb9aabe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,165,32"/>
+<area shape="rect" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688" title=" " alt="" coords="213,5,407,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_a41145ff1608c7967525af3ff4fb9aabe_icgraph.png" border="0" usemap="#aclass_scene_a41145ff1608c7967525af3ff4fb9aabe_icgraph" alt=""/></div>
+<map name="aclass_scene_a41145ff1608c7967525af3ff4fb9aabe_icgraph" id="aclass_scene_a41145ff1608c7967525af3ff4fb9aabe_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,427,32"/>
+<area shape="rect" href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1" title=" " alt="" coords="108,5,219,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -442,6 +480,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Scene::setEventHandler </td>
@@ -451,15 +492,57 @@ Here is the caller graph for this function:</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00018">18</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00034">34</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene_aa3d8b229ab26de9142a86bdd6b01ab34_icgraph.png" border="0" usemap="#aclass_scene_aa3d8b229ab26de9142a86bdd6b01ab34_icgraph" alt=""/></div>
 <map name="aclass_scene_aa3d8b229ab26de9142a86bdd6b01ab34_icgraph" id="aclass_scene_aa3d8b229ab26de9142a86bdd6b01ab34_icgraph">
 <area shape="rect" title=" " alt="" coords="108,5,285,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb23401dd887424e48b3016a6f33a5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb23401dd887424e48b3016a6f33a5e1">&#9670;&nbsp;</a></span>setRenderEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::setRenderEngine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_render_engine.html">RenderEngine</a> *&#160;</td>
+          <td class="paramname"><em>renderEngine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00032">32</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_abb23401dd887424e48b3016a6f33a5e1_icgraph.png" border="0" usemap="#aclass_scene_abb23401dd887424e48b3016a6f33a5e1_icgraph" alt=""/></div>
+<map name="aclass_scene_abb23401dd887424e48b3016a6f33a5e1_icgraph" id="aclass_scene_abb23401dd887424e48b3016a6f33a5e1_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,287,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -482,7 +565,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00061">61</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00057">57</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -495,14 +578,59 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae41d8347a5ca25f6dec93001f4d8ce7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41d8347a5ca25f6dec93001f4d8ce7d">&#9670;&nbsp;</a></span>updateEntity()</h2>
+<a id="aa24c7e636c10e4e42650c1374b90bb80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24c7e636c10e4e42650c1374b90bb80">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00063">63</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_aa24c7e636c10e4e42650c1374b90bb80_cgraph.png" border="0" usemap="#aclass_scene_aa24c7e636c10e4e42650c1374b90bb80_cgraph" alt=""/></div>
+<map name="aclass_scene_aa24c7e636c10e4e42650c1374b90bb80_cgraph" id="aclass_scene_aa24c7e636c10e4e42650c1374b90bb80_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,120,32"/>
+<area shape="rect" href="class_scene.html#a71feeabe831f8755af8adbef941188c4" title=" " alt="" coords="168,5,331,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_aa24c7e636c10e4e42650c1374b90bb80_icgraph.png" border="0" usemap="#aclass_scene_aa24c7e636c10e4e42650c1374b90bb80_icgraph" alt=""/></div>
+<map name="aclass_scene_aa24c7e636c10e4e42650c1374b90bb80_icgraph" id="aclass_scene_aa24c7e636c10e4e42650c1374b90bb80_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,223,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71feeabe831f8755af8adbef941188c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71feeabe831f8755af8adbef941188c4">&#9670;&nbsp;</a></span>updateEntities()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Scene::updateEntity </td>
+          <td class="memname">void Scene::updateEntities </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -510,38 +638,22 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00067">67</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_scene_8cpp_source.html#l00075">75</a> of file <a class="el" href="_scene_8cpp_source.html">Scene.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_scene_ae41d8347a5ca25f6dec93001f4d8ce7d_icgraph.png" border="0" usemap="#aclass_scene_ae41d8347a5ca25f6dec93001f4d8ce7d_icgraph" alt=""/></div>
-<map name="aclass_scene_ae41d8347a5ca25f6dec93001f4d8ce7d_icgraph" id="aclass_scene_ae41d8347a5ca25f6dec93001f4d8ce7d_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,260,32"/>
+<div class="center"><img src="class_scene_a71feeabe831f8755af8adbef941188c4_icgraph.png" border="0" usemap="#aclass_scene_a71feeabe831f8755af8adbef941188c4_icgraph" alt=""/></div>
+<map name="aclass_scene_a71feeabe831f8755af8adbef941188c4_icgraph" id="aclass_scene_a71feeabe831f8755af8adbef941188c4_icgraph">
+<area shape="rect" title=" " alt="" coords="271,5,433,32"/>
+<area shape="rect" href="class_scene.html#aa24c7e636c10e4e42650c1374b90bb80" title=" " alt="" coords="108,5,223,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aac63d0d2ba6e0d67420298f75c31a345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac63d0d2ba6e0d67420298f75c31a345">&#9670;&nbsp;</a></span>eventHandler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_event_handler.html">EventHandler</a>* Scene::eventHandler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_scene_8hpp_source.html#l00018">18</a> of file <a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Headers/Scenes/<a class="el" href="_scene_8hpp_source.html">Scene.hpp</a></li>
+<li>includes/Scenes/<a class="el" href="_scene_8hpp_source.html">Scene.hpp</a></li>
 <li>src/Scenes/<a class="el" href="_scene_8cpp_source.html">Scene.cpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -15,14 +15,22 @@
 \item 
 \mbox{\hyperlink{class_render_engine_a22709e8d62956c56b981d4d5d3ee1fc6}{$\sim$\+Render\+Engine}} ()
 \item 
+void \mbox{\hyperlink{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}{set\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+\item 
 sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}{get\+Window}} ()
+\item 
+void \mbox{\hyperlink{class_render_engine_aaed9d9c64a09c163f99b9f200e740cd3}{add\+Shader\+Object}} (const char $\ast$filepath, sf\+::\+Shader\+::\+Type type)
+\item 
+void \mbox{\hyperlink{class_render_engine_aa7bdec0aacc36aa2ea89f3efa89f70a3}{update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_render_engine_a53a4c17a370573bc19c797e4e0f966bb}{render}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 7 of file Render\+Engine.\+hpp.
+Definition at line 10 of file Render\+Engine.\+hpp.
 
 
 
@@ -35,7 +43,7 @@ Definition at line 7 of file Render\+Engine.\+hpp.
 
 
 
-Definition at line 7 of file Render\+Engine.\+cpp.
+Definition at line 9 of file Render\+Engine.\+cpp.
 
 \mbox{\Hypertarget{class_render_engine_a316fc5791b0934259ac91fa20a4d55e9}\label{class_render_engine_a316fc5791b0934259ac91fa20a4d55e9}} 
 \index{RenderEngine@{RenderEngine}!RenderEngine@{RenderEngine}}
@@ -51,11 +59,21 @@ Definition at line 7 of file Render\+Engine.\+cpp.
 
 
 
-Definition at line 17 of file Render\+Engine.\+cpp.
+Definition at line 19 of file Render\+Engine.\+cpp.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_render_engine_aaed9d9c64a09c163f99b9f200e740cd3}\label{class_render_engine_aaed9d9c64a09c163f99b9f200e740cd3}} 
+\index{RenderEngine@{RenderEngine}!addShaderObject@{addShaderObject}}
+\index{addShaderObject@{addShaderObject}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{addShaderObject()}{addShaderObject()}}
+{\footnotesize\ttfamily void Render\+Engine\+::add\+Shader\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file Render\+Engine.\+cpp.
+
 \mbox{\Hypertarget{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}\label{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}} 
 \index{RenderEngine@{RenderEngine}!getWindow@{getWindow}}
 \index{getWindow@{getWindow}!RenderEngine@{RenderEngine}}
@@ -64,13 +82,13 @@ Definition at line 17 of file Render\+Engine.\+cpp.
 
 
 
-Definition at line 15 of file Render\+Engine.\+hpp.
+Definition at line 34 of file Render\+Engine.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=302pt]{class_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph}
+\includegraphics[width=350pt]{class_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_render_engine_a8481c5152d04db388170c404d193b6f0}\label{class_render_engine_a8481c5152d04db388170c404d193b6f0}} 
@@ -79,9 +97,46 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_render_engine}{Render\+Engine}}\& Render\+Engine\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_render_engine}{Render\+Engine}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+\mbox{\Hypertarget{class_render_engine_a53a4c17a370573bc19c797e4e0f966bb}\label{class_render_engine_a53a4c17a370573bc19c797e4e0f966bb}} 
+\index{RenderEngine@{RenderEngine}!render@{render}}
+\index{render@{render}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Render\+Engine\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file Render\+Engine.\+cpp.
+
+\mbox{\Hypertarget{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}\label{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}} 
+\index{RenderEngine@{RenderEngine}!setScene@{setScene}}
+\index{setScene@{setScene}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{setScene()}{setScene()}}
+{\footnotesize\ttfamily void Render\+Engine\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file Render\+Engine.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_render_engine_aa7bdec0aacc36aa2ea89f3efa89f70a3}\label{class_render_engine_aa7bdec0aacc36aa2ea89f3efa89f70a3}} 
+\index{RenderEngine@{RenderEngine}!update@{update}}
+\index{update@{update}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Render\+Engine\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file Render\+Engine.\+cpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Headers/\+Engine/\mbox{\hyperlink{_render_engine_8hpp}{Render\+Engine.\+hpp}}\item 
+includes/\+Engine/\mbox{\hyperlink{_render_engine_8hpp}{Render\+Engine.\+hpp}}\item 
 src/\+Engine/\mbox{\hyperlink{_render_engine_8cpp}{Render\+Engine.\+cpp}}\end{DoxyCompactItemize}

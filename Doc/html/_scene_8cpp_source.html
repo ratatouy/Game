@@ -90,106 +90,115 @@ $(document).ready(function(){initNavTree('_scene_8cpp_source.html',''); initResi
 <div class="contents">
 <a href="_scene_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_scene_8hpp.html">Scenes/Scene.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_event_handler_8hpp.html">Events/EventHandler.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">    7</a></span>&#160;<a class="code" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a>() {};</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">    9</a></span>&#160;<a class="code" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a>()</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// std::cout &lt;&lt; &quot;Destroy Scene&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ent : entityMap) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">delete</span> ent.second;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_scene.html#aac63d0d2ba6e0d67420298f75c31a345">eventHandler</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34">Scene::setEventHandler</a>(<a class="code" href="class_event_handler.html">EventHandler</a>* handler)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_scene.html#aac63d0d2ba6e0d67420298f75c31a345">eventHandler</a> = handler;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">Scene::addEntity</a>(<a class="code" href="class_entity.html">Entity</a>* entity)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    entityMap[entity-&gt;<a class="code" href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3">getName</a>()] = entity; <span class="comment">// doesn&#39;t check for duplicity //</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    entity-&gt;<a class="code" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">setScene</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">   31</a></span>&#160;<a class="code" href="class_entity.html">Entity</a>* <a class="code" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">Scene::getEntity</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ent : entityMap) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>(strcmp(ent.first, name) == 0)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> ent.second;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a>(<a class="code" href="class_event_a.html">EventA</a>* event)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityMap)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        entity.second-&gt;processEvent(event);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f">processEventFunc</a>(event);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_scene.html#a4654dfc8ab44c744171caa43fc22bbab">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a>(<a class="code" href="class_custom_event.html">CustomEvent</a>* event)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityMap)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        entity.second-&gt;processEvent(event);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f">processEventFunc</a>(event);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">Scene::throwEvent</a>(<a class="code" href="class_event.html">Event</a>* event)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_scene.html#aac63d0d2ba6e0d67420298f75c31a345">eventHandler</a>-&gt;<a class="code" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">addEvent</a>(event);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_scene.html#ae41d8347a5ca25f6dec93001f4d8ce7d">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#ae41d8347a5ca25f6dec93001f4d8ce7d">Scene::updateEntity</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">for</span> (std::pair&lt;const char*, Entity*&gt; entity_pair : entityMap)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        entity_pair.second-&gt;update();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_render_engine_8hpp.html">Engine/RenderEngine.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">    8</a></span>&#160;<a class="code" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a>() {};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">   10</a></span>&#160;<a class="code" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a>()</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">// std::cout &lt;&lt; &quot;Destroy Scene&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ent : entityMap_) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">delete</span> ent.second;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">delete</span> eventHandler_;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">Scene::addEntity</a>(<a class="code" href="class_entity.html">Entity</a>* entity)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    entityMap_[entity-&gt;<a class="code" href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3">getName</a>()] = entity; <span class="comment">// doesn&#39;t check for duplicity //</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    entity-&gt;<a class="code" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">setScene</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">   27</a></span>&#160;<a class="code" href="class_entity.html">Entity</a>* <a class="code" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">Scene::getEntity</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ent : entityMap_) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>(strcmp(ent.first, name) == 0)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> ent.second;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a>(<a class="code" href="class_event_a.html">EventA</a>* event)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityMap_)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        entity.second-&gt;processEvent(event);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f">processEventFunc</a>(event);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_scene.html#a4654dfc8ab44c744171caa43fc22bbab">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a>(<a class="code" href="class_custom_event.html">CustomEvent</a>* event)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityMap_)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        entity.second-&gt;processEvent(event);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f">processEventFunc</a>(event);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">Scene::throwEvent</a>(<a class="code" href="class_event.html">Event</a>* event)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    eventHandler_-&gt;<a class="code" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">addEvent</a>(event);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_scene.html#aa24c7e636c10e4e42650c1374b90bb80">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#aa24c7e636c10e4e42650c1374b90bb80">Scene::update</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_scene.html#a71feeabe831f8755af8adbef941188c4">updateEntities</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1">Scene::render</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe">renderEntities</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_scene.html#a80dd06f2778de55f455b0299502f26f7">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#a80dd06f2778de55f455b0299502f26f7">Scene::render</a>(sf::RenderWindow* window)</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_scene.html#a71feeabe831f8755af8adbef941188c4">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#a71feeabe831f8755af8adbef941188c4">Scene::updateEntities</a>()</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityMap)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (std::pair&lt;const char*, Entity*&gt; entity_pair : entityMap_)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        entity.second-&gt;render(window);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        entity_pair.second-&gt;update();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe">Scene::renderEntities</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> entity : entityMap_)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        entity.second-&gt;render(renderEngine_-&gt;<a class="code" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">getWindow</a>());</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="ttc" id="a_event_handler_8hpp_html"><div class="ttname"><a href="_event_handler_8hpp.html">EventHandler.hpp</a></div></div>
+<div class="ttc" id="a_render_engine_8hpp_html"><div class="ttname"><a href="_render_engine_8hpp.html">RenderEngine.hpp</a></div></div>
 <div class="ttc" id="a_scene_8hpp_html"><div class="ttname"><a href="_scene_8hpp.html">Scene.hpp</a></div></div>
 <div class="ttc" id="aclass_custom_event_html"><div class="ttname"><a href="class_custom_event.html">CustomEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_custom_event_8hpp_source.html#l00010">CustomEvent.hpp:10</a></div></div>
-<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00014">Entity.hpp:14</a></div></div>
-<div class="ttc" id="aclass_entity_html_a5dc4c35cc28ca7895348607f3e4894c3"><div class="ttname"><a href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3">Entity::getName</a></div><div class="ttdeci">const char * getName()</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00049">Entity.hpp:49</a></div></div>
-<div class="ttc" id="aclass_entity_html_ad840fa8abf45ea14ed5ff7239f2268ff"><div class="ttname"><a href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">Entity::setScene</a></div><div class="ttdeci">void setScene(Scene *scene)</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cpp_source.html#l00005">Entity.cpp:5</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00023">Entity.hpp:23</a></div></div>
+<div class="ttc" id="aclass_entity_html_a5dc4c35cc28ca7895348607f3e4894c3"><div class="ttname"><a href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3">Entity::getName</a></div><div class="ttdeci">const char * getName()</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00096">Entity.hpp:96</a></div></div>
+<div class="ttc" id="aclass_entity_html_ad840fa8abf45ea14ed5ff7239f2268ff"><div class="ttname"><a href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">Entity::setScene</a></div><div class="ttdeci">void setScene(Scene *scene)</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00067">Entity.hpp:67</a></div></div>
 <div class="ttc" id="aclass_event_a_html"><div class="ttname"><a href="class_event_a.html">EventA</a></div><div class="ttdoc">Custom Event class for events, for user Custom Events.</div><div class="ttdef"><b>Definition:</b> <a href="_event_a_8hpp_source.html#l00006">EventA.hpp:6</a></div></div>
-<div class="ttc" id="aclass_event_handler_html"><div class="ttname"><a href="class_event_handler.html">EventHandler</a></div><div class="ttdoc">Manages the event queue.</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8hpp_source.html#l00025">EventHandler.hpp:25</a></div></div>
 <div class="ttc" id="aclass_event_handler_html_a06c3a8cd4d8c2cde7c8c1609e2236cfb"><div class="ttname"><a href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">EventHandler::addEvent</a></div><div class="ttdeci">void addEvent(Event *event)</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00041">EventHandler.cpp:41</a></div></div>
 <div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdoc">Abstract class for all events.</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00010">Event.hpp:10</a></div></div>
-<div class="ttc" id="aclass_scene_html_a3b8cec2e32546713915f8c6303c951f1"><div class="ttname"><a href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a></div><div class="ttdeci">~Scene()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00009">Scene.cpp:9</a></div></div>
-<div class="ttc" id="aclass_scene_html_a3c200511f7f00c8184a7d6281a508e2c"><div class="ttname"><a href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">Scene::getEntity</a></div><div class="ttdeci">Entity * getEntity(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00031">Scene.cpp:31</a></div></div>
-<div class="ttc" id="aclass_scene_html_a7671ad25a45d0dfee2ee110a2dae588a"><div class="ttname"><a href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">Scene::throwEvent</a></div><div class="ttdeci">void throwEvent(Event *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00061">Scene.cpp:61</a></div></div>
-<div class="ttc" id="aclass_scene_html_a80dd06f2778de55f455b0299502f26f7"><div class="ttname"><a href="class_scene.html#a80dd06f2778de55f455b0299502f26f7">Scene::render</a></div><div class="ttdeci">void render(sf::RenderWindow *window)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00075">Scene.cpp:75</a></div></div>
-<div class="ttc" id="aclass_scene_html_aa3d8b229ab26de9142a86bdd6b01ab34"><div class="ttname"><a href="class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34">Scene::setEventHandler</a></div><div class="ttdeci">void setEventHandler(EventHandler *EventHandler)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00018">Scene.cpp:18</a></div></div>
-<div class="ttc" id="aclass_scene_html_aac63d0d2ba6e0d67420298f75c31a345"><div class="ttname"><a href="class_scene.html#aac63d0d2ba6e0d67420298f75c31a345">Scene::eventHandler</a></div><div class="ttdeci">EventHandler * eventHandler</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00018">Scene.hpp:18</a></div></div>
-<div class="ttc" id="aclass_scene_html_ab4bd06a9af64934a38bf75e8b6f1435e"><div class="ttname"><a href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">Scene::addEntity</a></div><div class="ttdeci">void addEntity(Entity *entity)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00024">Scene.cpp:24</a></div></div>
-<div class="ttc" id="aclass_scene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00007">Scene.cpp:7</a></div></div>
-<div class="ttc" id="aclass_scene_html_ae41d8347a5ca25f6dec93001f4d8ce7d"><div class="ttname"><a href="class_scene.html#ae41d8347a5ca25f6dec93001f4d8ce7d">Scene::updateEntity</a></div><div class="ttdeci">void updateEntity()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00067">Scene.cpp:67</a></div></div>
-<div class="ttc" id="aclass_scene_html_aedd6c3bafdcc5311be7aca883ea3d25f"><div class="ttname"><a href="class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f">Scene::processEventFunc</a></div><div class="ttdeci">virtual void processEventFunc(EventA *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00030">Scene.hpp:30</a></div></div>
-<div class="ttc" id="aclass_scene_html_af25d320c2355ab99f2cbeb91fd689789"><div class="ttname"><a href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a></div><div class="ttdeci">virtual void processEvent(EventA *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00041">Scene.cpp:41</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_aec8db646d82d91a8595c22f1d7d61688"><div class="ttname"><a href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">RenderEngine::getWindow</a></div><div class="ttdeci">sf::RenderWindow * getWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00034">RenderEngine.hpp:34</a></div></div>
+<div class="ttc" id="aclass_scene_html_a3b8cec2e32546713915f8c6303c951f1"><div class="ttname"><a href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene::~Scene</a></div><div class="ttdeci">~Scene()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00010">Scene.cpp:10</a></div></div>
+<div class="ttc" id="aclass_scene_html_a3c200511f7f00c8184a7d6281a508e2c"><div class="ttname"><a href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">Scene::getEntity</a></div><div class="ttdeci">Entity * getEntity(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00027">Scene.cpp:27</a></div></div>
+<div class="ttc" id="aclass_scene_html_a41145ff1608c7967525af3ff4fb9aabe"><div class="ttname"><a href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe">Scene::renderEntities</a></div><div class="ttdeci">void renderEntities()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00083">Scene.cpp:83</a></div></div>
+<div class="ttc" id="aclass_scene_html_a4ddf2d16f371ee9533b3faf1dd5ddfb1"><div class="ttname"><a href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1">Scene::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00069">Scene.cpp:69</a></div></div>
+<div class="ttc" id="aclass_scene_html_a71feeabe831f8755af8adbef941188c4"><div class="ttname"><a href="class_scene.html#a71feeabe831f8755af8adbef941188c4">Scene::updateEntities</a></div><div class="ttdeci">void updateEntities()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00075">Scene.cpp:75</a></div></div>
+<div class="ttc" id="aclass_scene_html_a7671ad25a45d0dfee2ee110a2dae588a"><div class="ttname"><a href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a">Scene::throwEvent</a></div><div class="ttdeci">void throwEvent(Event *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00057">Scene.cpp:57</a></div></div>
+<div class="ttc" id="aclass_scene_html_aa24c7e636c10e4e42650c1374b90bb80"><div class="ttname"><a href="class_scene.html#aa24c7e636c10e4e42650c1374b90bb80">Scene::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00063">Scene.cpp:63</a></div></div>
+<div class="ttc" id="aclass_scene_html_ab4bd06a9af64934a38bf75e8b6f1435e"><div class="ttname"><a href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e">Scene::addEntity</a></div><div class="ttdeci">void addEntity(Entity *entity)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00020">Scene.cpp:20</a></div></div>
+<div class="ttc" id="aclass_scene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00008">Scene.cpp:8</a></div></div>
+<div class="ttc" id="aclass_scene_html_aedd6c3bafdcc5311be7aca883ea3d25f"><div class="ttname"><a href="class_scene.html#aedd6c3bafdcc5311be7aca883ea3d25f">Scene::processEventFunc</a></div><div class="ttdeci">virtual void processEventFunc(EventA *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00042">Scene.hpp:42</a></div></div>
+<div class="ttc" id="aclass_scene_html_af25d320c2355ab99f2cbeb91fd689789"><div class="ttname"><a href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a></div><div class="ttdeci">virtual void processEvent(EventA *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00037">Scene.cpp:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

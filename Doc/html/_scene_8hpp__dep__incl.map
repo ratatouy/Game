@@ -1,9 +1,10 @@
-<map id="Headers/Scenes/Scene.hpp" name="Headers/Scenes/Scene.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="478,5,675,32"/>
-<area shape="rect" id="node2" href="$_entity_8cpp.html" title=" " alt="" coords="5,87,156,114"/>
-<area shape="rect" id="node3" href="$_player_8cpp.html" title=" " alt="" coords="180,87,379,114"/>
-<area shape="rect" id="node4" href="$_event_handler_8cpp.html" title=" " alt="" coords="403,87,609,114"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="759,169,864,196"/>
-<area shape="rect" id="node6" href="$_scene_8cpp.html" title=" " alt="" coords="685,87,847,114"/>
-<area shape="rect" id="node7" href="$_menu_scene_8hpp.html" title=" " alt="" coords="871,80,1082,121"/>
+<map id="includes/Scenes/Scene.hpp" name="includes/Scenes/Scene.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="333,5,531,32"/>
+<area shape="rect" id="node2" href="$_render_engine_8cpp.html" title=" " alt="" coords="5,169,216,196"/>
+<area shape="rect" id="node3" href="$_player_8cpp.html" title=" " alt="" coords="683,87,882,114"/>
+<area shape="rect" id="node4" href="$_event_handler_8cpp.html" title=" " alt="" coords="906,87,1113,114"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="309,169,414,196"/>
+<area shape="rect" id="node6" href="$_scene_8cpp.html" title=" " alt="" coords="502,169,663,196"/>
+<area shape="rect" id="node7" href="$_render_engine_8hpp.html" title=" " alt="" coords="78,87,325,114"/>
+<area shape="rect" id="node8" href="$_menu_scene_8hpp.html" title=" " alt="" coords="399,80,609,121"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_53',['name',['../class_entity.html#a425e6dbab1090334cd621b47ff2bc2ea',1,'Entity']]]
+  ['name_5f_52',['name_',['../class_entity.html#ac765a424fb46628fc30523f040910f23',1,'Entity']]]
 ];

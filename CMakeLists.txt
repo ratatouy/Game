@@ -12,8 +12,8 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-set(SOURCE_FILES
-    src/main.cpp
+## Set project source files
+Set(SOURCE_FILES
     src/Components/TransformableComponent.cpp
     src/Components/EntitySpriteComponent.cpp
 
@@ -30,9 +30,29 @@ set(SOURCE_FILES
     src/Scenes/Scene.cpp
 )
 
-add_executable(main ${SOURCE_FILES})
+
+# if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+#     include(CTest)
+# endif()
+
+# if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+#     add_subdirectory(Test)
+# endif()
+
+
+## Setup test
+add_executable(renderTest ${SOURCE_FILES} Tests/RenderTest/renderTest.cpp)
+target_compile_features(renderTest PRIVATE cxx_std_17)
+target_include_directories(renderTest PRIVATE includes)
+target_link_libraries(renderTest PRIVATE sfml-graphics sfml-window sfml-system)
+add_test(NAME renderTest COMMAND renderTest)
+ 
+
+## Set project executable output
+add_executable(main ${SOURCE_FILES} src/main.cpp)
 target_compile_features(main PRIVATE cxx_std_17)
 target_include_directories(main PRIVATE includes)
 target_link_libraries(main PRIVATE sfml-graphics sfml-window sfml-system)
+
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT main)

@@ -1,4 +1,4 @@
-<map id="Headers/Events/CustomEvents/HitEvent.hpp" name="Headers/Events/CustomEvents/HitEvent.hpp">
+<map id="includes/Events/CustomEvents/HitEvent.hpp" name="includes/Events/CustomEvents/HitEvent.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,228,47"/>
 <area shape="rect" id="node2" href="$_custom_event_8hpp.html" title=" " alt="" coords="24,95,209,121"/>
 <area shape="rect" id="node3" href="$_event_8hpp.html" title=" " alt="" coords="49,169,184,196"/>

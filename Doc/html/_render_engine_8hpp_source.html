@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ratatouy&#39;s SFML Game Project: Headers/Engine/RenderEngine.hpp Source File</title>
+<title>Ratatouy&#39;s SFML Game Project: includes/Engine/RenderEngine.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,35 +93,64 @@ $(document).ready(function(){initNavTree('_render_engine_8hpp_source.html',''); 
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_render_engine.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_render_engine.html">RenderEngine</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_render_engine.html#a9247dbba2d91d3b9c9fbeeaebe687a54">RenderEngine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title = <span class="stringliteral">&quot;Game&quot;</span>, <span class="keywordtype">int</span> width = 920, <span class="keywordtype">int</span> height = 480);</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9">   10</a></span>&#160;    <a class="code" href="class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9">RenderEngine</a>(<span class="keyword">const</span> <a class="code" href="class_render_engine.html">RenderEngine</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_render_engine.html#a8481c5152d04db388170c404d193b6f0">   11</a></span>&#160;    <a class="code" href="class_render_engine.html">RenderEngine</a>&amp; <a class="code" href="class_render_engine.html#a8481c5152d04db388170c404d193b6f0">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_render_engine.html">RenderEngine</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">~RenderEngine</a>();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_scene_8hpp.html">Scenes/Scene.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a>; <span class="comment">// Forward Declaration of Scene //</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_render_engine.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_render_engine.html">RenderEngine</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> instantiated_;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">   15</a></span>&#160;    sf::RenderWindow* <a class="code" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">getWindow</a>() {<span class="keywordflow">return</span> this-&gt;window;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> instantiated_;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    sf::RenderWindow* window;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    sf::RenderWindow* window_;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_scene.html">Scene</a>* currentScene_;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::vector&lt;std::pair&lt;sf::Sprite*, sf::Shader*&gt;&gt; shader_objects_;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    sf::Clock clock_;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_render_engine_html"><div class="ttname"><a href="class_render_engine.html">RenderEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00007">RenderEngine.hpp:7</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a22709e8d62956c56b981d4d5d3ee1fc6"><div class="ttname"><a href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">RenderEngine::~RenderEngine</a></div><div class="ttdeci">~RenderEngine()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00017">RenderEngine.cpp:17</a></div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_render_engine.html#a9247dbba2d91d3b9c9fbeeaebe687a54">RenderEngine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* title = <span class="stringliteral">&quot;Game&quot;</span>, <span class="keywordtype">int</span> width = 920, <span class="keywordtype">int</span> height = 480);</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9">   24</a></span>&#160;    <a class="code" href="class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9">RenderEngine</a>(<span class="keyword">const</span> <a class="code" href="class_render_engine.html">RenderEngine</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_render_engine.html#a8481c5152d04db388170c404d193b6f0">   26</a></span>&#160;    <a class="code" href="class_render_engine.html">RenderEngine</a>&amp; <a class="code" href="class_render_engine.html#a8481c5152d04db388170c404d193b6f0">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_render_engine.html">RenderEngine</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">~RenderEngine</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_render_engine.html#a087c9d22abb6553de2f4320e11a0a033">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a087c9d22abb6553de2f4320e11a0a033">setScene</a>(<a class="code" href="class_scene.html">Scene</a>* scene) {currentScene_ = scene;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">   34</a></span>&#160;    sf::RenderWindow* <a class="code" href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">getWindow</a>() {<span class="keywordflow">return</span> window_;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#aaed9d9c64a09c163f99b9f200e740cd3">addShaderObject</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath, sf::Shader::Type type);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#aa7bdec0aacc36aa2ea89f3efa89f70a3">update</a>(<span class="keywordtype">float</span> deltaTime);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">render</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_scene_8hpp_html"><div class="ttname"><a href="_scene_8hpp.html">Scene.hpp</a></div></div>
+<div class="ttc" id="aclass_render_engine_html"><div class="ttname"><a href="class_render_engine.html">RenderEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00010">RenderEngine.hpp:10</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_a087c9d22abb6553de2f4320e11a0a033"><div class="ttname"><a href="class_render_engine.html#a087c9d22abb6553de2f4320e11a0a033">RenderEngine::setScene</a></div><div class="ttdeci">void setScene(Scene *scene)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00031">RenderEngine.hpp:31</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_a22709e8d62956c56b981d4d5d3ee1fc6"><div class="ttname"><a href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">RenderEngine::~RenderEngine</a></div><div class="ttdeci">~RenderEngine()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00019">RenderEngine.cpp:19</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_a316fc5791b0934259ac91fa20a4d55e9"><div class="ttname"><a href="class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9">RenderEngine::RenderEngine</a></div><div class="ttdeci">RenderEngine(const RenderEngine &amp;)=delete</div></div>
+<div class="ttc" id="aclass_render_engine_html_a53a4c17a370573bc19c797e4e0f966bb"><div class="ttname"><a href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">RenderEngine::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00073">RenderEngine.cpp:73</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_a8481c5152d04db388170c404d193b6f0"><div class="ttname"><a href="class_render_engine.html#a8481c5152d04db388170c404d193b6f0">RenderEngine::operator=</a></div><div class="ttdeci">RenderEngine &amp; operator=(const RenderEngine &amp;)=delete</div></div>
-<div class="ttc" id="aclass_render_engine_html_a9247dbba2d91d3b9c9fbeeaebe687a54"><div class="ttname"><a href="class_render_engine.html#a9247dbba2d91d3b9c9fbeeaebe687a54">RenderEngine::RenderEngine</a></div><div class="ttdeci">RenderEngine(const char *title=&quot;Game&quot;, int width=920, int height=480)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00007">RenderEngine.cpp:7</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_aec8db646d82d91a8595c22f1d7d61688"><div class="ttname"><a href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">RenderEngine::getWindow</a></div><div class="ttdeci">sf::RenderWindow * getWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00015">RenderEngine.hpp:15</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_a9247dbba2d91d3b9c9fbeeaebe687a54"><div class="ttname"><a href="class_render_engine.html#a9247dbba2d91d3b9c9fbeeaebe687a54">RenderEngine::RenderEngine</a></div><div class="ttdeci">RenderEngine(const char *title=&quot;Game&quot;, int width=920, int height=480)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00009">RenderEngine.cpp:9</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_aa7bdec0aacc36aa2ea89f3efa89f70a3"><div class="ttname"><a href="class_render_engine.html#aa7bdec0aacc36aa2ea89f3efa89f70a3">RenderEngine::update</a></div><div class="ttdeci">void update(float deltaTime)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00057">RenderEngine.cpp:57</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_aaed9d9c64a09c163f99b9f200e740cd3"><div class="ttname"><a href="class_render_engine.html#aaed9d9c64a09c163f99b9f200e740cd3">RenderEngine::addShaderObject</a></div><div class="ttdeci">void addShaderObject(const char *filepath, sf::Shader::Type type)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00026">RenderEngine.cpp:26</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_aec8db646d82d91a8595c22f1d7d61688"><div class="ttname"><a href="class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688">RenderEngine::getWindow</a></div><div class="ttdeci">sf::RenderWindow * getWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00034">RenderEngine.hpp:34</a></div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00020">Scene.hpp:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li><li class="navelem"><a class="el" href="dir_b570760f141a85ad0cc6e39d54356d6a.html">Engine</a></li><li class="navelem"><a class="el" href="_render_engine_8hpp.html">RenderEngine.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_bc91a9376302aca949db90cb95abffa5.html">Engine</a></li><li class="navelem"><a class="el" href="_render_engine_8hpp.html">RenderEngine.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
