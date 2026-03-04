@@ -8,7 +8,16 @@ int main() {
 
 	std::cout << sf::Shader::Fragment << std::endl;
 
-	renderEngine.addShaderObject("assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
+	// renderEngine.addShaderObject("assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
+	int width = renderEngine.getWindow()->getSize().x;
+    int height = renderEngine.getWindow()->getSize().y;
+
+	std::cout << width << height << std::endl;
+
+	renderEngine.my_shape.setSize(sf::Vector2f(width, height));
+	renderEngine.my_shader.loadFromFile("assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
+
+	renderEngine.my_shader.setUniform("resolution", sf::Glsl::Vec2(width, height));
 
 	while (renderEngine.getWindow()->isOpen()) {
 		// Event handling
@@ -23,7 +32,8 @@ int main() {
 
 		// Draw the sprite with the shader on it
 		renderEngine.getWindow()->clear();
-		renderEngine.update(1.0f/60.0f);
+		renderEngine.tick();
+		renderEngine.update();
 		renderEngine.render();
 		renderEngine.getWindow()->display();
 	}

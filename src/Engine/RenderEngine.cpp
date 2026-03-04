@@ -20,12 +20,10 @@ RenderEngine::~RenderEngine()
 {
     delete window_;
     instantiated_ = false;
-
-    std::cout << "yo I'm a destructor" << std::endl;
 }
 
 
-void RenderEngine::addShaderObject(const char* filepath, sf::Shader::Type type)
+/*void RenderEngine::addShaderObject(const char* filepath, sf::Shader::Type type)
 {
     try 
     {
@@ -47,15 +45,21 @@ void RenderEngine::addShaderObject(const char* filepath, sf::Shader::Type type)
     {
         std::cout << "addShaderObject Error: " << err.what() << std::endl;
     }
+}*/
+
+void RenderEngine::tick() {
+    if (elapsed_clock_.getElapsedTime().asSeconds() < deltaTime)
+    {
+        sf::sleep(sf::seconds((deltaTime - elapsed_clock_.getElapsedTime().asMilliseconds())));
+    }
+    elapsed_clock_.restart();
 }
 
 
 // deltaTime HAS passed since last call
-void RenderEngine::update(float deltaTime)
+void RenderEngine::update()
 {
-    std::cout << "Start RenderEngine::update" << std::endl;
-
-    for (std::pair<sf::Sprite*, sf::Shader*> shader_object : shader_objects_)
+    /* for (std::pair<sf::Sprite*, sf::Shader*> shader_object : shader_objects_)
     {
         std::cout << "o" << std::endl;
         std::cout << shader_object.second->isAvailable() << std::endl;
@@ -65,16 +69,21 @@ void RenderEngine::update(float deltaTime)
 
         sf::Vector2i mousePos = sf::Mouse::getPosition(*window_);
         shader_object.second->setUniform("mouse", (mousePos.x, mousePos.y));
-    }
+    }*/
 
-    std::cout << "End RenderEngine::update" << std::endl;
+    my_shader.setUniform("time", total_clock_.getElapsedTime().asSeconds());
+
+    sf::Vector2i mousePos = sf::Mouse::getPosition(*window_);
+    my_shader.setUniform("mouse", sf::Glsl::Vec2(mousePos.x, mousePos.y));   
 }
 
 
 void RenderEngine::render()
 {
-    for (std::pair<sf::Sprite*, sf::Shader*> shader_object : shader_objects_)
+    /*for (std::pair<sf::Sprite*, sf::Shader*> shader_object : shader_objects_)
     {
         window_->draw(*shader_object.first, shader_object.second);
-    }
+    }*/
+
+    window_->draw(my_shape, &my_shader);
 }
