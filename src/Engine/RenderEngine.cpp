@@ -20,6 +20,8 @@ RenderEngine::~RenderEngine()
 {
     delete window_;
     instantiated_ = false;
+
+    std::cout << "yo I'm a destructor" << std::endl;
 }
 
 
