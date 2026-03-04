@@ -18,8 +18,7 @@ private:
     sf::RenderWindow* window_;
     Scene* currentScene_;
 
-    // std::vector<std::pair<sf::Sprite*, sf::Shader*>> shader_objects_;
-
+    std::unordered_map<const char*, std::pair<sf::Drawable*, sf::Shader>> shader_objects_;
 
     sf::Clock elapsed_clock_;
     sf::Clock total_clock_;
@@ -45,7 +44,7 @@ public:
     sf::RenderWindow* getWindow() {return window_;}
 
 
-    void addShaderObject(const char* filepath, sf::Shader::Type type);
+    void addShaderObject(const char* filepath, sf::Drawable* drawable, sf::Shader::Type type);
 
     void tick();
 

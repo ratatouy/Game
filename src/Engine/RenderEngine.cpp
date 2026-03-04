@@ -23,23 +23,19 @@ RenderEngine::~RenderEngine()
 }
 
 
-/*void RenderEngine::addShaderObject(const char* filepath, sf::Shader::Type type)
+/*void RenderEngine::addShaderObject(const char* filepath, sf::Drawable* drawable, sf::Shader::Type type)
 {
     try 
     {
         int width = window_->getSize().x;
         int height = window_->getSize().y;
 
-        sf::Texture texture;
-        texture.create(width, height);
-        sf::Sprite sprite(texture);
+        sf::Shader* shader = new sf::Shader();
+        shader->loadFromFile(filepath, type);
 
-        sf::Shader shader;
-        shader.loadFromFile(filepath, type);
+        shader_objects_.emplace(std::make_pair(drawable, shader));
 
-        shader_objects_.push_back(std::make_pair(&sprite, &shader));
-
-        shader.setUniform("resolution", sf::Vector2f(window_->getSize().x, window_->getSize().y));
+        shader->setUniform("resolution", sf::Vector2f(window_->getSize().x, window_->getSize().y));
     }
     catch (std::exception& err)
     {
