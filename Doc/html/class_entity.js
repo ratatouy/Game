@@ -9,7 +9,7 @@ var class_entity =
     [ "getName", "class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3", null ],
     [ "getTransformable", "class_entity.html#aec0550d41d7e7ec5f868d30a84b0f6d2", null ],
     [ "processEvent", "class_entity.html#a37cb335962ddb32dafd558405088ceda", null ],
-    [ "processEvent", "class_entity.html#ade3aa68e07ed624c03459a605353ca98", null ],
+    [ "processEvent", "class_entity.html#af56932d27db52a26c66681dd1c6e1aff", null ],
     [ "render", "class_entity.html#abc21bc8c791274305898a2b13e624692", null ],
     [ "setEntitySprite", "class_entity.html#a4c19692f28142f36b311e3ee1ad9de77", null ],
     [ "setName", "class_entity.html#a78ccaeac4d798bf0b78ee48b317b5e2f", null ],

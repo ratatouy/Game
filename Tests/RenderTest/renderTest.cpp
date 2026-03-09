@@ -4,39 +4,48 @@
 #include "Engine/RenderEngine.hpp"
 
 int main() {
-	RenderEngine renderEngine = RenderEngine();
+	RenderEngine* renderEngine = new RenderEngine();
 
-	std::cout << sf::Shader::Fragment << std::endl;
+	int width = renderEngine->getWindow()->getSize().x;
+    int height = renderEngine->getWindow()->getSize().y;
 
-	// renderEngine.addShaderObject("assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
-	int width = renderEngine.getWindow()->getSize().x;
-    int height = renderEngine.getWindow()->getSize().y;
+	sf::RectangleShape* shape = new sf::RectangleShape({(float)width/2, (float)height});
+	shape->setPosition(width/2, 0);
 
-	std::cout << width << height << std::endl;
+	sf::RectangleShape* shape2 = new sf::RectangleShape({(float)width/2, (float)height});
 
-	renderEngine.my_shape.setSize(sf::Vector2f(width, height));
-	renderEngine.my_shader.loadFromFile("assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
 
-	renderEngine.my_shader.setUniform("resolution", sf::Glsl::Vec2(width, height));
+	// Create a Drawable object then attach a shader
+	renderEngine->addDrawable("chauffeur", shape2);
+	renderEngine->attachShaderToDrawable("chauffeur", "assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
 
-	while (renderEngine.getWindow()->isOpen()) {
+	// Create a ShaderDrawable Directly
+	renderEngine->addShaderDrawable("fire", shape, "assets/Shaders/FragmentShaders/fire.glsl", sf::Shader::Fragment);
+
+	/// THIS WILL RESULT IN 2 SHADERS EVEN IF ONLY ONE APPEARS
+	/// The reason is just that both are following the mouse here
+
+	// Render Loop
+	while (renderEngine->getWindow()->isOpen()) {
 		// Event handling
 		sf::Event event;
 
-		while (renderEngine.getWindow()->pollEvent(event)) {
+		while (renderEngine->getWindow()->pollEvent(event)) {
 			// Exit the app when a key is pressed
 			if (event.type == sf::Event::Closed) 
-				renderEngine.getWindow()->close();
+				renderEngine->getWindow()->close();
 		}
 
-
-		// Draw the sprite with the shader on it
-		renderEngine.getWindow()->clear();
-		renderEngine.tick();
-		renderEngine.update();
-		renderEngine.render();
-		renderEngine.getWindow()->display();
+		// Draw the sprites with the shader on it
+		renderEngine->getWindow()->clear(sf::Color(155, 255, 0, 0));
+		renderEngine->update();
+		renderEngine->render();
+		renderEngine->getWindow()->display();
 	}
+
+	delete shape;
+	delete shape2;
+	delete renderEngine;
 
 	return 0;
 }

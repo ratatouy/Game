@@ -10,8 +10,9 @@ var hierarchy =
       [ "CustomEvent", "class_custom_event.html", [
         [ "HitEvent", "class_hit_event.html", null ]
       ] ],
-      [ "EventA", "class_event_a.html", null ]
+      [ "SceneTransitionEvent", "class_scene_transition_event.html", null ]
     ] ],
+    [ "EventA", "class_event_a.html", null ],
     [ "EventHandler", "class_event_handler.html", null ],
     [ "HitData", "struct_hit_data.html", null ],
     [ "PhysicEngine", "class_physic_engine.html", null ],

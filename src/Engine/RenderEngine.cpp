@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+
 bool RenderEngine::instantiated_ = false;
 
 
@@ -16,70 +17,107 @@ RenderEngine::RenderEngine(const char* title, int width, int height)
     window_ = new sf::RenderWindow(sf::VideoMode(width, height), title);
 }
 
+
 RenderEngine::~RenderEngine()
 {
     delete window_;
+    delete currentScene_;
+
+    for (auto iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)
+        delete iterator->second;
+
+    for (auto iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)
+        delete iterator->second.first;
+
+    drawables_.clear();
+    shader_drawables_.clear();
+
     instantiated_ = false;
 }
 
 
-/*void RenderEngine::addShaderObject(const char* filepath, sf::Drawable* drawable, sf::Shader::Type type)
+
+void RenderEngine::addDrawable(const char* name, sf::Drawable* drawable)
 {
-    try 
+    try
     {
-        int width = window_->getSize().x;
-        int height = window_->getSize().y;
-
-        sf::Shader* shader = new sf::Shader();
-        shader->loadFromFile(filepath, type);
-
-        shader_objects_.emplace(std::make_pair(drawable, shader));
-
-        shader->setUniform("resolution", sf::Vector2f(window_->getSize().x, window_->getSize().y));
+        drawables_.try_emplace(name);
+        drawables_.find(name)->second = drawable;
     }
     catch (std::exception& err)
     {
         std::cout << "addShaderObject Error: " << err.what() << std::endl;
     }
-}*/
-
-void RenderEngine::tick() {
-    if (elapsed_clock_.getElapsedTime().asSeconds() < deltaTime)
-    {
-        sf::sleep(sf::seconds((deltaTime - elapsed_clock_.getElapsedTime().asMilliseconds())));
-    }
-    elapsed_clock_.restart();
 }
 
+
+void RenderEngine::addShaderDrawable(const char* name, sf::Drawable* drawable, const char* filepath, sf::Shader::Type type)
+{
+    try
+    {
+        shader_drawables_.try_emplace(name);
+
+        shader_drawables_.find(name)->second.first = drawable;
+        shader_drawables_.find(name)->second.second.loadFromFile(filepath, type);
+
+        shader_drawables_.find(name)->second.second.setUniform("resolution", sf::Glsl::Vec2(window_->getSize().x, window_->getSize().y));
+    }
+    catch (std::exception& err)
+    {
+        std::cout << "addShaderObject Error: " << err.what() << std::endl;
+    }
+}
+
+
+void RenderEngine::attachShaderToDrawable(const char* drawable_name, const char* filepath, sf::Shader::Type type)
+{
+    if (drawables_.find(drawable_name) == drawables_.end())
+        throw(std::runtime_error("RenderEngine::attachShaderToDrawable : Tried adding Shader to non-existing drawable"));
+
+    addShaderDrawable(drawable_name, drawables_.find(drawable_name)->second, filepath, type);
+
+    drawables_.erase(drawable_name);
+}
 
 // deltaTime HAS passed since last call
 void RenderEngine::update()
 {
-    /* for (std::pair<sf::Sprite*, sf::Shader*> shader_object : shader_objects_)
-    {
-        std::cout << "o" << std::endl;
-        std::cout << shader_object.second->isAvailable() << std::endl;
-
-        shader_object.second->setUniform("time", deltaTime);
-        std::cout << "o" << std::endl;
-
-        sf::Vector2i mousePos = sf::Mouse::getPosition(*window_);
-        shader_object.second->setUniform("mouse", (mousePos.x, mousePos.y));
-    }*/
-
-    my_shader.setUniform("time", total_clock_.getElapsedTime().asSeconds());
-
-    sf::Vector2i mousePos = sf::Mouse::getPosition(*window_);
-    my_shader.setUniform("mouse", sf::Glsl::Vec2(mousePos.x, mousePos.y));   
+    updateShaders();
 }
+
+
+
+void RenderEngine::updateShaders()
+{
+    sf::Vector2i mousePos = sf::Mouse::getPosition(*window_);
+
+    for (auto iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)
+    {
+        if (!iterator->second.second.isAvailable())
+            throw(std::runtime_error("Shader not available"));
+
+        else
+        {
+            iterator->second.second.setUniform("time", total_clock_.getElapsedTime().asSeconds());
+
+            iterator->second.second.setUniform("mouse", sf::Glsl::Vec2({(float)mousePos.x, (float)mousePos.y}));
+        }
+    }
+}
+
 
 
 void RenderEngine::render()
 {
-    /*for (std::pair<sf::Sprite*, sf::Shader*> shader_object : shader_objects_)
+    // Render Shader Drawables
+    for (auto iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)
     {
-        window_->draw(*shader_object.first, shader_object.second);
-    }*/
+        window_->draw(*iterator->second.first, &iterator->second.second);
+    }
 
-    window_->draw(my_shape, &my_shader);
+    // Render Shaderless Drawables
+    for (auto iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)
+    {
+        window_->draw(*iterator->second);
+    }
 }

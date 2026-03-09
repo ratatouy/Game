@@ -24,7 +24,7 @@ Set(SOURCE_FILES
     src/Entity/Ennemies/Ennemy.cpp
     src/Entity/Projectiles/Projectile.cpp
 
-    src/Engine/PhysicEngine.cpp
+    src/Engine/PhysicsEngine.cpp
     src/Engine/RenderEngine.cpp
 
     src/Scenes/Scene.cpp

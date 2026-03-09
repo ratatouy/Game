@@ -20,7 +20,7 @@ void Player::attack() {
     std::cout << "\"RECHAUFFEUR STRKE !!!!\"" << std::endl;
 
     Projectile* player_proj = new Projectile("player_proj", transformable_->getPosition(), {0.5f,0.f});
-    player_proj->getEntitySprite()->AddSprite("Sprites/cato.png");
+    player_proj->getEntitySprite()->AddSprite("assets/Sprites/cato.png");
     current_scene_->addEntity(player_proj);
     transformable_->rotate(45);
 }

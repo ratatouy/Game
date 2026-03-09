@@ -4,9 +4,9 @@
 <area shape="rect" id="node7" href="$_transformable_component_8hpp.html" title=" " alt="" coords="5,348,231,389"/>
 <area shape="rect" id="node8" href="$_entity_sprite_component_8hpp.html" title=" " alt="" coords="80,259,305,300"/>
 <area shape="rect" id="node9" href="$_projectile_8hpp.html" title=" " alt="" coords="83,95,302,121"/>
-<area shape="rect" id="node10" href="$_hit_event_8hpp.html" title=" " alt="" coords="573,169,737,211"/>
+<area shape="rect" id="node10" href="$_hit_event_8hpp.html" title=" " alt="" coords="595,169,759,211"/>
 <area shape="rect" id="node3" title=" " alt="" coords="194,437,341,464"/>
-<area shape="rect" id="node4" href="$_event_8hpp.html" title=" " alt="" coords="488,355,623,382"/>
-<area shape="rect" id="node5" href="$_event_a_8hpp.html" title=" " alt="" coords="481,259,630,300"/>
-<area shape="rect" id="node6" href="$_custom_event_8hpp.html" title=" " alt="" coords="655,266,840,293"/>
+<area shape="rect" id="node4" href="$_event_8hpp.html" title=" " alt="" coords="511,355,645,382"/>
+<area shape="rect" id="node5" href="$_scene_transition_event_8hpp.html" title=" " alt="" coords="481,259,675,300"/>
+<area shape="rect" id="node6" href="$_custom_event_8hpp.html" title=" " alt="" coords="699,266,884,293"/>
 </map>

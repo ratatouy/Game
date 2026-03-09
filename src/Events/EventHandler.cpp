@@ -48,12 +48,12 @@ void EventHandler::processEvent() {
 
         // std::cout << "Processing Event" << std::endl;
 
-        EventA* Ea = dynamic_cast<EventA*>(eventQueue.front());
-        if (Ea) {
-            std::cout << "Processing Event A"<<std::endl;
-            currentScene->processEvent(Ea);
+        SceneTransitionEvent* Es = dynamic_cast<SceneTransitionEvent*>(eventQueue.front());
+        if (Es) {
+            std::cout << "Processing Scene Transition Event"<<std::endl;
+            currentScene->processEvent(Es);
             eventQueue.pop();
-            delete Ea;
+            delete Es;
             return;
         }
         

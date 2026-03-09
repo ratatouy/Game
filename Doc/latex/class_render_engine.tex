@@ -19,18 +19,32 @@ void \mbox{\hyperlink{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}{set
 \item 
 sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}{get\+Window}} ()
 \item 
-void \mbox{\hyperlink{class_render_engine_aaed9d9c64a09c163f99b9f200e740cd3}{add\+Shader\+Object}} (const char $\ast$filepath, sf\+::\+Shader\+::\+Type type)
+void \mbox{\hyperlink{class_render_engine_a2df2f1fe4b63a1e854f33642e68dee07}{add\+Drawable}} (const char $\ast$name, sf\+::\+Drawable $\ast$drawable)
 \item 
-void \mbox{\hyperlink{class_render_engine_aa7bdec0aacc36aa2ea89f3efa89f70a3}{update}} (float delta\+Time)
+void \mbox{\hyperlink{class_render_engine_aa1ba6c05390d4998224df43db26de9d9}{add\+Shader\+Drawable}} (const char $\ast$name, sf\+::\+Drawable $\ast$drawable, const char $\ast$filepath, sf\+::\+Shader\+::\+Type type)
+\item 
+void \mbox{\hyperlink{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0}{attach\+Shader\+To\+Drawable}} (const char $\ast$drawable\+\_\+name, const char $\ast$filepath, sf\+::\+Shader\+::\+Type type)
+\item 
+void \mbox{\hyperlink{class_render_engine_ac84ced7bed02e9e99166610d593e97ba}{update}} ()
+\item 
+void \mbox{\hyperlink{class_render_engine_a3fd5129c749a1493da6d3113bd431b1e}{update\+Shaders}} ()
 \item 
 void \mbox{\hyperlink{class_render_engine_a53a4c17a370573bc19c797e4e0f966bb}{render}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Manages Shaders and the Render\+Window
+
+\begin{DoxyWarning}{Warning}
+A Drawable shouldn\textquotesingle{}t be added to both drawables\+\_\+ and shader\+\_\+drawables\+\_\+
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+Singleton 
+\end{DoxyNote}
 
 
-Definition at line 10 of file Render\+Engine.\+hpp.
+Definition at line 15 of file Render\+Engine.\+hpp.
 
 
 
@@ -41,9 +55,23 @@ Definition at line 10 of file Render\+Engine.\+hpp.
 \doxysubsubsection{\texorpdfstring{RenderEngine()}{RenderEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Render\+Engine\+::\+Render\+Engine (\begin{DoxyParamCaption}\item[{const char $\ast$}]{title = {\ttfamily \char`\"{}Game\char`\"{}},  }\item[{int}]{width = {\ttfamily 920},  }\item[{int}]{height = {\ttfamily 480} }\end{DoxyParamCaption})}
 
+Only Constructor
 
 
-Definition at line 9 of file Render\+Engine.\+cpp.
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of the window \\
+\hline
+{\em width} & Width of the Render\+Window \\
+\hline
+{\em height} & Height of the Render\+Window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+the default width and height are 920x480 
+\end{DoxyNote}
+
+
+Definition at line 10 of file Render\+Engine.\+cpp.
 
 \mbox{\Hypertarget{class_render_engine_a316fc5791b0934259ac91fa20a4d55e9}\label{class_render_engine_a316fc5791b0934259ac91fa20a4d55e9}} 
 \index{RenderEngine@{RenderEngine}!RenderEngine@{RenderEngine}}
@@ -59,30 +87,104 @@ Definition at line 9 of file Render\+Engine.\+cpp.
 
 
 
-Definition at line 19 of file Render\+Engine.\+cpp.
+Definition at line 21 of file Render\+Engine.\+cpp.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_render_engine_aaed9d9c64a09c163f99b9f200e740cd3}\label{class_render_engine_aaed9d9c64a09c163f99b9f200e740cd3}} 
-\index{RenderEngine@{RenderEngine}!addShaderObject@{addShaderObject}}
-\index{addShaderObject@{addShaderObject}!RenderEngine@{RenderEngine}}
-\doxysubsubsection{\texorpdfstring{addShaderObject()}{addShaderObject()}}
-{\footnotesize\ttfamily void Render\+Engine\+::add\+Shader\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_render_engine_a2df2f1fe4b63a1e854f33642e68dee07}\label{class_render_engine_a2df2f1fe4b63a1e854f33642e68dee07}} 
+\index{RenderEngine@{RenderEngine}!addDrawable@{addDrawable}}
+\index{addDrawable@{addDrawable}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{addDrawable()}{addDrawable()}}
+{\footnotesize\ttfamily void Render\+Engine\+::add\+Drawable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{sf\+::\+Drawable $\ast$}]{drawable }\end{DoxyParamCaption})}
+
+Adds a Drawable to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
 
 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the Drawable \\
+\hline
+{\em drawable} & Pointer to the Drawable \\
+\hline
+\end{DoxyParams}
 
-Definition at line 26 of file Render\+Engine.\+cpp.
 
+Definition at line 40 of file Render\+Engine.\+cpp.
+
+\mbox{\Hypertarget{class_render_engine_aa1ba6c05390d4998224df43db26de9d9}\label{class_render_engine_aa1ba6c05390d4998224df43db26de9d9}} 
+\index{RenderEngine@{RenderEngine}!addShaderDrawable@{addShaderDrawable}}
+\index{addShaderDrawable@{addShaderDrawable}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{addShaderDrawable()}{addShaderDrawable()}}
+{\footnotesize\ttfamily void Render\+Engine\+::add\+Shader\+Drawable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{sf\+::\+Drawable $\ast$}]{drawable,  }\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
+
+Adds a Shader\+Drawable to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the Drawable \\
+\hline
+{\em drawable} & Pointer to the Drawable \\
+\hline
+{\em filepath} & Path to the Shader File \\
+\hline
+{\em type} & Type of the Shader \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Render\+Engine.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine_aa1ba6c05390d4998224df43db26de9d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0}\label{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0}} 
+\index{RenderEngine@{RenderEngine}!attachShaderToDrawable@{attachShaderToDrawable}}
+\index{attachShaderToDrawable@{attachShaderToDrawable}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{attachShaderToDrawable()}{attachShaderToDrawable()}}
+{\footnotesize\ttfamily void Render\+Engine\+::attach\+Shader\+To\+Drawable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{drawable\+\_\+name,  }\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
+
+Attaches a Shader to a Drawable
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawable\+\_\+name} & Name of the Drawable \\
+\hline
+{\em filepath} & Path to the Shader File \\
+\hline
+{\em type} & Type of the Shader \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file Render\+Engine.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}\label{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}} 
 \index{RenderEngine@{RenderEngine}!getWindow@{getWindow}}
 \index{getWindow@{getWindow}!RenderEngine@{RenderEngine}}
 \doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
 {\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ Render\+Engine\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Window Getter (useless ?)
+
+\begin{DoxyReturn}{Returns}
+Pointer to the Render\+Window 
+\end{DoxyReturn}
 
 
-Definition at line 34 of file Render\+Engine.\+hpp.
+Definition at line 66 of file Render\+Engine.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -103,9 +205,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void Render\+Engine\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Renders the Drawables \& Shader\+Drawables 
 
-
-Definition at line 73 of file Render\+Engine.\+cpp.
+Definition at line 110 of file Render\+Engine.\+cpp.
 
 \mbox{\Hypertarget{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}\label{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}} 
 \index{RenderEngine@{RenderEngine}!setScene@{setScene}}
@@ -113,9 +215,16 @@ Definition at line 73 of file Render\+Engine.\+cpp.
 \doxysubsubsection{\texorpdfstring{setScene()}{setScene()}}
 {\footnotesize\ttfamily void Render\+Engine\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Attaches the \mbox{\hyperlink{class_scene}{Scene}} to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
 
 
-Definition at line 31 of file Render\+Engine.\+hpp.
+\begin{DoxyParams}{Parameters}
+{\em scene} & Reference to the \mbox{\hyperlink{class_scene}{Scene}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Render\+Engine.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -124,16 +233,48 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=291pt]{class_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_render_engine_aa7bdec0aacc36aa2ea89f3efa89f70a3}\label{class_render_engine_aa7bdec0aacc36aa2ea89f3efa89f70a3}} 
+\mbox{\Hypertarget{class_render_engine_ac84ced7bed02e9e99166610d593e97ba}\label{class_render_engine_ac84ced7bed02e9e99166610d593e97ba}} 
 \index{RenderEngine@{RenderEngine}!update@{update}}
 \index{update@{update}!RenderEngine@{RenderEngine}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Render\+Engine\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Render\+Engine\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+General Update Method
+
+Just updates the Shaders tbh 
+
+Definition at line 83 of file Render\+Engine.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine_ac84ced7bed02e9e99166610d593e97ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_render_engine_a3fd5129c749a1493da6d3113bd431b1e}\label{class_render_engine_a3fd5129c749a1493da6d3113bd431b1e}} 
+\index{RenderEngine@{RenderEngine}!updateShaders@{updateShaders}}
+\index{updateShaders@{updateShaders}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{updateShaders()}{updateShaders()}}
+{\footnotesize\ttfamily void Render\+Engine\+::update\+Shaders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update the shaders
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Update Shaders Depending on their args \end{DoxyRefDesc}
 
 
+Definition at line 90 of file Render\+Engine.\+cpp.
 
-Definition at line 57 of file Render\+Engine.\+cpp.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine_a3fd5129c749a1493da6d3113bd431b1e_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

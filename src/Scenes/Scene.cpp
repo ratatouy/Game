@@ -34,15 +34,14 @@ Entity* Scene::getEntity(const char* name)
 }
 
 
-void Scene::processEvent(EventA* event)
-{;
+void Scene::processEvent(SceneTransitionEvent* event)
+{
     for (auto entity : entityMap_)
     {
         entity.second->processEvent(event);
     }
     processEventFunc(event);
 }
-
 
 void Scene::processEvent(CustomEvent* event)
 {

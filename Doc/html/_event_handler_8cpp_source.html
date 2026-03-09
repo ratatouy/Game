@@ -138,12 +138,12 @@ $(document).ready(function(){initNavTree('_event_handler_8cpp_source.html',''); 
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// std::cout &lt;&lt; &quot;Processing Event&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_event_a.html">EventA</a>* Ea = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_event_a.html">EventA</a>*<span class="keyword">&gt;</span>(eventQueue.front());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (Ea) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Processing Event A&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            currentScene-&gt;<a class="code" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">processEvent</a>(Ea);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_scene_transition_event.html">SceneTransitionEvent</a>* Es = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_scene_transition_event.html">SceneTransitionEvent</a>*<span class="keyword">&gt;</span>(eventQueue.front());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (Es) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Processing Scene Transition Event&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            currentScene-&gt;<a class="code" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">processEvent</a>(Es);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            eventQueue.pop();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">delete</span> Ea;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">delete</span> Es;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        </div>
@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('_event_handler_8cpp_source.html',''); 
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_custom_event.html">CustomEvent</a>* Ec = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_custom_event.html">CustomEvent</a>*<span class="keyword">&gt;</span>(eventQueue.front());</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (Ec) {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">// std::cout &lt;&lt; &quot;Processing Custom Event&quot;&lt;&lt;std::endl;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            currentScene-&gt;<a class="code" href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">processEvent</a>(Ec);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            currentScene-&gt;<a class="code" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">processEvent</a>(Ec);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            eventQueue.pop();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">delete</span> Ec;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span>;</div>
@@ -170,7 +170,6 @@ $(document).ready(function(){initNavTree('_event_handler_8cpp_source.html',''); 
 <div class="ttc" id="a_event_handler_8hpp_html"><div class="ttname"><a href="_event_handler_8hpp.html">EventHandler.hpp</a></div></div>
 <div class="ttc" id="a_scene_8hpp_html"><div class="ttname"><a href="_scene_8hpp.html">Scene.hpp</a></div></div>
 <div class="ttc" id="aclass_custom_event_html"><div class="ttname"><a href="class_custom_event.html">CustomEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_custom_event_8hpp_source.html#l00010">CustomEvent.hpp:10</a></div></div>
-<div class="ttc" id="aclass_event_a_html"><div class="ttname"><a href="class_event_a.html">EventA</a></div><div class="ttdoc">Custom Event class for events, for user Custom Events.</div><div class="ttdef"><b>Definition:</b> <a href="_event_a_8hpp_source.html#l00006">EventA.hpp:6</a></div></div>
 <div class="ttc" id="aclass_event_handler_html_a06c3a8cd4d8c2cde7c8c1609e2236cfb"><div class="ttname"><a href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">EventHandler::addEvent</a></div><div class="ttdeci">void addEvent(Event *event)</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00041">EventHandler.cpp:41</a></div></div>
 <div class="ttc" id="aclass_event_handler_html_a365d58b6e3fb682480ac9b123d16fad1"><div class="ttname"><a href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">EventHandler::processEvent</a></div><div class="ttdeci">void processEvent()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00046">EventHandler.cpp:46</a></div></div>
 <div class="ttc" id="aclass_event_handler_html_a3decb8cd88ba8af2b9b0b0f0f2fcd722"><div class="ttname"><a href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">EventHandler::~EventHandler</a></div><div class="ttdeci">~EventHandler()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00011">EventHandler.cpp:11</a></div></div>
@@ -179,8 +178,9 @@ $(document).ready(function(){initNavTree('_event_handler_8cpp_source.html',''); 
 <div class="ttc" id="aclass_event_handler_html_a8fe27b69582cce5c6a89a0b134bc8158"><div class="ttname"><a href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">EventHandler::EventHandler</a></div><div class="ttdeci">EventHandler()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00027">EventHandler.cpp:27</a></div></div>
 <div class="ttc" id="aclass_event_handler_html_acd62960f00deb706634059dc47e1d287"><div class="ttname"><a href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">EventHandler::getCurrentEvent</a></div><div class="ttdeci">Event * getCurrentEvent()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00072">EventHandler.cpp:72</a></div></div>
 <div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdoc">Abstract class for all events.</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00010">Event.hpp:10</a></div></div>
-<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00020">Scene.hpp:20</a></div></div>
-<div class="ttc" id="aclass_scene_html_af25d320c2355ab99f2cbeb91fd689789"><div class="ttname"><a href="class_scene.html#af25d320c2355ab99f2cbeb91fd689789">Scene::processEvent</a></div><div class="ttdeci">virtual void processEvent(EventA *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00037">Scene.cpp:37</a></div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00030">Scene.hpp:30</a></div></div>
+<div class="ttc" id="aclass_scene_html_a8436de839f7ec4ddc18ae87f9dd32a99"><div class="ttname"><a href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">Scene::processEvent</a></div><div class="ttdeci">virtual void processEvent(SceneTransitionEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00037">Scene.cpp:37</a></div></div>
+<div class="ttc" id="aclass_scene_transition_event_html"><div class="ttname"><a href="class_scene_transition_event.html">SceneTransitionEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_transition_event_8hpp_source.html#l00009">SceneTransitionEvent.hpp:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

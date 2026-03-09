@@ -26,9 +26,11 @@ void \mbox{\hyperlink{class_scene_aa3d8b229ab26de9142a86bdd6b01ab34}{set\+Event\
 \item 
 \mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_a3c200511f7f00c8184a7d6281a508e2c}{get\+Entity}} (const char $\ast$name)
 \item 
-virtual void \mbox{\hyperlink{class_scene_af25d320c2355ab99f2cbeb91fd689789}{process\+Event}} (\mbox{\hyperlink{class_event_a}{EventA}} $\ast$event)
+\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$ \mbox{\hyperlink{class_scene_a8a8fc24fa6036ed658d5615177b20a26}{get\+Render\+Engine}} ()
 \item 
-virtual void \mbox{\hyperlink{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}{process\+Event\+Func}} (\mbox{\hyperlink{class_event_a}{EventA}} $\ast$event)
+virtual void \mbox{\hyperlink{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99}{process\+Event}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_scene_a68fbe961ca24ff6d704f56cc058dc18a}{process\+Event\+Func}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
 \item 
 virtual void \mbox{\hyperlink{class_scene_a4654dfc8ab44c744171caa43fc22bbab}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
 \item 
@@ -49,9 +51,21 @@ void \mbox{\hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{render}} ()
 
 
 \doxysubsection{Detailed Description}
+Base class for all Sscenes
+
+the \mbox{\hyperlink{class_scene}{Scene}} is the mastermind behind everything, it links every elements together It has references to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}, the Physics\+Engine, the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} and the entities
+
+\begin{DoxyNote}{Note}
+missing elements \+:
+\begin{DoxyItemize}
+\item Transitions
+\item Solid Tiles
+\item Decorations (bg assets/...) 
+\end{DoxyItemize}
+\end{DoxyNote}
 
 
-Definition at line 20 of file Scene.\+hpp.
+Definition at line 30 of file Scene.\+hpp.
 
 
 
@@ -120,6 +134,16 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=253pt]{class_scene_a3c200511f7f00c8184a7d6281a508e2c_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_scene_a8a8fc24fa6036ed658d5615177b20a26}\label{class_scene_a8a8fc24fa6036ed658d5615177b20a26}} 
+\index{Scene@{Scene}!getRenderEngine@{getRenderEngine}}
+\index{getRenderEngine@{getRenderEngine}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getRenderEngine()}{getRenderEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_engine}{Render\+Engine}}$\ast$ Scene\+::get\+Render\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 51 of file Scene.\+hpp.
+
 \mbox{\Hypertarget{class_scene_a4654dfc8ab44c744171caa43fc22bbab}\label{class_scene_a4654dfc8ab44c744171caa43fc22bbab}} 
 \index{Scene@{Scene}!processEvent@{processEvent}}
 \index{processEvent@{processEvent}!Scene@{Scene}}
@@ -128,37 +152,40 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 47 of file Scene.\+cpp.
+Definition at line 46 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_scene_a4654dfc8ab44c744171caa43fc22bbab_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_af25d320c2355ab99f2cbeb91fd689789}\label{class_scene_af25d320c2355ab99f2cbeb91fd689789}} 
+\mbox{\Hypertarget{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99}\label{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99}} 
 \index{Scene@{Scene}!processEvent@{processEvent}}
 \index{processEvent@{processEvent}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_a}{EventA}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Definition at line 37 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_scene_af25d320c2355ab99f2cbeb91fd689789_cgraph}
+\includegraphics[width=350pt]{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_scene_af25d320c2355ab99f2cbeb91fd689789_icgraph}
+\includegraphics[width=350pt]{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_a0db76b56a0c7637f4a20900ab90aa266}\label{class_scene_a0db76b56a0c7637f4a20900ab90aa266}} 
@@ -169,27 +196,28 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 44 of file Scene.\+hpp.
+Definition at line 56 of file Scene.\+hpp.
 
-\mbox{\Hypertarget{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}\label{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f}} 
+\mbox{\Hypertarget{class_scene_a68fbe961ca24ff6d704f56cc058dc18a}\label{class_scene_a68fbe961ca24ff6d704f56cc058dc18a}} 
 \index{Scene@{Scene}!processEventFunc@{processEventFunc}}
 \index{processEventFunc@{processEventFunc}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void Scene\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_a}{EventA}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Scene\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Reimplemented in \mbox{\hyperlink{class_menu_scene_ac5baca2b2cc554a5acca8e7313e554fb}{Menu\+Scene}}.
+Reimplemented in \mbox{\hyperlink{class_menu_scene_a9bc01005e87b0fde5324da4ef1f95bd3}{Menu\+Scene}}.
 
 
 
-Definition at line 42 of file Scene.\+hpp.
+Definition at line 54 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_scene_aedd6c3bafdcc5311be7aca883ea3d25f_icgraph}
+\includegraphics[width=350pt]{class_scene_a68fbe961ca24ff6d704f56cc058dc18a_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}\label{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}} 
@@ -200,7 +228,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 69 of file Scene.\+cpp.
+Definition at line 68 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -224,7 +252,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 83 of file Scene.\+cpp.
+Definition at line 82 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -248,7 +276,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 34 of file Scene.\+hpp.
+Definition at line 46 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -265,7 +293,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 32 of file Scene.\+hpp.
+Definition at line 44 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -282,7 +310,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 57 of file Scene.\+cpp.
+Definition at line 56 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -299,7 +327,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 63 of file Scene.\+cpp.
+Definition at line 62 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -323,7 +351,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 75 of file Scene.\+cpp.
+Definition at line 74 of file Scene.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

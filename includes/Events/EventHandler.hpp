@@ -4,7 +4,7 @@
 #include <queue>
 
 #include "Events/Event.hpp"
-#include "Events/BasicEvents/EventA.hpp"
+#include "Events/BasicEvents/SceneTransitionEvent.hpp"
 #include "Events/CustomEvent.hpp"
 
 class Scene; // Forward Declaration of Scene //

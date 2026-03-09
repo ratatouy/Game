@@ -8,8 +8,8 @@ class MenuScene : public Scene {
 public:
     MenuScene() {};
 
-    void processEventFunc(EventA* event) override {
-        std::cout << "MenuScene Processing EventA" << std::endl;
+    void processEventFunc(SceneTransitionEvent* event) override {
+        std::cout << "MenuScene Processing SceneTransitionEvent" << std::endl;
     };
 };
 

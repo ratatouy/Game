@@ -9,7 +9,7 @@
 #include "Entity/Entity.hpp"
 #include "Events/Event.hpp"
 #include "Events/CustomEvent.hpp"
-#include "Events/BasicEvents/EventA.hpp"
+#include "Events/BasicEvents/SceneTransitionEvent.hpp"
 
 #include "Engine/RenderEngine.hpp"
 
@@ -17,8 +17,20 @@ class EventHandler; // Forward Declaration of EventHandler //
 
 class RenderEngine; // Forward Declaration of RenderEngine //
 
+/** Base class for all Sscenes
+ * 
+ * @details the Scene is the mastermind behind everything, it links every elements together
+ * It has references to the RenderEngine, the PhysicsEngine, the EventHandler and the entities
+ * 
+ * @note missing elements :
+ * - Transitions
+ * - Solid Tiles
+ * - Decorations (bg assets/...)
+ */
 class Scene {
 private:
+    const char* name_;
+
     RenderEngine* renderEngine_;
 
     EventHandler* eventHandler_;
@@ -36,10 +48,10 @@ public:
 
     Entity* getEntity(const char* name);
 
+    RenderEngine* getRenderEngine() {return renderEngine_;}
 
-
-    virtual void processEvent(EventA* event);
-    virtual void processEventFunc(EventA* event) {};
+    virtual void processEvent(SceneTransitionEvent* event);
+    virtual void processEventFunc(SceneTransitionEvent* event) {};
     virtual void processEvent(CustomEvent* event);
     virtual void processEventFunc(CustomEvent* event) {};
 

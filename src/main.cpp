@@ -11,7 +11,7 @@
 #include "Events/Event.hpp"
 #include "Events/EventHandler.hpp"
 
-#include "Engine/PhysicEngine.hpp"
+#include "Engine/PhysicsEngine.hpp"
 #include "Engine/RenderEngine.hpp"
 
 int main() {
@@ -33,7 +33,8 @@ int main() {
 
 
     TransformableComponent* raptorTransform = new TransformableComponent();
-    raptorTransform->setScale({0.3f, 0.3f});
+    raptorTransform->setPosition({0, 200});
+    raptorTransform->setScale({0.2f, 0.2f});
     EntitySpriteComponent* raptorSprite = new EntitySpriteComponent(raptorTransform);
     raptorSprite->AddSprite("assets/Sprites/raptorjesus.jpeg");
 
@@ -42,7 +43,7 @@ int main() {
 
     TransformableComponent* liliTransformable = new TransformableComponent();
     liliTransformable->setPosition({400, 0});
-    liliTransformable->setScale({0.5f, 0.5f});
+    liliTransformable->setScale({0.1f, 0.1f});
     EntitySpriteComponent* liliSprite = new EntitySpriteComponent(liliTransformable);
     liliSprite->AddSprite("assets/Sprites/lilimanjaro.jpg");
     Ennemy* lili = new Ennemy("lili", liliTransformable, liliSprite);
@@ -61,10 +62,20 @@ int main() {
             {
                 rEngine->getWindow()->close();
             }
-            else if (event.type == 9)
+            else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
             {
                 Player* pl = (Player*)menu->getEntity("raptor");
                 pl->attack();
+            }
+            else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
+            {
+                Player* pl = (Player*)menu->getEntity("raptor");
+                pl->getTransformable()->move({10, 0});
+            }
+            else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
+            {
+                Player* pl = (Player*)menu->getEntity("raptor");
+                pl->getTransformable()->move({-10, 0});
             }
         }
 

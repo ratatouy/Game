@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Events/Event.hpp"
-#include "Events/BasicEvents/EventA.hpp"
+#include "Events/BasicEvents/SceneTransitionEvent.hpp"
 #include "Events/CustomEvent.hpp"
 
 #include "Components/BasicComponents/TransformableComponent.hpp"
@@ -117,10 +117,10 @@ public:
     EntitySpriteComponent* getEntitySprite() {return entitySprite_;}
 
 
-
-    virtual void processEvent(EventA* event) {};
+    virtual void processEvent(SceneTransitionEvent* event) {};
     virtual void processEvent(CustomEvent* event) {};
 
+    
     virtual void update() {};
     virtual void render(sf::RenderWindow* window) {};
 };

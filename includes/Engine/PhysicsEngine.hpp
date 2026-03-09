@@ -4,11 +4,7 @@
 #include <SFML/System.hpp>
 
 
-/**
- * @class PhysicEngine
- * 
- * @brief The Physics Engine to Manage Physics (Physic Constants, Timers, etc.)
- */
+/** The Physics Engine to Manage Physics (Physic Constants, Timers, etc.) */
 class PhysicEngine {
 public:
     // Constructor //

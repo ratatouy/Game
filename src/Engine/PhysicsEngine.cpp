@@ -1,4 +1,4 @@
-#include "Engine/PhysicEngine.hpp"
+#include "Engine/PhysicsEngine.hpp"
 
 bool PhysicEngine::instantiated_ = false;
 
