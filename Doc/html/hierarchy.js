@@ -14,11 +14,14 @@ var hierarchy =
     ] ],
     [ "EventA", "class_event_a.html", null ],
     [ "EventHandler", "class_event_handler.html", null ],
+    [ "Game", "class_game.html", null ],
     [ "HitData", "struct_hit_data.html", null ],
     [ "PhysicEngine", "class_physic_engine.html", null ],
     [ "RenderEngine", "class_render_engine.html", null ],
     [ "Scene", "class_scene.html", [
       [ "MenuScene", "class_menu_scene.html", null ]
     ] ],
-    [ "TransformableComponent", "class_transformable_component.html", null ]
+    [ "SceneData", "struct_scene_data.html", null ],
+    [ "TransformableComponent", "class_transformable_component.html", null ],
+    [ "Transition", "class_transition.html", null ]
 ];

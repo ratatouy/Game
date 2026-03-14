@@ -1,0 +1,113 @@
+{
+    "lvl1" : 
+    [
+        {
+            "name" : "exit_right_0",
+            "type": "horizontal",
+            "position": [720, 400],
+            "height": 100,
+            "orientation" : "right",
+            "target": "lvl2"
+        },
+        {
+            "name" : "exit_down_0",
+            "type": "vertical",
+            "position": [300, 720],
+            "width": 100,
+            "orientation" : "down",
+            "target": "lvl3"
+        },
+        {
+            "name" : "exit_onkey_0",
+            "type": "onkey",
+            "rect": [70, 620, 50, 80],
+            "target": "lvl4",
+            "activation_action": "up",
+            "target_transition" : "exit_onkey_0"
+        }
+    ],
+
+    "lvl2" : 
+    [
+        {
+            "name" : "exit_left_0",
+            "type": "horizontal",
+            "position": [0, 400],
+            "height": 100,
+            "orientation" : "left",
+            "target": "lvl1"
+        },
+        {
+            "name" : "exit_down_0",
+            "type": "vertical",
+            "position": [20, 720],
+            "width": 80,
+            "orientation" : "down",
+            "target": "lvl4"
+        }
+    ],
+
+    "lvl3" :
+    [
+        {
+            "name" : "exit_up_0",
+            "type": "vertical",
+            "position": [300, 0],
+            "width": 100,
+            "orientation" : "up",
+            "target": "lvl1"
+        },
+        {
+            "name" : "exit_right_0",
+            "type": "horizontal",
+            "position": [720, 500],
+            "height": 200,
+            "orientation" : "right",
+            "target": "lvl4"
+        },
+        {
+            "name" : "exit_onkey_0",
+            "type": "onkey",
+            "rect": [35, 620, 50, 80],
+            "target": "lvl4",
+            "activation_action": "up",
+            "target_transition" : "exit_onkey_1"
+        }
+    ],
+
+    "lvl4" :
+    [
+        {
+            "name" : "exit_up_0",
+            "type": "vertical",
+            "position": [20, 0],
+            "width": 80,
+            "orientation" : "up",
+            "target": "lvl2"
+        },
+        {
+            "name" : "exit_left_0",
+            "type": "horizontal",
+            "position": [0, 500],
+            "height": 200,
+            "orientation" : "left",
+            "target": "lvl3"
+        },
+        {
+            "name" : "exit_onkey_0",
+            "type": "onkey",
+            "rect": [600, 220, 50, 80],
+            "target": "lvl1",
+            "activation_action": "up",
+            "target_transition" : "exit_onkey_0"
+        },
+        {
+            "name" : "exit_onkey_1",
+            "type": "onkey",
+            "rect": [230, 420, 50, 80],
+            "target": "lvl3",
+            "activation_action": "up",
+            "target_transition" : "exit_onkey_0"
+        }
+    ]
+}

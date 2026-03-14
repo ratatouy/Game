@@ -1,0 +1,418 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\item 
+\mbox{\hyperlink{class_game_abb28875d74d25fa9e0dcdbe37c6ad89c}{Game}} (const \mbox{\hyperlink{class_game}{Game}} \&)=delete
+\item 
+\mbox{\hyperlink{class_game}{Game}} \& \mbox{\hyperlink{class_game_a4d0c0503733cc50b0b5cb8d7ef1237ec}{operator=}} (const \mbox{\hyperlink{class_game}{Game}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5}{set\+Event\+Handler}} (\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$event\+Handler)
+\item 
+void \mbox{\hyperlink{class_game_aa2d79324af14500b9f509c19c57dc3ac}{set\+Render\+Engine}} (\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$render\+Engine)
+\item 
+void \mbox{\hyperlink{class_game_a6c0a61f4714c860d9d21a9a121d3cc74}{set\+Active\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+\item 
+\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_game_a436fc8919d4d15983f076379acc00438}{get\+Event\+Handler}} ()
+\item 
+\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$ \mbox{\hyperlink{class_game_ab09c78ab7a7b725eb8aa4724688137d1}{get\+Render\+Engine}} ()
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_game_ad10ed0a88180bf31ea13340a5422816b}{get\+Active\+Scene}} ()
+\item 
+void \mbox{\hyperlink{class_game_aae26066798d381cb711918f0b59958a5}{throw\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}{process\+Event}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_game_a0f8625023fc606a99796cc1d69f618fe}{process\+Event\+Func}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_game_a01f802010c5c0265601d516341417480}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_game_a16b9d7c51cc228b59e1272b27bded4bf}{process\+Event\+Func}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+\item 
+void \mbox{\hyperlink{class_game_a79df6376b332d63c9eca0dcee30305c3}{update}} ()
+\item 
+void \mbox{\hyperlink{class_game_a15ddd769261d923827a3cdf41499c843}{render}} ()
+\item 
+void \mbox{\hyperlink{class_game_a472279479c423e4950f6eedf09bf8bf5}{add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_game_a838dc33451cdd3c6a8b8f121b8d6c642}{active\+\_\+scene\+\_\+}}
+\item 
+\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_game_aef623078840f4a22954f057b2173e2f0}{event\+Handler\+\_\+}}
+\item 
+\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$ \mbox{\hyperlink{class_game_ad766929105d9af28ea204cc53b5474fa}{render\+Engine\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ const char $\ast$, \mbox{\hyperlink{struct_scene_data}{Scene\+Data}} $>$ \mbox{\hyperlink{class_game_a1dab7c22cb2efd19bb58f8e8f82c175e}{scene\+\_\+data\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_game_a2b0107721e981e0618027995f351142a}{instantiated\+\_\+}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 27 of file Game.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Game.\+cpp.
+
+\mbox{\Hypertarget{class_game_abb28875d74d25fa9e0dcdbe37c6ad89c}\label{class_game_abb28875d74d25fa9e0dcdbe37c6ad89c}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game}{Game}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a472279479c423e4950f6eedf09bf8bf5}\label{class_game_a472279479c423e4950f6eedf09bf8bf5}} 
+\index{Game@{Game}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily void Game\+::add\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+\begin{DoxyWarning}{Warning}
+DON\textquotesingle{}T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT\textquotesingle{}S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT 
+\end{DoxyWarning}
+
+
+Definition at line 56 of file Game.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a472279479c423e4950f6eedf09bf8bf5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_game_a472279479c423e4950f6eedf09bf8bf5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_ad10ed0a88180bf31ea13340a5422816b}\label{class_game_ad10ed0a88180bf31ea13340a5422816b}} 
+\index{Game@{Game}!getActiveScene@{getActiveScene}}
+\index{getActiveScene@{getActiveScene}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getActiveScene()}{getActiveScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Game\+::get\+Active\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 52 of file Game.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_game_ad10ed0a88180bf31ea13340a5422816b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a436fc8919d4d15983f076379acc00438}\label{class_game_a436fc8919d4d15983f076379acc00438}} 
+\index{Game@{Game}!getEventHandler@{getEventHandler}}
+\index{getEventHandler@{getEventHandler}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getEventHandler()}{getEventHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_handler}{Event\+Handler}}$\ast$ Game\+::get\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_ab09c78ab7a7b725eb8aa4724688137d1}\label{class_game_ab09c78ab7a7b725eb8aa4724688137d1}} 
+\index{Game@{Game}!getRenderEngine@{getRenderEngine}}
+\index{getRenderEngine@{getRenderEngine}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getRenderEngine()}{getRenderEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_engine}{Render\+Engine}}$\ast$ Game\+::get\+Render\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 51 of file Game.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_game_ab09c78ab7a7b725eb8aa4724688137d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a4d0c0503733cc50b0b5cb8d7ef1237ec}\label{class_game_a4d0c0503733cc50b0b5cb8d7ef1237ec}} 
+\index{Game@{Game}!operator=@{operator=}}
+\index{operator=@{operator=}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}\& Game\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game}{Game}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_game_a01f802010c5c0265601d516341417480}\label{class_game_a01f802010c5c0265601d516341417480}} 
+\index{Game@{Game}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Game\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Game.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a01f802010c5c0265601d516341417480_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}\label{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}} 
+\index{Game@{Game}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Game\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file Game.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a16b9d7c51cc228b59e1272b27bded4bf}\label{class_game_a16b9d7c51cc228b59e1272b27bded4bf}} 
+\index{Game@{Game}!processEventFunc@{processEventFunc}}
+\index{processEventFunc@{processEventFunc}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Game\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a0f8625023fc606a99796cc1d69f618fe}\label{class_game_a0f8625023fc606a99796cc1d69f618fe}} 
+\index{Game@{Game}!processEventFunc@{processEventFunc}}
+\index{processEventFunc@{processEventFunc}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Game\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a15ddd769261d923827a3cdf41499c843}\label{class_game_a15ddd769261d923827a3cdf41499c843}} 
+\index{Game@{Game}!render@{render}}
+\index{render@{render}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Game\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 50 of file Game.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_game_a15ddd769261d923827a3cdf41499c843_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_game_a15ddd769261d923827a3cdf41499c843_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a6c0a61f4714c860d9d21a9a121d3cc74}\label{class_game_a6c0a61f4714c860d9d21a9a121d3cc74}} 
+\index{Game@{Game}!setActiveScene@{setActiveScene}}
+\index{setActiveScene@{setActiveScene}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setActiveScene()}{setActiveScene()}}
+{\footnotesize\ttfamily void Game\+::set\+Active\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 48 of file Game.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5}\label{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5}} 
+\index{Game@{Game}!setEventHandler@{setEventHandler}}
+\index{setEventHandler@{setEventHandler}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setEventHandler()}{setEventHandler()}}
+{\footnotesize\ttfamily void Game\+::set\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$}]{event\+Handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file Game.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_aa2d79324af14500b9f509c19c57dc3ac}\label{class_game_aa2d79324af14500b9f509c19c57dc3ac}} 
+\index{Game@{Game}!setRenderEngine@{setRenderEngine}}
+\index{setRenderEngine@{setRenderEngine}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setRenderEngine()}{setRenderEngine()}}
+{\footnotesize\ttfamily void Game\+::set\+Render\+Engine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$}]{render\+Engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file Game.\+hpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_game_aa2d79324af14500b9f509c19c57dc3ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_aae26066798d381cb711918f0b59958a5}\label{class_game_aae26066798d381cb711918f0b59958a5}} 
+\index{Game@{Game}!throwEvent@{throwEvent}}
+\index{throwEvent@{throwEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{throwEvent()}{throwEvent()}}
+{\footnotesize\ttfamily void Game\+::throw\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event}{Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file Game.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aae26066798d381cb711918f0b59958a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_game_aae26066798d381cb711918f0b59958a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a79df6376b332d63c9eca0dcee30305c3}\label{class_game_a79df6376b332d63c9eca0dcee30305c3}} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file Game.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a79df6376b332d63c9eca0dcee30305c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_game_a79df6376b332d63c9eca0dcee30305c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_a838dc33451cdd3c6a8b8f121b8d6c642}\label{class_game_a838dc33451cdd3c6a8b8f121b8d6c642}} 
+\index{Game@{Game}!active\_scene\_@{active\_scene\_}}
+\index{active\_scene\_@{active\_scene\_}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{active\_scene\_}{active\_scene\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Game\+::active\+\_\+scene\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_aef623078840f4a22954f057b2173e2f0}\label{class_game_aef623078840f4a22954f057b2173e2f0}} 
+\index{Game@{Game}!eventHandler\_@{eventHandler\_}}
+\index{eventHandler\_@{eventHandler\_}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{eventHandler\_}{eventHandler\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_handler}{Event\+Handler}}$\ast$ Game\+::event\+Handler\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_a2b0107721e981e0618027995f351142a}\label{class_game_a2b0107721e981e0618027995f351142a}} 
+\index{Game@{Game}!instantiated\_@{instantiated\_}}
+\index{instantiated\_@{instantiated\_}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{instantiated\_}{instantiated\_}}
+{\footnotesize\ttfamily bool Game\+::instantiated\+\_\+ = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 30 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_ad766929105d9af28ea204cc53b5474fa}\label{class_game_ad766929105d9af28ea204cc53b5474fa}} 
+\index{Game@{Game}!renderEngine\_@{renderEngine\_}}
+\index{renderEngine\_@{renderEngine\_}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{renderEngine\_}{renderEngine\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_render_engine}{Render\+Engine}}$\ast$ Game\+::render\+Engine\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_a1dab7c22cb2efd19bb58f8e8f82c175e}\label{class_game_a1dab7c22cb2efd19bb58f8e8f82c175e}} 
+\index{Game@{Game}!scene\_data\_@{scene\_data\_}}
+\index{scene\_data\_@{scene\_data\_}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{scene\_data\_}{scene\_data\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$const char$\ast$, \mbox{\hyperlink{struct_scene_data}{Scene\+Data}}$>$ Game\+::scene\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+A Map of the data to use to load the Scenes 
+
+Definition at line 36 of file Game.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+includes/\mbox{\hyperlink{_game_8hpp}{Game.\+hpp}}\item 
+src/\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

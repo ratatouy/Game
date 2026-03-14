@@ -34,12 +34,38 @@ void EntitySpriteComponent::AddSprite(const char* filepath)
 
         sprites_.push_back(sprite);
         textures_.push_back(texture);
+
+        nb_sprites_++;
     }
     catch (std::exception& e) {
         std::cout << "Exception: " << e.what() << std::endl;
     }
 };
 
+
+void EntitySpriteComponent::AddSprite(const char* name, const char* filepath)
+{
+    try {
+        sf::Texture* texture = _LoadTexture(filepath);
+        if (!texture) return;
+        
+        sf::Sprite sprite;
+        sprite.setTexture(*texture);
+
+        sprite.setPosition(entityTransformable_->getPosition());
+        sprite.setRotation(entityTransformable_->getRotation());
+        sprite.setScale(entityTransformable_->getScale());
+
+        
+        sprites_data_map_[name] = std::make_tuple(sprite, sf::Transformable(), texture);
+
+
+        nb_sprites_++;
+    }
+    catch (std::exception& e) {
+        std::cout << "Exception: " << e.what() << std::endl;
+    }
+};
 
 
 void EntitySpriteComponent::AddSprite(const char* filepath, sf::IntRect SrcRect)
@@ -73,17 +99,6 @@ void EntitySpriteComponent::update() {
         sprites_[i].setOrigin  (entityTransformable_->getOrigin()   + transformable->getOrigin());
     }
 }
-
-
-
-const void EntitySpriteComponent::render(sf::RenderWindow* window)
-{
-    if (visible_)
-    {
-        for (auto sprite : sprites_)
-            window->draw(sprite);
-    }
-};
 
 
 

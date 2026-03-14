@@ -1,7 +1,10 @@
 <map id="Ennemy" name="Ennemy">
-<area shape="rect" id="node1" title=" " alt="" coords="196,171,271,197"/>
-<area shape="rect" id="node2" href="$class_entity.html" title=" " alt="" coords="203,95,263,121"/>
-<area shape="rect" id="node3" href="$class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
-<area shape="rect" id="node4" href="$class_scene.html" title=" " alt="" coords="203,5,264,32"/>
-<area shape="rect" id="node5" href="$class_transformable_component.html" title=" " alt="" coords="289,5,479,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="201,273,275,300"/>
+<area shape="rect" id="node2" href="$class_entity.html" title=" " alt="" coords="208,184,268,211"/>
+<area shape="rect" id="node3" href="$class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="207,95,381,121"/>
+<area shape="rect" id="node4" href="$class_transformable_component.html" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node5" href="$class_scene.html" title=" " alt="" coords="459,95,521,121"/>
+<area shape="rect" id="node6" href="$class_game.html" title=" " alt="" coords="523,184,585,211"/>
+<area shape="rect" id="node7" href="$class_render_engine.html" title=" " alt="" coords="411,273,523,300"/>
+<area shape="rect" id="node8" href="$class_event_handler.html" title="Manages the event queue." alt="" coords="584,273,695,300"/>
 </map>

@@ -1,5 +1,6 @@
 #include "Entity/Player/Player.hpp"
 #include "Scenes/Scene.hpp"
+#include "Events/BasicEvents/SpawnEntityEvent.hpp"
 
 #include <iostream>
 #include <memory>
@@ -10,10 +11,6 @@ void Player::update() {
     entitySprite_->update();
 }
 
-void Player::render(sf::RenderWindow* window) {
-    // std::cout << "Player Rendering" << std::endl;
-    entitySprite_->render(window);
-}
 
 void Player::attack() {
     std::cout << "Raptorjesus von Behfeur calls upon his Rechauffeur in hope to anihilate his ArchNemesis" << std::endl;
@@ -21,6 +18,8 @@ void Player::attack() {
 
     Projectile* player_proj = new Projectile("player_proj", transformable_->getPosition(), {0.5f,0.f});
     player_proj->getEntitySprite()->AddSprite("assets/Sprites/cato.png");
-    current_scene_->addEntity(player_proj);
+
+
+    current_scene_->throwEvent(new SpawnEntityEvent(player_proj));
     transformable_->rotate(45);
 }

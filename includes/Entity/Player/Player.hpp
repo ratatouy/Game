@@ -49,16 +49,6 @@ public:
     void update() override;
 
 
-
-    /**
-     * @brief Renders the player
-     * 
-     * @param window Pointer to the RenderWindow
-     */
-    void render(sf::RenderWindow* window) override;
-
-
-
     void attack();
 };
 

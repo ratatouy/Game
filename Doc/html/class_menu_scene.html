@@ -107,8 +107,11 @@ Collaboration diagram for MenuScene:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_menu_scene__coll__graph.png" border="0" usemap="#a_menu_scene_coll__map" alt="Collaboration graph"/></div>
 <map name="a_menu_scene_coll__map" id="a_menu_scene_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,103,107"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="23,5,85,32"/>
+<area shape="rect" title=" " alt="" coords="5,95,103,121"/>
+<area shape="rect" href="class_scene.html" title=" " alt="" coords="67,5,129,32"/>
+<area shape="rect" href="class_game.html" title=" " alt="" coords="161,95,222,121"/>
+<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="49,184,161,211"/>
+<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="221,184,332,211"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,14 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad10176d75a9cc0da56626f682d083507 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8cec2e32546713915f8c6303c951f1 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a> ()</td></tr>
 <tr class="separator:a3b8cec2e32546713915f8c6303c951f1 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb23401dd887424e48b3016a6f33a5e1 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#abb23401dd887424e48b3016a6f33a5e1">setRenderEngine</a> (<a class="el" href="class_render_engine.html">RenderEngine</a> *renderEngine)</td></tr>
-<tr class="separator:abb23401dd887424e48b3016a6f33a5e1 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3d8b229ab26de9142a86bdd6b01ab34 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34">setEventHandler</a> (<a class="el" href="class_event_handler.html">EventHandler</a> *<a class="el" href="class_event_handler.html">EventHandler</a>)</td></tr>
-<tr class="separator:aa3d8b229ab26de9142a86bdd6b01ab34 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd380896c2aae26dc8369eb5dfd7bfb inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb">setGame</a> (<a class="el" href="class_game.html">Game</a> *game)</td></tr>
+<tr class="separator:a7dd380896c2aae26dc8369eb5dfd7bfb inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c200511f7f00c8184a7d6281a508e2c inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">getEntity</a> (const char *name)</td></tr>
 <tr class="separator:a3c200511f7f00c8184a7d6281a508e2c inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a8fc24fa6036ed658d5615177b20a26 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_render_engine.html">RenderEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a8a8fc24fa6036ed658d5615177b20a26">getRenderEngine</a> ()</td></tr>
-<tr class="separator:a8a8fc24fa6036ed658d5615177b20a26 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8436de839f7ec4ddc18ae87f9dd32a99 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">processEvent</a> (<a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *event)</td></tr>
 <tr class="separator:a8436de839f7ec4ddc18ae87f9dd32a99 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4654dfc8ab44c744171caa43fc22bbab inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4654dfc8ab44c744171caa43fc22bbab">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
@@ -145,10 +144,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa24c7e636c10e4e42650c1374b90bb80 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71feeabe831f8755af8adbef941188c4 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a71feeabe831f8755af8adbef941188c4">updateEntities</a> ()</td></tr>
 <tr class="separator:a71feeabe831f8755af8adbef941188c4 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41145ff1608c7967525af3ff4fb9aabe inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a41145ff1608c7967525af3ff4fb9aabe">renderEntities</a> ()</td></tr>
-<tr class="separator:a41145ff1608c7967525af3ff4fb9aabe inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ddf2d16f371ee9533b3faf1dd5ddfb1 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1">render</a> ()</td></tr>
-<tr class="separator:a4ddf2d16f371ee9533b3faf1dd5ddfb1 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

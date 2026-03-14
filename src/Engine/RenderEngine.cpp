@@ -1,5 +1,5 @@
 #include "Engine/RenderEngine.hpp"
-#include "Scenes/Scene.hpp"
+#include "Game.hpp"
 
 #include <iostream>
 
@@ -7,7 +7,7 @@
 bool RenderEngine::instantiated_ = false;
 
 
-RenderEngine::RenderEngine(const char* title, int width, int height)
+RenderEngine::RenderEngine(std::string title, int width, int height)
 {
     if (instantiated_) {
         throw std::runtime_error("RenderEngine already instantiated");
@@ -21,7 +21,7 @@ RenderEngine::RenderEngine(const char* title, int width, int height)
 RenderEngine::~RenderEngine()
 {
     delete window_;
-    delete currentScene_;
+    delete game_;
 
     for (auto iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)
         delete iterator->second;
@@ -37,8 +37,10 @@ RenderEngine::~RenderEngine()
 
 
 
-void RenderEngine::addDrawable(const char* name, sf::Drawable* drawable)
+void RenderEngine::addDrawable(std::string name, sf::Drawable* drawable)
 {
+    std::cout << "adding " << name << std::endl;
+
     try
     {
         drawables_.try_emplace(name);
@@ -51,7 +53,7 @@ void RenderEngine::addDrawable(const char* name, sf::Drawable* drawable)
 }
 
 
-void RenderEngine::addShaderDrawable(const char* name, sf::Drawable* drawable, const char* filepath, sf::Shader::Type type)
+void RenderEngine::addShaderDrawable(std::string name, sf::Drawable* drawable, std::string filepath, sf::Shader::Type type)
 {
     try
     {
@@ -69,7 +71,7 @@ void RenderEngine::addShaderDrawable(const char* name, sf::Drawable* drawable, c
 }
 
 
-void RenderEngine::attachShaderToDrawable(const char* drawable_name, const char* filepath, sf::Shader::Type type)
+void RenderEngine::attachShaderToDrawable(std::string drawable_name, std::string filepath, sf::Shader::Type type)
 {
     if (drawables_.find(drawable_name) == drawables_.end())
         throw(std::runtime_error("RenderEngine::attachShaderToDrawable : Tried adding Shader to non-existing drawable"));
@@ -112,12 +114,14 @@ void RenderEngine::render()
     // Render Shader Drawables
     for (auto iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)
     {
+        // std::cout << "Rendering Shader Drawable" << iterator->first << std::endl;
         window_->draw(*iterator->second.first, &iterator->second.second);
     }
 
     // Render Shaderless Drawables
     for (auto iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)
-    {
+    {   
+        // std::cout << "Rendering Drawable " << iterator->first << std::endl;
         window_->draw(*iterator->second);
     }
 }

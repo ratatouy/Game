@@ -4,10 +4,20 @@
 
 {\ttfamily \#include $<$Render\+Engine.\+hpp$>$}
 
+
+
+Collaboration diagram for Render\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_render_engine_a9247dbba2d91d3b9c9fbeeaebe687a54}{Render\+Engine}} (const char $\ast$title=\char`\"{}Game\char`\"{}, int width=920, int height=480)
+\mbox{\hyperlink{class_render_engine_a21fef2c43c37823096a0061f4e5d99df}{Render\+Engine}} (std\+::string title=\char`\"{}Game\char`\"{}, int width=920, int height=480)
 \item 
 \mbox{\hyperlink{class_render_engine_a316fc5791b0934259ac91fa20a4d55e9}{Render\+Engine}} (const \mbox{\hyperlink{class_render_engine}{Render\+Engine}} \&)=delete
 \item 
@@ -15,15 +25,17 @@
 \item 
 \mbox{\hyperlink{class_render_engine_a22709e8d62956c56b981d4d5d3ee1fc6}{$\sim$\+Render\+Engine}} ()
 \item 
-void \mbox{\hyperlink{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}{set\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+void \mbox{\hyperlink{class_render_engine_ab0f7148ace0595342dc89227c75d9ec7}{set\+Game}} (\mbox{\hyperlink{class_game}{Game}} $\ast$game)
 \item 
 sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}{get\+Window}} ()
 \item 
-void \mbox{\hyperlink{class_render_engine_a2df2f1fe4b63a1e854f33642e68dee07}{add\+Drawable}} (const char $\ast$name, sf\+::\+Drawable $\ast$drawable)
+sf\+::\+Drawable $\ast$ \mbox{\hyperlink{class_render_engine_a3377beef102f78b7e035575ff5d8d199}{get\+Drawable}} (std\+::string name)
 \item 
-void \mbox{\hyperlink{class_render_engine_aa1ba6c05390d4998224df43db26de9d9}{add\+Shader\+Drawable}} (const char $\ast$name, sf\+::\+Drawable $\ast$drawable, const char $\ast$filepath, sf\+::\+Shader\+::\+Type type)
+void \mbox{\hyperlink{class_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec}{add\+Drawable}} (std\+::string name, sf\+::\+Drawable $\ast$drawable)
 \item 
-void \mbox{\hyperlink{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0}{attach\+Shader\+To\+Drawable}} (const char $\ast$drawable\+\_\+name, const char $\ast$filepath, sf\+::\+Shader\+::\+Type type)
+void \mbox{\hyperlink{class_render_engine_a8a500759abd398b0d3e8b90f5fb16a4a}{add\+Shader\+Drawable}} (std\+::string name, sf\+::\+Drawable $\ast$drawable, std\+::string filepath, sf\+::\+Shader\+::\+Type type)
+\item 
+void \mbox{\hyperlink{class_render_engine_a4b02933b074b755d0b0f3ba6bb64b9d4}{attach\+Shader\+To\+Drawable}} (std\+::string drawable\+\_\+name, std\+::string filepath, sf\+::\+Shader\+::\+Type type)
 \item 
 void \mbox{\hyperlink{class_render_engine_ac84ced7bed02e9e99166610d593e97ba}{update}} ()
 \item 
@@ -31,13 +43,31 @@ void \mbox{\hyperlink{class_render_engine_a3fd5129c749a1493da6d3113bd431b1e}{upd
 \item 
 void \mbox{\hyperlink{class_render_engine_a53a4c17a370573bc19c797e4e0f966bb}{render}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{class_render_engine_a0c23c82d4adc6e2a196f2fff73642b62}{window\+\_\+}}
+\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_render_engine_a6a593624cd3465fad4874b3cd91dca47}{game\+\_\+}}
+\item 
+sf\+::\+Clock \mbox{\hyperlink{class_render_engine_a843f0356b77ee714cf95f53d357b5825}{total\+\_\+clock\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, sf\+::\+Drawable $\ast$ $>$ \mbox{\hyperlink{class_render_engine_a6a719909741921387d1fd427dde92a78}{drawables\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ sf\+::\+Drawable $\ast$, sf\+::\+Shader $>$ $>$ \mbox{\hyperlink{class_render_engine_ac5c37d8525d10f929dfc734f01308131}{shader\+\_\+drawables\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_render_engine_a2c4178b08283abb5f28c68a28a762fbe}{instantiated\+\_\+}} = false
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Manages Shaders and the Render\+Window
 
 \begin{DoxyWarning}{Warning}
-A Drawable shouldn\textquotesingle{}t be added to both drawables\+\_\+ and shader\+\_\+drawables\+\_\+
+A Drawable shouldn\textquotesingle{}t be added to both drawables\+\_\+ and shader\+\_\+drawables\+\_\+, please use attach\+Shader\+To\+Drawable instead
 \end{DoxyWarning}
 \begin{DoxyNote}{Note}
 Singleton 
@@ -49,11 +79,11 @@ Definition at line 15 of file Render\+Engine.\+hpp.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_render_engine_a9247dbba2d91d3b9c9fbeeaebe687a54}\label{class_render_engine_a9247dbba2d91d3b9c9fbeeaebe687a54}} 
+\mbox{\Hypertarget{class_render_engine_a21fef2c43c37823096a0061f4e5d99df}\label{class_render_engine_a21fef2c43c37823096a0061f4e5d99df}} 
 \index{RenderEngine@{RenderEngine}!RenderEngine@{RenderEngine}}
 \index{RenderEngine@{RenderEngine}!RenderEngine@{RenderEngine}}
 \doxysubsubsection{\texorpdfstring{RenderEngine()}{RenderEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Render\+Engine\+::\+Render\+Engine (\begin{DoxyParamCaption}\item[{const char $\ast$}]{title = {\ttfamily \char`\"{}Game\char`\"{}},  }\item[{int}]{width = {\ttfamily 920},  }\item[{int}]{height = {\ttfamily 480} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Render\+Engine\+::\+Render\+Engine (\begin{DoxyParamCaption}\item[{std\+::string}]{title = {\ttfamily \char`\"{}Game\char`\"{}},  }\item[{int}]{width = {\ttfamily 920},  }\item[{int}]{height = {\ttfamily 480} }\end{DoxyParamCaption})}
 
 Only Constructor
 
@@ -92,11 +122,11 @@ Definition at line 21 of file Render\+Engine.\+cpp.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_render_engine_a2df2f1fe4b63a1e854f33642e68dee07}\label{class_render_engine_a2df2f1fe4b63a1e854f33642e68dee07}} 
+\mbox{\Hypertarget{class_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec}\label{class_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec}} 
 \index{RenderEngine@{RenderEngine}!addDrawable@{addDrawable}}
 \index{addDrawable@{addDrawable}!RenderEngine@{RenderEngine}}
 \doxysubsubsection{\texorpdfstring{addDrawable()}{addDrawable()}}
-{\footnotesize\ttfamily void Render\+Engine\+::add\+Drawable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{sf\+::\+Drawable $\ast$}]{drawable }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Render\+Engine\+::add\+Drawable (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{sf\+::\+Drawable $\ast$}]{drawable }\end{DoxyParamCaption})}
 
 Adds a Drawable to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
 
@@ -111,11 +141,18 @@ Adds a Drawable to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
 
 Definition at line 40 of file Render\+Engine.\+cpp.
 
-\mbox{\Hypertarget{class_render_engine_aa1ba6c05390d4998224df43db26de9d9}\label{class_render_engine_aa1ba6c05390d4998224df43db26de9d9}} 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_render_engine_a8a500759abd398b0d3e8b90f5fb16a4a}\label{class_render_engine_a8a500759abd398b0d3e8b90f5fb16a4a}} 
 \index{RenderEngine@{RenderEngine}!addShaderDrawable@{addShaderDrawable}}
 \index{addShaderDrawable@{addShaderDrawable}!RenderEngine@{RenderEngine}}
 \doxysubsubsection{\texorpdfstring{addShaderDrawable()}{addShaderDrawable()}}
-{\footnotesize\ttfamily void Render\+Engine\+::add\+Shader\+Drawable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{sf\+::\+Drawable $\ast$}]{drawable,  }\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Render\+Engine\+::add\+Shader\+Drawable (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{sf\+::\+Drawable $\ast$}]{drawable,  }\item[{std\+::string}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
 
 Adds a Shader\+Drawable to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
 
@@ -132,21 +169,20 @@ Adds a Shader\+Drawable to the \mbox{\hyperlink{class_render_engine}{Render\+Eng
 \end{DoxyParams}
 
 
-Definition at line 54 of file Render\+Engine.\+cpp.
+Definition at line 56 of file Render\+Engine.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_render_engine_aa1ba6c05390d4998224df43db26de9d9_icgraph}
+\includegraphics[width=350pt]{class_render_engine_a8a500759abd398b0d3e8b90f5fb16a4a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0}\label{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0}} 
+\mbox{\Hypertarget{class_render_engine_a4b02933b074b755d0b0f3ba6bb64b9d4}\label{class_render_engine_a4b02933b074b755d0b0f3ba6bb64b9d4}} 
 \index{RenderEngine@{RenderEngine}!attachShaderToDrawable@{attachShaderToDrawable}}
 \index{attachShaderToDrawable@{attachShaderToDrawable}!RenderEngine@{RenderEngine}}
 \doxysubsubsection{\texorpdfstring{attachShaderToDrawable()}{attachShaderToDrawable()}}
-{\footnotesize\ttfamily void Render\+Engine\+::attach\+Shader\+To\+Drawable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{drawable\+\_\+name,  }\item[{const char $\ast$}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Render\+Engine\+::attach\+Shader\+To\+Drawable (\begin{DoxyParamCaption}\item[{std\+::string}]{drawable\+\_\+name,  }\item[{std\+::string}]{filepath,  }\item[{sf\+::\+Shader\+::\+Type}]{type }\end{DoxyParamCaption})}
 
 Attaches a Shader to a Drawable
 
@@ -161,16 +197,25 @@ Attaches a Shader to a Drawable
 \end{DoxyParams}
 
 
-Definition at line 72 of file Render\+Engine.\+cpp.
+Definition at line 74 of file Render\+Engine.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_render_engine_a116f0bc14c98b664f9348f1d730f59d0_cgraph}
+\includegraphics[width=350pt]{class_render_engine_a4b02933b074b755d0b0f3ba6bb64b9d4_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_render_engine_a3377beef102f78b7e035575ff5d8d199}\label{class_render_engine_a3377beef102f78b7e035575ff5d8d199}} 
+\index{RenderEngine@{RenderEngine}!getDrawable@{getDrawable}}
+\index{getDrawable@{getDrawable}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{getDrawable()}{getDrawable()}}
+{\footnotesize\ttfamily sf\+::\+Drawable$\ast$ Render\+Engine\+::get\+Drawable (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Render\+Engine.\+hpp.
+
 \mbox{\Hypertarget{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}\label{class_render_engine_aec8db646d82d91a8595c22f1d7d61688}} 
 \index{RenderEngine@{RenderEngine}!getWindow@{getWindow}}
 \index{getWindow@{getWindow}!RenderEngine@{RenderEngine}}
@@ -184,13 +229,13 @@ Pointer to the Render\+Window
 \end{DoxyReturn}
 
 
-Definition at line 66 of file Render\+Engine.\+hpp.
+Definition at line 70 of file Render\+Engine.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph}
+\includegraphics[width=302pt]{class_render_engine_aec8db646d82d91a8595c22f1d7d61688_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_render_engine_a8481c5152d04db388170c404d193b6f0}\label{class_render_engine_a8481c5152d04db388170c404d193b6f0}} 
@@ -207,13 +252,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Renders the Drawables \& Shader\+Drawables 
 
-Definition at line 110 of file Render\+Engine.\+cpp.
+Definition at line 112 of file Render\+Engine.\+cpp.
 
-\mbox{\Hypertarget{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}\label{class_render_engine_a087c9d22abb6553de2f4320e11a0a033}} 
-\index{RenderEngine@{RenderEngine}!setScene@{setScene}}
-\index{setScene@{setScene}!RenderEngine@{RenderEngine}}
-\doxysubsubsection{\texorpdfstring{setScene()}{setScene()}}
-{\footnotesize\ttfamily void Render\+Engine\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_render_engine_a53a4c17a370573bc19c797e4e0f966bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_render_engine_ab0f7148ace0595342dc89227c75d9ec7}\label{class_render_engine_ab0f7148ace0595342dc89227c75d9ec7}} 
+\index{RenderEngine@{RenderEngine}!setGame@{setGame}}
+\index{setGame@{setGame}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{setGame()}{setGame()}}
+{\footnotesize\ttfamily void Render\+Engine\+::set\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Attaches the \mbox{\hyperlink{class_scene}{Scene}} to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}
 
@@ -224,13 +276,13 @@ Attaches the \mbox{\hyperlink{class_scene}{Scene}} to the \mbox{\hyperlink{class
 \end{DoxyParams}
 
 
-Definition at line 58 of file Render\+Engine.\+hpp.
+Definition at line 62 of file Render\+Engine.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{class_render_engine_a087c9d22abb6553de2f4320e11a0a033_icgraph}
+\includegraphics[width=291pt]{class_render_engine_ab0f7148ace0595342dc89227c75d9ec7_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_render_engine_ac84ced7bed02e9e99166610d593e97ba}\label{class_render_engine_ac84ced7bed02e9e99166610d593e97ba}} 
@@ -243,10 +295,9 @@ General Update Method
 
 Just updates the Shaders tbh 
 
-Definition at line 83 of file Render\+Engine.\+cpp.
+Definition at line 85 of file Render\+Engine.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -265,16 +316,88 @@ Update the shaders
 \item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Update Shaders Depending on their args \end{DoxyRefDesc}
 
 
-Definition at line 90 of file Render\+Engine.\+cpp.
+Definition at line 92 of file Render\+Engine.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_render_engine_a3fd5129c749a1493da6d3113bd431b1e_icgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_render_engine_a6a719909741921387d1fd427dde92a78}\label{class_render_engine_a6a719909741921387d1fd427dde92a78}} 
+\index{RenderEngine@{RenderEngine}!drawables\_@{drawables\_}}
+\index{drawables\_@{drawables\_}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{drawables\_}{drawables\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, sf\+::\+Drawable$\ast$$>$ Render\+Engine\+::drawables\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of all the Drawables that have no Shaders
+
+Each drawable has a \textquotesingle{}name\textquotesingle{}, that isn\textquotesingle{}t necessarily unique for drawables from an \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}}, the name\textquotesingle{}s format is \mbox{[}entity\textquotesingle{}s name\mbox{]}\+\_\+\mbox{[}sprite\textquotesingle{}s name\mbox{]} 
+
+Definition at line 26 of file Render\+Engine.\+hpp.
+
+\mbox{\Hypertarget{class_render_engine_a6a593624cd3465fad4874b3cd91dca47}\label{class_render_engine_a6a593624cd3465fad4874b3cd91dca47}} 
+\index{RenderEngine@{RenderEngine}!game\_@{game\_}}
+\index{game\_@{game\_}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{game\_}{game\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}$\ast$ Render\+Engine\+::game\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Reference to the \mbox{\hyperlink{class_game}{Game}} ~\newline
+ 
+
+Definition at line 21 of file Render\+Engine.\+hpp.
+
+\mbox{\Hypertarget{class_render_engine_a2c4178b08283abb5f28c68a28a762fbe}\label{class_render_engine_a2c4178b08283abb5f28c68a28a762fbe}} 
+\index{RenderEngine@{RenderEngine}!instantiated\_@{instantiated\_}}
+\index{instantiated\_@{instantiated\_}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{instantiated\_}{instantiated\_}}
+{\footnotesize\ttfamily bool Render\+Engine\+::instantiated\+\_\+ = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Forces Singleton ~\newline
+ 
+
+Definition at line 18 of file Render\+Engine.\+hpp.
+
+\mbox{\Hypertarget{class_render_engine_ac5c37d8525d10f929dfc734f01308131}\label{class_render_engine_ac5c37d8525d10f929dfc734f01308131}} 
+\index{RenderEngine@{RenderEngine}!shader\_drawables\_@{shader\_drawables\_}}
+\index{shader\_drawables\_@{shader\_drawables\_}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{shader\_drawables\_}{shader\_drawables\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::pair$<$sf\+::\+Drawable$\ast$, sf\+::\+Shader$>$ $>$ Render\+Engine\+::shader\+\_\+drawables\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of all the Drawables with Shaders
+
+std\+::pair$<$\+Drawable$\ast$, Shader$>$ associates each drawable to it\textquotesingle{}s shader \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_render_engine_a6a719909741921387d1fd427dde92a78}{drawables\+\_\+}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 34 of file Render\+Engine.\+hpp.
+
+\mbox{\Hypertarget{class_render_engine_a843f0356b77ee714cf95f53d357b5825}\label{class_render_engine_a843f0356b77ee714cf95f53d357b5825}} 
+\index{RenderEngine@{RenderEngine}!total\_clock\_@{total\_clock\_}}
+\index{total\_clock\_@{total\_clock\_}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{total\_clock\_}{total\_clock\_}}
+{\footnotesize\ttfamily sf\+::\+Clock Render\+Engine\+::total\+\_\+clock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Clock to keep track of total time For Animated Shaders ~\newline
+ 
+
+Definition at line 23 of file Render\+Engine.\+hpp.
+
+\mbox{\Hypertarget{class_render_engine_a0c23c82d4adc6e2a196f2fff73642b62}\label{class_render_engine_a0c23c82d4adc6e2a196f2fff73642b62}} 
+\index{RenderEngine@{RenderEngine}!window\_@{window\_}}
+\index{window\_@{window\_}!RenderEngine@{RenderEngine}}
+\doxysubsubsection{\texorpdfstring{window\_}{window\_}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ Render\+Engine\+::window\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Render\+Window Object is stored here 
+
+Definition at line 20 of file Render\+Engine.\+hpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

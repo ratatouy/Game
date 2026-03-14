@@ -107,11 +107,14 @@ Collaboration diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#a_player_coll__map" alt="Collaboration graph"/></div>
 <map name="a_player_coll__map" id="a_player_coll__map">
-<area shape="rect" title=" " alt="" coords="202,171,265,197"/>
-<area shape="rect" href="class_entity.html" title=" " alt="" coords="203,95,263,121"/>
-<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="203,5,264,32"/>
-<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="289,5,479,32"/>
+<area shape="rect" title=" " alt="" coords="207,273,269,300"/>
+<area shape="rect" href="class_entity.html" title=" " alt="" coords="208,184,268,211"/>
+<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="207,95,381,121"/>
+<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" href="class_scene.html" title=" " alt="" coords="459,95,521,121"/>
+<area shape="rect" href="class_game.html" title=" " alt="" coords="523,184,585,211"/>
+<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="411,273,523,300"/>
+<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="584,273,695,300"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -126,9 +129,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6912bb6e48efb5845d59f0f4582827ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef">update</a> () override</td></tr>
 <tr class="memdesc:a6912bb6e48efb5845d59f0f4582827ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <a class="el" href="class_player.html">Player</a>.  <a href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef">More...</a><br /></td></tr>
 <tr class="separator:a6912bb6e48efb5845d59f0f4582827ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a817e52c7cee2cd8a563e1d1b66fbd79c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c">render</a> (sf::RenderWindow *window) override</td></tr>
-<tr class="memdesc:a817e52c7cee2cd8a563e1d1b66fbd79c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the player.  <a href="class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c">More...</a><br /></td></tr>
-<tr class="separator:a817e52c7cee2cd8a563e1d1b66fbd79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeea45f839f224a5320dfadfd2ff3ebe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9">attack</a> ()</td></tr>
 <tr class="separator:aeea45f839f224a5320dfadfd2ff3ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
@@ -160,6 +160,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af56932d27db52a26c66681dd1c6e1aff inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37cb335962ddb32dafd558405088ceda inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a37cb335962ddb32dafd558405088ceda">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
 <tr class="separator:a37cb335962ddb32dafd558405088ceda inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc21bc8c791274305898a2b13e624692 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">render</a> (sf::RenderWindow *window)</td></tr>
+<tr class="separator:abc21bc8c791274305898a2b13e624692 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -328,22 +330,23 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cpp_source.html#l00018">18</a> of file <a class="el" href="_player_8cpp_source.html">Player.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_player_8cpp_source.html#l00014">14</a> of file <a class="el" href="_player_8cpp_source.html">Player.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_aeea45f839f224a5320dfadfd2ff3ebe9_cgraph.png" border="0" usemap="#aclass_player_aeea45f839f224a5320dfadfd2ff3ebe9_cgraph" alt=""/></div>
 <map name="aclass_player_aeea45f839f224a5320dfadfd2ff3ebe9_cgraph" id="aclass_player_aeea45f839f224a5320dfadfd2ff3ebe9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,173,117,200"/>
+<area shape="rect" title=" " alt="" coords="5,179,117,205"/>
 <area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="195,56,326,83"/>
-<area shape="rect" href="class_entity_sprite_component.html#a95e0b3c037cb3a6f9017e5bcb5e012df" title=" " alt="" coords="174,166,347,207"/>
+<area shape="rect" href="class_entity_sprite_component.html#a95e0b3c037cb3a6f9017e5bcb5e012df" title=" " alt="" coords="174,171,347,213"/>
 <area shape="rect" href="class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="404,107,595,149"/>
-<area shape="rect" href="class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="179,232,343,259"/>
-<area shape="rect" href="class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7" title=" " alt="" coords="165,283,356,325"/>
+<area shape="rect" href="class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="179,237,343,264"/>
+<area shape="rect" href="class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7" title=" " alt="" coords="165,289,356,330"/>
 <area shape="rect" href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3" title=" " alt="" coords="436,5,563,32"/>
 <area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title=" " alt="" coords="436,56,563,83"/>
-<area shape="rect" href="class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="404,173,595,214"/>
-<area shape="rect" href="class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="404,238,595,279"/>
+<area shape="rect" href="class_entity_sprite_component.html#a0fa5ee8dc3baa13d7eccc1a2f7ad8f58" title=" " alt="" coords="413,173,586,214"/>
+<area shape="rect" href="class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="404,238,595,279"/>
+<area shape="rect" href="class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="404,303,595,345"/>
 </map>
 </div>
 <div class="dynheader">
@@ -353,53 +356,6 @@ Here is the caller graph for this function:</div>
 <map name="aclass_player_aeea45f839f224a5320dfadfd2ff3ebe9_icgraph" id="aclass_player_aeea45f839f224a5320dfadfd2ff3ebe9_icgraph">
 <area shape="rect" title=" " alt="" coords="108,5,220,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a817e52c7cee2cd8a563e1d1b66fbd79c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a817e52c7cee2cd8a563e1d1b66fbd79c">&#9670;&nbsp;</a></span>render()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::render </td>
-          <td>(</td>
-          <td class="paramtype">sf::RenderWindow *&#160;</td>
-          <td class="paramname"><em>window</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Renders the player. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">window</td><td>Pointer to the RenderWindow </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">Entity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cpp_source.html#l00013">13</a> of file <a class="el" href="_player_8cpp_source.html">Player.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_player_a817e52c7cee2cd8a563e1d1b66fbd79c_cgraph.png" border="0" usemap="#aclass_player_a817e52c7cee2cd8a563e1d1b66fbd79c_cgraph" alt=""/></div>
-<map name="aclass_player_a817e52c7cee2cd8a563e1d1b66fbd79c_cgraph" id="aclass_player_a817e52c7cee2cd8a563e1d1b66fbd79c_cgraph">
-<area shape="rect" title="Renders the player." alt="" coords="5,13,119,39"/>
-<area shape="rect" href="class_entity_sprite_component.html#aeddda3afeb0c89ee6d145d0df0decbeb" title=" " alt="" coords="167,5,340,47"/>
 </map>
 </div>
 

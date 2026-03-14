@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['target_232',['target',['../struct_hit_data.html#aa75d1986b9426e16b056addd8f13d5b0',1,'HitData']]],
-  ['textures_233',['textures',['../class_entity_sprite_component.html#a06725c0a59b8962b89781adba26f2e39',1,'EntitySpriteComponent']]],
-  ['transformable_234',['transformable',['../class_projectile.html#aec950c0a5435681274cba86dc181794a',1,'Projectile']]],
-  ['transformable_5f_235',['transformable_',['../class_player.html#a5627b20aec63bb9a77bc7cf104449b3e',1,'Player']]]
+  ['name_5f_313',['name_',['../class_entity.html#ac765a424fb46628fc30523f040910f23',1,'Entity::name_()'],['../class_scene.html#ab8c281a9c07f44942bd91bc47a93d78e',1,'Scene::name_()']]],
+  ['nb_5fsprites_5f_314',['nb_sprites_',['../class_entity_sprite_component.html#a8dd11d7e48fcc8598168dd287d4354ec',1,'EntitySpriteComponent']]]
 ];

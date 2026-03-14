@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('_projectile_8hpp_source.html',''); ini
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_projectile.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_projectile.html">Projectile</a> : <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    sf::Vector2f speed_;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_projectile.html#a632661fecb11d7203c40c09a4283119f">   12</a></span>&#160;    sf::Vector2f <a class="code" href="class_projectile.html#a632661fecb11d7203c40c09a4283119f">speed_</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
@@ -107,20 +107,18 @@ $(document).ready(function(){initNavTree('_projectile_8hpp_source.html',''); ini
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">update</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">render</a>(sf::RenderWindow* window) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_entity_8hpp_html"><div class="ttname"><a href="_entity_8hpp.html">Entity.hpp</a></div></div>
 <div class="ttc" id="a_entity_sprite_component_8hpp_html"><div class="ttname"><a href="_entity_sprite_component_8hpp.html">EntitySpriteComponent.hpp</a></div></div>
 <div class="ttc" id="a_transformable_component_8hpp_html"><div class="ttname"><a href="_transformable_component_8hpp.html">TransformableComponent.hpp</a></div></div>
 <div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00023">Entity.hpp:23</a></div></div>
 <div class="ttc" id="aclass_projectile_html"><div class="ttname"><a href="class_projectile.html">Projectile</a></div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8hpp_source.html#l00010">Projectile.hpp:10</a></div></div>
 <div class="ttc" id="aclass_projectile_html_a2146c34f553c3726f76571b268af1e7f"><div class="ttname"><a href="class_projectile.html#a2146c34f553c3726f76571b268af1e7f">Projectile::Projectile</a></div><div class="ttdeci">Projectile(const char *name, sf::Vector2f position={0, 0}, sf::Vector2f speed={0, 0})</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00004">Projectile.cpp:4</a></div></div>
+<div class="ttc" id="aclass_projectile_html_a632661fecb11d7203c40c09a4283119f"><div class="ttname"><a href="class_projectile.html#a632661fecb11d7203c40c09a4283119f">Projectile::speed_</a></div><div class="ttdeci">sf::Vector2f speed_</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8hpp_source.html#l00012">Projectile.hpp:12</a></div></div>
 <div class="ttc" id="aclass_projectile_html_ac41ad56034b53e739619fabbd5e49652"><div class="ttname"><a href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">Projectile::update</a></div><div class="ttdeci">void update() override</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00012">Projectile.cpp:12</a></div></div>
-<div class="ttc" id="aclass_projectile_html_ae7a60d5c8da58bcb33076d627a800c7b"><div class="ttname"><a href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">Projectile::render</a></div><div class="ttdeci">void render(sf::RenderWindow *window) override</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00019">Projectile.cpp:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

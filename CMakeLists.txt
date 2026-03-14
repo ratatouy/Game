@@ -14,7 +14,6 @@ FetchContent_MakeAvailable(SFML)
 
 ## Set project source files
 Set(SOURCE_FILES
-    src/Components/TransformableComponent.cpp
     src/Components/EntitySpriteComponent.cpp
 
     src/Events/CustomEvents/HitEvent.cpp
@@ -24,10 +23,16 @@ Set(SOURCE_FILES
     src/Entity/Ennemies/Ennemy.cpp
     src/Entity/Projectiles/Projectile.cpp
 
+    src/Loaders/sceneLoader.cpp
+
+    # src/Transition/Transition.cpp
+
     src/Engine/PhysicsEngine.cpp
     src/Engine/RenderEngine.cpp
 
     src/Scenes/Scene.cpp
+
+    src/Game.cpp
 )
 
 
@@ -40,18 +45,28 @@ Set(SOURCE_FILES
 # endif()
 
 
-## Setup test
+## Setup renderTest
 add_executable(renderTest ${SOURCE_FILES} Tests/RenderTest/renderTest.cpp)
 target_compile_features(renderTest PRIVATE cxx_std_17)
 target_include_directories(renderTest PRIVATE includes)
+target_include_directories(renderTest PRIVATE extlibs)
 target_link_libraries(renderTest PRIVATE sfml-graphics sfml-window sfml-system)
 add_test(NAME renderTest COMMAND renderTest)
+ 
+## Setup ParsingTest
+add_executable(parsingTest ${SOURCE_FILES} Tests/ParsingTest/ParsingTest.cpp)
+target_compile_features(parsingTest PRIVATE cxx_std_17)
+target_include_directories(parsingTest PRIVATE includes)
+target_include_directories(parsingTest PRIVATE extlibs)
+target_link_libraries(parsingTest PRIVATE sfml-graphics sfml-window sfml-system)
+add_test(NAME parsingTest COMMAND parsingTest)
  
 
 ## Set project executable output
 add_executable(main ${SOURCE_FILES} src/main.cpp)
 target_compile_features(main PRIVATE cxx_std_17)
 target_include_directories(main PRIVATE includes)
+target_include_directories(main PRIVATE extlibs)
 target_link_libraries(main PRIVATE sfml-graphics sfml-window sfml-system)
 
 

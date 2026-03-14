@@ -1,5 +1,6 @@
 <map id="Scene::processEventFunc" name="Scene::processEventFunc">
-<area shape="rect" id="node1" title=" " alt="" coords="463,5,649,32"/>
-<area shape="rect" id="node2" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title=" " alt="" coords="259,5,415,32"/>
-<area shape="rect" id="node3" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title=" " alt="" coords="5,5,211,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="667,5,853,32"/>
+<area shape="rect" id="node2" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title=" " alt="" coords="463,5,619,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title=" " alt="" coords="259,5,415,32"/>
+<area shape="rect" id="node4" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title=" " alt="" coords="5,5,211,32"/>
 </map>

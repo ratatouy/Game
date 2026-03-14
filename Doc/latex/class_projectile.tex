@@ -15,7 +15,8 @@ Inheritance diagram for Projectile\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Projectile\+:\nopagebreak
+Collaboration diagram for Projectile\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,8 +29,11 @@ Collaboration diagram for Projectile\+:\nopagebreak
 \mbox{\hyperlink{class_projectile_a2146c34f553c3726f76571b268af1e7f}{Projectile}} (const char $\ast$name, sf\+::\+Vector2f position=\{0, 0\}, sf\+::\+Vector2f speed=\{0, 0\})
 \item 
 void \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}{render}} (sf\+::\+Render\+Window $\ast$window) override
+sf\+::\+Vector2f \mbox{\hyperlink{class_projectile_a632661fecb11d7203c40c09a4283119f}{speed\+\_\+}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -62,27 +66,6 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}\label{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b}} 
-\index{Projectile@{Projectile}!render@{render}}
-\index{render@{render}!Projectile@{Projectile}}
-\doxysubsubsection{\texorpdfstring{render()}{render()}}
-{\footnotesize\ttfamily void Projectile\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Reimplemented from \mbox{\hyperlink{class_entity_abc21bc8c791274305898a2b13e624692}{Entity}}.
-
-
-
-Definition at line 19 of file Projectile.\+cpp.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=346pt]{class_projectile_ae7a60d5c8da58bcb33076d627a800c7b_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_projectile_ac41ad56034b53e739619fabbd5e49652}\label{class_projectile_ac41ad56034b53e739619fabbd5e49652}} 
 \index{Projectile@{Projectile}!update@{update}}
 \index{update@{update}!Projectile@{Projectile}}
@@ -104,6 +87,19 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_projectile_ac41ad56034b53e739619fabbd5e49652_cgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projectile_a632661fecb11d7203c40c09a4283119f}\label{class_projectile_a632661fecb11d7203c40c09a4283119f}} 
+\index{Projectile@{Projectile}!speed\_@{speed\_}}
+\index{speed\_@{speed\_}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{speed\_}{speed\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Projectile\+::speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Projectile.\+hpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

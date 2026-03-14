@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3d_56',['operator=',['../class_render_engine.html#a8481c5152d04db388170c404d193b6f0',1,'RenderEngine::operator=()'],['../class_event_handler.html#aaefc03fa2d7c0cca8e7b7b99ce96f382',1,'EventHandler::operator=()']]]
+  ['loadscene_73',['LoadScene',['../scene_loader_8cpp.html#abdddd0b1c9891c2ef4ba693d490698d1',1,'LoadScene(const char *filepath):&#160;sceneLoader.cpp'],['../scene_loader_8hpp.html#abdddd0b1c9891c2ef4ba693d490698d1',1,'LoadScene(const char *filepath):&#160;sceneLoader.cpp']]],
+  ['localspritetransformables_5f_74',['localSpriteTransformables_',['../class_entity_sprite_component.html#a8c756eeca80056daae6837535c6fee33',1,'EntitySpriteComponent']]]
 ];

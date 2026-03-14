@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('class_projectile.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_projectile-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Projectile Class Reference</div>  </div>
@@ -107,11 +108,14 @@ Collaboration diagram for Projectile:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_projectile__coll__graph.png" border="0" usemap="#a_projectile_coll__map" alt="Collaboration graph"/></div>
 <map name="a_projectile_coll__map" id="a_projectile_coll__map">
-<area shape="rect" title=" " alt="" coords="192,171,275,197"/>
-<area shape="rect" href="class_entity.html" title=" " alt="" coords="203,95,263,121"/>
-<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="203,5,264,32"/>
-<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="289,5,479,32"/>
+<area shape="rect" title=" " alt="" coords="197,273,279,300"/>
+<area shape="rect" href="class_entity.html" title=" " alt="" coords="208,184,268,211"/>
+<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="207,95,381,121"/>
+<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" href="class_scene.html" title=" " alt="" coords="459,95,521,121"/>
+<area shape="rect" href="class_game.html" title=" " alt="" coords="523,184,585,211"/>
+<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="411,273,523,300"/>
+<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="584,273,695,300"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -121,8 +125,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2146c34f553c3726f76571b268af1e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41ad56034b53e739619fabbd5e49652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">update</a> () override</td></tr>
 <tr class="separator:ac41ad56034b53e739619fabbd5e49652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7a60d5c8da58bcb33076d627a800c7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b">render</a> (sf::RenderWindow *window) override</td></tr>
-<tr class="separator:ae7a60d5c8da58bcb33076d627a800c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:a3170dc9c4995e5bd8e28601807350df9 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3170dc9c4995e5bd8e28601807350df9">Entity</a> ()=delete</td></tr>
 <tr class="separator:a3170dc9c4995e5bd8e28601807350df9 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +154,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af56932d27db52a26c66681dd1c6e1aff inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37cb335962ddb32dafd558405088ceda inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a37cb335962ddb32dafd558405088ceda">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
 <tr class="separator:a37cb335962ddb32dafd558405088ceda inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc21bc8c791274305898a2b13e624692 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">render</a> (sf::RenderWindow *window)</td></tr>
+<tr class="separator:abc21bc8c791274305898a2b13e624692 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a632661fecb11d7203c40c09a4283119f"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#a632661fecb11d7203c40c09a4283119f">speed_</a></td></tr>
+<tr class="separator:a632661fecb11d7203c40c09a4283119f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -215,45 +224,6 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7a60d5c8da58bcb33076d627a800c7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7a60d5c8da58bcb33076d627a800c7b">&#9670;&nbsp;</a></span>render()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Projectile::render </td>
-          <td>(</td>
-          <td class="paramtype">sf::RenderWindow *&#160;</td>
-          <td class="paramname"><em>window</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">Entity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_projectile_8cpp_source.html#l00019">19</a> of file <a class="el" href="_projectile_8cpp_source.html">Projectile.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_projectile_ae7a60d5c8da58bcb33076d627a800c7b_cgraph.png" border="0" usemap="#aclass_projectile_ae7a60d5c8da58bcb33076d627a800c7b_cgraph" alt=""/></div>
-<map name="aclass_projectile_ae7a60d5c8da58bcb33076d627a800c7b_cgraph" id="aclass_projectile_ae7a60d5c8da58bcb33076d627a800c7b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,139,39"/>
-<area shape="rect" href="class_entity_sprite_component.html#aeddda3afeb0c89ee6d145d0df0decbeb" title=" " alt="" coords="187,5,360,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="ac41ad56034b53e739619fabbd5e49652"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac41ad56034b53e739619fabbd5e49652">&#9670;&nbsp;</a></span>update()</h2>
 
@@ -295,6 +265,31 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="428,231,619,272"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a632661fecb11d7203c40c09a4283119f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632661fecb11d7203c40c09a4283119f">&#9670;&nbsp;</a></span>speed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f Projectile::speed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_projectile_8hpp_source.html#l00012">12</a> of file <a class="el" href="_projectile_8hpp_source.html">Projectile.hpp</a>.</p>
 
 </div>
 </div>

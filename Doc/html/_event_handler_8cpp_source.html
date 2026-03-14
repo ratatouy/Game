@@ -92,94 +92,96 @@ $(document).ready(function(){initNavTree('_event_handler_8cpp_source.html',''); 
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_event_handler_8hpp.html">Events/EventHandler.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_scene_8hpp.html">Scenes/Scene.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_game_8hpp.html">Game.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">bool</span> EventHandler::instantiated_ = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_event_handler.html#adf50e0c8f4f529867a558693dfe58af0">EventHandler::instantiated_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">   11</a></span>&#160;<a class="code" href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">EventHandler::~EventHandler</a>() {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">// std::cout &lt;&lt; &quot;Destroy EventHandler&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">while</span> (!eventQueue.empty()) {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">delete</span> eventQueue.front();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        eventQueue.pop();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    instantiated_ = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">   10</a></span>&#160;<a class="code" href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">EventHandler::~EventHandler</a>() {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// std::cout &lt;&lt; &quot;Destroy EventHandler&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.empty()) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.front();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.pop();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_event_handler.html#adf50e0c8f4f529867a558693dfe58af0">instantiated_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_event_handler.html#a81469b8505072a36e46744fe5f8d3cc4">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_event_handler.html#a81469b8505072a36e46744fe5f8d3cc4">EventHandler::setCurrentScene</a>(<a class="code" href="class_scene.html">Scene</a>* scene) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    currentScene = scene;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7">EventHandler::setGame</a>(<a class="code" href="class_game.html">Game</a>* game) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3">game_</a> = game;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">   27</a></span>&#160;<a class="code" href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">EventHandler::EventHandler</a>() {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (instantiated_) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;EventHandler already instantiated&quot;</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    instantiated_ = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">   26</a></span>&#160;<a class="code" href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">EventHandler::EventHandler</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_event_handler.html#adf50e0c8f4f529867a558693dfe58af0">instantiated_</a>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;EventHandler already instantiated&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_event_handler.html#adf50e0c8f4f529867a558693dfe58af0">instantiated_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">   36</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">EventHandler::isEmpty</a>() {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> eventQueue.empty();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">   35</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">EventHandler::isEmpty</a>() {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.empty();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">EventHandler::addEvent</a>(<a class="code" href="class_event.html">Event</a>* event) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// std::cout &lt;&lt; &quot;Added An Event to the Queue&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    eventQueue.push(event);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">EventHandler::processEvent</a>() {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (!eventQueue.empty()) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// std::cout &lt;&lt; &quot;Processing Event&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_scene_transition_event.html">SceneTransitionEvent</a>* Es = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_scene_transition_event.html">SceneTransitionEvent</a>*<span class="keyword">&gt;</span>(eventQueue.front());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (Es) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Processing Scene Transition Event&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            currentScene-&gt;<a class="code" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">processEvent</a>(Es);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            eventQueue.pop();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">delete</span> Es;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_custom_event.html">CustomEvent</a>* Ec = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_custom_event.html">CustomEvent</a>*<span class="keyword">&gt;</span>(eventQueue.front());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (Ec) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">// std::cout &lt;&lt; &quot;Processing Custom Event&quot;&lt;&lt;std::endl;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            currentScene-&gt;<a class="code" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">processEvent</a>(Ec);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            eventQueue.pop();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">delete</span> Ec;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">   72</a></span>&#160;<a class="code" href="class_event.html">Event</a>* <a class="code" href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">EventHandler::getCurrentEvent</a>() {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (!eventQueue.empty()) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_event.html">Event</a>* <span class="keyword">event</span> = eventQueue.front();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        eventQueue.pop();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> event;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">EventHandler::addEvent</a>(<a class="code" href="class_event.html">Event</a>* event) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// std::cout &lt;&lt; &quot;Added An Event to the Queue&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.push(event);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">EventHandler::processEvent</a>() {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.empty()) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// std::cout &lt;&lt; &quot;Processing Event&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_scene_transition_event.html">SceneTransitionEvent</a>* Es = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_scene_transition_event.html">SceneTransitionEvent</a>*<span class="keyword">&gt;</span>(<a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.front());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (Es) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Processing Scene Transition Event&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3">game_</a>-&gt;<a class="code" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade">processEvent</a>(Es);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.pop();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">delete</span> Es;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_custom_event.html">CustomEvent</a>* Ec = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_custom_event.html">CustomEvent</a>*<span class="keyword">&gt;</span>(<a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.front());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (Ec) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// std::cout &lt;&lt; &quot;Processing Custom Event&quot;&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3">game_</a>-&gt;<a class="code" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade">processEvent</a>(Ec);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.pop();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">delete</span> Ec;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">   71</a></span>&#160;<a class="code" href="class_event.html">Event</a>* <a class="code" href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">EventHandler::getCurrentEvent</a>() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.empty()) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_event.html">Event</a>* <span class="keyword">event</span> = <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.front();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a>.pop();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> event;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="ttc" id="a_event_handler_8hpp_html"><div class="ttname"><a href="_event_handler_8hpp.html">EventHandler.hpp</a></div></div>
-<div class="ttc" id="a_scene_8hpp_html"><div class="ttname"><a href="_scene_8hpp.html">Scene.hpp</a></div></div>
+<div class="ttc" id="a_game_8hpp_html"><div class="ttname"><a href="_game_8hpp.html">Game.hpp</a></div></div>
 <div class="ttc" id="aclass_custom_event_html"><div class="ttname"><a href="class_custom_event.html">CustomEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_custom_event_8hpp_source.html#l00010">CustomEvent.hpp:10</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_a06c3a8cd4d8c2cde7c8c1609e2236cfb"><div class="ttname"><a href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">EventHandler::addEvent</a></div><div class="ttdeci">void addEvent(Event *event)</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00041">EventHandler.cpp:41</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_a365d58b6e3fb682480ac9b123d16fad1"><div class="ttname"><a href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">EventHandler::processEvent</a></div><div class="ttdeci">void processEvent()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00046">EventHandler.cpp:46</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_a3decb8cd88ba8af2b9b0b0f0f2fcd722"><div class="ttname"><a href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">EventHandler::~EventHandler</a></div><div class="ttdeci">~EventHandler()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00011">EventHandler.cpp:11</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_a594d46d9c2105ef7fd3eb337f8bfe1b6"><div class="ttname"><a href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">EventHandler::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00036">EventHandler.cpp:36</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_a81469b8505072a36e46744fe5f8d3cc4"><div class="ttname"><a href="class_event_handler.html#a81469b8505072a36e46744fe5f8d3cc4">EventHandler::setCurrentScene</a></div><div class="ttdeci">void setCurrentScene(Scene *scene)</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00022">EventHandler.cpp:22</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_a8fe27b69582cce5c6a89a0b134bc8158"><div class="ttname"><a href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">EventHandler::EventHandler</a></div><div class="ttdeci">EventHandler()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00027">EventHandler.cpp:27</a></div></div>
-<div class="ttc" id="aclass_event_handler_html_acd62960f00deb706634059dc47e1d287"><div class="ttname"><a href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">EventHandler::getCurrentEvent</a></div><div class="ttdeci">Event * getCurrentEvent()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00072">EventHandler.cpp:72</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_a06c3a8cd4d8c2cde7c8c1609e2236cfb"><div class="ttname"><a href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">EventHandler::addEvent</a></div><div class="ttdeci">void addEvent(Event *event)</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00040">EventHandler.cpp:40</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_a365d58b6e3fb682480ac9b123d16fad1"><div class="ttname"><a href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">EventHandler::processEvent</a></div><div class="ttdeci">void processEvent()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00045">EventHandler.cpp:45</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_a3decb8cd88ba8af2b9b0b0f0f2fcd722"><div class="ttname"><a href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">EventHandler::~EventHandler</a></div><div class="ttdeci">~EventHandler()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00010">EventHandler.cpp:10</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_a594d46d9c2105ef7fd3eb337f8bfe1b6"><div class="ttname"><a href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">EventHandler::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00035">EventHandler.cpp:35</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_a8fe27b69582cce5c6a89a0b134bc8158"><div class="ttname"><a href="class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158">EventHandler::EventHandler</a></div><div class="ttdeci">EventHandler()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00026">EventHandler.cpp:26</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_aa45dce9986bde4db3c1a5074968362d3"><div class="ttname"><a href="class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3">EventHandler::game_</a></div><div class="ttdeci">Game * game_</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8hpp_source.html#l00030">EventHandler.hpp:30</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_ab083d7a482133a5012d121c0915f6e7f"><div class="ttname"><a href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">EventHandler::eventQueue</a></div><div class="ttdeci">std::queue&lt; Event * &gt; eventQueue</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8hpp_source.html#l00031">EventHandler.hpp:31</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_ab74b772e2be9e6fd47d82380475d89f7"><div class="ttname"><a href="class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7">EventHandler::setGame</a></div><div class="ttdeci">void setGame(Game *game)</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00021">EventHandler.cpp:21</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_acd62960f00deb706634059dc47e1d287"><div class="ttname"><a href="class_event_handler.html#acd62960f00deb706634059dc47e1d287">EventHandler::getCurrentEvent</a></div><div class="ttdeci">Event * getCurrentEvent()</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8cpp_source.html#l00071">EventHandler.cpp:71</a></div></div>
+<div class="ttc" id="aclass_event_handler_html_adf50e0c8f4f529867a558693dfe58af0"><div class="ttname"><a href="class_event_handler.html#adf50e0c8f4f529867a558693dfe58af0">EventHandler::instantiated_</a></div><div class="ttdeci">static bool instantiated_</div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8hpp_source.html#l00028">EventHandler.hpp:28</a></div></div>
 <div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdoc">Abstract class for all events.</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00010">Event.hpp:10</a></div></div>
-<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00030">Scene.hpp:30</a></div></div>
-<div class="ttc" id="aclass_scene_html_a8436de839f7ec4ddc18ae87f9dd32a99"><div class="ttname"><a href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99">Scene::processEvent</a></div><div class="ttdeci">virtual void processEvent(SceneTransitionEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00037">Scene.cpp:37</a></div></div>
+<div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_8hpp_source.html#l00027">Game.hpp:28</a></div></div>
+<div class="ttc" id="aclass_game_html_a2a05b266e2a74d2e9f9a590c90e73ade"><div class="ttname"><a href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade">Game::processEvent</a></div><div class="ttdeci">void processEvent(SceneTransitionEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="_game_8cpp_source.html#l00023">Game.cpp:23</a></div></div>
 <div class="ttc" id="aclass_scene_transition_event_html"><div class="ttname"><a href="class_scene_transition_event.html">SceneTransitionEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_transition_event_8hpp_source.html#l00009">SceneTransitionEvent.hpp:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

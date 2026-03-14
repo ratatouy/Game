@@ -1,4 +1,5 @@
 <map id="EventHandler::addEvent" name="EventHandler::addEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="196,5,375,32"/>
-<area shape="rect" id="node2" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title=" " alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="387,5,565,32"/>
+<area shape="rect" id="node2" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="196,5,339,32"/>
+<area shape="rect" id="node3" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title=" " alt="" coords="5,5,148,32"/>
 </map>

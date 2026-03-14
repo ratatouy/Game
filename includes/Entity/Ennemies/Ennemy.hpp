@@ -24,7 +24,6 @@ public:
     
 
     void update() override;
-    void render(sf::RenderWindow* window) override;
 
     void processEvent(CustomEvent* event) override;
 

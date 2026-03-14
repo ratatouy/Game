@@ -5,9 +5,11 @@
 
 #include "Events/Event.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
+#include "Events/BasicEvents/SpawnEntityEvent.hpp"
 #include "Events/CustomEvent.hpp"
 
-class Scene; // Forward Declaration of Scene //
+
+class Game; // Forward Declaration of Game //
 
 
 /** @class EventHandler
@@ -23,25 +25,28 @@ class Scene; // Forward Declaration of Scene //
  * @warning Do not assign the same event to the queue twice, it will cause memory leaks
  */
 class EventHandler {
+private:
+    static bool instantiated_;
+
+    Game* game_;
+    std::queue<Event*> eventQueue;
+
+
 public:
     EventHandler();
     EventHandler(const EventHandler&) = delete;
+
     EventHandler& operator=(const EventHandler&) = delete;
 
     ~EventHandler();
 
-    void setCurrentScene(Scene* scene);
+    void setGame(Game* game);
 
     void addEvent(Event* event);
     void processEvent();
     Event* getCurrentEvent();
     bool isEmpty();
 
-private:
-    static bool instantiated_;
-
-    Scene* currentScene;
-    std::queue<Event*> eventQueue;
 };
 
 

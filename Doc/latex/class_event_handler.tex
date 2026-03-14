@@ -9,6 +9,16 @@ Manages the event queue.
 
 {\ttfamily \#include $<$Event\+Handler.\+hpp$>$}
 
+
+
+Collaboration diagram for Event\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_event_handler__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,7 +30,7 @@ Manages the event queue.
 \item 
 \mbox{\hyperlink{class_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722}{$\sim$\+Event\+Handler}} ()
 \item 
-void \mbox{\hyperlink{class_event_handler_a81469b8505072a36e46744fe5f8d3cc4}{set\+Current\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
+void \mbox{\hyperlink{class_event_handler_ab74b772e2be9e6fd47d82380475d89f7}{set\+Game}} (\mbox{\hyperlink{class_game}{Game}} $\ast$game)
 \item 
 void \mbox{\hyperlink{class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb}{add\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
 \item 
@@ -29,6 +39,18 @@ void \mbox{\hyperlink{class_event_handler_a365d58b6e3fb682480ac9b123d16fad1}{pro
 \mbox{\hyperlink{class_event}{Event}} $\ast$ \mbox{\hyperlink{class_event_handler_acd62960f00deb706634059dc47e1d287}{get\+Current\+Event}} ()
 \item 
 bool \mbox{\hyperlink{class_event_handler_a594d46d9c2105ef7fd3eb337f8bfe1b6}{is\+Empty}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_event_handler_aa45dce9986bde4db3c1a5074968362d3}{game\+\_\+}}
+\item 
+std\+::queue$<$ \mbox{\hyperlink{class_event}{Event}} $\ast$ $>$ \mbox{\hyperlink{class_event_handler_ab083d7a482133a5012d121c0915f6e7f}{event\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_event_handler_adf50e0c8f4f529867a558693dfe58af0}{instantiated\+\_\+}} = false
 \end{DoxyCompactItemize}
 
 
@@ -50,7 +72,7 @@ Do not assign the same event to the queue twice, it will cause memory leaks
 \end{DoxyWarning}
 
 
-Definition at line 25 of file Event\+Handler.\+hpp.
+Definition at line 26 of file Event\+Handler.\+hpp.
 
 
 
@@ -63,7 +85,7 @@ Definition at line 25 of file Event\+Handler.\+hpp.
 
 
 
-Definition at line 27 of file Event\+Handler.\+cpp.
+Definition at line 26 of file Event\+Handler.\+cpp.
 
 \mbox{\Hypertarget{class_event_handler_a60e6d02d517a43f2da9d8c23d8a8f8f3}\label{class_event_handler_a60e6d02d517a43f2da9d8c23d8a8f8f3}} 
 \index{EventHandler@{EventHandler}!EventHandler@{EventHandler}}
@@ -79,7 +101,7 @@ Definition at line 27 of file Event\+Handler.\+cpp.
 
 
 
-Definition at line 11 of file Event\+Handler.\+cpp.
+Definition at line 10 of file Event\+Handler.\+cpp.
 
 
 
@@ -92,7 +114,7 @@ Definition at line 11 of file Event\+Handler.\+cpp.
 
 
 
-Definition at line 41 of file Event\+Handler.\+cpp.
+Definition at line 40 of file Event\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -109,7 +131,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 72 of file Event\+Handler.\+cpp.
+Definition at line 71 of file Event\+Handler.\+cpp.
 
 \mbox{\Hypertarget{class_event_handler_a594d46d9c2105ef7fd3eb337f8bfe1b6}\label{class_event_handler_a594d46d9c2105ef7fd3eb337f8bfe1b6}} 
 \index{EventHandler@{EventHandler}!isEmpty@{isEmpty}}
@@ -119,7 +141,7 @@ Definition at line 72 of file Event\+Handler.\+cpp.
 
 
 
-Definition at line 36 of file Event\+Handler.\+cpp.
+Definition at line 35 of file Event\+Handler.\+cpp.
 
 \mbox{\Hypertarget{class_event_handler_aaefc03fa2d7c0cca8e7b7b99ce96f382}\label{class_event_handler_aaefc03fa2d7c0cca8e7b7b99ce96f382}} 
 \index{EventHandler@{EventHandler}!operator=@{operator=}}
@@ -135,33 +157,65 @@ Definition at line 36 of file Event\+Handler.\+cpp.
 
 
 
-Definition at line 46 of file Event\+Handler.\+cpp.
+Definition at line 45 of file Event\+Handler.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_event_handler_a365d58b6e3fb682480ac9b123d16fad1_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_event_handler_a81469b8505072a36e46744fe5f8d3cc4}\label{class_event_handler_a81469b8505072a36e46744fe5f8d3cc4}} 
-\index{EventHandler@{EventHandler}!setCurrentScene@{setCurrentScene}}
-\index{setCurrentScene@{setCurrentScene}!EventHandler@{EventHandler}}
-\doxysubsubsection{\texorpdfstring{setCurrentScene()}{setCurrentScene()}}
-{\footnotesize\ttfamily void Event\+Handler\+::set\+Current\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_event_handler_ab74b772e2be9e6fd47d82380475d89f7}\label{class_event_handler_ab74b772e2be9e6fd47d82380475d89f7}} 
+\index{EventHandler@{EventHandler}!setGame@{setGame}}
+\index{setGame@{setGame}!EventHandler@{EventHandler}}
+\doxysubsubsection{\texorpdfstring{setGame()}{setGame()}}
+{\footnotesize\ttfamily void Event\+Handler\+::set\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
 
 
 
-Definition at line 22 of file Event\+Handler.\+cpp.
+Definition at line 21 of file Event\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=297pt]{class_event_handler_a81469b8505072a36e46744fe5f8d3cc4_icgraph}
+\includegraphics[width=290pt]{class_event_handler_ab74b772e2be9e6fd47d82380475d89f7_icgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_event_handler_ab083d7a482133a5012d121c0915f6e7f}\label{class_event_handler_ab083d7a482133a5012d121c0915f6e7f}} 
+\index{EventHandler@{EventHandler}!eventQueue@{eventQueue}}
+\index{eventQueue@{eventQueue}!EventHandler@{EventHandler}}
+\doxysubsubsection{\texorpdfstring{eventQueue}{eventQueue}}
+{\footnotesize\ttfamily std\+::queue$<$\mbox{\hyperlink{class_event}{Event}}$\ast$$>$ Event\+Handler\+::event\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file Event\+Handler.\+hpp.
+
+\mbox{\Hypertarget{class_event_handler_aa45dce9986bde4db3c1a5074968362d3}\label{class_event_handler_aa45dce9986bde4db3c1a5074968362d3}} 
+\index{EventHandler@{EventHandler}!game\_@{game\_}}
+\index{game\_@{game\_}!EventHandler@{EventHandler}}
+\doxysubsubsection{\texorpdfstring{game\_}{game\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}$\ast$ Event\+Handler\+::game\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file Event\+Handler.\+hpp.
+
+\mbox{\Hypertarget{class_event_handler_adf50e0c8f4f529867a558693dfe58af0}\label{class_event_handler_adf50e0c8f4f529867a558693dfe58af0}} 
+\index{EventHandler@{EventHandler}!instantiated\_@{instantiated\_}}
+\index{instantiated\_@{instantiated\_}!EventHandler@{EventHandler}}
+\doxysubsubsection{\texorpdfstring{instantiated\_}{instantiated\_}}
+{\footnotesize\ttfamily bool Event\+Handler\+::instantiated\+\_\+ = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 28 of file Event\+Handler.\+hpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

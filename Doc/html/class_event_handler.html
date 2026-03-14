@@ -86,6 +86,8 @@ $(document).ready(function(){initNavTree('class_event_handler.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_event_handler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">EventHandler Class Reference</div>  </div>
@@ -96,6 +98,17 @@ $(document).ready(function(){initNavTree('class_event_handler.html',''); initRes
  <a href="class_event_handler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_event_handler_8hpp_source.html">EventHandler.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for EventHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_event_handler__coll__graph.png" border="0" usemap="#a_event_handler_coll__map" alt="Collaboration graph"/></div>
+<map name="a_event_handler_coll__map" id="a_event_handler_coll__map">
+<area shape="rect" title="Manages the event queue." alt="" coords="110,5,221,32"/>
+<area shape="rect" href="class_game.html" title=" " alt="" coords="135,95,196,121"/>
+<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="5,184,117,211"/>
+<area shape="rect" href="class_scene.html" title=" " alt="" coords="239,184,300,211"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,8 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaefc03fa2d7c0cca8e7b7b99ce96f382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3decb8cd88ba8af2b9b0b0f0f2fcd722"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722">~EventHandler</a> ()</td></tr>
 <tr class="separator:a3decb8cd88ba8af2b9b0b0f0f2fcd722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81469b8505072a36e46744fe5f8d3cc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#a81469b8505072a36e46744fe5f8d3cc4">setCurrentScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
-<tr class="separator:a81469b8505072a36e46744fe5f8d3cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74b772e2be9e6fd47d82380475d89f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7">setGame</a> (<a class="el" href="class_game.html">Game</a> *game)</td></tr>
+<tr class="separator:ab74b772e2be9e6fd47d82380475d89f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c3a8cd4d8c2cde7c8c1609e2236cfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb">addEvent</a> (<a class="el" href="class_event.html">Event</a> *event)</td></tr>
 <tr class="separator:a06c3a8cd4d8c2cde7c8c1609e2236cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365d58b6e3fb682480ac9b123d16fad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1">processEvent</a> ()</td></tr>
@@ -117,6 +130,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd62960f00deb706634059dc47e1d287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a594d46d9c2105ef7fd3eb337f8bfe1b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">isEmpty</a> ()</td></tr>
 <tr class="separator:a594d46d9c2105ef7fd3eb337f8bfe1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa45dce9986bde4db3c1a5074968362d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3">game_</a></td></tr>
+<tr class="separator:aa45dce9986bde4db3c1a5074968362d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab083d7a482133a5012d121c0915f6e7f"><td class="memItemLeft" align="right" valign="top">std::queue&lt; <a class="el" href="class_event.html">Event</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f">eventQueue</a></td></tr>
+<tr class="separator:ab083d7a482133a5012d121c0915f6e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:adf50e0c8f4f529867a558693dfe58af0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler.html#adf50e0c8f4f529867a558693dfe58af0">instantiated_</a> = false</td></tr>
+<tr class="separator:adf50e0c8f4f529867a558693dfe58af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages the event queue. </p>
@@ -129,7 +154,7 @@ Public Member Functions</h2></td></tr>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Do not assign the same event to the queue twice, it will cause memory leaks </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8hpp_source.html#l00025">25</a> of file <a class="el" href="_event_handler_8hpp_source.html">EventHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8hpp_source.html#l00026">26</a> of file <a class="el" href="_event_handler_8hpp_source.html">EventHandler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8fe27b69582cce5c6a89a0b134bc8158"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fe27b69582cce5c6a89a0b134bc8158">&#9670;&nbsp;</a></span>EventHandler() <span class="overload">[1/2]</span></h2>
@@ -146,7 +171,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00027">27</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00026">26</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -191,7 +216,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00011">11</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00010">10</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -212,13 +237,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00041">41</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00040">40</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb_icgraph.png" border="0" usemap="#aclass_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb_icgraph" alt=""/></div>
 <map name="aclass_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb_icgraph" id="aclass_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb_icgraph">
-<area shape="rect" title=" " alt="" coords="196,5,375,32"/>
+<area shape="rect" title=" " alt="" coords="387,5,565,32"/>
+<area shape="rect" href="class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="196,5,339,32"/>
 <area shape="rect" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title=" " alt="" coords="5,5,148,32"/>
 </map>
 </div>
@@ -240,7 +266,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00072">72</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00071">71</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +285,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00036">36</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00035">35</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -304,46 +330,120 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00046">46</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00045">45</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_event_handler_a365d58b6e3fb682480ac9b123d16fad1_cgraph.png" border="0" usemap="#aclass_event_handler_a365d58b6e3fb682480ac9b123d16fad1_cgraph" alt=""/></div>
 <map name="aclass_event_handler_a365d58b6e3fb682480ac9b123d16fad1_cgraph" id="aclass_event_handler_a365d58b6e3fb682480ac9b123d16fad1_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,211,32"/>
-<area shape="rect" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title=" " alt="" coords="259,5,415,32"/>
-<area shape="rect" href="class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a" title=" " alt="" coords="463,5,649,32"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title=" " alt="" coords="259,5,415,32"/>
+<area shape="rect" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title=" " alt="" coords="463,5,619,32"/>
+<area shape="rect" href="class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a" title=" " alt="" coords="667,5,853,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a81469b8505072a36e46744fe5f8d3cc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81469b8505072a36e46744fe5f8d3cc4">&#9670;&nbsp;</a></span>setCurrentScene()</h2>
+<a id="ab74b772e2be9e6fd47d82380475d89f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74b772e2be9e6fd47d82380475d89f7">&#9670;&nbsp;</a></span>setGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EventHandler::setCurrentScene </td>
+          <td class="memname">void EventHandler::setGame </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
-          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_game.html">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00022">22</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_handler_8cpp_source.html#l00021">21</a> of file <a class="el" href="_event_handler_8cpp_source.html">EventHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_handler_a81469b8505072a36e46744fe5f8d3cc4_icgraph.png" border="0" usemap="#aclass_event_handler_a81469b8505072a36e46744fe5f8d3cc4_icgraph" alt=""/></div>
-<map name="aclass_event_handler_a81469b8505072a36e46744fe5f8d3cc4_icgraph" id="aclass_event_handler_a81469b8505072a36e46744fe5f8d3cc4_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,295,47"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,60,39"/>
+<div class="center"><img src="class_event_handler_ab74b772e2be9e6fd47d82380475d89f7_icgraph.png" border="0" usemap="#aclass_event_handler_ab74b772e2be9e6fd47d82380475d89f7_icgraph" alt=""/></div>
+<map name="aclass_event_handler_ab74b772e2be9e6fd47d82380475d89f7_icgraph" id="aclass_event_handler_ab74b772e2be9e6fd47d82380475d89f7_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,285,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab083d7a482133a5012d121c0915f6e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab083d7a482133a5012d121c0915f6e7f">&#9670;&nbsp;</a></span>eventQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;<a class="el" href="class_event.html">Event</a>*&gt; EventHandler::eventQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_handler_8hpp_source.html#l00031">31</a> of file <a class="el" href="_event_handler_8hpp_source.html">EventHandler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa45dce9986bde4db3c1a5074968362d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45dce9986bde4db3c1a5074968362d3">&#9670;&nbsp;</a></span>game_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game.html">Game</a>* EventHandler::game_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_handler_8hpp_source.html#l00030">30</a> of file <a class="el" href="_event_handler_8hpp_source.html">EventHandler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adf50e0c8f4f529867a558693dfe58af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf50e0c8f4f529867a558693dfe58af0">&#9670;&nbsp;</a></span>instantiated_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EventHandler::instantiated_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_handler_8hpp_source.html#l00028">28</a> of file <a class="el" href="_event_handler_8hpp_source.html">EventHandler.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['render_68',['render',['../class_entity_sprite_component.html#aeddda3afeb0c89ee6d145d0df0decbeb',1,'EntitySpriteComponent::render()'],['../class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb',1,'RenderEngine::render()'],['../class_ennemy.html#a04bf6b840b4e464875649bc0dfe5d4af',1,'Ennemy::render()'],['../class_entity.html#abc21bc8c791274305898a2b13e624692',1,'Entity::render()'],['../class_player.html#a817e52c7cee2cd8a563e1d1b66fbd79c',1,'Player::render()'],['../class_projectile.html#ae7a60d5c8da58bcb33076d627a800c7b',1,'Projectile::render()'],['../class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1',1,'Scene::render()']]],
-  ['renderengine_69',['RenderEngine',['../class_render_engine.html',1,'RenderEngine'],['../class_render_engine.html#a9247dbba2d91d3b9c9fbeeaebe687a54',1,'RenderEngine::RenderEngine(const char *title=&quot;Game&quot;, int width=920, int height=480)'],['../class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9',1,'RenderEngine::RenderEngine(const RenderEngine &amp;)=delete']]],
-  ['renderengine_2ecpp_70',['RenderEngine.cpp',['../_render_engine_8cpp.html',1,'']]],
-  ['renderengine_2ehpp_71',['RenderEngine.hpp',['../_render_engine_8hpp.html',1,'']]],
-  ['renderentities_72',['renderEntities',['../class_scene.html#a41145ff1608c7967525af3ff4fb9aabe',1,'Scene']]],
-  ['rotate_73',['rotate',['../class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7',1,'TransformableComponent']]]
+  ['name_5f_80',['name_',['../class_entity.html#ac765a424fb46628fc30523f040910f23',1,'Entity::name_()'],['../class_scene.html#ab8c281a9c07f44942bd91bc47a93d78e',1,'Scene::name_()']]],
+  ['nb_5fsprites_5f_81',['nb_sprites_',['../class_entity_sprite_component.html#a8dd11d7e48fcc8598168dd287d4354ec',1,'EntitySpriteComponent']]]
 ];

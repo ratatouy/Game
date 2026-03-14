@@ -86,6 +86,8 @@ $(document).ready(function(){initNavTree('class_physic_engine.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_physic_engine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PhysicEngine Class Reference</div>  </div>
@@ -96,10 +98,24 @@ $(document).ready(function(){initNavTree('class_physic_engine.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa0a387176c4b1ffc7fda33d7e7bb85c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6">PhysicEngine</a> (uint FPS)</td></tr>
+<tr class="memitem:aa0a387176c4b1ffc7fda33d7e7bb85c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6">PhysicEngine</a> (uint <a class="el" href="class_physic_engine.html#abc035c0dcd502a2a30d1bbb00c0df7b7">FPS</a>)</td></tr>
 <tr class="separator:aa0a387176c4b1ffc7fda33d7e7bb85c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c4867c4a3b38a8bd99b08d74762270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#a00c4867c4a3b38a8bd99b08d74762270">tick</a> ()</td></tr>
 <tr class="separator:a00c4867c4a3b38a8bd99b08d74762270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0f78eccc093a41c2459f99c252ee3751"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#a0f78eccc093a41c2459f99c252ee3751">clock</a></td></tr>
+<tr class="separator:a0f78eccc093a41c2459f99c252ee3751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc035c0dcd502a2a30d1bbb00c0df7b7"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#abc035c0dcd502a2a30d1bbb00c0df7b7">FPS</a></td></tr>
+<tr class="separator:abc035c0dcd502a2a30d1bbb00c0df7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10441b943765f055dabe7a193bb1f285"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#a10441b943765f055dabe7a193bb1f285">deltaTime</a></td></tr>
+<tr class="separator:a10441b943765f055dabe7a193bb1f285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a92146753bc9d20fda62fa88d33b31904"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physic_engine.html#a92146753bc9d20fda62fa88d33b31904">instantiated_</a> = false</td></tr>
+<tr class="separator:a92146753bc9d20fda62fa88d33b31904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Physics Engine to Manage Physics (Physic Constants, Timers, etc.) </p>
@@ -143,6 +159,103 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_physics_engine_8cpp_source.html#l00020">20</a> of file <a class="el" href="_physics_engine_8cpp_source.html">PhysicsEngine.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0f78eccc093a41c2459f99c252ee3751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f78eccc093a41c2459f99c252ee3751">&#9670;&nbsp;</a></span>clock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock PhysicEngine::clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_physics_engine_8hpp_source.html#l00021">21</a> of file <a class="el" href="_physics_engine_8hpp_source.html">PhysicsEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a10441b943765f055dabe7a193bb1f285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10441b943765f055dabe7a193bb1f285">&#9670;&nbsp;</a></span>deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint PhysicEngine::deltaTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_physics_engine_8hpp_source.html#l00024">24</a> of file <a class="el" href="_physics_engine_8hpp_source.html">PhysicsEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abc035c0dcd502a2a30d1bbb00c0df7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc035c0dcd502a2a30d1bbb00c0df7b7">&#9670;&nbsp;</a></span>FPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint PhysicEngine::FPS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_physics_engine_8hpp_source.html#l00023">23</a> of file <a class="el" href="_physics_engine_8hpp_source.html">PhysicsEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a92146753bc9d20fda62fa88d33b31904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92146753bc9d20fda62fa88d33b31904">&#9670;&nbsp;</a></span>instantiated_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PhysicEngine::instantiated_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_physics_engine_8hpp_source.html#l00019">19</a> of file <a class="el" href="_physics_engine_8hpp_source.html">PhysicsEngine.hpp</a>.</p>
 
 </div>
 </div>

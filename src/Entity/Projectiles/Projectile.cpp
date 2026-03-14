@@ -15,8 +15,3 @@ void Projectile::update()
     transformable_->rotate(1);
     entitySprite_->update();
 }
-
-void Projectile::render(sf::RenderWindow* window)
-{
-    entitySprite_->render(window);
-}

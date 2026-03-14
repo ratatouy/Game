@@ -16,6 +16,15 @@
 class EntitySpriteComponent {
 
 private:
+    int nb_sprites_;
+
+
+    std::unordered_map<const char*, std::tuple<
+                                            sf::Sprite,
+                                            sf::Transformable,
+                                            sf::Texture*>>      sprites_data_map_;
+
+
     std::vector<sf::Sprite> sprites_;                            /**< All the Sprites. Their Transform is the sum of the Local and the Entity Transformables */
     std::vector<sf::Transformable> localSpriteTransformables_;   /**< List of each sprite's local Transformable                                              */
     std::vector<sf::Texture*> textures_;                         /**< List of textures for the Sprites                                                       */
@@ -28,7 +37,7 @@ public:
      * 
      * @param transformable Reference to the Entity's Transformable Component
      */
-    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable), visible_(true) {};
+    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable), visible_(true), nb_sprites_(0) {};
     
     
 
@@ -44,6 +53,10 @@ public:
 
 
 
+    void AddSprite(const char* name, const char* filepath);
+    auto GetSpriteData() {return &sprites_data_map_;}
+
+
     /** Adds a sprite to the entity with a source rectangle
      * 
      * @param filepath Path to the texture
@@ -51,6 +64,14 @@ public:
      */
     void AddSprite(const char* filepath, sf::IntRect SrcRect);
 
+    
+
+    const std::vector<sf::Sprite> GetSprites() { return sprites_;}
+
+
+    
+    const int get_nb_sprites() {return nb_sprites_;}
+     
 
 
     /** Returns a pointer to a sprite of Index "spriteIndex"
@@ -59,7 +80,7 @@ public:
      * 
      * @returns Pointer to the Requested Sprite
      */
-    const sf::Sprite* GetThisSprite(unsigned int spriteIndex)  {return &sprites_[spriteIndex];};
+    sf::Sprite* GetThisSprite(unsigned int spriteIndex)  {return &sprites_[spriteIndex];};
 
 
 
@@ -121,15 +142,7 @@ public:
     void update();
 
 
-
-    /** Renders the entity's sprites
-     * 
-     * @param window Pointer to the Render Window
-     */
-    const void render(sf::RenderWindow* window);
-
-
-
+    
 private:
     /** Loads a texture
      * 

@@ -90,33 +90,37 @@ $(document).ready(function(){initNavTree('_physics_engine_8cpp_source.html','');
 <div class="contents">
 <a href="_physics_engine_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_physics_engine_8hpp.html">Engine/PhysicsEngine.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordtype">bool</span> PhysicEngine::instantiated_ = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_physic_engine.html#a92146753bc9d20fda62fa88d33b31904">PhysicEngine::instantiated_</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6">    5</a></span>&#160;<a class="code" href="class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6">PhysicEngine::PhysicEngine</a>(uint FPS)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">if</span> (instantiated_) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_physic_engine.html#a92146753bc9d20fda62fa88d33b31904">instantiated_</a>) {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;PhysicEngine already instantiated&quot;</span>);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    instantiated_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_physic_engine.html#a92146753bc9d20fda62fa88d33b31904">instantiated_</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    this-&gt;FPS = FPS;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    this-&gt;FPS = <a class="code" href="class_physic_engine.html#abc035c0dcd502a2a30d1bbb00c0df7b7">FPS</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    (FPS == 0) ? deltaTime = 0 : deltaTime = 1000/FPS;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    (<a class="code" href="class_physic_engine.html#abc035c0dcd502a2a30d1bbb00c0df7b7">FPS</a> == 0) ? <a class="code" href="class_physic_engine.html#a10441b943765f055dabe7a193bb1f285">deltaTime</a> = 0 : <a class="code" href="class_physic_engine.html#a10441b943765f055dabe7a193bb1f285">deltaTime</a> = 1000/<a class="code" href="class_physic_engine.html#abc035c0dcd502a2a30d1bbb00c0df7b7">FPS</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    clock = sf::Clock();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_physic_engine.html#a0f78eccc093a41c2459f99c252ee3751">clock</a> = sf::Clock();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_physic_engine.html#a00c4867c4a3b38a8bd99b08d74762270">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_physic_engine.html#a00c4867c4a3b38a8bd99b08d74762270">PhysicEngine::tick</a>()</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    sf::Time elapsed = clock.restart();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (elapsed.asMilliseconds() &lt; deltaTime) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        sf::sleep(sf::milliseconds(deltaTime - elapsed.asMilliseconds()));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    sf::Time elapsed = <a class="code" href="class_physic_engine.html#a0f78eccc093a41c2459f99c252ee3751">clock</a>.restart();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (elapsed.asMilliseconds() &lt; <a class="code" href="class_physic_engine.html#a10441b943765f055dabe7a193bb1f285">deltaTime</a>) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        sf::sleep(sf::milliseconds(<a class="code" href="class_physic_engine.html#a10441b943765f055dabe7a193bb1f285">deltaTime</a> - elapsed.asMilliseconds()));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="ttc" id="a_physics_engine_8hpp_html"><div class="ttname"><a href="_physics_engine_8hpp.html">PhysicsEngine.hpp</a></div></div>
 <div class="ttc" id="aclass_physic_engine_html_a00c4867c4a3b38a8bd99b08d74762270"><div class="ttname"><a href="class_physic_engine.html#a00c4867c4a3b38a8bd99b08d74762270">PhysicEngine::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition:</b> <a href="_physics_engine_8cpp_source.html#l00020">PhysicsEngine.cpp:20</a></div></div>
+<div class="ttc" id="aclass_physic_engine_html_a0f78eccc093a41c2459f99c252ee3751"><div class="ttname"><a href="class_physic_engine.html#a0f78eccc093a41c2459f99c252ee3751">PhysicEngine::clock</a></div><div class="ttdeci">sf::Clock clock</div><div class="ttdef"><b>Definition:</b> <a href="_physics_engine_8hpp_source.html#l00021">PhysicsEngine.hpp:21</a></div></div>
+<div class="ttc" id="aclass_physic_engine_html_a10441b943765f055dabe7a193bb1f285"><div class="ttname"><a href="class_physic_engine.html#a10441b943765f055dabe7a193bb1f285">PhysicEngine::deltaTime</a></div><div class="ttdeci">uint deltaTime</div><div class="ttdef"><b>Definition:</b> <a href="_physics_engine_8hpp_source.html#l00024">PhysicsEngine.hpp:24</a></div></div>
+<div class="ttc" id="aclass_physic_engine_html_a92146753bc9d20fda62fa88d33b31904"><div class="ttname"><a href="class_physic_engine.html#a92146753bc9d20fda62fa88d33b31904">PhysicEngine::instantiated_</a></div><div class="ttdeci">static bool instantiated_</div><div class="ttdef"><b>Definition:</b> <a href="_physics_engine_8hpp_source.html#l00019">PhysicsEngine.hpp:19</a></div></div>
 <div class="ttc" id="aclass_physic_engine_html_aa0a387176c4b1ffc7fda33d7e7bb85c6"><div class="ttname"><a href="class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6">PhysicEngine::PhysicEngine</a></div><div class="ttdeci">PhysicEngine(uint FPS)</div><div class="ttdef"><b>Definition:</b> <a href="_physics_engine_8cpp_source.html#l00005">PhysicsEngine.cpp:5</a></div></div>
+<div class="ttc" id="aclass_physic_engine_html_abc035c0dcd502a2a30d1bbb00c0df7b7"><div class="ttname"><a href="class_physic_engine.html#abc035c0dcd502a2a30d1bbb00c0df7b7">PhysicEngine::FPS</a></div><div class="ttdeci">uint FPS</div><div class="ttdef"><b>Definition:</b> <a href="_physics_engine_8hpp_source.html#l00023">PhysicsEngine.hpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

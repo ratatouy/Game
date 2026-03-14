@@ -29,8 +29,3 @@ void Ennemy::getHit(int damage) {
 void Ennemy::update() {
     // std::cout << "Ennemy Updating" << std::endl;
 }
-
-void Ennemy::render(sf::RenderWindow* window) {
-    // std::cout << "Ennemy Rendering" << std::endl;
-    entitySprite_->render(window);
-}

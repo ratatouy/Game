@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['getcurrentevent_168',['getCurrentEvent',['../class_event_handler.html#acd62960f00deb706634059dc47e1d287',1,'EventHandler']]],
-  ['getcurrentscene_169',['getCurrentScene',['../class_entity.html#a2edbfe01d432af851512cb021caa6a75',1,'Entity']]],
-  ['getdata_170',['getData',['../class_custom_event.html#afe9e4741e5d445e29c7fda11fcd63a23',1,'CustomEvent::getData()'],['../class_hit_event.html#a76154ecea159d09b3e78668b1d8bfcc7',1,'HitEvent::getData()']]],
-  ['getentity_171',['getEntity',['../class_scene.html#a3c200511f7f00c8184a7d6281a508e2c',1,'Scene']]],
-  ['getentitysprite_172',['getEntitySprite',['../class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822',1,'Entity']]],
-  ['gethit_173',['getHit',['../class_ennemy.html#a4784be82a5ce923d1494477c55bbc297',1,'Ennemy']]],
-  ['getname_174',['getName',['../class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3',1,'Entity']]],
-  ['getorigin_175',['getOrigin',['../class_transformable_component.html#a22e3bfff7be1c64caabd4cce2338874f',1,'TransformableComponent']]],
-  ['getposition_176',['getPosition',['../class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20',1,'TransformableComponent']]],
-  ['getrenderengine_177',['getRenderEngine',['../class_scene.html#a8a8fc24fa6036ed658d5615177b20a26',1,'Scene']]],
-  ['getrotation_178',['getRotation',['../class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff',1,'TransformableComponent']]],
-  ['getscale_179',['getScale',['../class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724',1,'TransformableComponent']]],
-  ['getthissprite_180',['GetThisSprite',['../class_entity_sprite_component.html#a9659f8414471377d482217c0f4b7212e',1,'EntitySpriteComponent']]],
-  ['getthisspritelocaltransformable_181',['GetThisSpriteLocalTransformable',['../class_entity_sprite_component.html#a6bd8736f640b46f33cb3d3c626e45f09',1,'EntitySpriteComponent']]],
-  ['gettransformable_182',['getTransformable',['../class_entity.html#aec0550d41d7e7ec5f868d30a84b0f6d2',1,'Entity']]],
-  ['getwindow_183',['getWindow',['../class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688',1,'RenderEngine']]]
+  ['checktransition_217',['CheckTransition',['../class_transition.html#a7d383bf8ed9f683af596cd666725d659',1,'Transition']]]
 ];

@@ -1,24 +1,5 @@
 var searchData=
 [
-  ['scene_74',['Scene',['../class_scene.html#ad10176d75a9cc0da56626f682d083507',1,'Scene::Scene()'],['../class_scene.html',1,'Scene']]],
-  ['scene_2ecpp_75',['Scene.cpp',['../_scene_8cpp.html',1,'']]],
-  ['scene_2ehpp_76',['Scene.hpp',['../_scene_8hpp.html',1,'']]],
-  ['scenetransitionevent_77',['SceneTransitionEvent',['../class_scene_transition_event.html',1,'SceneTransitionEvent'],['../class_scene_transition_event.html#a4327a1ab9037549b611bb4c71aa01ec7',1,'SceneTransitionEvent::SceneTransitionEvent()']]],
-  ['scenetransitionevent_2ehpp_78',['SceneTransitionEvent.hpp',['../_scene_transition_event_8hpp.html',1,'']]],
-  ['setcurrentscene_79',['setCurrentScene',['../class_event_handler.html#a81469b8505072a36e46744fe5f8d3cc4',1,'EventHandler']]],
-  ['setentitysprite_80',['setEntitySprite',['../class_entity.html#a4c19692f28142f36b311e3ee1ad9de77',1,'Entity']]],
-  ['seteventhandler_81',['setEventHandler',['../class_scene.html#aa3d8b229ab26de9142a86bdd6b01ab34',1,'Scene']]],
-  ['setname_82',['setName',['../class_entity.html#a78ccaeac4d798bf0b78ee48b317b5e2f',1,'Entity']]],
-  ['setorigin_83',['setOrigin',['../class_transformable_component.html#a2f0fca3a97c469a31f6c5938afe72fba',1,'TransformableComponent']]],
-  ['setposition_84',['setPosition',['../class_transformable_component.html#a473927317bccd1852a910268d3296cc8',1,'TransformableComponent']]],
-  ['setrenderengine_85',['setRenderEngine',['../class_scene.html#abb23401dd887424e48b3016a6f33a5e1',1,'Scene']]],
-  ['setrotation_86',['setRotation',['../class_transformable_component.html#a58598a6517b3cae1f6a4b4bd07b72a66',1,'TransformableComponent']]],
-  ['setscale_87',['setScale',['../class_transformable_component.html#a8926400fc62f6dadfc2f636d06720b04',1,'TransformableComponent']]],
-  ['setscene_88',['setScene',['../class_render_engine.html#a087c9d22abb6553de2f4320e11a0a033',1,'RenderEngine::setScene()'],['../class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff',1,'Entity::setScene()']]],
-  ['setthisspritelocalposition_89',['SetThisSpriteLocalPosition',['../class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5',1,'EntitySpriteComponent']]],
-  ['setthisspritelocalrotation_90',['SetThisSpriteLocalRotation',['../class_entity_sprite_component.html#a385cf72043acd5f996024ad1bc1f8cb6',1,'EntitySpriteComponent']]],
-  ['setthisspritelocalscale_91',['SetThisSpriteLocalScale',['../class_entity_sprite_component.html#ae76247a27bc98af47971ea690a802a85',1,'EntitySpriteComponent']]],
-  ['setthisspritelocaltransform_92',['SetThisSpriteLocalTransform',['../class_entity_sprite_component.html#a167229f02959e590116a6d20d9500cf8',1,'EntitySpriteComponent']]],
-  ['settransformable_93',['setTransformable',['../class_entity.html#a797c5fbf96c08f0959e67c4432ffe125',1,'Entity']]],
-  ['setvisible_94',['setVisible',['../class_entity_sprite_component.html#a796e62c0dca462d49a70a298957a4e9d',1,'EntitySpriteComponent']]]
+  ['open_82',['open',['../settings_loader_8cpp.html#a7d55240d204cc3c944b3f18c869b2676',1,'settingsLoader.cpp']]],
+  ['operator_3d_83',['operator=',['../class_render_engine.html#a8481c5152d04db388170c404d193b6f0',1,'RenderEngine::operator=()'],['../class_event_handler.html#aaefc03fa2d7c0cca8e7b7b99ce96f382',1,'EventHandler::operator=()'],['../class_game.html#a4d0c0503733cc50b0b5cb8d7ef1237ec',1,'Game::operator=()']]]
 ];

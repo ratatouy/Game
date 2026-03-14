@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('class_ennemy.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_ennemy-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Ennemy Class Reference</div>  </div>
@@ -107,11 +108,14 @@ Collaboration diagram for Ennemy:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_ennemy__coll__graph.png" border="0" usemap="#a_ennemy_coll__map" alt="Collaboration graph"/></div>
 <map name="a_ennemy_coll__map" id="a_ennemy_coll__map">
-<area shape="rect" title=" " alt="" coords="196,171,271,197"/>
-<area shape="rect" href="class_entity.html" title=" " alt="" coords="203,95,263,121"/>
-<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="203,5,264,32"/>
-<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="289,5,479,32"/>
+<area shape="rect" title=" " alt="" coords="201,273,275,300"/>
+<area shape="rect" href="class_entity.html" title=" " alt="" coords="208,184,268,211"/>
+<area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="207,95,381,121"/>
+<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" href="class_scene.html" title=" " alt="" coords="459,95,521,121"/>
+<area shape="rect" href="class_game.html" title=" " alt="" coords="523,184,585,211"/>
+<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="411,273,523,300"/>
+<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="584,273,695,300"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,8 +129,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2d77e41154ffc414d35281897d206d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b503a1ea239fd8b570012bab798dc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemy.html#a35b503a1ea239fd8b570012bab798dc3">update</a> () override</td></tr>
 <tr class="separator:a35b503a1ea239fd8b570012bab798dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04bf6b840b4e464875649bc0dfe5d4af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemy.html#a04bf6b840b4e464875649bc0dfe5d4af">render</a> (sf::RenderWindow *window) override</td></tr>
-<tr class="separator:a04bf6b840b4e464875649bc0dfe5d4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaea8bc5fcf41d2bf5771416b70a587dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemy.html#aaea8bc5fcf41d2bf5771416b70a587dc">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event) override</td></tr>
 <tr class="separator:aaea8bc5fcf41d2bf5771416b70a587dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4784be82a5ce923d1494477c55bbc297"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemy.html#a4784be82a5ce923d1494477c55bbc297">getHit</a> (int damage)</td></tr>
@@ -158,6 +160,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1082a3ee77f8235d11aee6a6b7b5b822 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af56932d27db52a26c66681dd1c6e1aff inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af56932d27db52a26c66681dd1c6e1aff">processEvent</a> (<a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *event)</td></tr>
 <tr class="separator:af56932d27db52a26c66681dd1c6e1aff inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc21bc8c791274305898a2b13e624692 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">render</a> (sf::RenderWindow *window)</td></tr>
+<tr class="separator:abc21bc8c791274305898a2b13e624692 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aee8858643147dcf3fa88303eb452c840"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ennemy.html#aee8858643147dcf3fa88303eb452c840">health_</a></td></tr>
+<tr class="separator:aee8858643147dcf3fa88303eb452c840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -377,45 +386,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a04bf6b840b4e464875649bc0dfe5d4af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04bf6b840b4e464875649bc0dfe5d4af">&#9670;&nbsp;</a></span>render()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ennemy::render </td>
-          <td>(</td>
-          <td class="paramtype">sf::RenderWindow *&#160;</td>
-          <td class="paramname"><em>window</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_entity.html#abc21bc8c791274305898a2b13e624692">Entity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_ennemy_8cpp_source.html#l00033">33</a> of file <a class="el" href="_ennemy_8cpp_source.html">Ennemy.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_ennemy_a04bf6b840b4e464875649bc0dfe5d4af_cgraph.png" border="0" usemap="#aclass_ennemy_a04bf6b840b4e464875649bc0dfe5d4af_cgraph" alt=""/></div>
-<map name="aclass_ennemy_a04bf6b840b4e464875649bc0dfe5d4af_cgraph" id="aclass_ennemy_a04bf6b840b4e464875649bc0dfe5d4af_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,129,39"/>
-<area shape="rect" href="class_entity_sprite_component.html#aeddda3afeb0c89ee6d145d0df0decbeb" title=" " alt="" coords="177,5,351,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a35b503a1ea239fd8b570012bab798dc3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35b503a1ea239fd8b570012bab798dc3">&#9670;&nbsp;</a></span>update()</h2>
 
@@ -442,6 +412,31 @@ Here is the call graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_entity.html#aed73e98b980b85833428c935cc1c69f8">Entity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_ennemy_8cpp_source.html#l00029">29</a> of file <a class="el" href="_ennemy_8cpp_source.html">Ennemy.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aee8858643147dcf3fa88303eb452c840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8858643147dcf3fa88303eb452c840">&#9670;&nbsp;</a></span>health_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ennemy::health_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ennemy_8hpp_source.html#l00017">17</a> of file <a class="el" href="_ennemy_8hpp_source.html">Ennemy.hpp</a>.</p>
 
 </div>
 </div>

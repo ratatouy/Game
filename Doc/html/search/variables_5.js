@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['target_226',['target',['../struct_hit_data.html#aa75d1986b9426e16b056addd8f13d5b0',1,'HitData']]],
-  ['transformable_5f_227',['transformable_',['../class_entity.html#aa02237639c1c2a57ceea70b935bfba45',1,'Entity']]]
+  ['game_5f_309',['game_',['../class_render_engine.html#a6a593624cd3465fad4874b3cd91dca47',1,'RenderEngine::game_()'],['../class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3',1,'EventHandler::game_()'],['../class_scene.html#aa9e136c3f22cf81289b7fd2795e3fce8',1,'Scene::game_()']]]
 ];

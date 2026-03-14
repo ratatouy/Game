@@ -8,5 +8,7 @@ var class_event_handler =
     [ "isEmpty", "class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6", null ],
     [ "operator=", "class_event_handler.html#aaefc03fa2d7c0cca8e7b7b99ce96f382", null ],
     [ "processEvent", "class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1", null ],
-    [ "setCurrentScene", "class_event_handler.html#a81469b8505072a36e46744fe5f8d3cc4", null ]
+    [ "setGame", "class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7", null ],
+    [ "eventQueue", "class_event_handler.html#ab083d7a482133a5012d121c0915f6e7f", null ],
+    [ "game_", "class_event_handler.html#aa45dce9986bde4db3c1a5074968362d3", null ]
 ];

@@ -1,7 +1,6 @@
 #ifndef SCENE_HPP
 #define SCENE_HPP
 
-#include <unordered_map>
 #include <memory>
 
 #include <SFML/Graphics.hpp>
@@ -11,11 +10,11 @@
 #include "Events/CustomEvent.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
 
-#include "Engine/RenderEngine.hpp"
+#include "Transition/Transition.hpp"
 
-class EventHandler; // Forward Declaration of EventHandler //
 
-class RenderEngine; // Forward Declaration of RenderEngine //
+class Game;         // Forward Declaration of Game //
+
 
 /** Base class for all Sscenes
  * 
@@ -29,53 +28,61 @@ class RenderEngine; // Forward Declaration of RenderEngine //
  */
 class Scene {
 private:
-    const char* name_;
+    Game* game_;        /**< Reference to the game object */
 
-    RenderEngine* renderEngine_;
+    const char* name_;  /**< Name of the current_scene */
 
-    EventHandler* eventHandler_;
-    std::unordered_map<const char*, Entity*> entityMap_;
+    std::unordered_map<const char*, Transition> transition_map_;    /**< Map of the Transitions */
+    std::unordered_map<const char*, Entity*> entity_map_;           /**< List of the entities according to their names */
 
     
+
 public:
+    /** Only Constructor */
     Scene();
     ~Scene();
 
-    void setRenderEngine(RenderEngine* renderEngine) {renderEngine_ = renderEngine;}
 
-    void setEventHandler(EventHandler* EventHandler) {eventHandler_ = EventHandler;}
+    /** game Setter
+     * @param game Reference to the Game */
+    void setGame(Game* game) {game_ = game;}
 
 
+    /** distinct entity Getter
+     * 
+     * returns an entity according to its name
+     * 
+     * @param name name of the entity
+     * 
+     * @returns pointer to the entity */
     Entity* getEntity(const char* name);
 
-    RenderEngine* getRenderEngine() {return renderEngine_;}
 
+    /** SceneTransitionEvent processing distributor */
     virtual void processEvent(SceneTransitionEvent* event);
+    /** SceneTransitionEvent processing function */
     virtual void processEventFunc(SceneTransitionEvent* event) {};
+    /** CustomEvent processing distributor */
     virtual void processEvent(CustomEvent* event);
+    /** CustomEvent processing function */
     virtual void processEventFunc(CustomEvent* event) {};
 
 
-
+    /** Throws the event to the parent game object
+     * @param event event to throw */
     void throwEvent(Event* event);
 
 
+    /** Adds an entity 
+     * @param entity entity to add */
     void addEntity(Entity* entity);
 
 
 
     virtual void update();
-
+    
 
     void updateEntities();
-
-
-    void renderEntities();
-
-    
-    void render();
-
-private:
 };
 
 #endif

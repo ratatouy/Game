@@ -2,8 +2,7 @@
 #include <queue>
 
 #include "Events/EventHandler.hpp"
-#include "Scenes/Scene.hpp"
-
+#include "Game.hpp"
 
 bool EventHandler::instantiated_ = false;
 
@@ -19,8 +18,8 @@ EventHandler::~EventHandler() {
 }
 
 
-void EventHandler::setCurrentScene(Scene* scene) {
-    currentScene = scene;
+void EventHandler::setGame(Game* game) {
+    game_ = game;
 }
 
 
@@ -48,20 +47,30 @@ void EventHandler::processEvent() {
 
         // std::cout << "Processing Event" << std::endl;
 
-        SceneTransitionEvent* Es = dynamic_cast<SceneTransitionEvent*>(eventQueue.front());
-        if (Es) {
+        SceneTransitionEvent* Et = dynamic_cast<SceneTransitionEvent*>(eventQueue.front());
+        if (Et) {
             std::cout << "Processing Scene Transition Event"<<std::endl;
-            currentScene->processEvent(Es);
+            game_->processEvent(Et);
+            eventQueue.pop();
+            delete Et;
+            return;
+        }
+        
+        
+        SpawnEntityEvent* Es = dynamic_cast<SpawnEntityEvent*>(eventQueue.front());
+        if (Es) {
+            std::cout << "Processing Custom Event"<<std::endl;
+            game_->processEvent(Es);
             eventQueue.pop();
             delete Es;
             return;
         }
-        
+
 
         CustomEvent* Ec = dynamic_cast<CustomEvent*>(eventQueue.front());
         if (Ec) {
-            // std::cout << "Processing Custom Event"<<std::endl;
-            currentScene->processEvent(Ec);
+            std::cout << "Processing Custom Event"<<std::endl;
+            game_->processEvent(Ec);
             eventQueue.pop();
             delete Ec;
             return;

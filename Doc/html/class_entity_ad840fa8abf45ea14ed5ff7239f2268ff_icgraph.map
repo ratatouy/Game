@@ -1,6 +1,7 @@
 <map id="Entity::setScene" name="Entity::setScene">
-<area shape="rect" id="node1" title=" " alt="" coords="447,31,573,57"/>
-<area shape="rect" id="node2" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="268,31,399,57"/>
-<area shape="rect" id="node3" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="108,5,220,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="465,31,592,57"/>
+<area shape="rect" id="node2" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="287,31,417,57"/>
+<area shape="rect" id="node3" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="108,5,239,32"/>
+<area shape="rect" id="node5" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="117,56,229,83"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
 </map>

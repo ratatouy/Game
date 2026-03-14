@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class Scene; // Forward Declaration of Scene //
+class Game; // Forward Declaration of Scene //
 
 
 /** Manages Shaders and the RenderWindow
@@ -18,21 +18,25 @@ private:
     static bool instantiated_;          /**< Forces Singleton                   */
 
     sf::RenderWindow* window_;          /**< RenderWindow Object is stored here */
-    Scene* currentScene_;               /**< Reference to the active Scene      */
+    Game* game_;                        /**< Reference to the Game              */
 
     sf::Clock total_clock_;             /**< Clock to keep track of total time
                                              For Animated Shaders               */
 
-    std::unordered_map<const char*, sf::Drawable*> drawables_;
+    std::unordered_map<std::string, sf::Drawable*> drawables_;
     /**< List of all the Drawables that have no Shaders
      * 
-     * Each drawable has a 'name', that isn't necessarily unique */
+     * Each drawable has a 'name', that isn't necessarily unique
+     * for drawables from an EntitySpriteComponent, the name's format is "[entity's name]_[sprite's name]""
+     */
 
-    std::unordered_map<const char*, std::pair<sf::Drawable*, sf::Shader>> shader_drawables_;
+    
+    std::unordered_map<std::string, std::pair<sf::Drawable*, sf::Shader>> shader_drawables_;
     /**< List of all the Drawables with Shaders
      * 
-     * std::pair<Drawable*, Shader> associates each drawable to it's shader */
-
+     * std::pair<Drawable*, Shader> associates each drawable to it's shader
+     * @sa drawables_
+     */
 
 public:
     /** Only Constructor
@@ -43,7 +47,7 @@ public:
      * 
      * @note the default width and height are 920x480
      */
-    RenderEngine(const char* title = "Game", int width = 920, int height = 480);
+    RenderEngine(std::string title = "Game", int width = 920, int height = 480);
     RenderEngine(const RenderEngine&) = delete;
 
     RenderEngine& operator=(const RenderEngine&) = delete;
@@ -55,7 +59,7 @@ public:
      * 
      * @param scene Reference to the Scene
      */
-    void setScene(Scene* scene) {currentScene_ = scene;}
+    void setGame(Game* game) {game_ = game;}
 
 
 
@@ -67,12 +71,15 @@ public:
 
 
 
+    sf::Drawable* getDrawable(std::string name) {return drawables_.find(name)->second;}
+
+
     /** Adds a Drawable to the RenderEngine
      * 
      * @param name Name of the Drawable
      * @param drawable Pointer to the Drawable
      */
-    void addDrawable(const char* name, sf::Drawable* drawable);
+    void addDrawable(std::string name, sf::Drawable* drawable);
     
 
 
@@ -83,7 +90,7 @@ public:
      * @param filepath Path to the Shader File
      * @param type Type of the Shader
      */
-    void addShaderDrawable(const char* name, sf::Drawable* drawable, const char* filepath, sf::Shader::Type type);
+    void addShaderDrawable(std::string name, sf::Drawable* drawable, std::string filepath, sf::Shader::Type type);
 
 
 
@@ -93,7 +100,7 @@ public:
      * @param filepath Path to the Shader File
      * @param type Type of the Shader
      */
-    void attachShaderToDrawable(const char* drawable_name, const char* filepath, sf::Shader::Type type);
+    void attachShaderToDrawable(std::string drawable_name, std::string filepath, sf::Shader::Type type);
 
 
 
