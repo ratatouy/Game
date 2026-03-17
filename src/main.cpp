@@ -74,13 +74,13 @@ int main() {
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
             {
-                Player* pl = (Player*)game->getActiveScene()->getEntity("raptor");
-                pl->getTransformable()->move({10, 0});
+                std::cout << "yo" << game->getActiveScene()->getEntity("raptor")->getTransformable()->getPosition().x << std::endl;
+                game->getActiveScene()->getEntity("raptor")->getTransformable()->move({10, 0});
+                std::cout << "yo" << game->getActiveScene()->getEntity("raptor")->getTransformable()->getPosition().x << std::endl;
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
             {
-                Player* pl = (Player*)game->getActiveScene()->getEntity("raptor");
-                pl->getTransformable()->move({-10, 0});
+                game->getActiveScene()->getEntity("raptor")->getTransformable()->move({-10, 0});
             }
         }
         

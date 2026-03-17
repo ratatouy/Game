@@ -59,14 +59,18 @@ void Scene::throwEvent(Event* event)
 
 void Scene::update()
 {
+    std::cout << "Scene Updating" << std::endl;
     updateEntities();
 }
 
 
 void Scene::updateEntities()
 {
+    std::cout << "| Updating Entities" << std::endl;
     for (std::pair<const char*, Entity*> entity_pair : entity_map_)
     {
+        std::cout << "| | Updating Entity " << entity_pair.first << std::endl;
         entity_pair.second->update();
+        entity_pair.second->getEntitySprite()->update();
     }
 }

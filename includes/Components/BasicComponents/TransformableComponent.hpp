@@ -14,7 +14,7 @@
  */
 class TransformableComponent {
 private:
-    sf::Transformable transformable_; // Global ID of The Component Type //
+    sf::Transformable transformable_;
 
 
 public:

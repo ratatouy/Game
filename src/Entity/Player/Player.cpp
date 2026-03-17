@@ -7,8 +7,7 @@
 
 
 void Player::update() {
-    // std::cout << "Player Updating" << std::endl;
-    entitySprite_->update();
+    std::cout << "| | Player (" << name_ << ") pos when updating : "<< transformable_->getPosition().x << " " << transformable_->getPosition().y << std::endl;
 }
 
 
@@ -17,7 +16,7 @@ void Player::attack() {
     std::cout << "\"RECHAUFFEUR STRKE !!!!\"" << std::endl;
 
     Projectile* player_proj = new Projectile("player_proj", transformable_->getPosition(), {0.5f,0.f});
-    player_proj->getEntitySprite()->AddSprite("assets/Sprites/cato.png");
+    player_proj->getEntitySprite()->AddSprite("cato", "assets/Sprites/cato.png");
 
 
     current_scene_->throwEvent(new SpawnEntityEvent(player_proj));

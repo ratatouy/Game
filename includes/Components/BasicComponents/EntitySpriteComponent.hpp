@@ -8,6 +8,11 @@
  * @file EntitySpriteComponent.hpp
  */
 
+using SpriteData = std::tuple<sf::Sprite,        /**< The sprite              */
+                              sf::Transformable, /**< The local Transformable */
+                              sf::Texture*>;     /**< The texture             */
+
+
 /** 
  * @brief Component to manage the sprites of an entity.
  * 
@@ -18,18 +23,9 @@ class EntitySpriteComponent {
 private:
     int nb_sprites_;
 
+    std::unordered_map<std::string, SpriteData> sprites_data_map_;
 
-    std::unordered_map<const char*, std::tuple<
-                                            sf::Sprite,
-                                            sf::Transformable,
-                                            sf::Texture*>>      sprites_data_map_;
-
-
-    std::vector<sf::Sprite> sprites_;                            /**< All the Sprites. Their Transform is the sum of the Local and the Entity Transformables */
-    std::vector<sf::Transformable> localSpriteTransformables_;   /**< List of each sprite's local Transformable                                              */
-    std::vector<sf::Texture*> textures_;                         /**< List of textures for the Sprites                                                       */
-    TransformableComponent* entityTransformable_;                /**< Reference to the Entity's Transformable Component                                      */
-    bool visible_;                                               /**< Whether the sprite is visible or not                                                   */
+    TransformableComponent* entityTransformable_;                /**< Reference to the Entity's Transformable Component */
 
     
 public:
@@ -37,7 +33,7 @@ public:
      * 
      * @param transformable Reference to the Entity's Transformable Component
      */
-    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable), visible_(true), nb_sprites_(0) {};
+    EntitySpriteComponent(TransformableComponent* transformable) : entityTransformable_(transformable), nb_sprites_(0) {};
     
     
 
@@ -47,26 +43,11 @@ public:
 
     /** Adds a sprite to the entity
      * 
+     * @param name Name of the sprite
      * @param filepath Path to the texture
      */
-    void AddSprite(const char* filepath);
-
-
-
-    void AddSprite(const char* name, const char* filepath);
+    void AddSprite(std::string name, const char* filepath);
     auto GetSpriteData() {return &sprites_data_map_;}
-
-
-    /** Adds a sprite to the entity with a source rectangle
-     * 
-     * @param filepath Path to the texture
-     * @param SrcRect Source rectangle
-     */
-    void AddSprite(const char* filepath, sf::IntRect SrcRect);
-
-    
-
-    const std::vector<sf::Sprite> GetSprites() { return sprites_;}
 
 
     
@@ -76,65 +57,46 @@ public:
 
     /** Returns a pointer to a sprite of Index "spriteIndex"
      * 
-     * @param spriteIndex Index of the sprite in the sprites vector
+     * @param spriteName name of the sprite in the sprites_data_map
      * 
-     * @returns Pointer to the Requested Sprite
+     * @returns const Pointer to the Requested Sprite
      */
-    sf::Sprite* GetThisSprite(unsigned int spriteIndex)  {return &sprites_[spriteIndex];};
-
+    const SpriteData* GetThisSpriteData(std::string spriteName)  {return &sprites_data_map_.find(spriteName)->second;}
 
 
     /** Get the local Transformable of a sprite
      * 
-     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * @param spriteName name of the sprite in the sprites_data_map
+     * 
+     * @returns const Pointer to the Requested Transformable
+     */
+    const sf::Sprite* GetThisSpriteLocalSprite(std::string spriteName) {return &std::get<0>(sprites_data_map_.find(spriteName)->second);}
+
+    /** Get the local Transformable of a sprite
+     * 
+     * @param spriteName name of the sprite in the sprites_data_map
      * 
      * @returns Pointer to the Requested Transformable
      */
-    const sf::Transformable* GetThisSpriteLocalTransformable(int spriteIndex) {return &localSpriteTransformables_[spriteIndex];};
+    sf::Transformable* GetThisSpriteLocalTransformable(std::string spriteName) {return &std::get<1>(sprites_data_map_.find(spriteName)->second);}
 
-
-    /** Set the visibility of the sprite
+    /** Get the local Transformable of a sprite
      * 
-     * @param visible New visibility
-     */
-    void setVisible(bool visible) {visible_ = visible;}
-
-
-    /** Set the local position of a sprite
+     * @param spriteName name of the sprite in the sprites_data_map
      * 
-     * @param spriteIndex Index of the sprite in the "sprites_" vector
-     * @param position New position
+     * @returns const Pointer to the Requested Transformable
      */
-    void SetThisSpriteLocalPosition(int spriteIndex, sf::Vector2f position) { localSpriteTransformables_[spriteIndex].setOrigin(-position); };
-
-
-
-    /** Set the local rotation of a sprite
-     * 
-     * @param spriteIndex Index of the sprite in the "sprites_" vector
-     * @param angle New rotation angle
-     */
-    void SetThisSpriteLocalRotation(int spriteIndex, float angle) { localSpriteTransformables_[spriteIndex].setRotation(angle); };
-
-
-
-    /** Set the local scale of a sprite
-     * 
-     * @param spriteIndex Index of the sprite in the "sprites_" vector
-     * @param scale New scale
-     */
-    void SetThisSpriteLocalScale(int spriteIndex, sf::Vector2f scale) { localSpriteTransformables_[spriteIndex].setScale(scale); };
-
+    const sf::Texture* GetThisSpriteLocalTexture(std::string spriteName) {return std::get<2>(sprites_data_map_.find(spriteName)->second);}
 
 
     /** Set the local transform of a sprite
      * 
-     * @param spriteIndex Index of the sprite in the "sprites_" vector
+     * @param spriteName name of the sprite in the sprites_data_map
      * @param position New position
      * @param angle New rotation angle
      * @param scale New scale
      */
-    void SetThisSpriteLocalTransform(int spriteIndex, sf::Vector2f position, float angle, sf::Vector2f scale);
+    void SetThisSpriteLocalTransform(std::string spriteName, sf::Vector2f position, float angle, sf::Vector2f scale);
 
 
 
@@ -150,7 +112,7 @@ private:
      * 
      * @returns Pointer to the texture, nullptr if it can't be loaded
     */
-    sf::Texture* _LoadTexture(std::string filepath);
+    sf::Texture* _LoadTexture(const char* filepath);
 };
 
 #endif

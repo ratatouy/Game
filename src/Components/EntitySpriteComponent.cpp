@@ -5,7 +5,10 @@
 
 
 EntitySpriteComponent::~EntitySpriteComponent() {
-    for (auto t : textures_) delete t;
+    for (auto i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)
+    {
+        delete &std::get<2>(i->second); // delete texture
+    }
     delete entityTransformable_;
 }
 
@@ -17,33 +20,7 @@ EntitySpriteComponent::~EntitySpriteComponent() {
  * - Add the sprite's local Transformable to the "localSpriteTransformables_" vector
  * - Add the sprite and texture to the "sprites_" and "textures_" vectors
  */
-void EntitySpriteComponent::AddSprite(const char* filepath)
-{
-    try {
-        sf::Texture* texture = _LoadTexture(filepath);
-        if (!texture) return;
-        
-        sf::Sprite sprite;
-        sprite.setTexture(*texture);
-
-        sprite.setPosition(entityTransformable_->getPosition());
-        sprite.setRotation(entityTransformable_->getRotation());
-        sprite.setScale(entityTransformable_->getScale());
-
-        localSpriteTransformables_.push_back(sf::Transformable());
-
-        sprites_.push_back(sprite);
-        textures_.push_back(texture);
-
-        nb_sprites_++;
-    }
-    catch (std::exception& e) {
-        std::cout << "Exception: " << e.what() << std::endl;
-    }
-};
-
-
-void EntitySpriteComponent::AddSprite(const char* name, const char* filepath)
+void EntitySpriteComponent::AddSprite(std::string name, const char* filepath)
 {
     try {
         sf::Texture* texture = _LoadTexture(filepath);
@@ -68,46 +45,47 @@ void EntitySpriteComponent::AddSprite(const char* name, const char* filepath)
 };
 
 
-void EntitySpriteComponent::AddSprite(const char* filepath, sf::IntRect SrcRect)
-{
-    AddSprite(filepath);
-    sprites_.back().setTextureRect(SrcRect);
-};
 
-
-
-void EntitySpriteComponent::SetThisSpriteLocalTransform(int spriteIndex, sf::Vector2f position, float angle, sf::Vector2f scale) {
-    SetThisSpriteLocalPosition(spriteIndex, position);
-    SetThisSpriteLocalRotation(spriteIndex, angle);
-    SetThisSpriteLocalScale(spriteIndex, scale);
+void EntitySpriteComponent::SetThisSpriteLocalTransform(std::string spriteName, sf::Vector2f position, float angle, sf::Vector2f scale) {
+    sf::Transformable* transformable = GetThisSpriteLocalTransformable(spriteName);
+    transformable->setPosition(position);
+    transformable->setRotation(angle);
+    transformable->setScale(scale);
 };
 
 
 /** @details Implementation :
  * By summing the entity's position, rotation & origin with the sprite's local position and rotation
  * , Multiplying the entity's scale with the sprite's local scale
+ * 
+ * @note not optimal, updates everything, every frame
  */
 void EntitySpriteComponent::update() {
-    for (int i = 0; i < sprites_.size(); ++i)
+    // std::cout << "| | | Updating ESC" << std::endl;
+    for (auto i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)
     {
-        sf::Transformable* transformable = &localSpriteTransformables_[i];
+        sf::Sprite* sprite = &std::get<0>(i->second);
+        sf::Transformable* localTransfo = &std::get<1>(i->second);
 
-        sprites_[i].setPosition(entityTransformable_->getPosition() + transformable->getPosition());
-        sprites_[i].setRotation(entityTransformable_->getRotation() + transformable->getRotation());
-        sprites_[i].setScale   (entityTransformable_->getScale().x  * transformable->getScale().x,
-                                entityTransformable_->getScale().y  * transformable->getScale().y);
-        sprites_[i].setOrigin  (entityTransformable_->getOrigin()   + transformable->getOrigin());
+        sprite->setPosition(entityTransformable_->getPosition() + localTransfo->getPosition());
+        sprite->setRotation(entityTransformable_->getRotation() + localTransfo->getRotation());
+        sprite->setScale   (entityTransformable_->getScale().x  * localTransfo->getScale().x,
+                            entityTransformable_->getScale().y  * localTransfo->getScale().y);
+        sprite->setOrigin  (entityTransformable_->getOrigin()   + localTransfo->getOrigin());
     }
 }
 
 
 
-sf::Texture* EntitySpriteComponent::_LoadTexture(std::string name)
+sf::Texture* EntitySpriteComponent::_LoadTexture(const char* filepath)
 {
     sf::Texture* texture = new sf::Texture();
-    if (!texture->loadFromFile(name)) {
+
+    // handle load error
+    if (!texture->loadFromFile(filepath)) {
         delete texture;
-        return nullptr;
+        throw(std::runtime_error("Failed to load texture"));
     }
+
     return texture;
 };

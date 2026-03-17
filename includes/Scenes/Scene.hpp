@@ -48,9 +48,7 @@ public:
     void setGame(Game* game) {game_ = game;}
 
 
-    /** distinct entity Getter
-     * 
-     * returns an entity according to its name
+    /** returns an entity according to its name
      * 
      * @param name name of the entity
      * 

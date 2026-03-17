@@ -27,5 +27,5 @@ void Ennemy::getHit(int damage) {
 }
 
 void Ennemy::update() {
-    // std::cout << "Ennemy Updating" << std::endl;
+    std::cout << "| | Ennemy " << name_ << " Updating" << std::endl;
 }

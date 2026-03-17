@@ -81,6 +81,7 @@ void RenderEngine::attachShaderToDrawable(std::string drawable_name, std::string
     drawables_.erase(drawable_name);
 }
 
+
 // deltaTime HAS passed since last call
 void RenderEngine::update()
 {

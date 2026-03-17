@@ -52,6 +52,7 @@ void Game::processEventFunc(CustomEvent* event)
 
 void Game::update()
 {
+    std::cout << "Game Updating" << std::endl;
     active_scene_->update();
 }
 
