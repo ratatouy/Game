@@ -9,7 +9,7 @@
 
 // Enum to represent log levels
 enum LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL };
-enum LogType { MAIN, GAME, RENDER_ENGINE, SCENE, ENTITY, EVENT };
+enum LogType { MAIN, GAME, RENDER_ENGINE, SCENE, ENTITY, PLAYER, EVENT };
 
 
 class Logger {
@@ -152,6 +152,8 @@ private:
             return (with_space) ? "scene    " : "scene";
         case ENTITY:
             return (with_space) ? "entity   " : "entity";
+        case PLAYER:
+            return (with_space) ? "player   " : "player";
         default:
             return (with_space) ? "unknown  " : "unknown";
         }

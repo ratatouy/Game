@@ -2,6 +2,8 @@
 #include "Scenes/Scene.hpp"
 #include "Events/BasicEvents/SpawnEntityEvent.hpp"
 
+#include "logger.hpp"
+
 #include <iostream>
 #include <memory>
 
@@ -10,8 +12,8 @@ void Player::update() {}
 
 
 void Player::attack() {
-    std::cout << "Raptorjesus von Behfeur calls upon his Rechauffeur in hope to anihilate his ArchNemesis" << std::endl;
-    std::cout << "\"RECHAUFFEUR STRKE !!!!\"" << std::endl;
+    Logger::log(PLAYER, INFO, "Raptorjesus von Behfeur calls upon his Rechauffeur in hope to anihilate his ArchNemesis");
+    Logger::log(PLAYER, INFO, "\"RECHAUFFEUR STRKE !!!!\"");
 
     Projectile* player_proj = new Projectile("player_proj", transformable_->getPosition(), {0.5f,0.f});
     player_proj->getEntitySprite()->AddSprite("cato", "assets/Sprites/cato.png");
