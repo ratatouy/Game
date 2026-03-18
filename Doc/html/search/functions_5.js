@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hitevent_246',['HitEvent',['../class_hit_event.html#a95e4d4e12df4349794af3d258575ffcd',1,'HitEvent']]]
+  ['isempty_238',['isEmpty',['../class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6',1,'EventHandler']]]
 ];

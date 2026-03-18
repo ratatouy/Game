@@ -10,5 +10,6 @@ var dir_09e761304027c904456130627fd4dcf5 =
     [ "Game.hpp", "_game_8hpp.html", [
       [ "SceneData", "struct_scene_data.html", null ],
       [ "Game", "class_game.html", "class_game" ]
-    ] ]
+    ] ],
+    [ "logger.hpp", "logger_8hpp.html", "logger_8hpp" ]
 ];

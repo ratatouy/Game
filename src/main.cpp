@@ -16,7 +16,11 @@
 
 #include "Game.hpp"
 
+#include "logger.hpp"
+
 int main() {
+    Logger::restart();
+
     // PhysicEngine* pEngine = new PhysicEngine(0);
     MenuScene* menu = new MenuScene();
     EventHandler* evHandler = new EventHandler();

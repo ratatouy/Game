@@ -12,10 +12,5 @@ var class_render_engine =
     [ "render", "class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb", null ],
     [ "setGame", "class_render_engine.html#ab0f7148ace0595342dc89227c75d9ec7", null ],
     [ "update", "class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba", null ],
-    [ "updateShaders", "class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e", null ],
-    [ "drawables_", "class_render_engine.html#a6a719909741921387d1fd427dde92a78", null ],
-    [ "game_", "class_render_engine.html#a6a593624cd3465fad4874b3cd91dca47", null ],
-    [ "shader_drawables_", "class_render_engine.html#ac5c37d8525d10f929dfc734f01308131", null ],
-    [ "total_clock_", "class_render_engine.html#a843f0356b77ee714cf95f53d357b5825", null ],
-    [ "window_", "class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62", null ]
+    [ "updateShaders", "class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e", null ]
 ];

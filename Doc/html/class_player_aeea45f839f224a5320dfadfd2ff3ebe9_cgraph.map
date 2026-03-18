@@ -1,13 +1,12 @@
 <map id="Player::attack" name="Player::attack">
-<area shape="rect" id="node1" title=" " alt="" coords="5,179,117,205"/>
-<area shape="rect" id="node2" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="195,56,326,83"/>
-<area shape="rect" id="node5" href="$class_entity_sprite_component.html#a95e0b3c037cb3a6f9017e5bcb5e012df" title=" " alt="" coords="174,171,347,213"/>
-<area shape="rect" id="node7" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="404,107,595,149"/>
-<area shape="rect" id="node10" href="$class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="179,237,343,264"/>
-<area shape="rect" id="node11" href="$class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7" title=" " alt="" coords="165,289,356,330"/>
-<area shape="rect" id="node3" href="$class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3" title=" " alt="" coords="436,5,563,32"/>
-<area shape="rect" id="node4" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title=" " alt="" coords="436,56,563,83"/>
-<area shape="rect" id="node6" href="$class_entity_sprite_component.html#a0fa5ee8dc3baa13d7eccc1a2f7ad8f58" title=" " alt="" coords="413,173,586,214"/>
-<area shape="rect" id="node8" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="404,238,595,279"/>
-<area shape="rect" id="node9" href="$class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="404,303,595,345"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,134,117,161"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a130a26f343863c55031f5c2ec3339395" title=" " alt="" coords="174,68,347,109"/>
+<area shape="rect" id="node3" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="404,5,595,47"/>
+<area shape="rect" id="node6" href="$class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="179,134,343,161"/>
+<area shape="rect" id="node7" href="$class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7" title=" " alt="" coords="165,185,356,227"/>
+<area shape="rect" id="node8" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title=" " alt="" coords="189,251,332,278"/>
+<area shape="rect" id="node4" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="404,71,595,112"/>
+<area shape="rect" id="node5" href="$class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="404,136,595,177"/>
+<area shape="rect" id="node9" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="428,251,571,278"/>
+<area shape="rect" id="node10" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title=" " alt="" coords="643,251,821,278"/>
 </map>

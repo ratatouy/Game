@@ -1,4 +1,5 @@
 <map id="Game::addEntity" name="Game::addEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="108,5,239,32"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="240,31,371,57"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,5,126,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title=" " alt="" coords="5,56,192,83"/>
 </map>

@@ -86,8 +86,6 @@ $(document).ready(function(){initNavTree('class_game.html',''); initResizable();
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_game-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Game Class Reference</div>  </div>
@@ -95,17 +93,6 @@ $(document).ready(function(){initNavTree('class_game.html',''); initResizable();
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_game_8hpp_source.html">Game.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Game:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game__coll__graph.png" border="0" usemap="#a_game_coll__map" alt="Collaboration graph"/></div>
-<map name="a_game_coll__map" id="a_game_coll__map">
-<area shape="rect" title=" " alt="" coords="221,5,283,32"/>
-<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="5,95,117,121"/>
-<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="178,95,289,121"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="432,95,493,121"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -133,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2a05b266e2a74d2e9f9a590c90e73ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f8625023fc606a99796cc1d69f618fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe">processEventFunc</a> (<a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *event)</td></tr>
 <tr class="separator:a0f8625023fc606a99796cc1d69f618fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8343a84bc062e46afc71a4d7aadc6351"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8343a84bc062e46afc71a4d7aadc6351">processEvent</a> (<a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *event)</td></tr>
+<tr class="separator:a8343a84bc062e46afc71a4d7aadc6351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f5148b5d6a33300719534ec9f0c75b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b">processEventFunc</a> (<a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *event)</td></tr>
+<tr class="separator:a00f5148b5d6a33300719534ec9f0c75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01f802010c5c0265601d516341417480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a01f802010c5c0265601d516341417480">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
 <tr class="separator:a01f802010c5c0265601d516341417480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b9d7c51cc228b59e1272b27bded4bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a16b9d7c51cc228b59e1272b27bded4bf">processEventFunc</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
@@ -143,26 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15ddd769261d923827a3cdf41499c843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472279479c423e4950f6eedf09bf8bf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5">addEntity</a> (<a class="el" href="class_entity.html">Entity</a> *entity)</td></tr>
 <tr class="separator:a472279479c423e4950f6eedf09bf8bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a838dc33451cdd3c6a8b8f121b8d6c642"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a838dc33451cdd3c6a8b8f121b8d6c642">active_scene_</a></td></tr>
-<tr class="separator:a838dc33451cdd3c6a8b8f121b8d6c642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef623078840f4a22954f057b2173e2f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_event_handler.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aef623078840f4a22954f057b2173e2f0">eventHandler_</a></td></tr>
-<tr class="separator:aef623078840f4a22954f057b2173e2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad766929105d9af28ea204cc53b5474fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_render_engine.html">RenderEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad766929105d9af28ea204cc53b5474fa">renderEngine_</a></td></tr>
-<tr class="separator:ad766929105d9af28ea204cc53b5474fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dab7c22cb2efd19bb58f8e8f82c175e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; const char *, <a class="el" href="struct_scene_data.html">SceneData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1dab7c22cb2efd19bb58f8e8f82c175e">scene_data_</a></td></tr>
-<tr class="separator:a1dab7c22cb2efd19bb58f8e8f82c175e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a2b0107721e981e0618027995f351142a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2b0107721e981e0618027995f351142a">instantiated_</a> = false</td></tr>
-<tr class="separator:a2b0107721e981e0618027995f351142a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00027">27</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00028">28</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad59df6562a58a614fda24622d3715b65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&nbsp;</a></span>Game() <span class="overload">[1/2]</span></h2>
@@ -227,7 +202,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section warning"><dt>Warning</dt><dd>DON'T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00056">56</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00066">66</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -247,8 +222,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a472279479c423e4950f6eedf09bf8bf5_icgraph.png" border="0" usemap="#aclass_game_a472279479c423e4950f6eedf09bf8bf5_icgraph" alt=""/></div>
 <map name="aclass_game_a472279479c423e4950f6eedf09bf8bf5_icgraph" id="aclass_game_a472279479c423e4950f6eedf09bf8bf5_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,239,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" title=" " alt="" coords="240,31,371,57"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,5,126,32"/>
+<area shape="rect" href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title=" " alt="" coords="5,56,192,83"/>
 </map>
 </div>
 
@@ -277,7 +253,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00052">52</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00053">53</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -313,7 +289,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00050">50</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00051">51</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a436fc8919d4d15983f076379acc00438_icgraph.png" border="0" usemap="#aclass_game_a436fc8919d4d15983f076379acc00438_icgraph" alt=""/></div>
+<map name="aclass_game_a436fc8919d4d15983f076379acc00438_icgraph" id="aclass_game_a436fc8919d4d15983f076379acc00438_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,287,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -340,7 +325,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00051">51</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00052">52</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -380,7 +365,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a01f802010c5c0265601d516341417480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01f802010c5c0265601d516341417480">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f802010c5c0265601d516341417480">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +380,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00033">33</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00042">42</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -410,7 +395,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a2a05b266e2a74d2e9f9a590c90e73ade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a05b266e2a74d2e9f9a590c90e73ade">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a05b266e2a74d2e9f9a590c90e73ade">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,15 +426,45 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph.png" border="0" usemap="#aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph" alt=""/></div>
 <map name="aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph" id="aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph">
-<area shape="rect" title=" " alt="" coords="259,5,415,32"/>
-<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title=" " alt="" coords="5,5,211,32"/>
+<area shape="rect" title=" " alt="" coords="361,5,517,32"/>
+<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title=" " alt="" coords="108,5,313,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8343a84bc062e46afc71a4d7aadc6351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8343a84bc062e46afc71a4d7aadc6351">&#9670;&nbsp;</a></span>processEvent() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::processEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00032">32</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph.png" border="0" usemap="#aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph" alt=""/></div>
+<map name="aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph" id="aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe" title=" " alt="" coords="209,5,396,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="a16b9d7c51cc228b59e1272b27bded4bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16b9d7c51cc228b59e1272b27bded4bf">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b9d7c51cc228b59e1272b27bded4bf">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,12 +479,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00038">38</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00046">46</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a0f8625023fc606a99796cc1d69f618fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f8625023fc606a99796cc1d69f618fe">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8625023fc606a99796cc1d69f618fe">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +499,52 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00028">28</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00027">27</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a0f8625023fc606a99796cc1d69f618fe_icgraph.png" border="0" usemap="#aclass_game_a0f8625023fc606a99796cc1d69f618fe_icgraph" alt=""/></div>
+<map name="aclass_game_a0f8625023fc606a99796cc1d69f618fe_icgraph" id="aclass_game_a0f8625023fc606a99796cc1d69f618fe_icgraph">
+<area shape="rect" title=" " alt="" coords="209,5,396,32"/>
+<area shape="rect" href="class_game.html#a8343a84bc062e46afc71a4d7aadc6351" title=" " alt="" coords="5,5,161,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a00f5148b5d6a33300719534ec9f0c75b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f5148b5d6a33300719534ec9f0c75b">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::processEventFunc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00036">36</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph.png" border="0" usemap="#aclass_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph" alt=""/></div>
+<map name="aclass_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph" id="aclass_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,192,159"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="278,107,409,133"/>
+<area shape="rect" href="class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af" title=" " alt="" coords="240,157,447,184"/>
+<area shape="rect" href="class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="495,5,701,32"/>
+<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="533,107,663,133"/>
+<area shape="rect" href="class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3" title=" " alt="" coords="749,56,876,83"/>
+<area shape="rect" href="class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="516,157,680,184"/>
+<area shape="rect" href="class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="511,209,685,250"/>
+<area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title=" " alt="" coords="749,107,876,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -503,7 +563,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00050">50</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00060">60</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -549,7 +609,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00048">48</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00049">49</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -586,7 +646,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00046">46</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00047">47</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -623,7 +683,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00047">47</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00048">48</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -667,8 +727,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_aae26066798d381cb711918f0b59958a5_icgraph.png" border="0" usemap="#aclass_game_aae26066798d381cb711918f0b59958a5_icgraph" alt=""/></div>
 <map name="aclass_game_aae26066798d381cb711918f0b59958a5_icgraph" id="aclass_game_aae26066798d381cb711918f0b59958a5_icgraph">
-<area shape="rect" title=" " alt="" coords="196,5,339,32"/>
-<area shape="rect" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title=" " alt="" coords="5,5,148,32"/>
+<area shape="rect" title=" " alt="" coords="459,5,601,32"/>
+<area shape="rect" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title=" " alt="" coords="268,5,411,32"/>
+<area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="108,5,220,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
@@ -689,7 +751,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00044">44</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00053">53</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -709,128 +771,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a838dc33451cdd3c6a8b8f121b8d6c642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a838dc33451cdd3c6a8b8f121b8d6c642">&#9670;&nbsp;</a></span>active_scene_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Game::active_scene_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00032">32</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aef623078840f4a22954f057b2173e2f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef623078840f4a22954f057b2173e2f0">&#9670;&nbsp;</a></span>eventHandler_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_event_handler.html">EventHandler</a>* Game::eventHandler_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00033">33</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2b0107721e981e0618027995f351142a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b0107721e981e0618027995f351142a">&#9670;&nbsp;</a></span>instantiated_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Game::instantiated_ = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00030">30</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad766929105d9af28ea204cc53b5474fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad766929105d9af28ea204cc53b5474fa">&#9670;&nbsp;</a></span>renderEngine_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_render_engine.html">RenderEngine</a>* Game::renderEngine_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00034">34</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a1dab7c22cb2efd19bb58f8e8f82c175e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dab7c22cb2efd19bb58f8e8f82c175e">&#9670;&nbsp;</a></span>scene_data_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;const char*, <a class="el" href="struct_scene_data.html">SceneData</a>&gt; Game::scene_data_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A Map of the data to use to load the Scenes </p>
-
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00036">36</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['throwevent_281',['throwEvent',['../class_game.html#aae26066798d381cb711918f0b59958a5',1,'Game::throwEvent()'],['../class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a',1,'Scene::throwEvent()']]],
-  ['tick_282',['tick',['../class_physic_engine.html#a00c4867c4a3b38a8bd99b08d74762270',1,'PhysicEngine']]],
-  ['transformablecomponent_283',['TransformableComponent',['../class_transformable_component.html#a14752ec78486fda48a270aed2549517a',1,'TransformableComponent::TransformableComponent()'],['../class_transformable_component.html#af19d6e1a0ecfdc24aed7f9771e50ef0a',1,'TransformableComponent::TransformableComponent(sf::Transformable transformable)']]]
+  ['update_275',['update',['../class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a',1,'EntitySpriteComponent::update()'],['../class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba',1,'RenderEngine::update()'],['../class_ennemy.html#a35b503a1ea239fd8b570012bab798dc3',1,'Ennemy::update()'],['../class_entity.html#aed73e98b980b85833428c935cc1c69f8',1,'Entity::update()'],['../class_player.html#a6912bb6e48efb5845d59f0f4582827ef',1,'Player::update()'],['../class_projectile.html#ac41ad56034b53e739619fabbd5e49652',1,'Projectile::update()'],['../class_game.html#a79df6376b332d63c9eca0dcee30305c3',1,'Game::update()'],['../class_scene.html#aa24c7e636c10e4e42650c1374b90bb80',1,'Scene::update()']]],
+  ['updateentities_276',['updateEntities',['../class_scene.html#a71feeabe831f8755af8adbef941188c4',1,'Scene']]],
+  ['updateshaders_277',['updateShaders',['../class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e',1,'RenderEngine']]]
 ];

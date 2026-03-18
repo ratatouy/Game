@@ -86,8 +86,6 @@ $(document).ready(function(){initNavTree('class_render_engine.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_render_engine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">RenderEngine Class Reference</div>  </div>
@@ -95,17 +93,6 @@ $(document).ready(function(){initNavTree('class_render_engine.html',''); initRes
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for RenderEngine:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_render_engine__coll__graph.png" border="0" usemap="#a_render_engine_coll__map" alt="Collaboration graph"/></div>
-<map name="a_render_engine_coll__map" id="a_render_engine_coll__map">
-<area shape="rect" title=" " alt="" coords="110,5,222,32"/>
-<area shape="rect" href="class_game.html" title=" " alt="" coords="135,95,197,121"/>
-<area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="5,184,116,211"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="241,184,302,211"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,24 +122,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3fd5129c749a1493da6d3113bd431b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53a4c17a370573bc19c797e4e0f966bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">render</a> ()</td></tr>
 <tr class="separator:a53a4c17a370573bc19c797e4e0f966bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a0c23c82d4adc6e2a196f2fff73642b62"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a></td></tr>
-<tr class="separator:a0c23c82d4adc6e2a196f2fff73642b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a593624cd3465fad4874b3cd91dca47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a6a593624cd3465fad4874b3cd91dca47">game_</a></td></tr>
-<tr class="separator:a6a593624cd3465fad4874b3cd91dca47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a843f0356b77ee714cf95f53d357b5825"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a843f0356b77ee714cf95f53d357b5825">total_clock_</a></td></tr>
-<tr class="separator:a843f0356b77ee714cf95f53d357b5825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a719909741921387d1fd427dde92a78"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, sf::Drawable * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a></td></tr>
-<tr class="separator:a6a719909741921387d1fd427dde92a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c37d8525d10f929dfc734f01308131"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::pair&lt; sf::Drawable *, sf::Shader &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a></td></tr>
-<tr class="separator:ac5c37d8525d10f929dfc734f01308131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a2c4178b08283abb5f28c68a28a762fbe"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_engine.html#a2c4178b08283abb5f28c68a28a762fbe">instantiated_</a> = false</td></tr>
-<tr class="separator:a2c4178b08283abb5f28c68a28a762fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages Shaders and the RenderWindow</p>
@@ -293,9 +262,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec_icgraph.png" border="0" usemap="#aclass_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec_icgraph" alt=""/></div>
 <map name="aclass_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec_icgraph" id="aclass_render_engine_abc2a4ddde4d353c1b889230d60d3e8ec_icgraph">
-<area shape="rect" title=" " alt="" coords="287,5,493,32"/>
-<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="108,5,239,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" title=" " alt="" coords="419,31,625,57"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="240,31,371,57"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,5,126,32"/>
+<area shape="rect" href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title=" " alt="" coords="5,56,192,83"/>
 </map>
 </div>
 
@@ -524,7 +494,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Renders the Drawables &amp; ShaderDrawables </p>
 
-<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00112">112</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00113">113</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -599,7 +569,7 @@ Here is the caller graph for this function:</div>
 <p>General Update Method</p>
 <p>Just updates the Shaders tbh </p>
 
-<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00085">85</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00086">86</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -629,7 +599,7 @@ Here is the call graph for this function:</div>
 <p>Update the shaders</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Update Shaders Depending on their args </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00092">92</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_render_engine_8cpp_source.html#l00093">93</a> of file <a class="el" href="_render_engine_8cpp_source.html">RenderEngine.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -639,162 +609,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba" title=" " alt="" coords="5,5,171,32"/>
 </map>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6a719909741921387d1fd427dde92a78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a719909741921387d1fd427dde92a78">&#9670;&nbsp;</a></span>drawables_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, sf::Drawable*&gt; RenderEngine::drawables_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>List of all the Drawables that have no Shaders</p>
-<p>Each drawable has a 'name', that isn't necessarily unique for drawables from an <a class="el" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity.">EntitySpriteComponent</a>, the name's format is [entity's name]_[sprite's name] </p>
-
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00026">26</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6a593624cd3465fad4874b3cd91dca47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a593624cd3465fad4874b3cd91dca47">&#9670;&nbsp;</a></span>game_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_game.html">Game</a>* RenderEngine::game_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Reference to the <a class="el" href="class_game.html">Game</a> <br  />
- </p>
-
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00021">21</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2c4178b08283abb5f28c68a28a762fbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c4178b08283abb5f28c68a28a762fbe">&#9670;&nbsp;</a></span>instantiated_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RenderEngine::instantiated_ = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Forces Singleton <br  />
- </p>
-
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00018">18</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac5c37d8525d10f929dfc734f01308131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5c37d8525d10f929dfc734f01308131">&#9670;&nbsp;</a></span>shader_drawables_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, std::pair&lt;sf::Drawable*, sf::Shader&gt; &gt; RenderEngine::shader_drawables_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>List of all the Drawables with Shaders</p>
-<p>std::pair&lt;Drawable*, Shader&gt; associates each drawable to it's shader </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00034">34</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a843f0356b77ee714cf95f53d357b5825"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a843f0356b77ee714cf95f53d357b5825">&#9670;&nbsp;</a></span>total_clock_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::Clock RenderEngine::total_clock_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Clock to keep track of total time For Animated Shaders <br  />
- </p>
-
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00023">23</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a0c23c82d4adc6e2a196f2fff73642b62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c23c82d4adc6e2a196f2fff73642b62">&#9670;&nbsp;</a></span>window_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::RenderWindow* RenderEngine::window_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>RenderWindow Object is stored here </p>
-
-<p class="definition">Definition at line <a class="el" href="_render_engine_8hpp_source.html#l00020">20</a> of file <a class="el" href="_render_engine_8hpp_source.html">RenderEngine.hpp</a>.</p>
 
 </div>
 </div>

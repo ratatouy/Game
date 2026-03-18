@@ -44,7 +44,6 @@ Set(SOURCE_FILES
 #     add_subdirectory(Test)
 # endif()
 
-
 ## Setup renderTest
 add_executable(renderTest ${SOURCE_FILES} Tests/RenderTest/renderTest.cpp)
 target_compile_features(renderTest PRIVATE cxx_std_17)

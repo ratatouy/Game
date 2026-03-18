@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['health_5f_66',['health_',['../class_ennemy.html#aee8858643147dcf3fa88303eb452c840',1,'Ennemy']]],
-  ['hitdata_67',['HitData',['../struct_hit_data.html',1,'']]],
-  ['hitevent_68',['HitEvent',['../class_hit_event.html',1,'HitEvent'],['../class_hit_event.html#a95e4d4e12df4349794af3d258575ffcd',1,'HitEvent::HitEvent()']]],
-  ['hitevent_2ecpp_69',['HitEvent.cpp',['../_hit_event_8cpp.html',1,'']]],
-  ['hitevent_2ehpp_70',['HitEvent.hpp',['../_hit_event_8hpp.html',1,'']]]
+  ['loadscene_68',['LoadScene',['../scene_loader_8cpp.html#abdddd0b1c9891c2ef4ba693d490698d1',1,'LoadScene(const char *filepath):&#160;sceneLoader.cpp'],['../scene_loader_8hpp.html#abdddd0b1c9891c2ef4ba693d490698d1',1,'LoadScene(const char *filepath):&#160;sceneLoader.cpp']]],
+  ['log_69',['log',['../class_logger.html#a51d42db0221fc45fe18d43931638157c',1,'Logger']]],
+  ['logger_70',['Logger',['../class_logger.html',1,'Logger'],['../class_logger.html#aefffc02e0c6c0ab09ec1f77fe35f6439',1,'Logger::Logger()']]],
+  ['logger_2ehpp_71',['logger.hpp',['../logger_8hpp.html',1,'']]],
+  ['loglevel_72',['LogLevel',['../logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9',1,'logger.hpp']]],
+  ['logtype_73',['LogType',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87c',1,'logger.hpp']]]
 ];

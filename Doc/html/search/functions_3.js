@@ -1,8 +1,27 @@
 var searchData=
 [
-  ['ennemy_218',['Ennemy',['../class_ennemy.html#a42a354239c3b07e2a2d5a7ecd4abb2c2',1,'Ennemy::Ennemy(const char *name, int health=7)'],['../class_ennemy.html#a68413fe16af0080a553a23117b6112b0',1,'Ennemy::Ennemy(const char *name, TransformableComponent *transform, int health=7)'],['../class_ennemy.html#a2d77e41154ffc414d35281897d206d01',1,'Ennemy::Ennemy(const char *name, TransformableComponent *transform, EntitySpriteComponent *sprites, int health=7)']]],
-  ['entity_219',['Entity',['../class_entity.html#a3170dc9c4995e5bd8e28601807350df9',1,'Entity::Entity()=delete'],['../class_entity.html#a59e211574f0e67279934df788cc03df7',1,'Entity::Entity(const char *name)'],['../class_entity.html#af0c912b86f9d0b1c7299239212d9a0ca',1,'Entity::Entity(const char *name, TransformableComponent *transformable)'],['../class_entity.html#abd75374db786223239daa5010b4cbdf3',1,'Entity::Entity(const char *name, TransformableComponent *transformable, EntitySpriteComponent *entitySprite)']]],
-  ['entityspritecomponent_220',['EntitySpriteComponent',['../class_entity_sprite_component.html#ad7d27bb5f88886b04eb159222135949d',1,'EntitySpriteComponent']]],
-  ['event_221',['Event',['../class_event.html#a5a40dd4708297f7031e29b39e039ae10',1,'Event']]],
-  ['eventhandler_222',['EventHandler',['../class_event_handler.html#a8fe27b69582cce5c6a89a0b134bc8158',1,'EventHandler::EventHandler()'],['../class_event_handler.html#a60e6d02d517a43f2da9d8c23d8a8f8f3',1,'EventHandler::EventHandler(const EventHandler &amp;)=delete']]]
+  ['game_213',['Game',['../class_game.html#abb28875d74d25fa9e0dcdbe37c6ad89c',1,'Game::Game(const Game &amp;)=delete'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
+  ['get_5fnb_5fsprites_214',['get_nb_sprites',['../class_entity_sprite_component.html#a35c033b64ac29f02624628265a1a7438',1,'EntitySpriteComponent']]],
+  ['getactivescene_215',['getActiveScene',['../class_game.html#ad10ed0a88180bf31ea13340a5422816b',1,'Game']]],
+  ['getcurrentevent_216',['getCurrentEvent',['../class_event_handler.html#acd62960f00deb706634059dc47e1d287',1,'EventHandler']]],
+  ['getcurrentscene_217',['getCurrentScene',['../class_entity.html#a2edbfe01d432af851512cb021caa6a75',1,'Entity']]],
+  ['getdata_218',['getData',['../class_custom_event.html#afe9e4741e5d445e29c7fda11fcd63a23',1,'CustomEvent::getData()'],['../class_hit_event.html#a76154ecea159d09b3e78668b1d8bfcc7',1,'HitEvent::getData()']]],
+  ['getdrawable_219',['getDrawable',['../class_render_engine.html#a3377beef102f78b7e035575ff5d8d199',1,'RenderEngine']]],
+  ['getentity_220',['getEntity',['../class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af',1,'SpawnEntityEvent::getEntity()'],['../class_scene.html#a3c200511f7f00c8184a7d6281a508e2c',1,'Scene::getEntity()']]],
+  ['getentitysprite_221',['getEntitySprite',['../class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822',1,'Entity']]],
+  ['geteventhandler_222',['getEventHandler',['../class_game.html#a436fc8919d4d15983f076379acc00438',1,'Game']]],
+  ['gethit_223',['getHit',['../class_ennemy.html#a4784be82a5ce923d1494477c55bbc297',1,'Ennemy']]],
+  ['getname_224',['getName',['../class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3',1,'Entity']]],
+  ['getorigin_225',['getOrigin',['../class_transformable_component.html#a22e3bfff7be1c64caabd4cce2338874f',1,'TransformableComponent']]],
+  ['getposition_226',['getPosition',['../class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20',1,'TransformableComponent']]],
+  ['getrenderengine_227',['getRenderEngine',['../class_game.html#ab09c78ab7a7b725eb8aa4724688137d1',1,'Game']]],
+  ['getrotation_228',['getRotation',['../class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff',1,'TransformableComponent']]],
+  ['getscale_229',['getScale',['../class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724',1,'TransformableComponent']]],
+  ['getspritedata_230',['GetSpriteData',['../class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe',1,'EntitySpriteComponent']]],
+  ['getthisspritedata_231',['GetThisSpriteData',['../class_entity_sprite_component.html#a92256ef1156a2946db6c8310c2eca67d',1,'EntitySpriteComponent']]],
+  ['getthisspritelocalsprite_232',['GetThisSpriteLocalSprite',['../class_entity_sprite_component.html#a6c9b5509c09333e55275c4cff0d8be4e',1,'EntitySpriteComponent']]],
+  ['getthisspritelocaltexture_233',['GetThisSpriteLocalTexture',['../class_entity_sprite_component.html#a01f39fbc24f9bf6e642668058931431c',1,'EntitySpriteComponent']]],
+  ['getthisspritelocaltransformable_234',['GetThisSpriteLocalTransformable',['../class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104',1,'EntitySpriteComponent']]],
+  ['gettransformable_235',['getTransformable',['../class_entity.html#aec0550d41d7e7ec5f868d30a84b0f6d2',1,'Entity']]],
+  ['getwindow_236',['getWindow',['../class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688',1,'RenderEngine']]]
 ];

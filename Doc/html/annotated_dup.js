@@ -10,6 +10,7 @@ var annotated_dup =
     [ "Game", "class_game.html", "class_game" ],
     [ "HitData", "struct_hit_data.html", "struct_hit_data" ],
     [ "HitEvent", "class_hit_event.html", "class_hit_event" ],
+    [ "Logger", "class_logger.html", "class_logger" ],
     [ "MenuScene", "class_menu_scene.html", "class_menu_scene" ],
     [ "PhysicEngine", "class_physic_engine.html", "class_physic_engine" ],
     [ "Player", "class_player.html", "class_player" ],
@@ -18,6 +19,7 @@ var annotated_dup =
     [ "Scene", "class_scene.html", "class_scene" ],
     [ "SceneData", "struct_scene_data.html", null ],
     [ "SceneTransitionEvent", "class_scene_transition_event.html", "class_scene_transition_event" ],
+    [ "SpawnEntityEvent", "class_spawn_entity_event.html", "class_spawn_entity_event" ],
     [ "TransformableComponent", "class_transformable_component.html", "class_transformable_component" ],
     [ "Transition", "class_transition.html", "class_transition" ]
 ];

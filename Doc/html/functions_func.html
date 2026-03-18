@@ -86,13 +86,6 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <div class="contents">
 &#160;
 
-<h3><a id="index__5F"></a>- _ -</h3><ul>
-<li>_LoadTexture()
-: <a class="el" href="class_entity_sprite_component.html#a0fa5ee8dc3baa13d7eccc1a2f7ad8f58">EntitySpriteComponent</a>
-</li>
-</ul>
-
-
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>addDrawable()
 : <a class="el" href="class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec">RenderEngine</a>
@@ -108,7 +101,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a">RenderEngine</a>
 </li>
 <li>AddSprite()
-: <a class="el" href="class_entity_sprite_component.html#a95e0b3c037cb3a6f9017e5bcb5e012df">EntitySpriteComponent</a>
+: <a class="el" href="class_entity_sprite_component.html#a130a26f343863c55031f5c2ec3339395">EntitySpriteComponent</a>
 </li>
 <li>attachShaderToDrawable()
 : <a class="el" href="class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4">RenderEngine</a>
@@ -170,6 +163,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>getEntity()
 : <a class="el" href="class_scene.html#a3c200511f7f00c8184a7d6281a508e2c">Scene</a>
+, <a class="el" href="class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af">SpawnEntityEvent</a>
 </li>
 <li>getEntitySprite()
 : <a class="el" href="class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822">Entity</a>
@@ -201,14 +195,17 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>GetSpriteData()
 : <a class="el" href="class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe">EntitySpriteComponent</a>
 </li>
-<li>GetSprites()
-: <a class="el" href="class_entity_sprite_component.html#a7d915dcc0b11fb1abaf2fe8527344d99">EntitySpriteComponent</a>
+<li>GetThisSpriteData()
+: <a class="el" href="class_entity_sprite_component.html#a92256ef1156a2946db6c8310c2eca67d">EntitySpriteComponent</a>
 </li>
-<li>GetThisSprite()
-: <a class="el" href="class_entity_sprite_component.html#a1cf34ed15c4b7eab4a08456a3ca0b83a">EntitySpriteComponent</a>
+<li>GetThisSpriteLocalSprite()
+: <a class="el" href="class_entity_sprite_component.html#a6c9b5509c09333e55275c4cff0d8be4e">EntitySpriteComponent</a>
+</li>
+<li>GetThisSpriteLocalTexture()
+: <a class="el" href="class_entity_sprite_component.html#a01f39fbc24f9bf6e642668058931431c">EntitySpriteComponent</a>
 </li>
 <li>GetThisSpriteLocalTransformable()
-: <a class="el" href="class_entity_sprite_component.html#a6bd8736f640b46f33cb3d3c626e45f09">EntitySpriteComponent</a>
+: <a class="el" href="class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104">EntitySpriteComponent</a>
 </li>
 <li>getTransformable()
 : <a class="el" href="class_entity.html#aec0550d41d7e7ec5f868d30a84b0f6d2">Entity</a>
@@ -229,6 +226,16 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>isEmpty()
 : <a class="el" href="class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6">EventHandler</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>log()
+: <a class="el" href="class_logger.html#a51d42db0221fc45fe18d43931638157c">Logger</a>
+</li>
+<li>Logger()
+: <a class="el" href="class_logger.html#aefffc02e0c6c0ab09ec1f77fe35f6439">Logger</a>
 </li>
 </ul>
 
@@ -286,6 +293,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>RenderEngine()
 : <a class="el" href="class_render_engine.html#a21fef2c43c37823096a0061f4e5d99df">RenderEngine</a>
 </li>
+<li>restart()
+: <a class="el" href="class_logger.html#af5ab7c3f7aae023ea3ae480540dabc2c">Logger</a>
+</li>
 <li>rotate()
 : <a class="el" href="class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7">TransformableComponent</a>
 </li>
@@ -334,23 +344,14 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>setScene()
 : <a class="el" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">Entity</a>
 </li>
-<li>SetThisSpriteLocalPosition()
-: <a class="el" href="class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5">EntitySpriteComponent</a>
-</li>
-<li>SetThisSpriteLocalRotation()
-: <a class="el" href="class_entity_sprite_component.html#a385cf72043acd5f996024ad1bc1f8cb6">EntitySpriteComponent</a>
-</li>
-<li>SetThisSpriteLocalScale()
-: <a class="el" href="class_entity_sprite_component.html#ae76247a27bc98af47971ea690a802a85">EntitySpriteComponent</a>
-</li>
 <li>SetThisSpriteLocalTransform()
-: <a class="el" href="class_entity_sprite_component.html#a167229f02959e590116a6d20d9500cf8">EntitySpriteComponent</a>
+: <a class="el" href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">EntitySpriteComponent</a>
 </li>
 <li>setTransformable()
 : <a class="el" href="class_entity.html#a797c5fbf96c08f0959e67c4432ffe125">Entity</a>
 </li>
-<li>setVisible()
-: <a class="el" href="class_entity_sprite_component.html#a796e62c0dca462d49a70a298957a4e9d">EntitySpriteComponent</a>
+<li>SpawnEntityEvent()
+: <a class="el" href="class_spawn_entity_event.html#acfe3862d537eacbbd3e09185251fca34">SpawnEntityEvent</a>
 </li>
 </ul>
 

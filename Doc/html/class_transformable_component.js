@@ -12,6 +12,5 @@ var class_transformable_component =
     [ "setOrigin", "class_transformable_component.html#a2f0fca3a97c469a31f6c5938afe72fba", null ],
     [ "setPosition", "class_transformable_component.html#a473927317bccd1852a910268d3296cc8", null ],
     [ "setRotation", "class_transformable_component.html#a58598a6517b3cae1f6a4b4bd07b72a66", null ],
-    [ "setScale", "class_transformable_component.html#a8926400fc62f6dadfc2f636d06720b04", null ],
-    [ "transformable_", "class_transformable_component.html#a16a8dbe8b2ed8aa46e59f7986d14bc2e", null ]
+    [ "setScale", "class_transformable_component.html#a8926400fc62f6dadfc2f636d06720b04", null ]
 ];

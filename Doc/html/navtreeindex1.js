@@ -1,20 +1,8 @@
 var NAVTREEINDEX1 =
 {
-"dir_d665af80335f773f8bfcf2f56b3f3e8a.html":[2,0,1,5],
-"dir_e263fff16f4e549006a69b0fa188c0bb.html":[2,0,1,4],
-"dir_f1c7b3e417824e0e7d6f433c2a3c5d63.html":[2,0,0,4],
-"dir_f39208d2c06e4ba084d4e51c73ead911.html":[2,0,0,5],
-"dir_f89958bcdbfc7cce25122c34d8f2efb7.html":[2,0,1,3,0],
-"dir_f9feb574afe9a142e1c5f95dde3abcfb.html":[2,0,0,2,0],
-"files.html":[2,0],
-"functions.html":[1,3,0],
-"functions_func.html":[1,3,1],
-"functions_vars.html":[1,3,2],
-"globals.html":[2,1,0],
-"globals_func.html":[2,1,1],
-"globals_vars.html":[2,1,2],
-"hierarchy.html":[1,2],
-"index.html":[],
+"logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e":[2,0,0,8,2,0],
+"logger_8hpp.html#af67907baa897e9fb84df0cb89795b87cad50cf309d7568040619ed26ee6835a84":[2,0,0,8,2,1],
+"logger_8hpp_source.html":[2,0,0,8],
 "main_8cpp.html":[2,0,1,7],
 "main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[2,0,1,7,0],
 "main_8cpp_source.html":[2,0,1,7],
@@ -35,6 +23,6 @@ var NAVTREEINDEX1 =
 "struct_hit_data.html#a2a4ef1bb807f4cecd6a9fdb4bf0128e2":[1,0,8,0],
 "struct_hit_data.html#aa75d1986b9426e16b056addd8f13d5b0":[1,0,8,2],
 "struct_hit_data.html#acbe9b91331220a4a7cf4c88c15b89608":[1,0,8,1],
-"struct_scene_data.html":[1,0,16],
+"struct_scene_data.html":[1,0,17],
 "todo.html":[0]
 };

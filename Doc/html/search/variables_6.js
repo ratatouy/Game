@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['health_5f_310',['health_',['../class_ennemy.html#aee8858643147dcf3fa88303eb452c840',1,'Ennemy']]]
+  ['target_293',['target',['../struct_hit_data.html#aa75d1986b9426e16b056addd8f13d5b0',1,'HitData']]],
+  ['transformable_5f_294',['transformable_',['../class_entity.html#aa02237639c1c2a57ceea70b935bfba45',1,'Entity']]]
 ];

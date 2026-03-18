@@ -94,35 +94,35 @@ $(document).ready(function(){initNavTree('_render_engine_8cpp_source.html',''); 
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_render_engine.html#a2c4178b08283abb5f28c68a28a762fbe">RenderEngine::instantiated_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">bool</span> RenderEngine::instantiated_ = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_render_engine.html#a21fef2c43c37823096a0061f4e5d99df">   10</a></span>&#160;<a class="code" href="class_render_engine.html#a21fef2c43c37823096a0061f4e5d99df">RenderEngine::RenderEngine</a>(std::string title, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_render_engine.html#a2c4178b08283abb5f28c68a28a762fbe">instantiated_</a>) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (instantiated_) {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;RenderEngine already instantiated&quot;</span>);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_render_engine.html#a2c4178b08283abb5f28c68a28a762fbe">instantiated_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    instantiated_ = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a> = <span class="keyword">new</span> sf::RenderWindow(sf::VideoMode(width, height), title);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    window_ = <span class="keyword">new</span> sf::RenderWindow(sf::VideoMode(width, height), title);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">   21</a></span>&#160;<a class="code" href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">RenderEngine::~RenderEngine</a>()</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_render_engine.html#a6a593624cd3465fad4874b3cd91dca47">game_</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">delete</span> window_;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">delete</span> game_;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.begin(); iterator != <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.end(); iterator++)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">delete</span> iterator-&gt;second;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.begin(); iterator != <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.end(); iterator++)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">delete</span> iterator-&gt;second.first;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.clear();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.clear();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    drawables_.clear();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    shader_drawables_.clear();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_render_engine.html#a2c4178b08283abb5f28c68a28a762fbe">instantiated_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    instantiated_ = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
@@ -133,8 +133,8 @@ $(document).ready(function(){initNavTree('_render_engine_8cpp_source.html',''); 
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.try_emplace(name);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.find(name)-&gt;second = drawable;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        drawables_.try_emplace(name);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        drawables_.find(name)-&gt;second = drawable;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; err)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
@@ -147,12 +147,12 @@ $(document).ready(function(){initNavTree('_render_engine_8cpp_source.html',''); 
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.try_emplace(name);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        shader_drawables_.try_emplace(name);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.find(name)-&gt;second.first = drawable;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.find(name)-&gt;second.second.loadFromFile(filepath, type);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        shader_drawables_.find(name)-&gt;second.first = drawable;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        shader_drawables_.find(name)-&gt;second.second.loadFromFile(filepath, type);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.find(name)-&gt;second.second.setUniform(<span class="stringliteral">&quot;resolution&quot;</span>, sf::Glsl::Vec2(<a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a>-&gt;getSize().x, <a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a>-&gt;getSize().y));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        shader_drawables_.find(name)-&gt;second.second.setUniform(<span class="stringliteral">&quot;resolution&quot;</span>, sf::Glsl::Vec2(window_-&gt;getSize().x, window_-&gt;getSize().y));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; err)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
@@ -163,74 +163,69 @@ $(document).ready(function(){initNavTree('_render_engine_8cpp_source.html',''); 
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4">RenderEngine::attachShaderToDrawable</a>(std::string drawable_name, std::string filepath, sf::Shader::Type type)</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.find(drawable_name) == <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.end())</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (drawables_.find(drawable_name) == drawables_.end())</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">throw</span>(std::runtime_error(<span class="stringliteral">&quot;RenderEngine::attachShaderToDrawable : Tried adding Shader to non-existing drawable&quot;</span>));</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a">addShaderDrawable</a>(drawable_name, <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.find(drawable_name)-&gt;second, filepath, type);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a">addShaderDrawable</a>(drawable_name, drawables_.find(drawable_name)-&gt;second, filepath, type);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.erase(drawable_name);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    drawables_.erase(drawable_name);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// deltaTime HAS passed since last call</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba">RenderEngine::update</a>()</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">updateShaders</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// deltaTime HAS passed since last call</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba">RenderEngine::update</a>()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">updateShaders</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">   92</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">RenderEngine::updateShaders</a>()</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    sf::Vector2i mousePos = sf::Mouse::getPosition(*<a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.begin(); iterator != <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.end(); iterator++)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> (!iterator-&gt;second.second.isAvailable())</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">throw</span>(std::runtime_error(<span class="stringliteral">&quot;Shader not available&quot;</span>));</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            iterator-&gt;second.second.setUniform(<span class="stringliteral">&quot;time&quot;</span>, <a class="code" href="class_render_engine.html#a843f0356b77ee714cf95f53d357b5825">total_clock_</a>.getElapsedTime().asSeconds());</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            iterator-&gt;second.second.setUniform(<span class="stringliteral">&quot;mouse&quot;</span>, sf::Glsl::Vec2({(float)mousePos.x, (<span class="keywordtype">float</span>)mousePos.y}));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">RenderEngine::updateShaders</a>()</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    sf::Vector2i mousePos = sf::Mouse::getPosition(*window_);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> (!iterator-&gt;second.second.isAvailable())</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">throw</span>(std::runtime_error(<span class="stringliteral">&quot;Shader not available&quot;</span>));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            iterator-&gt;second.second.setUniform(<span class="stringliteral">&quot;time&quot;</span>, total_clock_.getElapsedTime().asSeconds());</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            iterator-&gt;second.second.setUniform(<span class="stringliteral">&quot;mouse&quot;</span>, sf::Glsl::Vec2({(float)mousePos.x, (<span class="keywordtype">float</span>)mousePos.y}));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">  112</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">RenderEngine::render</a>()</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// Render Shader Drawables</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.begin(); iterator != <a class="code" href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">shader_drawables_</a>.end(); iterator++)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">// std::cout &lt;&lt; &quot;Rendering Shader Drawable&quot; &lt;&lt; iterator-&gt;first &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a>-&gt;draw(*iterator-&gt;second.first, &amp;iterator-&gt;second.second);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// Render Shaderless Drawables</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.begin(); iterator != <a class="code" href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">drawables_</a>.end(); iterator++)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {   </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Rendering Drawable &quot;</span> &lt;&lt; iterator-&gt;first &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">window_</a>-&gt;draw(*iterator-&gt;second);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">RenderEngine::render</a>()</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// Render Shader Drawables</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// std::cout &lt;&lt; &quot;Rendering Shader Drawable&quot; &lt;&lt; iterator-&gt;first &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        window_-&gt;draw(*iterator-&gt;second.first, &amp;iterator-&gt;second.second);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// Render Shaderless Drawables</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {   </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">// std::cout &lt;&lt; &quot;Rendering Drawable &quot; &lt;&lt; iterator-&gt;first &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        window_-&gt;draw(*iterator-&gt;second);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 <div class="ttc" id="a_game_8hpp_html"><div class="ttname"><a href="_game_8hpp.html">Game.hpp</a></div></div>
 <div class="ttc" id="a_render_engine_8hpp_html"><div class="ttname"><a href="_render_engine_8hpp.html">RenderEngine.hpp</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a0c23c82d4adc6e2a196f2fff73642b62"><div class="ttname"><a href="class_render_engine.html#a0c23c82d4adc6e2a196f2fff73642b62">RenderEngine::window_</a></div><div class="ttdeci">sf::RenderWindow * window_</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00020">RenderEngine.hpp:20</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_a21fef2c43c37823096a0061f4e5d99df"><div class="ttname"><a href="class_render_engine.html#a21fef2c43c37823096a0061f4e5d99df">RenderEngine::RenderEngine</a></div><div class="ttdeci">RenderEngine(std::string title=&quot;Game&quot;, int width=920, int height=480)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00010">RenderEngine.cpp:10</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_a22709e8d62956c56b981d4d5d3ee1fc6"><div class="ttname"><a href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6">RenderEngine::~RenderEngine</a></div><div class="ttdeci">~RenderEngine()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00021">RenderEngine.cpp:21</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a2c4178b08283abb5f28c68a28a762fbe"><div class="ttname"><a href="class_render_engine.html#a2c4178b08283abb5f28c68a28a762fbe">RenderEngine::instantiated_</a></div><div class="ttdeci">static bool instantiated_</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00018">RenderEngine.hpp:18</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a3fd5129c749a1493da6d3113bd431b1e"><div class="ttname"><a href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">RenderEngine::updateShaders</a></div><div class="ttdeci">void updateShaders()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00092">RenderEngine.cpp:92</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_a3fd5129c749a1493da6d3113bd431b1e"><div class="ttname"><a href="class_render_engine.html#a3fd5129c749a1493da6d3113bd431b1e">RenderEngine::updateShaders</a></div><div class="ttdeci">void updateShaders()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00093">RenderEngine.cpp:93</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_a4b02933b074b755d0b0f3ba6bb64b9d4"><div class="ttname"><a href="class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4">RenderEngine::attachShaderToDrawable</a></div><div class="ttdeci">void attachShaderToDrawable(std::string drawable_name, std::string filepath, sf::Shader::Type type)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00074">RenderEngine.cpp:74</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a53a4c17a370573bc19c797e4e0f966bb"><div class="ttname"><a href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">RenderEngine::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00112">RenderEngine.cpp:112</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a6a593624cd3465fad4874b3cd91dca47"><div class="ttname"><a href="class_render_engine.html#a6a593624cd3465fad4874b3cd91dca47">RenderEngine::game_</a></div><div class="ttdeci">Game * game_</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00021">RenderEngine.hpp:21</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a6a719909741921387d1fd427dde92a78"><div class="ttname"><a href="class_render_engine.html#a6a719909741921387d1fd427dde92a78">RenderEngine::drawables_</a></div><div class="ttdeci">std::unordered_map&lt; std::string, sf::Drawable * &gt; drawables_</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00026">RenderEngine.hpp:26</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_a843f0356b77ee714cf95f53d357b5825"><div class="ttname"><a href="class_render_engine.html#a843f0356b77ee714cf95f53d357b5825">RenderEngine::total_clock_</a></div><div class="ttdeci">sf::Clock total_clock_</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00023">RenderEngine.hpp:23</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_a53a4c17a370573bc19c797e4e0f966bb"><div class="ttname"><a href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb">RenderEngine::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00113">RenderEngine.cpp:113</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_a8a500759abd398b0d3e8b90f5fb16a4a"><div class="ttname"><a href="class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a">RenderEngine::addShaderDrawable</a></div><div class="ttdeci">void addShaderDrawable(std::string name, sf::Drawable *drawable, std::string filepath, sf::Shader::Type type)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00056">RenderEngine.cpp:56</a></div></div>
 <div class="ttc" id="aclass_render_engine_html_abc2a4ddde4d353c1b889230d60d3e8ec"><div class="ttname"><a href="class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec">RenderEngine::addDrawable</a></div><div class="ttdeci">void addDrawable(std::string name, sf::Drawable *drawable)</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00040">RenderEngine.cpp:40</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_ac5c37d8525d10f929dfc734f01308131"><div class="ttname"><a href="class_render_engine.html#ac5c37d8525d10f929dfc734f01308131">RenderEngine::shader_drawables_</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::pair&lt; sf::Drawable *, sf::Shader &gt; &gt; shader_drawables_</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8hpp_source.html#l00034">RenderEngine.hpp:34</a></div></div>
-<div class="ttc" id="aclass_render_engine_html_ac84ced7bed02e9e99166610d593e97ba"><div class="ttname"><a href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba">RenderEngine::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00085">RenderEngine.cpp:85</a></div></div>
+<div class="ttc" id="aclass_render_engine_html_ac84ced7bed02e9e99166610d593e97ba"><div class="ttname"><a href="class_render_engine.html#ac84ced7bed02e9e99166610d593e97ba">RenderEngine::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> <a href="_render_engine_8cpp_source.html#l00086">RenderEngine.cpp:86</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
