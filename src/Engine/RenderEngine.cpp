@@ -1,6 +1,8 @@
 #include "Engine/RenderEngine.hpp"
 #include "Game.hpp"
 
+#include "logger.hpp"
+
 #include <iostream>
 
 
@@ -39,7 +41,7 @@ RenderEngine::~RenderEngine()
 
 void RenderEngine::addDrawable(std::string name, sf::Drawable* drawable)
 {
-    std::cout << "adding " << name << std::endl;
+    Logger::log(RENDER_ENGINE, DEBUG, "adding " + (std::string)name);
 
     try
     {
@@ -48,7 +50,7 @@ void RenderEngine::addDrawable(std::string name, sf::Drawable* drawable)
     }
     catch (std::exception& err)
     {
-        std::cout << "addShaderObject Error: " << err.what() << std::endl;
+        Logger::log(RENDER_ENGINE, ERROR, "addShaderObject Error: " + (std::string)err.what());
     }
 }
 

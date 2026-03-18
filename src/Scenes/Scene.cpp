@@ -1,6 +1,8 @@
 #include "Scenes/Scene.hpp"
 #include "Game.hpp"
 
+#include "logger.hpp"
+
 #include <string.h>
 #include <iostream>
 
@@ -17,6 +19,7 @@ Scene::~Scene()
 
 void Scene::addEntity(Entity* entity)
 {
+    Logger::log(SCENE, DEBUG, "Adding entity " + (std::string)entity->getName());
     entity_map_[entity->getName()] = entity; // doesn't check for duplicity //
     entity->setScene(this);
 }
@@ -59,17 +62,14 @@ void Scene::throwEvent(Event* event)
 
 void Scene::update()
 {
-    std::cout << "Scene Updating" << std::endl;
     updateEntities();
 }
 
 
 void Scene::updateEntities()
 {
-    std::cout << "| Updating Entities" << std::endl;
     for (std::pair<const char*, Entity*> entity_pair : entity_map_)
     {
-        std::cout << "| | Updating Entity " << entity_pair.first << std::endl;
         entity_pair.second->update();
         entity_pair.second->getEntitySprite()->update();
     }

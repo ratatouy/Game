@@ -6,9 +6,7 @@
 #include <memory>
 
 
-void Player::update() {
-    std::cout << "| | Player (" << name_ << ") pos when updating : "<< transformable_->getPosition().x << " " << transformable_->getPosition().y << std::endl;
-}
+void Player::update() {}
 
 
 void Player::attack() {

@@ -33,6 +33,8 @@ Set(SOURCE_FILES
     src/Scenes/Scene.cpp
 
     src/Game.cpp
+
+    src/logger.cpp
 )
 
 

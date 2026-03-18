@@ -1,14 +1,8 @@
-#include "Components/BasicComponents/TransformableComponent.hpp"
-#include "Components/BasicComponents/EntitySpriteComponent.hpp"
-
-#include "Entity/Entity.hpp"
 #include "Entity/Player/Player.hpp"
 #include "Entity/Ennemies/Ennemy.hpp"
 
-#include "Scenes/Scene.hpp"
 #include "Scenes/BasicScenes/MenuScene.hpp"
 
-#include "Events/Event.hpp"
 #include "Events/EventHandler.hpp"
 
 #include "Engine/PhysicsEngine.hpp"
@@ -78,9 +72,8 @@ int main() {
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
             {
-                std::cout << "yo" << game->getActiveScene()->getEntity("raptor")->getTransformable()->getPosition().x << std::endl;
+                Logger::log(MAIN, INFO, "yo" + std::to_string(game->getActiveScene()->getEntity("raptor")->getTransformable()->getPosition().x));
                 game->getActiveScene()->getEntity("raptor")->getTransformable()->move({10, 0});
-                std::cout << "yo" << game->getActiveScene()->getEntity("raptor")->getTransformable()->getPosition().x << std::endl;
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
             {

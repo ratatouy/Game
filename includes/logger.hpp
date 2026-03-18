@@ -9,13 +9,29 @@
 
 // Enum to represent log levels
 enum LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL };
-enum LogType { ENTITY, GAME };
+enum LogType { MAIN, GAME, RENDER_ENGINE, SCENE, ENTITY, EVENT };
 
 
 class Logger {
 public:
     // Constructor unused bc everything is static (shhh dw it's clean code :clueless:)
     Logger() = delete;
+
+
+    /** Restart the logger, erasing all logs */
+    static void restart() {
+        for (unsigned int i = 0; i < logTypeSize; i++)
+        {
+            std::string filename = "Logs/" + _typeToString((LogType)i) + ".txt";
+            typeLogFile_.open(filename);
+            _closeFile(&typeLogFile_);
+        }
+
+        logFile_.open("Logs/general.txt");
+        if (!logFile_.is_open()) {
+            std::cerr << "Error opening log file." << std::endl;
+        }
+    }
 
 
     /** Log a message
@@ -40,15 +56,16 @@ public:
         std::strftime(timestamp, sizeof(timestamp),
                  "%Y-%m-%d %H:%M:%S", timeinfo);
 
-        // Create log entry
+        // Create Type log entry
         std::ostringstream typedLogEntry;
         typedLogEntry << "[" << timestamp << "] "
                  << _levelToString(level) << ": " << message
                  << std::endl;
         
+        // Create general log entry
         std::ostringstream generalLogEntry;
         generalLogEntry << "[" << timestamp << "] "
-                 << _typeToString(type) << " - "
+                 << _typeToString(type, true) << " - "
                  << _levelToString(level) << ": " << message
                  << std::endl;
 
@@ -71,28 +88,12 @@ public:
     }
     
 
-    /** Restart the logger, erasing all logs */
-    static void restart() {
-        for (unsigned int i = 0; i < logTypeSize; i++)
-        {
-            std::string filename = "Logs/" + _typeToString((LogType)i) + ".txt";
-            typeLogFile_.open(filename);
-            _closeFile(&typeLogFile_);
-        }
-
-        logFile_.open("Logs/general.txt");
-        if (!logFile_.is_open()) {
-            std::cerr << "Error opening log file." << std::endl;
-        }
-    }
-
-
 private:
     static std::ofstream typeLogFile_;   /**< Current stream for the typed log file       */
     static std::ofstream logFile_;       /**< Current stream for the general log file     */
     static int logTypeSize;              /**< Number of log types (not including general) */
 
-    
+
     /** Open a file without emptying it
      * 
      * @param filename The name of the file to open
@@ -138,22 +139,23 @@ private:
 
     /** Converts log type to a string for output
      * @param type The log type to convert */
-    static std::string _typeToString(LogType type)
+    static std::string _typeToString(LogType type, bool with_space = false)
     {
         switch (type) {
-        case ENTITY:
-            return "entity ";
+        case MAIN:
+            return (with_space) ? "main     " : "main";
         case GAME:
-            return "game   ";
+            return (with_space) ? "game     " : "game";
+        case RENDER_ENGINE:
+            return (with_space) ? "render   " : "render";
+        case SCENE:
+            return (with_space) ? "scene    " : "scene";
+        case ENTITY:
+            return (with_space) ? "entity   " : "entity";
         default:
-            return "UNKNOWN";
+            return (with_space) ? "unknown  " : "unknown";
         }
     }
 };
-
-
-std::ofstream Logger::typeLogFile_ = std::ofstream();
-std::ofstream Logger::logFile_ = std::ofstream();
-int Logger::logTypeSize = 2;
 
 #endif
