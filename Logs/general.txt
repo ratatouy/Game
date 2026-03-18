@@ -1,5 +1,0 @@
-[2026-03-18 15:49:27] scene     - DEBUG   : Adding entity raptor
-[2026-03-18 15:49:27] render    - DEBUG   : adding raptor_rechauffeur
-[2026-03-18 15:49:27] render    - DEBUG   : adding raptor_body
-[2026-03-18 15:49:27] scene     - DEBUG   : Adding entity lili
-[2026-03-18 15:49:27] render    - DEBUG   : adding lili_body
