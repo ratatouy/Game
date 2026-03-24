@@ -1,5 +1,6 @@
 <map id="Scene::throwEvent" name="Scene::throwEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node2" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="196,5,339,32"/>
-<area shape="rect" id="node3" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title=" " alt="" coords="387,5,565,32"/>
+<area shape="rect" id="node1" title="Throws the event to the parent game object." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="613,31,708,57"/>
+<area shape="rect" id="node3" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="196,31,339,57"/>
+<area shape="rect" id="node4" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title=" " alt="" coords="387,81,565,108"/>
 </map>

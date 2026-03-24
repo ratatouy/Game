@@ -4,6 +4,8 @@
 #include "Events/EventHandler.hpp"
 #include "Game.hpp"
 
+#include "logger.hpp"
+
 bool EventHandler::instantiated_ = false;
 
 
@@ -38,18 +40,16 @@ bool EventHandler::isEmpty() {
 
 
 void EventHandler::addEvent(Event* event) {
-    // std::cout << "Added An Event to the Queue" << std::endl;
+    Logger::log(EVENT_HANDLER, DEBUG, "Adding event");
     eventQueue.push(event);
 }
 
 void EventHandler::processEvent() {
     if (!eventQueue.empty()) {
 
-        // std::cout << "Processing Event" << std::endl;
-
         SceneTransitionEvent* Et = dynamic_cast<SceneTransitionEvent*>(eventQueue.front());
         if (Et) {
-            std::cout << "Processing Scene Transition Event"<<std::endl;
+            Logger::log(EVENT_HANDLER, DEBUG, "Processing SceneTransition Event");
             game_->processEvent(Et);
             eventQueue.pop();
             delete Et;
@@ -59,7 +59,7 @@ void EventHandler::processEvent() {
         
         SpawnEntityEvent* Es = dynamic_cast<SpawnEntityEvent*>(eventQueue.front());
         if (Es) {
-            std::cout << "Processing Custom Event"<<std::endl;
+            Logger::log(EVENT_HANDLER, DEBUG, "Processing SpawnEntity Event");
             game_->processEvent(Es);
             eventQueue.pop();
             delete Es;
@@ -69,7 +69,7 @@ void EventHandler::processEvent() {
 
         CustomEvent* Ec = dynamic_cast<CustomEvent*>(eventQueue.front());
         if (Ec) {
-            std::cout << "Processing Custom Event"<<std::endl;
+            Logger::log(EVENT_HANDLER, DEBUG, "Processing Custom Event");
             game_->processEvent(Ec);
             eventQueue.pop();
             delete Ec;

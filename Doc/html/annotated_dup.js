@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "BorderTransition", "class_border_transition.html", "class_border_transition" ],
     [ "CustomEvent", "class_custom_event.html", "class_custom_event" ],
     [ "Ennemy", "class_ennemy.html", "class_ennemy" ],
     [ "Entity", "class_entity.html", "class_entity" ],
@@ -10,6 +11,7 @@ var annotated_dup =
     [ "Game", "class_game.html", "class_game" ],
     [ "HitData", "struct_hit_data.html", "struct_hit_data" ],
     [ "HitEvent", "class_hit_event.html", "class_hit_event" ],
+    [ "HorizontalTransition", "class_horizontal_transition.html", "class_horizontal_transition" ],
     [ "Logger", "class_logger.html", "class_logger" ],
     [ "MenuScene", "class_menu_scene.html", "class_menu_scene" ],
     [ "PhysicEngine", "class_physic_engine.html", "class_physic_engine" ],
@@ -21,5 +23,6 @@ var annotated_dup =
     [ "SceneTransitionEvent", "class_scene_transition_event.html", "class_scene_transition_event" ],
     [ "SpawnEntityEvent", "class_spawn_entity_event.html", "class_spawn_entity_event" ],
     [ "TransformableComponent", "class_transformable_component.html", "class_transformable_component" ],
-    [ "Transition", "class_transition.html", "class_transition" ]
+    [ "Transition", "class_transition.html", "class_transition" ],
+    [ "VerticalTransition", "class_vertical_transition.html", "class_vertical_transition" ]
 ];

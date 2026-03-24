@@ -1,0 +1,104 @@
+\hypertarget{class_vertical_transition}{}\doxysection{Vertical\+Transition Class Reference}
+\label{class_vertical_transition}\index{VerticalTransition@{VerticalTransition}}
+
+
+Vertical \mbox{\hyperlink{class_transition}{Transition}} to a neighboring scene.  
+
+
+
+
+{\ttfamily \#include $<$Border\+Transition.\+hpp$>$}
+
+
+
+Inheritance diagram for Vertical\+Transition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_vertical_transition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Vertical\+Transition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_vertical_transition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vertical_transition_a377cd523dd50ca2e5242664886ad75cf}{Vertical\+Transition}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene, std\+::string target, int start, int end, bool down=true)
+\item 
+bool \mbox{\hyperlink{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}{check\+Transition}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$player\+\_\+tr) const override
+\begin{DoxyCompactList}\small\item\em Checks if the player is within the activation zone of the transition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vertical \mbox{\hyperlink{class_transition}{Transition}} to a neighboring scene. 
+
+A Vertical \mbox{\hyperlink{class_transition}{Transition}} is essentially a line caracterized by two points on the same x axis That activates if the player is between or past those two points. The \mbox{\hyperlink{class_transition}{Transition}} can either go up or go down. Usually the transition is placed on the top or bottom border of the scene. 
+
+Definition at line 68 of file Border\+Transition.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vertical_transition_a377cd523dd50ca2e5242664886ad75cf}\label{class_vertical_transition_a377cd523dd50ca2e5242664886ad75cf}} 
+\index{VerticalTransition@{VerticalTransition}!VerticalTransition@{VerticalTransition}}
+\index{VerticalTransition@{VerticalTransition}!VerticalTransition@{VerticalTransition}}
+\doxysubsubsection{\texorpdfstring{VerticalTransition()}{VerticalTransition()}}
+{\footnotesize\ttfamily Vertical\+Transition\+::\+Vertical\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene,  }\item[{std\+::string}]{target,  }\item[{int}]{start,  }\item[{int}]{end,  }\item[{bool}]{down = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 71 of file Border\+Transition.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}\label{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}} 
+\index{VerticalTransition@{VerticalTransition}!checkTransition@{checkTransition}}
+\index{checkTransition@{checkTransition}!VerticalTransition@{VerticalTransition}}
+\doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}}
+{\footnotesize\ttfamily bool Vertical\+Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the player is within the activation zone of the transition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+\_\+tr} & The player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_transition_af0b73e81bc1fb0a8b3911c45d141b46e}{Transition}}.
+
+
+
+Definition at line 5 of file Border\+Transition.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Transitions/\+Basic\+Transitions/\mbox{\hyperlink{_border_transition_8hpp}{Border\+Transition.\+hpp}}\item 
+src/\+Transitions/\+Basic\+Transitions/\mbox{\hyperlink{_border_transition_8cpp}{Border\+Transition.\+cpp}}\end{DoxyCompactItemize}

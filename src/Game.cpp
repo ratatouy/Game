@@ -18,6 +18,7 @@ Game::Game()
 
 void Game::throwEvent(Event* event)
 {
+    Logger::log(GAME, DEBUG, "Throwing event");
     eventHandler_->addEvent(event);
 }
 
@@ -30,10 +31,12 @@ void Game::processEventFunc(SceneTransitionEvent* event) {}
 
 void Game::processEvent(SpawnEntityEvent* event)
 {
+    Logger::log(GAME, DEBUG, "dispatching SpawnEntity Event");
     this->processEventFunc(event);
 }
 void Game::processEventFunc(SpawnEntityEvent* event)
 {
+    Logger::log(GAME, DEBUG, "processing SpawnEntity Event");
     this->addEntity(event->getEntity());
 }
 

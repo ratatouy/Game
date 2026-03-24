@@ -25,5 +25,10 @@ var hierarchy =
     ] ],
     [ "SceneData", "struct_scene_data.html", null ],
     [ "TransformableComponent", "class_transformable_component.html", null ],
-    [ "Transition", "class_transition.html", null ]
+    [ "Transition", "class_transition.html", [
+      [ "BorderTransition", "class_border_transition.html", [
+        [ "HorizontalTransition", "class_horizontal_transition.html", null ],
+        [ "VerticalTransition", "class_vertical_transition.html", null ]
+      ] ]
+    ] ]
 ];

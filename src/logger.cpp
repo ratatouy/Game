@@ -2,4 +2,4 @@
 
 std::ofstream Logger::typeLogFile_ = std::ofstream();
 std::ofstream Logger::logFile_ = std::ofstream();
-int Logger::logTypeSize = 7;
+int Logger::logTypeSize = 9;

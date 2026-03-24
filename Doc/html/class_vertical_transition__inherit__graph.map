@@ -1,0 +1,5 @@
+<map id="VerticalTransition" name="VerticalTransition">
+<area shape="rect" id="node1" title="Vertical Transition to a neighboring scene." alt="" coords="5,155,140,181"/>
+<area shape="rect" id="node2" href="$class_border_transition.html" title="Manages transitions from the border of a screen to a neighboring screen." alt="" coords="9,80,137,107"/>
+<area shape="rect" id="node3" href="$class_transition.html" title="Object to manage transitions between Scenes." alt="" coords="30,5,115,32"/>
+</map>

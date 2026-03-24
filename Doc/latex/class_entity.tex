@@ -2,11 +2,17 @@
 \label{class_entity}\index{Entity@{Entity}}
 
 
+An \mbox{\hyperlink{class_entity}{Entity}} is an object that has an update and a render method.  
+
+
+
+
 {\ttfamily \#include $<$Entity.\+hpp$>$}
 
 
 
-Inheritance diagram for Entity\+:\nopagebreak
+Inheritance diagram for Entity\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,15 +35,15 @@ Collaboration diagram for Entity\+:
 \mbox{\hyperlink{class_entity_a3170dc9c4995e5bd8e28601807350df9}{Entity}} ()=delete
 \item 
 \mbox{\hyperlink{class_entity_a59e211574f0e67279934df788cc03df7}{Entity}} (const char $\ast$name)
-\item 
+\begin{DoxyCompactList}\small\item\em Lowest Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_entity_af0c912b86f9d0b1c7299239212d9a0ca}{Entity}} (const char $\ast$name, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transformable)
-\item 
+\begin{DoxyCompactList}\small\item\em Intermediate Transformable Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_entity_abd75374db786223239daa5010b4cbdf3}{Entity}} (const char $\ast$name, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transformable, \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$entity\+Sprite)
-\item 
+\begin{DoxyCompactList}\small\item\em Full Constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}{set\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current scene of the entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_entity_a78ccaeac4d798bf0b78ee48b317b5e2f}{set\+Name}} (const char $\ast$name)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the name of the entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_entity_a797c5fbf96c08f0959e67c4432ffe125}{set\+Transformable}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transformable)
 \item 
 void \mbox{\hyperlink{class_entity_a4c19692f28142f36b311e3ee1ad9de77}{set\+Entity\+Sprite}} (\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$entity\+Sprite)
@@ -62,29 +68,19 @@ virtual void \mbox{\hyperlink{class_entity_abc21bc8c791274305898a2b13e624692}{re
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_entity_a91027be8d125eb57c233dd631b226e4e}{current\+\_\+scene\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pointer to the current scene. \end{DoxyCompactList}\item 
 const char $\ast$ \mbox{\hyperlink{class_entity_ac765a424fb46628fc30523f040910f23}{name\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em Name of the entity. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$ \mbox{\hyperlink{class_entity_aa02237639c1c2a57ceea70b935bfba45}{transformable\+\_\+}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pointer to the Transformable Component. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$ \mbox{\hyperlink{class_entity_a80bb0324b8d46cf95529bd340c383585}{entity\+Sprite\+\_\+}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pointer to the Entity\+Sprite Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Base class for all entities
+An \mbox{\hyperlink{class_entity}{Entity}} is an object that has an update and a render method. 
 
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} 
-
-\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}}
-\end{DoxySeeAlso}
-\begin{DoxyNote}{Note}
-An \mbox{\hyperlink{class_entity}{Entity}} is an object that has an update and a render method 
-\end{DoxyNote}
-
-
-Definition at line 23 of file Entity.\+hpp.
+Definition at line 22 of file Entity.\+hpp.
 
 
 
@@ -101,7 +97,9 @@ Definition at line 23 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Lowest Constructor
+
+
+Lowest Constructor. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -110,7 +108,7 @@ Lowest Constructor
 \end{DoxyParams}
 
 
-Definition at line 41 of file Entity.\+hpp.
+Definition at line 38 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_af0c912b86f9d0b1c7299239212d9a0ca}\label{class_entity_af0c912b86f9d0b1c7299239212d9a0ca}} 
 \index{Entity@{Entity}!Entity@{Entity}}
@@ -118,7 +116,9 @@ Definition at line 41 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transformable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Intermediate Transformable Constructor
+
+
+Intermediate Transformable Constructor. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -129,7 +129,7 @@ Intermediate Transformable Constructor
 \end{DoxyParams}
 
 
-Definition at line 49 of file Entity.\+hpp.
+Definition at line 44 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_abd75374db786223239daa5010b4cbdf3}\label{class_entity_abd75374db786223239daa5010b4cbdf3}} 
 \index{Entity@{Entity}!Entity@{Entity}}
@@ -137,7 +137,9 @@ Definition at line 49 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transformable,  }\item[{\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$}]{entity\+Sprite }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Full Constructor
+
+
+Full Constructor. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -150,7 +152,7 @@ Full Constructor
 \end{DoxyParams}
 
 
-Definition at line 58 of file Entity.\+hpp.
+Definition at line 51 of file Entity.\+hpp.
 
 
 
@@ -168,7 +170,7 @@ Pointer to the current scene
 \end{DoxyReturn}
 
 
-Definition at line 103 of file Entity.\+hpp.
+Definition at line 92 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_a1082a3ee77f8235d11aee6a6b7b5b822}\label{class_entity_a1082a3ee77f8235d11aee6a6b7b5b822}} 
 \index{Entity@{Entity}!getEntitySprite@{getEntitySprite}}
@@ -183,10 +185,9 @@ Pointer to the Entity\+Sprite Component
 \end{DoxyReturn}
 
 
-Definition at line 117 of file Entity.\+hpp.
+Definition at line 106 of file Entity.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -206,10 +207,9 @@ Name of the entity
 \end{DoxyReturn}
 
 
-Definition at line 96 of file Entity.\+hpp.
+Definition at line 85 of file Entity.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -229,13 +229,13 @@ Pointer to the Transformable Component
 \end{DoxyReturn}
 
 
-Definition at line 110 of file Entity.\+hpp.
+Definition at line 99 of file Entity.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=293pt]{class_entity_aec0550d41d7e7ec5f868d30a84b0f6d2_icgraph}
+\includegraphics[width=350pt]{class_entity_aec0550d41d7e7ec5f868d30a84b0f6d2_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_entity_a37cb335962ddb32dafd558405088ceda}\label{class_entity_a37cb335962ddb32dafd558405088ceda}} 
@@ -250,7 +250,7 @@ Reimplemented in \mbox{\hyperlink{class_ennemy_aaea8bc5fcf41d2bf5771416b70a587dc
 
 
 
-Definition at line 121 of file Entity.\+hpp.
+Definition at line 110 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_af56932d27db52a26c66681dd1c6e1aff}\label{class_entity_af56932d27db52a26c66681dd1c6e1aff}} 
 \index{Entity@{Entity}!processEvent@{processEvent}}
@@ -260,7 +260,7 @@ Definition at line 121 of file Entity.\+hpp.
 
 
 
-Definition at line 120 of file Entity.\+hpp.
+Definition at line 109 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_abc21bc8c791274305898a2b13e624692}\label{class_entity_abc21bc8c791274305898a2b13e624692}} 
 \index{Entity@{Entity}!render@{render}}
@@ -270,7 +270,7 @@ Definition at line 120 of file Entity.\+hpp.
 
 
 
-Definition at line 125 of file Entity.\+hpp.
+Definition at line 114 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_a4c19692f28142f36b311e3ee1ad9de77}\label{class_entity_a4c19692f28142f36b311e3ee1ad9de77}} 
 \index{Entity@{Entity}!setEntitySprite@{setEntitySprite}}
@@ -287,7 +287,7 @@ Set the Entity\+Sprite Component of the entity
 \end{DoxyParams}
 
 
-Definition at line 88 of file Entity.\+hpp.
+Definition at line 77 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_a78ccaeac4d798bf0b78ee48b317b5e2f}\label{class_entity_a78ccaeac4d798bf0b78ee48b317b5e2f}} 
 \index{Entity@{Entity}!setName@{setName}}
@@ -295,7 +295,9 @@ Definition at line 88 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
 {\footnotesize\ttfamily void Entity\+::set\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Set the name of the entity
+
+
+Set the name of the entity. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -304,7 +306,7 @@ Set the name of the entity
 \end{DoxyParams}
 
 
-Definition at line 74 of file Entity.\+hpp.
+Definition at line 63 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}\label{class_entity_ad840fa8abf45ea14ed5ff7239f2268ff}} 
 \index{Entity@{Entity}!setScene@{setScene}}
@@ -312,7 +314,9 @@ Definition at line 74 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{setScene()}{setScene()}}
 {\footnotesize\ttfamily void Entity\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Set the current scene of the entity
+
+
+Set the current scene of the entity. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -321,7 +325,7 @@ Set the current scene of the entity
 \end{DoxyParams}
 
 
-Definition at line 67 of file Entity.\+hpp.
+Definition at line 58 of file Entity.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -346,7 +350,7 @@ Set the Transformable Component of the entity
 \end{DoxyParams}
 
 
-Definition at line 81 of file Entity.\+hpp.
+Definition at line 70 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_aed73e98b980b85833428c935cc1c69f8}\label{class_entity_aed73e98b980b85833428c935cc1c69f8}} 
 \index{Entity@{Entity}!update@{update}}
@@ -360,7 +364,7 @@ Reimplemented in \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e4
 
 
 
-Definition at line 124 of file Entity.\+hpp.
+Definition at line 113 of file Entity.\+hpp.
 
 
 
@@ -371,9 +375,13 @@ Definition at line 124 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{current\_scene\_}{current\_scene\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Entity\+::current\+\_\+scene\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
-Pointer to the current scene 
 
-Definition at line 26 of file Entity.\+hpp.
+
+Pointer to the current scene. 
+
+
+
+Definition at line 25 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_a80bb0324b8d46cf95529bd340c383585}\label{class_entity_a80bb0324b8d46cf95529bd340c383585}} 
 \index{Entity@{Entity}!entitySprite\_@{entitySprite\_}}
@@ -381,10 +389,13 @@ Definition at line 26 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{entitySprite\_}{entitySprite\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}}$\ast$ Entity\+::entity\+Sprite\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
-Pointer to the Entity\+Sprite Component ~\newline
- 
 
-Definition at line 30 of file Entity.\+hpp.
+
+Pointer to the Entity\+Sprite Component. 
+
+
+
+Definition at line 29 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_ac765a424fb46628fc30523f040910f23}\label{class_entity_ac765a424fb46628fc30523f040910f23}} 
 \index{Entity@{Entity}!name\_@{name\_}}
@@ -392,9 +403,13 @@ Definition at line 30 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{name\_}{name\_}}
 {\footnotesize\ttfamily const char$\ast$ Entity\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
-Name of the entity 
 
-Definition at line 27 of file Entity.\+hpp.
+
+Name of the entity. 
+
+
+
+Definition at line 26 of file Entity.\+hpp.
 
 \mbox{\Hypertarget{class_entity_aa02237639c1c2a57ceea70b935bfba45}\label{class_entity_aa02237639c1c2a57ceea70b935bfba45}} 
 \index{Entity@{Entity}!transformable\_@{transformable\_}}
@@ -402,9 +417,13 @@ Definition at line 27 of file Entity.\+hpp.
 \doxysubsubsection{\texorpdfstring{transformable\_}{transformable\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}$\ast$ Entity\+::transformable\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
-Pointer to the Transformable Component 
 
-Definition at line 29 of file Entity.\+hpp.
+
+Pointer to the Transformable Component. 
+
+
+
+Definition at line 28 of file Entity.\+hpp.
 
 
 

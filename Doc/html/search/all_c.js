@@ -1,9 +1,16 @@
 var searchData=
 [
-  ['render_93',['render',['../class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb',1,'RenderEngine::render()'],['../class_entity.html#abc21bc8c791274305898a2b13e624692',1,'Entity::render()'],['../class_game.html#a15ddd769261d923827a3cdf41499c843',1,'Game::render()']]],
-  ['renderengine_94',['RenderEngine',['../class_render_engine.html',1,'RenderEngine'],['../class_render_engine.html#a21fef2c43c37823096a0061f4e5d99df',1,'RenderEngine::RenderEngine(std::string title=&quot;Game&quot;, int width=920, int height=480)'],['../class_render_engine.html#a316fc5791b0934259ac91fa20a4d55e9',1,'RenderEngine::RenderEngine(const RenderEngine &amp;)=delete']]],
-  ['renderengine_2ecpp_95',['RenderEngine.cpp',['../_render_engine_8cpp.html',1,'']]],
-  ['renderengine_2ehpp_96',['RenderEngine.hpp',['../_render_engine_8hpp.html',1,'']]],
-  ['restart_97',['restart',['../class_logger.html#af5ab7c3f7aae023ea3ae480540dabc2c',1,'Logger']]],
-  ['rotate_98',['rotate',['../class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7',1,'TransformableComponent']]]
+  ['physicengine_93',['PhysicEngine',['../class_physic_engine.html',1,'PhysicEngine'],['../class_physic_engine.html#aa0a387176c4b1ffc7fda33d7e7bb85c6',1,'PhysicEngine::PhysicEngine()']]],
+  ['physicsengine_2ecpp_94',['PhysicsEngine.cpp',['../_physics_engine_8cpp.html',1,'']]],
+  ['physicsengine_2ehpp_95',['PhysicsEngine.hpp',['../_physics_engine_8hpp.html',1,'']]],
+  ['player_96',['Player',['../class_player.html',1,'']]],
+  ['player_97',['PLAYER',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87cade5dc3e0dbd007d995ed3e37bde5ce7e',1,'logger.hpp']]],
+  ['player_98',['Player',['../class_player.html#a18974c94990a0a4825cebd4c60b30c89',1,'Player::Player(const char *name, TransformableComponent *transformable, EntitySpriteComponent *entitySprite)'],['../class_player.html#aa8fef1ea4df900d4585249b98a4b1a74',1,'Player::Player(const char *name, TransformableComponent *transformable)'],['../class_player.html#aa1c9e621e3c126d2fd04930635bd968b',1,'Player::Player(const char *name)']]],
+  ['player_2ecpp_99',['Player.cpp',['../_player_8cpp.html',1,'']]],
+  ['player_2ehpp_100',['Player.hpp',['../_player_8hpp.html',1,'']]],
+  ['processevent_101',['processEvent',['../class_game.html#a01f802010c5c0265601d516341417480',1,'Game::processEvent()'],['../class_scene.html#a4654dfc8ab44c744171caa43fc22bbab',1,'Scene::processEvent(CustomEvent *event)'],['../class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99',1,'Scene::processEvent(SceneTransitionEvent *event)'],['../class_game.html#a8343a84bc062e46afc71a4d7aadc6351',1,'Game::processEvent(SpawnEntityEvent *event)'],['../class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade',1,'Game::processEvent(SceneTransitionEvent *event)'],['../class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1',1,'EventHandler::processEvent()'],['../class_entity.html#a37cb335962ddb32dafd558405088ceda',1,'Entity::processEvent(CustomEvent *event)'],['../class_entity.html#af56932d27db52a26c66681dd1c6e1aff',1,'Entity::processEvent(SceneTransitionEvent *event)'],['../class_ennemy.html#aaea8bc5fcf41d2bf5771416b70a587dc',1,'Ennemy::processEvent()']]],
+  ['processeventfunc_102',['processEventFunc',['../class_game.html#a0f8625023fc606a99796cc1d69f618fe',1,'Game::processEventFunc(SceneTransitionEvent *event)'],['../class_game.html#a00f5148b5d6a33300719534ec9f0c75b',1,'Game::processEventFunc(SpawnEntityEvent *event)'],['../class_game.html#a16b9d7c51cc228b59e1272b27bded4bf',1,'Game::processEventFunc(CustomEvent *event)'],['../class_menu_scene.html#a9bc01005e87b0fde5324da4ef1f95bd3',1,'MenuScene::processEventFunc()'],['../class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a',1,'Scene::processEventFunc(SceneTransitionEvent *event)'],['../class_scene.html#a0db76b56a0c7637f4a20900ab90aa266',1,'Scene::processEventFunc(CustomEvent *event)']]],
+  ['projectile_103',['Projectile',['../class_projectile.html#a2146c34f553c3726f76571b268af1e7f',1,'Projectile::Projectile()'],['../class_projectile.html',1,'Projectile']]],
+  ['projectile_2ecpp_104',['Projectile.cpp',['../_projectile_8cpp.html',1,'']]],
+  ['projectile_2ehpp_105',['Projectile.hpp',['../_projectile_8hpp.html',1,'']]]
 ];

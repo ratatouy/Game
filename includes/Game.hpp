@@ -1,6 +1,10 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
+
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
 #include <map>
 
 #include "Engine/RenderEngine.hpp"
@@ -17,60 +21,177 @@ class Scene;        // Forward Declaration of Scene        //
 
 class EventHandler; // Forward Declaration of EventHandler //
 
+struct SceneData{};
 
-struct SceneData
-{
-
-};
-
-
-
+////////////////////////////////////////////////////////////
+/// \brief Main class of the game
+///
+/// The game is a collection of scenes, with only one active at a time.
+/// It also is a singleton.
+/// And it brings together the RenderEngine, EventHandler and the active Scene.
+////////////////////////////////////////////////////////////
 class Game
 {
-private:
-    static bool instantiated_;
-
-    Scene* active_scene_;
-    EventHandler* eventHandler_;
-    RenderEngine* renderEngine_;
-
-    std::unordered_map<const char*, SceneData> scene_data_;
-    /**< A Map of the data to use to load the Scenes */
-
-
 public:
+    ////////////////////////////////////////////////////////////
+    /// \brief Default Constructor
+    ///
+    /// Throws an error if the Game is already instantiated.
+    ////////////////////////////////////////////////////////////
     Game();
-    Game(const Game&) = delete;
 
-    Game& operator=(const Game&) = delete;
+    Game(const Game&) = delete;             ///< Delete copy constructor to force singleton behavior
+    Game& operator=(const Game&) = delete;  ///< Delete copy assignment to force singleton behavior
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Set the EventHandler
+    ///
+    /// \param eventHandler Reference to the EventHandler
+    ////////////////////////////////////////////////////////////
     void setEventHandler(EventHandler* eventHandler) {eventHandler_ = eventHandler;}
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Set the RenderEngine
+    ///
+    /// \param renderEngine Reference to the RenderEngine
+    ////////////////////////////////////////////////////////////
     void setRenderEngine(RenderEngine* renderEngine) {renderEngine_ = renderEngine;}
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Set the active Scene
+    ///
+    /// \param scene Reference to the Scene
+    ////////////////////////////////////////////////////////////
     void setActiveScene(Scene* scene) {active_scene_ = scene;}
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Get a reference to the EventHandler
+    ///
+    /// The EventHandler pointer is NOT a constant, so it can be used and modified
+    ///
+    /// \return Reference to the EventHandler
+    ////////////////////////////////////////////////////////////
     EventHandler* getEventHandler() {return eventHandler_;}
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Get a reference to the RenderEngine
+    ///
+    /// The RenderEngine pointer is NOT a constant, so it can be used and modified
+    ///
+    /// \return Reference to the RenderEngine
+    ////////////////////////////////////////////////////////////
     RenderEngine* getRenderEngine() {return renderEngine_;}
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Get a reference to the active Scene
+    ///
+    /// The Scene pointer is NOT a constant, so it can be used and modified
+    ///
+    /// \return Reference to the active Scene
+    ////////////////////////////////////////////////////////////
     Scene* getActiveScene() {return active_scene_;}
 
-
+    ////////////////////////////////////////////////////////////
+    /// \brief Throw an event to the EventHandler
+    ///
+    /// This doesn't actually care about the type of the event,
+    /// it just adds it to the queue of the EventHandler.
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void throwEvent(Event* event);
 
 
+    ////////////////////////////////////////////////////////////
+    /// \brief SceneTransitionEvent process distributor
+    ///
+    /// Distributes the SceneTransitionEvent to the objects that need it :
+    /// \li this
+    /// \li The Scene
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void processEvent(SceneTransitionEvent* event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Process a SceneTransitionEvent
+    ///
+    /// Unloads a scene and loads a new one
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void processEventFunc(SceneTransitionEvent* event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief SpawnEntityEvent process distributor
+    ///
+    /// Distributes the SpawnEntityEvent to the objects that need it :
+    /// \li this
+    /// \li The Scene
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void processEvent(SpawnEntityEvent* event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Process a SpawnEntityEvent
+    ///
+    /// \todo this is useless bc the event is processed by the scene. But I'm not sure so I'm putting it here.
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void processEventFunc(SpawnEntityEvent* event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief CustomEvent process distributor
+    ///
+    /// We don't know what to do with the CustomEvent so we distribute it to all of the objects :
+    /// \li The Scene
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void processEvent(CustomEvent* event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Process a CustomEvent
+    ///
+    /// What it does depends on the type of the CustomEvent
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
     void processEventFunc(CustomEvent* event);
 
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Update the Game
+    ///
+    /// Updates the active Scene.
+    ////////////////////////////////////////////////////////////
     void update();
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Render the Game
+    ///
+    /// Renders the active Scene.
+    ////////////////////////////////////////////////////////////
     void render();
 
 
+    ////////////////////////////////////////////////////////////
     /// @warning DON'T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
+    ////////////////////////////////////////////////////////////
     void addEntity(Entity* entity);
+
+
+private:
+    ////////////////////////////////////////////////////////////
+    /// Member Data
+    ////////////////////////////////////////////////////////////
+    static bool instantiated_;                              ///< Make sure the EventHandler is only instantiated once
+    Scene* active_scene_;                                   ///< Reference to the active Scene
+    EventHandler* eventHandler_;                            ///< Reference to the EventHandler
+    RenderEngine* renderEngine_;                            ///< Reference to the RenderEngine
+    std::unordered_map<const char*, SceneData> scene_data_; ///< A Map of the data to use to load the Scenes
 
 };
 

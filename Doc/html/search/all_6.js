@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['info_66',['INFO',['../logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806',1,'logger.hpp']]],
-  ['isempty_67',['isEmpty',['../class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6',1,'EventHandler']]]
+  ['hitdata_70',['HitData',['../struct_hit_data.html',1,'']]],
+  ['hitevent_71',['HitEvent',['../class_hit_event.html',1,'HitEvent'],['../class_hit_event.html#a95e4d4e12df4349794af3d258575ffcd',1,'HitEvent::HitEvent()']]],
+  ['hitevent_2ecpp_72',['HitEvent.cpp',['../_hit_event_8cpp.html',1,'']]],
+  ['hitevent_2ehpp_73',['HitEvent.hpp',['../_hit_event_8hpp.html',1,'']]],
+  ['horizontaltransition_74',['HorizontalTransition',['../class_horizontal_transition.html',1,'HorizontalTransition'],['../class_horizontal_transition.html#a3188075f340aabf6b566dfe6d6b41418',1,'HorizontalTransition::HorizontalTransition()']]]
 ];

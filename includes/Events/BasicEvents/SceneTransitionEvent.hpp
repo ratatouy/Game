@@ -9,10 +9,10 @@ class Scene;     // Forward declaration of Scene //
 class SceneTransitionEvent : public Event {
 
 private:
-    const char* target;
+    std::string target;
 
 public:
-    SceneTransitionEvent(const char* target_name) : Event(), target(target_name) {};
+    SceneTransitionEvent(std::string target_name) : Event(), target(target_name) {};
 };
 
 #endif

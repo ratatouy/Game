@@ -1,0 +1,110 @@
+\hypertarget{class_border_transition}{}\doxysection{Border\+Transition Class Reference}
+\label{class_border_transition}\index{BorderTransition@{BorderTransition}}
+
+
+Manages transitions from the border of a screen to a neighboring screen.  
+
+
+
+
+{\ttfamily \#include $<$Border\+Transition.\+hpp$>$}
+
+
+
+Inheritance diagram for Border\+Transition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_border_transition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Border\+Transition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_border_transition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_border_transition_a2fbee8105a0145a2cbdb1ddb4784b532}{Border\+Transition}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene, std\+::string target, int start, int end)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a start position and an end position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_border_transition_a995e035febc5467544b16608e79f6290}{start\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_border_transition_abb1b96c8cc5a1fd07b6a88c72611e7bc}{end\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages transitions from the border of a screen to a neighboring screen. 
+
+This class is the base class for \mbox{\hyperlink{class_vertical_transition}{Vertical\+Transition}} and \mbox{\hyperlink{class_horizontal_transition}{Horizontal\+Transition}}. And is not intended to be used directly. 
+
+Definition at line 19 of file Border\+Transition.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_border_transition_a2fbee8105a0145a2cbdb1ddb4784b532}\label{class_border_transition_a2fbee8105a0145a2cbdb1ddb4784b532}} 
+\index{BorderTransition@{BorderTransition}!BorderTransition@{BorderTransition}}
+\index{BorderTransition@{BorderTransition}!BorderTransition@{BorderTransition}}
+\doxysubsubsection{\texorpdfstring{BorderTransition()}{BorderTransition()}}
+{\footnotesize\ttfamily Border\+Transition\+::\+Border\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene,  }\item[{std\+::string}]{target,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a start position and an end position. 
+
+If start $>$ end, start and end are swapped.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Pointer to the attached \mbox{\hyperlink{class_scene}{Scene}}\\
+\hline
+{\em target} & Name of the targeted \mbox{\hyperlink{class_scene}{Scene}}\\
+\hline
+{\em start} & Position of left-\/most pixel of the transition if it\textquotesingle{}s vertical , top-\/most pixel if it\textquotesingle{}s horizontal.\\
+\hline
+{\em end} & Position of the right-\/most pixel of the transition if it\textquotesingle{}s vertical , bottom-\/most if it\textquotesingle{}s horizontals. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Border\+Transition.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_border_transition_abb1b96c8cc5a1fd07b6a88c72611e7bc}\label{class_border_transition_abb1b96c8cc5a1fd07b6a88c72611e7bc}} 
+\index{BorderTransition@{BorderTransition}!end\_@{end\_}}
+\index{end\_@{end\_}!BorderTransition@{BorderTransition}}
+\doxysubsubsection{\texorpdfstring{end\_}{end\_}}
+{\footnotesize\ttfamily int Border\+Transition\+::end\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+position of the right-\/most pixel of the transition if it\textquotesingle{}s vertical , bottom-\/most if it\textquotesingle{}s horizontal. 
+
+Definition at line 52 of file Border\+Transition.\+hpp.
+
+\mbox{\Hypertarget{class_border_transition_a995e035febc5467544b16608e79f6290}\label{class_border_transition_a995e035febc5467544b16608e79f6290}} 
+\index{BorderTransition@{BorderTransition}!start\_@{start\_}}
+\index{start\_@{start\_}!BorderTransition@{BorderTransition}}
+\doxysubsubsection{\texorpdfstring{start\_}{start\_}}
+{\footnotesize\ttfamily int Border\+Transition\+::start\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+position of left-\/most pixel of the transition if it\textquotesingle{}s vertical , top-\/most if it\textquotesingle{}s horizontal. 
+
+Definition at line 48 of file Border\+Transition.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Transitions/\+Basic\+Transitions/\mbox{\hyperlink{_border_transition_8hpp}{Border\+Transition.\+hpp}}\end{DoxyCompactItemize}

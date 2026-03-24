@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hitdata_153',['HitData',['../struct_hit_data.html',1,'']]],
-  ['hitevent_154',['HitEvent',['../class_hit_event.html',1,'']]]
+  ['game_173',['Game',['../class_game.html',1,'']]]
 ];

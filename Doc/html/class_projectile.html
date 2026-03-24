@@ -99,7 +99,7 @@ Inheritance diagram for Projectile:</div>
 <div class="center"><img src="class_projectile__inherit__graph.png" border="0" usemap="#a_projectile_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_projectile_inherit__map" id="a_projectile_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" href="class_entity.html" title=" " alt="" coords="17,5,77,32"/>
+<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="17,5,77,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -108,9 +108,9 @@ Collaboration diagram for Projectile:</div>
 <div class="center"><img src="class_projectile__coll__graph.png" border="0" usemap="#a_projectile_coll__map" alt="Collaboration graph"/></div>
 <map name="a_projectile_coll__map" id="a_projectile_coll__map">
 <area shape="rect" title=" " alt="" coords="192,171,275,197"/>
-<area shape="rect" href="class_entity.html" title=" " alt="" coords="203,95,263,121"/>
+<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="203,95,263,121"/>
 <area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="203,5,264,32"/>
+<area shape="rect" href="class_scene.html" title="Base class for all Scenes." alt="" coords="203,5,264,32"/>
 <area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="289,5,479,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -125,14 +125,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3170dc9c4995e5bd8e28601807350df9 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3170dc9c4995e5bd8e28601807350df9">Entity</a> ()=delete</td></tr>
 <tr class="separator:a3170dc9c4995e5bd8e28601807350df9 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e211574f0e67279934df788cc03df7 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a59e211574f0e67279934df788cc03df7">Entity</a> (const char *name)</td></tr>
+<tr class="memdesc:a59e211574f0e67279934df788cc03df7 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowest Constructor.  <a href="class_entity.html#a59e211574f0e67279934df788cc03df7">More...</a><br /></td></tr>
 <tr class="separator:a59e211574f0e67279934df788cc03df7 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c912b86f9d0b1c7299239212d9a0ca inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af0c912b86f9d0b1c7299239212d9a0ca">Entity</a> (const char *name, <a class="el" href="class_transformable_component.html">TransformableComponent</a> *transformable)</td></tr>
+<tr class="memdesc:af0c912b86f9d0b1c7299239212d9a0ca inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate Transformable Constructor.  <a href="class_entity.html#af0c912b86f9d0b1c7299239212d9a0ca">More...</a><br /></td></tr>
 <tr class="separator:af0c912b86f9d0b1c7299239212d9a0ca inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd75374db786223239daa5010b4cbdf3 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#abd75374db786223239daa5010b4cbdf3">Entity</a> (const char *name, <a class="el" href="class_transformable_component.html">TransformableComponent</a> *transformable, <a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *entitySprite)</td></tr>
+<tr class="memdesc:abd75374db786223239daa5010b4cbdf3 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full Constructor.  <a href="class_entity.html#abd75374db786223239daa5010b4cbdf3">More...</a><br /></td></tr>
 <tr class="separator:abd75374db786223239daa5010b4cbdf3 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad840fa8abf45ea14ed5ff7239f2268ff inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">setScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memdesc:ad840fa8abf45ea14ed5ff7239f2268ff inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current scene of the entity.  <a href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff">More...</a><br /></td></tr>
 <tr class="separator:ad840fa8abf45ea14ed5ff7239f2268ff inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ccaeac4d798bf0b78ee48b317b5e2f inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a78ccaeac4d798bf0b78ee48b317b5e2f">setName</a> (const char *name)</td></tr>
+<tr class="memdesc:a78ccaeac4d798bf0b78ee48b317b5e2f inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the entity.  <a href="class_entity.html#a78ccaeac4d798bf0b78ee48b317b5e2f">More...</a><br /></td></tr>
 <tr class="separator:a78ccaeac4d798bf0b78ee48b317b5e2f inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a797c5fbf96c08f0959e67c4432ffe125 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a797c5fbf96c08f0959e67c4432ffe125">setTransformable</a> (<a class="el" href="class_transformable_component.html">TransformableComponent</a> *transformable)</td></tr>
 <tr class="separator:a797c5fbf96c08f0959e67c4432ffe125 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,12 +162,16 @@ Public Member Functions</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">current_scene_</a></td></tr>
+<tr class="memdesc:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the current scene.  <a href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">More...</a><br /></td></tr>
 <tr class="separator:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac765a424fb46628fc30523f040910f23 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac765a424fb46628fc30523f040910f23">name_</a></td></tr>
+<tr class="memdesc:ac765a424fb46628fc30523f040910f23 inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the entity.  <a href="class_entity.html#ac765a424fb46628fc30523f040910f23">More...</a><br /></td></tr>
 <tr class="separator:ac765a424fb46628fc30523f040910f23 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02237639c1c2a57ceea70b935bfba45 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa02237639c1c2a57ceea70b935bfba45">transformable_</a></td></tr>
+<tr class="memdesc:aa02237639c1c2a57ceea70b935bfba45 inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Transformable Component.  <a href="class_entity.html#aa02237639c1c2a57ceea70b935bfba45">More...</a><br /></td></tr>
 <tr class="separator:aa02237639c1c2a57ceea70b935bfba45 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80bb0324b8d46cf95529bd340c383585 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a80bb0324b8d46cf95529bd340c383585">entitySprite_</a></td></tr>
+<tr class="memdesc:a80bb0324b8d46cf95529bd340c383585 inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the EntitySprite Component.  <a href="class_entity.html#a80bb0324b8d46cf95529bd340c383585">More...</a><br /></td></tr>
 <tr class="separator:a80bb0324b8d46cf95529bd340c383585 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

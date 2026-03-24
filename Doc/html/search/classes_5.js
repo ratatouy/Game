@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menuscene_156',['MenuScene',['../class_menu_scene.html',1,'']]]
+  ['logger_177',['Logger',['../class_logger.html',1,'']]]
 ];

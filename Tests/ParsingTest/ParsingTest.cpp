@@ -6,6 +6,6 @@
 
 int main()
 {
-    Scene* scene = LoadScene("Data/GameData/sceneData.json");
+    Scene* scene = LoadScene("Data/GameData/sceneData.json", "lvl10");
     return 0;
 }

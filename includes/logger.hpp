@@ -7,19 +7,26 @@
 #include <sstream>
 
 
-// Enum to represent log levels
 enum LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL };
-enum LogType { MAIN, GAME, RENDER_ENGINE, SCENE, ENTITY, PLAYER, EVENT };
+///< Enum to represent log levels
+
+enum LogType { MAIN, GAME, RENDER_ENGINE, EVENT_HANDLER, PARSER, SCENE, ENTITY, PLAYER, EVENT };
+///< Enum to represent log types
 
 
+////////////////////////////////////////////////////////////
+/// \brief A logger to use to log information
+////////////////////////////////////////////////////////////
 class Logger {
 public:
-    // Constructor unused bc everything is static (shhh dw it's clean code :clueless:)
+    /// Constructor unused bc everything is static (shhh dw it's clean code :clueless:)
     Logger() = delete;
 
-
-    /** Restart the logger, erasing all logs */
-    static void restart() {
+    ////////////////////////////////////////////////////////////
+    /// \brief Restarts the logger, erasing all logs
+    ////////////////////////////////////////////////////////////
+    static void restart()
+    {
         for (unsigned int i = 0; i < logTypeSize; i++)
         {
             std::string filename = "Logs/" + _typeToString((LogType)i) + ".txt";
@@ -33,13 +40,15 @@ public:
         }
     }
 
-
-    /** Log a message
-     * 
-     * @param type The log type
-     * @param level The log level
-     * @param message The message to log
-     */
+    ////////////////////////////////////////////////////////////
+    /// \brief Log a message to the console, general log file and a specific log file
+    /// 
+    /// \param type The log type
+    ///
+    /// \param level The log level
+    ///
+    /// \param message The message to log
+    ////////////////////////////////////////////////////////////
     static void log(LogType type, LogLevel level, const std::string& message)
     {
         std::string filename = "Logs/" + _typeToString(type) + ".txt";
@@ -89,16 +98,13 @@ public:
     
 
 private:
-    static std::ofstream typeLogFile_;   /**< Current stream for the typed log file       */
-    static std::ofstream logFile_;       /**< Current stream for the general log file     */
-    static int logTypeSize;              /**< Number of log types (not including general) */
-
-
-    /** Open a file without emptying it
-     * 
-     * @param filename The name of the file to open
-     * @param stream The stream to open 
-     */
+    ////////////////////////////////////////////////////////////
+    /// \brief Open a file without emptying it
+    ///
+    /// \param filename The name of the file to open
+    ///
+    /// \param stream The stream to open 
+    ////////////////////////////////////////////////////////////
     static void _openFile(const std::string& filename, std::ofstream* stream)
     {
         stream->open(filename, std::ios::app);
@@ -107,17 +113,18 @@ private:
         }
     }
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Close a file
+    ///
+    /// \param stream The stream to close
+    ////////////////////////////////////////////////////////////
+    static void _closeFile(std::ofstream* stream) {stream->close();}
 
-    /** Close a file
-     * @param stream The stream to close  */
-    static void _closeFile(std::ofstream* stream)
-    {
-        stream->close();
-    }
-
-
-    /** Converts log level to a string for output
-     * @param level The log level to convert */
+    ////////////////////////////////////////////////////////////
+    /// \brief Converts log level to a string for output
+    ///
+    /// \param level The log level to convert
+    ////////////////////////////////////////////////////////////
     static std::string _levelToString(LogLevel level)
     {
         switch (level) {
@@ -136,28 +143,46 @@ private:
         }
     }
 
-
-    /** Converts log type to a string for output
-     * @param type The log type to convert */
+    ////////////////////////////////////////////////////////////
+    /// Converts log type to a string for output
+    ///
+    /// @param type The log type to convert
+    ///
+    /// @param with_space Whether to add a space after the type (to align the logs)
+    ////////////////////////////////////////////////////////////
     static std::string _typeToString(LogType type, bool with_space = false)
     {
         switch (type) {
         case MAIN:
-            return (with_space) ? "main     " : "main";
+            return (with_space) ? "main   " : "main";
         case GAME:
-            return (with_space) ? "game     " : "game";
+            return (with_space) ? "game   " : "game";
         case RENDER_ENGINE:
-            return (with_space) ? "render   " : "render";
+            return (with_space) ? "render " : "render";
+        case EVENT_HANDLER:
+            return (with_space) ? "event  " : "event";
+        case PARSER:
+            return (with_space) ? "parser " : "parser";
         case SCENE:
-            return (with_space) ? "scene    " : "scene";
+            return (with_space) ? "scene  " : "scene";
         case ENTITY:
-            return (with_space) ? "entity   " : "entity";
+            return (with_space) ? "entity " : "entity";
         case PLAYER:
-            return (with_space) ? "player   " : "player";
+            return (with_space) ? "player " : "player";
         default:
-            return (with_space) ? "unknown  " : "unknown";
+            return (with_space) ? "unknown" : "unknown";
         }
     }
+
+
+private:
+    ////////////////////////////////////////////////////////////
+    /// Member variables
+    ////////////////////////////////////////////////////////////
+    static std::ofstream typeLogFile_;   ///< Current stream for the typed log file
+    static std::ofstream logFile_;       ///< Current stream for the general log file
+    static int logTypeSize;              ///< Number of log types (not including general)
+
 };
 
 #endif

@@ -1,11 +1,22 @@
 #ifndef SCENELOADER_HPP
 #define SCENELOADER_HPP
 
-
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
 #include "Scenes/Scene.hpp"
 
 
-Scene* LoadScene(const char* filepath);
+////////////////////////////////////////////////////////////
+/// \brief Load a scene from a json file
+///
+/// \param filepath Path to the json file
+///
+/// \param name Name of the scene to load
+///
+/// \return Pointer to the loaded scene
+////////////////////////////////////////////////////////////
+Scene* LoadScene(const char* filepath, std::string name);
 
 
 

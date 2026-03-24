@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warning_304',['WARNING',['../logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a984de77c680eaff141ec910e25568a81',1,'logger.hpp']]]
+  ['main_342',['MAIN',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca41c6eb506ccf657cc7e958c8e8c769cd',1,'logger.hpp']]]
 ];

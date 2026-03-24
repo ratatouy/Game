@@ -6,7 +6,7 @@ var dir_09e761304027c904456130627fd4dcf5 =
     [ "Events", "dir_4cfff7470dc9231dea8749ae7cffd906.html", "dir_4cfff7470dc9231dea8749ae7cffd906" ],
     [ "Loaders", "dir_f1c7b3e417824e0e7d6f433c2a3c5d63.html", "dir_f1c7b3e417824e0e7d6f433c2a3c5d63" ],
     [ "Scenes", "dir_f39208d2c06e4ba084d4e51c73ead911.html", "dir_f39208d2c06e4ba084d4e51c73ead911" ],
-    [ "Transition", "dir_c566d9e40eb4087a131d9b56a9745c94.html", "dir_c566d9e40eb4087a131d9b56a9745c94" ],
+    [ "Transitions", "dir_ccc7e388b224744382826d832776448a.html", "dir_ccc7e388b224744382826d832776448a" ],
     [ "Game.hpp", "_game_8hpp.html", [
       [ "SceneData", "struct_scene_data.html", null ],
       [ "Game", "class_game.html", "class_game" ]

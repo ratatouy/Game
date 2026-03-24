@@ -86,25 +86,69 @@ $(document).ready(function(){initNavTree('class_transition.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_transition-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Transition Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Object to manage transitions between Scenes.  
+ <a href="class_transition.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Transition:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_transition__inherit__graph.png" border="0" usemap="#a_transition_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_transition_inherit__map" id="a_transition_inherit__map">
+<area shape="rect" title="Object to manage transitions between Scenes." alt="" coords="123,5,208,32"/>
+<area shape="rect" href="class_border_transition.html" title="Manages transitions from the border of a screen to a neighboring screen." alt="" coords="101,80,229,107"/>
+<area shape="rect" href="class_horizontal_transition.html" title="Horizontal Transition to a neighboring scene." alt="" coords="5,155,157,181"/>
+<area shape="rect" href="class_vertical_transition.html" title="Vertical Transition to a neighboring scene." alt="" coords="182,155,317,181"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Transition:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_transition__coll__graph.png" border="0" usemap="#a_transition_coll__map" alt="Collaboration graph"/></div>
+<map name="a_transition_coll__map" id="a_transition_coll__map">
+<area shape="rect" title="Object to manage transitions between Scenes." alt="" coords="5,95,91,121"/>
+<area shape="rect" href="class_scene.html" title="Base class for all Scenes." alt="" coords="17,5,79,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d383bf8ed9f683af596cd666725d659"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#a7d383bf8ed9f683af596cd666725d659">CheckTransition</a> () const</td></tr>
-<tr class="separator:a7d383bf8ed9f683af596cd666725d659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab425df85d30877542b5a2f3da9ecd558"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#ab425df85d30877542b5a2f3da9ecd558">Transition</a> (<a class="el" href="class_scene.html">Scene</a> *scene, std::string target)</td></tr>
+<tr class="memdesc:ab425df85d30877542b5a2f3da9ecd558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_transition.html" title="Object to manage transitions between Scenes.">Transition</a> from a <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> and a target <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_transition.html#ab425df85d30877542b5a2f3da9ecd558">More...</a><br /></td></tr>
+<tr class="separator:ab425df85d30877542b5a2f3da9ecd558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa420ef46a0ae5ea6624b85f423e0e1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#a7fa420ef46a0ae5ea6624b85f423e0e1">checkTransition</a> () const</td></tr>
+<tr class="memdesc:a7fa420ef46a0ae5ea6624b85f423e0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the transition should be activated.  <a href="class_transition.html#a7fa420ef46a0ae5ea6624b85f423e0e1">More...</a><br /></td></tr>
+<tr class="separator:a7fa420ef46a0ae5ea6624b85f423e0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b73e81bc1fb0a8b3911c45d141b46e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#af0b73e81bc1fb0a8b3911c45d141b46e">checkTransition</a> (<a class="el" href="class_transformable_component.html">TransformableComponent</a> *player_tr) const</td></tr>
+<tr class="memdesc:af0b73e81bc1fb0a8b3911c45d141b46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the transition should be activated according to the player's <a class="el" href="class_transformable_component.html">TransformableComponent</a>.  <a href="class_transition.html#af0b73e81bc1fb0a8b3911c45d141b46e">More...</a><br /></td></tr>
+<tr class="separator:af0b73e81bc1fb0a8b3911c45d141b46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb10e25c70bd60235e2f21d82af5359"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#a3cb10e25c70bd60235e2f21d82af5359">getTargetName</a> () const</td></tr>
+<tr class="memdesc:a3cb10e25c70bd60235e2f21d82af5359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the targeted <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_transition.html#a3cb10e25c70bd60235e2f21d82af5359">More...</a><br /></td></tr>
+<tr class="separator:a3cb10e25c70bd60235e2f21d82af5359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a1c436cd2fe7ed30b91db319352f303ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#a1c436cd2fe7ed30b91db319352f303ce">scene_</a></td></tr>
+<tr class="separator:a1c436cd2fe7ed30b91db319352f303ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f418bab9956d918c52b762366e91c2b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transition.html#a8f418bab9956d918c52b762366e91c2b">target_</a></td></tr>
+<tr class="memdesc:a8f418bab9956d918c52b762366e91c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the attached <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_transition.html#a8f418bab9956d918c52b762366e91c2b">More...</a><br /></td></tr>
+<tr class="separator:a8f418bab9956d918c52b762366e91c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_transition_8hpp_source.html#l00005">5</a> of file <a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7d383bf8ed9f683af596cd666725d659"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d383bf8ed9f683af596cd666725d659">&#9670;&nbsp;</a></span>CheckTransition()</h2>
+<div class="textblock"><p>Object to manage transitions between Scenes. </p>
+<p>A transition can be of any kind, it just needs a target <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> and a way to check if it should be activated. </p>
+
+<p class="definition">Definition at line <a class="el" href="_transition_8hpp_source.html#l00014">14</a> of file <a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab425df85d30877542b5a2f3da9ecd558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab425df85d30877542b5a2f3da9ecd558">&#9670;&nbsp;</a></span>Transition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,7 +157,55 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Transition::CheckTransition </td>
+          <td class="memname">Transition::Transition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_transition.html" title="Object to manage transitions between Scenes.">Transition</a> from a <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> and a target <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>Pointer to the attached <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></td></tr>
+    <tr><td class="paramname">target</td><td>Name of the targeted <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_transition_8hpp_source.html#l00024">24</a> of file <a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7fa420ef46a0ae5ea6624b85f423e0e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa420ef46a0ae5ea6624b85f423e0e1">&#9670;&nbsp;</a></span>checkTransition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Transition::checkTransition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -126,10 +218,131 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if the transition should be activated. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="class_transition.html" title="Object to manage transitions between Scenes.">Transition</a> should be activated </dd></dl>
+
+</div>
+</div>
+<a id="af0b73e81bc1fb0a8b3911c45d141b46e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b73e81bc1fb0a8b3911c45d141b46e">&#9670;&nbsp;</a></span>checkTransition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Transition::checkTransition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_transformable_component.html">TransformableComponent</a> *&#160;</td>
+          <td class="paramname"><em>player_tr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the transition should be activated according to the player's <a class="el" href="class_transformable_component.html">TransformableComponent</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player_tr</td><td>The player's TransformableComponents</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="class_transition.html" title="Object to manage transitions between Scenes.">Transition</a> should be activated </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_horizontal_transition.html#a843215454768a5d4e0294396c143fbd3">HorizontalTransition</a>, and <a class="el" href="class_vertical_transition.html#a33037c27d52f84cb042bcc2314ccc8e8">VerticalTransition</a>.</p>
+
+</div>
+</div>
+<a id="a3cb10e25c70bd60235e2f21d82af5359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb10e25c70bd60235e2f21d82af5359">&#9670;&nbsp;</a></span>getTargetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Transition::getTargetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name of the targeted <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the targeted <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_transition_8hpp_source.html#l00050">50</a> of file <a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1c436cd2fe7ed30b91db319352f303ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c436cd2fe7ed30b91db319352f303ce">&#9670;&nbsp;</a></span>scene_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Transition::scene_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_transition_8hpp_source.html#l00054">54</a> of file <a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8f418bab9956d918c52b762366e91c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f418bab9956d918c52b762366e91c2b">&#9670;&nbsp;</a></span>target_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Transition::target_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the attached <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_transition_8hpp_source.html#l00055">55</a> of file <a class="el" href="_transition_8hpp_source.html">Transition.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>includes/Transition/<a class="el" href="_transition_8hpp_source.html">Transition.hpp</a></li>
+<li>includes/Transitions/<a class="el" href="_transition_8hpp_source.html">Transition.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

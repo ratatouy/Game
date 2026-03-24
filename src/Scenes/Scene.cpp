@@ -1,4 +1,5 @@
 #include "Scenes/Scene.hpp"
+#include "Transitions/Transition.hpp"
 #include "Game.hpp"
 
 #include "logger.hpp"
@@ -6,7 +7,6 @@
 #include <string.h>
 #include <iostream>
 
-Scene::Scene() {};
 
 Scene::~Scene()
 {
@@ -56,6 +56,7 @@ void Scene::processEvent(CustomEvent* event)
 
 void Scene::throwEvent(Event* event)
 {
+    Logger::log(SCENE, DEBUG, "Throwing event");
     game_->throwEvent(event);
 }
 
@@ -63,6 +64,21 @@ void Scene::throwEvent(Event* event)
 void Scene::update()
 {
     updateEntities();
+}
+
+
+bool Scene::checkTransition()
+{
+    for (auto transition : transition_map_)
+    {
+        TransformableComponent* player_transform = getEntity("player")->getTransformable();
+        if (player_transform == nullptr)
+            throw(std::runtime_error("Player transform not found"));
+        
+        if (transition.second->checkTransition())
+            throwEvent(new SceneTransitionEvent(transition.second->getTargetName()));
+    }
+    return false;
 }
 
 

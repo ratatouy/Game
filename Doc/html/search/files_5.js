@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_2ecpp_181',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['menuscene_2ehpp_182',['MenuScene.hpp',['../_menu_scene_8hpp.html',1,'']]]
+  ['logger_2ecpp_205',['logger.cpp',['../logger_8cpp.html',1,'']]],
+  ['logger_2ehpp_206',['logger.hpp',['../logger_8hpp.html',1,'']]]
 ];

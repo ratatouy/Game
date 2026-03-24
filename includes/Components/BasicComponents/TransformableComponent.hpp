@@ -15,6 +15,7 @@
 class TransformableComponent {
 private:
     sf::Transformable transformable_;
+    sf::Vector2u size_;
 
 
 public:
@@ -54,6 +55,13 @@ public:
      * @return The scale
      */
     const sf::Vector2f getScale() {return transformable_.getScale();};
+
+
+    /** Size Getter
+     * 
+     * @return The size
+     */
+    const sf::Vector2u getSize() {return size_;};
 
 
     /** Origin Getter

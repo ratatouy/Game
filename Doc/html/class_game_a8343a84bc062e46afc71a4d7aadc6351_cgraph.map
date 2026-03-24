@@ -1,4 +1,5 @@
 <map id="Game::processEvent" name="Game::processEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect" id="node2" href="$class_game.html#a0f8625023fc606a99796cc1d69f618fe" title=" " alt="" coords="209,5,396,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,161,57"/>
+<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="255,5,350,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a0f8625023fc606a99796cc1d69f618fe" title=" " alt="" coords="209,56,396,83"/>
 </map>

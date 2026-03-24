@@ -4,20 +4,18 @@
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
-Include dependency graph for logger.\+hpp\+:
-\nopagebreak
+Include dependency graph for logger.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logger_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=191pt]{logger_8hpp__dep__incl}
+\includegraphics[width=350pt]{logger_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -37,8 +35,16 @@ enum \mbox{\hyperlink{logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}
 \mbox{\hyperlink{logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9acda21a4a072f2261f6d4ab596599f8b0}{CRITICAL}}
  \}
 \item 
-enum \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87c}{Log\+Type}} \{ \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e}{ENTITY}}
+enum \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87c}{Log\+Type}} \{ \newline
+\mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca41c6eb506ccf657cc7e958c8e8c769cd}{MAIN}}
 , \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87cad50cf309d7568040619ed26ee6835a84}{GAME}}
+, \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca10c1add8a4e1b47f060abe284d495a34}{RENDER\+\_\+\+ENGINE}}
+, \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87caa5bddba3e464aa72f220cb10d6c3ed1e}{EVENT\+\_\+\+HANDLER}}
+, \newline
+\mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca258b6b325fff309a34d66a54219afbc4}{SCENE}}
+, \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e}{ENTITY}}
+, \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87cade5dc3e0dbd007d995ed3e37bde5ce7e}{PLAYER}}
+, \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca08d627d21e6424f54671673ff1611d59}{EVENT}}
  \}
 \end{DoxyCompactItemize}
 
@@ -83,12 +89,36 @@ Definition at line 11 of file logger.\+hpp.
 {\footnotesize\ttfamily enum \mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87c}{Log\+Type}}}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ENTITY@{ENTITY}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!ENTITY@{ENTITY}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e}} 
-ENTITY&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN@{MAIN}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!MAIN@{MAIN}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca41c6eb506ccf657cc7e958c8e8c769cd}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca41c6eb506ccf657cc7e958c8e8c769cd}} 
+MAIN&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{GAME@{GAME}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!GAME@{GAME}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87cad50cf309d7568040619ed26ee6835a84}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87cad50cf309d7568040619ed26ee6835a84}} 
 GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDER\_ENGINE@{RENDER\_ENGINE}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!RENDER\_ENGINE@{RENDER\_ENGINE}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca10c1add8a4e1b47f060abe284d495a34}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca10c1add8a4e1b47f060abe284d495a34}} 
+RENDER\+\_\+\+ENGINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_HANDLER@{EVENT\_HANDLER}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!EVENT\_HANDLER@{EVENT\_HANDLER}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87caa5bddba3e464aa72f220cb10d6c3ed1e}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87caa5bddba3e464aa72f220cb10d6c3ed1e}} 
+EVENT\+\_\+\+HANDLER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE@{SCENE}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!SCENE@{SCENE}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca258b6b325fff309a34d66a54219afbc4}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca258b6b325fff309a34d66a54219afbc4}} 
+SCENE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENTITY@{ENTITY}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!ENTITY@{ENTITY}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e}} 
+ENTITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER@{PLAYER}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!PLAYER@{PLAYER}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87cade5dc3e0dbd007d995ed3e37bde5ce7e}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87cade5dc3e0dbd007d995ed3e37bde5ce7e}} 
+PLAYER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT@{EVENT}!logger.hpp@{logger.hpp}}\index{logger.hpp@{logger.hpp}!EVENT@{EVENT}}}\mbox{\Hypertarget{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca08d627d21e6424f54671673ff1611d59}\label{logger_8hpp_af67907baa897e9fb84df0cb89795b87ca08d627d21e6424f54671673ff1611d59}} 
+EVENT&\\
 \hline
 
 \end{DoxyEnumFields}

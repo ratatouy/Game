@@ -7,6 +7,7 @@ var class_transformable_component =
     [ "getPosition", "class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20", null ],
     [ "getRotation", "class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff", null ],
     [ "getScale", "class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724", null ],
+    [ "getSize", "class_transformable_component.html#a55cf95b39d4376cb58563a4effea0430", null ],
     [ "move", "class_transformable_component.html#afb4e36540e794da841bc3f07f91f55da", null ],
     [ "rotate", "class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7", null ],
     [ "setOrigin", "class_transformable_component.html#a2f0fca3a97c469a31f6c5938afe72fba", null ],

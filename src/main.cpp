@@ -16,7 +16,7 @@ int main() {
     Logger::restart();
 
     // PhysicEngine* pEngine = new PhysicEngine(0);
-    MenuScene* menu = new MenuScene();
+    MenuScene* menu = new MenuScene({0, 0}, {920, 480});
     EventHandler* evHandler = new EventHandler();
     RenderEngine* rEngine = new RenderEngine("Game", 920, 480);
 
@@ -72,7 +72,6 @@ int main() {
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
             {
-                Logger::log(MAIN, INFO, "yo" + std::to_string(game->getActiveScene()->getEntity("raptor")->getTransformable()->getPosition().x));
                 game->getActiveScene()->getEntity("raptor")->getTransformable()->move({10, 0});
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
@@ -85,7 +84,7 @@ int main() {
         {
             game->getEventHandler()->processEvent();
         }
-        
+    
 
         game->getRenderEngine()->getWindow()->clear(sf::Color(125,0,125,0));
         game->update();

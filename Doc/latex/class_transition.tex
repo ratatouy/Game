@@ -2,31 +2,168 @@
 \label{class_transition}\index{Transition@{Transition}}
 
 
+Object to manage transitions between Scenes.  
+
+
+
+
 {\ttfamily \#include $<$Transition.\+hpp$>$}
 
+
+
+Inheritance diagram for Transition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_transition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Transition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_transition__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual bool \mbox{\hyperlink{class_transition_a7d383bf8ed9f683af596cd666725d659}{Check\+Transition}} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_transition_ab425df85d30877542b5a2f3da9ecd558}{Transition}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene, std\+::string target)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_transition}{Transition}} from a \mbox{\hyperlink{class_scene}{Scene}} and a target \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_transition_a7fa420ef46a0ae5ea6624b85f423e0e1}{check\+Transition}} () const
+\begin{DoxyCompactList}\small\item\em Check if the transition should be activated. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_transition_af0b73e81bc1fb0a8b3911c45d141b46e}{check\+Transition}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$player\+\_\+tr) const
+\begin{DoxyCompactList}\small\item\em Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_transition_a3cb10e25c70bd60235e2f21d82af5359}{get\+Target\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the targeted \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_transition_a1c436cd2fe7ed30b91db319352f303ce}{scene\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transition_a8f418bab9956d918c52b762366e91c2b}{target\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Pointer to the attached \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Object to manage transitions between Scenes. 
+
+A transition can be of any kind, it just needs a target \mbox{\hyperlink{class_scene}{Scene}} and a way to check if it should be activated. 
+
+Definition at line 14 of file Transition.\+hpp.
 
 
-Definition at line 5 of file Transition.\+hpp.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transition_ab425df85d30877542b5a2f3da9ecd558}\label{class_transition_ab425df85d30877542b5a2f3da9ecd558}} 
+\index{Transition@{Transition}!Transition@{Transition}}
+\index{Transition@{Transition}!Transition@{Transition}}
+\doxysubsubsection{\texorpdfstring{Transition()}{Transition()}}
+{\footnotesize\ttfamily Transition\+::\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene,  }\item[{std\+::string}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_transition}{Transition}} from a \mbox{\hyperlink{class_scene}{Scene}} and a target \mbox{\hyperlink{class_scene}{Scene}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Pointer to the attached \mbox{\hyperlink{class_scene}{Scene}}\\
+\hline
+{\em target} & Name of the targeted \mbox{\hyperlink{class_scene}{Scene}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Transition.\+hpp.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_transition_a7d383bf8ed9f683af596cd666725d659}\label{class_transition_a7d383bf8ed9f683af596cd666725d659}} 
-\index{Transition@{Transition}!CheckTransition@{CheckTransition}}
-\index{CheckTransition@{CheckTransition}!Transition@{Transition}}
-\doxysubsubsection{\texorpdfstring{CheckTransition()}{CheckTransition()}}
-{\footnotesize\ttfamily virtual bool Transition\+::\+Check\+Transition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_transition_a7fa420ef46a0ae5ea6624b85f423e0e1}\label{class_transition_a7fa420ef46a0ae5ea6624b85f423e0e1}} 
+\index{Transition@{Transition}!checkTransition@{checkTransition}}
+\index{checkTransition@{checkTransition}!Transition@{Transition}}
+\doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Transition\+::check\+Transition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the transition should be activated. 
+
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transition_af0b73e81bc1fb0a8b3911c45d141b46e}\label{class_transition_af0b73e81bc1fb0a8b3911c45d141b46e}} 
+\index{Transition@{Transition}!checkTransition@{checkTransition}}
+\index{checkTransition@{checkTransition}!Transition@{Transition}}
+\doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+\_\+tr} & The player\textquotesingle{}s Transformable\+Components\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_horizontal_transition_a843215454768a5d4e0294396c143fbd3}{Horizontal\+Transition}}, and \mbox{\hyperlink{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}{Vertical\+Transition}}.
+
+\mbox{\Hypertarget{class_transition_a3cb10e25c70bd60235e2f21d82af5359}\label{class_transition_a3cb10e25c70bd60235e2f21d82af5359}} 
+\index{Transition@{Transition}!getTargetName@{getTargetName}}
+\index{getTargetName@{getTargetName}!Transition@{Transition}}
+\doxysubsubsection{\texorpdfstring{getTargetName()}{getTargetName()}}
+{\footnotesize\ttfamily const std\+::string\& Transition\+::get\+Target\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the name of the targeted \mbox{\hyperlink{class_scene}{Scene}}. 
+
+\begin{DoxyReturn}{Returns}
+Name of the targeted \mbox{\hyperlink{class_scene}{Scene}} 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Transition.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_transition_a1c436cd2fe7ed30b91db319352f303ce}\label{class_transition_a1c436cd2fe7ed30b91db319352f303ce}} 
+\index{Transition@{Transition}!scene\_@{scene\_}}
+\index{scene\_@{scene\_}!Transition@{Transition}}
+\doxysubsubsection{\texorpdfstring{scene\_}{scene\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Transition\+::scene\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Transition.\+hpp.
+
+\mbox{\Hypertarget{class_transition_a8f418bab9956d918c52b762366e91c2b}\label{class_transition_a8f418bab9956d918c52b762366e91c2b}} 
+\index{Transition@{Transition}!target\_@{target\_}}
+\index{target\_@{target\_}!Transition@{Transition}}
+\doxysubsubsection{\texorpdfstring{target\_}{target\_}}
+{\footnotesize\ttfamily std\+::string Transition\+::target\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to the attached \mbox{\hyperlink{class_scene}{Scene}}. 
+
+
+
+Definition at line 55 of file Transition.\+hpp.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-includes/\+Transition/\mbox{\hyperlink{_transition_8hpp}{Transition.\+hpp}}\end{DoxyCompactItemize}
+includes/\+Transitions/\mbox{\hyperlink{_transition_8hpp}{Transition.\+hpp}}\end{DoxyCompactItemize}

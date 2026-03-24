@@ -1,9 +1,12 @@
 var class_scene =
 [
-    [ "Scene", "class_scene.html#ad10176d75a9cc0da56626f682d083507", null ],
+    [ "Scene", "class_scene.html#a6b04afd7223e00e5b8e901aaae086e9e", null ],
     [ "~Scene", "class_scene.html#a3b8cec2e32546713915f8c6303c951f1", null ],
     [ "addEntity", "class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e", null ],
+    [ "checkTransition", "class_scene.html#af024b75792e4a2304ad2eb73779f95be", null ],
     [ "getEntity", "class_scene.html#a3c200511f7f00c8184a7d6281a508e2c", null ],
+    [ "getOrigin", "class_scene.html#a8fb2016ed4d812ed00c6083203fce33b", null ],
+    [ "getSize", "class_scene.html#a0488f65e589e48f4cdd2dc0906ee7432", null ],
     [ "processEvent", "class_scene.html#a4654dfc8ab44c744171caa43fc22bbab", null ],
     [ "processEvent", "class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99", null ],
     [ "processEventFunc", "class_scene.html#a0db76b56a0c7637f4a20900ab90aa266", null ],

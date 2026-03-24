@@ -1,5 +1,5 @@
 <map id="Entity" name="Entity">
-<area shape="rect" id="node1" title=" " alt="" coords="106,5,166,32"/>
+<area shape="rect" id="node1" title="An Entity is an object that has an update and a render method." alt="" coords="106,5,166,32"/>
 <area shape="rect" id="node2" href="$class_ennemy.html" title=" " alt="" coords="5,80,80,107"/>
 <area shape="rect" id="node3" href="$class_player.html" title=" " alt="" coords="105,80,167,107"/>
 <area shape="rect" id="node4" href="$class_projectile.html" title=" " alt="" coords="192,80,275,107"/>

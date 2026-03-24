@@ -6,7 +6,7 @@
 
 class MenuScene : public Scene {
 public:
-    MenuScene() {};
+    MenuScene(sf::Vector2i origin, sf::Vector2u size) : Scene(origin, size) {};
 
     void processEventFunc(SceneTransitionEvent* event) override {
         std::cout << "MenuScene Processing SceneTransitionEvent" << std::endl;
