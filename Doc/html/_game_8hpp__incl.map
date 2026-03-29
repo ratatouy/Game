@@ -1,13 +1,16 @@
 <map id="includes/Game.hpp" name="includes/Game.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="554,5,701,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="365,87,415,114"/>
-<area shape="rect" id="node3" href="$_render_engine_8hpp.html" title=" " alt="" coords="29,169,217,196"/>
-<area shape="rect" id="node5" href="$_event_8hpp.html" title=" " alt="" coords="668,341,803,367"/>
-<area shape="rect" id="node6" href="$_custom_event_8hpp.html" title=" " alt="" coords="429,251,615,278"/>
-<area shape="rect" id="node7" href="$_scene_transition_event_8hpp.html" title=" " alt="" coords="639,244,832,285"/>
-<area shape="rect" id="node8" href="$_spawn_entity_event_8hpp.html" title=" " alt="" coords="541,80,713,121"/>
-<area shape="rect" id="node9" href="$_entity_8hpp.html" title=" " alt="" coords="350,169,478,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="43,423,190,449"/>
-<area shape="rect" id="node10" href="$_transformable_component_8hpp.html" title=" " alt="" coords="79,333,304,375"/>
-<area shape="rect" id="node11" href="$_entity_sprite_component_8hpp.html" title=" " alt="" coords="28,244,253,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="610,5,757,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="332,80,382,107"/>
+<area shape="rect" id="node3" href="$_render_engine_8hpp.html" title=" " alt="" coords="991,162,1179,189"/>
+<area shape="rect" id="node5" href="$_event_8hpp.html" title=" " alt="" coords="556,415,691,442"/>
+<area shape="rect" id="node6" href="$_custom_event_8hpp.html" title=" " alt="" coords="687,326,872,353"/>
+<area shape="rect" id="node7" href="$_scene_transition_event_8hpp.html" title=" " alt="" coords="367,319,560,360"/>
+<area shape="rect" id="node8" href="$_spawn_entity_event_8hpp.html" title=" " alt="" coords="508,155,680,196"/>
+<area shape="rect" id="node9" href="$_entity_8hpp.html" title=" " alt="" coords="305,244,433,271"/>
+<area shape="rect" id="node12" href="$scene_loader_8hpp.html" title=" " alt="" coords="656,80,842,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="230,497,377,524"/>
+<area shape="rect" id="node10" href="$_transformable_component_8hpp.html" title=" " alt="" coords="42,408,267,449"/>
+<area shape="rect" id="node11" href="$_entity_sprite_component_8hpp.html" title=" " alt="" coords="67,319,292,360"/>
+<area shape="rect" id="node13" href="$_scene_8hpp.html" title=" " alt="" coords="705,162,844,189"/>
+<area shape="rect" id="node14" title=" " alt="" coords="737,244,814,271"/>
 </map>

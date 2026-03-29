@@ -1,5 +1,5 @@
 <map id="Game::processEvent" name="Game::processEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node1" title="CustomEvent process distributor." alt="" coords="5,5,161,32"/>
 <area shape="rect" id="node2" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="209,5,365,32"/>
-<area shape="rect" id="node3" href="$class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a" title="Process a SceneTransitionEvent." alt="" coords="413,5,600,32"/>
+<area shape="rect" id="node3" href="$class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="413,5,600,32"/>
 </map>

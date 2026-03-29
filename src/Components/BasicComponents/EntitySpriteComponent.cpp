@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "Components/BasicComponents/TransformableComponent.hpp"
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 
@@ -20,7 +19,7 @@ EntitySpriteComponent::~EntitySpriteComponent() {
  * - Add the sprite's local Transformable to the "localSpriteTransformables_" vector
  * - Add the sprite and texture to the "sprites_" and "textures_" vectors
  */
-void EntitySpriteComponent::AddSprite(std::string name, const char* filepath)
+void EntitySpriteComponent::AddSprite(std::string name, const std::string& filepath)
 {
     try {
         sf::Texture* texture = _LoadTexture(filepath);
@@ -77,7 +76,7 @@ void EntitySpriteComponent::update() {
 
 
 
-sf::Texture* EntitySpriteComponent::_LoadTexture(const char* filepath)
+sf::Texture* EntitySpriteComponent::_LoadTexture(const std::string& filepath)
 {
     sf::Texture* texture = new sf::Texture();
 

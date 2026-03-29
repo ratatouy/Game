@@ -1,4 +1,4 @@
 <map id="Scene::processEvent" name="Scene::processEvent">
 <area shape="rect" id="node1" title="CustomEvent process distributor." alt="" coords="5,5,161,32"/>
-<area shape="rect" id="node2" href="$class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a" title="Process a SceneTransitionEvent." alt="" coords="209,5,396,32"/>
+<area shape="rect" id="node2" href="$class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="209,5,396,32"/>
 </map>

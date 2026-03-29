@@ -11,8 +11,7 @@ Manages transitions from the border of a screen to a neighboring screen.
 
 
 
-Inheritance diagram for Border\+Transition\+:
-\nopagebreak
+Inheritance diagram for Border\+Transition\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Border\+Transition\+:
 \end{figure}
 
 
-Collaboration diagram for Border\+Transition\+:
-\nopagebreak
+Collaboration diagram for Border\+Transition\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,8 +30,12 @@ Collaboration diagram for Border\+Transition\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_border_transition_a2fbee8105a0145a2cbdb1ddb4784b532}{Border\+Transition}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene, std\+::string target, int start, int end)
-\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a start position and an end position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_border_transition_ab2218600ed3ea847458145025578f13c}{Border\+Transition}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene, std\+::string target, std\+::string name, int start, int end)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a name, a start position and an end position. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_border_transition_a50645d25411d2e6e65f169614514b595}{check\+Transition}} () const override=0
+\begin{DoxyCompactList}\small\item\em Deletes Empty check\+Transition. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}{check\+Transition}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$player\+\_\+tr) const override=0
+\begin{DoxyCompactList}\small\item\em Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,20 +50,20 @@ Manages transitions from the border of a screen to a neighboring screen.
 
 This class is the base class for \mbox{\hyperlink{class_vertical_transition}{Vertical\+Transition}} and \mbox{\hyperlink{class_horizontal_transition}{Horizontal\+Transition}}. And is not intended to be used directly. 
 
-Definition at line 19 of file Border\+Transition.\+hpp.
+Definition at line 18 of file Border\+Transition.\+hpp.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_border_transition_a2fbee8105a0145a2cbdb1ddb4784b532}\label{class_border_transition_a2fbee8105a0145a2cbdb1ddb4784b532}} 
+\mbox{\Hypertarget{class_border_transition_ab2218600ed3ea847458145025578f13c}\label{class_border_transition_ab2218600ed3ea847458145025578f13c}} 
 \index{BorderTransition@{BorderTransition}!BorderTransition@{BorderTransition}}
 \index{BorderTransition@{BorderTransition}!BorderTransition@{BorderTransition}}
 \doxysubsubsection{\texorpdfstring{BorderTransition()}{BorderTransition()}}
-{\footnotesize\ttfamily Border\+Transition\+::\+Border\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene,  }\item[{std\+::string}]{target,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Border\+Transition\+::\+Border\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} $\ast$}]{scene,  }\item[{std\+::string}]{target,  }\item[{std\+::string}]{name,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a start position and an end position. 
+Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a name, a start position and an end position. 
 
 If start $>$ end, start and end are swapped.
 
@@ -78,7 +80,52 @@ If start $>$ end, start and end are swapped.
 \end{DoxyParams}
 
 
-Definition at line 37 of file Border\+Transition.\+hpp.
+Definition at line 36 of file Border\+Transition.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_border_transition_a50645d25411d2e6e65f169614514b595}\label{class_border_transition_a50645d25411d2e6e65f169614514b595}} 
+\index{BorderTransition@{BorderTransition}!checkTransition@{checkTransition}}
+\index{checkTransition@{checkTransition}!BorderTransition@{BorderTransition}}
+\doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Border\+Transition\+::check\+Transition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Deletes Empty check\+Transition. 
+
+
+
+Implements \mbox{\hyperlink{class_transition_a2e840d974d8d1173cab9ba4a1dd87766}{Transition}}.
+
+\mbox{\Hypertarget{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}\label{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}} 
+\index{BorderTransition@{BorderTransition}!checkTransition@{checkTransition}}
+\index{checkTransition@{checkTransition}!BorderTransition@{BorderTransition}}
+\doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Border\+Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. 
+
+overrides \mbox{\hyperlink{class_transition}{Transition}} method but still does not implement it, as it will be implemented in the subclasses \mbox{\hyperlink{class_horizontal_transition}{Horizontal\+Transition}} and \mbox{\hyperlink{class_vertical_transition}{Vertical\+Transition}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+\_\+tr} & The player\textquotesingle{}s Transformable\+Components\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_transition_a947835842c2edec079c354563aa354b4}{Transition}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_horizontal_transition_a843215454768a5d4e0294396c143fbd3}{Horizontal\+Transition}}, and \mbox{\hyperlink{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}{Vertical\+Transition}}.
 
 
 
@@ -91,7 +138,7 @@ Definition at line 37 of file Border\+Transition.\+hpp.
 
 position of the right-\/most pixel of the transition if it\textquotesingle{}s vertical , bottom-\/most if it\textquotesingle{}s horizontal. 
 
-Definition at line 52 of file Border\+Transition.\+hpp.
+Definition at line 67 of file Border\+Transition.\+hpp.
 
 \mbox{\Hypertarget{class_border_transition_a995e035febc5467544b16608e79f6290}\label{class_border_transition_a995e035febc5467544b16608e79f6290}} 
 \index{BorderTransition@{BorderTransition}!start\_@{start\_}}
@@ -101,7 +148,7 @@ Definition at line 52 of file Border\+Transition.\+hpp.
 
 position of left-\/most pixel of the transition if it\textquotesingle{}s vertical , top-\/most if it\textquotesingle{}s horizontal. 
 
-Definition at line 48 of file Border\+Transition.\+hpp.
+Definition at line 63 of file Border\+Transition.\+hpp.
 
 
 

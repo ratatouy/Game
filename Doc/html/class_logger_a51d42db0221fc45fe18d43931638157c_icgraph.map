@@ -1,15 +1,19 @@
 <map id="Logger::log" name="Logger::log">
-<area shape="rect" id="node1" title=" " alt="" coords="1069,208,1164,235"/>
-<area shape="rect" id="node2" href="$class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="815,5,1021,32"/>
-<area shape="rect" id="node5" href="$class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title=" " alt="" coords="327,107,513,133"/>
-<area shape="rect" id="node6" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="853,56,983,83"/>
-<area shape="rect" id="node7" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title=" " alt="" coords="829,157,1007,184"/>
-<area shape="rect" id="node8" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="593,208,735,235"/>
-<area shape="rect" id="node9" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="349,259,491,285"/>
-<area shape="rect" id="node10" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="137,309,249,336"/>
-<area shape="rect" id="node12" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title=" " alt="" coords="561,360,767,387"/>
-<area shape="rect" id="node13" href="$class_game.html#a8343a84bc062e46afc71a4d7aadc6351" title=" " alt="" coords="840,411,996,437"/>
-<area shape="rect" id="node3" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="599,56,729,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,309,60,336"/>
-<area shape="rect" id="node11" href="$class_scene.html#af024b75792e4a2304ad2eb73779f95be" title=" " alt="" coords="108,259,279,285"/>
+<area shape="rect" id="node1" title="Log a message to the console, general log file and a specific log file." alt="" coords="1055,259,1149,285"/>
+<area shape="rect" id="node2" href="$class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="792,5,999,32"/>
+<area shape="rect" id="node6" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="830,56,961,83"/>
+<area shape="rect" id="node7" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title="Add an event to the queue." alt="" coords="806,107,985,133"/>
+<area shape="rect" id="node8" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title="Throw an event to the EventHandler." alt="" coords="587,157,729,184"/>
+<area shape="rect" id="node9" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="358,196,501,223"/>
+<area shape="rect" id="node10" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="137,221,249,248"/>
+<area shape="rect" id="node12" href="$scene_loader_8cpp.html#ab83a699209c86434eef61cc7bf836ba8" title="Load a scene from a json file." alt="" coords="849,309,941,336"/>
+<area shape="rect" id="node13" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="327,360,532,387"/>
+<area shape="rect" id="node14" href="$class_game.html#a8343a84bc062e46afc71a4d7aadc6351" title="SpawnEntityEvent process distributor." alt="" coords="817,411,973,437"/>
+<area shape="rect" id="node15" href="$class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="802,461,989,488"/>
+<area shape="rect" id="node17" href="$class_menu_scene.html#a9bc01005e87b0fde5324da4ef1f95bd3" title="Process the SceneTransitionEvent." alt="" coords="784,512,1007,539"/>
+<area shape="rect" id="node3" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="593,31,723,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,145,60,172"/>
+<area shape="rect" id="node5" href="$class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title="Process a SpawnEntityEvent." alt="" coords="336,56,523,83"/>
+<area shape="rect" id="node11" href="$class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="108,171,279,197"/>
+<area shape="rect" id="node16" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="SceneTransitionEvent process distributor." alt="" coords="580,436,736,463"/>
 </map>

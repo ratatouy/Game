@@ -1,4 +1,4 @@
 <map id="EntitySpriteComponent::update" name="EntitySpriteComponent::update">
 <area shape="rect" id="node1" title=" " alt="" coords="189,5,363,47"/>
-<area shape="rect" id="node2" href="$class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title=" " alt="" coords="5,13,141,39"/>
+<area shape="rect" id="node2" href="$class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title="Update the entity." alt="" coords="5,13,141,39"/>
 </map>

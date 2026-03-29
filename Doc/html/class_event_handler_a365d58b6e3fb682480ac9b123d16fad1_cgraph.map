@@ -1,7 +1,8 @@
 <map id="EventHandler::processEvent" name="EventHandler::processEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,211,57"/>
-<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="289,5,384,32"/>
-<area shape="rect" id="node3" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title=" " alt="" coords="259,56,415,83"/>
-<area shape="rect" id="node4" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="463,56,619,83"/>
-<area shape="rect" id="node5" href="$class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a" title="Process a SceneTransitionEvent." alt="" coords="667,56,853,83"/>
+<area shape="rect" id="node1" title="Process the next event." alt="" coords="5,5,211,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="743,5,838,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="SceneTransitionEvent process distributor." alt="" coords="259,31,415,57"/>
+<area shape="rect" id="node4" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="478,81,634,108"/>
+<area shape="rect" id="node6" href="$class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="463,31,649,57"/>
+<area shape="rect" id="node5" href="$class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="697,81,884,108"/>
 </map>

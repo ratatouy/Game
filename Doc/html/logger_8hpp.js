@@ -13,6 +13,7 @@ var logger_8hpp =
       [ "GAME", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87cad50cf309d7568040619ed26ee6835a84", null ],
       [ "RENDER_ENGINE", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca10c1add8a4e1b47f060abe284d495a34", null ],
       [ "EVENT_HANDLER", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87caa5bddba3e464aa72f220cb10d6c3ed1e", null ],
+      [ "PARSER", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca24e246e9a582f56a2b81bf805261840b", null ],
       [ "SCENE", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca258b6b325fff309a34d66a54219afbc4", null ],
       [ "ENTITY", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e", null ],
       [ "PLAYER", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87cade5dc3e0dbd007d995ed3e37bde5ce7e", null ],

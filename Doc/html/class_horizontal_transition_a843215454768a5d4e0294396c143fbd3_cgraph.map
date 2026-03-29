@@ -1,7 +1,7 @@
 <map id="HorizontalTransition::checkTransition" name="HorizontalTransition::checkTransition">
 <area shape="rect" id="node1" title="Check if the player is within or past the activation zone of the transition." alt="" coords="5,90,157,131"/>
-<area shape="rect" id="node2" href="$class_scene.html#a8fb2016ed4d812ed00c6083203fce33b" title="Returns the origin of the scene." alt="" coords="236,5,365,32"/>
-<area shape="rect" id="node3" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="205,57,396,98"/>
-<area shape="rect" id="node4" href="$class_transformable_component.html#a55cf95b39d4376cb58563a4effea0430" title=" " alt="" coords="205,122,396,163"/>
-<area shape="rect" id="node5" href="$class_scene.html#a0488f65e589e48f4cdd2dc0906ee7432" title="Returns the size of the scene." alt="" coords="242,188,359,215"/>
+<area shape="rect" id="node2" href="$class_scene.html#a7e3f2ea607864c63d1c1fa6c17aa335f" title="Returns the origin of the scene." alt="" coords="236,5,365,32"/>
+<area shape="rect" id="node3" href="$class_transformable_component.html#ac1171dc4f5fede3eaa7e8270077ab3f1" title="Position Getter." alt="" coords="205,57,396,98"/>
+<area shape="rect" id="node4" href="$class_transformable_component.html#a4246021c8025166edf9d0633ceb8247b" title="Size Getter." alt="" coords="205,122,396,163"/>
+<area shape="rect" id="node5" href="$class_scene.html#af5352811e65e1fa37a626fbc2f690584" title="Returns the size of the scene." alt="" coords="242,188,359,215"/>
 </map>

@@ -9,7 +9,7 @@ void Ennemy::processEvent(CustomEvent* event) {
     if (H) {
         HitData* data = (HitData*) H->getData();
 
-        if (strcmp(data->target, name_) == 0) {
+        if (data->target == name_) {
             HitData* Hd = (HitData*) H->getData();
             getHit(data->damage);
         }

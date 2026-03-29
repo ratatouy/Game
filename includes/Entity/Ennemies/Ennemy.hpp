@@ -1,13 +1,15 @@
 #ifndef ENNEMY_HPP
 #define ENNEMY_HPP
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
 #include <iostream>
 
 #include "Entity/Entity.hpp"
 #include "Events/Event.hpp"
 #include "Events/CustomEvents/HitEvent.hpp"
 
-#include "Components/BasicComponents/TransformableComponent.hpp"
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 
@@ -19,8 +21,8 @@ private:
 
 public:
     Ennemy(const char* name, int health = 7) : Entity(name), health_(health) {}
-    Ennemy(const char* name, TransformableComponent* transform, int health = 7) : Entity(name, transform), health_(health) {};
-    Ennemy(const char* name, TransformableComponent* transform, EntitySpriteComponent* sprites, int health = 7) : Entity(name, transform, sprites), health_(health) {};
+    Ennemy(const char* name, sf::Transformable* transform, int health = 7) : Entity(name, transform), health_(health) {};
+    Ennemy(const char* name, sf::Transformable* transform, EntitySpriteComponent* sprites, int health = 7) : Entity(name, transform, sprites), health_(health) {};
     
 
     void update() override;

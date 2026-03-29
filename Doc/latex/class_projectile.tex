@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Projectile\+:
-\nopagebreak
+Inheritance diagram for Projectile\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Projectile\+:
 \end{figure}
 
 
-Collaboration diagram for Projectile\+:
-\nopagebreak
+Collaboration diagram for Projectile\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +28,7 @@ Collaboration diagram for Projectile\+:
 \mbox{\hyperlink{class_projectile_a2146c34f553c3726f76571b268af1e7f}{Projectile}} (const char $\ast$name, sf\+::\+Vector2f position=\{0, 0\}, sf\+::\+Vector2f speed=\{0, 0\})
 \item 
 void \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{update}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -52,7 +50,8 @@ Definition at line 10 of file Projectile.\+hpp.
 
 Definition at line 4 of file Projectile.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,13 +69,26 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Reimplemented from \mbox{\hyperlink{class_entity_aed73e98b980b85833428c935cc1c69f8}{Entity}}.
+Update the entity. 
+
+\begin{DoxyNote}{Note}
+Order of Updating should be \+: \begin{DoxyItemize}
+\item yadi-\/yadi-\/yada \item update Entity\+Sprite Component ( \end{DoxyItemize}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}{Entity\+Sprite\+Component\+::update}}) 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{class_entity_a59a29d9b7474baf13c9c76859242287d}{Entity}}.
 
 
 
 Definition at line 12 of file Projectile.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

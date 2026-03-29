@@ -1,10 +1,10 @@
 <map id="Game::addEntity" name="Game::addEntity">
 <area shape="rect" id="node1" title=" " alt="" coords="5,107,136,133"/>
 <area shape="rect" id="node2" href="$class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="184,5,391,32"/>
-<area shape="rect" id="node4" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="222,56,353,83"/>
-<area shape="rect" id="node5" href="$class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3" title=" " alt="" coords="439,107,565,133"/>
-<area shape="rect" id="node7" href="$class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="205,157,369,184"/>
+<area shape="rect" id="node4" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="222,56,353,83"/>
+<area shape="rect" id="node5" href="$class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="439,107,565,133"/>
+<area shape="rect" id="node7" href="$class_entity.html#a945edcaab37c678637655648dda23694" title="Get the EntitySprite Component of the entity." alt="" coords="205,157,369,184"/>
 <area shape="rect" id="node8" href="$class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="201,209,374,250"/>
-<area shape="rect" id="node3" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="455,5,549,32"/>
+<area shape="rect" id="node3" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="455,5,549,32"/>
 <area shape="rect" id="node6" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="439,56,565,83"/>
 </map>

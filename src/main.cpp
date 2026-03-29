@@ -16,24 +16,11 @@ int main() {
     Logger::restart();
 
     // PhysicEngine* pEngine = new PhysicEngine(0);
-    MenuScene* menu = new MenuScene({0, 0}, {920, 480});
-    EventHandler* evHandler = new EventHandler();
-    RenderEngine* rEngine = new RenderEngine("Game", 920, 480);
 
+    Game game = Game();
+    game.loadScene("lvl1");
 
-    Game* game = new Game();
-
-    game->setEventHandler(evHandler);
-    evHandler->setGame(game);
-
-    rEngine->setGame(game);
-    game->setRenderEngine(rEngine);
-
-    game->setActiveScene(menu);
-    menu->setGame(game);
-
-
-    TransformableComponent* raptorTransform = new TransformableComponent();
+    sf::Transformable* raptorTransform = new sf::Transformable();
     raptorTransform->setPosition({0, 200});
     raptorTransform->setScale({0.2f, 0.2f});
     EntitySpriteComponent* raptorSprite = new EntitySpriteComponent(raptorTransform);
@@ -42,8 +29,7 @@ int main() {
 
     Player* raptor = new Player("raptor", raptorTransform, raptorSprite);
 
-
-    TransformableComponent* liliTransformable = new TransformableComponent();
+    sf::Transformable* liliTransformable = new sf::Transformable();
     liliTransformable->setPosition({400, 0});
     liliTransformable->setScale({0.1f, 0.1f});
     EntitySpriteComponent* liliSprite = new EntitySpriteComponent(liliTransformable);
@@ -51,45 +37,46 @@ int main() {
     Ennemy* lili = new Ennemy("lili", liliTransformable, liliSprite);
 
 
-    game->addEntity(raptor);
-    game->addEntity(lili);
+    game.addEntity(raptor);
+    game.addEntity(lili);
 
 
     sf::Event event;
 
-    while (game->getRenderEngine()->getWindow()->isOpen())
+    while (game.getRenderEngine()->getWindow()->isOpen())
     {
-        while (game->getRenderEngine()->getWindow()->pollEvent(event))
+        while (game.getRenderEngine()->getWindow()->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
             {
-                game->getRenderEngine()->getWindow()->close();
+                game.getRenderEngine()->getWindow()->close();
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
             {
-                Player* pl = (Player*)game->getActiveScene()->getEntity("raptor");
-                pl->attack();
+                Player* player = (Player*)game.getActiveScene()->getEntity("raptor");
+                player->attack();
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
             {
-                game->getActiveScene()->getEntity("raptor")->getTransformable()->move({10, 0});
+                game.getActiveScene()->getEntity("raptor")->transformable->move({10, 0});
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
             {
-                game->getActiveScene()->getEntity("raptor")->getTransformable()->move({-10, 0});
+                game.getActiveScene()->getEntity("raptor")->transformable->move({-10, 0});
+                game.getEventHandler()->addEvent(std::make_unique<SceneTransitionEvent>("lvl2"));
             }
         }
         
-        while (!game->getEventHandler()->isEmpty())
+        while (!game.getEventHandler()->isEmpty())
         {
-            game->getEventHandler()->processEvent();
+            game.getEventHandler()->processEvent();
         }
     
 
-        game->getRenderEngine()->getWindow()->clear(sf::Color(125,0,125,0));
-        game->update();
-        game->render();
-        game->getRenderEngine()->getWindow()->display();
+        game.getRenderEngine()->getWindow()->clear(sf::Color(125,0,125,0));
+        game.update();
+        game.render();
+        game.getRenderEngine()->getWindow()->display();
     }
 
 

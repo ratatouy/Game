@@ -6,7 +6,7 @@ var searchData=
   ['ennemy_2ehpp_23',['Ennemy.hpp',['../_ennemy_8hpp.html',1,'']]],
   ['entity_24',['Entity',['../class_entity.html',1,'']]],
   ['entity_25',['ENTITY',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e',1,'logger.hpp']]],
-  ['entity_26',['Entity',['../class_entity.html#abd75374db786223239daa5010b4cbdf3',1,'Entity::Entity(const char *name, TransformableComponent *transformable, EntitySpriteComponent *entitySprite)'],['../class_entity.html#af0c912b86f9d0b1c7299239212d9a0ca',1,'Entity::Entity(const char *name, TransformableComponent *transformable)'],['../class_entity.html#a59e211574f0e67279934df788cc03df7',1,'Entity::Entity(const char *name)'],['../class_entity.html#a3170dc9c4995e5bd8e28601807350df9',1,'Entity::Entity()=delete']]],
+  ['entity_26',['Entity',['../class_entity.html#a26a7f1c53a42e8f17ea82b437efa2e61',1,'Entity::Entity(std::string name, TransformableComponent *transformable, EntitySpriteComponent *entitySprite)'],['../class_entity.html#aef864676de89c036927d9c3c082ddf08',1,'Entity::Entity(std::string name, TransformableComponent *transformable)'],['../class_entity.html#a0376dc13a1c12e61dd576ffcd20a34a1',1,'Entity::Entity(std::string name)'],['../class_entity.html#a3170dc9c4995e5bd8e28601807350df9',1,'Entity::Entity()=delete']]],
   ['entity_2ehpp_27',['Entity.hpp',['../_entity_8hpp.html',1,'']]],
   ['entitysprite_5f_28',['entitySprite_',['../class_entity.html#a80bb0324b8d46cf95529bd340c383585',1,'Entity']]],
   ['entityspritecomponent_29',['EntitySpriteComponent',['../class_entity_sprite_component.html',1,'EntitySpriteComponent'],['../class_entity_sprite_component.html#ad7d27bb5f88886b04eb159222135949d',1,'EntitySpriteComponent::EntitySpriteComponent()']]],

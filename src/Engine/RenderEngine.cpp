@@ -9,13 +9,14 @@
 bool RenderEngine::instantiated_ = false;
 
 
-RenderEngine::RenderEngine(std::string title, int width, int height)
+RenderEngine::RenderEngine(Game* game, std::string title, int width, int height)
 {
     if (instantiated_) {
         throw std::runtime_error("RenderEngine already instantiated");
     }
     instantiated_ = true;
 
+    game_ = game;
     window_ = new sf::RenderWindow(sf::VideoMode(width, height), title);
 }
 
@@ -39,7 +40,7 @@ RenderEngine::~RenderEngine()
 
 
 
-void RenderEngine::addDrawable(std::string name, sf::Drawable* drawable)
+void RenderEngine::addDrawable(const std::string& name, sf::Drawable* drawable)
 {
     Logger::log(RENDER_ENGINE, DEBUG, "adding " + (std::string)name);
 

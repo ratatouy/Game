@@ -25,10 +25,10 @@ void Scene::addEntity(Entity* entity)
 }
 
 
-Entity* Scene::getEntity(const char* name)
+const Entity* Scene::getEntity(std::string name) const
 {
     for (auto ent : entity_map_) {
-        if(strcmp(ent.first, name) == 0)
+        if (name == ent.first)
             return ent.second;
     }
     return nullptr;
@@ -44,6 +44,11 @@ void Scene::processEvent(SceneTransitionEvent* event)
     processEventFunc(event);
 }
 
+void Scene::processEventFunc(SceneTransitionEvent* event)
+{
+    delete this;
+}
+
 void Scene::processEvent(CustomEvent* event)
 {
     for (auto entity : entity_map_)
@@ -54,10 +59,10 @@ void Scene::processEvent(CustomEvent* event)
 };
 
 
-void Scene::throwEvent(Event* event)
+void Scene::throwEvent(std::unique_ptr<Event> event)
 {
     Logger::log(SCENE, DEBUG, "Throwing event");
-    game_->throwEvent(event);
+    game_->throwEvent(std::move(event));
 }
 
 
@@ -69,14 +74,14 @@ void Scene::update()
 
 bool Scene::checkTransition()
 {
-    for (auto transition : transition_map_)
+    for (auto transition_pair : transition_map_)
     {
-        TransformableComponent* player_transform = getEntity("player")->getTransformable();
+        sf::Transformable* player_transform = getEntity("player")->transformable;
         if (player_transform == nullptr)
             throw(std::runtime_error("Player transform not found"));
         
-        if (transition.second->checkTransition())
-            throwEvent(new SceneTransitionEvent(transition.second->getTargetName()));
+        if (transition_pair.second->checkTransition())
+            throwEvent(std::make_unique<SceneTransitionEvent>(transition_pair.second->getTargetName()));
     }
     return false;
 }
@@ -84,9 +89,9 @@ bool Scene::checkTransition()
 
 void Scene::updateEntities()
 {
-    for (std::pair<const char*, Entity*> entity_pair : entity_map_)
+    for (std::pair<std::string, Entity*> entity_pair : entity_map_)
     {
         entity_pair.second->update();
-        entity_pair.second->getEntitySprite()->update();
+        entity_pair.second->entitySprite->update();
     }
 }

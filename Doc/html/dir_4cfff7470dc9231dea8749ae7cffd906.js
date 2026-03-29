@@ -5,7 +5,9 @@ var dir_4cfff7470dc9231dea8749ae7cffd906 =
     [ "CustomEvent.hpp", "_custom_event_8hpp.html", [
       [ "CustomEvent", "class_custom_event.html", "class_custom_event" ]
     ] ],
-    [ "Event.hpp", "_event_8hpp.html", "_event_8hpp" ],
+    [ "Event.hpp", "_event_8hpp.html", [
+      [ "Event", "class_event.html", "class_event" ]
+    ] ],
     [ "EventHandler.hpp", "_event_handler_8hpp.html", [
       [ "EventHandler", "class_event_handler.html", "class_event_handler" ]
     ] ]

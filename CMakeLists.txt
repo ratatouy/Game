@@ -14,7 +14,8 @@ FetchContent_MakeAvailable(SFML)
 
 ## Set project source files
 Set(SOURCE_FILES
-    src/Components/EntitySpriteComponent.cpp
+    src/Components/BasicComponents/EntitySpriteComponent.cpp
+    src/Components/BasicComponents/ColliderComponent.cpp
 
     src/Events/CustomEvents/HitEvent.cpp
     src/Events/EventHandler.cpp
@@ -25,7 +26,7 @@ Set(SOURCE_FILES
 
     src/Loaders/sceneLoader.cpp
 
-    # src/Transition/Transition.cpp
+    src/Transitions/BasicTransitions/BorderTransition.cpp
 
     src/Engine/PhysicsEngine.cpp
     src/Engine/RenderEngine.cpp

@@ -19,7 +19,6 @@ var annotated_dup =
     [ "Projectile", "class_projectile.html", "class_projectile" ],
     [ "RenderEngine", "class_render_engine.html", "class_render_engine" ],
     [ "Scene", "class_scene.html", "class_scene" ],
-    [ "SceneData", "struct_scene_data.html", null ],
     [ "SceneTransitionEvent", "class_scene_transition_event.html", "class_scene_transition_event" ],
     [ "SpawnEntityEvent", "class_spawn_entity_event.html", "class_spawn_entity_event" ],
     [ "TransformableComponent", "class_transformable_component.html", "class_transformable_component" ],

@@ -2,6 +2,11 @@
 \label{class_menu_scene}\index{MenuScene@{MenuScene}}
 
 
+Menu \mbox{\hyperlink{class_scene}{Scene}}.  
+
+
+
+
 {\ttfamily \#include $<$Menu\+Scene.\+hpp$>$}
 
 
@@ -27,29 +32,40 @@ Collaboration diagram for Menu\+Scene\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_menu_scene_afcc0dcde491eac4e970d68e8896bf4cb}{Menu\+Scene}} ()
-\item 
+\mbox{\hyperlink{class_menu_scene_ae7619035fbca4fcf1bda189faed10700}{Menu\+Scene}} (sf\+::\+Vector2i origin, sf\+::\+Vector2u size)
+\begin{DoxyCompactList}\small\item\em Create a Menu \mbox{\hyperlink{class_scene}{Scene}} with a given origin in global space and size. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_menu_scene_a9bc01005e87b0fde5324da4ef1f95bd3}{process\+Event\+Func}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event) override
-\begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Process the \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Menu \mbox{\hyperlink{class_scene}{Scene}}. 
 
-
-Definition at line 7 of file Menu\+Scene.\+hpp.
+Definition at line 14 of file Menu\+Scene.\+hpp.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_menu_scene_afcc0dcde491eac4e970d68e8896bf4cb}\label{class_menu_scene_afcc0dcde491eac4e970d68e8896bf4cb}} 
+\mbox{\Hypertarget{class_menu_scene_ae7619035fbca4fcf1bda189faed10700}\label{class_menu_scene_ae7619035fbca4fcf1bda189faed10700}} 
 \index{MenuScene@{MenuScene}!MenuScene@{MenuScene}}
 \index{MenuScene@{MenuScene}!MenuScene@{MenuScene}}
 \doxysubsubsection{\texorpdfstring{MenuScene()}{MenuScene()}}
-{\footnotesize\ttfamily Menu\+Scene\+::\+Menu\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Menu\+Scene\+::\+Menu\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{origin,  }\item[{sf\+::\+Vector2u}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 9 of file Menu\+Scene.\+hpp.
+Create a Menu \mbox{\hyperlink{class_scene}{Scene}} with a given origin in global space and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & Origin of the current scene in the global space\\
+\hline
+{\em size} & Size of the current scene \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Menu\+Scene.\+hpp.
 
 
 
@@ -62,23 +78,29 @@ Definition at line 9 of file Menu\+Scene.\+hpp.
 
 
 
-Process a \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. 
-
-Will unload itself.
+Process the \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em event} & \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} \\
+{\em event} & \\
 \hline
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{class_scene_a68fbe961ca24ff6d704f56cc058dc18a}{Scene}}.
+Reimplemented from \mbox{\hyperlink{class_scene_a74062e0cbccb836a2ea6cbdc09166259}{Scene}}.
 
 
 
-Definition at line 11 of file Menu\+Scene.\+hpp.
+Definition at line 31 of file Menu\+Scene.\+hpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_menu_scene_a9bc01005e87b0fde5324da4ef1f95bd3_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

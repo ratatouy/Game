@@ -52,6 +52,8 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Set the reference to the Game
     ///
+    /// \warning Deprecated (game is set when loading the scene in game::loadScene)
+    ///
     /// \param game Reference to the Game
     ////////////////////////////////////////////////////////////
     void setGame(Game* game) {game_ = game;}
@@ -61,17 +63,17 @@ public:
     ///
     /// \returns Origin of the scene
     ////////////////////////////////////////////////////////////
-    sf::Vector2i getOrigin() {return origin_;}
+    const sf::Vector2i& getOrigin() {return origin_;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Returns the size of the scene
     ///
     /// \returns Size of the scene
     ////////////////////////////////////////////////////////////
-    sf::Vector2u getSize() {return size_;}
+    const sf::Vector2u& getSize() const {return size_;}
     
     ////////////////////////////////////////////////////////////
-    /// \brief returns an Entity according to its name
+    /// \brief returns a reference to the Entity according to its name
     ///
     /// Returns nullptr if not found.
     ///
@@ -80,8 +82,10 @@ public:
     /// \returns pointer to the entity, nullptr if not found
     ///
     /// \see Entity
+    ///
+    /// \todo Make this const
     ////////////////////////////////////////////////////////////
-    Entity* getEntity(const char* name);
+    const Entity* getEntity(std::string name) const;
 
     ////////////////////////////////////////////////////////////
     /// \brief SceneTransitionEvent process distributor
@@ -99,11 +103,11 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Process a SceneTransitionEvent
     ///
-    /// Will unload itself.
+    /// Unloads itself.
     ///
     /// \param event SceneTransitionEvent
     ////////////////////////////////////////////////////////////
-    virtual void processEventFunc(SceneTransitionEvent* event) {};
+    virtual void processEventFunc(SceneTransitionEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief CustomEvent process distributor
@@ -134,7 +138,7 @@ public:
     ///
     /// \see Game::throwEvent
     ////////////////////////////////////////////////////////////
-    void throwEvent(Event* event);
+    void throwEvent(std::unique_ptr<Event> event);
 
     ////////////////////////////////////////////////////////////
     /// \brief Adds an entity to the scene
@@ -172,9 +176,9 @@ private:
     // Attributes
     ////////////////////////////////////////////////////////////
     Game* game_;                                                  ///< Reference to the game object
-    const char* name_;                                            ///< Name of the current_scene
-    std::unordered_map<const char*, Transition*> transition_map_; ///< Map of the Transitions
-    std::unordered_map<const char*, Entity*> entity_map_;         ///< List of the entities according to their names
+    std::string name_;                                            ///< Name of the current_scene
+    std::unordered_map<std::string, Transition*> transition_map_; ///< Map of the Transitions
+    std::unordered_map<std::string, Entity*> entity_map_;         ///< List of the entities according to their names
     sf::Vector2i origin_;                                         ///< Origin of the current scene in the global space
     sf::Vector2u size_;                                           ///< Size of the current scene
 

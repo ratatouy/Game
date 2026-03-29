@@ -2,26 +2,31 @@
 \label{class_logger}\index{Logger@{Logger}}
 
 
+A logger to use to log information.  
+
+
+
+
 {\ttfamily \#include $<$logger.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_logger_aefffc02e0c6c0ab09ec1f77fe35f6439}{Logger}} ()=delete
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor unused bc everything is static (shhh dw it\textquotesingle{}s clean code \+:clueless\+:) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{class_logger_af5ab7c3f7aae023ea3ae480540dabc2c}{restart}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Restarts the logger, erasing all logs. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_logger_a51d42db0221fc45fe18d43931638157c}{log}} (\mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87c}{Log\+Type}} type, \mbox{\hyperlink{logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} level, const std\+::string \&message)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Log a message to the console, general log file and a specific log file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A logger to use to log information. 
 
-
-Definition at line 15 of file logger.\+hpp.
+Definition at line 20 of file logger.\+hpp.
 
 
 
@@ -34,6 +39,10 @@ Definition at line 15 of file logger.\+hpp.
 
 
 
+Constructor unused bc everything is static (shhh dw it\textquotesingle{}s clean code \+:clueless\+:) 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_logger_a51d42db0221fc45fe18d43931638157c}\label{class_logger_a51d42db0221fc45fe18d43931638157c}} 
 \index{Logger@{Logger}!log@{log}}
@@ -41,20 +50,22 @@ Definition at line 15 of file logger.\+hpp.
 \doxysubsubsection{\texorpdfstring{log()}{log()}}
 {\footnotesize\ttfamily static void Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logger_8hpp_af67907baa897e9fb84df0cb89795b87c}{Log\+Type}}}]{type,  }\item[{\mbox{\hyperlink{logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}}]{level,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-Log a message
+
+
+Log a message to the console, general log file and a specific log file. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em type} & The log type \\
+{\em type} & The log type\\
 \hline
-{\em level} & The log level \\
+{\em level} & The log level\\
 \hline
 {\em message} & The message to log \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 43 of file logger.\+hpp.
+Definition at line 52 of file logger.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -70,9 +81,13 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{restart()}{restart()}}
 {\footnotesize\ttfamily static void Logger\+::restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-Restart the logger, erasing all logs 
 
-Definition at line 22 of file logger.\+hpp.
+
+Restarts the logger, erasing all logs. 
+
+
+
+Definition at line 28 of file logger.\+hpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

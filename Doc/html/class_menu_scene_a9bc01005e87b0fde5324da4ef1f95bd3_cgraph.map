@@ -1,0 +1,4 @@
+<map id="MenuScene::processEventFunc" name="MenuScene::processEventFunc">
+<area shape="rect" id="node1" title="Process the SceneTransitionEvent." alt="" coords="5,5,228,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="276,5,371,32"/>
+</map>

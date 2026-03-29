@@ -1,15 +1,37 @@
 #ifndef MENUSCENE_HPP
 #define MENUSCENE_HPP
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
 #include "Scenes/Scene.hpp"
+#include "logger.hpp"
 #include <iostream>
 
-class MenuScene : public Scene {
+
+////////////////////////////////////////////////////////////
+/// \brief Menu Scene
+////////////////////////////////////////////////////////////
+class MenuScene : public Scene
+{
 public:
+    ////////////////////////////////////////////////////////////
+    /// \brief Create a Menu Scene with a given origin in global space and size
+    ///
+    /// \param origin Origin of the current scene in the global space
+    ///
+    /// \param size Size of the current scene
+    ////////////////////////////////////////////////////////////
     MenuScene(sf::Vector2i origin, sf::Vector2u size) : Scene(origin, size) {};
 
-    void processEventFunc(SceneTransitionEvent* event) override {
-        std::cout << "MenuScene Processing SceneTransitionEvent" << std::endl;
+    ////////////////////////////////////////////////////////////
+    /// \brief Process the SceneTransitionEvent
+    ///
+    /// \param event 
+    ////////////////////////////////////////////////////////////
+    void processEventFunc(SceneTransitionEvent* event) override
+    {
+        Logger::log(SCENE, DEBUG, "MenuScene Processing SceneTransitionEvent");
     };
 };
 

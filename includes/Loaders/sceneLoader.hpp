@@ -8,16 +8,26 @@
 
 
 ////////////////////////////////////////////////////////////
-/// \brief Load a scene from a json file
+/// \brief Loads and builds a scene from a json file and returns a pointer to it
 ///
-/// \param filepath Path to the json file
+/// Loads :
+/// \li origin
+/// \li size
+///
+/// Missing :
+/// \li colliders
+/// \li transitions
+/// \li entities
 ///
 /// \param name Name of the scene to load
 ///
+/// \param filepath Path to the json file (default : "Data/GameData/sceneData.json")
+///
 /// \return Pointer to the loaded scene
+///
+/// \see Scene
 ////////////////////////////////////////////////////////////
-Scene* LoadScene(const char* filepath, std::string name);
-
+Scene* LoadScene(std::string name, std::string filepath = "Data/GameData/sceneData.json");
 
 
 #endif

@@ -7,111 +7,133 @@
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
 #include "Events/CustomEvent.hpp"
 
-#include "Components/BasicComponents/TransformableComponent.hpp"
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 
 class Scene; // Forward Declaration of Scene
 
-
 //////////////////////////////////////
-/// \class Entity
+/// \brief An Entity is an object that has an update and a render method
 ///
-/// \brief An Entity is an object that has an update and a render method.
+/// This class is abstract.
+/// The sf::Transformable and EntitySpriteComponent are mandatory and public.
 //////////////////////////////////////
 class Entity {
-
-protected:
-    Scene* current_scene_; ///< Pointer to the current scene
-    const char* name_;     ///< Name of the entity
-
-    TransformableComponent* transformable_; ///< Pointer to the Transformable Component
-    EntitySpriteComponent* entitySprite_;   ///< Pointer to the EntitySprite Component
-
-
 public:
+    ////////////////////////////////////////////////////////////
+    /// \brief Default Constructor
+    ///
+    /// Deleted to prevent Entities from having no name.
+    ////////////////////////////////////////////////////////////
     Entity() = delete;
 
-
-    /// \brief Lowest Constructor.
+    ////////////////////////////////////////////////////////////
+    /// \brief Create an Entity with a name
+    ///
+    /// This automatically creates a sf::Transformable and an empty EntitySpriteComponent.
+    ///
     /// \param name Name of the entity
-    Entity(const char* name) : name_(name) {};
+    ////////////////////////////////////////////////////////////
+    Entity(std::string name) : name_(name)
+    {transformable = new sf::Transformable(); entitySprite = new EntitySpriteComponent(transformable);};
 
 
-    /// \brief Intermediate Transformable Constructor.
+    ////////////////////////////////////////////////////////////
+    /// \brief Create an entity from a name and a sf::Transformable
+    ///
+    /// The sf::Transformable has to be passed by reference because it will be attached to the entity.
+    /// This automatically creates an EntitySpriteComponent.
+    ///
     /// \param name Name of the entity
-    /// \param transformable Pointer to the TransformableComponent to attach to the entity
-    Entity(const char* name, TransformableComponent* transformable) : name_(name), transformable_(transformable) {}
+    ///
+    /// \param transformable Pointer to the sf::Transformable to attach to the entity
+    ////////////////////////////////////////////////////////////
+    Entity(std::string name, sf::Transformable* tr) : name_(name), transformable(tr)
+    {entitySprite = new EntitySpriteComponent(transformable);};
 
 
-    /// \brief Full Constructor.
+    ////////////////////////////////////////////////////////////
+    /// \brief Create an entity from a name, a sf::Transformable and an EntitySpriteComponent
+    ///
+    /// The sf::Transformable and the EntitySpriteComponent
+    /// have to be passed by reference because they will be attached to the entity.
+    ///
     /// \param name Name of the entity
-    /// \param transformable Pointer to the TransformableComponent to attach to the entity
+    ///
+    /// \param transformable Pointer to the sf::Transformable to attach to the entity
+    ///
     /// \param entitySprite Pointer to the EntitySpriteComponent to attach to the entity
-    Entity(const char* name, TransformableComponent* transformable, EntitySpriteComponent* entitySprite)
-    : name_(name), transformable_(transformable), entitySprite_(entitySprite) {}
+    ////////////////////////////////////////////////////////////
+    Entity(std::string name, sf::Transformable* tr, EntitySpriteComponent* eSpr)
+    : name_(name), transformable(tr), entitySprite(eSpr) {}
 
 
-
+    ////////////////////////////////////////////////////////////
     /// \brief Set the current scene of the entity.
+    ///
     /// \param scene Pointer to the scene
+    ////////////////////////////////////////////////////////////
     void setScene(Scene* scene) {current_scene_ = scene;}
 
 
+    ////////////////////////////////////////////////////////////
     /// \brief Set the name of the entity.
+    ///
     /// \param name Name of the entity
-    void setName(const char* name) {name_ = name;}
+    ////////////////////////////////////////////////////////////
+    void setName(std::string name) {name_ = name;}
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Get the name of the entity
+    ///
+    /// \returns Name of the entity
+    ////////////////////////////////////////////////////////////
+    const std::string& getName() const {return name_;}
 
-    /** Set the Transformable Component of the entity
-     * 
-     * @param transformable Pointer to the Transformable Component
-     */
-    void setTransformable(TransformableComponent* transformable) {transformable_ = transformable;}
+    ////////////////////////////////////////////////////////////
+    /// \brief Get the current scene of the entity
+    ///
+    /// \returns Pointer to the current scene
+    ////////////////////////////////////////////////////////////
+    const Scene* getCurrentScene() const {return current_scene_;}
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Process a SceneTransitionEvent
+    ///
+    /// Deletes itself unless it's a global Entity
+    /// , in which case we except the entity to override this method.
+    ///
+    /// \param event Pointer to the SceneTransitionEvent
+    ////////////////////////////////////////////////////////////
+    virtual void processEvent(SceneTransitionEvent* event) {delete this;};
 
-    /** Set the EntitySprite Component of the entity
-     * 
-     * @param entitySprite Pointer to the EntitySprite Component
-     */
-    void setEntitySprite(EntitySpriteComponent* entitySprite) {entitySprite_ = entitySprite;}
-
-
-
-    /** Get the name of the entity
-     * 
-     * @returns Name of the entity
-     */
-    const char* getName() {return name_;}
-
-
-    /** Get the current scene of the entity
-     * 
-     * @returns Pointer to the current scene
-     */
-    Scene* getCurrentScene() {return current_scene_;}
-
-
-    /** Get the Transformable Component of the entity 
-     * 
-     * @returns Pointer to the Transformable Component
-     */
-    TransformableComponent* getTransformable() {return transformable_;}
-
-
-    /** Get the EntitySprite Component of the entity 
-     * 
-     * @returns Pointer to the EntitySprite Component
-     */
-    EntitySpriteComponent* getEntitySprite() {return entitySprite_;}
-
-
-    virtual void processEvent(SceneTransitionEvent* event) {};
+    ////////////////////////////////////////////////////////////
+    /// \brief Process a CustomEvent
+    ///
+    /// What it does depends on the CustomEvent type
+    ///
+    /// \param event Pointer to the CustomEvent
+    ////////////////////////////////////////////////////////////
     virtual void processEvent(CustomEvent* event) {};
 
-    
-    virtual void update() {};
-    virtual void render(sf::RenderWindow* window) {};
+    ////////////////////////////////////////////////////////////
+    /// \brief Update the entity
+    ///
+    /// \note Order of Updating should be :
+    /// \li yadi-yadi-yada
+    /// \li update EntitySprite Component ( \see EntitySpriteComponent::update)
+    ////////////////////////////////////////////////////////////
+    virtual void update() = 0;
+
+protected:
+    ////////////////////////////////////////////////////////////
+    /// Member Data
+    ////////////////////////////////////////////////////////////
+            Scene* current_scene_;                   ///< Pointer to the current scene
+            std::string name_;                       ///< Name of the entity
+public:     sf::Transformable* transformable;        ///< Pointer to the Transformable Component
+public:     EntitySpriteComponent* entitySprite;     ///< Pointer to the EntitySprite Component
+
 };
 
 

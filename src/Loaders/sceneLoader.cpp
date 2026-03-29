@@ -6,7 +6,7 @@
 #include "logger.hpp"
 
 
-Scene* LoadScene(const char* filepath, std::string name)
+Scene* LoadScene(std::string name, std::string filepath)
 {
     // Open the file
     std::ifstream f("Data/GameData/sceneData.json");

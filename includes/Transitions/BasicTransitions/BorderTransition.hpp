@@ -6,8 +6,6 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include "Transitions/Transition.hpp"
-#include "Components/BasicComponents/TransformableComponent.hpp"
-
 
 
 ////////////////////////////////////////////////////////////
@@ -18,40 +16,56 @@
 ////////////////////////////////////////////////////////////
 class BorderTransition : public Transition
 {
-    public:
-        ////////////////////////////////////////////////////////////
-        /// \brief Constructs a BorderTransition from a Scene, a target Scene, a start position and an end position
-        ///
-        /// If start > end, start and end are swapped.
-        ///
-        /// \param scene Pointer to the attached Scene
-        ///
-        /// \param target Name of the targeted Scene
-        ///
-        /// \param start Position of left-most pixel of the transition if it's vertical
-        ///              , top-most pixel if it's horizontal.
-        ///
-        /// \param end Position of the right-most pixel of the transition if it's vertical
-        ///            , bottom-most if it's horizontals.
-        ////////////////////////////////////////////////////////////
-        BorderTransition(Scene* scene, std::string target, int start, int end)
-            : Transition(scene, target)
-        {
-            if (start > end) std::swap(start, end);
-            start_ = start;
-            end_ = end;
-        }
+public:
+    ////////////////////////////////////////////////////////////
+    /// \brief Constructs a BorderTransition from a Scene, a target Scene, a name, a start position and an end position
+    ///
+    /// If start > end, start and end are swapped.
+    ///
+    /// \param scene Pointer to the attached Scene
+    ///
+    /// \param target Name of the targeted Scene
+    ///
+    /// \param start Position of left-most pixel of the transition if it's vertical
+    ///              , top-most pixel if it's horizontal.
+    ///
+    /// \param end Position of the right-most pixel of the transition if it's vertical
+    ///            , bottom-most if it's horizontals.
+    ////////////////////////////////////////////////////////////
+    BorderTransition(Scene* scene, std::string target, std::string name, int start, int end)
+        : Transition(scene, target, name)
+    {
+        if (start > end) std::swap(start, end);
+        start_ = start;
+        end_ = end;
+    }
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Deletes Empty checkTransition
+    ////////////////////////////////////////////////////////////
+    virtual bool checkTransition() const override = 0;
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Check if the transition should be activated according to the player's sf::Transformable
+    ///
+    /// overrides Transition method but still does not implement it,
+    /// as it will be implemented in the subclasses HorizontalTransition and VerticalTransition.
+    ///
+    /// \param player_tr The player's sf::Transformables
+    ///
+    /// \returns True if the Transition should be activated
+    ////////////////////////////////////////////////////////////
+    virtual bool checkTransition(ColliderComponent* player_tr) const override = 0;
 
 
+protected:
+    int start_;
+    ///< position of left-most pixel of the transition if it's vertical
+    ///, top-most if it's horizontal.
 
-    protected:
-        int start_;
-        ///< position of left-most pixel of the transition if it's vertical
-        ///, top-most if it's horizontal.
-
-        int end_;
-        ///< position of the right-most pixel of the transition if it's vertical
-        ///, bottom-most if it's horizontal.
+    int end_;
+    ///< position of the right-most pixel of the transition if it's vertical
+    ///, bottom-most if it's horizontal.
 };
 
 
@@ -68,18 +82,39 @@ class BorderTransition : public Transition
 class VerticalTransition : public BorderTransition
 {
 public:
-    VerticalTransition(Scene* scene, std::string target, int start, int end, bool down = true)
-        : BorderTransition(scene, target, start, end), down_(down) {}
+    ////////////////////////////////////////////////////////////
+    /// \brief Constructs a VerticalTransition from a Scene, a target Scene, a name, a start position, an end position and a direction
+    ///
+    /// The start and end are the two opposite "points" of the transition.
+    /// If start > end, start and end are swapped,
+    /// right defaults to true.
+    /// 
+    /// \param scene Pointer to the attached Scene
+    /// 
+    /// \param target Name of the targeted Scene
+    ///
+    /// \param name Name of the Transition
+    ///
+    /// \param start Position of left-most pixel of the transition if it's vertical
+    ///              , top-most pixel if it's horizontal.
+    ///
+    /// \param end Position of the right-most pixel of the transition if it's vertical
+    ///            , bottom-most if it's horizontals.
+    ///
+    /// \param right Does the transition go right ? Defaults to true
+    ////////////////////////////////////////////////////////////
+    VerticalTransition(Scene* scene, std::string target, std::string name, int start, int end, bool down = true)
+        : BorderTransition(scene, target, name, start, end), down_(down) {}
 
 
     ////////////////////////////////////////////////////////////
     /// \brief Checks if the player is within the activation zone of the transition
     ///
-    /// \param player_tr The player's TransformableComponent
+    /// \param player_tr The player's sf::Transformable
     ///
     /// \returns True if the Transition should be activated
     ////////////////////////////////////////////////////////////
-    bool checkTransition(TransformableComponent* player_tr) const override;
+    bool checkTransition(ColliderComponent* player_tr) const override;
 
 
 
@@ -101,8 +136,7 @@ class HorizontalTransition : public BorderTransition
 {
 public:
     ////////////////////////////////////////////////////////////
-    /// \brief Constructs a HorizontalTransition from a Scene, a target Scene
-    ///         , a start position, an end position and a direction
+    /// \brief Constructs a HorizontalTransition from a Scene, a target Scene, a name, a start position, an end position and a direction
     ///
     /// The start and end are the two opposite "points" of the transition.
     /// If start > end, start and end are swapped,
@@ -112,6 +146,8 @@ public:
     /// 
     /// \param target Name of the targeted Scene
     ///
+    /// \param name Name of the Transition
+    ///
     /// \param start Position of left-most pixel of the transition if it's vertical
     ///              , top-most pixel if it's horizontal.
     ///
@@ -120,19 +156,18 @@ public:
     ///
     /// \param right Does the transition go right ? Defaults to true
     ////////////////////////////////////////////////////////////
-    HorizontalTransition(Scene* scene, std::string target, int start, int end, bool right = true)
-        : BorderTransition(scene, target, start, end), right_(right) {}
-
+    HorizontalTransition(Scene* scene, std::string target, std::string name, int start, int end, bool right = true)
+        : BorderTransition(scene, target, name, start, end), right_(right) {}
 
 
     ////////////////////////////////////////////////////////////
     /// \brief Check if the player is within or past the activation zone of the transition
     ///
-    /// \param player_tr The player's TransformableComponent
+    /// \param player_tr The player's sf::Transformable
     ///
     /// \returns True if the Transition should be activated
     ////////////////////////////////////////////////////////////
-    bool checkTransition(TransformableComponent* player_tr) const override;
+    bool checkTransition(ColliderComponent* player_tr) const override;
 
 
 

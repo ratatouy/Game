@@ -1,8 +1,8 @@
 <map id="EventHandler::addEvent" name="EventHandler::addEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="708,31,887,57"/>
-<area shape="rect" id="node2" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="517,31,660,57"/>
-<area shape="rect" id="node3" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="327,31,469,57"/>
-<area shape="rect" id="node4" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="137,5,249,32"/>
-<area shape="rect" id="node6" href="$class_scene.html#af024b75792e4a2304ad2eb73779f95be" title=" " alt="" coords="108,56,279,83"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Add an event to the queue." alt="" coords="708,5,887,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node3" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title="Throw an event to the EventHandler." alt="" coords="517,31,660,57"/>
+<area shape="rect" id="node4" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="327,31,469,57"/>
+<area shape="rect" id="node5" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="137,31,249,57"/>
+<area shape="rect" id="node6" href="$class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="108,81,279,108"/>
 </map>

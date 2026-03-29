@@ -1,0 +1,23 @@
+{
+    "lvl1":
+    [
+        {
+            "type" : "ennemy",
+            "name" : "lili",
+            "transformable" : 
+            {
+                "position" : [400,0],
+                "size" : [100,100],
+                "scale" : [0.1,0.1],
+                "rotation" : 0
+            },
+            "sprites" : 
+            [
+                {
+                    "name" : "body",
+                    "filepath" : "assets/Sprites/lilimanjaro.jpg"
+                }
+            ]
+        }
+    ]
+}

@@ -1,12 +1,12 @@
 <map id="Game::processEventFunc" name="Game::processEventFunc">
-<area shape="rect" id="node1" title=" " alt="" coords="5,102,192,128"/>
+<area shape="rect" id="node1" title="Process a SpawnEntityEvent." alt="" coords="5,102,192,128"/>
 <area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="278,102,409,128"/>
-<area shape="rect" id="node4" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="765,26,860,52"/>
+<area shape="rect" id="node4" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="765,26,860,52"/>
 <area shape="rect" id="node10" href="$class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af" title=" " alt="" coords="240,152,447,179"/>
 <area shape="rect" id="node3" href="$class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="495,26,701,52"/>
-<area shape="rect" id="node5" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="533,76,663,103"/>
-<area shape="rect" id="node6" href="$class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3" title=" " alt="" coords="749,127,876,154"/>
-<area shape="rect" id="node8" href="$class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="516,178,680,204"/>
+<area shape="rect" id="node5" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="533,76,663,103"/>
+<area shape="rect" id="node6" href="$class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="749,127,876,154"/>
+<area shape="rect" id="node8" href="$class_entity.html#a945edcaab37c678637655648dda23694" title="Get the EntitySprite Component of the entity." alt="" coords="516,178,680,204"/>
 <area shape="rect" id="node9" href="$class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="511,229,685,270"/>
 <area shape="rect" id="node7" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="749,76,876,103"/>
 </map>

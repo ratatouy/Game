@@ -1,5 +1,5 @@
 <map id="Ennemy::processEvent" name="Ennemy::processEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node1" title="Process a CustomEvent." alt="" coords="5,31,175,57"/>
 <area shape="rect" id="node2" href="$class_hit_event.html#a76154ecea159d09b3e78668b1d8bfcc7" title=" " alt="" coords="223,5,361,32"/>
 <area shape="rect" id="node3" href="$class_ennemy.html#a4784be82a5ce923d1494477c55bbc297" title=" " alt="" coords="231,56,353,83"/>
 </map>

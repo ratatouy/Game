@@ -1,0 +1,8 @@
+<map id="TransformableComponent::getScale" name="TransformableComponent::getScale">
+<area shape="rect" id="node1" title="Scale Getter." alt="" coords="513,74,704,115"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a130a26f343863c55031f5c2ec3339395" title=" " alt="" coords="292,41,465,82"/>
+<area shape="rect" id="node5" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="292,106,465,147"/>
+<area shape="rect" id="node3" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="120,5,232,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node6" href="$class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title="Update the entity." alt="" coords="108,113,244,140"/>
+</map>

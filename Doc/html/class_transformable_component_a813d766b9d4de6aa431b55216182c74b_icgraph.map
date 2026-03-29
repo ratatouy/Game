@@ -1,0 +1,5 @@
+<map id="TransformableComponent::getOrigin" name="TransformableComponent::getOrigin">
+<area shape="rect" id="node1" title="Origin Getter." alt="" coords="411,5,601,47"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="189,5,363,47"/>
+<area shape="rect" id="node3" href="$class_projectile.html#ac41ad56034b53e739619fabbd5e49652" title="Update the entity." alt="" coords="5,13,141,39"/>
+</map>

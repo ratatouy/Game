@@ -3,7 +3,6 @@
 
 #include "Entity/Entity.hpp"
 
-#include "Components/BasicComponents/TransformableComponent.hpp"
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 
@@ -13,7 +12,7 @@ private:
 
 
 public:
-    Projectile(const char* name, sf::Vector2f position = {0,0}, sf::Vector2f speed = {0,0});
+    Projectile(const std::string& name, sf::Vector2f position = {0,0}, sf::Vector2f speed = {0,0});
 
 
     void update() override;

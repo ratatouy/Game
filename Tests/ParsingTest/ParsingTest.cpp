@@ -3,9 +3,11 @@
 #include "json.hpp"
 
 #include "Loaders/sceneLoader.hpp"
+#include "logger.hpp"
 
 int main()
 {
-    Scene* scene = LoadScene("Data/GameData/sceneData.json", "lvl10");
+    Logger::restart();
+    Scene* scene = LoadScene("lvl1");
     return 0;
 }

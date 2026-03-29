@@ -8,33 +8,33 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_transformable_component_a14752ec78486fda48a270aed2549517a}{Transformable\+Component}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_transformable_component_af19d6e1a0ecfdc24aed7f9771e50ef0a}{Transformable\+Component}} (sf\+::\+Transformable transformable)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a Transformable Component from a sf\+::\+Transformable. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_transformable_component_a2e4e1b1b290574f03c16721099fc1fb6}{$\sim$\+Transformable\+Component}} ()=default
-\item 
-const sf\+::\+Vector2f \mbox{\hyperlink{class_transformable_component_aa5fced3000d00f219a8675c93a4eca20}{get\+Position}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f \& \mbox{\hyperlink{class_transformable_component_ac1171dc4f5fede3eaa7e8270077ab3f1}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Position Getter. \end{DoxyCompactList}\item 
 const float \mbox{\hyperlink{class_transformable_component_aaa000304e3d2e68baa78a13855357bff}{get\+Rotation}} ()
-\item 
-const sf\+::\+Vector2f \mbox{\hyperlink{class_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724}{get\+Scale}} ()
-\item 
-const sf\+::\+Vector2u \mbox{\hyperlink{class_transformable_component_a55cf95b39d4376cb58563a4effea0430}{get\+Size}} ()
-\item 
-const sf\+::\+Vector2f \mbox{\hyperlink{class_transformable_component_a22e3bfff7be1c64caabd4cce2338874f}{get\+Origin}} ()
-\item 
-void \mbox{\hyperlink{class_transformable_component_a473927317bccd1852a910268d3296cc8}{set\+Position}} (sf\+::\+Vector2f position)
-\item 
-void \mbox{\hyperlink{class_transformable_component_a58598a6517b3cae1f6a4b4bd07b72a66}{set\+Rotation}} (float angle)
-\item 
-void \mbox{\hyperlink{class_transformable_component_a8926400fc62f6dadfc2f636d06720b04}{set\+Scale}} (sf\+::\+Vector2f scale)
-\item 
-void \mbox{\hyperlink{class_transformable_component_a2f0fca3a97c469a31f6c5938afe72fba}{set\+Origin}} (sf\+::\+Vector2f origin)
-\item 
-void \mbox{\hyperlink{class_transformable_component_a3510aeb7b79049431ce86726b72421d7}{rotate}} (float angle)
-\item 
-void \mbox{\hyperlink{class_transformable_component_afb4e36540e794da841bc3f07f91f55da}{move}} (sf\+::\+Vector2f movement)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rotation Getter. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f $\ast$ \mbox{\hyperlink{class_transformable_component_a9a5d1925296bec97af794a8eb825fe37}{get\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Scale Getter. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2u \& \mbox{\hyperlink{class_transformable_component_a4246021c8025166edf9d0633ceb8247b}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Size Getter. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f \& \mbox{\hyperlink{class_transformable_component_a813d766b9d4de6aa431b55216182c74b}{get\+Origin}} ()
+\begin{DoxyCompactList}\small\item\em Origin Getter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transformable_component_a7619cabe7dc31c82b2987e4dad5fe4e3}{set\+Position}} (const sf\+::\+Vector2f \&position)
+\begin{DoxyCompactList}\small\item\em Position Setter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transformable_component_a0b80288ab4d13df9c8c8f223d3c1a0ba}{set\+Rotation}} (const float \&angle)
+\begin{DoxyCompactList}\small\item\em Rotation Setter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transformable_component_a98a1f1f294e86b2a2f280fa0461ff406}{set\+Scale}} (const sf\+::\+Vector2f \&scale)
+\begin{DoxyCompactList}\small\item\em Scale Setter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transformable_component_aa1039773aa30e017ae55bdca3eacf76d}{set\+Origin}} (const sf\+::\+Vector2f \&origin)
+\begin{DoxyCompactList}\small\item\em Origin Setter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transformable_component_ad64c6d6a93c3d281ef130e2a72006491}{rotate}} (const float \&angle)
+\begin{DoxyCompactList}\small\item\em Rotate the transformable clockwise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transformable_component_a374f34082cecf8fad6096535dbb5be8a}{move}} (const sf\+::\+Vector2f \&movement)
+\begin{DoxyCompactList}\small\item\em Move the transformable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,9 +63,13 @@ Definition at line 15 of file Transformable\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{TransformableComponent()}{TransformableComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Transformable\+Component\+::\+Transformable\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Empty Constructor 
 
-Definition at line 23 of file Transformable\+Component.\+hpp.
+
+Default Constructor. 
+
+
+
+Definition at line 25 of file Transformable\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_transformable_component_af19d6e1a0ecfdc24aed7f9771e50ef0a}\label{class_transformable_component_af19d6e1a0ecfdc24aed7f9771e50ef0a}} 
 \index{TransformableComponent@{TransformableComponent}!TransformableComponent@{TransformableComponent}}
@@ -73,7 +77,9 @@ Definition at line 23 of file Transformable\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{TransformableComponent()}{TransformableComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Transformable\+Component\+::\+Transformable\+Component (\begin{DoxyParamCaption}\item[{sf\+::\+Transformable}]{transformable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Highest Constructor
+
+
+Creates a Transformable Component from a sf\+::\+Transformable. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -82,7 +88,7 @@ Highest Constructor
 \end{DoxyParams}
 
 
-Definition at line 31 of file Transformable\+Component.\+hpp.
+Definition at line 33 of file Transformable\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_transformable_component_a2e4e1b1b290574f03c16721099fc1fb6}\label{class_transformable_component_a2e4e1b1b290574f03c16721099fc1fb6}} 
 \index{TransformableComponent@{TransformableComponent}!````~TransformableComponent@{$\sim$TransformableComponent}}
@@ -90,52 +96,61 @@ Definition at line 31 of file Transformable\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{$\sim$TransformableComponent()}{~TransformableComponent()}}
 {\footnotesize\ttfamily Transformable\+Component\+::$\sim$\+Transformable\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-Default Destructor 
+
+
+Default Destructor. 
+
+
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_transformable_component_a22e3bfff7be1c64caabd4cce2338874f}\label{class_transformable_component_a22e3bfff7be1c64caabd4cce2338874f}} 
+\mbox{\Hypertarget{class_transformable_component_a813d766b9d4de6aa431b55216182c74b}\label{class_transformable_component_a813d766b9d4de6aa431b55216182c74b}} 
 \index{TransformableComponent@{TransformableComponent}!getOrigin@{getOrigin}}
 \index{getOrigin@{getOrigin}!TransformableComponent@{TransformableComponent}}
 \doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
-{\footnotesize\ttfamily const sf\+::\+Vector2f Transformable\+Component\+::get\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f\& Transformable\+Component\+::get\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Origin Getter
+
+
+Origin Getter. 
 
 \begin{DoxyReturn}{Returns}
 The origin 
 \end{DoxyReturn}
 
 
-Definition at line 71 of file Transformable\+Component.\+hpp.
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_transformable_component_a22e3bfff7be1c64caabd4cce2338874f_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_transformable_component_aa5fced3000d00f219a8675c93a4eca20}\label{class_transformable_component_aa5fced3000d00f219a8675c93a4eca20}} 
-\index{TransformableComponent@{TransformableComponent}!getPosition@{getPosition}}
-\index{getPosition@{getPosition}!TransformableComponent@{TransformableComponent}}
-\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
-{\footnotesize\ttfamily const sf\+::\+Vector2f Transformable\+Component\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Position Getter
-
-\begin{DoxyReturn}{Returns}
-The position 
-\end{DoxyReturn}
-
-
-Definition at line 43 of file Transformable\+Component.\+hpp.
+Definition at line 74 of file Transformable\+Component.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_transformable_component_aa5fced3000d00f219a8675c93a4eca20_icgraph}
+\includegraphics[width=350pt]{class_transformable_component_a813d766b9d4de6aa431b55216182c74b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_transformable_component_ac1171dc4f5fede3eaa7e8270077ab3f1}\label{class_transformable_component_ac1171dc4f5fede3eaa7e8270077ab3f1}} 
+\index{TransformableComponent@{TransformableComponent}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!TransformableComponent@{TransformableComponent}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f\& Transformable\+Component\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Position Getter. 
+
+\begin{DoxyReturn}{Returns}
+The position 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Transformable\+Component.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_transformable_component_ac1171dc4f5fede3eaa7e8270077ab3f1_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_transformable_component_aaa000304e3d2e68baa78a13855357bff}\label{class_transformable_component_aaa000304e3d2e68baa78a13855357bff}} 
@@ -144,98 +159,114 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
 {\footnotesize\ttfamily const float Transformable\+Component\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Rotation Getter
+
+
+Rotation Getter. 
 
 \begin{DoxyReturn}{Returns}
 The rotation 
 \end{DoxyReturn}
 
 
-Definition at line 50 of file Transformable\+Component.\+hpp.
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_transformable_component_aaa000304e3d2e68baa78a13855357bff_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724}\label{class_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724}} 
-\index{TransformableComponent@{TransformableComponent}!getScale@{getScale}}
-\index{getScale@{getScale}!TransformableComponent@{TransformableComponent}}
-\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
-{\footnotesize\ttfamily const sf\+::\+Vector2f Transformable\+Component\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Scale Getter
-
-\begin{DoxyReturn}{Returns}
-The scale 
-\end{DoxyReturn}
-
-
-Definition at line 57 of file Transformable\+Component.\+hpp.
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_transformable_component_a5a3800764ea19f2f3fc4ef429dc9b724_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_transformable_component_a55cf95b39d4376cb58563a4effea0430}\label{class_transformable_component_a55cf95b39d4376cb58563a4effea0430}} 
-\index{TransformableComponent@{TransformableComponent}!getSize@{getSize}}
-\index{getSize@{getSize}!TransformableComponent@{TransformableComponent}}
-\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
-{\footnotesize\ttfamily const sf\+::\+Vector2u Transformable\+Component\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Size Getter
-
-\begin{DoxyReturn}{Returns}
-The size 
-\end{DoxyReturn}
-
-
-Definition at line 64 of file Transformable\+Component.\+hpp.
+Definition at line 53 of file Transformable\+Component.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_transformable_component_a55cf95b39d4376cb58563a4effea0430_icgraph}
+\includegraphics[width=350pt]{class_transformable_component_aaa000304e3d2e68baa78a13855357bff_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_transformable_component_afb4e36540e794da841bc3f07f91f55da}\label{class_transformable_component_afb4e36540e794da841bc3f07f91f55da}} 
-\index{TransformableComponent@{TransformableComponent}!move@{move}}
-\index{move@{move}!TransformableComponent@{TransformableComponent}}
-\doxysubsubsection{\texorpdfstring{move()}{move()}}
-{\footnotesize\ttfamily void Transformable\+Component\+::move (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{movement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Move the transformable
+\mbox{\Hypertarget{class_transformable_component_a9a5d1925296bec97af794a8eb825fe37}\label{class_transformable_component_a9a5d1925296bec97af794a8eb825fe37}} 
+\index{TransformableComponent@{TransformableComponent}!getScale@{getScale}}
+\index{getScale@{getScale}!TransformableComponent@{TransformableComponent}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f$\ast$ Transformable\+Component\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-\begin{DoxyParams}{Parameters}
-{\em movement} & Movement to apply \\
-\hline
-\end{DoxyParams}
+
+Scale Getter. 
+
+\begin{DoxyReturn}{Returns}
+The scale 
+\end{DoxyReturn}
 
 
-Definition at line 114 of file Transformable\+Component.\+hpp.
+Definition at line 60 of file Transformable\+Component.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=300pt]{class_transformable_component_afb4e36540e794da841bc3f07f91f55da_icgraph}
+\includegraphics[width=350pt]{class_transformable_component_a9a5d1925296bec97af794a8eb825fe37_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_transformable_component_a3510aeb7b79049431ce86726b72421d7}\label{class_transformable_component_a3510aeb7b79049431ce86726b72421d7}} 
+\mbox{\Hypertarget{class_transformable_component_a4246021c8025166edf9d0633ceb8247b}\label{class_transformable_component_a4246021c8025166edf9d0633ceb8247b}} 
+\index{TransformableComponent@{TransformableComponent}!getSize@{getSize}}
+\index{getSize@{getSize}!TransformableComponent@{TransformableComponent}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2u\& Transformable\+Component\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Size Getter. 
+
+\begin{DoxyReturn}{Returns}
+The size 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Transformable\+Component.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_transformable_component_a4246021c8025166edf9d0633ceb8247b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_transformable_component_a374f34082cecf8fad6096535dbb5be8a}\label{class_transformable_component_a374f34082cecf8fad6096535dbb5be8a}} 
+\index{TransformableComponent@{TransformableComponent}!move@{move}}
+\index{move@{move}!TransformableComponent@{TransformableComponent}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Transformable\+Component\+::move (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{movement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move the transformable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em movement} & Movement to apply\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+sf\+::\+Transformable\+::move 
+\end{DoxySeeAlso}
+
+
+Definition at line 120 of file Transformable\+Component.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_transformable_component_a374f34082cecf8fad6096535dbb5be8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_transformable_component_ad64c6d6a93c3d281ef130e2a72006491}\label{class_transformable_component_ad64c6d6a93c3d281ef130e2a72006491}} 
 \index{TransformableComponent@{TransformableComponent}!rotate@{rotate}}
 \index{rotate@{rotate}!TransformableComponent@{TransformableComponent}}
 \doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
-{\footnotesize\ttfamily void Transformable\+Component\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Transformable\+Component\+::rotate (\begin{DoxyParamCaption}\item[{const float \&}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Rotate the transformable clockwise
+
+
+Rotate the transformable clockwise. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -244,22 +275,25 @@ Rotate the transformable clockwise
 \end{DoxyParams}
 
 
-Definition at line 107 of file Transformable\+Component.\+hpp.
+Definition at line 111 of file Transformable\+Component.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_transformable_component_a3510aeb7b79049431ce86726b72421d7_icgraph}
+\includegraphics[width=350pt]{class_transformable_component_ad64c6d6a93c3d281ef130e2a72006491_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_transformable_component_a2f0fca3a97c469a31f6c5938afe72fba}\label{class_transformable_component_a2f0fca3a97c469a31f6c5938afe72fba}} 
+\mbox{\Hypertarget{class_transformable_component_aa1039773aa30e017ae55bdca3eacf76d}\label{class_transformable_component_aa1039773aa30e017ae55bdca3eacf76d}} 
 \index{TransformableComponent@{TransformableComponent}!setOrigin@{setOrigin}}
 \index{setOrigin@{setOrigin}!TransformableComponent@{TransformableComponent}}
 \doxysubsubsection{\texorpdfstring{setOrigin()}{setOrigin()}}
-{\footnotesize\ttfamily void Transformable\+Component\+::set\+Origin (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{origin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Transformable\+Component\+::set\+Origin (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{origin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Origin Setter
+
+
+Origin Setter. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -268,15 +302,17 @@ Origin Setter
 \end{DoxyParams}
 
 
-Definition at line 99 of file Transformable\+Component.\+hpp.
+Definition at line 103 of file Transformable\+Component.\+hpp.
 
-\mbox{\Hypertarget{class_transformable_component_a473927317bccd1852a910268d3296cc8}\label{class_transformable_component_a473927317bccd1852a910268d3296cc8}} 
+\mbox{\Hypertarget{class_transformable_component_a7619cabe7dc31c82b2987e4dad5fe4e3}\label{class_transformable_component_a7619cabe7dc31c82b2987e4dad5fe4e3}} 
 \index{TransformableComponent@{TransformableComponent}!setPosition@{setPosition}}
 \index{setPosition@{setPosition}!TransformableComponent@{TransformableComponent}}
 \doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
-{\footnotesize\ttfamily void Transformable\+Component\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Transformable\+Component\+::set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Position Setter
+
+
+Position Setter. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -285,22 +321,25 @@ Position Setter
 \end{DoxyParams}
 
 
-Definition at line 79 of file Transformable\+Component.\+hpp.
+Definition at line 82 of file Transformable\+Component.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_transformable_component_a473927317bccd1852a910268d3296cc8_icgraph}
+\includegraphics[width=350pt]{class_transformable_component_a7619cabe7dc31c82b2987e4dad5fe4e3_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_transformable_component_a58598a6517b3cae1f6a4b4bd07b72a66}\label{class_transformable_component_a58598a6517b3cae1f6a4b4bd07b72a66}} 
+\mbox{\Hypertarget{class_transformable_component_a0b80288ab4d13df9c8c8f223d3c1a0ba}\label{class_transformable_component_a0b80288ab4d13df9c8c8f223d3c1a0ba}} 
 \index{TransformableComponent@{TransformableComponent}!setRotation@{setRotation}}
 \index{setRotation@{setRotation}!TransformableComponent@{TransformableComponent}}
 \doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
-{\footnotesize\ttfamily void Transformable\+Component\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Transformable\+Component\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const float \&}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Rotation Setter
+
+
+Rotation Setter. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -309,15 +348,17 @@ Rotation Setter
 \end{DoxyParams}
 
 
-Definition at line 85 of file Transformable\+Component.\+hpp.
+Definition at line 89 of file Transformable\+Component.\+hpp.
 
-\mbox{\Hypertarget{class_transformable_component_a8926400fc62f6dadfc2f636d06720b04}\label{class_transformable_component_a8926400fc62f6dadfc2f636d06720b04}} 
+\mbox{\Hypertarget{class_transformable_component_a98a1f1f294e86b2a2f280fa0461ff406}\label{class_transformable_component_a98a1f1f294e86b2a2f280fa0461ff406}} 
 \index{TransformableComponent@{TransformableComponent}!setScale@{setScale}}
 \index{setScale@{setScale}!TransformableComponent@{TransformableComponent}}
 \doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
-{\footnotesize\ttfamily void Transformable\+Component\+::set\+Scale (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Transformable\+Component\+::set\+Scale (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Scale Setter
+
+
+Scale Setter. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -326,13 +367,14 @@ Scale Setter
 \end{DoxyParams}
 
 
-Definition at line 92 of file Transformable\+Component.\+hpp.
+Definition at line 96 of file Transformable\+Component.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=300pt]{class_transformable_component_a8926400fc62f6dadfc2f636d06720b04_icgraph}
+\includegraphics[width=300pt]{class_transformable_component_a98a1f1f294e86b2a2f280fa0461ff406_icgraph}
 \end{center}
 \end{figure}
 

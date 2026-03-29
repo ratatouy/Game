@@ -13,22 +13,23 @@
 #include "Events/CustomEvent.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
 #include "Events/BasicEvents/SpawnEntityEvent.hpp"
-
 #include "Entity/Entity.hpp"
+#include "Loaders/sceneLoader.hpp"
 
 
 class Scene;        // Forward Declaration of Scene        //
 
 class EventHandler; // Forward Declaration of EventHandler //
 
-struct SceneData{};
 
 ////////////////////////////////////////////////////////////
 /// \brief Main class of the game
 ///
 /// The game is a collection of scenes, with only one active at a time.
 /// It also is a singleton.
-/// And it brings together the RenderEngine, EventHandler and the active Scene.
+/// It's role is to bring together the RenderEngine, EventHandler and the active Scene.
+///
+/// \todo Maybe find a way to not have to read the json file each time a scene needs to be loaded.
 ////////////////////////////////////////////////////////////
 class Game
 {
@@ -36,9 +37,15 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Default Constructor
     ///
+    /// Creates the EventHandler and the RenderEngine.
     /// Throws an error if the Game is already instantiated.
     ////////////////////////////////////////////////////////////
     Game();
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Destructor
+    ////////////////////////////////////////////////////////////
+    ~Game();
 
     Game(const Game&) = delete;             ///< Delete copy constructor to force singleton behavior
     Game& operator=(const Game&) = delete;  ///< Delete copy assignment to force singleton behavior
@@ -46,12 +53,16 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Set the EventHandler
     ///
+    /// \warning Deprecated (eventHandler is set in the constructor)
+    ///
     /// \param eventHandler Reference to the EventHandler
     ////////////////////////////////////////////////////////////
     void setEventHandler(EventHandler* eventHandler) {eventHandler_ = eventHandler;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the RenderEngine
+    ///
+    /// \warning Deprecated (renderEngine is set in the constructor)
     ///
     /// \param renderEngine Reference to the RenderEngine
     ////////////////////////////////////////////////////////////
@@ -71,25 +82,30 @@ public:
     ///
     /// \return Reference to the EventHandler
     ////////////////////////////////////////////////////////////
-    EventHandler* getEventHandler() {return eventHandler_;}
+    const EventHandler* getEventHandler() const {return eventHandler_;}
+    EventHandler* getEventHandler() {return eventHandler_;} ///< Returns a non-const pointer to the EventHandler
 
     ////////////////////////////////////////////////////////////
     /// \brief Get a reference to the RenderEngine
     ///
-    /// The RenderEngine pointer is NOT a constant, so it can be used and modified
+    /// This is the const version
     ///
     /// \return Reference to the RenderEngine
     ////////////////////////////////////////////////////////////
-    RenderEngine* getRenderEngine() {return renderEngine_;}
+    const RenderEngine* getRenderEngine() const {return renderEngine_;}
+    RenderEngine* getRenderEngine() {return renderEngine_;} ///< Returns a non-const pointer to the RenderEngine
 
     ////////////////////////////////////////////////////////////
     /// \brief Get a reference to the active Scene
     ///
-    /// The Scene pointer is NOT a constant, so it can be used and modified
+    /// This is the const version
     ///
     /// \return Reference to the active Scene
     ////////////////////////////////////////////////////////////
-    Scene* getActiveScene() {return active_scene_;}
+    const Scene* getActiveScene() const {return active_scene_;}
+    Scene* getActiveScene() {return active_scene_;} ///< Returns a non-const pointer to the active Scene
+
+    void loadScene(const std::string& name);
 
     ////////////////////////////////////////////////////////////
     /// \brief Throw an event to the EventHandler
@@ -99,15 +115,15 @@ public:
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void throwEvent(Event* event);
-
+    void throwEvent(std::unique_ptr<Event> event);
 
     ////////////////////////////////////////////////////////////
     /// \brief SceneTransitionEvent process distributor
     ///
     /// Distributes the SceneTransitionEvent to the objects that need it :
-    /// \li this
-    /// \li The Scene
+    /// \li The Scene (will unload it self)
+    /// \li this ( \see processEventFunc(SceneTransitionEvent* event) )
+    /// It unloads the scene and \a then loads the new one.
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
@@ -116,7 +132,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Process a SceneTransitionEvent
     ///
-    /// Unloads a scene and loads a new one
+    /// Loads a new Scene
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
@@ -178,7 +194,8 @@ public:
 
 
     ////////////////////////////////////////////////////////////
-    /// @warning DON'T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
+    /// \warning DON'T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
+    /// \todo delete this
     ////////////////////////////////////////////////////////////
     void addEntity(Entity* entity);
 
@@ -191,7 +208,6 @@ private:
     Scene* active_scene_;                                   ///< Reference to the active Scene
     EventHandler* eventHandler_;                            ///< Reference to the EventHandler
     RenderEngine* renderEngine_;                            ///< Reference to the RenderEngine
-    std::unordered_map<const char*, SceneData> scene_data_; ///< A Map of the data to use to load the Scenes
 
 };
 

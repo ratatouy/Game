@@ -181,7 +181,7 @@ private:
     ////////////////////////////////////////////////////////////
     static std::ofstream typeLogFile_;   ///< Current stream for the typed log file
     static std::ofstream logFile_;       ///< Current stream for the general log file
-    static int logTypeSize;              ///< Number of log types (not including general)
+    static const int logTypeSize;        ///< Number of log types (not including general)
 
 };
 

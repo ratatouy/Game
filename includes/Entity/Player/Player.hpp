@@ -5,47 +5,54 @@
 #include "Entity/Projectile/Projectile.hpp"
 
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
-#include "Components/BasicComponents/TransformableComponent.hpp"
 
 #include "Events/CustomEvents/HitEvent.hpp"
 
 
-/** class for the Player Entity */
+////////////////////////////////////////////////////////////
+/// \brief class for the Player Entity
+///
+/// The Player is the \b main \b character of the game
+////////////////////////////////////////////////////////////
 class Player : public Entity {
 
 
 public:
-    /** Lowest Constructor
-     * 
-     * @param name Name of the Player
-     */
+    ////////////////////////////////////////////////////////////
+    /// \brief Lowest Constructor
+    ///
+    /// \param name Name of the Player
+    ////////////////////////////////////////////////////////////
     public: Player(const char* name) : Entity(name) {};
 
 
-    /** Intermediate Transformable Constructor
-     * 
-     * @param name Name of the Player
-     * @param transformable Pointer to the TransformableComponent to attach to the player
-     */
-    Player(const char* name, TransformableComponent* transformable) : Entity(name, transformable) {};
+    ////////////////////////////////////////////////////////////
+    /// \brief Intermediate Transformable Constructor
+    ///
+    /// \param name Name of the Player
+    ///
+    /// \param transformable Pointer to the sf::Transformable to attach to the player
+    ////////////////////////////////////////////////////////////
+    Player(const char* name, sf::Transformable* transformable) : Entity(name, transformable) {};
 
 
-    /** Full Constructor
-     * 
-     * @param name Name of the Player
-     * @param transformable Pointer to the TransformableComponent to attach to the player
-     * @param entitySprite Pointer to the EntitySpriteComponent to attache to the player
-     */
-    Player(const char* name, TransformableComponent* transformable, EntitySpriteComponent* entitySprite) : Entity(name, transformable, entitySprite) {};
-    
+    ////////////////////////////////////////////////////////////
+    /// \brief Full Constructor
+    ///
+    /// \param name Name of the Player
+    ///
+    /// \param transformable Pointer to the sf::Transformable to attach to the player
+    ///
+    /// \param entitySprite Pointer to the EntitySpriteComponent to attache to the player
+    ////////////////////////////////////////////////////////////
+    Player(const char* name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite) : Entity(name, transformable, entitySprite) {};
 
-
-    /**
-     * @brief Updates the Player
-     * 
-     * @note Order of Updating is :
-     * - IDK
-     */
+    ////////////////////////////////////////////////////////////
+    /// \brief Updates the Player
+    ///
+    /// \note Order of Updating is :
+    /// \li IDK
+    ////////////////////////////////////////////////////////////
     void update() override;
 
 

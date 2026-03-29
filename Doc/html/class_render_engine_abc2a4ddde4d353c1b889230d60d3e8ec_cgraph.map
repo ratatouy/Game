@@ -1,4 +1,4 @@
 <map id="RenderEngine::addDrawable" name="RenderEngine::addDrawable">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,212,32"/>
-<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="260,5,355,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="260,5,355,32"/>
 </map>

@@ -8,7 +8,6 @@ var dir_09e761304027c904456130627fd4dcf5 =
     [ "Scenes", "dir_f39208d2c06e4ba084d4e51c73ead911.html", "dir_f39208d2c06e4ba084d4e51c73ead911" ],
     [ "Transitions", "dir_ccc7e388b224744382826d832776448a.html", "dir_ccc7e388b224744382826d832776448a" ],
     [ "Game.hpp", "_game_8hpp.html", [
-      [ "SceneData", "struct_scene_data.html", null ],
       [ "Game", "class_game.html", "class_game" ]
     ] ],
     [ "logger.hpp", "logger_8hpp.html", "logger_8hpp" ]

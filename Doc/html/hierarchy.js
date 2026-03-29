@@ -23,7 +23,6 @@ var hierarchy =
     [ "Scene", "class_scene.html", [
       [ "MenuScene", "class_menu_scene.html", null ]
     ] ],
-    [ "SceneData", "struct_scene_data.html", null ],
     [ "TransformableComponent", "class_transformable_component.html", null ],
     [ "Transition", "class_transition.html", [
       [ "BorderTransition", "class_border_transition.html", [

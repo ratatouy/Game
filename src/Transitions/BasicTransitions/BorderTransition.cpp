@@ -2,12 +2,12 @@
 #include "Scenes/Scene.hpp"
 
 
-bool VerticalTransition::checkTransition(TransformableComponent* player_tr) const
+bool VerticalTransition::checkTransition(ColliderComponent* player_col) const
 {
-    sf::Vector2f player_pos = player_tr->getPosition();
-    sf::Vector2u player_size = player_tr->getSize();
-    sf::Vector2u scene_size = scene_->getSize();
-    sf::Vector2i scene_pos = scene_->getOrigin();
+    sf::Vector2f player_pos  = player_col->transformable_->getPosition();
+    sf::Vector2f player_size = player_col->getSize();
+    sf::Vector2u scene_size  = scene_->getSize();
+    sf::Vector2i scene_pos   = scene_->getOrigin();
 
     // if the player's coordinates do not satisfy the horizontal conditions
     // those conditions being independant of the orientation of the vertical transition
@@ -25,12 +25,12 @@ bool VerticalTransition::checkTransition(TransformableComponent* player_tr) cons
 
 
 
-bool HorizontalTransition::checkTransition(TransformableComponent* player_tr) const
+bool HorizontalTransition::checkTransition(ColliderComponent* player_col) const
 {
-    sf::Vector2f player_pos = player_tr->getPosition();
-    sf::Vector2u player_size = player_tr->getSize();
-    sf::Vector2u scene_size = scene_->getSize();
-    sf::Vector2i scene_pos = scene_->getOrigin();
+    sf::Vector2f player_pos  = player_col->transformable_->getPosition();
+    sf::Vector2f player_size = player_col->getSize();
+    sf::Vector2u scene_size  = scene_->getSize();
+    sf::Vector2i scene_pos   = scene_->getOrigin();
 
     // if the player's coordinates do not satisfy the vertical conditions
     // those conditions being independant of the orientation of the horizontal transition

@@ -1,46 +1,46 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,898,60,925"/>
-<area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="145,147,276,174"/>
-<area shape="rect" id="node10" href="$class_entity_sprite_component.html#a130a26f343863c55031f5c2ec3339395" title=" " alt="" coords="370,595,543,636"/>
-<area shape="rect" id="node14" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="155,434,267,461"/>
-<area shape="rect" id="node19" href="$class_game.html#ad10ed0a88180bf31ea13340a5422816b" title=" " alt="" coords="125,535,296,562"/>
-<area shape="rect" id="node20" href="$class_scene.html#a3c200511f7f00c8184a7d6281a508e2c" title="returns an Entity according to its name" alt="" coords="147,586,275,613"/>
-<area shape="rect" id="node21" href="$class_game.html#a436fc8919d4d15983f076379acc00438" title=" " alt="" coords="121,637,300,663"/>
-<area shape="rect" id="node22" href="$class_game.html#ab09c78ab7a7b725eb8aa4724688137d1" title=" " alt="" coords="121,687,301,714"/>
-<area shape="rect" id="node23" href="$class_entity.html#aec0550d41d7e7ec5f868d30a84b0f6d2" title=" " alt="" coords="120,738,301,765"/>
-<area shape="rect" id="node24" href="$class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688" title=" " alt="" coords="114,789,307,815"/>
-<area shape="rect" id="node25" href="$class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6" title=" " alt="" coords="125,839,296,866"/>
-<area shape="rect" id="node26" href="$class_transformable_component.html#afb4e36540e794da841bc3f07f91f55da" title=" " alt="" coords="115,891,306,932"/>
-<area shape="rect" id="node27" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title=" " alt="" coords="108,325,313,351"/>
-<area shape="rect" id="node31" href="$class_game.html#a15ddd769261d923827a3cdf41499c843" title=" " alt="" coords="155,957,266,983"/>
-<area shape="rect" id="node33" href="$class_logger.html#af5ab7c3f7aae023ea3ae480540dabc2c" title=" " alt="" coords="152,1007,269,1034"/>
-<area shape="rect" id="node34" href="$class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title=" " alt="" coords="126,1058,295,1085"/>
-<area shape="rect" id="node35" href="$class_game.html#aa0d7dcb0266efa4a0ceda5bec22f51a5" title=" " alt="" coords="122,1109,299,1135"/>
-<area shape="rect" id="node36" href="$class_render_engine.html#ab0f7148ace0595342dc89227c75d9ec7" title=" " alt="" coords="121,1159,300,1186"/>
-<area shape="rect" id="node37" href="$class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7" title=" " alt="" coords="122,1210,299,1237"/>
-<area shape="rect" id="node38" href="$class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="147,1261,275,1287"/>
-<area shape="rect" id="node39" href="$class_transformable_component.html#a473927317bccd1852a910268d3296cc8" title=" " alt="" coords="115,1312,306,1353"/>
-<area shape="rect" id="node40" href="$class_game.html#aa2d79324af14500b9f509c19c57dc3ac" title=" " alt="" coords="121,1378,300,1405"/>
-<area shape="rect" id="node41" href="$class_transformable_component.html#a8926400fc62f6dadfc2f636d06720b04" title=" " alt="" coords="115,1429,306,1471"/>
-<area shape="rect" id="node42" href="$class_game.html#a79df6376b332d63c9eca0dcee30305c3" title=" " alt="" coords="153,1495,268,1522"/>
-<area shape="rect" id="node3" href="$class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="839,173,1045,199"/>
-<area shape="rect" id="node5" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title=" " alt="" coords="391,122,522,149"/>
-<area shape="rect" id="node6" href="$class_entity.html#a5dc4c35cc28ca7895348607f3e4894c3" title=" " alt="" coords="632,21,759,47"/>
-<area shape="rect" id="node8" href="$class_entity.html#a1082a3ee77f8235d11aee6a6b7b5b822" title=" " alt="" coords="375,274,539,301"/>
-<area shape="rect" id="node9" href="$class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="370,5,543,47"/>
-<area shape="rect" id="node4" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title=" " alt="" coords="1093,375,1188,402"/>
-<area shape="rect" id="node7" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="632,71,759,98"/>
-<area shape="rect" id="node11" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="600,579,791,620"/>
-<area shape="rect" id="node12" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title=" " alt="" coords="600,644,791,685"/>
-<area shape="rect" id="node13" href="$class_transformable_component.html#a5a3800764ea19f2f3fc4ef429dc9b724" title=" " alt="" coords="600,709,791,751"/>
-<area shape="rect" id="node15" href="$class_transformable_component.html#a3510aeb7b79049431ce86726b72421d7" title=" " alt="" coords="361,427,552,468"/>
-<area shape="rect" id="node16" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="385,493,528,519"/>
-<area shape="rect" id="node17" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title=" " alt="" coords="624,477,767,503"/>
-<area shape="rect" id="node18" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title=" " alt="" coords="853,426,1031,453"/>
-<area shape="rect" id="node28" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title=" " alt="" coords="379,223,535,250"/>
-<area shape="rect" id="node29" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="617,223,773,250"/>
-<area shape="rect" id="node30" href="$class_scene.html#a68fbe961ca24ff6d704f56cc058dc18a" title="Process a SceneTransitionEvent." alt="" coords="849,223,1035,250"/>
-<area shape="rect" id="node32" href="$class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb" title=" " alt="" coords="375,957,538,983"/>
-<area shape="rect" id="node43" href="$class_scene.html#aa24c7e636c10e4e42650c1374b90bb80" title=" " alt="" coords="399,1495,514,1522"/>
-<area shape="rect" id="node44" href="$class_scene.html#a71feeabe831f8755af8adbef941188c4" title=" " alt="" coords="614,1495,777,1522"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,1051,60,1077"/>
+<area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="139,296,270,323"/>
+<area shape="rect" id="node10" href="$class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title="Add an event to the queue." alt="" coords="855,579,1034,605"/>
+<area shape="rect" id="node11" href="$class_entity_sprite_component.html#a130a26f343863c55031f5c2ec3339395" title=" " alt="" coords="365,697,539,738"/>
+<area shape="rect" id="node15" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="149,528,261,555"/>
+<area shape="rect" id="node19" href="$class_game.html#ad10ed0a88180bf31ea13340a5422816b" title="Get a reference to the active Scene." alt="" coords="119,747,290,773"/>
+<area shape="rect" id="node20" href="$class_scene.html#ad2768e06ec35eaa5150285e975a6aaba" title="returns an Entity according to its name" alt="" coords="141,797,269,824"/>
+<area shape="rect" id="node21" href="$class_game.html#a436fc8919d4d15983f076379acc00438" title="Get a reference to the EventHandler." alt="" coords="115,848,294,875"/>
+<area shape="rect" id="node22" href="$class_game.html#ab09c78ab7a7b725eb8aa4724688137d1" title="Get a reference to the RenderEngine." alt="" coords="115,899,295,925"/>
+<area shape="rect" id="node23" href="$class_entity.html#ac2993521b23c6efefac5974a100c01b2" title="Get the Transformable Component of the entity." alt="" coords="114,949,295,976"/>
+<area shape="rect" id="node24" href="$class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688" title=" " alt="" coords="108,1000,301,1027"/>
+<area shape="rect" id="node25" href="$class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6" title="Check if the queue is empty." alt="" coords="119,1051,290,1077"/>
+<area shape="rect" id="node26" href="$class_transformable_component.html#a374f34082cecf8fad6096535dbb5be8a" title="Move the transformable." alt="" coords="109,1102,300,1143"/>
+<area shape="rect" id="node27" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="349,107,555,133"/>
+<area shape="rect" id="node32" href="$class_game.html#a15ddd769261d923827a3cdf41499c843" title="Render the Game." alt="" coords="149,1168,260,1195"/>
+<area shape="rect" id="node34" href="$class_logger.html#af5ab7c3f7aae023ea3ae480540dabc2c" title="Restarts the logger, erasing all logs." alt="" coords="146,1219,263,1245"/>
+<area shape="rect" id="node35" href="$class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title="Set the active Scene." alt="" coords="120,1269,289,1296"/>
+<area shape="rect" id="node36" href="$class_game.html#aa0d7dcb0266efa4a0ceda5bec22f51a5" title="Set the EventHandler." alt="" coords="116,1320,293,1347"/>
+<area shape="rect" id="node37" href="$class_render_engine.html#ab0f7148ace0595342dc89227c75d9ec7" title=" " alt="" coords="115,1371,294,1397"/>
+<area shape="rect" id="node38" href="$class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="141,1421,269,1448"/>
+<area shape="rect" id="node39" href="$class_transformable_component.html#a7619cabe7dc31c82b2987e4dad5fe4e3" title="Position Setter." alt="" coords="109,1473,300,1514"/>
+<area shape="rect" id="node40" href="$class_game.html#aa2d79324af14500b9f509c19c57dc3ac" title="Set the RenderEngine." alt="" coords="115,1539,294,1565"/>
+<area shape="rect" id="node41" href="$class_transformable_component.html#a98a1f1f294e86b2a2f280fa0461ff406" title="Scale Setter." alt="" coords="109,1590,300,1631"/>
+<area shape="rect" id="node42" href="$class_game.html#a79df6376b332d63c9eca0dcee30305c3" title="Update the Game." alt="" coords="147,1656,262,1683"/>
+<area shape="rect" id="node3" href="$class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="841,351,1048,377"/>
+<area shape="rect" id="node5" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="387,157,517,184"/>
+<area shape="rect" id="node6" href="$class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="635,259,761,285"/>
+<area shape="rect" id="node8" href="$class_entity.html#a945edcaab37c678637655648dda23694" title="Get the EntitySprite Component of the entity." alt="" coords="370,376,534,403"/>
+<area shape="rect" id="node9" href="$class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="365,259,539,301"/>
+<area shape="rect" id="node4" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="1142,401,1237,428"/>
+<area shape="rect" id="node7" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="635,157,761,184"/>
+<area shape="rect" id="node12" href="$class_transformable_component.html#ac1171dc4f5fede3eaa7e8270077ab3f1" title="Position Getter." alt="" coords="603,697,793,738"/>
+<area shape="rect" id="node13" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title="Rotation Getter." alt="" coords="603,762,793,803"/>
+<area shape="rect" id="node14" href="$class_transformable_component.html#a9a5d1925296bec97af794a8eb825fe37" title="Scale Getter." alt="" coords="603,827,793,869"/>
+<area shape="rect" id="node16" href="$class_transformable_component.html#ad64c6d6a93c3d281ef130e2a72006491" title="Rotate the transformable clockwise." alt="" coords="357,579,547,621"/>
+<area shape="rect" id="node17" href="$class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="381,477,523,504"/>
+<area shape="rect" id="node18" href="$class_game.html#aae26066798d381cb711918f0b59958a5" title="Throw an event to the EventHandler." alt="" coords="627,528,769,555"/>
+<area shape="rect" id="node28" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="SceneTransitionEvent process distributor." alt="" coords="620,56,776,83"/>
+<area shape="rect" id="node29" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="867,5,1023,32"/>
+<area shape="rect" id="node31" href="$class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="851,56,1038,83"/>
+<area shape="rect" id="node30" href="$class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="1096,5,1283,32"/>
+<area shape="rect" id="node33" href="$class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb" title=" " alt="" coords="371,1168,533,1195"/>
+<area shape="rect" id="node43" href="$class_scene.html#aa24c7e636c10e4e42650c1374b90bb80" title="Updates the scene." alt="" coords="395,1656,509,1683"/>
+<area shape="rect" id="node44" href="$class_scene.html#a71feeabe831f8755af8adbef941188c4" title="Updates all of the entities." alt="" coords="617,1656,779,1683"/>
 </map>

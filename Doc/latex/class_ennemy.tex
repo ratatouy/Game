@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Ennemy\+:
-\nopagebreak
+Inheritance diagram for Ennemy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Ennemy\+:
 \end{figure}
 
 
-Collaboration diagram for Ennemy\+:
-\nopagebreak
+Collaboration diagram for Ennemy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,9 +32,9 @@ Collaboration diagram for Ennemy\+:
 \mbox{\hyperlink{class_ennemy_a2d77e41154ffc414d35281897d206d01}{Ennemy}} (const char $\ast$name, \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transform, \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$sprites, int health=7)
 \item 
 void \mbox{\hyperlink{class_ennemy_a35b503a1ea239fd8b570012bab798dc3}{update}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Update the entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ennemy_aaea8bc5fcf41d2bf5771416b70a587dc}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event) override
-\item 
+\begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_custom_event}{Custom\+Event}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ennemy_a4784be82a5ce923d1494477c55bbc297}{get\+Hit}} (int damage)
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
@@ -93,7 +91,8 @@ Definition at line 23 of file Ennemy.\+hpp.
 
 Definition at line 21 of file Ennemy.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -108,13 +107,25 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
+Process a \mbox{\hyperlink{class_custom_event}{Custom\+Event}}. 
+
+What it does depends on the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} type
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Pointer to the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} \\
+\hline
+\end{DoxyParams}
+
+
 Reimplemented from \mbox{\hyperlink{class_entity_a37cb335962ddb32dafd558405088ceda}{Entity}}.
 
 
 
 Definition at line 6 of file Ennemy.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -129,7 +140,19 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Reimplemented from \mbox{\hyperlink{class_entity_aed73e98b980b85833428c935cc1c69f8}{Entity}}.
+Update the entity. 
+
+\begin{DoxyNote}{Note}
+Order of Updating should be \+: \begin{DoxyItemize}
+\item yadi-\/yadi-\/yada \item update Entity\+Sprite Component ( \end{DoxyItemize}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}{Entity\+Sprite\+Component\+::update}}) 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{class_entity_a59a29d9b7474baf13c9c76859242287d}{Entity}}.
 
 
 

@@ -9,13 +9,22 @@
 bool EventHandler::instantiated_ = false;
 
 
-EventHandler::~EventHandler() {
-    // std::cout << "Destroy EventHandler" << std::endl;
-    while (!eventQueue.empty()) {
-        delete eventQueue.front();
-        eventQueue.pop();
+EventHandler::EventHandler(Game* game) {
+    if (instantiated_) {
+        throw std::runtime_error("EventHandler already instantiated");
     }
+    game_ = game;
+    
+    instantiated_ = true;
+}
 
+
+EventHandler::~EventHandler() {
+    std::cout << "Destroy EventHandler" << std::endl;
+    while (!eventQueue.empty()) {
+        std::unique_ptr<Event> ev = _getEventToProcess();
+        ev.reset();
+    }
     instantiated_ = false;
 }
 
@@ -25,64 +34,51 @@ void EventHandler::setGame(Game* game) {
 }
 
 
-EventHandler::EventHandler() {
-    if (instantiated_) {
-        throw std::runtime_error("EventHandler already instantiated");
-    }
-    
-    instantiated_ = true;
-}
-
-
 bool EventHandler::isEmpty() {
     return eventQueue.empty();
 }
 
 
-void EventHandler::addEvent(Event* event) {
+void EventHandler::addEvent(std::unique_ptr<Event> event) {
     Logger::log(EVENT_HANDLER, DEBUG, "Adding event");
-    eventQueue.push(event);
+    eventQueue.push(std::move(event));
 }
 
 void EventHandler::processEvent() {
     if (!eventQueue.empty()) {
 
-        SceneTransitionEvent* Et = dynamic_cast<SceneTransitionEvent*>(eventQueue.front());
+        std::unique_ptr<Event> ev = _getEventToProcess();
+
+        SceneTransitionEvent* Et = dynamic_cast<SceneTransitionEvent*>(ev.get());
         if (Et) {
             Logger::log(EVENT_HANDLER, DEBUG, "Processing SceneTransition Event");
             game_->processEvent(Et);
-            eventQueue.pop();
-            delete Et;
             return;
         }
         
         
-        SpawnEntityEvent* Es = dynamic_cast<SpawnEntityEvent*>(eventQueue.front());
+        SpawnEntityEvent* Es = dynamic_cast<SpawnEntityEvent*>(ev.get());
         if (Es) {
             Logger::log(EVENT_HANDLER, DEBUG, "Processing SpawnEntity Event");
             game_->processEvent(Es);
-            eventQueue.pop();
-            delete Es;
             return;
         }
 
 
-        CustomEvent* Ec = dynamic_cast<CustomEvent*>(eventQueue.front());
+        CustomEvent* Ec = dynamic_cast<CustomEvent*>(ev.get());
         if (Ec) {
             Logger::log(EVENT_HANDLER, DEBUG, "Processing Custom Event");
             game_->processEvent(Ec);
-            eventQueue.pop();
-            delete Ec;
             return;
         }
     }
 }
 
-Event* EventHandler::getCurrentEvent() {
+std::unique_ptr<Event> EventHandler::_getEventToProcess() {
     if (!eventQueue.empty()) {
-        Event* event = eventQueue.front();
+        std::unique_ptr<Event> event = std::move(eventQueue.front());
         eventQueue.pop();
-        return event;
+        return std::move(event);
     }
     return nullptr;
 }

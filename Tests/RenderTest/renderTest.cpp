@@ -4,7 +4,7 @@
 #include "Engine/RenderEngine.hpp"
 
 int main() {
-	RenderEngine* renderEngine = new RenderEngine();
+	RenderEngine* renderEngine = new RenderEngine(nullptr);
 
 	int width = renderEngine->getWindow()->getSize().x;
     int height = renderEngine->getWindow()->getSize().y;

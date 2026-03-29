@@ -1,0 +1,4 @@
+<map id="Game::processEventFunc" name="Game::processEventFunc">
+<area shape="rect" id="node1" title="Process a SceneTransitionEvent." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="240,5,335,32"/>
+</map>
