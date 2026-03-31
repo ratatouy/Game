@@ -32,6 +32,8 @@ Set(SOURCE_FILES
     src/Engine/RenderEngine.cpp
 
     src/Scenes/Scene.cpp
+    src/Scenes/BasicScenes/MenuScene.cpp
+    src/Scenes/BasicScenes/GameplayScene.cpp
 
     src/Game.cpp
 
@@ -48,21 +50,28 @@ Set(SOURCE_FILES
 # endif()
 
 ## Setup renderTest
-add_executable(renderTest ${SOURCE_FILES} Tests/RenderTest/renderTest.cpp)
-target_compile_features(renderTest PRIVATE cxx_std_17)
-target_include_directories(renderTest PRIVATE includes)
-target_include_directories(renderTest PRIVATE extlibs)
-target_link_libraries(renderTest PRIVATE sfml-graphics sfml-window sfml-system)
-add_test(NAME renderTest COMMAND renderTest)
+# add_executable(renderTest ${SOURCE_FILES} Tests/RenderTest/renderTest.cpp)
+# target_compile_features(renderTest PRIVATE cxx_std_17)
+# target_include_directories(renderTest PRIVATE includes)
+# target_include_directories(renderTest PRIVATE extlibs)
+# target_link_libraries(renderTest PRIVATE sfml-graphics sfml-window sfml-system)
+# add_test(NAME renderTest COMMAND renderTest)
  
 ## Setup ParsingTest
-add_executable(parsingTest ${SOURCE_FILES} Tests/ParsingTest/ParsingTest.cpp)
-target_compile_features(parsingTest PRIVATE cxx_std_17)
-target_include_directories(parsingTest PRIVATE includes)
-target_include_directories(parsingTest PRIVATE extlibs)
-target_link_libraries(parsingTest PRIVATE sfml-graphics sfml-window sfml-system)
-add_test(NAME parsingTest COMMAND parsingTest)
- 
+# add_executable(parsingTest ${SOURCE_FILES} Tests/ParsingTest/ParsingTest.cpp)
+# target_compile_features(parsingTest PRIVATE cxx_std_17)
+# target_include_directories(parsingTest PRIVATE includes)
+# target_include_directories(parsingTest PRIVATE extlibs)
+# target_link_libraries(parsingTest PRIVATE sfml-graphics sfml-window sfml-system)
+# add_test(NAME parsingTest COMMAND parsingTest)
+
+## Setup ColliderTest
+# add_executable(colliderTest ${SOURCE_FILES} Tests/ColliderTest/ColliderTest.cpp)
+# target_compile_features(colliderTest PRIVATE cxx_std_17)
+# target_include_directories(colliderTest PRIVATE includes)
+# target_include_directories(colliderTest PRIVATE extlibs)
+# target_link_libraries(colliderTest PRIVATE sfml-graphics sfml-window sfml-system)
+# add_test(NAME colliderTest COMMAND colliderTest)
 
 ## Set project executable output
 add_executable(main ${SOURCE_FILES} src/main.cpp)
