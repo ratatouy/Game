@@ -1,14 +1,16 @@
 #include <iostream>
 
+#include "logger.hpp"
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 
 EntitySpriteComponent::~EntitySpriteComponent() {
+    Logger::log(ENTITY_SPRITE, INFO, "DESTRUCTING EntitySpriteComponent");
     for (auto i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)
     {
-        delete &std::get<2>(i->second); // delete texture
+        delete std::get<2>(i->second); // delete texture
     }
-    delete entityTransformable_;
+    // Doesn't delete the transformable
 }
 
 
@@ -21,6 +23,8 @@ EntitySpriteComponent::~EntitySpriteComponent() {
  */
 void EntitySpriteComponent::AddSprite(std::string name, const std::string& filepath)
 {
+    Logger::log(ENTITY_SPRITE, INFO, "ADDING sprite "+name+" to an entity");
+
     try {
         sf::Texture* texture = _LoadTexture(filepath);
         if (!texture) return;
@@ -44,7 +48,6 @@ void EntitySpriteComponent::AddSprite(std::string name, const std::string& filep
 };
 
 
-
 void EntitySpriteComponent::SetThisSpriteLocalTransform(std::string spriteName, sf::Vector2f position, float angle, sf::Vector2f scale) {
     sf::Transformable* transformable = GetThisSpriteLocalTransformable(spriteName);
     transformable->setPosition(position);
@@ -60,7 +63,6 @@ void EntitySpriteComponent::SetThisSpriteLocalTransform(std::string spriteName, 
  * @note not optimal, updates everything, every frame
  */
 void EntitySpriteComponent::update() {
-    // std::cout << "| | | Updating ESC" << std::endl;
     for (auto i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)
     {
         sf::Sprite* sprite = &std::get<0>(i->second);
@@ -78,6 +80,7 @@ void EntitySpriteComponent::update() {
 
 sf::Texture* EntitySpriteComponent::_LoadTexture(const std::string& filepath)
 {
+    Logger::log(ENTITY_SPRITE, INFO, "LOADING texture "+filepath);
     sf::Texture* texture = new sf::Texture();
 
     // handle load error

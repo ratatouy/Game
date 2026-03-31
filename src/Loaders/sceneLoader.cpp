@@ -6,12 +6,16 @@
 #include "logger.hpp"
 
 
-Scene* LoadScene(std::string name, std::string filepath)
+Scene* Parser::LoadScene(std::string name, std::string filepath)
 {
+    Logger::log(PARSER, INFO, "PARSING scene \""+name+"\"");
+
     // Open the file
     std::ifstream f("Data/GameData/sceneData.json");
+
     // Get all of the data
     nlohmann::json full_data = nlohmann::json::parse(f);
+
     // Get the scene that we want
     auto scene_data = full_data[name];
 
@@ -21,7 +25,7 @@ Scene* LoadScene(std::string name, std::string filepath)
     {
         std::string error = "Scene : \"" + name + "\" not found";
         Logger::log(PARSER, ERROR, error);
-        throw(std::runtime_error(error));
+        throw (std::runtime_error(error));
     }
 
     // Separates raw data
@@ -34,7 +38,5 @@ Scene* LoadScene(std::string name, std::string filepath)
     sf::Vector2u size = {siz[0], siz[1]};
 
     // Create the scene
-    Scene* scene = new Scene(origin, size);
-
-    return scene;
+    return new Scene(origin, size);
 }

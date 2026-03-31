@@ -10,16 +10,17 @@
 
 Scene::~Scene()
 {
-    // std::cout << "Destroy Scene" << std::endl;
+    Logger::log(SCENE, DEBUG, "DESTROYING scene");
     for (auto ent : entity_map_) {
         delete ent.second;
     }
+    entity_map_.clear();
 };
 
 
 void Scene::addEntity(Entity* entity)
 {
-    Logger::log(SCENE, DEBUG, "Adding entity " + (std::string)entity->getName());
+    Logger::log(SCENE, DEBUG, "ADDING entity " + (std::string)entity->getName());
     entity_map_[entity->getName()] = entity; // doesn't check for duplicity //
     entity->setScene(this);
 }
@@ -34,34 +35,38 @@ const Entity* Scene::getEntity(std::string name) const
     return nullptr;
 }
 
-
-void Scene::processEvent(SceneTransitionEvent* event)
+Entity* Scene::extractEntity(std::string name)
 {
+    Logger::log(SCENE, DEBUG, "EXTRACTING entity " + name);
+    Entity* entity = nullptr;
+
+    // search for the entity
+    for (auto ent : entity_map_) {
+        if (name == ent.first)
+            entity = ent.second;
+    }
+
+    if (entity == nullptr)
+        Logger::log(SCENE, WARNING, "Extract : Entity " + name + " not found");
+
+    entity_map_.erase(name);
+    return entity;
+}
+
+void Scene::distributeEvent(CustomEvent* event)
+{
+    Logger::log(SCENE, DEBUG, "DISTRIBUTING CustomEvent");
     for (auto entity : entity_map_)
     {
         entity.second->processEvent(event);
     }
-    processEventFunc(event);
-}
-
-void Scene::processEventFunc(SceneTransitionEvent* event)
-{
-    delete this;
-}
-
-void Scene::processEvent(CustomEvent* event)
-{
-    for (auto entity : entity_map_)
-    {
-        entity.second->processEvent(event);
-    }
-    processEventFunc(event);
+    processEvent(event);
 };
 
 
 void Scene::throwEvent(std::unique_ptr<Event> event)
 {
-    Logger::log(SCENE, DEBUG, "Throwing event");
+    Logger::log(SCENE, DEBUG, "THROWING event");
     game_->throwEvent(std::move(event));
 }
 

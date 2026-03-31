@@ -26,6 +26,15 @@ class EventHandler
 {
 public:
     ////////////////////////////////////////////////////////////
+    /// \brief Get the EventHandler instance, creates it if it doesn't exist
+    ///
+    /// \param game Reference to the Game
+    ///
+    /// \return Pointer to the EventHandler
+    ////////////////////////////////////////////////////////////
+    static EventHandler* getInstance(Game* game);
+
+    ////////////////////////////////////////////////////////////
     /// \brief Default Constructor
     ///
     /// Will throw an error if the EventHandler is already instantiated.
@@ -84,6 +93,7 @@ private:
     ////////////////////////////////////////////////////////////
     /// Member Data
     ////////////////////////////////////////////////////////////
+    static EventHandler* instance_;                  ///< Singleton
     static bool instantiated_;                       ///< Make sure the EventHandler is only instantiated once
     Game* game_;                                     ///< Reference to the Game
     std::queue<std::unique_ptr<Event>> eventQueue;   ///< The queue of events

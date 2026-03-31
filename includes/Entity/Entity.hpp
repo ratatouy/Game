@@ -2,6 +2,7 @@
 #define ENTITY_HPP
 
 #include <SFML/Graphics.hpp>
+#include "logger.hpp"
 
 #include "Events/Event.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
@@ -67,6 +68,15 @@ public:
     Entity(std::string name, sf::Transformable* tr, EntitySpriteComponent* eSpr)
     : name_(name), transformable(tr), entitySprite(eSpr) {}
 
+    //////////////////////////////////////////////////////////
+    /// \brief Default destructor
+    //////////////////////////////////////////////////////////
+    ~Entity()
+    {
+        Logger::log(ENTITY, DEBUG, "DELETING entity");
+        delete entitySprite;
+        delete transformable;
+    };
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the current scene of the entity.
@@ -96,16 +106,6 @@ public:
     /// \returns Pointer to the current scene
     ////////////////////////////////////////////////////////////
     const Scene* getCurrentScene() const {return current_scene_;}
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Process a SceneTransitionEvent
-    ///
-    /// Deletes itself unless it's a global Entity
-    /// , in which case we except the entity to override this method.
-    ///
-    /// \param event Pointer to the SceneTransitionEvent
-    ////////////////////////////////////////////////////////////
-    virtual void processEvent(SceneTransitionEvent* event) {delete this;};
 
     ////////////////////////////////////////////////////////////
     /// \brief Process a CustomEvent

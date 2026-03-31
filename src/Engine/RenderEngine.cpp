@@ -7,15 +7,21 @@
 
 
 bool RenderEngine::instantiated_ = false;
+RenderEngine* RenderEngine::instance_ = nullptr;
 
+
+RenderEngine* RenderEngine::getInstance(Game* game, std::string title, int width, int height)
+{
+    if (instance_ == nullptr) {
+        Logger::log(RENDER_ENGINE, INFO, "INSTANTIATE RenderEngine");
+        instance_ = new RenderEngine(game, title, width, height);
+        instantiated_ = true;
+    }
+    return instance_;
+}
 
 RenderEngine::RenderEngine(Game* game, std::string title, int width, int height)
 {
-    if (instantiated_) {
-        throw std::runtime_error("RenderEngine already instantiated");
-    }
-    instantiated_ = true;
-
     game_ = game;
     window_ = new sf::RenderWindow(sf::VideoMode(width, height), title);
 }
@@ -23,15 +29,19 @@ RenderEngine::RenderEngine(Game* game, std::string title, int width, int height)
 
 RenderEngine::~RenderEngine()
 {
-    delete window_;
-    delete game_;
+    Logger::log(RENDER_ENGINE, INFO, "DELETING RenderEngine");
 
+    delete window_;
+
+    // delete drawables
     for (auto iterator = drawables_.begin(); iterator != drawables_.end(); iterator++)
         delete iterator->second;
 
+    // delete shader drawables
     for (auto iterator = shader_drawables_.begin(); iterator != shader_drawables_.end(); iterator++)
         delete iterator->second.first;
 
+    // clear maps
     drawables_.clear();
     shader_drawables_.clear();
 
@@ -42,7 +52,7 @@ RenderEngine::~RenderEngine()
 
 void RenderEngine::addDrawable(const std::string& name, sf::Drawable* drawable)
 {
-    Logger::log(RENDER_ENGINE, DEBUG, "adding " + (std::string)name);
+    Logger::log(RENDER_ENGINE, INFO, "ADDDING drawable " + (std::string)name);
 
     try
     {
@@ -51,13 +61,15 @@ void RenderEngine::addDrawable(const std::string& name, sf::Drawable* drawable)
     }
     catch (std::exception& err)
     {
-        Logger::log(RENDER_ENGINE, ERROR, "addShaderObject Error: " + (std::string)err.what());
+        Logger::log(RENDER_ENGINE, ERROR, "addDrawable Error: " + (std::string)err.what());
     }
 }
 
 
 void RenderEngine::addShaderDrawable(std::string name, sf::Drawable* drawable, std::string filepath, sf::Shader::Type type)
 {
+    Logger::log(RENDER_ENGINE, INFO, "ADDING shaderDrawable " + (std::string)name);
+
     try
     {
         shader_drawables_.try_emplace(name);
@@ -69,19 +81,27 @@ void RenderEngine::addShaderDrawable(std::string name, sf::Drawable* drawable, s
     }
     catch (std::exception& err)
     {
-        std::cout << "addShaderObject Error: " << err.what() << std::endl;
+        Logger::log(RENDER_ENGINE, ERROR, "addShaderDrawable Error: " + (std::string)err.what());
     }
 }
 
 
 void RenderEngine::attachShaderToDrawable(std::string drawable_name, std::string filepath, sf::Shader::Type type)
 {
+    Logger::log(RENDER_ENGINE, INFO, "ATTACHING "+filepath+" shader to "+drawable_name);
     if (drawables_.find(drawable_name) == drawables_.end())
         throw(std::runtime_error("RenderEngine::attachShaderToDrawable : Tried adding Shader to non-existing drawable"));
 
     addShaderDrawable(drawable_name, drawables_.find(drawable_name)->second, filepath, type);
 
     drawables_.erase(drawable_name);
+}
+
+void RenderEngine::clearAll()
+{
+    Logger::log(RENDER_ENGINE, INFO, "CLEAR all drawables");
+    drawables_.clear();
+    shader_drawables_.clear();
 }
 
 

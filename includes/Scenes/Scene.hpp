@@ -88,26 +88,15 @@ public:
     const Entity* getEntity(std::string name) const;
 
     ////////////////////////////////////////////////////////////
-    /// \brief SceneTransitionEvent process distributor
+    /// \brief Extracts an entity from the scene
     ///
-    /// Distributes the SceneTransitionEvent to the objects that need it :
-    /// \li this
-    /// \li entities
+    /// This removes the entity from the map
+    /// 
+    /// \param name name of the entity
     ///
-    /// \param event SceneTransitionEvent
-    ///
-    /// \see SceneTransitionEvent
+    /// \returns pointer to the entity, nullptr if not found
     ////////////////////////////////////////////////////////////
-    virtual void processEvent(SceneTransitionEvent* event);
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Process a SceneTransitionEvent
-    ///
-    /// Unloads itself.
-    ///
-    /// \param event SceneTransitionEvent
-    ////////////////////////////////////////////////////////////
-    virtual void processEventFunc(SceneTransitionEvent* event);
+    Entity* extractEntity(std::string name);
 
     ////////////////////////////////////////////////////////////
     /// \brief CustomEvent process distributor
@@ -117,7 +106,7 @@ public:
     ///
     /// \param event CustomEvent
     ////////////////////////////////////////////////////////////
-    virtual void processEvent(CustomEvent* event);
+    virtual void distributeEvent(CustomEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief Process a CustomEvent
@@ -126,7 +115,7 @@ public:
     ///
     /// \param event CustomEvent
     ////////////////////////////////////////////////////////////
-    virtual void processEventFunc(CustomEvent* event) {};
+    virtual void processEvent(CustomEvent* event) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Throws the event to the parent game object

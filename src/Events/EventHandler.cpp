@@ -7,20 +7,26 @@
 #include "logger.hpp"
 
 bool EventHandler::instantiated_ = false;
+EventHandler* EventHandler::instance_ = nullptr;
 
 
 EventHandler::EventHandler(Game* game) {
-    if (instantiated_) {
-        throw std::runtime_error("EventHandler already instantiated");
+    game_ = game;    
+}
+
+EventHandler* EventHandler::getInstance(Game* game)
+{
+    if (!instantiated_) {
+        Logger::log(EVENT_HANDLER, INFO, "INSTANTIATE EventHandler");
+        instance_ = new EventHandler(game);
+        instantiated_ = true;
     }
-    game_ = game;
-    
-    instantiated_ = true;
+    return instance_;
 }
 
 
 EventHandler::~EventHandler() {
-    std::cout << "Destroy EventHandler" << std::endl;
+    Logger::log(EVENT_HANDLER, INFO, "DESTROY EventHandler");
     while (!eventQueue.empty()) {
         std::unique_ptr<Event> ev = _getEventToProcess();
         ev.reset();
@@ -40,7 +46,7 @@ bool EventHandler::isEmpty() {
 
 
 void EventHandler::addEvent(std::unique_ptr<Event> event) {
-    Logger::log(EVENT_HANDLER, DEBUG, "Adding event");
+    Logger::log(EVENT_HANDLER, INFO, "STACK event to queue");
     eventQueue.push(std::move(event));
 }
 
@@ -51,24 +57,26 @@ void EventHandler::processEvent() {
 
         SceneTransitionEvent* Et = dynamic_cast<SceneTransitionEvent*>(ev.get());
         if (Et) {
-            Logger::log(EVENT_HANDLER, DEBUG, "Processing SceneTransition Event");
+            Logger::log(EVENT_HANDLER, INFO, "START SceneTransitionEvent processing");
             game_->processEvent(Et);
+            Logger::log(EVENT_HANDLER, INFO, "DONE SceneTransitionEvent processing");
             return;
         }
         
-        
         SpawnEntityEvent* Es = dynamic_cast<SpawnEntityEvent*>(ev.get());
         if (Es) {
-            Logger::log(EVENT_HANDLER, DEBUG, "Processing SpawnEntity Event");
+            Logger::log(EVENT_HANDLER, INFO, "START SpawnEntityEvent processing");
             game_->processEvent(Es);
+            Logger::log(EVENT_HANDLER, INFO, "DONE SpawnEntityEvent processing");
             return;
         }
 
 
         CustomEvent* Ec = dynamic_cast<CustomEvent*>(ev.get());
         if (Ec) {
-            Logger::log(EVENT_HANDLER, DEBUG, "Processing Custom Event");
+            Logger::log(EVENT_HANDLER, INFO, "START CustomEvent processing");
             game_->processEvent(Ec);
+            Logger::log(EVENT_HANDLER, INFO, "DONE CustomEvent processing");
             return;
         }
     }

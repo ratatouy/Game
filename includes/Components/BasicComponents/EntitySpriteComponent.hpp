@@ -51,9 +51,20 @@ public:
     /// \param filepath Path to the texture
     ////////////////////////////////////////////////////////////
     void AddSprite(std::string name, const std::string& filepath);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Returns a const pointer to the map containing all the sprites
+    ///
+    /// \return const Pointer to the map
+    ////////////////////////////////////////////////////////////
     const auto GetSpriteData() const {return &sprites_data_map_;}
 
-    const int get_nb_sprites() {return nb_sprites_;}
+    ////////////////////////////////////////////////////////////
+    /// \brief Returns the number of sprites
+    ///
+    /// \return Number of sprites
+    ////////////////////////////////////////////////////////////
+    const int get_nb_sprites() const {return nb_sprites_;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Returns a pointer to a sprite of Index "spriteIndex"

@@ -24,7 +24,6 @@ public:
     Ennemy(const char* name, sf::Transformable* transform, int health = 7) : Entity(name, transform), health_(health) {};
     Ennemy(const char* name, sf::Transformable* transform, EntitySpriteComponent* sprites, int health = 7) : Entity(name, transform, sprites), health_(health) {};
     
-
     void update() override;
 
     void processEvent(CustomEvent* event) override;

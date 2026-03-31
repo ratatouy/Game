@@ -21,6 +21,23 @@ class RenderEngine
 {
 public:
     ////////////////////////////////////////////////////////////
+    /// \brief Get the instance of the RenderEngine (Singleton), creates it if it doesn't exist
+    ///
+    /// \param game Reference to the Game
+    ///
+    /// \param title Title of the window
+    ///
+    /// \param width Width of the RenderWindow
+    ///
+    /// \param height Height of the RenderWindow
+    ///
+    /// \return Pointer to the RenderEngine
+    ///
+    /// \note the default width and height are 920x480
+    ////////////////////////////////////////////////////////////
+    static RenderEngine* getInstance(Game* game, std::string title = "Game", int width = 920, int height = 480);
+
+    ////////////////////////////////////////////////////////////
     /// \brief Default Constructor
     ///
     /// \param game Reference to the Game
@@ -118,6 +135,10 @@ public:
     ////////////////////////////////////////////////////////////
     void attachShaderToDrawable(std::string drawable_name, std::string filepath, sf::Shader::Type type);
 
+    /// Doesn't delete the drawables, just empty the map,
+    /// the user is responsible for deleting the drawables
+    void clearAll();
+
     //////////////////////////////////////////////////////////// 
     /// \brief General Update Method
     ///
@@ -142,6 +163,7 @@ private:
     ////////////////////////////////////////////////////////////
     /// Member Data
     ////////////////////////////////////////////////////////////
+    static RenderEngine* instance_;     ///< Singleton
     static bool instantiated_;          ///< Forces Singleton
     sf::RenderWindow* window_;          ///< RenderWindow Object is stored here
     Game* game_;                        ///< Reference to the Game

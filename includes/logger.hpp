@@ -4,13 +4,15 @@
 #include <ctime>
 #include <fstream>
 #include <iostream>
+#include <vector>
 #include <sstream>
 
 
 enum LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL };
 ///< Enum to represent log levels
 
-enum LogType { MAIN, GAME, RENDER_ENGINE, EVENT_HANDLER, PARSER, SCENE, ENTITY, PLAYER, EVENT };
+enum LogType { MAIN, GAME, RENDER_ENGINE, EVENT_HANDLER, PARSER, 
+    SCENE, ENTITY, ENTITY_SPRITE, PLAYER, EVENT };
 ///< Enum to represent log types
 
 
@@ -43,14 +45,22 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Log a message to the console, general log file and a specific log file
     /// 
+    /// This checks for muted types and levels
+    ///
     /// \param type The log type
     ///
     /// \param level The log level
     ///
     /// \param message The message to log
+    ///
+    /// \param typeLogOnly Whether to only log to the type specific log file (false by default)
     ////////////////////////////////////////////////////////////
-    static void log(LogType type, LogLevel level, const std::string& message)
+    static void log(LogType type, LogLevel level, const std::string& message, bool typeLogOnly = false)
     {
+        // check if muted or muted type
+        if (muted) return;
+
+        // Open general and typed log files
         std::string filename = "Logs/" + _typeToString(type) + ".txt";
         _openFile(filename, &typeLogFile_);
 
@@ -79,20 +89,24 @@ public:
                  << std::endl;
 
         // Output to console
-        std::cout << generalLogEntry.str();
+        if (!typeLogOnly && !(bool)typeLogOnlyTypes[type])
+            std::cout << generalLogEntry.str();
 
         // Output to general log file
-        if (logFile_.is_open()) {
+        if (!typeLogOnly && !(bool)typeLogOnlyTypes[type]
+            && logFile_.is_open())
+        {
             logFile_ << generalLogEntry.str();
             logFile_ .flush(); // Ensure immediate write to file
         }
 
-        // Output to type specific log file
+        // Output to type log file
         if (typeLogFile_.is_open()) {
             typeLogFile_ << typedLogEntry.str();
             typeLogFile_ .flush(); // Ensure immediate write to file
         }
 
+        // Close type log file without erasing
         _closeFile(&typeLogFile_);
     }
     
@@ -129,9 +143,9 @@ private:
     {
         switch (level) {
         case DEBUG:
-            return "DEBUG   ";
+            return "debug   ";
         case INFO:
-            return "INFO    ";
+            return "info    ";
         case WARNING:
             return "WARNING ";
         case ERROR:
@@ -167,6 +181,8 @@ private:
             return (with_space) ? "scene  " : "scene";
         case ENTITY:
             return (with_space) ? "entity " : "entity";
+        case ENTITY_SPRITE:
+            return (with_space) ? "sprite " : "sprite";
         case PLAYER:
             return (with_space) ? "player " : "player";
         default:
@@ -179,10 +195,11 @@ private:
     ////////////////////////////////////////////////////////////
     /// Member variables
     ////////////////////////////////////////////////////////////
-    static std::ofstream typeLogFile_;   ///< Current stream for the typed log file
-    static std::ofstream logFile_;       ///< Current stream for the general log file
-    static const int logTypeSize;        ///< Number of log types (not including general)
-
+    static std::ofstream typeLogFile_;                 ///< Current stream for the typed log file
+    static std::ofstream logFile_;                     ///< Current stream for the general log file
+    static const int logTypeSize;                      ///< Number of log types (not including general)
+    static const bool muted;                           ///< Whether the logger is fully muted
+    static const std::vector<bool> typeLogOnlyTypes;   ///< Whether each log type outputs only to its own log file
 };
 
 #endif

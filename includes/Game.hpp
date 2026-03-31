@@ -6,6 +6,7 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include <map>
+#include <iostream>
 
 #include "Engine/RenderEngine.hpp"
 
@@ -34,6 +35,13 @@ class EventHandler; // Forward Declaration of EventHandler //
 class Game
 {
 public:
+    ///////////////////////////////////////////////////////////
+    /// \brief Get the instance of the Game (Singleton), creates it if it doesn't exist
+    ///
+    /// \return Reference to the Game
+    ///////////////////////////////////////////////////////////
+    static Game* getInstance();
+
     ////////////////////////////////////////////////////////////
     /// \brief Default Constructor
     ///
@@ -122,12 +130,12 @@ public:
     ///
     /// Distributes the SceneTransitionEvent to the objects that need it :
     /// \li The Scene (will unload it self)
-    /// \li this ( \see processEventFunc(SceneTransitionEvent* event) )
+    /// \li this ( \see processEventdistribute(SceneTransitionEvent* event) )
     /// It unloads the scene and \a then loads the new one.
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void processEvent(SceneTransitionEvent* event);
+    void distributeEvent(SceneTransitionEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief Process a SceneTransitionEvent
@@ -136,7 +144,7 @@ public:
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void processEventFunc(SceneTransitionEvent* event);
+    void processEvent(SceneTransitionEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief SpawnEntityEvent process distributor
@@ -147,7 +155,7 @@ public:
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void processEvent(SpawnEntityEvent* event);
+    void distributeEvent(SpawnEntityEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief Process a SpawnEntityEvent
@@ -156,7 +164,7 @@ public:
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void processEventFunc(SpawnEntityEvent* event);
+    void processEvent(SpawnEntityEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief CustomEvent process distributor
@@ -166,7 +174,7 @@ public:
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void processEvent(CustomEvent* event);
+    void distributeEvent(CustomEvent* event);
 
     ////////////////////////////////////////////////////////////
     /// \brief Process a CustomEvent
@@ -175,7 +183,7 @@ public:
     ///
     /// \param event Reference to the event
     ////////////////////////////////////////////////////////////
-    void processEventFunc(CustomEvent* event);
+    void processEvent(CustomEvent* event);
 
 
     ////////////////////////////////////////////////////////////
@@ -194,7 +202,7 @@ public:
 
 
     ////////////////////////////////////////////////////////////
-    /// \warning DON'T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
+    /// \warning DON'T FORGET TO DELETE THIS TION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
     /// \todo delete this
     ////////////////////////////////////////////////////////////
     void addEntity(Entity* entity);
@@ -204,6 +212,7 @@ private:
     ////////////////////////////////////////////////////////////
     /// Member Data
     ////////////////////////////////////////////////////////////
+    static Game* instance_;                                 ///< instance
     static bool instantiated_;                              ///< Make sure the EventHandler is only instantiated once
     Scene* active_scene_;                                   ///< Reference to the active Scene
     EventHandler* eventHandler_;                            ///< Reference to the EventHandler

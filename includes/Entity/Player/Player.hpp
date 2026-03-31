@@ -14,17 +14,15 @@
 ///
 /// The Player is the \b main \b character of the game
 ////////////////////////////////////////////////////////////
-class Player : public Entity {
-
-
+class Player : public Entity
+{
 public:
     ////////////////////////////////////////////////////////////
     /// \brief Lowest Constructor
     ///
     /// \param name Name of the Player
     ////////////////////////////////////////////////////////////
-    public: Player(const char* name) : Entity(name) {};
-
+    Player(const char* name) : Entity(name) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Intermediate Transformable Constructor
@@ -34,7 +32,6 @@ public:
     /// \param transformable Pointer to the sf::Transformable to attach to the player
     ////////////////////////////////////////////////////////////
     Player(const char* name, sf::Transformable* transformable) : Entity(name, transformable) {};
-
 
     ////////////////////////////////////////////////////////////
     /// \brief Full Constructor
@@ -54,7 +51,6 @@ public:
     /// \li IDK
     ////////////////////////////////////////////////////////////
     void update() override;
-
 
     void attack();
 };

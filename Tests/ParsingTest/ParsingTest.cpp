@@ -8,6 +8,6 @@
 int main()
 {
     Logger::restart();
-    Scene* scene = LoadScene("lvl1");
+    Scene* scene = Parser::LoadScene("lvl1");
     return 0;
 }

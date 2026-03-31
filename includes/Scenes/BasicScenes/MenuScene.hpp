@@ -24,15 +24,6 @@ public:
     ////////////////////////////////////////////////////////////
     MenuScene(sf::Vector2i origin, sf::Vector2u size) : Scene(origin, size) {};
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Process the SceneTransitionEvent
-    ///
-    /// \param event 
-    ////////////////////////////////////////////////////////////
-    void processEventFunc(SceneTransitionEvent* event) override
-    {
-        Logger::log(SCENE, DEBUG, "MenuScene Processing SceneTransitionEvent");
-    };
 };
 
 #endif

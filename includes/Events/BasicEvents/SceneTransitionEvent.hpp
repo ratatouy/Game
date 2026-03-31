@@ -13,6 +13,8 @@ private:
 
 public:
     SceneTransitionEvent(std::string target_name) : Event(), target(target_name) {};
+
+    std::string getTarget() const { return target; }
 };
 
 #endif
