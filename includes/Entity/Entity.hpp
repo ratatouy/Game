@@ -71,7 +71,7 @@ public:
     //////////////////////////////////////////////////////////
     /// \brief Default destructor
     //////////////////////////////////////////////////////////
-    ~Entity()
+    virtual ~Entity()
     {
         Logger::log(ENTITY, DEBUG, "DELETING entity");
         delete entitySprite;

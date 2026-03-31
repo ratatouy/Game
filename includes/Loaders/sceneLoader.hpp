@@ -5,6 +5,8 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include "Scenes/Scene.hpp"
+#include "Scenes/BasicScenes/MenuScene.hpp"
+#include "Scenes/BasicScenes/GameplayScene.hpp"
 
 ////////////////////////////////////////////////////////////
 /// Manages Parsing data from json files to make them usable by the game
@@ -32,6 +34,8 @@ namespace Parser
     /// \see Scene
     ////////////////////////////////////////////////////////////
     Scene* LoadScene(std::string name, std::string filepath = "Data/GameData/sceneData.json");
+
+    int _sceneTypeToInt(std::string type);
 }
 
 #endif

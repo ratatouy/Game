@@ -71,12 +71,6 @@ void Scene::throwEvent(std::unique_ptr<Event> event)
 }
 
 
-void Scene::update()
-{
-    updateEntities();
-}
-
-
 bool Scene::checkTransition()
 {
     for (auto transition_pair : transition_map_)
@@ -89,14 +83,4 @@ bool Scene::checkTransition()
             throwEvent(std::make_unique<SceneTransitionEvent>(transition_pair.second->getTargetName()));
     }
     return false;
-}
-
-
-void Scene::updateEntities()
-{
-    for (std::pair<std::string, Entity*> entity_pair : entity_map_)
-    {
-        entity_pair.second->update();
-        entity_pair.second->entitySprite->update();
-    }
 }

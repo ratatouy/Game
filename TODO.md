@@ -1,12 +1,6 @@
 # YO I'm the TO-DO list whatsup ??
 
 ### Actual Coding stuff :
-- [ ] Implement Transitions :
-  - [x] Make a Transition class
-  - [ ] Find a stable Data format
-  - [ ] Make a parser
-  - [ ] Implement Transitions
-
 - [ ] Entity hitboxes
 
 - [ ] Implement Entity's Depth
@@ -19,6 +13,11 @@
 
 
 ### Done Things :
+- [x] Implement Transitions :
+  - [x] Make a Transition class
+  - [x] Make a parser
+  - [x] Implement Transitions
+
 - [x] Refactor using a Game class
 - [x] Setup a proper Documentation system
 - [x] Make a Log system

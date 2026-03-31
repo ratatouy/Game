@@ -102,7 +102,7 @@ public:
     /// \brief CustomEvent process distributor
     ///
     /// Distributes the CustomEvent to the objects that need it,
-    /// which depends on the type of the CustomEvent.
+    /// which depends on the type of the Scene and of the CustomEvent.
     ///
     /// \param event CustomEvent
     ////////////////////////////////////////////////////////////
@@ -111,7 +111,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Process a CustomEvent
     ///
-    /// What it does depends on the type of the CustomEvent.
+    /// What it does depends on the type of the Scene and the CustomEvent.
     ///
     /// \param event CustomEvent
     ////////////////////////////////////////////////////////////
@@ -144,7 +144,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Updates the scene
     ////////////////////////////////////////////////////////////
-    virtual void update();
+    virtual void update() = 0;
     
     ////////////////////////////////////////////////////////////
     /// \brief Checks if a transition should be activated
@@ -153,16 +153,9 @@ public:
     ////////////////////////////////////////////////////////////
     bool checkTransition();
 
+protected:
     ////////////////////////////////////////////////////////////
-    /// \brief Updates all of the entities
-    ////////////////////////////////////////////////////////////
-    void updateEntities();
-
-
-
-private:
-    ////////////////////////////////////////////////////////////
-    // Attributes
+    /// Member Data
     ////////////////////////////////////////////////////////////
     Game* game_;                                                  ///< Reference to the game object
     std::string name_;                                            ///< Name of the current_scene

@@ -3,6 +3,8 @@
     {
         "id" : 0,
 
+        "type" : "MENU",
+
         "size" : [720, 720],
 
         "origin" : [0, 0],
@@ -21,6 +23,8 @@
     "lvl2" :
     { 
         "id" : 1,
+
+        "type" : "GAMEPLAY",
 
         "size" : [720, 720],
 

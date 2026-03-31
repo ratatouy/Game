@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////
 /// \brief Adds a collision box to an object
 ///
-/// It should be used to detect intersection between two collision boxes
+/// It should be used to detect intersection between two collision boxes.
 ////////////////////////////////////////////////////////////
 class ColliderComponent
 {
@@ -49,14 +49,14 @@ public:
     ~ColliderComponent() = default;
 
     ////////////////////////////////////////////////////////////
-    /// \brief Returns a reference to the size of the collider
+    /// \brief Returns a const reference to the size of the collider
     ///
     /// \return The size
     ////////////////////////////////////////////////////////////
     const sf::Vector2f& getSize() const { return size_; }
 
     ///////////////////////////////////////////////////////////
-    /// \brief Returns a reference to the offset of the collider
+    /// \brief Returns a const reference to the offset of the collider
     ///
     /// \return The offset
     ////////////////////////////////////////////////////////////
@@ -77,7 +77,7 @@ private:
     ////////////////////////////////////////////////////////////
         sf::Vector2f size_;                  ///< Size of the collider (it's a rectangle)
         sf::Vector2f offset_;                ///< Offset of the collider (it's a rectangle)
-public: sf::Transformable* transformable_;   ///< Transformable to use
+public: sf::Transformable* transformable_;   ///< Base transformable of the entity
 };
 
 

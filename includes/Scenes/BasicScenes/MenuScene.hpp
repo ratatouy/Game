@@ -22,8 +22,11 @@ public:
     ///
     /// \param size Size of the current scene
     ////////////////////////////////////////////////////////////
-    MenuScene(sf::Vector2i origin, sf::Vector2u size) : Scene(origin, size) {};
+    MenuScene(sf::Vector2i origin, sf::Vector2u size) : Scene(origin, size) {}
 
+    void update() override;
+
+    void updateEntities();
 };
 
 #endif
