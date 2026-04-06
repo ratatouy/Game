@@ -26,6 +26,13 @@ var NAVTREE =
 [
   [ "Ratatouy's SFML Game Project", "index.html", [
     [ "Todo List", "todo.html", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -53,7 +60,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_border_transition_8cpp.html",
-"dir_c610c8504d46288da7634b3c0b18263f.html"
+"class_transition.html#a3cb10e25c70bd60235e2f21d82af5359"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

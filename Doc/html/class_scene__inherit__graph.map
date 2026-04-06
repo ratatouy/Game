@@ -1,4 +1,5 @@
 <map id="Scene" name="Scene">
-<area shape="rect" id="node1" title="Base class for all Scenes." alt="" coords="23,5,85,32"/>
-<area shape="rect" id="node2" href="$class_menu_scene.html" title="Menu Scene." alt="" coords="5,80,103,107"/>
+<area shape="rect" id="node1" title="Base class for all Scenes." alt="" coords="107,5,168,32"/>
+<area shape="rect" id="node2" href="$class_gameplay_scene.html" title="Basic gameplay scene." alt="" coords="5,80,133,107"/>
+<area shape="rect" id="node3" href="$class_menu_scene.html" title="Menu Scene." alt="" coords="158,80,255,107"/>
 </map>

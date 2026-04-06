@@ -4,7 +4,7 @@
 
 bool VerticalTransition::checkTransition(ColliderComponent* player_col) const
 {
-    sf::Vector2f player_pos  = player_col->transformable_->getPosition();
+    sf::Vector2f player_pos  = player_col->getTransformable()->getPosition();
     sf::Vector2f player_size = player_col->getSize();
     sf::Vector2u scene_size  = scene_->getSize();
     sf::Vector2i scene_pos   = scene_->getOrigin();
@@ -27,7 +27,7 @@ bool VerticalTransition::checkTransition(ColliderComponent* player_col) const
 
 bool HorizontalTransition::checkTransition(ColliderComponent* player_col) const
 {
-    sf::Vector2f player_pos  = player_col->transformable_->getPosition();
+    sf::Vector2f player_pos  = player_col->getTransformable()->getPosition();
     sf::Vector2f player_size = player_col->getSize();
     sf::Vector2u scene_size  = scene_->getSize();
     sf::Vector2i scene_pos   = scene_->getOrigin();

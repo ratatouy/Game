@@ -1,0 +1,34 @@
+<map id="Logger::log" name="Logger::log">
+<area shape="rect" id="node1" title="Log a message to the console, general log file and a specific log file." alt="" coords="1136,671,1231,698"/>
+<area shape="rect" id="node2" href="$class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="859,241,1066,267"/>
+<area shape="rect" id="node5" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="370,405,526,431"/>
+<area shape="rect" id="node6" href="$class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,481,295,507"/>
+<area shape="rect" id="node7" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,405,313,431"/>
+<area shape="rect" id="node8" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="897,190,1028,217"/>
+<area shape="rect" id="node9" href="$class_event_handler.html#aea66f9f4c785d3bb47fe6e9b10e93193" title="Add an event to the queue." alt="" coords="873,849,1052,875"/>
+<area shape="rect" id="node10" href="$class_game.html#a19446234f66ae67091b3af08c7ba6869" title="Throw an event to the EventHandler." alt="" coords="615,798,757,825"/>
+<area shape="rect" id="node11" href="$class_scene.html#a75990ee1152181d4843dfc8f2e5cff90" title="Throws the event to the parent game object." alt="" coords="377,747,519,774"/>
+<area shape="rect" id="node12" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="155,693,267,719"/>
+<area shape="rect" id="node14" href="$class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a" title="Adds a ShaderDrawable by constructing the shader." alt="" coords="837,950,1088,977"/>
+<area shape="rect" id="node15" href="$class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4" title="Attaches a Shader to a Drawable." alt="" coords="583,917,789,959"/>
+<area shape="rect" id="node16" href="$class_entity_sprite_component.html#ad38ac17f0cb24f50ad919eaedcc28e4c" title="Adds a sprite to the entity." alt="" coords="361,631,535,672"/>
+<area shape="rect" id="node17" href="$class_render_engine.html#a81c134bae1bd7c5a59a95199085c1ea8" title=" " alt="" coords="601,342,771,369"/>
+<area shape="rect" id="node18" href="$class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6" title="CustomEvent process distributor." alt="" coords="879,1001,1047,1027"/>
+<area shape="rect" id="node20" href="$class_scene.html#aefd8a138c9d7c93932baa26014ec3617" title="Extracts an entity from the scene." alt="" coords="609,393,763,419"/>
+<area shape="rect" id="node21" href="$class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9" title="Get the instance of the Game (Singleton), creates it if it doesn&#39;t exist." alt="" coords="375,114,521,141"/>
+<area shape="rect" id="node22" href="$class_event_handler.html#a258f0a9c3aca4da0b8bf7b994209434e" title="Get the EventHandler instance, creates it if it doesn&#39;t exist." alt="" coords="865,89,1060,115"/>
+<area shape="rect" id="node24" href="$class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="865,139,1061,166"/>
+<area shape="rect" id="node25" href="$class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="618,545,754,571"/>
+<area shape="rect" id="node26" href="$namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="893,595,1033,622"/>
+<area shape="rect" id="node27" href="$class_entity.html#a588098978eea6a3486b7361605ff3f0f" title="Default destructor." alt="" coords="905,1051,1021,1078"/>
+<area shape="rect" id="node28" href="$class_entity_sprite_component.html#adb4ad7ece3f5d3000e189ebb23cdf175" title="Default Destructor." alt="" coords="867,1103,1059,1144"/>
+<area shape="rect" id="node29" href="$class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722" title="Destructor." alt="" coords="854,1169,1071,1195"/>
+<area shape="rect" id="node30" href="$class_game.html#ae3d112ca6e0e55150d2fdbc704474530" title="Destructor." alt="" coords="903,1219,1022,1246"/>
+<area shape="rect" id="node31" href="$class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6" title="Destructor." alt="" coords="852,1270,1073,1297"/>
+<area shape="rect" id="node32" href="$class_scene.html#a3b8cec2e32546713915f8c6303c951f1" title="Default destructor." alt="" coords="903,1321,1022,1347"/>
+<area shape="rect" id="node3" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="621,241,751,267"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,545,60,571"/>
+<area shape="rect" id="node13" href="$class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="125,747,296,774"/>
+<area shape="rect" id="node19" href="$class_game.html#a31a02c739ee585c35a164248c7f6900a" title="CustomEvent process distributor." alt="" coords="602,1001,770,1027"/>
+<area shape="rect" id="node23" href="$class_game.html#ad59df6562a58a614fda24622d3715b65" title="Default Constructor." alt="" coords="632,114,740,141"/>
+</map>

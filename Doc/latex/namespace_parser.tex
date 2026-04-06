@@ -1,0 +1,85 @@
+\hypertarget{namespace_parser}{}\doxysection{Parser Namespace Reference}
+\label{namespace_parser}\index{Parser@{Parser}}
+
+
+Manages Parsing data from json files to make them usable by the game.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}{Load\+Scene}} (std\+::string name, std\+::string filepath=\char`\"{}Data/Game\+Data/scene\+Data.\+json\char`\"{})
+\begin{DoxyCompactList}\small\item\em Loads and builds a scene from a json file and returns a pointer to it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}{\+\_\+scene\+Type\+To\+Int}} (std\+::string type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages Parsing data from json files to make them usable by the game. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}\label{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}} 
+\index{Parser@{Parser}!\_sceneTypeToInt@{\_sceneTypeToInt}}
+\index{\_sceneTypeToInt@{\_sceneTypeToInt}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{\_sceneTypeToInt()}{\_sceneTypeToInt()}}
+{\footnotesize\ttfamily int Parser\+::\+\_\+scene\+Type\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file scene\+Loader.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}\label{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}} 
+\index{Parser@{Parser}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}} $\ast$ Parser\+::\+Load\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filepath = {\ttfamily \char`\"{}Data/GameData/sceneData.json\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Loads and builds a scene from a json file and returns a pointer to it. 
+
+Loads \+: \begin{DoxyItemize}
+\item origin \item size\end{DoxyItemize}
+Missing \+: \begin{DoxyItemize}
+\item colliders \item transitions \item entities\end{DoxyItemize}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the scene to load\\
+\hline
+{\em filepath} & Path to the json file (default \+: \char`\"{}\+Data/\+Game\+Data/scene\+Data.\+json\char`\"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the loaded scene
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_scene}{Scene}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 19 of file scene\+Loader.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329_icgraph}
+\end{center}
+\end{figure}

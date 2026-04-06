@@ -1,0 +1,6 @@
+<map id="Scene::throwEvent" name="Scene::throwEvent">
+<area shape="rect" id="node1" title="Throws the event to the parent game object." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="613,31,708,57"/>
+<area shape="rect" id="node3" href="$class_game.html#a19446234f66ae67091b3af08c7ba6869" title="Throw an event to the EventHandler." alt="" coords="196,31,339,57"/>
+<area shape="rect" id="node4" href="$class_event_handler.html#aea66f9f4c785d3bb47fe6e9b10e93193" title="Add an event to the queue." alt="" coords="387,81,565,108"/>
+</map>

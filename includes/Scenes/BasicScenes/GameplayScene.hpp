@@ -36,11 +36,6 @@ public:
     /// \brief Updates all of the entities
     ////////////////////////////////////////////////////////////
     void updateEntities();
-
-
-private:
-    std::unordered_map<std::string, Entity*> collidable_map_;         ///< List of the collidable entities according to their names
-
 };
 
 #endif

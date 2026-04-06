@@ -10,6 +10,10 @@
 
 void Player::update() {}
 
+void Player::processCollision(const CollidableEntity* other)
+{
+    Logger::log(PLAYER, INFO, "COLLISION WITH " + other->getName());
+}
 
 void Player::attack() {
     Logger::log(PLAYER, INFO, "\"RECHAUFFEUR STRKE !!!!\"");

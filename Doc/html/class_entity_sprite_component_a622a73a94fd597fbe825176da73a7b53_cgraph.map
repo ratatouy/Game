@@ -1,4 +1,4 @@
 <map id="EntitySpriteComponent::SetThisSpriteLocalTransform" name="EntitySpriteComponent::SetThisSpriteLocalTransform">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,220,47"/>
-<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104" title=" " alt="" coords="268,5,513,47"/>
+<area shape="rect" id="node1" title="Set the local transform of a sprite." alt="" coords="5,5,220,47"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104" title="Get the local Transformable of a sprite." alt="" coords="268,5,513,47"/>
 </map>

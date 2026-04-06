@@ -16,7 +16,17 @@ Inheritance diagram for Scene\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=153pt]{class_scene__inherit__graph}
+\includegraphics[width=268pt]{class_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_scene__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -32,26 +42,37 @@ const sf\+::\+Vector2i \& \mbox{\hyperlink{class_scene_a7e3f2ea607864c63d1c1fa6c
 \begin{DoxyCompactList}\small\item\em Returns the origin of the scene. \end{DoxyCompactList}\item 
 const sf\+::\+Vector2u \& \mbox{\hyperlink{class_scene_af5352811e65e1fa37a626fbc2f690584}{get\+Size}} () const
 \begin{DoxyCompactList}\small\item\em Returns the size of the scene. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_ad2768e06ec35eaa5150285e975a6aaba}{get\+Entity}} (std\+::string name) const
-\begin{DoxyCompactList}\small\item\em returns an \mbox{\hyperlink{class_entity}{Entity}} according to its name \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99}{process\+Event}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} process distributor. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_scene_a74062e0cbccb836a2ea6cbdc09166259}{process\+Event\+Func}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
-\begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_scene_a4654dfc8ab44c744171caa43fc22bbab}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+const \mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_adc1d9e6de5e4d7a9b85dd1af6602448c}{get\+Entity}} (std\+::string name) const
+\begin{DoxyCompactList}\small\item\em returns a reference to the \mbox{\hyperlink{class_entity}{Entity}} according to its name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_scene_aefd8a138c9d7c93932baa26014ec3617}{extract\+Entity}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Extracts an entity from the scene. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_a2efbbd9f044ba4b114b0a067b85843c6}{distribute\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_custom_event}{Custom\+Event}} process distributor. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_scene_a0db76b56a0c7637f4a20900ab90aa266}{process\+Event\+Func}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+virtual void \mbox{\hyperlink{class_scene_a26412fe92865c31bffa33941c0b22dab}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_custom_event}{Custom\+Event}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}{throw\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
+void \mbox{\hyperlink{class_scene_a75990ee1152181d4843dfc8f2e5cff90}{throw\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_event}{Event}} $>$ event)
 \begin{DoxyCompactList}\small\item\em Throws the event to the parent game object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}{add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
 \begin{DoxyCompactList}\small\item\em Adds an entity to the scene. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_scene_aa24c7e636c10e4e42650c1374b90bb80}{update}} ()
+virtual void \mbox{\hyperlink{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec}{update}} ()=0
 \begin{DoxyCompactList}\small\item\em Updates the scene. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_scene_af024b75792e4a2304ad2eb73779f95be}{check\+Transition}} ()
-\begin{DoxyCompactList}\small\item\em Checks if a transition should be activated. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_scene_a71feeabe831f8755af8adbef941188c4}{update\+Entities}} ()
-\begin{DoxyCompactList}\small\item\em Updates all of the entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if a transition should be activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_scene_aa9e136c3f22cf81289b7fd2795e3fce8}{game\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Member Data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_scene_a1b823f2315b01999f9bac4834d14e545}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Name of the current\+\_\+scene. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_transition}{Transition}} $\ast$ $>$ \mbox{\hyperlink{class_scene_ab7ee7749266a8b6d9bab5c6d131663b2}{transition\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Map of the Transitions. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_scene_aebec25912861ccf28b75ccb35f69bcf5}{entity\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em List of the entities according to their names. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_scene_ac30698bed57efcc02ce34ee8ca7fb89d}{origin\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Origin of the current scene in the global space. \end{DoxyCompactList}\item 
+sf\+::\+Vector2u \mbox{\hyperlink{class_scene_ab6170ebe0ff10d34bf3f711a40c271e3}{size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Size of the current scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -66,7 +87,7 @@ missing elements \+: \begin{DoxyItemize}
 \end{DoxyNote}
 
 
-Definition at line 35 of file Scene.\+hpp.
+Definition at line 36 of file Scene.\+hpp.
 
 
 
@@ -90,7 +111,7 @@ Constructs a \mbox{\hyperlink{class_scene}{Scene}} from its origin and size.
 \end{DoxyParams}
 
 
-Definition at line 45 of file Scene.\+hpp.
+Definition at line 46 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}} 
 \index{Scene@{Scene}!````~Scene@{$\sim$Scene}}
@@ -106,6 +127,14 @@ Default destructor.
 
 Definition at line 11 of file Scene.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_scene_a3b8cec2e32546713915f8c6303c951f1_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
@@ -131,7 +160,7 @@ Beware of deleting the local pointer to the entity when using this method.
 \end{DoxyParams}
 
 
-Definition at line 20 of file Scene.\+cpp.
+Definition at line 21 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -141,7 +170,8 @@ Here is the call graph for this function\+:
 \includegraphics[width=309pt]{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,7 +193,7 @@ True if a transition should be activated
 \end{DoxyReturn}
 
 
-Definition at line 75 of file Scene.\+cpp.
+Definition at line 74 of file Scene.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -173,15 +203,92 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_scene_af024b75792e4a2304ad2eb73779f95be_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_ad2768e06ec35eaa5150285e975a6aaba}\label{class_scene_ad2768e06ec35eaa5150285e975a6aaba}} 
+\mbox{\Hypertarget{class_scene_a2efbbd9f044ba4b114b0a067b85843c6}\label{class_scene_a2efbbd9f044ba4b114b0a067b85843c6}} 
+\index{Scene@{Scene}!distributeEvent@{distributeEvent}}
+\index{distributeEvent@{distributeEvent}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{distributeEvent()}{distributeEvent()}}
+{\footnotesize\ttfamily void Scene\+::distribute\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_custom_event}{Custom\+Event}} process distributor. 
+
+Distributes the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} to the objects that need it, which depends on the type of the \mbox{\hyperlink{class_scene}{Scene}} and of the \mbox{\hyperlink{class_custom_event}{Custom\+Event}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \mbox{\hyperlink{class_custom_event}{Custom\+Event}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a2efbbd9f044ba4b114b0a067b85843c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a2efbbd9f044ba4b114b0a067b85843c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_aefd8a138c9d7c93932baa26014ec3617}\label{class_scene_aefd8a138c9d7c93932baa26014ec3617}} 
+\index{Scene@{Scene}!extractEntity@{extractEntity}}
+\index{extractEntity@{extractEntity}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{extractEntity()}{extractEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Scene\+::extract\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Extracts an entity from the scene. 
+
+This removes the entity from the map
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the entity, nullptr if not found 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_scene_aefd8a138c9d7c93932baa26014ec3617_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_aefd8a138c9d7c93932baa26014ec3617_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_adc1d9e6de5e4d7a9b85dd1af6602448c}\label{class_scene_adc1d9e6de5e4d7a9b85dd1af6602448c}} 
 \index{Scene@{Scene}!getEntity@{getEntity}}
 \index{getEntity@{getEntity}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Scene\+::get\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Scene\+::get\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const}
 
 
 
-returns an \mbox{\hyperlink{class_entity}{Entity}} according to its name 
+returns a reference to the \mbox{\hyperlink{class_entity}{Entity}} according to its name 
 
 Returns nullptr if not found.
 
@@ -200,14 +307,14 @@ pointer to the entity, nullptr if not found
 \item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Make this const\end{DoxyRefDesc}
 
 
-Definition at line 28 of file Scene.\+cpp.
+Definition at line 29 of file Scene.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=340pt]{class_scene_ad2768e06ec35eaa5150285e975a6aaba_icgraph}
+\includegraphics[width=340pt]{class_scene_adc1d9e6de5e4d7a9b85dd1af6602448c_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_a7e3f2ea607864c63d1c1fa6c17aa335f}\label{class_scene_a7e3f2ea607864c63d1c1fa6c17aa335f}} 
@@ -225,7 +332,7 @@ Origin of the scene
 \end{DoxyReturn}
 
 
-Definition at line 64 of file Scene.\+hpp.
+Definition at line 67 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -250,7 +357,7 @@ Size of the scene
 \end{DoxyReturn}
 
 
-Definition at line 71 of file Scene.\+hpp.
+Definition at line 74 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -260,85 +367,17 @@ Here is the caller graph for this function\+:
 \includegraphics[width=318pt]{class_scene_af5352811e65e1fa37a626fbc2f690584_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_a4654dfc8ab44c744171caa43fc22bbab}\label{class_scene_a4654dfc8ab44c744171caa43fc22bbab}} 
+\mbox{\Hypertarget{class_scene_a26412fe92865c31bffa33941c0b22dab}\label{class_scene_a26412fe92865c31bffa33941c0b22dab}} 
 \index{Scene@{Scene}!processEvent@{processEvent}}
 \index{processEvent@{processEvent}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-\mbox{\hyperlink{class_custom_event}{Custom\+Event}} process distributor. 
-
-Distributes the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} to the objects that need it, which depends on the type of the \mbox{\hyperlink{class_custom_event}{Custom\+Event}}.
-
-
-\begin{DoxyParams}{Parameters}
-{\em event} & \mbox{\hyperlink{class_custom_event}{Custom\+Event}} \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 52 of file Scene.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_scene_a4654dfc8ab44c744171caa43fc22bbab_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99}\label{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99}} 
-\index{Scene@{Scene}!processEvent@{processEvent}}
-\index{processEvent@{processEvent}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} process distributor. 
-
-Distributes the \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} to the objects that need it \+: \begin{DoxyItemize}
-\item this \item entities\end{DoxyItemize}
-
-\begin{DoxyParams}{Parameters}
-{\em event} & \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}\\
-\hline
-\end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} 
-\end{DoxySeeAlso}
-
-
-Definition at line 38 of file Scene.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_scene_a8436de839f7ec4ddc18ae87f9dd32a99_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_scene_a0db76b56a0c7637f4a20900ab90aa266}\label{class_scene_a0db76b56a0c7637f4a20900ab90aa266}} 
-\index{Scene@{Scene}!processEventFunc@{processEventFunc}}
-\index{processEventFunc@{processEventFunc}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual void Scene\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily virtual void Scene\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
 Process a \mbox{\hyperlink{class_custom_event}{Custom\+Event}}. 
 
-What it does depends on the type of the \mbox{\hyperlink{class_custom_event}{Custom\+Event}}.
+What it does depends on the type of the \mbox{\hyperlink{class_scene}{Scene}} and the \mbox{\hyperlink{class_custom_event}{Custom\+Event}}.
 
 
 \begin{DoxyParams}{Parameters}
@@ -347,39 +386,14 @@ What it does depends on the type of the \mbox{\hyperlink{class_custom_event}{Cus
 \end{DoxyParams}
 
 
-Definition at line 127 of file Scene.\+hpp.
-
-\mbox{\Hypertarget{class_scene_a74062e0cbccb836a2ea6cbdc09166259}\label{class_scene_a74062e0cbccb836a2ea6cbdc09166259}} 
-\index{Scene@{Scene}!processEventFunc@{processEventFunc}}
-\index{processEventFunc@{processEventFunc}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Scene\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Process a \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. 
-
-Unloads itself.
-
-
-\begin{DoxyParams}{Parameters}
-{\em event} & \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented in \mbox{\hyperlink{class_menu_scene_a9bc01005e87b0fde5324da4ef1f95bd3}{Menu\+Scene}}.
-
-
-
-Definition at line 47 of file Scene.\+cpp.
+Definition at line 119 of file Scene.\+hpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_scene_a74062e0cbccb836a2ea6cbdc09166259_icgraph}
+\includegraphics[width=350pt]{class_scene_a26412fe92865c31bffa33941c0b22dab_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_a7dd380896c2aae26dc8369eb5dfd7bfb}\label{class_scene_a7dd380896c2aae26dc8369eb5dfd7bfb}} 
@@ -392,6 +406,9 @@ Here is the caller graph for this function\+:
 
 Set the reference to the \mbox{\hyperlink{class_game}{Game}}. 
 
+\begin{DoxyWarning}{Warning}
+Deprecated (game is set when loading the scene in game\+::load\+Scene)
+\end{DoxyWarning}
 
 \begin{DoxyParams}{Parameters}
 {\em game} & Reference to the \mbox{\hyperlink{class_game}{Game}} \\
@@ -399,20 +416,21 @@ Set the reference to the \mbox{\hyperlink{class_game}{Game}}.
 \end{DoxyParams}
 
 
-Definition at line 57 of file Scene.\+hpp.
+Definition at line 60 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=253pt]{class_scene_a7dd380896c2aae26dc8369eb5dfd7bfb_icgraph}
+\includegraphics[width=350pt]{class_scene_a7dd380896c2aae26dc8369eb5dfd7bfb_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}\label{class_scene_a7671ad25a45d0dfee2ee110a2dae588a}} 
+\mbox{\Hypertarget{class_scene_a75990ee1152181d4843dfc8f2e5cff90}\label{class_scene_a75990ee1152181d4843dfc8f2e5cff90}} 
 \index{Scene@{Scene}!throwEvent@{throwEvent}}
 \index{throwEvent@{throwEvent}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{throwEvent()}{throwEvent()}}
-{\footnotesize\ttfamily void Scene\+::throw\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event}{Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Scene\+::throw\+Event (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_event}{Event}} $>$}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -426,31 +444,33 @@ This doesn\textquotesingle{}t actually care about the type of the event, it just
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_game_aae26066798d381cb711918f0b59958a5}{Game\+::throw\+Event}} 
+\mbox{\hyperlink{class_game_a19446234f66ae67091b3af08c7ba6869}{Game\+::throw\+Event}} 
 \end{DoxySeeAlso}
 
 
-Definition at line 62 of file Scene.\+cpp.
+Definition at line 67 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_scene_a7671ad25a45d0dfee2ee110a2dae588a_cgraph}
+\includegraphics[width=350pt]{class_scene_a75990ee1152181d4843dfc8f2e5cff90_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_scene_a7671ad25a45d0dfee2ee110a2dae588a_icgraph}
+\includegraphics[width=350pt]{class_scene_a75990ee1152181d4843dfc8f2e5cff90_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_scene_aa24c7e636c10e4e42650c1374b90bb80}\label{class_scene_aa24c7e636c10e4e42650c1374b90bb80}} 
+\mbox{\Hypertarget{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec}\label{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec}} 
 \index{Scene@{Scene}!update@{update}}
 \index{update@{update}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -458,43 +478,103 @@ Updates the scene.
 
 
 
-Definition at line 69 of file Scene.\+cpp.
+Implemented in \mbox{\hyperlink{class_menu_scene_a3f8c1a2a91f22dcb9202567f1ac59e96}{Menu\+Scene}}, and \mbox{\hyperlink{class_gameplay_scene_a8196705b494cceb00a711c0e79ee3a66}{Gameplay\+Scene}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=324pt]{class_scene_aa24c7e636c10e4e42650c1374b90bb80_cgraph}
+\includegraphics[width=350pt]{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec_icgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_scene_aa24c7e636c10e4e42650c1374b90bb80_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_scene_a71feeabe831f8755af8adbef941188c4}\label{class_scene_a71feeabe831f8755af8adbef941188c4}} 
-\index{Scene@{Scene}!updateEntities@{updateEntities}}
-\index{updateEntities@{updateEntities}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{updateEntities()}{updateEntities()}}
-{\footnotesize\ttfamily void Scene\+::update\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_aebec25912861ccf28b75ccb35f69bcf5}\label{class_scene_aebec25912861ccf28b75ccb35f69bcf5}} 
+\index{Scene@{Scene}!entity\_map\_@{entity\_map\_}}
+\index{entity\_map\_@{entity\_map\_}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{entity\_map\_}{entity\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_entity}{Entity}}$\ast$$>$ Scene\+::entity\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Updates all of the entities. 
+List of the entities according to their names. 
 
 
 
-Definition at line 90 of file Scene.\+cpp.
+Definition at line 164 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_scene_a71feeabe831f8755af8adbef941188c4_icgraph}
-\end{center}
-\end{figure}
+\mbox{\Hypertarget{class_scene_aa9e136c3f22cf81289b7fd2795e3fce8}\label{class_scene_aa9e136c3f22cf81289b7fd2795e3fce8}} 
+\index{Scene@{Scene}!game\_@{game\_}}
+\index{game\_@{game\_}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{game\_}{game\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}$\ast$ Scene\+::game\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Member Data. 
+
+Reference to the game object 
+
+Definition at line 161 of file Scene.\+hpp.
+
+\mbox{\Hypertarget{class_scene_a1b823f2315b01999f9bac4834d14e545}\label{class_scene_a1b823f2315b01999f9bac4834d14e545}} 
+\index{Scene@{Scene}!name\_@{name\_}}
+\index{name\_@{name\_}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string Scene\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Name of the current\+\_\+scene. 
+
+
+
+Definition at line 162 of file Scene.\+hpp.
+
+\mbox{\Hypertarget{class_scene_ac30698bed57efcc02ce34ee8ca7fb89d}\label{class_scene_ac30698bed57efcc02ce34ee8ca7fb89d}} 
+\index{Scene@{Scene}!origin\_@{origin\_}}
+\index{origin\_@{origin\_}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{origin\_}{origin\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Scene\+::origin\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Origin of the current scene in the global space. 
+
+
+
+Definition at line 165 of file Scene.\+hpp.
+
+\mbox{\Hypertarget{class_scene_ab6170ebe0ff10d34bf3f711a40c271e3}\label{class_scene_ab6170ebe0ff10d34bf3f711a40c271e3}} 
+\index{Scene@{Scene}!size\_@{size\_}}
+\index{size\_@{size\_}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2u Scene\+::size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Size of the current scene. 
+
+
+
+Definition at line 166 of file Scene.\+hpp.
+
+\mbox{\Hypertarget{class_scene_ab7ee7749266a8b6d9bab5c6d131663b2}\label{class_scene_ab7ee7749266a8b6d9bab5c6d131663b2}} 
+\index{Scene@{Scene}!transition\_map\_@{transition\_map\_}}
+\index{transition\_map\_@{transition\_map\_}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{transition\_map\_}{transition\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_transition}{Transition}}$\ast$$>$ Scene\+::transition\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map of the Transitions. 
+
+
+
+Definition at line 163 of file Scene.\+hpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -1,0 +1,16 @@
+<map id="includes/Entity/CollidableEntity.hpp" name="includes/Entity/CollidableEntity.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="739,5,925,47"/>
+<area shape="rect" id="node2" href="$_entity_8hpp.html" title=" " alt="" coords="668,102,796,129"/>
+<area shape="rect" id="node14" href="$_collider_component_8hpp.html" title=" " alt="" coords="934,95,1159,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="939,273,1085,300"/>
+<area shape="rect" id="node4" href="$logger_8hpp.html" title=" " alt="" coords="229,191,320,218"/>
+<area shape="rect" id="node10" href="$_event_8hpp.html" title=" " alt="" coords="478,273,613,300"/>
+<area shape="rect" id="node11" href="$_scene_transition_event_8hpp.html" title=" " alt="" coords="422,184,615,225"/>
+<area shape="rect" id="node12" href="$_custom_event_8hpp.html" title=" " alt="" coords="639,191,825,218"/>
+<area shape="rect" id="node13" href="$_entity_sprite_component_8hpp.html" title=" " alt="" coords="899,184,1125,225"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,273,64,300"/>
+<area shape="rect" id="node6" title=" " alt="" coords="89,273,162,300"/>
+<area shape="rect" id="node7" title=" " alt="" coords="187,273,267,300"/>
+<area shape="rect" id="node8" title=" " alt="" coords="291,273,354,300"/>
+<area shape="rect" id="node9" title=" " alt="" coords="379,273,453,300"/>
+</map>

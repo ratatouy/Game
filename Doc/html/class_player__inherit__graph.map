@@ -1,4 +1,4 @@
 <map id="Player" name="Player">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,68,107"/>
+<area shape="rect" id="node1" title="class for the Player Entity" alt="" coords="5,80,68,107"/>
 <area shape="rect" id="node2" href="$class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="7,5,67,32"/>
 </map>

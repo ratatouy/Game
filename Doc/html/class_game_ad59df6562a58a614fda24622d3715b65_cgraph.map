@@ -1,0 +1,8 @@
+<map id="Game::Game" name="Game::Game">
+<area shape="rect" id="node1" title="Default Constructor." alt="" coords="5,56,113,83"/>
+<area shape="rect" id="node2" href="$class_event_handler.html#a258f0a9c3aca4da0b8bf7b994209434e" title="Get the EventHandler instance, creates it if it doesn&#39;t exist." alt="" coords="162,31,357,57"/>
+<area shape="rect" id="node5" href="$class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="161,81,357,108"/>
+<area shape="rect" id="node3" href="$class_event_handler.html#a432c13d95475e072978e594bf2f09171" title="Default Constructor." alt="" coords="407,5,614,32"/>
+<area shape="rect" id="node4" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="463,56,558,83"/>
+<area shape="rect" id="node6" href="$class_render_engine.html#a1afac0b7f77f6774506d8eab5f4a126a" title="Default Constructor." alt="" coords="405,107,616,133"/>
+</map>

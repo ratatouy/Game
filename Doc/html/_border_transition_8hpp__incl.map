@@ -1,7 +1,7 @@
 <map id="includes/Transitions/BasicTransitions/BorderTransition.hpp" name="includes/Transitions/BasicTransitions/BorderTransition.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,275,47"/>
 <area shape="rect" id="node2" href="$_transition_8hpp.html" title=" " alt="" coords="47,95,233,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="28,177,87,203"/>
-<area shape="rect" id="node4" href="$_transformable_component_8hpp.html" title=" " alt="" coords="110,169,335,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="149,259,296,285"/>
+<area shape="rect" id="node3" title=" " alt="" coords="44,177,103,203"/>
+<area shape="rect" id="node4" title=" " alt="" coords="141,259,288,285"/>
+<area shape="rect" id="node5" href="$_collider_component_8hpp.html" title=" " alt="" coords="177,169,402,211"/>
 </map>

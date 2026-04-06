@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('class_game.html',''); initResizable();
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_game-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Game Class Reference</div>  </div>
@@ -102,6 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
 <tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="class_game.html#ad59df6562a58a614fda24622d3715b65">More...</a><br /></td></tr>
 <tr class="separator:ad59df6562a58a614fda24622d3715b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d112ca6e0e55150d2fdbc704474530"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a> ()</td></tr>
+<tr class="memdesc:ae3d112ca6e0e55150d2fdbc704474530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">More...</a><br /></td></tr>
+<tr class="separator:ae3d112ca6e0e55150d2fdbc704474530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb28875d74d25fa9e0dcdbe37c6ad89c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#abb28875d74d25fa9e0dcdbe37c6ad89c">Game</a> (const <a class="el" href="class_game.html">Game</a> &amp;)=delete</td></tr>
 <tr class="memdesc:abb28875d74d25fa9e0dcdbe37c6ad89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete copy constructor to force singleton behavior.  <a href="class_game.html#abb28875d74d25fa9e0dcdbe37c6ad89c">More...</a><br /></td></tr>
 <tr class="separator:abb28875d74d25fa9e0dcdbe37c6ad89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,41 +116,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa0d7dcb0266efa4a0ceda5bec22f51a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>.  <a href="class_game.html#aa0d7dcb0266efa4a0ceda5bec22f51a5">More...</a><br /></td></tr>
 <tr class="separator:aa0d7dcb0266efa4a0ceda5bec22f51a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d79324af14500b9f509c19c57dc3ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aa2d79324af14500b9f509c19c57dc3ac">setRenderEngine</a> (<a class="el" href="class_render_engine.html">RenderEngine</a> *renderEngine)</td></tr>
-<tr class="memdesc:aa2d79324af14500b9f509c19c57dc3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="class_render_engine.html">RenderEngine</a>.  <a href="class_game.html#aa2d79324af14500b9f509c19c57dc3ac">More...</a><br /></td></tr>
+<tr class="memdesc:aa2d79324af14500b9f509c19c57dc3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>.  <a href="class_game.html#aa2d79324af14500b9f509c19c57dc3ac">More...</a><br /></td></tr>
 <tr class="separator:aa2d79324af14500b9f509c19c57dc3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c0a61f4714c860d9d21a9a121d3cc74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74">setActiveScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
 <tr class="memdesc:a6c0a61f4714c860d9d21a9a121d3cc74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74">More...</a><br /></td></tr>
 <tr class="separator:a6c0a61f4714c860d9d21a9a121d3cc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64f63701924c83c2506c3a506433be2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_event_handler.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae64f63701924c83c2506c3a506433be2">getEventHandler</a> () const</td></tr>
+<tr class="memdesc:ae64f63701924c83c2506c3a506433be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>.  <a href="class_game.html#ae64f63701924c83c2506c3a506433be2">More...</a><br /></td></tr>
+<tr class="separator:ae64f63701924c83c2506c3a506433be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a436fc8919d4d15983f076379acc00438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_event_handler.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a436fc8919d4d15983f076379acc00438">getEventHandler</a> ()</td></tr>
-<tr class="memdesc:a436fc8919d4d15983f076379acc00438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>.  <a href="class_game.html#a436fc8919d4d15983f076379acc00438">More...</a><br /></td></tr>
+<tr class="memdesc:a436fc8919d4d15983f076379acc00438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>.  <a href="class_game.html#a436fc8919d4d15983f076379acc00438">More...</a><br /></td></tr>
 <tr class="separator:a436fc8919d4d15983f076379acc00438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f25e2728d6e9a58fb2d770b574137cf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_render_engine.html">RenderEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a7f25e2728d6e9a58fb2d770b574137cf">getRenderEngine</a> () const</td></tr>
+<tr class="memdesc:a7f25e2728d6e9a58fb2d770b574137cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>.  <a href="class_game.html#a7f25e2728d6e9a58fb2d770b574137cf">More...</a><br /></td></tr>
+<tr class="separator:a7f25e2728d6e9a58fb2d770b574137cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab09c78ab7a7b725eb8aa4724688137d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_render_engine.html">RenderEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab09c78ab7a7b725eb8aa4724688137d1">getRenderEngine</a> ()</td></tr>
-<tr class="memdesc:ab09c78ab7a7b725eb8aa4724688137d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the <a class="el" href="class_render_engine.html">RenderEngine</a>.  <a href="class_game.html#ab09c78ab7a7b725eb8aa4724688137d1">More...</a><br /></td></tr>
+<tr class="memdesc:ab09c78ab7a7b725eb8aa4724688137d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>.  <a href="class_game.html#ab09c78ab7a7b725eb8aa4724688137d1">More...</a><br /></td></tr>
 <tr class="separator:ab09c78ab7a7b725eb8aa4724688137d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac17860938569d9f8e7bb1196f14ff8f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aac17860938569d9f8e7bb1196f14ff8f">getActiveScene</a> () const</td></tr>
+<tr class="memdesc:aac17860938569d9f8e7bb1196f14ff8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_game.html#aac17860938569d9f8e7bb1196f14ff8f">More...</a><br /></td></tr>
+<tr class="separator:aac17860938569d9f8e7bb1196f14ff8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad10ed0a88180bf31ea13340a5422816b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad10ed0a88180bf31ea13340a5422816b">getActiveScene</a> ()</td></tr>
-<tr class="memdesc:ad10ed0a88180bf31ea13340a5422816b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_game.html#ad10ed0a88180bf31ea13340a5422816b">More...</a><br /></td></tr>
+<tr class="memdesc:ad10ed0a88180bf31ea13340a5422816b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.  <a href="class_game.html#ad10ed0a88180bf31ea13340a5422816b">More...</a><br /></td></tr>
 <tr class="separator:ad10ed0a88180bf31ea13340a5422816b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae26066798d381cb711918f0b59958a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aae26066798d381cb711918f0b59958a5">throwEvent</a> (<a class="el" href="class_event.html">Event</a> *event)</td></tr>
-<tr class="memdesc:aae26066798d381cb711918f0b59958a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw an event to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>.  <a href="class_game.html#aae26066798d381cb711918f0b59958a5">More...</a><br /></td></tr>
-<tr class="separator:aae26066798d381cb711918f0b59958a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f1ab35677c36a6a470925d0993e292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a18f1ab35677c36a6a470925d0993e292">loadScene</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a18f1ab35677c36a6a470925d0993e292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19446234f66ae67091b3af08c7ba6869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a19446234f66ae67091b3af08c7ba6869">throwEvent</a> (std::unique_ptr&lt; <a class="el" href="class_event.html">Event</a> &gt; event)</td></tr>
+<tr class="memdesc:a19446234f66ae67091b3af08c7ba6869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw an event to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>.  <a href="class_game.html#a19446234f66ae67091b3af08c7ba6869">More...</a><br /></td></tr>
+<tr class="separator:a19446234f66ae67091b3af08c7ba6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac806107ae54ab10c874cb6cb1c0a5239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239">distributeEvent</a> (<a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *event)</td></tr>
+<tr class="memdesc:ac806107ae54ab10c874cb6cb1c0a5239"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> process distributor.  <a href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239">More...</a><br /></td></tr>
+<tr class="separator:ac806107ae54ab10c874cb6cb1c0a5239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a05b266e2a74d2e9f9a590c90e73ade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade">processEvent</a> (<a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *event)</td></tr>
-<tr class="memdesc:a2a05b266e2a74d2e9f9a590c90e73ade"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> process distributor.  <a href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade">More...</a><br /></td></tr>
+<tr class="memdesc:a2a05b266e2a74d2e9f9a590c90e73ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a>.  <a href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade">More...</a><br /></td></tr>
 <tr class="separator:a2a05b266e2a74d2e9f9a590c90e73ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f8625023fc606a99796cc1d69f618fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe">processEventFunc</a> (<a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *event)</td></tr>
-<tr class="memdesc:a0f8625023fc606a99796cc1d69f618fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a>.  <a href="class_game.html#a0f8625023fc606a99796cc1d69f618fe">More...</a><br /></td></tr>
-<tr class="separator:a0f8625023fc606a99796cc1d69f618fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873f6180f357664289bdad560c23216b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a873f6180f357664289bdad560c23216b">distributeEvent</a> (<a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *event)</td></tr>
+<tr class="memdesc:a873f6180f357664289bdad560c23216b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> process distributor.  <a href="class_game.html#a873f6180f357664289bdad560c23216b">More...</a><br /></td></tr>
+<tr class="separator:a873f6180f357664289bdad560c23216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8343a84bc062e46afc71a4d7aadc6351"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8343a84bc062e46afc71a4d7aadc6351">processEvent</a> (<a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *event)</td></tr>
-<tr class="memdesc:a8343a84bc062e46afc71a4d7aadc6351"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> process distributor.  <a href="class_game.html#a8343a84bc062e46afc71a4d7aadc6351">More...</a><br /></td></tr>
+<tr class="memdesc:a8343a84bc062e46afc71a4d7aadc6351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a>.  <a href="class_game.html#a8343a84bc062e46afc71a4d7aadc6351">More...</a><br /></td></tr>
 <tr class="separator:a8343a84bc062e46afc71a4d7aadc6351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f5148b5d6a33300719534ec9f0c75b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b">processEventFunc</a> (<a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *event)</td></tr>
-<tr class="memdesc:a00f5148b5d6a33300719534ec9f0c75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a>.  <a href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b">More...</a><br /></td></tr>
-<tr class="separator:a00f5148b5d6a33300719534ec9f0c75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a02c739ee585c35a164248c7f6900a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a31a02c739ee585c35a164248c7f6900a">distributeEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
+<tr class="memdesc:a31a02c739ee585c35a164248c7f6900a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_custom_event.html">CustomEvent</a> process distributor.  <a href="class_game.html#a31a02c739ee585c35a164248c7f6900a">More...</a><br /></td></tr>
+<tr class="separator:a31a02c739ee585c35a164248c7f6900a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01f802010c5c0265601d516341417480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a01f802010c5c0265601d516341417480">processEvent</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
-<tr class="memdesc:a01f802010c5c0265601d516341417480"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_custom_event.html">CustomEvent</a> process distributor.  <a href="class_game.html#a01f802010c5c0265601d516341417480">More...</a><br /></td></tr>
+<tr class="memdesc:a01f802010c5c0265601d516341417480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_custom_event.html">CustomEvent</a>.  <a href="class_game.html#a01f802010c5c0265601d516341417480">More...</a><br /></td></tr>
 <tr class="separator:a01f802010c5c0265601d516341417480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b9d7c51cc228b59e1272b27bded4bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a16b9d7c51cc228b59e1272b27bded4bf">processEventFunc</a> (<a class="el" href="class_custom_event.html">CustomEvent</a> *event)</td></tr>
-<tr class="memdesc:a16b9d7c51cc228b59e1272b27bded4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_custom_event.html">CustomEvent</a>.  <a href="class_game.html#a16b9d7c51cc228b59e1272b27bded4bf">More...</a><br /></td></tr>
-<tr class="separator:a16b9d7c51cc228b59e1272b27bded4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79df6376b332d63c9eca0dcee30305c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a79df6376b332d63c9eca0dcee30305c3">update</a> ()</td></tr>
 <tr class="memdesc:a79df6376b332d63c9eca0dcee30305c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the <a class="el" href="class_game.html" title="Main class of the game.">Game</a>.  <a href="class_game.html#a79df6376b332d63c9eca0dcee30305c3">More...</a><br /></td></tr>
 <tr class="separator:a79df6376b332d63c9eca0dcee30305c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,13 +170,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15ddd769261d923827a3cdf41499c843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472279479c423e4950f6eedf09bf8bf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5">addEntity</a> (<a class="el" href="class_entity.html">Entity</a> *entity)</td></tr>
 <tr class="separator:a472279479c423e4950f6eedf09bf8bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a19798a4f4c50037e1c5cd8c5d491fef9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9">getInstance</a> ()</td></tr>
+<tr class="memdesc:a19798a4f4c50037e1c5cd8c5d491fef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the instance of the <a class="el" href="class_game.html" title="Main class of the game.">Game</a> (Singleton), creates it if it doesn't exist.  <a href="class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9">More...</a><br /></td></tr>
+<tr class="separator:a19798a4f4c50037e1c5cd8c5d491fef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main class of the game. </p>
-<p>The game is a collection of scenes, with only one active at a time. It also is a singleton. It's role is to bring together the <a class="el" href="class_render_engine.html">RenderEngine</a>, <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a> and the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.</p>
+<p>The game is a collection of scenes, with only one active at a time. It also is a singleton. It's role is to bring together the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>, <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a> and the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>.</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Maybe find a way to not have to read the json file each time a scene needs to be loaded.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00034">34</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00035">35</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad59df6562a58a614fda24622d3715b65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&nbsp;</a></span>Game() <span class="overload">[1/2]</span></h2>
@@ -179,9 +200,62 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default Constructor. </p>
-<p>Throws an error if the <a class="el" href="class_game.html" title="Main class of the game.">Game</a> is already instantiated. </p>
+<p>Creates the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a> and the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>. Throws an error if the <a class="el" href="class_game.html" title="Main class of the game.">Game</a> is already instantiated. </p>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00011">11</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00012">12</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_ad59df6562a58a614fda24622d3715b65_cgraph.png" border="0" usemap="#aclass_game_ad59df6562a58a614fda24622d3715b65_cgraph" alt=""/></div>
+<map name="aclass_game_ad59df6562a58a614fda24622d3715b65_cgraph" id="aclass_game_ad59df6562a58a614fda24622d3715b65_cgraph">
+<area shape="rect" title="Default Constructor." alt="" coords="5,56,113,83"/>
+<area shape="rect" href="class_event_handler.html#a258f0a9c3aca4da0b8bf7b994209434e" title="Get the EventHandler instance, creates it if it doesn&#39;t exist." alt="" coords="162,31,357,57"/>
+<area shape="rect" href="class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="161,81,357,108"/>
+<area shape="rect" href="class_event_handler.html#a432c13d95475e072978e594bf2f09171" title="Default Constructor." alt="" coords="407,5,614,32"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="463,56,558,83"/>
+<area shape="rect" href="class_render_engine.html#a1afac0b7f77f6774506d8eab5f4a126a" title="Default Constructor." alt="" coords="405,107,616,133"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_ad59df6562a58a614fda24622d3715b65_icgraph.png" border="0" usemap="#aclass_game_ad59df6562a58a614fda24622d3715b65_icgraph" alt=""/></div>
+<map name="aclass_game_ad59df6562a58a614fda24622d3715b65_icgraph" id="aclass_game_ad59df6562a58a614fda24622d3715b65_icgraph">
+<area shape="rect" title="Default Constructor." alt="" coords="301,5,409,32"/>
+<area shape="rect" href="class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9" title="Get the instance of the Game (Singleton), creates it if it doesn&#39;t exist." alt="" coords="108,5,253,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3d112ca6e0e55150d2fdbc704474530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d112ca6e0e55150d2fdbc704474530">&#9670;&nbsp;</a></span>~Game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Game::~Game </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00029">29</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_ae3d112ca6e0e55150d2fdbc704474530_cgraph.png" border="0" usemap="#aclass_game_ae3d112ca6e0e55150d2fdbc704474530_cgraph" alt=""/></div>
+<map name="aclass_game_ae3d112ca6e0e55150d2fdbc704474530_cgraph" id="aclass_game_ae3d112ca6e0e55150d2fdbc704474530_cgraph">
+<area shape="rect" title="Destructor." alt="" coords="5,5,124,32"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="172,5,267,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -229,22 +303,21 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section warning"><dt>Warning</dt><dd>DON'T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>DON'T FORGET TO DELETE THIS TION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>delete this</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00068">68</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00107">107</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a472279479c423e4950f6eedf09bf8bf5_cgraph.png" border="0" usemap="#aclass_game_a472279479c423e4950f6eedf09bf8bf5_cgraph" alt=""/></div>
 <map name="aclass_game_a472279479c423e4950f6eedf09bf8bf5_cgraph" id="aclass_game_a472279479c423e4950f6eedf09bf8bf5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,107,136,133"/>
-<area shape="rect" href="class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="184,5,391,32"/>
+<area shape="rect" title=" " alt="" coords="5,81,136,108"/>
+<area shape="rect" href="class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="184,5,391,32"/>
 <area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="222,56,353,83"/>
 <area shape="rect" href="class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="439,107,565,133"/>
-<area shape="rect" href="class_entity.html#a945edcaab37c678637655648dda23694" title="Get the EntitySprite Component of the entity." alt="" coords="205,157,369,184"/>
-<area shape="rect" href="class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="201,209,374,250"/>
-<area shape="rect" href="class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="455,5,549,32"/>
+<area shape="rect" href="class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e" title="Returns a const pointer to the map containing all the sprites." alt="" coords="201,158,374,199"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="455,5,549,32"/>
 <area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="439,56,565,83"/>
 </map>
 </div>
@@ -253,16 +326,173 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a472279479c423e4950f6eedf09bf8bf5_icgraph.png" border="0" usemap="#aclass_game_a472279479c423e4950f6eedf09bf8bf5_icgraph" alt=""/></div>
 <map name="aclass_game_a472279479c423e4950f6eedf09bf8bf5_icgraph" id="aclass_game_a472279479c423e4950f6eedf09bf8bf5_icgraph">
-<area shape="rect" title=" " alt="" coords="240,31,371,57"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,5,126,32"/>
-<area shape="rect" href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title="Process a SpawnEntityEvent." alt="" coords="5,56,192,83"/>
+<area shape="rect" title=" " alt="" coords="565,9,696,36"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,34,60,61"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="361,34,517,61"/>
+<area shape="rect" href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,34,295,61"/>
+<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,85,313,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a31a02c739ee585c35a164248c7f6900a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a02c739ee585c35a164248c7f6900a">&#9670;&nbsp;</a></span>distributeEvent() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::distributeEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_custom_event.html">CustomEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_custom_event.html">CustomEvent</a> process distributor. </p>
+<p>We don't know what to do with the <a class="el" href="class_custom_event.html">CustomEvent</a> so we distribute it to all of the objects : </p><ul>
+<li>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00085">85</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a31a02c739ee585c35a164248c7f6900a_cgraph.png" border="0" usemap="#aclass_game_a31a02c739ee585c35a164248c7f6900a_cgraph" alt=""/></div>
+<map name="aclass_game_a31a02c739ee585c35a164248c7f6900a_cgraph" id="aclass_game_a31a02c739ee585c35a164248c7f6900a_cgraph">
+<area shape="rect" title="CustomEvent process distributor." alt="" coords="5,31,173,57"/>
+<area shape="rect" href="class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6" title="CustomEvent process distributor." alt="" coords="221,56,389,83"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="468,5,563,32"/>
+<area shape="rect" href="class_scene.html#a26412fe92865c31bffa33941c0b22dab" title="Process a CustomEvent." alt="" coords="437,56,593,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac806107ae54ab10c874cb6cb1c0a5239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac806107ae54ab10c874cb6cb1c0a5239">&#9670;&nbsp;</a></span>distributeEvent() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::distributeEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> process distributor. </p>
+<p>Distributes the <a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> to the objects that need it : </p><ul>
+<li>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> (will unload it self) </li>
+<li>this ( <dl class="section see"><dt>See also</dt><dd>processEventdistribute(SceneTransitionEvent* event) ) It unloads the scene and <em>then</em> loads the new one.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00052">52</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_ac806107ae54ab10c874cb6cb1c0a5239_cgraph.png" border="0" usemap="#aclass_game_ac806107ae54ab10c874cb6cb1c0a5239_cgraph" alt=""/></div>
+<map name="aclass_game_ac806107ae54ab10c874cb6cb1c0a5239_cgraph" id="aclass_game_ac806107ae54ab10c874cb6cb1c0a5239_cgraph">
+<area shape="rect" title="SceneTransitionEvent process distributor." alt="" coords="5,152,173,178"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="938,304,1033,330"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="221,278,377,305"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="445,497,575,524"/>
+<area shape="rect" href="class_render_engine.html#a81c134bae1bd7c5a59a95199085c1ea8" title=" " alt="" coords="425,329,595,356"/>
+<area shape="rect" href="class_scene.html#aefd8a138c9d7c93932baa26014ec3617" title="Extracts an entity from the scene." alt="" coords="433,380,587,406"/>
+<area shape="rect" href="class_scene_transition_event.html#a05df57ec22c7ac9eebb738100cc46cab" title=" " alt="" coords="429,136,591,178"/>
+<area shape="rect" href="class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="442,202,578,229"/>
+<area shape="rect" href="class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="643,497,849,524"/>
+<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="681,548,811,574"/>
+<area shape="rect" href="class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="922,598,1049,625"/>
+<area shape="rect" href="class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e" title="Returns a const pointer to the map containing all the sprites." alt="" coords="659,431,833,472"/>
+<area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="922,548,1049,574"/>
+<area shape="rect" href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="676,76,816,102"/>
+<area shape="rect" href="class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title="Set the active Scene." alt="" coords="661,177,831,204"/>
+<area shape="rect" href="class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="682,228,810,254"/>
+<area shape="rect" href="namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed" title=" " alt="" coords="897,76,1073,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a873f6180f357664289bdad560c23216b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873f6180f357664289bdad560c23216b">&#9670;&nbsp;</a></span>distributeEvent() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::distributeEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> process distributor. </p>
+<p>Distributes the <a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> to the objects that need it : </p><ul>
+<li>this </li>
+<li>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00074">74</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a873f6180f357664289bdad560c23216b_cgraph.png" border="0" usemap="#aclass_game_a873f6180f357664289bdad560c23216b_cgraph" alt=""/></div>
+<map name="aclass_game_a873f6180f357664289bdad560c23216b_cgraph" id="aclass_game_a873f6180f357664289bdad560c23216b_cgraph">
+<area shape="rect" title="SpawnEntityEvent process distributor." alt="" coords="5,152,173,178"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="938,304,1033,330"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="221,278,377,305"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="445,497,575,524"/>
+<area shape="rect" href="class_render_engine.html#a81c134bae1bd7c5a59a95199085c1ea8" title=" " alt="" coords="425,329,595,356"/>
+<area shape="rect" href="class_scene.html#aefd8a138c9d7c93932baa26014ec3617" title="Extracts an entity from the scene." alt="" coords="433,380,587,406"/>
+<area shape="rect" href="class_scene_transition_event.html#a05df57ec22c7ac9eebb738100cc46cab" title=" " alt="" coords="429,136,591,178"/>
+<area shape="rect" href="class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="442,202,578,229"/>
+<area shape="rect" href="class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="643,497,849,524"/>
+<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="681,548,811,574"/>
+<area shape="rect" href="class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="922,598,1049,625"/>
+<area shape="rect" href="class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e" title="Returns a const pointer to the map containing all the sprites." alt="" coords="659,431,833,472"/>
+<area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="922,548,1049,574"/>
+<area shape="rect" href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="676,76,816,102"/>
+<area shape="rect" href="class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title="Set the active Scene." alt="" coords="661,177,831,204"/>
+<area shape="rect" href="class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="682,228,810,254"/>
+<area shape="rect" href="namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed" title=" " alt="" coords="897,76,1073,102"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="ad10ed0a88180bf31ea13340a5422816b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad10ed0a88180bf31ea13340a5422816b">&#9670;&nbsp;</a></span>getActiveScene()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad10ed0a88180bf31ea13340a5422816b">&#9670;&nbsp;</a></span>getActiveScene() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,16 +514,45 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a non-const pointer to the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00114">114</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aac17860938569d9f8e7bb1196f14ff8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac17860938569d9f8e7bb1196f14ff8f">&#9670;&nbsp;</a></span>getActiveScene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_scene.html">Scene</a>* Game::getActiveScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Get a reference to the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
-<p>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> pointer is NOT a constant, so it can be used and modified</p>
+<p>This is the const version</p>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00093">93</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00113">113</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_game_ad10ed0a88180bf31ea13340a5422816b_icgraph.png" border="0" usemap="#aclass_game_ad10ed0a88180bf31ea13340a5422816b_icgraph" alt=""/></div>
-<map name="aclass_game_ad10ed0a88180bf31ea13340a5422816b_icgraph" id="aclass_game_ad10ed0a88180bf31ea13340a5422816b_icgraph">
+<div class="center"><img src="class_game_aac17860938569d9f8e7bb1196f14ff8f_icgraph.png" border="0" usemap="#aclass_game_aac17860938569d9f8e7bb1196f14ff8f_icgraph" alt=""/></div>
+<map name="aclass_game_aac17860938569d9f8e7bb1196f14ff8f_icgraph" id="aclass_game_aac17860938569d9f8e7bb1196f14ff8f_icgraph">
 <area shape="rect" title="Get a reference to the active Scene." alt="" coords="108,5,279,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
@@ -302,7 +561,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a436fc8919d4d15983f076379acc00438"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a436fc8919d4d15983f076379acc00438">&#9670;&nbsp;</a></span>getEventHandler()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a436fc8919d4d15983f076379acc00438">&#9670;&nbsp;</a></span>getEventHandler() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,16 +583,45 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a non-const pointer to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00094">94</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae64f63701924c83c2506c3a506433be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64f63701924c83c2506c3a506433be2">&#9670;&nbsp;</a></span>getEventHandler() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_event_handler.html">EventHandler</a>* Game::getEventHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Get a reference to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>. </p>
 <p>The <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a> pointer is NOT a constant, so it can be used and modified</p>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00075">75</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00093">93</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_game_a436fc8919d4d15983f076379acc00438_icgraph.png" border="0" usemap="#aclass_game_a436fc8919d4d15983f076379acc00438_icgraph" alt=""/></div>
-<map name="aclass_game_a436fc8919d4d15983f076379acc00438_icgraph" id="aclass_game_a436fc8919d4d15983f076379acc00438_icgraph">
+<div class="center"><img src="class_game_ae64f63701924c83c2506c3a506433be2_icgraph.png" border="0" usemap="#aclass_game_ae64f63701924c83c2506c3a506433be2_icgraph" alt=""/></div>
+<map name="aclass_game_ae64f63701924c83c2506c3a506433be2_icgraph" id="aclass_game_ae64f63701924c83c2506c3a506433be2_icgraph">
 <area shape="rect" title="Get a reference to the EventHandler." alt="" coords="108,5,287,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
@@ -341,8 +629,61 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a19798a4f4c50037e1c5cd8c5d491fef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19798a4f4c50037e1c5cd8c5d491fef9">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game.html">Game</a> * Game::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the instance of the <a class="el" href="class_game.html" title="Main class of the game.">Game</a> (Singleton), creates it if it doesn't exist. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the <a class="el" href="class_game.html" title="Main class of the game.">Game</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00018">18</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a19798a4f4c50037e1c5cd8c5d491fef9_cgraph.png" border="0" usemap="#aclass_game_a19798a4f4c50037e1c5cd8c5d491fef9_cgraph" alt=""/></div>
+<map name="aclass_game_a19798a4f4c50037e1c5cd8c5d491fef9_cgraph" id="aclass_game_a19798a4f4c50037e1c5cd8c5d491fef9_cgraph">
+<area shape="rect" title="Get the instance of the Game (Singleton), creates it if it doesn&#39;t exist." alt="" coords="5,31,151,57"/>
+<area shape="rect" href="class_game.html#ad59df6562a58a614fda24622d3715b65" title="Default Constructor." alt="" coords="199,56,307,83"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="657,5,751,32"/>
+<area shape="rect" href="class_event_handler.html#a258f0a9c3aca4da0b8bf7b994209434e" title="Get the EventHandler instance, creates it if it doesn&#39;t exist." alt="" coords="355,107,550,133"/>
+<area shape="rect" href="class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="355,56,551,83"/>
+<area shape="rect" href="class_event_handler.html#a432c13d95475e072978e594bf2f09171" title="Default Constructor." alt="" coords="601,107,807,133"/>
+<area shape="rect" href="class_render_engine.html#a1afac0b7f77f6774506d8eab5f4a126a" title="Default Constructor." alt="" coords="599,56,809,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a19798a4f4c50037e1c5cd8c5d491fef9_icgraph.png" border="0" usemap="#aclass_game_a19798a4f4c50037e1c5cd8c5d491fef9_icgraph" alt=""/></div>
+<map name="aclass_game_a19798a4f4c50037e1c5cd8c5d491fef9_icgraph" id="aclass_game_a19798a4f4c50037e1c5cd8c5d491fef9_icgraph">
+<area shape="rect" title="Get the instance of the Game (Singleton), creates it if it doesn&#39;t exist." alt="" coords="108,5,253,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab09c78ab7a7b725eb8aa4724688137d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab09c78ab7a7b725eb8aa4724688137d1">&#9670;&nbsp;</a></span>getRenderEngine()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09c78ab7a7b725eb8aa4724688137d1">&#9670;&nbsp;</a></span>getRenderEngine() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,18 +705,92 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get a reference to the <a class="el" href="class_render_engine.html">RenderEngine</a>. </p>
-<p>The <a class="el" href="class_render_engine.html">RenderEngine</a> pointer is NOT a constant, so it can be used and modified</p>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the <a class="el" href="class_render_engine.html">RenderEngine</a> </dd></dl>
+<p>Returns a non-const pointer to the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00084">84</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00104">104</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f25e2728d6e9a58fb2d770b574137cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f25e2728d6e9a58fb2d770b574137cf">&#9670;&nbsp;</a></span>getRenderEngine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_render_engine.html">RenderEngine</a>* Game::getRenderEngine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a reference to the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>. </p>
+<p>This is the const version</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00103">103</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_game_ab09c78ab7a7b725eb8aa4724688137d1_icgraph.png" border="0" usemap="#aclass_game_ab09c78ab7a7b725eb8aa4724688137d1_icgraph" alt=""/></div>
-<map name="aclass_game_ab09c78ab7a7b725eb8aa4724688137d1_icgraph" id="aclass_game_ab09c78ab7a7b725eb8aa4724688137d1_icgraph">
+<div class="center"><img src="class_game_a7f25e2728d6e9a58fb2d770b574137cf_icgraph.png" border="0" usemap="#aclass_game_a7f25e2728d6e9a58fb2d770b574137cf_icgraph" alt=""/></div>
+<map name="aclass_game_a7f25e2728d6e9a58fb2d770b574137cf_icgraph" id="aclass_game_a7f25e2728d6e9a58fb2d770b574137cf_icgraph">
 <area shape="rect" title="Get a reference to the RenderEngine." alt="" coords="108,5,288,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18f1ab35677c36a6a470925d0993e292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f1ab35677c36a6a470925d0993e292">&#9670;&nbsp;</a></span>loadScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::loadScene </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00038">38</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a18f1ab35677c36a6a470925d0993e292_cgraph.png" border="0" usemap="#aclass_game_a18f1ab35677c36a6a470925d0993e292_cgraph" alt=""/></div>
+<map name="aclass_game_a18f1ab35677c36a6a470925d0993e292_cgraph" id="aclass_game_a18f1ab35677c36a6a470925d0993e292_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,141,108"/>
+<area shape="rect" href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="204,5,344,32"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="447,56,542,83"/>
+<area shape="rect" href="class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title="Set the active Scene." alt="" coords="189,107,359,133"/>
+<area shape="rect" href="class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="210,157,338,184"/>
+<area shape="rect" href="namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed" title=" " alt="" coords="407,5,583,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_a18f1ab35677c36a6a470925d0993e292_icgraph.png" border="0" usemap="#aclass_game_a18f1ab35677c36a6a470925d0993e292_icgraph" alt=""/></div>
+<map name="aclass_game_a18f1ab35677c36a6a470925d0993e292_icgraph" id="aclass_game_a18f1ab35677c36a6a470925d0993e292_icgraph">
+<area shape="rect" title=" " alt="" coords="565,9,701,36"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,34,60,61"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="361,34,517,61"/>
+<area shape="rect" href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,34,295,61"/>
+<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,85,313,112"/>
 </map>
 </div>
 
@@ -425,10 +840,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_custom_event.html">CustomEvent</a> process distributor. </p>
-<p>We don't know what to do with the <a class="el" href="class_custom_event.html">CustomEvent</a> so we distribute it to all of the objects : </p><ul>
-<li>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></li>
-</ul>
+<p>Process a <a class="el" href="class_custom_event.html">CustomEvent</a>. </p>
+<p>What it does depends on the type of the <a class="el" href="class_custom_event.html">CustomEvent</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
@@ -436,17 +849,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00048">48</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_a01f802010c5c0265601d516341417480_cgraph.png" border="0" usemap="#aclass_game_a01f802010c5c0265601d516341417480_cgraph" alt=""/></div>
-<map name="aclass_game_a01f802010c5c0265601d516341417480_cgraph" id="aclass_game_a01f802010c5c0265601d516341417480_cgraph">
-<area shape="rect" title="CustomEvent process distributor." alt="" coords="5,5,161,32"/>
-<area shape="rect" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="209,5,365,32"/>
-<area shape="rect" href="class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="413,5,600,32"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00091">91</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -466,30 +869,37 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> process distributor. </p>
-<p>Distributes the <a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> to the objects that need it : </p><ul>
-<li>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a> (will unload it self) </li>
-<li>this ( <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent.">processEventFunc(SceneTransitionEvent* event)</a> ) It unloads the scene and <em>then</em> loads the new one.</dd></dl>
+<p>Process a <a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a>. </p>
+<p>Loads a new <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00026">26</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00058">58</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph.png" border="0" usemap="#aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph" alt=""/></div>
 <map name="aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph" id="aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph">
-<area shape="rect" title="SceneTransitionEvent process distributor." alt="" coords="5,31,161,57"/>
-<area shape="rect" href="class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="225,5,381,32"/>
-<area shape="rect" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="209,56,396,83"/>
-<area shape="rect" href="class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="444,5,631,32"/>
-<area shape="rect" href="class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="490,56,585,83"/>
+<area shape="rect" title="Process a SceneTransitionEvent." alt="" coords="5,300,161,327"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="229,115,359,141"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="722,275,817,301"/>
+<area shape="rect" href="class_render_engine.html#a81c134bae1bd7c5a59a95199085c1ea8" title=" " alt="" coords="209,275,379,301"/>
+<area shape="rect" href="class_scene.html#aefd8a138c9d7c93932baa26014ec3617" title="Extracts an entity from the scene." alt="" coords="217,325,371,352"/>
+<area shape="rect" href="class_scene_transition_event.html#a05df57ec22c7ac9eebb738100cc46cab" title=" " alt="" coords="213,377,375,418"/>
+<area shape="rect" href="class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="226,443,362,469"/>
+<area shape="rect" href="class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="427,173,633,200"/>
+<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="465,56,595,83"/>
+<area shape="rect" href="class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="706,5,833,32"/>
+<area shape="rect" href="class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e" title="Returns a const pointer to the map containing all the sprites." alt="" coords="443,107,617,149"/>
+<area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="706,56,833,83"/>
+<area shape="rect" href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="460,528,600,555"/>
+<area shape="rect" href="class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title="Set the active Scene." alt="" coords="445,427,615,453"/>
+<area shape="rect" href="class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="466,477,594,504"/>
+<area shape="rect" href="namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed" title=" " alt="" coords="681,528,857,555"/>
 </map>
 </div>
 <div class="dynheader">
@@ -497,9 +907,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph.png" border="0" usemap="#aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph" alt=""/></div>
 <map name="aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph" id="aclass_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph">
-<area shape="rect" title="SceneTransitionEvent process distributor." alt="" coords="361,5,517,32"/>
-<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,5,313,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Process a SceneTransitionEvent." alt="" coords="361,31,517,57"/>
+<area shape="rect" href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,5,295,32"/>
+<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,56,313,83"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
 </map>
 </div>
 
@@ -521,126 +932,6 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> process distributor. </p>
-<p>Distributes the <a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> to the objects that need it : </p><ul>
-<li>this </li>
-<li>The <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00037">37</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph.png" border="0" usemap="#aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph" alt=""/></div>
-<map name="aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph" id="aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph">
-<area shape="rect" title="SpawnEntityEvent process distributor." alt="" coords="5,5,161,32"/>
-<area shape="rect" href="class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="444,5,539,32"/>
-<area shape="rect" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="209,31,396,57"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a16b9d7c51cc228b59e1272b27bded4bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16b9d7c51cc228b59e1272b27bded4bf">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Game::processEventFunc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_custom_event.html">CustomEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process a <a class="el" href="class_custom_event.html">CustomEvent</a>. </p>
-<p>What it does depends on the type of the <a class="el" href="class_custom_event.html">CustomEvent</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00052">52</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a0f8625023fc606a99796cc1d69f618fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f8625023fc606a99796cc1d69f618fe">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Game::processEventFunc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process a <a class="el" href="class_scene_transition_event.html">SceneTransitionEvent</a>. </p>
-<p>Loads a new <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>Reference to the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00031">31</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_a0f8625023fc606a99796cc1d69f618fe_cgraph.png" border="0" usemap="#aclass_game_a0f8625023fc606a99796cc1d69f618fe_cgraph" alt=""/></div>
-<map name="aclass_game_a0f8625023fc606a99796cc1d69f618fe_cgraph" id="aclass_game_a0f8625023fc606a99796cc1d69f618fe_cgraph">
-<area shape="rect" title="Process a SceneTransitionEvent." alt="" coords="5,5,192,32"/>
-<area shape="rect" href="class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="240,5,335,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_a0f8625023fc606a99796cc1d69f618fe_icgraph.png" border="0" usemap="#aclass_game_a0f8625023fc606a99796cc1d69f618fe_icgraph" alt=""/></div>
-<map name="aclass_game_a0f8625023fc606a99796cc1d69f618fe_icgraph" id="aclass_game_a0f8625023fc606a99796cc1d69f618fe_icgraph">
-<area shape="rect" title="Process a SceneTransitionEvent." alt="" coords="565,5,752,32"/>
-<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="SceneTransitionEvent process distributor." alt="" coords="361,5,517,32"/>
-<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,5,313,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a00f5148b5d6a33300719534ec9f0c75b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00f5148b5d6a33300719534ec9f0c75b">&#9670;&nbsp;</a></span>processEventFunc() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Game::processEventFunc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a> *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 <p>Process a <a class="el" href="class_spawn_entity_event.html">SpawnEntityEvent</a>. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>this is useless bc the event is processed by the scene. But I'm not sure so I'm putting it here.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -650,22 +941,21 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00042">42</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00079">79</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph.png" border="0" usemap="#aclass_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph" alt=""/></div>
-<map name="aclass_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph" id="aclass_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph">
-<area shape="rect" title="Process a SpawnEntityEvent." alt="" coords="5,102,192,128"/>
-<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="278,102,409,128"/>
-<area shape="rect" href="class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="765,26,860,52"/>
-<area shape="rect" href="class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af" title=" " alt="" coords="240,152,447,179"/>
-<area shape="rect" href="class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="495,26,701,52"/>
-<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="533,76,663,103"/>
-<area shape="rect" href="class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="749,127,876,154"/>
-<area shape="rect" href="class_entity.html#a945edcaab37c678637655648dda23694" title="Get the EntitySprite Component of the entity." alt="" coords="516,178,680,204"/>
-<area shape="rect" href="class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe" title=" " alt="" coords="511,229,685,270"/>
-<area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="749,76,876,103"/>
+<div class="center"><img src="class_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph.png" border="0" usemap="#aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph" alt=""/></div>
+<map name="aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph" id="aclass_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph">
+<area shape="rect" title="Process a SpawnEntityEvent." alt="" coords="5,109,161,136"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="247,109,378,136"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="735,109,829,136"/>
+<area shape="rect" href="class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af" title=" " alt="" coords="209,160,416,187"/>
+<area shape="rect" href="class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="464,109,671,136"/>
+<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="502,160,633,187"/>
+<area shape="rect" href="class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="719,211,845,237"/>
+<area shape="rect" href="class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e" title="Returns a const pointer to the map containing all the sprites." alt="" coords="481,43,654,85"/>
+<area shape="rect" href="class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="719,160,845,187"/>
 </map>
 </div>
 
@@ -689,14 +979,14 @@ Here is the call graph for this function:</div>
 <p>Render the <a class="el" href="class_game.html" title="Main class of the game.">Game</a>. </p>
 <p>Renders the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00062">62</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00101">101</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a15ddd769261d923827a3cdf41499c843_cgraph.png" border="0" usemap="#aclass_game_a15ddd769261d923827a3cdf41499c843_cgraph" alt=""/></div>
 <map name="aclass_game_a15ddd769261d923827a3cdf41499c843_cgraph" id="aclass_game_a15ddd769261d923827a3cdf41499c843_cgraph">
 <area shape="rect" title="Render the Game." alt="" coords="5,5,116,32"/>
-<area shape="rect" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb" title=" " alt="" coords="164,5,327,32"/>
+<area shape="rect" href="class_render_engine.html#a53a4c17a370573bc19c797e4e0f966bb" title="Renders the Drawables &amp; ShaderDrawables." alt="" coords="164,5,327,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -743,14 +1033,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00066">66</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00084">84</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph.png" border="0" usemap="#aclass_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph" alt=""/></div>
 <map name="aclass_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph" id="aclass_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph">
-<area shape="rect" title="Set the active Scene." alt="" coords="108,5,277,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Set the active Scene." alt="" coords="749,9,919,36"/>
+<area shape="rect" href="class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="565,9,701,36"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,34,60,61"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="361,34,517,61"/>
+<area shape="rect" href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,34,295,61"/>
+<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,85,313,112"/>
 </map>
 </div>
 
@@ -781,6 +1075,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated (eventHandler is set in the constructor)</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">eventHandler</td><td>Reference to the <a class="el" href="class_event_handler.html" title="Manages the event queue.">EventHandler</a> </td></tr>
@@ -788,16 +1083,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00052">52</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5_icgraph.png" border="0" usemap="#aclass_game_aa0d7dcb0266efa4a0ceda5bec22f51a5_icgraph" alt=""/></div>
-<map name="aclass_game_aa0d7dcb0266efa4a0ceda5bec22f51a5_icgraph" id="aclass_game_aa0d7dcb0266efa4a0ceda5bec22f51a5_icgraph">
-<area shape="rect" title="Set the EventHandler." alt="" coords="108,5,285,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00068">68</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 
 </div>
 </div>
@@ -825,29 +1111,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the <a class="el" href="class_render_engine.html">RenderEngine</a>. </p>
+<p>Set the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated (renderEngine is set in the constructor)</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">renderEngine</td><td>Reference to the <a class="el" href="class_render_engine.html">RenderEngine</a> </td></tr>
+    <tr><td class="paramname">renderEngine</td><td>Reference to the <a class="el" href="class_render_engine.html" title="Manages Shaders and the RenderWindow.">RenderEngine</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00059">59</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_game_aa2d79324af14500b9f509c19c57dc3ac_icgraph.png" border="0" usemap="#aclass_game_aa2d79324af14500b9f509c19c57dc3ac_icgraph" alt=""/></div>
-<map name="aclass_game_aa2d79324af14500b9f509c19c57dc3ac_icgraph" id="aclass_game_aa2d79324af14500b9f509c19c57dc3ac_icgraph">
-<area shape="rect" title="Set the RenderEngine." alt="" coords="108,5,287,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="_game_8hpp_source.html#l00077">77</a> of file <a class="el" href="_game_8hpp_source.html">Game.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aae26066798d381cb711918f0b59958a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae26066798d381cb711918f0b59958a5">&#9670;&nbsp;</a></span>throwEvent()</h2>
+<a id="a19446234f66ae67091b3af08c7ba6869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19446234f66ae67091b3af08c7ba6869">&#9670;&nbsp;</a></span>throwEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -855,7 +1133,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void Game::throwEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_event.html">Event</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_event.html">Event</a> &gt;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -871,24 +1149,24 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00019">19</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00045">45</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_game_aae26066798d381cb711918f0b59958a5_cgraph.png" border="0" usemap="#aclass_game_aae26066798d381cb711918f0b59958a5_cgraph" alt=""/></div>
-<map name="aclass_game_aae26066798d381cb711918f0b59958a5_cgraph" id="aclass_game_aae26066798d381cb711918f0b59958a5_cgraph">
+<div class="center"><img src="class_game_a19446234f66ae67091b3af08c7ba6869_cgraph.png" border="0" usemap="#aclass_game_a19446234f66ae67091b3af08c7ba6869_cgraph" alt=""/></div>
+<map name="aclass_game_a19446234f66ae67091b3af08c7ba6869_cgraph" id="aclass_game_a19446234f66ae67091b3af08c7ba6869_cgraph">
 <area shape="rect" title="Throw an event to the EventHandler." alt="" coords="5,31,148,57"/>
-<area shape="rect" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title="Add an event to the queue." alt="" coords="196,5,375,32"/>
-<area shape="rect" href="class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="423,31,517,57"/>
+<area shape="rect" href="class_event_handler.html#aea66f9f4c785d3bb47fe6e9b10e93193" title="Add an event to the queue." alt="" coords="196,5,375,32"/>
+<area shape="rect" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="423,31,517,57"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_game_aae26066798d381cb711918f0b59958a5_icgraph.png" border="0" usemap="#aclass_game_aae26066798d381cb711918f0b59958a5_icgraph" alt=""/></div>
-<map name="aclass_game_aae26066798d381cb711918f0b59958a5_icgraph" id="aclass_game_aae26066798d381cb711918f0b59958a5_icgraph">
+<div class="center"><img src="class_game_a19446234f66ae67091b3af08c7ba6869_icgraph.png" border="0" usemap="#aclass_game_a19446234f66ae67091b3af08c7ba6869_icgraph" alt=""/></div>
+<map name="aclass_game_a19446234f66ae67091b3af08c7ba6869_icgraph" id="aclass_game_a19446234f66ae67091b3af08c7ba6869_icgraph">
 <area shape="rect" title="Throw an event to the EventHandler." alt="" coords="517,31,660,57"/>
-<area shape="rect" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="327,31,469,57"/>
+<area shape="rect" href="class_scene.html#a75990ee1152181d4843dfc8f2e5cff90" title="Throws the event to the parent game object." alt="" coords="327,31,469,57"/>
 <area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="137,5,249,32"/>
 <area shape="rect" href="class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="108,56,279,83"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
@@ -915,15 +1193,14 @@ Here is the caller graph for this function:</div>
 <p>Update the <a class="el" href="class_game.html" title="Main class of the game.">Game</a>. </p>
 <p>Updates the active <a class="el" href="class_scene.html" title="Base class for all Scenes.">Scene</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00056">56</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_8cpp_source.html#l00095">95</a> of file <a class="el" href="_game_8cpp_source.html">Game.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_a79df6376b332d63c9eca0dcee30305c3_cgraph.png" border="0" usemap="#aclass_game_a79df6376b332d63c9eca0dcee30305c3_cgraph" alt=""/></div>
 <map name="aclass_game_a79df6376b332d63c9eca0dcee30305c3_cgraph" id="aclass_game_a79df6376b332d63c9eca0dcee30305c3_cgraph">
 <area shape="rect" title="Update the Game." alt="" coords="5,5,120,32"/>
-<area shape="rect" href="class_scene.html#aa24c7e636c10e4e42650c1374b90bb80" title="Updates the scene." alt="" coords="168,5,283,32"/>
-<area shape="rect" href="class_scene.html#a71feeabe831f8755af8adbef941188c4" title="Updates all of the entities." alt="" coords="331,5,493,32"/>
+<area shape="rect" href="class_scene.html#a7faff47f5c1b1ebc986f768c9b9732ec" title="Updates the scene." alt="" coords="168,5,283,32"/>
 </map>
 </div>
 <div class="dynheader">

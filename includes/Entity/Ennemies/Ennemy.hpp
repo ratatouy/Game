@@ -6,25 +6,27 @@
 ////////////////////////////////////////////////////////////
 #include <iostream>
 
-#include "Entity/Entity.hpp"
+#include "Entity/CollidableEntity.hpp"
 #include "Events/Event.hpp"
 #include "Events/CustomEvents/HitEvent.hpp"
 
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 
-class Ennemy : public Entity {
+class Ennemy : public CollidableEntity {
 
 private:
     int health_;
 
 
 public:
-    Ennemy(const char* name, int health = 7) : Entity(name), health_(health) {}
-    Ennemy(const char* name, sf::Transformable* transform, int health = 7) : Entity(name, transform), health_(health) {};
-    Ennemy(const char* name, sf::Transformable* transform, EntitySpriteComponent* sprites, int health = 7) : Entity(name, transform, sprites), health_(health) {};
+    Ennemy(const char* name, int health = 7) : CollidableEntity(name), health_(health) {}
+    Ennemy(const char* name, sf::Transformable* transform, int health = 7) : CollidableEntity(name, transform), health_(health) {};
+    Ennemy(const char* name, sf::Transformable* transform, EntitySpriteComponent* sprites, int health = 7) : CollidableEntity(name, transform, sprites), health_(health) {};
     
     void update() override;
+    
+    void processCollision(const CollidableEntity* other) override;
 
     void processEvent(CustomEvent* event) override;
 

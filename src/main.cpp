@@ -26,8 +26,10 @@ int main() {
     EntitySpriteComponent* raptorSprite = new EntitySpriteComponent(raptorTransform);
     raptorSprite->AddSprite("body", "assets/Sprites/raptorjesus.jpeg");
     raptorSprite->AddSprite("rechauffeur", "assets/Sprites/rechauffeur.png");
+    ColliderComponent* raptorCollider = new ColliderComponent(raptorTransform);
+    raptorCollider->setSize({100, 100});
 
-    Player* raptor = new Player("player", raptorTransform, raptorSprite);
+    Player* raptor = new Player("player", raptorTransform, raptorSprite, raptorCollider);
 
     sf::Transformable* liliTransformable = new sf::Transformable();
     liliTransformable->setPosition({400, 0});

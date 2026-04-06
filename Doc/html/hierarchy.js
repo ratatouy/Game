@@ -1,6 +1,8 @@
 var hierarchy =
 [
+    [ "ColliderComponent", "class_collider_component.html", null ],
     [ "Entity", "class_entity.html", [
+      [ "CollidableEntity", "class_collidable_entity.html", null ],
       [ "Ennemy", "class_ennemy.html", null ],
       [ "Player", "class_player.html", null ],
       [ "Projectile", "class_projectile.html", null ]
@@ -21,9 +23,9 @@ var hierarchy =
     [ "PhysicEngine", "class_physic_engine.html", null ],
     [ "RenderEngine", "class_render_engine.html", null ],
     [ "Scene", "class_scene.html", [
+      [ "GameplayScene", "class_gameplay_scene.html", null ],
       [ "MenuScene", "class_menu_scene.html", null ]
     ] ],
-    [ "TransformableComponent", "class_transformable_component.html", null ],
     [ "Transition", "class_transition.html", [
       [ "BorderTransition", "class_border_transition.html", [
         [ "HorizontalTransition", "class_horizontal_transition.html", null ],

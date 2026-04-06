@@ -1,7 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_event.html" title="Abstract class for all events." alt="" coords="5,56,64,83"/>
-<area shape="rect" id="node2" href="$class_custom_event.html" title=" " alt="" coords="138,5,247,32"/>
-<area shape="rect" id="node4" href="$class_scene_transition_event.html" title=" " alt="" coords="112,56,273,83"/>
-<area shape="rect" id="node5" href="$class_spawn_entity_event.html" title=" " alt="" coords="123,107,263,133"/>
-<area shape="rect" id="node3" href="$class_hit_event.html" title=" " alt="" coords="321,5,400,32"/>
+<area shape="rect" id="node1" href="$class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
 </map>

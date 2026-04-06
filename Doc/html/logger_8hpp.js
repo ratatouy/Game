@@ -16,6 +16,7 @@ var logger_8hpp =
       [ "PARSER", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca24e246e9a582f56a2b81bf805261840b", null ],
       [ "SCENE", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca258b6b325fff309a34d66a54219afbc4", null ],
       [ "ENTITY", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e", null ],
+      [ "ENTITY_SPRITE", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d", null ],
       [ "PLAYER", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87cade5dc3e0dbd007d995ed3e37bde5ce7e", null ],
       [ "EVENT", "logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca08d627d21e6424f54671673ff1611d59", null ]
     ] ]

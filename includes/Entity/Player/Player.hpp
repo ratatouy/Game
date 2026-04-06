@@ -1,7 +1,7 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
-#include "Entity/Entity.hpp"
+#include "Entity/CollidableEntity.hpp"
 #include "Entity/Projectile/Projectile.hpp"
 
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
@@ -14,7 +14,7 @@
 ///
 /// The Player is the \b main \b character of the game
 ////////////////////////////////////////////////////////////
-class Player : public Entity
+class Player : public CollidableEntity
 {
 public:
     ////////////////////////////////////////////////////////////
@@ -22,7 +22,7 @@ public:
     ///
     /// \param name Name of the Player
     ////////////////////////////////////////////////////////////
-    Player(const char* name) : Entity(name) {};
+    Player(const char* name) : CollidableEntity(name) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Intermediate Transformable Constructor
@@ -31,7 +31,7 @@ public:
     ///
     /// \param transformable Pointer to the sf::Transformable to attach to the player
     ////////////////////////////////////////////////////////////
-    Player(const char* name, sf::Transformable* transformable) : Entity(name, transformable) {};
+    Player(const char* name, sf::Transformable* transformable) : CollidableEntity(name, transformable) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Full Constructor
@@ -42,7 +42,21 @@ public:
     ///
     /// \param entitySprite Pointer to the EntitySpriteComponent to attache to the player
     ////////////////////////////////////////////////////////////
-    Player(const char* name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite) : Entity(name, transformable, entitySprite) {};
+    Player(const char* name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite) : CollidableEntity(name, transformable, entitySprite) {};
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Full Constructor
+    ///
+    /// \param name Name of the Player
+    ///
+    /// \param transformable Pointer to the sf::Transformable to attach to the player
+    ///
+    /// \param entitySprite Pointer to the EntitySpriteComponent to attache to the player
+    ///
+    /// \param collider Pointer to the ColliderComponent to attach to the player
+    ////////////////////////////////////////////////////////////
+    Player(const char* name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite, ColliderComponent* collider)
+        : CollidableEntity(name, transformable, entitySprite) {collider_ = collider; collider_->setTransformable(transformable);};
 
     ////////////////////////////////////////////////////////////
     /// \brief Updates the Player
@@ -51,6 +65,8 @@ public:
     /// \li IDK
     ////////////////////////////////////////////////////////////
     void update() override;
+
+    void processCollision(const CollidableEntity* other) override;
 
     void attack();
 };

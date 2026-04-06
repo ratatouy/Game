@@ -12,7 +12,7 @@ Manages the event queue.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_event_handler_a8fe27b69582cce5c6a89a0b134bc8158}{Event\+Handler}} ()
+\mbox{\hyperlink{class_event_handler_a432c13d95475e072978e594bf2f09171}{Event\+Handler}} (\mbox{\hyperlink{class_game}{Game}} $\ast$game)
 \begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_event_handler_a60e6d02d517a43f2da9d8c23d8a8f8f3}{Event\+Handler}} (const \mbox{\hyperlink{class_event_handler}{Event\+Handler}} \&)=delete
 \begin{DoxyCompactList}\small\item\em deleted copy constructor to force singleton behavior \end{DoxyCompactList}\item 
@@ -22,45 +22,63 @@ Manages the event queue.
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_event_handler_ab74b772e2be9e6fd47d82380475d89f7}{set\+Game}} (\mbox{\hyperlink{class_game}{Game}} $\ast$game)
 \begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{class_game}{Game}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb}{add\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
+void \mbox{\hyperlink{class_event_handler_aea66f9f4c785d3bb47fe6e9b10e93193}{add\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_event}{Event}} $>$ event)
 \begin{DoxyCompactList}\small\item\em Add an event to the queue. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_event_handler_a365d58b6e3fb682480ac9b123d16fad1}{process\+Event}} ()
 \begin{DoxyCompactList}\small\item\em Process the next event. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_event}{Event}} $\ast$ \mbox{\hyperlink{class_event_handler_acd62960f00deb706634059dc47e1d287}{get\+Current\+Event}} ()
-\begin{DoxyCompactList}\small\item\em Return the current event. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_event_handler_a594d46d9c2105ef7fd3eb337f8bfe1b6}{is\+Empty}} ()
 \begin{DoxyCompactList}\small\item\em Check if the queue is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_event_handler_a258f0a9c3aca4da0b8bf7b994209434e}{get\+Instance}} (\mbox{\hyperlink{class_game}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} instance, creates it if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Manages the event queue. 
 
-This can only \+: \begin{DoxyItemize}
+You have to move the ownership of the events to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} with std\+::move This can only \+: \begin{DoxyItemize}
 \item Add an event to the end of the queue \item Return the current event \item Process the current event\end{DoxyItemize}
 \begin{DoxyWarning}{Warning}
 Do not assign the same event to the queue twice, it will cause memory leaks 
 \end{DoxyWarning}
 
 
-Definition at line 24 of file Event\+Handler.\+hpp.
+Definition at line 25 of file Event\+Handler.\+hpp.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_event_handler_a8fe27b69582cce5c6a89a0b134bc8158}\label{class_event_handler_a8fe27b69582cce5c6a89a0b134bc8158}} 
+\mbox{\Hypertarget{class_event_handler_a432c13d95475e072978e594bf2f09171}\label{class_event_handler_a432c13d95475e072978e594bf2f09171}} 
 \index{EventHandler@{EventHandler}!EventHandler@{EventHandler}}
 \index{EventHandler@{EventHandler}!EventHandler@{EventHandler}}
 \doxysubsubsection{\texorpdfstring{EventHandler()}{EventHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Event\+Handler\+::\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Event\+Handler\+::\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
 
 
 
 Default Constructor. 
 
-Will throw an error if the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} is already instantiated 
+Will throw an error if the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} is already instantiated.
 
-Definition at line 28 of file Event\+Handler.\+cpp.
 
+\begin{DoxyParams}{Parameters}
+{\em game} & Reference to the \mbox{\hyperlink{class_game}{Game}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Event\+Handler.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_event_handler_a432c13d95475e072978e594bf2f09171_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_event_handler_a60e6d02d517a43f2da9d8c23d8a8f8f3}\label{class_event_handler_a60e6d02d517a43f2da9d8c23d8a8f8f3}} 
 \index{EventHandler@{EventHandler}!EventHandler@{EventHandler}}
 \index{EventHandler@{EventHandler}!EventHandler@{EventHandler}}
@@ -83,16 +101,24 @@ Destructor.
 
 
 
-Definition at line 12 of file Event\+Handler.\+cpp.
+Definition at line 28 of file Event\+Handler.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_event_handler_a3decb8cd88ba8af2b9b0b0f0f2fcd722_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb}\label{class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb}} 
+\mbox{\Hypertarget{class_event_handler_aea66f9f4c785d3bb47fe6e9b10e93193}\label{class_event_handler_aea66f9f4c785d3bb47fe6e9b10e93193}} 
 \index{EventHandler@{EventHandler}!addEvent@{addEvent}}
 \index{addEvent@{addEvent}!EventHandler@{EventHandler}}
 \doxysubsubsection{\texorpdfstring{addEvent()}{addEvent()}}
-{\footnotesize\ttfamily void Event\+Handler\+::add\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event}{Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Event\+Handler\+::add\+Event (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_event}{Event}} $>$}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -105,13 +131,14 @@ Add an event to the queue.
 \end{DoxyParams}
 
 
-Definition at line 42 of file Event\+Handler.\+cpp.
+Definition at line 48 of file Event\+Handler.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb_cgraph}
+\includegraphics[width=321pt]{class_event_handler_aea66f9f4c785d3bb47fe6e9b10e93193_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -119,28 +146,47 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_event_handler_a06c3a8cd4d8c2cde7c8c1609e2236cfb_icgraph}
+\includegraphics[width=350pt]{class_event_handler_aea66f9f4c785d3bb47fe6e9b10e93193_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_event_handler_acd62960f00deb706634059dc47e1d287}\label{class_event_handler_acd62960f00deb706634059dc47e1d287}} 
-\index{EventHandler@{EventHandler}!getCurrentEvent@{getCurrentEvent}}
-\index{getCurrentEvent@{getCurrentEvent}!EventHandler@{EventHandler}}
-\doxysubsubsection{\texorpdfstring{getCurrentEvent()}{getCurrentEvent()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_event}{Event}} $\ast$ Event\+Handler\+::get\+Current\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_event_handler_a258f0a9c3aca4da0b8bf7b994209434e}\label{class_event_handler_a258f0a9c3aca4da0b8bf7b994209434e}} 
+\index{EventHandler@{EventHandler}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!EventHandler@{EventHandler}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ Event\+Handler\+::get\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Return the current event. 
+Get the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} instance, creates it if it doesn\textquotesingle{}t exist. 
 
-This Method should not be used to process events, use process\+Event instead. It should only be used to look at the next event, and modifying it will cause undefined behavior.
 
+\begin{DoxyParams}{Parameters}
+{\em game} & Reference to the \mbox{\hyperlink{class_game}{Game}}\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to the current event 
+Pointer to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} 
 \end{DoxyReturn}
 
 
-Definition at line 81 of file Event\+Handler.\+cpp.
+Definition at line 17 of file Event\+Handler.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_event_handler_a258f0a9c3aca4da0b8bf7b994209434e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_event_handler_a258f0a9c3aca4da0b8bf7b994209434e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_event_handler_a594d46d9c2105ef7fd3eb337f8bfe1b6}\label{class_event_handler_a594d46d9c2105ef7fd3eb337f8bfe1b6}} 
 \index{EventHandler@{EventHandler}!isEmpty@{isEmpty}}
 \index{isEmpty@{isEmpty}!EventHandler@{EventHandler}}
@@ -156,7 +202,7 @@ True if the queue is empty
 \end{DoxyReturn}
 
 
-Definition at line 37 of file Event\+Handler.\+cpp.
+Definition at line 43 of file Event\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -187,7 +233,7 @@ Process the next event.
 
 This deletes the next event from the queue. 
 
-Definition at line 47 of file Event\+Handler.\+cpp.
+Definition at line 53 of file Event\+Handler.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -214,6 +260,9 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Set the \mbox{\hyperlink{class_game}{Game}}. 
 
+\begin{DoxyWarning}{Warning}
+Deprecated (game is set in the constructor)
+\end{DoxyWarning}
 
 \begin{DoxyParams}{Parameters}
 {\em game} & Reference to the \mbox{\hyperlink{class_game}{Game}} \\
@@ -221,7 +270,7 @@ Set the \mbox{\hyperlink{class_game}{Game}}.
 \end{DoxyParams}
 
 
-Definition at line 23 of file Event\+Handler.\+cpp.
+Definition at line 38 of file Event\+Handler.\+cpp.
 
 
 

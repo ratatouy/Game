@@ -1,58 +1,32 @@
 \hypertarget{scene_loader_8hpp}{}\doxysection{includes/\+Loaders/scene\+Loader.hpp File Reference}
 \label{scene_loader_8hpp}\index{includes/Loaders/sceneLoader.hpp@{includes/Loaders/sceneLoader.hpp}}
 {\ttfamily \#include \char`\"{}Scenes/\+Scene.\+hpp\char`\"{}}\newline
-Include dependency graph for scene\+Loader.\+hpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}Scenes/\+Basic\+Scenes/\+Menu\+Scene.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Scenes/\+Basic\+Scenes/\+Gameplay\+Scene.\+hpp\char`\"{}}\newline
+Include dependency graph for scene\+Loader.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{scene_loader_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{scene_loader_8hpp__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_parser}{Parser}}
+\begin{DoxyCompactList}\small\item\em Manages Parsing data from json files to make them usable by the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{scene_loader_8hpp_a995bba05c2653ba534285d4901c3e66b}{Load\+Scene}} (std\+::string name, std\+::string filepath=\char`\"{}Data/Game\+Data/scene\+Data.\+json\char`\"{})
-\begin{DoxyCompactList}\small\item\em Load a scene from a json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{scene_loader_8hpp_a995bba05c2653ba534285d4901c3e66b}\label{scene_loader_8hpp_a995bba05c2653ba534285d4901c3e66b}} 
-\index{sceneLoader.hpp@{sceneLoader.hpp}!LoadScene@{LoadScene}}
-\index{LoadScene@{LoadScene}!sceneLoader.hpp@{sceneLoader.hpp}}
-\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Load\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filepath = {\ttfamily \char`\"{}Data/GameData/sceneData.json\char`\"{}} }\end{DoxyParamCaption})}
-
-
-
-Load a scene from a json file. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em filepath} & Path to the json file (default \+: \char`\"{}\+Data/\+Game\+Data/scene\+Data.\+json\char`\"{})\\
-\hline
-{\em name} & Name of the scene to load\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Pointer to the loaded scene 
-\end{DoxyReturn}
-
-
-Definition at line 9 of file scene\+Loader.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=256pt]{scene_loader_8hpp_a995bba05c2653ba534285d4901c3e66b_cgraph}
-\end{center}
-\end{figure}
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}{Parser\+::\+Load\+Scene}} (std\+::string name, std\+::string filepath=\char`\"{}Data/Game\+Data/scene\+Data.\+json\char`\"{})
+\begin{DoxyCompactList}\small\item\em Loads and builds a scene from a json file and returns a pointer to it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}{Parser\+::\+\_\+scene\+Type\+To\+Int}} (std\+::string type)
+\end{DoxyCompactItemize}

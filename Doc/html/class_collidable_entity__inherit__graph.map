@@ -1,0 +1,4 @@
+<map id="CollidableEntity" name="CollidableEntity">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,131,107"/>
+<area shape="rect" id="node2" href="$class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="38,5,98,32"/>
+</map>

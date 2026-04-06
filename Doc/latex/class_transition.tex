@@ -20,7 +20,8 @@ Inheritance diagram for Transition\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Transition\+:\nopagebreak
+Collaboration diagram for Transition\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,8 +35,8 @@ Collaboration diagram for Transition\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_transition}{Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}} and a name. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_transition_a2e840d974d8d1173cab9ba4a1dd87766}{check\+Transition}} () const =0
 \begin{DoxyCompactList}\small\item\em Check if the transition should be activated. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_transition_a947835842c2edec079c354563aa354b4}{check\+Transition}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$player\+\_\+tr) const =0
-\begin{DoxyCompactList}\small\item\em Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_transition_a91bbe7f45174902cda9359a864c8352e}{check\+Transition}} (\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$player\+\_\+tr) const =0
+\begin{DoxyCompactList}\small\item\em Check if the transition should be activated according to the player\textquotesingle{}s sf\+::\+Transformable. \end{DoxyCompactList}\item 
 const std\+::string \& \mbox{\hyperlink{class_transition_a3cb10e25c70bd60235e2f21d82af5359}{get\+Target\+Name}} () const
 \begin{DoxyCompactList}\small\item\em Returns the name of the targeted \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
@@ -104,21 +105,21 @@ True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated
 
 Implemented in \mbox{\hyperlink{class_border_transition_a50645d25411d2e6e65f169614514b595}{Border\+Transition}}.
 
-\mbox{\Hypertarget{class_transition_a947835842c2edec079c354563aa354b4}\label{class_transition_a947835842c2edec079c354563aa354b4}} 
+\mbox{\Hypertarget{class_transition_a91bbe7f45174902cda9359a864c8352e}\label{class_transition_a91bbe7f45174902cda9359a864c8352e}} 
 \index{Transition@{Transition}!checkTransition@{checkTransition}}
 \index{checkTransition@{checkTransition}!Transition@{Transition}}
 \doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual bool Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. 
+Check if the transition should be activated according to the player\textquotesingle{}s sf\+::\+Transformable. 
 
 Pure virtual
 
 
 \begin{DoxyParams}{Parameters}
-{\em player\+\_\+tr} & The player\textquotesingle{}s Transformable\+Components\\
+{\em player\+\_\+tr} & The player\textquotesingle{}s sf\+::\+Transformables\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -126,7 +127,7 @@ True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}{Border\+Transition}}, \mbox{\hyperlink{class_horizontal_transition_a843215454768a5d4e0294396c143fbd3}{Horizontal\+Transition}}, and \mbox{\hyperlink{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}{Vertical\+Transition}}.
+Implemented in \mbox{\hyperlink{class_border_transition_a7462ca126e6908637acd625f9387cc61}{Border\+Transition}}, \mbox{\hyperlink{class_horizontal_transition_a67aa8043ef25ed1b33221321de12ce11}{Horizontal\+Transition}}, and \mbox{\hyperlink{class_vertical_transition_a8972197e277aa315fa3551af38658663}{Vertical\+Transition}}.
 
 \mbox{\Hypertarget{class_transition_a3cb10e25c70bd60235e2f21d82af5359}\label{class_transition_a3cb10e25c70bd60235e2f21d82af5359}} 
 \index{Transition@{Transition}!getTargetName@{getTargetName}}

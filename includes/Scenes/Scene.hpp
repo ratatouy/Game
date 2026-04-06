@@ -9,6 +9,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Entity/Entity.hpp"
+#include "Entity/CollidableEntity.hpp"
 #include "Events/Event.hpp"
 #include "Events/CustomEvent.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"

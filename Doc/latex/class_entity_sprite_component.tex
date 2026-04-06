@@ -12,47 +12,51 @@ Component to manage the sprites of an entity.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_entity_sprite_component_ad7d27bb5f88886b04eb159222135949d}{Entity\+Sprite\+Component}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$transformable)
-\item 
+\mbox{\hyperlink{class_entity_sprite_component_afe68eb90666955364b0138a7ba596fd2}{Entity\+Sprite\+Component}} (sf\+::\+Transformable $\ast$transformable)
+\begin{DoxyCompactList}\small\item\em Lowest Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175}{$\sim$\+Entity\+Sprite\+Component}} ()
-\item 
-void \mbox{\hyperlink{class_entity_sprite_component_a130a26f343863c55031f5c2ec3339395}{Add\+Sprite}} (std\+::string name, const char $\ast$filepath)
-\item 
-auto \mbox{\hyperlink{class_entity_sprite_component_a59288ce19ca7546db8d06894a6844efe}{Get\+Sprite\+Data}} ()
-\item 
-const int \mbox{\hyperlink{class_entity_sprite_component_a35c033b64ac29f02624628265a1a7438}{get\+\_\+nb\+\_\+sprites}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_sprite_component_ad38ac17f0cb24f50ad919eaedcc28e4c}{Add\+Sprite}} (std\+::string name, const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em Adds a sprite to the entity. \end{DoxyCompactList}\item 
+const auto \mbox{\hyperlink{class_entity_sprite_component_a6609088990b75ef53c6ac8c58408921e}{Get\+Sprite\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const pointer to the map containing all the sprites. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_entity_sprite_component_a6f7b9792e0bb435e91a9ee7a2df6a016}{get\+\_\+nb\+\_\+sprites}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of sprites. \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{_entity_sprite_component_8hpp_af64d3b0c9e31605797680ad51a04f2d1}{Sprite\+Data}} $\ast$ \mbox{\hyperlink{class_entity_sprite_component_a92256ef1156a2946db6c8310c2eca67d}{Get\+This\+Sprite\+Data}} (std\+::string sprite\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a pointer to a sprite of Index \char`\"{}sprite\+Index\char`\"{}. \end{DoxyCompactList}\item 
 const sf\+::\+Sprite $\ast$ \mbox{\hyperlink{class_entity_sprite_component_a6c9b5509c09333e55275c4cff0d8be4e}{Get\+This\+Sprite\+Local\+Sprite}} (std\+::string sprite\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the local Transformable of a sprite. \end{DoxyCompactList}\item 
 sf\+::\+Transformable $\ast$ \mbox{\hyperlink{class_entity_sprite_component_a4e9269d1ec7cc0cb6a75a8fb0cf86104}{Get\+This\+Sprite\+Local\+Transformable}} (std\+::string sprite\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the local Transformable of a sprite. \end{DoxyCompactList}\item 
 const sf\+::\+Texture $\ast$ \mbox{\hyperlink{class_entity_sprite_component_a01f39fbc24f9bf6e642668058931431c}{Get\+This\+Sprite\+Local\+Texture}} (std\+::string sprite\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the local Transformable of a sprite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_entity_sprite_component_a622a73a94fd597fbe825176da73a7b53}{Set\+This\+Sprite\+Local\+Transform}} (std\+::string sprite\+Name, sf\+::\+Vector2f position, float angle, sf\+::\+Vector2f scale)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the local transform of a sprite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}{update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates all of the sprites. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Component to manage the sprites of an entity. 
 
+This stores a map of named sprites and their data (the sprite, the local transformable and the texture). Only one \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} is attached to each entity.
+
 Created in order to support multiple sprites attached to a single entity. 
 
-Definition at line 21 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 31 of file Entity\+Sprite\+Component.\+hpp.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_entity_sprite_component_ad7d27bb5f88886b04eb159222135949d}\label{class_entity_sprite_component_ad7d27bb5f88886b04eb159222135949d}} 
+\mbox{\Hypertarget{class_entity_sprite_component_afe68eb90666955364b0138a7ba596fd2}\label{class_entity_sprite_component_afe68eb90666955364b0138a7ba596fd2}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!EntitySpriteComponent@{EntitySpriteComponent}}
 \index{EntitySpriteComponent@{EntitySpriteComponent}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{EntitySpriteComponent()}{EntitySpriteComponent()}}
-{\footnotesize\ttfamily Entity\+Sprite\+Component\+::\+Entity\+Sprite\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{transformable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Entity\+Sprite\+Component\+::\+Entity\+Sprite\+Component (\begin{DoxyParamCaption}\item[{sf\+::\+Transformable $\ast$}]{transformable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Lowest Constructor
+
+
+Lowest Constructor. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -61,7 +65,7 @@ Lowest Constructor
 \end{DoxyParams}
 
 
-Definition at line 36 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 39 of file Entity\+Sprite\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175}\label{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!````~EntitySpriteComponent@{$\sim$EntitySpriteComponent}}
@@ -69,24 +73,38 @@ Definition at line 36 of file Entity\+Sprite\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{$\sim$EntitySpriteComponent()}{~EntitySpriteComponent()}}
 {\footnotesize\ttfamily Entity\+Sprite\+Component\+::$\sim$\+Entity\+Sprite\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Default Destructor 
+
+
+Default Destructor. 
+
+
 
 Definition at line 7 of file Entity\+Sprite\+Component.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{class_entity_sprite_component_adb4ad7ece3f5d3000e189ebb23cdf175_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_entity_sprite_component_a130a26f343863c55031f5c2ec3339395}\label{class_entity_sprite_component_a130a26f343863c55031f5c2ec3339395}} 
+\mbox{\Hypertarget{class_entity_sprite_component_ad38ac17f0cb24f50ad919eaedcc28e4c}\label{class_entity_sprite_component_ad38ac17f0cb24f50ad919eaedcc28e4c}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!AddSprite@{AddSprite}}
 \index{AddSprite@{AddSprite}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{AddSprite()}{AddSprite()}}
-{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Add\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
 
-Adds a sprite to the entity
+
+
+Adds a sprite to the entity. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & Name of the sprite \\
+{\em name} & Name of the sprite\\
 \hline
 {\em filepath} & Path to the texture\\
 \hline
@@ -100,48 +118,64 @@ Implementation \+:
 \item Add the sprite and texture to the \char`\"{}sprites\+\_\+\char`\"{} and \char`\"{}textures\+\_\+\char`\"{} vectors 
 \end{DoxyItemize}
 
-Definition at line 23 of file Entity\+Sprite\+Component.\+cpp.
+Definition at line 24 of file Entity\+Sprite\+Component.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_a130a26f343863c55031f5c2ec3339395_cgraph}
+\includegraphics[width=317pt]{class_entity_sprite_component_ad38ac17f0cb24f50ad919eaedcc28e4c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_a130a26f343863c55031f5c2ec3339395_icgraph}
+\includegraphics[width=350pt]{class_entity_sprite_component_ad38ac17f0cb24f50ad919eaedcc28e4c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_entity_sprite_component_a35c033b64ac29f02624628265a1a7438}\label{class_entity_sprite_component_a35c033b64ac29f02624628265a1a7438}} 
+\mbox{\Hypertarget{class_entity_sprite_component_a6f7b9792e0bb435e91a9ee7a2df6a016}\label{class_entity_sprite_component_a6f7b9792e0bb435e91a9ee7a2df6a016}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!get\_nb\_sprites@{get\_nb\_sprites}}
 \index{get\_nb\_sprites@{get\_nb\_sprites}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{get\_nb\_sprites()}{get\_nb\_sprites()}}
-{\footnotesize\ttfamily const int Entity\+Sprite\+Component\+::get\+\_\+nb\+\_\+sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily const int Entity\+Sprite\+Component\+::get\+\_\+nb\+\_\+sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 54 of file Entity\+Sprite\+Component.\+hpp.
+Returns the number of sprites. 
 
-\mbox{\Hypertarget{class_entity_sprite_component_a59288ce19ca7546db8d06894a6844efe}\label{class_entity_sprite_component_a59288ce19ca7546db8d06894a6844efe}} 
+\begin{DoxyReturn}{Returns}
+Number of sprites 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Entity\+Sprite\+Component.\+hpp.
+
+\mbox{\Hypertarget{class_entity_sprite_component_a6609088990b75ef53c6ac8c58408921e}\label{class_entity_sprite_component_a6609088990b75ef53c6ac8c58408921e}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!GetSpriteData@{GetSpriteData}}
 \index{GetSpriteData@{GetSpriteData}!EntitySpriteComponent@{EntitySpriteComponent}}
 \doxysubsubsection{\texorpdfstring{GetSpriteData()}{GetSpriteData()}}
-{\footnotesize\ttfamily auto Entity\+Sprite\+Component\+::\+Get\+Sprite\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily const auto Entity\+Sprite\+Component\+::\+Get\+Sprite\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 50 of file Entity\+Sprite\+Component.\+hpp.
+Returns a const pointer to the map containing all the sprites. 
 
-Here is the caller graph for this function\+:\nopagebreak
+\begin{DoxyReturn}{Returns}
+const Pointer to the map 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Entity\+Sprite\+Component.\+hpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_a59288ce19ca7546db8d06894a6844efe_icgraph}
+\includegraphics[width=350pt]{class_entity_sprite_component_a6609088990b75ef53c6ac8c58408921e_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_entity_sprite_component_a92256ef1156a2946db6c8310c2eca67d}\label{class_entity_sprite_component_a92256ef1156a2946db6c8310c2eca67d}} 
@@ -150,7 +184,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{GetThisSpriteData()}{GetThisSpriteData()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{_entity_sprite_component_8hpp_af64d3b0c9e31605797680ad51a04f2d1}{Sprite\+Data}}$\ast$ Entity\+Sprite\+Component\+::\+Get\+This\+Sprite\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{sprite\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns a pointer to a sprite of Index \char`\"{}sprite\+Index\char`\"{}
+
+
+Returns a pointer to a sprite of Index \char`\"{}sprite\+Index\char`\"{}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -162,7 +198,7 @@ const Pointer to the Requested Sprite
 \end{DoxyReturn}
 
 
-Definition at line 64 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 76 of file Entity\+Sprite\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_entity_sprite_component_a6c9b5509c09333e55275c4cff0d8be4e}\label{class_entity_sprite_component_a6c9b5509c09333e55275c4cff0d8be4e}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!GetThisSpriteLocalSprite@{GetThisSpriteLocalSprite}}
@@ -170,7 +206,9 @@ Definition at line 64 of file Entity\+Sprite\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{GetThisSpriteLocalSprite()}{GetThisSpriteLocalSprite()}}
 {\footnotesize\ttfamily const sf\+::\+Sprite$\ast$ Entity\+Sprite\+Component\+::\+Get\+This\+Sprite\+Local\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{sprite\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get the local Transformable of a sprite
+
+
+Get the local Transformable of a sprite. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -182,7 +220,7 @@ const Pointer to the Requested Transformable
 \end{DoxyReturn}
 
 
-Definition at line 73 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 85 of file Entity\+Sprite\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_entity_sprite_component_a01f39fbc24f9bf6e642668058931431c}\label{class_entity_sprite_component_a01f39fbc24f9bf6e642668058931431c}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!GetThisSpriteLocalTexture@{GetThisSpriteLocalTexture}}
@@ -190,7 +228,9 @@ Definition at line 73 of file Entity\+Sprite\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{GetThisSpriteLocalTexture()}{GetThisSpriteLocalTexture()}}
 {\footnotesize\ttfamily const sf\+::\+Texture$\ast$ Entity\+Sprite\+Component\+::\+Get\+This\+Sprite\+Local\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{sprite\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get the local Transformable of a sprite
+
+
+Get the local Transformable of a sprite. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -202,7 +242,7 @@ const Pointer to the Requested Transformable
 \end{DoxyReturn}
 
 
-Definition at line 89 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 103 of file Entity\+Sprite\+Component.\+hpp.
 
 \mbox{\Hypertarget{class_entity_sprite_component_a4e9269d1ec7cc0cb6a75a8fb0cf86104}\label{class_entity_sprite_component_a4e9269d1ec7cc0cb6a75a8fb0cf86104}} 
 \index{EntitySpriteComponent@{EntitySpriteComponent}!GetThisSpriteLocalTransformable@{GetThisSpriteLocalTransformable}}
@@ -210,7 +250,9 @@ Definition at line 89 of file Entity\+Sprite\+Component.\+hpp.
 \doxysubsubsection{\texorpdfstring{GetThisSpriteLocalTransformable()}{GetThisSpriteLocalTransformable()}}
 {\footnotesize\ttfamily sf\+::\+Transformable$\ast$ Entity\+Sprite\+Component\+::\+Get\+This\+Sprite\+Local\+Transformable (\begin{DoxyParamCaption}\item[{std\+::string}]{sprite\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get the local Transformable of a sprite
+
+
+Get the local Transformable of a sprite. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -222,9 +264,10 @@ Pointer to the Requested Transformable
 \end{DoxyReturn}
 
 
-Definition at line 81 of file Entity\+Sprite\+Component.\+hpp.
+Definition at line 94 of file Entity\+Sprite\+Component.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -237,24 +280,27 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{SetThisSpriteLocalTransform()}{SetThisSpriteLocalTransform()}}
 {\footnotesize\ttfamily void Entity\+Sprite\+Component\+::\+Set\+This\+Sprite\+Local\+Transform (\begin{DoxyParamCaption}\item[{std\+::string}]{sprite\+Name,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{float}]{angle,  }\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})}
 
-Set the local transform of a sprite
+
+
+Set the local transform of a sprite. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em sprite\+Name} & name of the sprite in the sprites\+\_\+data\+\_\+map \\
+{\em sprite\+Name} & name of the sprite in the sprites\+\_\+data\+\_\+map\\
 \hline
-{\em position} & New position \\
+{\em position} & New position\\
 \hline
-{\em angle} & New rotation angle \\
+{\em angle} & New rotation angle\\
 \hline
 {\em scale} & New scale \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 49 of file Entity\+Sprite\+Component.\+cpp.
+Definition at line 51 of file Entity\+Sprite\+Component.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -267,7 +313,9 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Entity\+Sprite\+Component\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Updates all of the sprites
+
+
+Updates all of the sprites. 
 
 Implementation \+: By summing the entity\textquotesingle{}s position, rotation \& origin with the sprite\textquotesingle{}s local position and rotation , Multiplying the entity\textquotesingle{}s scale with the sprite\textquotesingle{}s local scale
 
@@ -276,16 +324,8 @@ not optimal, updates everything, every frame
 \end{DoxyNote}
 
 
-Definition at line 63 of file Entity\+Sprite\+Component.\+cpp.
+Definition at line 65 of file Entity\+Sprite\+Component.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -299,4 +339,4 @@ Here is the caller graph for this function\+:
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 includes/\+Components/\+Basic\+Components/\mbox{\hyperlink{_entity_sprite_component_8hpp}{Entity\+Sprite\+Component.\+hpp}}\item 
-src/\+Components/\mbox{\hyperlink{_entity_sprite_component_8cpp}{Entity\+Sprite\+Component.\+cpp}}\end{DoxyCompactItemize}
+src/\+Components/\+Basic\+Components/\mbox{\hyperlink{_entity_sprite_component_8cpp}{Entity\+Sprite\+Component.\+cpp}}\end{DoxyCompactItemize}

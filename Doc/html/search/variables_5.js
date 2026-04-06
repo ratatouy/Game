@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['scene_5f_324',['scene_',['../class_transition.html#a1c436cd2fe7ed30b91db319352f303ce',1,'Transition']]],
-  ['start_5f_325',['start_',['../class_border_transition.html#a995e035febc5467544b16608e79f6290',1,'BorderTransition']]],
-  ['stores_326',['stores',['../settings_loader_8cpp.html#a170e34437a875e25f4cd010e61e743c1',1,'settingsLoader.cpp']]]
+  ['name_5f_358',['name_',['../class_entity.html#a79d1831c25273574dc266bf762107efc',1,'Entity::name_()'],['../class_scene.html#a1b823f2315b01999f9bac4834d14e545',1,'Scene::name_()'],['../class_transition.html#a1fa1ef945462a1d90613db407f68bedd',1,'Transition::name_()']]]
 ];

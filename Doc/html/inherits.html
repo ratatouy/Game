@@ -91,20 +91,26 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <div class="textblock">
 <p><a href="hierarchy.html">Go to the textual class hierarchy</a></p>
 </div><table border="0" cellspacing="10" cellpadding="0">
-<tr><td><img src="inherit_graph_0.png" border="0" usemap="#a_entity" alt=""/>
-<map name="a_entity" id="a_entity">
-<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="5,56,65,83"/>
-<area shape="rect" href="class_ennemy.html" title=" " alt="" coords="117,5,192,32"/>
-<area shape="rect" href="class_player.html" title=" " alt="" coords="123,56,186,83"/>
-<area shape="rect" href="class_projectile.html" title=" " alt="" coords="113,107,196,133"/>
+<tr><td><img src="inherit_graph_0.png" border="0" usemap="#a_collider_component" alt=""/>
+<map name="a_collider_component" id="a_collider_component">
+<area shape="rect" href="class_collider_component.html" title="Adds a collision box to an object." alt="" coords="5,5,152,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_entity_sprite_component" alt=""/>
+<tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_entity" alt=""/>
+<map name="a_entity" id="a_entity">
+<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="5,81,65,108"/>
+<area shape="rect" href="class_collidable_entity.html" title=" " alt="" coords="113,5,239,32"/>
+<area shape="rect" href="class_ennemy.html" title=" " alt="" coords="139,56,213,83"/>
+<area shape="rect" href="class_player.html" title="class for the Player Entity" alt="" coords="145,107,207,133"/>
+<area shape="rect" href="class_projectile.html" title=" " alt="" coords="135,157,217,184"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_entity_sprite_component" alt=""/>
 <map name="a_entity_sprite_component" id="a_entity_sprite_component">
 <area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,5,179,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_event" alt=""/>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_event" alt=""/>
 <map name="a_event" id="a_event">
 <area shape="rect" href="class_event.html" title="Abstract class for all events." alt="" coords="5,56,64,83"/>
 <area shape="rect" href="class_custom_event.html" title=" " alt="" coords="138,5,247,32"/>
@@ -113,50 +119,46 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="class_hit_event.html" title=" " alt="" coords="321,5,400,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_event_a" alt=""/>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_event_a" alt=""/>
 <map name="a_event_a" id="a_event_a">
 <area shape="rect" href="class_event_a.html" title="Custom Event class for events, for user Custom Events." alt="" coords="5,5,73,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_event_handler" alt=""/>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_event_handler" alt=""/>
 <map name="a_event_handler" id="a_event_handler">
 <area shape="rect" href="class_event_handler.html" title="Manages the event queue." alt="" coords="5,5,116,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_game" alt=""/>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_game" alt=""/>
 <map name="a_game" id="a_game">
 <area shape="rect" href="class_game.html" title="Main class of the game." alt="" coords="5,5,67,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#a_hit_data" alt=""/>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_hit_data" alt=""/>
 <map name="a_hit_data" id="a_hit_data">
 <area shape="rect" href="struct_hit_data.html" title=" " alt="" coords="5,5,77,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#a_logger" alt=""/>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_logger" alt=""/>
 <map name="a_logger" id="a_logger">
 <area shape="rect" href="class_logger.html" title="A logger to use to log information." alt="" coords="5,5,72,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_physic_engine" alt=""/>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_physic_engine" alt=""/>
 <map name="a_physic_engine" id="a_physic_engine">
 <area shape="rect" href="class_physic_engine.html" title=" " alt="" coords="5,5,113,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_render_engine" alt=""/>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_render_engine" alt=""/>
 <map name="a_render_engine" id="a_render_engine">
-<area shape="rect" href="class_render_engine.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" href="class_render_engine.html" title="Manages Shaders and the RenderWindow." alt="" coords="5,5,117,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_scene" alt=""/>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_scene" alt=""/>
 <map name="a_scene" id="a_scene">
-<area shape="rect" href="class_scene.html" title="Base class for all Scenes." alt="" coords="5,5,67,32"/>
-<area shape="rect" href="class_menu_scene.html" title="Menu Scene." alt="" coords="115,5,212,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_transformable_component" alt=""/>
-<map name="a_transformable_component" id="a_transformable_component">
-<area shape="rect" href="class_transformable_component.html" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" href="class_scene.html" title="Base class for all Scenes." alt="" coords="5,31,67,57"/>
+<area shape="rect" href="class_gameplay_scene.html" title="Basic gameplay scene." alt="" coords="115,5,243,32"/>
+<area shape="rect" href="class_menu_scene.html" title="Menu Scene." alt="" coords="130,56,227,83"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_transition" alt=""/>

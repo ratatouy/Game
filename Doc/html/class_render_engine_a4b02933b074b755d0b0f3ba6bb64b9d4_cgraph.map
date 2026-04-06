@@ -1,4 +1,5 @@
 <map id="RenderEngine::attachShaderToDrawable" name="RenderEngine::attachShaderToDrawable">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node2" href="$class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a" title=" " alt="" coords="260,13,511,39"/>
+<area shape="rect" id="node1" title="Attaches a Shader to a Drawable." alt="" coords="5,23,212,65"/>
+<area shape="rect" id="node2" href="$class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a" title="Adds a ShaderDrawable by constructing the shader." alt="" coords="260,5,511,32"/>
+<area shape="rect" id="node3" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="559,31,653,57"/>
 </map>

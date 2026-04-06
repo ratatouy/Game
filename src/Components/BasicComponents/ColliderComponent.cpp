@@ -12,7 +12,7 @@ ColliderComponent::ColliderComponent(sf::Transformable* transformable, sf::Vecto
     offset_ = {0,0};
 }
 
-bool ColliderComponent::hasCollided(ColliderComponent* other) const
+bool ColliderComponent::isCollidingWith(const ColliderComponent* other) const
 {
     sf::Vector2f m_pos = this->transformable_->getPosition()  + this->offset_;
     sf::Vector2f o_pos = other->transformable_->getPosition() + other->offset_;

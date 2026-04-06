@@ -1,0 +1,4 @@
+<map id="Entity::~Entity" name="Entity::~Entity">
+<area shape="rect" id="node1" title="Default destructor." alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="169,5,264,32"/>
+</map>

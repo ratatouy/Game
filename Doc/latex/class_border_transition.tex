@@ -20,7 +20,8 @@ Inheritance diagram for Border\+Transition\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Border\+Transition\+:\nopagebreak
+Collaboration diagram for Border\+Transition\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,8 +35,8 @@ Collaboration diagram for Border\+Transition\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_border_transition}{Border\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a name, a start position and an end position. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_border_transition_a50645d25411d2e6e65f169614514b595}{check\+Transition}} () const override=0
 \begin{DoxyCompactList}\small\item\em Deletes Empty check\+Transition. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}{check\+Transition}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$player\+\_\+tr) const override=0
-\begin{DoxyCompactList}\small\item\em Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual bool \mbox{\hyperlink{class_border_transition_a7462ca126e6908637acd625f9387cc61}{check\+Transition}} (\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$player\+\_\+tr) const override=0
+\begin{DoxyCompactList}\small\item\em Check if the transition should be activated according to the player\textquotesingle{}s sf\+::\+Transformable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,7 +51,7 @@ Manages transitions from the border of a screen to a neighboring screen.
 
 This class is the base class for \mbox{\hyperlink{class_vertical_transition}{Vertical\+Transition}} and \mbox{\hyperlink{class_horizontal_transition}{Horizontal\+Transition}}. And is not intended to be used directly. 
 
-Definition at line 18 of file Border\+Transition.\+hpp.
+Definition at line 17 of file Border\+Transition.\+hpp.
 
 
 
@@ -80,7 +81,7 @@ If start $>$ end, start and end are swapped.
 \end{DoxyParams}
 
 
-Definition at line 36 of file Border\+Transition.\+hpp.
+Definition at line 35 of file Border\+Transition.\+hpp.
 
 
 
@@ -99,21 +100,21 @@ Deletes Empty check\+Transition.
 
 Implements \mbox{\hyperlink{class_transition_a2e840d974d8d1173cab9ba4a1dd87766}{Transition}}.
 
-\mbox{\Hypertarget{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}\label{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}} 
+\mbox{\Hypertarget{class_border_transition_a7462ca126e6908637acd625f9387cc61}\label{class_border_transition_a7462ca126e6908637acd625f9387cc61}} 
 \index{BorderTransition@{BorderTransition}!checkTransition@{checkTransition}}
 \index{checkTransition@{checkTransition}!BorderTransition@{BorderTransition}}
 \doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual bool Border\+Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool Border\+Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
 
 
 
-Check if the transition should be activated according to the player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}. 
+Check if the transition should be activated according to the player\textquotesingle{}s sf\+::\+Transformable. 
 
 overrides \mbox{\hyperlink{class_transition}{Transition}} method but still does not implement it, as it will be implemented in the subclasses \mbox{\hyperlink{class_horizontal_transition}{Horizontal\+Transition}} and \mbox{\hyperlink{class_vertical_transition}{Vertical\+Transition}}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em player\+\_\+tr} & The player\textquotesingle{}s Transformable\+Components\\
+{\em player\+\_\+tr} & The player\textquotesingle{}s sf\+::\+Transformables\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -121,11 +122,11 @@ True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_transition_a947835842c2edec079c354563aa354b4}{Transition}}.
+Implements \mbox{\hyperlink{class_transition_a91bbe7f45174902cda9359a864c8352e}{Transition}}.
 
 
 
-Implemented in \mbox{\hyperlink{class_horizontal_transition_a843215454768a5d4e0294396c143fbd3}{Horizontal\+Transition}}, and \mbox{\hyperlink{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}{Vertical\+Transition}}.
+Implemented in \mbox{\hyperlink{class_horizontal_transition_a67aa8043ef25ed1b33221321de12ce11}{Horizontal\+Transition}}, and \mbox{\hyperlink{class_vertical_transition_a8972197e277aa315fa3551af38658663}{Vertical\+Transition}}.
 
 
 
@@ -138,7 +139,7 @@ Implemented in \mbox{\hyperlink{class_horizontal_transition_a843215454768a5d4e02
 
 position of the right-\/most pixel of the transition if it\textquotesingle{}s vertical , bottom-\/most if it\textquotesingle{}s horizontal. 
 
-Definition at line 67 of file Border\+Transition.\+hpp.
+Definition at line 66 of file Border\+Transition.\+hpp.
 
 \mbox{\Hypertarget{class_border_transition_a995e035febc5467544b16608e79f6290}\label{class_border_transition_a995e035febc5467544b16608e79f6290}} 
 \index{BorderTransition@{BorderTransition}!start\_@{start\_}}
@@ -148,7 +149,7 @@ Definition at line 67 of file Border\+Transition.\+hpp.
 
 position of left-\/most pixel of the transition if it\textquotesingle{}s vertical , top-\/most if it\textquotesingle{}s horizontal. 
 
-Definition at line 63 of file Border\+Transition.\+hpp.
+Definition at line 62 of file Border\+Transition.\+hpp.
 
 
 

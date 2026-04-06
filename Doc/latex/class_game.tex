@@ -14,6 +14,8 @@ Main class of the game.
 \item 
 \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
 \begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_game_abb28875d74d25fa9e0dcdbe37c6ad89c}{Game}} (const \mbox{\hyperlink{class_game}{Game}} \&)=delete
 \begin{DoxyCompactList}\small\item\em Delete copy constructor to force singleton behavior. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_game}{Game}} \& \mbox{\hyperlink{class_game_a4d0c0503733cc50b0b5cb8d7ef1237ec}{operator=}} (const \mbox{\hyperlink{class_game}{Game}} \&)=delete
@@ -24,25 +26,33 @@ void \mbox{\hyperlink{class_game_aa2d79324af14500b9f509c19c57dc3ac}{set\+Render\
 \begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_a6c0a61f4714c860d9d21a9a121d3cc74}{set\+Active\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene)
 \begin{DoxyCompactList}\small\item\em Set the active \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_game_a436fc8919d4d15983f076379acc00438}{get\+Event\+Handler}} ()
+const \mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_game_ae64f63701924c83c2506c3a506433be2}{get\+Event\+Handler}} () const
 \begin{DoxyCompactList}\small\item\em Get a reference to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$ \mbox{\hyperlink{class_game_ab09c78ab7a7b725eb8aa4724688137d1}{get\+Render\+Engine}} ()
+\mbox{\hyperlink{class_event_handler}{Event\+Handler}} $\ast$ \mbox{\hyperlink{class_game_a436fc8919d4d15983f076379acc00438}{get\+Event\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Returns a non-\/const pointer to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$ \mbox{\hyperlink{class_game_a7f25e2728d6e9a58fb2d770b574137cf}{get\+Render\+Engine}} () const
 \begin{DoxyCompactList}\small\item\em Get a reference to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_game_ad10ed0a88180bf31ea13340a5422816b}{get\+Active\+Scene}} ()
+\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$ \mbox{\hyperlink{class_game_ab09c78ab7a7b725eb8aa4724688137d1}{get\+Render\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Returns a non-\/const pointer to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_game_aac17860938569d9f8e7bb1196f14ff8f}{get\+Active\+Scene}} () const
 \begin{DoxyCompactList}\small\item\em Get a reference to the active \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_aae26066798d381cb711918f0b59958a5}{throw\+Event}} (\mbox{\hyperlink{class_event}{Event}} $\ast$event)
+\mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_game_ad10ed0a88180bf31ea13340a5422816b}{get\+Active\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Returns a non-\/const pointer to the active \mbox{\hyperlink{class_scene}{Scene}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a18f1ab35677c36a6a470925d0993e292}{load\+Scene}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{class_game_a19446234f66ae67091b3af08c7ba6869}{throw\+Event}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_event}{Event}} $>$ event)
 \begin{DoxyCompactList}\small\item\em Throw an event to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}{process\+Event}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
+void \mbox{\hyperlink{class_game_ac806107ae54ab10c874cb6cb1c0a5239}{distribute\+Event}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} process distributor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_a0f8625023fc606a99796cc1d69f618fe}{process\+Event\+Func}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
+void \mbox{\hyperlink{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}{process\+Event}} (\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_a8343a84bc062e46afc71a4d7aadc6351}{process\+Event}} (\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$event)
+void \mbox{\hyperlink{class_game_a873f6180f357664289bdad560c23216b}{distribute\+Event}} (\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} process distributor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_a00f5148b5d6a33300719534ec9f0c75b}{process\+Event\+Func}} (\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$event)
+void \mbox{\hyperlink{class_game_a8343a84bc062e46afc71a4d7aadc6351}{process\+Event}} (\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_a01f802010c5c0265601d516341417480}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+void \mbox{\hyperlink{class_game_a31a02c739ee585c35a164248c7f6900a}{distribute\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_custom_event}{Custom\+Event}} process distributor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_game_a16b9d7c51cc228b59e1272b27bded4bf}{process\+Event\+Func}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
+void \mbox{\hyperlink{class_game_a01f802010c5c0265601d516341417480}{process\+Event}} (\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$event)
 \begin{DoxyCompactList}\small\item\em Process a \mbox{\hyperlink{class_custom_event}{Custom\+Event}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_a79df6376b332d63c9eca0dcee30305c3}{update}} ()
 \begin{DoxyCompactList}\small\item\em Update the \mbox{\hyperlink{class_game}{Game}}. \end{DoxyCompactList}\item 
@@ -50,6 +60,11 @@ void \mbox{\hyperlink{class_game_a15ddd769261d923827a3cdf41499c843}{render}} ()
 \begin{DoxyCompactList}\small\item\em Render the \mbox{\hyperlink{class_game}{Game}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_a472279479c423e4950f6eedf09bf8bf5}{add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game}{Game}} $\ast$ \mbox{\hyperlink{class_game_a19798a4f4c50037e1c5cd8c5d491fef9}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the instance of the \mbox{\hyperlink{class_game}{Game}} (Singleton), creates it if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -61,7 +76,7 @@ The game is a collection of scenes, with only one active at a time. It also is a
 \item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Maybe find a way to not have to read the json file each time a scene needs to be loaded.\end{DoxyRefDesc}
 
 
-Definition at line 34 of file Game.\+hpp.
+Definition at line 35 of file Game.\+hpp.
 
 
 
@@ -76,10 +91,48 @@ Definition at line 34 of file Game.\+hpp.
 
 Default Constructor. 
 
-Throws an error if the \mbox{\hyperlink{class_game}{Game}} is already instantiated. 
+Creates the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} and the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. Throws an error if the \mbox{\hyperlink{class_game}{Game}} is already instantiated. 
 
-Definition at line 11 of file Game.\+cpp.
+Definition at line 12 of file Game.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_ad59df6562a58a614fda24622d3715b65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_ad59df6562a58a614fda24622d3715b65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line 29 of file Game.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_game_ae3d112ca6e0e55150d2fdbc704474530_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_game_abb28875d74d25fa9e0dcdbe37c6ad89c}\label{class_game_abb28875d74d25fa9e0dcdbe37c6ad89c}} 
 \index{Game@{Game}!Game@{Game}}
 \index{Game@{Game}!Game@{Game}}
@@ -100,13 +153,13 @@ Delete copy constructor to force singleton behavior.
 {\footnotesize\ttfamily void Game\+::add\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
 
 \begin{DoxyWarning}{Warning}
-DON\textquotesingle{}T FORGET TO DELETE THIS FUNCTION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT\textquotesingle{}S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT 
+DON\textquotesingle{}T FORGET TO DELETE THIS TION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT\textquotesingle{}S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT 
 \end{DoxyWarning}
 \begin{DoxyRefDesc}{Todo}
 \item[\mbox{\hyperlink{todo__todo000004}{Todo}}]delete this\end{DoxyRefDesc}
 
 
-Definition at line 68 of file Game.\+cpp.
+Definition at line 107 of file Game.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -116,44 +169,164 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_game_a472279479c423e4950f6eedf09bf8bf5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_game_a472279479c423e4950f6eedf09bf8bf5_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_game_a31a02c739ee585c35a164248c7f6900a}\label{class_game_a31a02c739ee585c35a164248c7f6900a}} 
+\index{Game@{Game}!distributeEvent@{distributeEvent}}
+\index{distributeEvent@{distributeEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{distributeEvent()}{distributeEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Game\+::distribute\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_custom_event}{Custom\+Event}} process distributor. 
+
+We don\textquotesingle{}t know what to do with the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} so we distribute it to all of the objects \+: \begin{DoxyItemize}
+\item The \mbox{\hyperlink{class_scene}{Scene}}\end{DoxyItemize}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Reference to the event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file Game.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a31a02c739ee585c35a164248c7f6900a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_ac806107ae54ab10c874cb6cb1c0a5239}\label{class_game_ac806107ae54ab10c874cb6cb1c0a5239}} 
+\index{Game@{Game}!distributeEvent@{distributeEvent}}
+\index{distributeEvent@{distributeEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{distributeEvent()}{distributeEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Game\+::distribute\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} process distributor. 
+
+Distributes the \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} to the objects that need it \+: \begin{DoxyItemize}
+\item The \mbox{\hyperlink{class_scene}{Scene}} (will unload it self) \item this ( \begin{DoxySeeAlso}{See also}
+process\+Eventdistribute(\+Scene\+Transition\+Event$\ast$ event) ) It unloads the scene and {\itshape then} loads the new one.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Reference to the event \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 52 of file Game.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_ac806107ae54ab10c874cb6cb1c0a5239_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a873f6180f357664289bdad560c23216b}\label{class_game_a873f6180f357664289bdad560c23216b}} 
+\index{Game@{Game}!distributeEvent@{distributeEvent}}
+\index{distributeEvent@{distributeEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{distributeEvent()}{distributeEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Game\+::distribute\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} process distributor. 
+
+Distributes the \mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} to the objects that need it \+: \begin{DoxyItemize}
+\item this \item The \mbox{\hyperlink{class_scene}{Scene}}\end{DoxyItemize}
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Reference to the event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file Game.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a873f6180f357664289bdad560c23216b_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_game_ad10ed0a88180bf31ea13340a5422816b}\label{class_game_ad10ed0a88180bf31ea13340a5422816b}} 
 \index{Game@{Game}!getActiveScene@{getActiveScene}}
 \index{getActiveScene@{getActiveScene}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{getActiveScene()}{getActiveScene()}}
+\doxysubsubsection{\texorpdfstring{getActiveScene()}{getActiveScene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Game\+::get\+Active\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a non-\/const pointer to the active \mbox{\hyperlink{class_scene}{Scene}}. 
+
+
+
+Definition at line 114 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_aac17860938569d9f8e7bb1196f14ff8f}\label{class_game_aac17860938569d9f8e7bb1196f14ff8f}} 
+\index{Game@{Game}!getActiveScene@{getActiveScene}}
+\index{getActiveScene@{getActiveScene}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getActiveScene()}{getActiveScene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_scene}{Scene}}$\ast$ Game\+::get\+Active\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Get a reference to the active \mbox{\hyperlink{class_scene}{Scene}}. 
 
-The \mbox{\hyperlink{class_scene}{Scene}} pointer is NOT a constant, so it can be used and modified
+This is the const version
 
 \begin{DoxyReturn}{Returns}
 Reference to the active \mbox{\hyperlink{class_scene}{Scene}} 
 \end{DoxyReturn}
 
 
-Definition at line 93 of file Game.\+hpp.
+Definition at line 113 of file Game.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=285pt]{class_game_ad10ed0a88180bf31ea13340a5422816b_icgraph}
+\includegraphics[width=285pt]{class_game_aac17860938569d9f8e7bb1196f14ff8f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_game_a436fc8919d4d15983f076379acc00438}\label{class_game_a436fc8919d4d15983f076379acc00438}} 
 \index{Game@{Game}!getEventHandler@{getEventHandler}}
 \index{getEventHandler@{getEventHandler}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{getEventHandler()}{getEventHandler()}}
+\doxysubsubsection{\texorpdfstring{getEventHandler()}{getEventHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_event_handler}{Event\+Handler}}$\ast$ Game\+::get\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a non-\/const pointer to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}. 
+
+
+
+Definition at line 94 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_ae64f63701924c83c2506c3a506433be2}\label{class_game_ae64f63701924c83c2506c3a506433be2}} 
+\index{Game@{Game}!getEventHandler@{getEventHandler}}
+\index{getEventHandler@{getEventHandler}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getEventHandler()}{getEventHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_event_handler}{Event\+Handler}}$\ast$ Game\+::get\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -166,39 +339,114 @@ Reference to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}
 \end{DoxyReturn}
 
 
-Definition at line 75 of file Game.\+hpp.
+Definition at line 93 of file Game.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{class_game_a436fc8919d4d15983f076379acc00438_icgraph}
+\includegraphics[width=291pt]{class_game_ae64f63701924c83c2506c3a506433be2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a19798a4f4c50037e1c5cd8c5d491fef9}\label{class_game_a19798a4f4c50037e1c5cd8c5d491fef9}} 
+\index{Game@{Game}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}} $\ast$ Game\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the instance of the \mbox{\hyperlink{class_game}{Game}} (Singleton), creates it if it doesn\textquotesingle{}t exist. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the \mbox{\hyperlink{class_game}{Game}} 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file Game.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a19798a4f4c50037e1c5cd8c5d491fef9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_game_a19798a4f4c50037e1c5cd8c5d491fef9_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_game_ab09c78ab7a7b725eb8aa4724688137d1}\label{class_game_ab09c78ab7a7b725eb8aa4724688137d1}} 
 \index{Game@{Game}!getRenderEngine@{getRenderEngine}}
 \index{getRenderEngine@{getRenderEngine}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{getRenderEngine()}{getRenderEngine()}}
+\doxysubsubsection{\texorpdfstring{getRenderEngine()}{getRenderEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_render_engine}{Render\+Engine}}$\ast$ Game\+::get\+Render\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a non-\/const pointer to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. 
+
+
+
+Definition at line 104 of file Game.\+hpp.
+
+\mbox{\Hypertarget{class_game_a7f25e2728d6e9a58fb2d770b574137cf}\label{class_game_a7f25e2728d6e9a58fb2d770b574137cf}} 
+\index{Game@{Game}!getRenderEngine@{getRenderEngine}}
+\index{getRenderEngine@{getRenderEngine}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getRenderEngine()}{getRenderEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_render_engine}{Render\+Engine}}$\ast$ Game\+::get\+Render\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Get a reference to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. 
 
-The \mbox{\hyperlink{class_render_engine}{Render\+Engine}} pointer is NOT a constant, so it can be used and modified
+This is the const version
 
 \begin{DoxyReturn}{Returns}
 Reference to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}} 
 \end{DoxyReturn}
 
 
-Definition at line 84 of file Game.\+hpp.
+Definition at line 103 of file Game.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=292pt]{class_game_ab09c78ab7a7b725eb8aa4724688137d1_icgraph}
+\includegraphics[width=292pt]{class_game_a7f25e2728d6e9a58fb2d770b574137cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a18f1ab35677c36a6a470925d0993e292}\label{class_game_a18f1ab35677c36a6a470925d0993e292}} 
+\index{Game@{Game}!loadScene@{loadScene}}
+\index{loadScene@{loadScene}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{loadScene()}{loadScene()}}
+{\footnotesize\ttfamily void Game\+::load\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Game.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a18f1ab35677c36a6a470925d0993e292_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a18f1ab35677c36a6a470925d0993e292_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_game_a4d0c0503733cc50b0b5cb8d7ef1237ec}\label{class_game_a4d0c0503733cc50b0b5cb8d7ef1237ec}} 
@@ -219,103 +467,6 @@ Delete copy assignment to force singleton behavior.
 
 
 
-\mbox{\hyperlink{class_custom_event}{Custom\+Event}} process distributor. 
-
-We don\textquotesingle{}t know what to do with the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} so we distribute it to all of the objects \+: \begin{DoxyItemize}
-\item The \mbox{\hyperlink{class_scene}{Scene}}\end{DoxyItemize}
-
-\begin{DoxyParams}{Parameters}
-{\em event} & Reference to the event \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 48 of file Game.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_game_a01f802010c5c0265601d516341417480_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}\label{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}} 
-\index{Game@{Game}!processEvent@{processEvent}}
-\index{processEvent@{processEvent}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily void Game\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
-
-
-
-\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} process distributor. 
-
-Distributes the \mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} to the objects that need it \+: \begin{DoxyItemize}
-\item The \mbox{\hyperlink{class_scene}{Scene}} (will unload it self) \item this ( \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_game_a0f8625023fc606a99796cc1d69f618fe}{process\+Event\+Func(\+Scene\+Transition\+Event$\ast$ event)}} ) It unloads the scene and {\itshape then} loads the new one.
-\end{DoxySeeAlso}
-
-\begin{DoxyParams}{Parameters}
-{\em event} & Reference to the event \\
-\hline
-\end{DoxyParams}
-\end{DoxyItemize}
-
-
-Definition at line 26 of file Game.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_game_a8343a84bc062e46afc71a4d7aadc6351}\label{class_game_a8343a84bc062e46afc71a4d7aadc6351}} 
-\index{Game@{Game}!processEvent@{processEvent}}
-\index{processEvent@{processEvent}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily void Game\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
-
-
-
-\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} process distributor. 
-
-Distributes the \mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} to the objects that need it \+: \begin{DoxyItemize}
-\item this \item The \mbox{\hyperlink{class_scene}{Scene}}\end{DoxyItemize}
-
-\begin{DoxyParams}{Parameters}
-{\em event} & Reference to the event \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 37 of file Game.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_game_a16b9d7c51cc228b59e1272b27bded4bf}\label{class_game_a16b9d7c51cc228b59e1272b27bded4bf}} 
-\index{Game@{Game}!processEventFunc@{processEventFunc}}
-\index{processEventFunc@{processEventFunc}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily void Game\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_custom_event}{Custom\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
-
-
-
 Process a \mbox{\hyperlink{class_custom_event}{Custom\+Event}}. 
 
 What it does depends on the type of the \mbox{\hyperlink{class_custom_event}{Custom\+Event}}
@@ -327,13 +478,13 @@ What it does depends on the type of the \mbox{\hyperlink{class_custom_event}{Cus
 \end{DoxyParams}
 
 
-Definition at line 52 of file Game.\+cpp.
+Definition at line 91 of file Game.\+cpp.
 
-\mbox{\Hypertarget{class_game_a0f8625023fc606a99796cc1d69f618fe}\label{class_game_a0f8625023fc606a99796cc1d69f618fe}} 
-\index{Game@{Game}!processEventFunc@{processEventFunc}}
-\index{processEventFunc@{processEventFunc}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily void Game\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}\label{class_game_a2a05b266e2a74d2e9f9a590c90e73ade}} 
+\index{Game@{Game}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Game\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_transition_event}{Scene\+Transition\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -348,14 +499,14 @@ Loads a new \mbox{\hyperlink{class_scene}{Scene}}
 \end{DoxyParams}
 
 
-Definition at line 31 of file Game.\+cpp.
+Definition at line 58 of file Game.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=327pt]{class_game_a0f8625023fc606a99796cc1d69f618fe_cgraph}
+\includegraphics[width=350pt]{class_game_a2a05b266e2a74d2e9f9a590c90e73ade_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -363,14 +514,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_game_a0f8625023fc606a99796cc1d69f618fe_icgraph}
+\includegraphics[width=350pt]{class_game_a2a05b266e2a74d2e9f9a590c90e73ade_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_game_a00f5148b5d6a33300719534ec9f0c75b}\label{class_game_a00f5148b5d6a33300719534ec9f0c75b}} 
-\index{Game@{Game}!processEventFunc@{processEventFunc}}
-\index{processEventFunc@{processEventFunc}!Game@{Game}}
-\doxysubsubsection{\texorpdfstring{processEventFunc()}{processEventFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily void Game\+::process\+Event\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_game_a8343a84bc062e46afc71a4d7aadc6351}\label{class_game_a8343a84bc062e46afc71a4d7aadc6351}} 
+\index{Game@{Game}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Game\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}} $\ast$}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -387,14 +538,14 @@ Process a \mbox{\hyperlink{class_spawn_entity_event}{Spawn\+Entity\+Event}}.
 \end{DoxyParams}
 
 
-Definition at line 42 of file Game.\+cpp.
+Definition at line 79 of file Game.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_game_a00f5148b5d6a33300719534ec9f0c75b_cgraph}
+\includegraphics[width=350pt]{class_game_a8343a84bc062e46afc71a4d7aadc6351_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_game_a15ddd769261d923827a3cdf41499c843}\label{class_game_a15ddd769261d923827a3cdf41499c843}} 
@@ -409,9 +560,10 @@ Render the \mbox{\hyperlink{class_game}{Game}}.
 
 Renders the active \mbox{\hyperlink{class_scene}{Scene}}. 
 
-Definition at line 62 of file Game.\+cpp.
+Definition at line 101 of file Game.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -442,13 +594,14 @@ Set the active \mbox{\hyperlink{class_scene}{Scene}}.
 \end{DoxyParams}
 
 
-Definition at line 66 of file Game.\+hpp.
+Definition at line 84 of file Game.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=284pt]{class_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph}
+\includegraphics[width=350pt]{class_game_a6c0a61f4714c860d9d21a9a121d3cc74_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5}\label{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5}} 
@@ -461,6 +614,9 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Set the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}. 
 
+\begin{DoxyWarning}{Warning}
+Deprecated (event\+Handler is set in the constructor)
+\end{DoxyWarning}
 
 \begin{DoxyParams}{Parameters}
 {\em event\+Handler} & Reference to the \mbox{\hyperlink{class_event_handler}{Event\+Handler}} \\
@@ -468,15 +624,8 @@ Set the \mbox{\hyperlink{class_event_handler}{Event\+Handler}}.
 \end{DoxyParams}
 
 
-Definition at line 52 of file Game.\+hpp.
+Definition at line 68 of file Game.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=290pt]{class_game_aa0d7dcb0266efa4a0ceda5bec22f51a5_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_game_aa2d79324af14500b9f509c19c57dc3ac}\label{class_game_aa2d79324af14500b9f509c19c57dc3ac}} 
 \index{Game@{Game}!setRenderEngine@{setRenderEngine}}
 \index{setRenderEngine@{setRenderEngine}!Game@{Game}}
@@ -487,6 +636,9 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Set the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}. 
 
+\begin{DoxyWarning}{Warning}
+Deprecated (render\+Engine is set in the constructor)
+\end{DoxyWarning}
 
 \begin{DoxyParams}{Parameters}
 {\em render\+Engine} & Reference to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}} \\
@@ -494,20 +646,13 @@ Set the \mbox{\hyperlink{class_render_engine}{Render\+Engine}}.
 \end{DoxyParams}
 
 
-Definition at line 59 of file Game.\+hpp.
+Definition at line 77 of file Game.\+hpp.
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=291pt]{class_game_aa2d79324af14500b9f509c19c57dc3ac_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_game_aae26066798d381cb711918f0b59958a5}\label{class_game_aae26066798d381cb711918f0b59958a5}} 
+\mbox{\Hypertarget{class_game_a19446234f66ae67091b3af08c7ba6869}\label{class_game_a19446234f66ae67091b3af08c7ba6869}} 
 \index{Game@{Game}!throwEvent@{throwEvent}}
 \index{throwEvent@{throwEvent}!Game@{Game}}
 \doxysubsubsection{\texorpdfstring{throwEvent()}{throwEvent()}}
-{\footnotesize\ttfamily void Game\+::throw\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event}{Event}} $\ast$}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+::throw\+Event (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_event}{Event}} $>$}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -522,20 +667,22 @@ This doesn\textquotesingle{}t actually care about the type of the event, it just
 \end{DoxyParams}
 
 
-Definition at line 19 of file Game.\+cpp.
+Definition at line 45 of file Game.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_game_aae26066798d381cb711918f0b59958a5_cgraph}
+\includegraphics[width=350pt]{class_game_a19446234f66ae67091b3af08c7ba6869_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_game_aae26066798d381cb711918f0b59958a5_icgraph}
+\includegraphics[width=350pt]{class_game_a19446234f66ae67091b3af08c7ba6869_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_game_a79df6376b332d63c9eca0dcee30305c3}\label{class_game_a79df6376b332d63c9eca0dcee30305c3}} 
@@ -550,13 +697,14 @@ Update the \mbox{\hyperlink{class_game}{Game}}.
 
 Updates the active \mbox{\hyperlink{class_scene}{Scene}}. 
 
-Definition at line 56 of file Game.\+cpp.
+Definition at line 95 of file Game.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_game_a79df6376b332d63c9eca0dcee30305c3_cgraph}
+\includegraphics[width=288pt]{class_game_a79df6376b332d63c9eca0dcee30305c3_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak

@@ -20,7 +20,8 @@ Inheritance diagram for Vertical\+Transition\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Vertical\+Transition\+:\nopagebreak
+Collaboration diagram for Vertical\+Transition\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,7 +33,7 @@ Collaboration diagram for Vertical\+Transition\+:\nopagebreak
 \item 
 \mbox{\hyperlink{class_vertical_transition_aa488132ba6bc42c4fd527186ff93e20c}{Vertical\+Transition}} (\mbox{\hyperlink{class_scene}{Scene}} $\ast$scene, std\+::string target, std\+::string name, int start, int end, bool down=true)
 \begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_vertical_transition}{Vertical\+Transition}} from a \mbox{\hyperlink{class_scene}{Scene}}, a target \mbox{\hyperlink{class_scene}{Scene}}, a name, a start position, an end position and a direction. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}{check\+Transition}} (\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$player\+\_\+tr) const override
+bool \mbox{\hyperlink{class_vertical_transition_a8972197e277aa315fa3551af38658663}{check\+Transition}} (\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$player\+\_\+tr) const override
 \begin{DoxyCompactList}\small\item\em Checks if the player is within the activation zone of the transition. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -42,7 +43,7 @@ Vertical \mbox{\hyperlink{class_transition}{Transition}} to a neighboring scene.
 
 A Vertical \mbox{\hyperlink{class_transition}{Transition}} is essentially a line caracterized by two points on the same x axis That activates if the player is between or past those two points. The \mbox{\hyperlink{class_transition}{Transition}} can either go up or go down. Usually the transition is placed on the top or bottom border of the scene. 
 
-Definition at line 83 of file Border\+Transition.\+hpp.
+Definition at line 82 of file Border\+Transition.\+hpp.
 
 
 
@@ -76,16 +77,16 @@ The start and end are the two opposite \char`\"{}points\char`\"{} of the transit
 \end{DoxyParams}
 
 
-Definition at line 107 of file Border\+Transition.\+hpp.
+Definition at line 106 of file Border\+Transition.\+hpp.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}\label{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8}} 
+\mbox{\Hypertarget{class_vertical_transition_a8972197e277aa315fa3551af38658663}\label{class_vertical_transition_a8972197e277aa315fa3551af38658663}} 
 \index{VerticalTransition@{VerticalTransition}!checkTransition@{checkTransition}}
 \index{checkTransition@{checkTransition}!VerticalTransition@{VerticalTransition}}
 \doxysubsubsection{\texorpdfstring{checkTransition()}{checkTransition()}}
-{\footnotesize\ttfamily bool Vertical\+Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transformable_component}{Transformable\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Vertical\+Transition\+::check\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$}]{player\+\_\+tr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -93,7 +94,7 @@ Checks if the player is within the activation zone of the transition.
 
 
 \begin{DoxyParams}{Parameters}
-{\em player\+\_\+tr} & The player\textquotesingle{}s \mbox{\hyperlink{class_transformable_component}{Transformable\+Component}}\\
+{\em player\+\_\+tr} & The player\textquotesingle{}s sf\+::\+Transformable\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -101,7 +102,7 @@ True if the \mbox{\hyperlink{class_transition}{Transition}} should be activated
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_border_transition_a1ca4255f3643c02b2f142de520afb98f}{Border\+Transition}}.
+Implements \mbox{\hyperlink{class_border_transition_a7462ca126e6908637acd625f9387cc61}{Border\+Transition}}.
 
 
 
@@ -112,7 +113,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_vertical_transition_a33037c27d52f84cb042bcc2314ccc8e8_cgraph}
+\includegraphics[width=333pt]{class_vertical_transition_a8972197e277aa315fa3551af38658663_cgraph}
 \end{center}
 \end{figure}
 

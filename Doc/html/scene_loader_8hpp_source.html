@@ -93,15 +93,24 @@ $(document).ready(function(){initNavTree('scene_loader_8hpp_source.html',''); in
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Headers</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span><span class="preprocessor">#include &quot;<a class="code" href="_scene_8hpp.html">Scenes/Scene.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="class_scene.html">Scene</a>* <a class="code" href="scene_loader_8hpp.html#a995bba05c2653ba534285d4901c3e66b">LoadScene</a>(std::string name, std::string filepath = <span class="stringliteral">&quot;Data/GameData/sceneData.json&quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_menu_scene_8hpp.html">Scenes/BasicScenes/MenuScene.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_gameplay_scene_8hpp.html">Scenes/BasicScenes/GameplayScene.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_parser.html">   14</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_parser.html">Parser</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_scene.html">Scene</a>* <a class="code" href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329">LoadScene</a>(std::string name, std::string filepath = <span class="stringliteral">&quot;Data/GameData/sceneData.json&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed">_sceneTypeToInt</a>(std::string type);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_gameplay_scene_8hpp_html"><div class="ttname"><a href="_gameplay_scene_8hpp.html">GameplayScene.hpp</a></div></div>
+<div class="ttc" id="a_menu_scene_8hpp_html"><div class="ttname"><a href="_menu_scene_8hpp.html">MenuScene.hpp</a></div></div>
 <div class="ttc" id="a_scene_8hpp_html"><div class="ttname"><a href="_scene_8hpp.html">Scene.hpp</a></div></div>
-<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">Base class for all Scenes.</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00035">Scene.hpp:36</a></div></div>
-<div class="ttc" id="ascene_loader_8hpp_html_a995bba05c2653ba534285d4901c3e66b"><div class="ttname"><a href="scene_loader_8hpp.html#a995bba05c2653ba534285d4901c3e66b">LoadScene</a></div><div class="ttdeci">Scene * LoadScene(std::string name, std::string filepath=&quot;Data/GameData/sceneData.json&quot;)</div><div class="ttdoc">Load a scene from a json file.</div><div class="ttdef"><b>Definition:</b> <a href="scene_loader_8cpp_source.html#l00009">sceneLoader.cpp:9</a></div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">Base class for all Scenes.</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hpp_source.html#l00036">Scene.hpp:37</a></div></div>
+<div class="ttc" id="anamespace_parser_html"><div class="ttname"><a href="namespace_parser.html">Parser</a></div><div class="ttdoc">Manages Parsing data from json files to make them usable by the game.</div><div class="ttdef"><b>Definition:</b> <a href="scene_loader_8hpp_source.html#l00014">sceneLoader.hpp:15</a></div></div>
+<div class="ttc" id="anamespace_parser_html_a425e2cae667496fd399c80f6fe08d1ed"><div class="ttname"><a href="namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed">Parser::_sceneTypeToInt</a></div><div class="ttdeci">int _sceneTypeToInt(std::string type)</div><div class="ttdef"><b>Definition:</b> <a href="scene_loader_8cpp_source.html#l00008">sceneLoader.cpp:8</a></div></div>
+<div class="ttc" id="anamespace_parser_html_aa5b7573efb6537c4a3efa8d4bb7d4329"><div class="ttname"><a href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329">Parser::LoadScene</a></div><div class="ttdeci">Scene * LoadScene(std::string name, std::string filepath=&quot;Data/GameData/sceneData.json&quot;)</div><div class="ttdoc">Loads and builds a scene from a json file and returns a pointer to it.</div><div class="ttdef"><b>Definition:</b> <a href="scene_loader_8cpp_source.html#l00019">sceneLoader.cpp:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -15,17 +15,18 @@ Inheritance diagram for Projectile\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Projectile\+:\nopagebreak
+Collaboration diagram for Projectile\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_projectile__coll__graph}
+\includegraphics[width=304pt]{class_projectile__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_projectile_a2146c34f553c3726f76571b268af1e7f}{Projectile}} (const char $\ast$name, sf\+::\+Vector2f position=\{0, 0\}, sf\+::\+Vector2f speed=\{0, 0\})
+\mbox{\hyperlink{class_projectile_ae3fbb8e8fafb3420adca4220a05087c7}{Projectile}} (const std\+::string \&name, sf\+::\+Vector2f position=\{0, 0\}, sf\+::\+Vector2f speed=\{0, 0\})
 \item 
 void \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{update}} () override
 \begin{DoxyCompactList}\small\item\em Update the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -35,29 +36,21 @@ void \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{update
 \doxysubsection{Detailed Description}
 
 
-Definition at line 10 of file Projectile.\+hpp.
+Definition at line 9 of file Projectile.\+hpp.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_projectile_a2146c34f553c3726f76571b268af1e7f}\label{class_projectile_a2146c34f553c3726f76571b268af1e7f}} 
+\mbox{\Hypertarget{class_projectile_ae3fbb8e8fafb3420adca4220a05087c7}\label{class_projectile_ae3fbb8e8fafb3420adca4220a05087c7}} 
 \index{Projectile@{Projectile}!Projectile@{Projectile}}
 \index{Projectile@{Projectile}!Projectile@{Projectile}}
 \doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}}
-{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{sf\+::\+Vector2f}]{position = {\ttfamily \{0,0\}},  }\item[{sf\+::\+Vector2f}]{speed = {\ttfamily \{0,0\}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{sf\+::\+Vector2f}]{position = {\ttfamily \{0,0\}},  }\item[{sf\+::\+Vector2f}]{speed = {\ttfamily \{0,0\}} }\end{DoxyParamCaption})}
 
 
 
 Definition at line 4 of file Projectile.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_projectile_a2146c34f553c3726f76571b268af1e7f_cgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
@@ -71,9 +64,12 @@ Here is the call graph for this function\+:
 
 Update the entity. 
 
+\char`\"{}\+Update\char`\"{} might be a bit misleading as it doesn\textquotesingle{}t fully update the entity. What I mean is it only updates what is possible to update without looking at other entities. Inter-\/entity update is managed in the scenes \+: \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec}{Scene\+::update()}}
+\end{DoxySeeAlso}
 \begin{DoxyNote}{Note}
 Order of Updating should be \+: \begin{DoxyItemize}
-\item yadi-\/yadi-\/yada \item update Entity\+Sprite Component ( \end{DoxyItemize}
+\item independant update (like move or process inputs) \item collisions (check \& process) \item update Entity\+Sprite Component ( \end{DoxyItemize}
 
 \end{DoxyNote}
 \begin{DoxySeeAlso}{See also}
@@ -92,7 +88,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_projectile_ac41ad56034b53e739619fabbd5e49652_cgraph}
+\includegraphics[width=348pt]{class_projectile_ac41ad56034b53e739619fabbd5e49652_cgraph}
 \end{center}
 \end{figure}
 

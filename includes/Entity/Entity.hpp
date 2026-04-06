@@ -101,6 +101,13 @@ public:
     const std::string& getName() const {return name_;}
 
     ////////////////////////////////////////////////////////////
+    /// \brief Get the Transformable of the entity
+    ///
+    /// \returns Pointer to the Transformable
+    ////////////////////////////////////////////////////////////
+    const sf::Transformable* getTransformable() const {return transformable;}
+
+    ////////////////////////////////////////////////////////////
     /// \brief Get the current scene of the entity
     ///
     /// \returns Pointer to the current scene
@@ -119,9 +126,14 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Update the entity
     ///
+    /// "Update" might be a bit misleading as it doesn't fully update the entity.
+    /// What I mean is it only updates what is possible to update without looking at other entities.
+    /// Inter-entity update is managed in the scenes. \see Scene::update()
+    ///
     /// \note Order of Updating should be :
-    /// \li yadi-yadi-yada
-    /// \li update EntitySprite Component ( \see EntitySpriteComponent::update)
+    /// \li independant update (like move or process inputs)
+    /// \li collisions         (check & process)
+    /// \li update EntitySprite Component \see EntitySpriteComponent::update()
     ////////////////////////////////////////////////////////////
     virtual void update() = 0;
 

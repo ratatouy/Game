@@ -1,0 +1,4 @@
+<map id="RenderEngine::addDrawable" name="RenderEngine::addDrawable">
+<area shape="rect" id="node1" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node2" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="260,5,355,32"/>
+</map>

@@ -3,6 +3,11 @@
 
 #include "Entity/Ennemies/Ennemy.hpp"
 
+void Ennemy::processCollision(const CollidableEntity* other)
+{
+    Logger::log(ENTITY, INFO, "COLLISION WITH " + other->getName());
+}
+
 void Ennemy::processEvent(CustomEvent* event) {
     HitEvent* H = dynamic_cast<HitEvent*>(event);
 

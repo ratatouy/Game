@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_5f_323',['name_',['../class_entity.html#a79d1831c25273574dc266bf762107efc',1,'Entity::name_()'],['../class_transition.html#a1fa1ef945462a1d90613db407f68bedd',1,'Transition::name_()']]]
+  ['game_5f_357',['game_',['../class_scene.html#aa9e136c3f22cf81289b7fd2795e3fce8',1,'Scene']]]
 ];

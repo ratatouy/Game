@@ -1,7 +1,18 @@
 <map id="Game::processEvent" name="Game::processEvent">
-<area shape="rect" id="node1" title="SceneTransitionEvent process distributor." alt="" coords="5,31,161,57"/>
-<area shape="rect" id="node2" href="$class_scene.html#a8436de839f7ec4ddc18ae87f9dd32a99" title="SceneTransitionEvent process distributor." alt="" coords="225,5,381,32"/>
-<area shape="rect" id="node4" href="$class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="209,56,396,83"/>
-<area shape="rect" id="node3" href="$class_scene.html#a74062e0cbccb836a2ea6cbdc09166259" title="Process a SceneTransitionEvent." alt="" coords="444,5,631,32"/>
-<area shape="rect" id="node5" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="490,56,585,83"/>
+<area shape="rect" id="node1" title="Process a SceneTransitionEvent." alt="" coords="5,300,161,327"/>
+<area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="229,115,359,141"/>
+<area shape="rect" id="node4" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="722,275,817,301"/>
+<area shape="rect" id="node9" href="$class_render_engine.html#a81c134bae1bd7c5a59a95199085c1ea8" title=" " alt="" coords="209,275,379,301"/>
+<area shape="rect" id="node10" href="$class_scene.html#aefd8a138c9d7c93932baa26014ec3617" title="Extracts an entity from the scene." alt="" coords="217,325,371,352"/>
+<area shape="rect" id="node11" href="$class_scene_transition_event.html#a05df57ec22c7ac9eebb738100cc46cab" title=" " alt="" coords="213,377,375,418"/>
+<area shape="rect" id="node12" href="$class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="226,443,362,469"/>
+<area shape="rect" id="node3" href="$class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="427,173,633,200"/>
+<area shape="rect" id="node5" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="465,56,595,83"/>
+<area shape="rect" id="node6" href="$class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="706,5,833,32"/>
+<area shape="rect" id="node8" href="$class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e" title="Returns a const pointer to the map containing all the sprites." alt="" coords="443,107,617,149"/>
+<area shape="rect" id="node7" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="706,56,833,83"/>
+<area shape="rect" id="node13" href="$namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="460,528,600,555"/>
+<area shape="rect" id="node15" href="$class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74" title="Set the active Scene." alt="" coords="445,427,615,453"/>
+<area shape="rect" id="node16" href="$class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb" title="Set the reference to the Game." alt="" coords="466,477,594,504"/>
+<area shape="rect" id="node14" href="$namespace_parser.html#a425e2cae667496fd399c80f6fe08d1ed" title=" " alt="" coords="681,528,857,555"/>
 </map>

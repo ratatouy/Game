@@ -1,29 +1,4 @@
 var searchData=
 [
-  ['game_239',['Game',['../class_game.html#abb28875d74d25fa9e0dcdbe37c6ad89c',1,'Game::Game(const Game &amp;)=delete'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
-  ['get_5fnb_5fsprites_240',['get_nb_sprites',['../class_entity_sprite_component.html#a35c033b64ac29f02624628265a1a7438',1,'EntitySpriteComponent']]],
-  ['getactivescene_241',['getActiveScene',['../class_game.html#ad10ed0a88180bf31ea13340a5422816b',1,'Game']]],
-  ['getcurrentevent_242',['getCurrentEvent',['../class_event_handler.html#acd62960f00deb706634059dc47e1d287',1,'EventHandler']]],
-  ['getcurrentscene_243',['getCurrentScene',['../class_entity.html#a92523529fc49fc7e643c45bae42dd7b4',1,'Entity']]],
-  ['getdata_244',['getData',['../class_custom_event.html#afe9e4741e5d445e29c7fda11fcd63a23',1,'CustomEvent::getData()'],['../class_hit_event.html#a76154ecea159d09b3e78668b1d8bfcc7',1,'HitEvent::getData()']]],
-  ['getdrawable_245',['getDrawable',['../class_render_engine.html#a3377beef102f78b7e035575ff5d8d199',1,'RenderEngine']]],
-  ['getentity_246',['getEntity',['../class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af',1,'SpawnEntityEvent::getEntity()'],['../class_scene.html#ad2768e06ec35eaa5150285e975a6aaba',1,'Scene::getEntity()']]],
-  ['getentitysprite_247',['getEntitySprite',['../class_entity.html#a945edcaab37c678637655648dda23694',1,'Entity']]],
-  ['geteventhandler_248',['getEventHandler',['../class_game.html#a436fc8919d4d15983f076379acc00438',1,'Game']]],
-  ['gethit_249',['getHit',['../class_ennemy.html#a4784be82a5ce923d1494477c55bbc297',1,'Ennemy']]],
-  ['getname_250',['getName',['../class_entity.html#a218babc804115cc50d513daa5a286dd9',1,'Entity']]],
-  ['getorigin_251',['getOrigin',['../class_transformable_component.html#a813d766b9d4de6aa431b55216182c74b',1,'TransformableComponent::getOrigin()'],['../class_scene.html#a7e3f2ea607864c63d1c1fa6c17aa335f',1,'Scene::getOrigin()']]],
-  ['getposition_252',['getPosition',['../class_transformable_component.html#ac1171dc4f5fede3eaa7e8270077ab3f1',1,'TransformableComponent']]],
-  ['getrenderengine_253',['getRenderEngine',['../class_game.html#ab09c78ab7a7b725eb8aa4724688137d1',1,'Game']]],
-  ['getrotation_254',['getRotation',['../class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff',1,'TransformableComponent']]],
-  ['getscale_255',['getScale',['../class_transformable_component.html#a9a5d1925296bec97af794a8eb825fe37',1,'TransformableComponent']]],
-  ['getsize_256',['getSize',['../class_transformable_component.html#a4246021c8025166edf9d0633ceb8247b',1,'TransformableComponent::getSize()'],['../class_scene.html#af5352811e65e1fa37a626fbc2f690584',1,'Scene::getSize()']]],
-  ['getspritedata_257',['GetSpriteData',['../class_entity_sprite_component.html#a59288ce19ca7546db8d06894a6844efe',1,'EntitySpriteComponent']]],
-  ['gettargetname_258',['getTargetName',['../class_transition.html#a3cb10e25c70bd60235e2f21d82af5359',1,'Transition']]],
-  ['getthisspritedata_259',['GetThisSpriteData',['../class_entity_sprite_component.html#a92256ef1156a2946db6c8310c2eca67d',1,'EntitySpriteComponent']]],
-  ['getthisspritelocalsprite_260',['GetThisSpriteLocalSprite',['../class_entity_sprite_component.html#a6c9b5509c09333e55275c4cff0d8be4e',1,'EntitySpriteComponent']]],
-  ['getthisspritelocaltexture_261',['GetThisSpriteLocalTexture',['../class_entity_sprite_component.html#a01f39fbc24f9bf6e642668058931431c',1,'EntitySpriteComponent']]],
-  ['getthisspritelocaltransformable_262',['GetThisSpriteLocalTransformable',['../class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104',1,'EntitySpriteComponent']]],
-  ['gettransformable_263',['getTransformable',['../class_entity.html#ac2993521b23c6efefac5974a100c01b2',1,'Entity']]],
-  ['getwindow_264',['getWindow',['../class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688',1,'RenderEngine']]]
+  ['distributeevent_265',['distributeEvent',['../class_game.html#ac806107ae54ab10c874cb6cb1c0a5239',1,'Game::distributeEvent(SceneTransitionEvent *event)'],['../class_game.html#a873f6180f357664289bdad560c23216b',1,'Game::distributeEvent(SpawnEntityEvent *event)'],['../class_game.html#a31a02c739ee585c35a164248c7f6900a',1,'Game::distributeEvent(CustomEvent *event)'],['../class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6',1,'Scene::distributeEvent()']]]
 ];

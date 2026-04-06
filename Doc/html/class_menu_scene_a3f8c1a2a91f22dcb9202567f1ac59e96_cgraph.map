@@ -1,0 +1,4 @@
+<map id="MenuScene::update" name="MenuScene::update">
+<area shape="rect" id="node1" title="Updates the scene." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$class_menu_scene.html#a06c70e662a8cac1602f8e39c0abc29a6" title=" " alt="" coords="204,5,403,32"/>
+</map>

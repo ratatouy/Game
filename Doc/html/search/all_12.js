@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['warning_157',['WARNING',['../logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a984de77c680eaff141ec910e25568a81',1,'logger.hpp']]],
-  ['write_158',['write',['../settings_loader_8cpp.html#ab6cfd7f622ae73a465fb54f6bd1d0e0d',1,'settingsLoader.cpp']]]
+  ['verticaltransition_172',['VerticalTransition',['../class_vertical_transition.html',1,'VerticalTransition'],['../class_vertical_transition.html#aa488132ba6bc42c4fd527186ff93e20c',1,'VerticalTransition::VerticalTransition()']]]
 ];

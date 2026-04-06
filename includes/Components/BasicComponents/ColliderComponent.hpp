@@ -11,6 +11,7 @@
 /// \brief Adds a collision box to an object
 ///
 /// It should be used to detect intersection between two collision boxes.
+/// Thus we have no need to calculate bounding boxes.
 ////////////////////////////////////////////////////////////
 class ColliderComponent
 {
@@ -18,12 +19,16 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Creates a ColliderComponent from a sf::Transformable
     ///
+    /// Size defaults to {1,1} and offset defaults to {0,0}
+    ///
     /// \param transformable the sf::Transformable to use
     ////////////////////////////////////////////////////////////
     ColliderComponent(sf::Transformable* transformable);
 
     ////////////////////////////////////////////////////////////
     /// \brief Creates a ColliderComponent from a sf::Transformable and a size
+    ///
+    /// Offset defaults to {0,0}
     ///
     /// \param transformable the sf::Transformable to use
     ///
@@ -45,8 +50,40 @@ public:
     
     ////////////////////////////////////////////////////////////
     /// \brief Default destructor
+    ///
+    /// Doesn't destroy the Transformable.
+    /// You don't have to worry if it's in an entity, as it's already done when destroying entity
+    /// But in other cases (which you shouldn't do) it's up to you
     ////////////////////////////////////////////////////////////
-    ~ColliderComponent() = default;
+    ~ColliderComponent() {};
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Sets the transformable of the collider
+    ///
+    /// \param transformable the sf::Transformable to use
+    ////////////////////////////////////////////////////////////
+    void setTransformable(sf::Transformable* transformable) { transformable_ = transformable; }
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Sets the size of the collider
+    ///
+    /// \param size the size of the collider
+    ////////////////////////////////////////////////////////////
+    void setSize(sf::Vector2f size) { size_ = size; }
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Sets the offset of the collider
+    ///
+    /// \param offset the offset of the collider
+    ////////////////////////////////////////////////////////////
+    void setOffset(sf::Vector2f offset) { offset_ = offset; }
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Returns a const pointer to the transformable of the collider
+    ///
+    /// \return The transformable
+    ////////////////////////////////////////////////////////////
+    const sf::Transformable* getTransformable() const { return transformable_; }
 
     ////////////////////////////////////////////////////////////
     /// \brief Returns a const reference to the size of the collider
@@ -69,15 +106,15 @@ public:
     ///
     /// \return true if there is a collision, false otherwise
     ////////////////////////////////////////////////////////////
-    bool hasCollided(ColliderComponent* other) const;
+    bool isCollidingWith(const ColliderComponent* other) const;
 
 private:
     ////////////////////////////////////////////////////////////
     /// Member Data
     ////////////////////////////////////////////////////////////
-        sf::Vector2f size_;                  ///< Size of the collider (it's a rectangle)
-        sf::Vector2f offset_;                ///< Offset of the collider (it's a rectangle)
-public: sf::Transformable* transformable_;   ///< Base transformable of the entity
+    sf::Vector2f size_;                  ///< Size of the collider (it's a rectangle)
+    sf::Vector2f offset_;                ///< Offset of the collider from the entity's transformable position (it's a rectangle)
+    sf::Transformable* transformable_;   ///< Base transformable of the entity
 };
 
 

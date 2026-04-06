@@ -1,4 +1,4 @@
 <map id="SpawnEntityEvent::getEntity" name="SpawnEntityEvent::getEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="240,5,447,32"/>
-<area shape="rect" id="node2" href="$class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title="Process a SpawnEntityEvent." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="209,5,416,32"/>
+<area shape="rect" id="node2" href="$class_game.html#a8343a84bc062e46afc71a4d7aadc6351" title="Process a SpawnEntityEvent." alt="" coords="5,5,161,32"/>
 </map>

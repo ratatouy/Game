@@ -109,14 +109,14 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af5ab7c3f7aae023ea3ae480540dabc2c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#af5ab7c3f7aae023ea3ae480540dabc2c">restart</a> ()</td></tr>
 <tr class="memdesc:af5ab7c3f7aae023ea3ae480540dabc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts the logger, erasing all logs.  <a href="class_logger.html#af5ab7c3f7aae023ea3ae480540dabc2c">More...</a><br /></td></tr>
 <tr class="separator:af5ab7c3f7aae023ea3ae480540dabc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d42db0221fc45fe18d43931638157c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a51d42db0221fc45fe18d43931638157c">log</a> (<a class="el" href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87c">LogType</a> type, <a class="el" href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const std::string &amp;message)</td></tr>
-<tr class="memdesc:a51d42db0221fc45fe18d43931638157c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message to the console, general log file and a specific log file.  <a href="class_logger.html#a51d42db0221fc45fe18d43931638157c">More...</a><br /></td></tr>
-<tr class="separator:a51d42db0221fc45fe18d43931638157c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02426193586d4c570c0bbf4e73807ff3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">log</a> (<a class="el" href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87c">LogType</a> type, <a class="el" href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const std::string &amp;message, bool typeLogOnly=false)</td></tr>
+<tr class="memdesc:a02426193586d4c570c0bbf4e73807ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message to the console, general log file and a specific log file.  <a href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">More...</a><br /></td></tr>
+<tr class="separator:a02426193586d4c570c0bbf4e73807ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A logger to use to log information. </p>
 
-<p class="definition">Definition at line <a class="el" href="logger_8hpp_source.html#l00020">20</a> of file <a class="el" href="logger_8hpp_source.html">logger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="logger_8hpp_source.html#l00022">22</a> of file <a class="el" href="logger_8hpp_source.html">logger.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aefffc02e0c6c0ab09ec1f77fe35f6439"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefffc02e0c6c0ab09ec1f77fe35f6439">&#9670;&nbsp;</a></span>Logger()</h2>
@@ -146,8 +146,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a51d42db0221fc45fe18d43931638157c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51d42db0221fc45fe18d43931638157c">&#9670;&nbsp;</a></span>log()</h2>
+<a id="a02426193586d4c570c0bbf4e73807ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02426193586d4c570c0bbf4e73807ff3">&#9670;&nbsp;</a></span>log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +171,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>typeLogOnly</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,38 +193,55 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Log a message to the console, general log file and a specific log file. </p>
+<p>This checks for muted types and levels</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>The log type</td></tr>
     <tr><td class="paramname">level</td><td>The log level</td></tr>
-    <tr><td class="paramname">message</td><td>The message to log </td></tr>
+    <tr><td class="paramname">message</td><td>The message to log</td></tr>
+    <tr><td class="paramname">typeLogOnly</td><td>Whether to only log to the type specific log file (false by default) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="logger_8hpp_source.html#l00052">52</a> of file <a class="el" href="logger_8hpp_source.html">logger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="logger_8hpp_source.html#l00058">58</a> of file <a class="el" href="logger_8hpp_source.html">logger.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_logger_a51d42db0221fc45fe18d43931638157c_icgraph.png" border="0" usemap="#aclass_logger_a51d42db0221fc45fe18d43931638157c_icgraph" alt=""/></div>
-<map name="aclass_logger_a51d42db0221fc45fe18d43931638157c_icgraph" id="aclass_logger_a51d42db0221fc45fe18d43931638157c_icgraph">
-<area shape="rect" title="Log a message to the console, general log file and a specific log file." alt="" coords="1055,259,1149,285"/>
-<area shape="rect" href="class_render_engine.html#abc2a4ddde4d353c1b889230d60d3e8ec" title=" " alt="" coords="792,5,999,32"/>
-<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="830,56,961,83"/>
-<area shape="rect" href="class_event_handler.html#a06c3a8cd4d8c2cde7c8c1609e2236cfb" title="Add an event to the queue." alt="" coords="806,107,985,133"/>
-<area shape="rect" href="class_game.html#aae26066798d381cb711918f0b59958a5" title="Throw an event to the EventHandler." alt="" coords="587,157,729,184"/>
-<area shape="rect" href="class_scene.html#a7671ad25a45d0dfee2ee110a2dae588a" title="Throws the event to the parent game object." alt="" coords="358,196,501,223"/>
-<area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="137,221,249,248"/>
-<area shape="rect" href="scene_loader_8cpp.html#ab83a699209c86434eef61cc7bf836ba8" title="Load a scene from a json file." alt="" coords="849,309,941,336"/>
-<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="327,360,532,387"/>
-<area shape="rect" href="class_game.html#a8343a84bc062e46afc71a4d7aadc6351" title="SpawnEntityEvent process distributor." alt="" coords="817,411,973,437"/>
-<area shape="rect" href="class_game.html#a0f8625023fc606a99796cc1d69f618fe" title="Process a SceneTransitionEvent." alt="" coords="802,461,989,488"/>
-<area shape="rect" href="class_menu_scene.html#a9bc01005e87b0fde5324da4ef1f95bd3" title="Process the SceneTransitionEvent." alt="" coords="784,512,1007,539"/>
-<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="593,31,723,57"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,145,60,172"/>
-<area shape="rect" href="class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title="Process a SpawnEntityEvent." alt="" coords="336,56,523,83"/>
-<area shape="rect" href="class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="108,171,279,197"/>
-<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="SceneTransitionEvent process distributor." alt="" coords="580,436,736,463"/>
+<div class="center"><img src="class_logger_a02426193586d4c570c0bbf4e73807ff3_icgraph.png" border="0" usemap="#aclass_logger_a02426193586d4c570c0bbf4e73807ff3_icgraph" alt=""/></div>
+<map name="aclass_logger_a02426193586d4c570c0bbf4e73807ff3_icgraph" id="aclass_logger_a02426193586d4c570c0bbf4e73807ff3_icgraph">
+<area shape="rect" title="Log a message to the console, general log file and a specific log file." alt="" coords="1136,671,1231,698"/>
+<area shape="rect" href="class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="859,241,1066,267"/>
+<area shape="rect" href="class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="370,405,526,431"/>
+<area shape="rect" href="class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,481,295,507"/>
+<area shape="rect" href="class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,405,313,431"/>
+<area shape="rect" href="class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="897,190,1028,217"/>
+<area shape="rect" href="class_event_handler.html#aea66f9f4c785d3bb47fe6e9b10e93193" title="Add an event to the queue." alt="" coords="873,849,1052,875"/>
+<area shape="rect" href="class_game.html#a19446234f66ae67091b3af08c7ba6869" title="Throw an event to the EventHandler." alt="" coords="615,798,757,825"/>
+<area shape="rect" href="class_scene.html#a75990ee1152181d4843dfc8f2e5cff90" title="Throws the event to the parent game object." alt="" coords="377,747,519,774"/>
+<area shape="rect" href="class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="155,693,267,719"/>
+<area shape="rect" href="class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a" title="Adds a ShaderDrawable by constructing the shader." alt="" coords="837,950,1088,977"/>
+<area shape="rect" href="class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4" title="Attaches a Shader to a Drawable." alt="" coords="583,917,789,959"/>
+<area shape="rect" href="class_entity_sprite_component.html#ad38ac17f0cb24f50ad919eaedcc28e4c" title="Adds a sprite to the entity." alt="" coords="361,631,535,672"/>
+<area shape="rect" href="class_render_engine.html#a81c134bae1bd7c5a59a95199085c1ea8" title=" " alt="" coords="601,342,771,369"/>
+<area shape="rect" href="class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6" title="CustomEvent process distributor." alt="" coords="879,1001,1047,1027"/>
+<area shape="rect" href="class_scene.html#aefd8a138c9d7c93932baa26014ec3617" title="Extracts an entity from the scene." alt="" coords="609,393,763,419"/>
+<area shape="rect" href="class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9" title="Get the instance of the Game (Singleton), creates it if it doesn&#39;t exist." alt="" coords="375,114,521,141"/>
+<area shape="rect" href="class_event_handler.html#a258f0a9c3aca4da0b8bf7b994209434e" title="Get the EventHandler instance, creates it if it doesn&#39;t exist." alt="" coords="865,89,1060,115"/>
+<area shape="rect" href="class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="865,139,1061,166"/>
+<area shape="rect" href="class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="618,545,754,571"/>
+<area shape="rect" href="namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="893,595,1033,622"/>
+<area shape="rect" href="class_entity.html#a588098978eea6a3486b7361605ff3f0f" title="Default destructor." alt="" coords="905,1051,1021,1078"/>
+<area shape="rect" href="class_entity_sprite_component.html#adb4ad7ece3f5d3000e189ebb23cdf175" title="Default Destructor." alt="" coords="867,1103,1059,1144"/>
+<area shape="rect" href="class_event_handler.html#a3decb8cd88ba8af2b9b0b0f0f2fcd722" title="Destructor." alt="" coords="854,1169,1071,1195"/>
+<area shape="rect" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530" title="Destructor." alt="" coords="903,1219,1022,1246"/>
+<area shape="rect" href="class_render_engine.html#a22709e8d62956c56b981d4d5d3ee1fc6" title="Destructor." alt="" coords="852,1270,1073,1297"/>
+<area shape="rect" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1" title="Default destructor." alt="" coords="903,1321,1022,1347"/>
+<area shape="rect" href="class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="621,241,751,267"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,545,60,571"/>
+<area shape="rect" href="class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="125,747,296,774"/>
+<area shape="rect" href="class_game.html#a31a02c739ee585c35a164248c7f6900a" title="CustomEvent process distributor." alt="" coords="602,1001,770,1027"/>
+<area shape="rect" href="class_game.html#ad59df6562a58a614fda24622d3715b65" title="Default Constructor." alt="" coords="632,114,740,141"/>
 </map>
 </div>
 
@@ -249,7 +272,7 @@ Here is the caller graph for this function:</div>
 
 <p>Restarts the logger, erasing all logs. </p>
 
-<p class="definition">Definition at line <a class="el" href="logger_8hpp_source.html#l00028">28</a> of file <a class="el" href="logger_8hpp_source.html">logger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="logger_8hpp_source.html#l00030">30</a> of file <a class="el" href="logger_8hpp_source.html">logger.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

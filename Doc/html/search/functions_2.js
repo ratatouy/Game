@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['checktransition_233',['checkTransition',['../class_scene.html#af024b75792e4a2304ad2eb73779f95be',1,'Scene::checkTransition()'],['../class_border_transition.html#a50645d25411d2e6e65f169614514b595',1,'BorderTransition::checkTransition() const override=0'],['../class_border_transition.html#a1ca4255f3643c02b2f142de520afb98f',1,'BorderTransition::checkTransition(TransformableComponent *player_tr) const override=0'],['../class_vertical_transition.html#a33037c27d52f84cb042bcc2314ccc8e8',1,'VerticalTransition::checkTransition()'],['../class_horizontal_transition.html#a843215454768a5d4e0294396c143fbd3',1,'HorizontalTransition::checkTransition()'],['../class_transition.html#a2e840d974d8d1173cab9ba4a1dd87766',1,'Transition::checkTransition() const =0'],['../class_transition.html#a947835842c2edec079c354563aa354b4',1,'Transition::checkTransition(TransformableComponent *player_tr) const =0']]]
+  ['bordertransition_260',['BorderTransition',['../class_border_transition.html#ab2218600ed3ea847458145025578f13c',1,'BorderTransition']]]
 ];

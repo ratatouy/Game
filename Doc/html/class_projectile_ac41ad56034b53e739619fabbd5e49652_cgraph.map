@@ -1,10 +1,4 @@
 <map id="Projectile::update" name="Projectile::update">
-<area shape="rect" id="node1" title="Update the entity." alt="" coords="5,76,141,102"/>
-<area shape="rect" id="node2" href="$class_transformable_component.html#ac1171dc4f5fede3eaa7e8270077ab3f1" title="Position Getter." alt="" coords="428,6,619,47"/>
-<area shape="rect" id="node3" href="$class_transformable_component.html#ad64c6d6a93c3d281ef130e2a72006491" title="Rotate the transformable clockwise." alt="" coords="189,35,380,76"/>
-<area shape="rect" id="node4" href="$class_transformable_component.html#a7619cabe7dc31c82b2987e4dad5fe4e3" title="Position Setter." alt="" coords="189,100,380,142"/>
-<area shape="rect" id="node5" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title=" " alt="" coords="198,166,371,207"/>
-<area shape="rect" id="node6" href="$class_transformable_component.html#a813d766b9d4de6aa431b55216182c74b" title="Origin Getter." alt="" coords="428,100,619,142"/>
-<area shape="rect" id="node7" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title="Rotation Getter." alt="" coords="428,166,619,207"/>
-<area shape="rect" id="node8" href="$class_transformable_component.html#a9a5d1925296bec97af794a8eb825fe37" title="Scale Getter." alt="" coords="428,231,619,272"/>
+<area shape="rect" id="node1" title="Update the entity." alt="" coords="5,13,141,39"/>
+<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates all of the sprites." alt="" coords="189,5,363,47"/>
 </map>

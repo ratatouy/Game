@@ -1,0 +1,8 @@
+<map id="RenderEngine::addDrawable" name="RenderEngine::addDrawable">
+<area shape="rect" id="node1" title="Adds a Drawable with it&#39;s name to the RenderEngine." alt="" coords="744,9,951,36"/>
+<area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="565,9,696,36"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,34,60,61"/>
+<area shape="rect" id="node4" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="361,34,517,61"/>
+<area shape="rect" id="node5" href="$class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,34,295,61"/>
+<area shape="rect" id="node6" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,85,313,112"/>
+</map>

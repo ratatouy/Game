@@ -1,7 +1,11 @@
-<map id="src/Components/EntitySpriteComponent.cpp" name="src/Components/EntitySpriteComponent.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="19,5,226,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,102,85,129"/>
-<area shape="rect" id="node3" href="$_transformable_component_8hpp.html" title=" " alt="" coords="10,184,235,225"/>
-<area shape="rect" id="node5" href="$_entity_sprite_component_8hpp.html" title=" " alt="" coords="159,95,385,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="124,273,271,300"/>
+<map id="src/Components/BasicComponents/EntitySpriteComponent.cpp" name="src/Components/BasicComponents/EntitySpriteComponent.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="105,5,353,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,184,85,211"/>
+<area shape="rect" id="node3" href="$logger_8hpp.html" title=" " alt="" coords="184,102,275,129"/>
+<area shape="rect" id="node8" href="$_entity_sprite_component_8hpp.html" title=" " alt="" coords="367,95,593,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="109,184,168,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="193,184,266,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="290,184,353,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="377,184,452,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="476,184,623,211"/>
 </map>

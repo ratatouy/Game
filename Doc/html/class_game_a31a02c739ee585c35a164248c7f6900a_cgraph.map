@@ -1,0 +1,6 @@
+<map id="Game::distributeEvent" name="Game::distributeEvent">
+<area shape="rect" id="node1" title="CustomEvent process distributor." alt="" coords="5,31,173,57"/>
+<area shape="rect" id="node2" href="$class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6" title="CustomEvent process distributor." alt="" coords="221,56,389,83"/>
+<area shape="rect" id="node3" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="468,5,563,32"/>
+<area shape="rect" id="node4" href="$class_scene.html#a26412fe92865c31bffa33941c0b22dab" title="Process a CustomEvent." alt="" coords="437,56,593,83"/>
+</map>
