@@ -8,7 +8,7 @@ EntitySpriteComponent::~EntitySpriteComponent() {
     Logger::log(ENTITY_SPRITE, INFO, "DESTRUCTING EntitySpriteComponent");
     for (auto i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)
     {
-        delete std::get<2>(i->second); // delete texture
+        delete i->second.texture;
     }
     // Doesn't delete the transformable
 }
@@ -21,7 +21,7 @@ EntitySpriteComponent::~EntitySpriteComponent() {
  * - Add the sprite's local Transformable to the "localSpriteTransformables_" vector
  * - Add the sprite and texture to the "sprites_" and "textures_" vectors
  */
-void EntitySpriteComponent::AddSprite(std::string name, const std::string& filepath)
+void EntitySpriteComponent::addSprite(std::string name, const std::string& filepath)
 {
     Logger::log(ENTITY_SPRITE, INFO, "ADDING sprite "+name+" to an entity");
 
@@ -36,9 +36,7 @@ void EntitySpriteComponent::AddSprite(std::string name, const std::string& filep
         sprite.setRotation(entityTransformable_->getRotation());
         sprite.setScale(entityTransformable_->getScale());
 
-        
-        sprites_data_map_[name] = std::make_tuple(sprite, sf::Transformable(), texture);
-
+        sprites_data_map_[name] = SpriteData(sprite, sf::Transformable(), texture);
 
         nb_sprites_++;
     }
@@ -65,8 +63,8 @@ void EntitySpriteComponent::SetThisSpriteLocalTransform(std::string spriteName, 
 void EntitySpriteComponent::update() {
     for (auto i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)
     {
-        sf::Sprite* sprite = &std::get<0>(i->second);
-        sf::Transformable* localTransfo = &std::get<1>(i->second);
+        sf::Sprite* sprite = &i->second.sprite;
+        sf::Transformable* localTransfo = &i->second.transformable;
 
         sprite->setPosition(entityTransformable_->getPosition() + localTransfo->getPosition());
         sprite->setRotation(entityTransformable_->getRotation() + localTransfo->getRotation());

@@ -1,6 +1,6 @@
 <map id="ColliderComponent::isCollidingWith" name="ColliderComponent::isCollidingWith">
 <area shape="rect" id="node1" title="Checks if there is a collision between two colliders." alt="" coords="792,5,947,47"/>
-<area shape="rect" id="node2" href="$class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84" title="Check collisions with another collidableEntity." alt="" coords="513,13,744,39"/>
+<area shape="rect" id="node2" href="$class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84" title="Checks collisions with another collidableEntity." alt="" coords="513,13,744,39"/>
 <area shape="rect" id="node3" href="$class_gameplay_scene.html#a152b9143efeff8b8ea2f7e9f7e73f1cc" title="Updates all of the entities." alt="" coords="235,13,465,39"/>
 <area shape="rect" id="node4" href="$class_gameplay_scene.html#a8196705b494cceb00a711c0e79ee3a66" title="Update the scene." alt="" coords="5,13,187,39"/>
 </map>

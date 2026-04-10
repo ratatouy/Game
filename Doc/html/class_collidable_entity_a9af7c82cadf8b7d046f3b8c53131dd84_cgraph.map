@@ -1,5 +1,5 @@
 <map id="CollidableEntity::isCollidingWith" name="CollidableEntity::isCollidingWith">
-<area shape="rect" id="node1" title="Check collisions with another collidableEntity." alt="" coords="5,46,236,73"/>
+<area shape="rect" id="node1" title="Checks collisions with another collidableEntity." alt="" coords="5,46,236,73"/>
 <area shape="rect" id="node2" href="$class_collidable_entity.html#a725bd97abf4115914447de27b61981f8" title="Returns a const&#45;pointer to the colliderComponent." alt="" coords="284,5,487,47"/>
 <area shape="rect" id="node3" href="$class_collider_component.html#af77d3778829901af2b056f1d9ab46d2d" title="Checks if there is a collision between two colliders." alt="" coords="308,71,463,112"/>
 </map>

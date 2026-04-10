@@ -1,19 +1,8 @@
 #include <iostream>
 #include <fstream>
-#include "json.hpp"
 
 #include "Loaders/sceneLoader.hpp"
 #include "logger.hpp"
-
-int Parser::_sceneTypeToInt(std::string type)
-{
-    if (type == "MENU")
-        return 0;
-    else if (type == "GAMEPLAY")
-        return 1;
-    else
-        return -1;
-}
 
 
 Scene* Parser::LoadScene(std::string name, std::string filepath)
@@ -21,7 +10,7 @@ Scene* Parser::LoadScene(std::string name, std::string filepath)
     Logger::log(PARSER, INFO, "PARSING scene \""+name+"\"");
 
     // Open the file
-    std::ifstream f("Data/GameData/sceneData.json");
+    std::ifstream f(filepath);
 
     // Get all of the data
     nlohmann::json full_data = nlohmann::json::parse(f);
@@ -47,20 +36,111 @@ Scene* Parser::LoadScene(std::string name, std::string filepath)
     // Create needed components with the right types from the data
     sf::Vector2i origin = {orig[0], orig[1]};
     sf::Vector2u size = {siz[0], siz[1]};
-    int scene_type = _sceneTypeToInt(type);
+
+    // Declare a scene* of any kind
+    Scene* scene;
 
     // Differ on sceneType
-    switch (scene_type)
+    if (type == "MENU")
+            scene = new MenuScene(origin, size);
+    else if (type == "GAMEPLAY")
+            scene = new GameplayScene(origin, size);
+    else
     {
-        case 0:
-            return new MenuScene(origin, size);
-        case 1:
-            return new GameplayScene(origin, size);
-        default:
-        {
-            std::string error = "Scene : \"" + name + "\" not found";
-            Logger::log(PARSER, ERROR, error);
-            throw (std::runtime_error(error));
-        }
+        std::string error = "Scene Type : \"" + name + "\" unknown";
+        Logger::log(PARSER, ERROR, error);
+        throw (std::runtime_error(error));
     }
+
+    // Get all entities<
+    std::vector<Entity*> entities = parseSceneEntities(name);
+
+    // Add them to the scene (works on any kind of scene)
+    for (auto entity : entities)
+    {
+        scene->addEntity(entity);
+    }
+
+    return scene;
+}
+
+/// \todo test with entitiless scenes
+std::vector<Entity*> Parser::parseSceneEntities(std::string name, std::string filepath)
+{
+    // Open the file
+    std::ifstream f(filepath);
+
+    // Get all of the data
+    nlohmann::json full_data = nlohmann::json::parse(f);
+
+    // Get the scene that we want
+    auto scene_entities_data = full_data[name];
+    
+    // Declare the vector
+    std::vector<Entity*> entities = std::vector<Entity*>();
+
+    for (auto it : scene_entities_data)
+    {
+        entities.push_back(parseEntity(it));
+    }
+
+    return entities;
+}
+
+Entity* Parser::parseEntity(nlohmann::json entity_iterator)
+{
+    auto type = entity_iterator["type"];
+    auto name = entity_iterator["name"];
+    auto sprites = entity_iterator["sprites"];
+    auto transformable = entity_iterator["transformable"];
+    
+    std::string nm = name;
+    sf::Transformable* tr = parseTransformable(transformable);
+    EntitySpriteComponent* sp = parseEntitySpriteComponent(sprites, tr);
+
+    if (type == "PLAYER")
+        return new Player(nm, tr, sp);
+    else if (type == "ENNEMY")
+        return new Ennemy(nm, tr, sp);
+    else
+    {
+        std::string error = "Entity type : \"" + nm + "\" unknown";
+        Logger::log(PARSER, ERROR, error);
+        throw (std::runtime_error(error));
+    }
+}
+
+sf::Transformable* Parser::parseTransformable(nlohmann::json transformable_iterator)
+{
+    auto position = transformable_iterator["position"];
+    auto scale = transformable_iterator["scale"];
+    auto origin = transformable_iterator["origin"];
+    float rotation = transformable_iterator["rotation"];
+
+    sf::Vector2f pos = {position[0], position[1]};
+    sf::Vector2f sc  = {scale[0],    scale[1]};
+    sf::Vector2f ori = {origin[0],   origin[1]};
+
+    sf::Transformable* tr = new sf::Transformable();
+    tr->setPosition(pos);
+    tr->setRotation(rotation);
+    tr->setScale(sc);
+    tr->setOrigin(ori);
+
+    return tr;
+}
+
+EntitySpriteComponent* Parser::parseEntitySpriteComponent(nlohmann::json sprites_iterator, sf::Transformable* tr)
+{
+    EntitySpriteComponent* sp = new EntitySpriteComponent(tr);
+
+    // add each sprites to the entity
+    for (auto it : sprites_iterator)
+    {
+        std::string name = it["name"];
+        std::string path = it["filepath"];
+        sp->addSprite(name, path);
+    }
+
+    return sp;
 }

@@ -3,6 +3,7 @@
 ### Actual Coding stuff :
 - [ ] Entity hitboxes
 
+- [ ] Implement EntitySpriteComponent Depth
 - [ ] Implement Entity's Depth
         i.e. an order for updating and rendering entities
 

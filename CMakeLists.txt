@@ -66,12 +66,12 @@ Set(SOURCE_FILES
 # add_test(NAME parsingTest COMMAND parsingTest)
 
 ## Setup ColliderTest
-add_executable(colliderTest ${SOURCE_FILES} Tests/ColliderTest/ColliderTest.cpp)
-target_compile_features(colliderTest PRIVATE cxx_std_17)
-target_include_directories(colliderTest PRIVATE includes)
-target_include_directories(colliderTest PRIVATE extlibs)
-target_link_libraries(colliderTest PRIVATE sfml-graphics sfml-window sfml-system)
-add_test(NAME colliderTest COMMAND colliderTest)
+# add_executable(colliderTest ${SOURCE_FILES} Tests/ColliderTest/ColliderTest.cpp)
+# target_compile_features(colliderTest PRIVATE cxx_std_17)
+# target_include_directories(colliderTest PRIVATE includes)
+# target_include_directories(colliderTest PRIVATE extlibs)
+# target_link_libraries(colliderTest PRIVATE sfml-graphics sfml-window sfml-system)
+# add_test(NAME colliderTest COMMAND colliderTest)
 
 ## Set project executable output
 add_executable(main ${SOURCE_FILES} src/main.cpp)

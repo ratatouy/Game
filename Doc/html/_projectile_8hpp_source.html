@@ -91,12 +91,12 @@ $(document).ready(function(){initNavTree('_projectile_8hpp_source.html',''); ini
 <a href="_projectile_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PROJECTILE_HPP</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PROJECTILE_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_entity_8hpp.html">Entity/Entity.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_collidable_entity_8hpp.html">Entity/CollidableEntity.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_entity_sprite_component_8hpp.html">Components/BasicComponents/EntitySpriteComponent.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_projectile.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_projectile.html">Projectile</a> : <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_projectile.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_projectile.html">Projectile</a> : <span class="keyword">public</span> <a class="code" href="class_collidable_entity.html">CollidableEntity</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    sf::Vector2f speed_;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -104,17 +104,19 @@ $(document).ready(function(){initNavTree('_projectile_8hpp_source.html',''); ini
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_projectile.html#ae3fbb8e8fafb3420adca4220a05087c7">Projectile</a>(<span class="keyword">const</span> std::string&amp; name, sf::Vector2f position = {0,0}, sf::Vector2f speed = {0,0});</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">update</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_projectile.html#a94c22c1b172266bdbe443c326bebe419">processCollision</a>(<span class="keyword">const</span> <a class="code" href="class_collidable_entity.html">CollidableEntity</a>* other) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_entity_8hpp_html"><div class="ttname"><a href="_entity_8hpp.html">Entity.hpp</a></div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_collidable_entity_8hpp_html"><div class="ttname"><a href="_collidable_entity_8hpp.html">CollidableEntity.hpp</a></div></div>
 <div class="ttc" id="a_entity_sprite_component_8hpp_html"><div class="ttname"><a href="_entity_sprite_component_8hpp.html">EntitySpriteComponent.hpp</a></div></div>
-<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">An Entity is an object that has an update and a render method.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00022">Entity.hpp:22</a></div></div>
+<div class="ttc" id="aclass_collidable_entity_html"><div class="ttname"><a href="class_collidable_entity.html">CollidableEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_collidable_entity_8hpp_source.html#l00010">CollidableEntity.hpp:11</a></div></div>
 <div class="ttc" id="aclass_projectile_html"><div class="ttname"><a href="class_projectile.html">Projectile</a></div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8hpp_source.html#l00009">Projectile.hpp:9</a></div></div>
-<div class="ttc" id="aclass_projectile_html_ac41ad56034b53e739619fabbd5e49652"><div class="ttname"><a href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">Projectile::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">Update the entity.</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00012">Projectile.cpp:12</a></div></div>
+<div class="ttc" id="aclass_projectile_html_a94c22c1b172266bdbe443c326bebe419"><div class="ttname"><a href="class_projectile.html#a94c22c1b172266bdbe443c326bebe419">Projectile::processCollision</a></div><div class="ttdeci">void processCollision(const CollidableEntity *other) override</div><div class="ttdoc">Process a Collision with an entity.</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00019">Projectile.cpp:19</a></div></div>
+<div class="ttc" id="aclass_projectile_html_ac41ad56034b53e739619fabbd5e49652"><div class="ttname"><a href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">Projectile::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">Updates the collidableComponent.</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00012">Projectile.cpp:12</a></div></div>
 <div class="ttc" id="aclass_projectile_html_ae3fbb8e8fafb3420adca4220a05087c7"><div class="ttname"><a href="class_projectile.html#ae3fbb8e8fafb3420adca4220a05087c7">Projectile::Projectile</a></div><div class="ttdeci">Projectile(const std::string &amp;name, sf::Vector2f position={0, 0}, sf::Vector2f speed={0, 0})</div><div class="ttdef"><b>Definition:</b> <a href="_projectile_8cpp_source.html#l00004">Projectile.cpp:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

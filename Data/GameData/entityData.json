@@ -1,21 +1,43 @@
 {
-    "lvl1":
+    "a1":
     [
         {
-            "type" : "ennemy",
+            "type" : "ENNEMY",
             "name" : "lili",
             "transformable" : 
             {
                 "position" : [400,0],
-                "size" : [100,100],
                 "scale" : [0.1,0.1],
-                "rotation" : 0
+                "rotation" : 0,
+                "origin" : [0,0]
             },
             "sprites" : 
             [
                 {
                     "name" : "body",
                     "filepath" : "assets/Sprites/lilimanjaro.jpg"
+                }
+            ]
+        }
+    ],
+
+    "a2":
+    [
+        {
+            "type" : "ENNEMY",
+            "name" : "rasputin",
+            "transformable" :
+            {
+                "position" : [400,0],
+                "scale" : [0.1,0.1],
+                "rotation" : 0,
+                "origin" : [0,0]
+            },
+            "sprites" : 
+            [
+                {
+                    "name" : "body",
+                    "filepath" : "assets/Sprites/cluelessline.png"
                 }
             ]
         }

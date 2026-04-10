@@ -1,17 +1,6 @@
 var searchData=
 [
-  ['scene_318',['Scene',['../class_scene.html#a6b04afd7223e00e5b8e901aaae086e9e',1,'Scene']]],
-  ['scenetransitionevent_319',['SceneTransitionEvent',['../class_scene_transition_event.html#aab25626a9e4feb3ecc28b7d5690f401b',1,'SceneTransitionEvent']]],
-  ['setactivescene_320',['setActiveScene',['../class_game.html#a6c0a61f4714c860d9d21a9a121d3cc74',1,'Game']]],
-  ['setcollider_321',['setCollider',['../class_collidable_entity.html#ad776617f7af5a7c496b97e452d8224d0',1,'CollidableEntity']]],
-  ['seteventhandler_322',['setEventHandler',['../class_game.html#aa0d7dcb0266efa4a0ceda5bec22f51a5',1,'Game']]],
-  ['setgame_323',['setGame',['../class_render_engine.html#ab0f7148ace0595342dc89227c75d9ec7',1,'RenderEngine::setGame()'],['../class_event_handler.html#ab74b772e2be9e6fd47d82380475d89f7',1,'EventHandler::setGame()'],['../class_scene.html#a7dd380896c2aae26dc8369eb5dfd7bfb',1,'Scene::setGame()']]],
-  ['setname_324',['setName',['../class_entity.html#a3b4ea16fd386be5ef89e7e5292f820b1',1,'Entity']]],
-  ['setoffset_325',['setOffset',['../class_collider_component.html#ae800d54ec4ba73f69c5e6118549ea3c6',1,'ColliderComponent']]],
-  ['setrenderengine_326',['setRenderEngine',['../class_game.html#aa2d79324af14500b9f509c19c57dc3ac',1,'Game']]],
-  ['setscene_327',['setScene',['../class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff',1,'Entity']]],
-  ['setsize_328',['setSize',['../class_collider_component.html#a4eaafd2cbd0f8514eeecf6489e814122',1,'ColliderComponent']]],
-  ['setthisspritelocaltransform_329',['SetThisSpriteLocalTransform',['../class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53',1,'EntitySpriteComponent']]],
-  ['settransformable_330',['setTransformable',['../class_collider_component.html#af963d61cf0de0763261a85c8cfcd7552',1,'ColliderComponent']]],
-  ['spawnentityevent_331',['SpawnEntityEvent',['../class_spawn_entity_event.html#acfe3862d537eacbbd3e09185251fca34',1,'SpawnEntityEvent']]]
+  ['throwevent_344',['throwEvent',['../class_game.html#a19446234f66ae67091b3af08c7ba6869',1,'Game::throwEvent()'],['../class_scene.html#a75990ee1152181d4843dfc8f2e5cff90',1,'Scene::throwEvent()']]],
+  ['tick_345',['tick',['../class_physic_engine.html#a00c4867c4a3b38a8bd99b08d74762270',1,'PhysicEngine']]],
+  ['transition_346',['Transition',['../class_transition.html#a2a2851923ce33606d5fd6668d1c6e5c0',1,'Transition']]]
 ];

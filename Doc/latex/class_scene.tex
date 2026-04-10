@@ -11,8 +11,7 @@ Base class for all Scenes.
 
 
 
-Inheritance diagram for Scene\+:
-\nopagebreak
+Inheritance diagram for Scene\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Scene\+:
 \end{figure}
 
 
-Collaboration diagram for Scene\+:
-\nopagebreak
+Collaboration diagram for Scene\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -57,7 +55,9 @@ void \mbox{\hyperlink{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e}{add\+Entity
 virtual void \mbox{\hyperlink{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec}{update}} ()=0
 \begin{DoxyCompactList}\small\item\em Updates the scene. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_scene_af024b75792e4a2304ad2eb73779f95be}{check\+Transition}} ()
-\begin{DoxyCompactList}\small\item\em Checks if a transition should be activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if a transition should be activated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a9a2df3d231337abd0ed37540b78909d5}{attach\+Drawables\+To\+Render\+Engine}} (\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$render\+Engine)
+\begin{DoxyCompactList}\small\item\em Gives a reference of all drawables to the render\+Engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -87,7 +87,7 @@ missing elements \+: \begin{DoxyItemize}
 \end{DoxyNote}
 
 
-Definition at line 36 of file Scene.\+hpp.
+Definition at line 37 of file Scene.\+hpp.
 
 
 
@@ -111,7 +111,7 @@ Constructs a \mbox{\hyperlink{class_scene}{Scene}} from its origin and size.
 \end{DoxyParams}
 
 
-Definition at line 46 of file Scene.\+hpp.
+Definition at line 47 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}} 
 \index{Scene@{Scene}!````~Scene@{$\sim$Scene}}
@@ -125,10 +125,9 @@ Default destructor.
 
 
 
-Definition at line 11 of file Scene.\+cpp.
+Definition at line 12 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,9 +149,6 @@ Adds an entity to the scene.
 
 The entity has to be fully constructed before adding it to the scene, this functions just takes a pointer to the entity.
 
-\begin{DoxyWarning}{Warning}
-Beware of deleting the local pointer to the entity when using this method.
-\end{DoxyWarning}
 
 \begin{DoxyParams}{Parameters}
 {\em entity} & entity to add \\
@@ -160,10 +156,9 @@ Beware of deleting the local pointer to the entity when using this method.
 \end{DoxyParams}
 
 
-Definition at line 21 of file Scene.\+cpp.
+Definition at line 22 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -176,6 +171,47 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_scene_ab4bd06a9af64934a38bf75e8b6f1435e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_scene_a9a2df3d231337abd0ed37540b78909d5}\label{class_scene_a9a2df3d231337abd0ed37540b78909d5}} 
+\index{Scene@{Scene}!attachDrawablesToRenderEngine@{attachDrawablesToRenderEngine}}
+\index{attachDrawablesToRenderEngine@{attachDrawablesToRenderEngine}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{attachDrawablesToRenderEngine()}{attachDrawablesToRenderEngine()}}
+{\footnotesize\ttfamily void Scene\+::attach\+Drawables\+To\+Render\+Engine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_render_engine}{Render\+Engine}} $\ast$}]{render\+Engine }\end{DoxyParamCaption})}
+
+
+
+Gives a reference of all drawables to the render\+Engine. 
+
+Asssumes none of those drawables are already attached. If they are, they will be rendered twice with the exact same position \& everything. So beware !!!!!!
+
+It attaches \+: \begin{DoxyItemize}
+\item the entities\end{DoxyItemize}
+Missing \+: \begin{DoxyItemize}
+\item Solid Tiles \item pure render assets\end{DoxyItemize}
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Engine} & Reference to the \mbox{\hyperlink{class_render_engine}{Render\+Engine}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 91 of file Scene.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a9a2df3d231337abd0ed37540b78909d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_a9a2df3d231337abd0ed37540b78909d5_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_scene_af024b75792e4a2304ad2eb73779f95be}\label{class_scene_af024b75792e4a2304ad2eb73779f95be}} 
@@ -193,10 +229,9 @@ True if a transition should be activated
 \end{DoxyReturn}
 
 
-Definition at line 74 of file Scene.\+cpp.
+Definition at line 76 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -222,18 +257,16 @@ Distributes the \mbox{\hyperlink{class_custom_event}{Custom\+Event}} to the obje
 \end{DoxyParams}
 
 
-Definition at line 56 of file Scene.\+cpp.
+Definition at line 58 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_scene_a2efbbd9f044ba4b114b0a067b85843c6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -262,18 +295,16 @@ pointer to the entity, nullptr if not found
 \end{DoxyReturn}
 
 
-Definition at line 38 of file Scene.\+cpp.
+Definition at line 40 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=302pt]{class_scene_aefd8a138c9d7c93932baa26014ec3617_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -304,13 +335,12 @@ pointer to the entity, nullptr if not found
 \mbox{\hyperlink{class_entity}{Entity}}
 \end{DoxySeeAlso}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Make this const\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Make this const\end{DoxyRefDesc}
 
 
-Definition at line 29 of file Scene.\+cpp.
+Definition at line 31 of file Scene.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -332,10 +362,9 @@ Origin of the scene
 \end{DoxyReturn}
 
 
-Definition at line 67 of file Scene.\+hpp.
+Definition at line 68 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -357,10 +386,9 @@ Size of the scene
 \end{DoxyReturn}
 
 
-Definition at line 74 of file Scene.\+hpp.
+Definition at line 75 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -386,10 +414,9 @@ What it does depends on the type of the \mbox{\hyperlink{class_scene}{Scene}} an
 \end{DoxyParams}
 
 
-Definition at line 119 of file Scene.\+hpp.
+Definition at line 120 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -416,10 +443,9 @@ Deprecated (game is set when loading the scene in game\+::load\+Scene)
 \end{DoxyParams}
 
 
-Definition at line 60 of file Scene.\+hpp.
+Definition at line 61 of file Scene.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -448,18 +474,16 @@ This doesn\textquotesingle{}t actually care about the type of the event, it just
 \end{DoxySeeAlso}
 
 
-Definition at line 67 of file Scene.\+cpp.
+Definition at line 69 of file Scene.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_scene_a75990ee1152181d4843dfc8f2e5cff90_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -480,8 +504,7 @@ Updates the scene.
 
 Implemented in \mbox{\hyperlink{class_menu_scene_a3f8c1a2a91f22dcb9202567f1ac59e96}{Menu\+Scene}}, and \mbox{\hyperlink{class_gameplay_scene_a8196705b494cceb00a711c0e79ee3a66}{Gameplay\+Scene}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -503,7 +526,7 @@ List of the entities according to their names.
 
 
 
-Definition at line 164 of file Scene.\+hpp.
+Definition at line 181 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_aa9e136c3f22cf81289b7fd2795e3fce8}\label{class_scene_aa9e136c3f22cf81289b7fd2795e3fce8}} 
 \index{Scene@{Scene}!game\_@{game\_}}
@@ -517,7 +540,7 @@ Member Data.
 
 Reference to the game object 
 
-Definition at line 161 of file Scene.\+hpp.
+Definition at line 178 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_a1b823f2315b01999f9bac4834d14e545}\label{class_scene_a1b823f2315b01999f9bac4834d14e545}} 
 \index{Scene@{Scene}!name\_@{name\_}}
@@ -531,7 +554,7 @@ Name of the current\+\_\+scene.
 
 
 
-Definition at line 162 of file Scene.\+hpp.
+Definition at line 179 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_ac30698bed57efcc02ce34ee8ca7fb89d}\label{class_scene_ac30698bed57efcc02ce34ee8ca7fb89d}} 
 \index{Scene@{Scene}!origin\_@{origin\_}}
@@ -545,7 +568,7 @@ Origin of the current scene in the global space.
 
 
 
-Definition at line 165 of file Scene.\+hpp.
+Definition at line 182 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_ab6170ebe0ff10d34bf3f711a40c271e3}\label{class_scene_ab6170ebe0ff10d34bf3f711a40c271e3}} 
 \index{Scene@{Scene}!size\_@{size\_}}
@@ -559,7 +582,7 @@ Size of the current scene.
 
 
 
-Definition at line 166 of file Scene.\+hpp.
+Definition at line 183 of file Scene.\+hpp.
 
 \mbox{\Hypertarget{class_scene_ab7ee7749266a8b6d9bab5c6d131663b2}\label{class_scene_ab7ee7749266a8b6d9bab5c6d131663b2}} 
 \index{Scene@{Scene}!transition\_map\_@{transition\_map\_}}
@@ -573,7 +596,7 @@ Map of the Transitions.
 
 
 
-Definition at line 163 of file Scene.\+hpp.
+Definition at line 180 of file Scene.\+hpp.
 
 
 

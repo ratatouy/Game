@@ -24,6 +24,7 @@ var annotated_dup =
     [ "Scene", "class_scene.html", "class_scene" ],
     [ "SceneTransitionEvent", "class_scene_transition_event.html", "class_scene_transition_event" ],
     [ "SpawnEntityEvent", "class_spawn_entity_event.html", "class_spawn_entity_event" ],
+    [ "SpriteData", "struct_sprite_data.html", "struct_sprite_data" ],
     [ "Transition", "class_transition.html", "class_transition" ],
     [ "VerticalTransition", "class_vertical_transition.html", "class_vertical_transition" ]
 ];

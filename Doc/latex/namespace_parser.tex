@@ -9,8 +9,14 @@ Manages Parsing data from json files to make them usable by the game.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}{Load\+Scene}} (std\+::string name, std\+::string filepath=\char`\"{}Data/Game\+Data/scene\+Data.\+json\char`\"{})
-\begin{DoxyCompactList}\small\item\em Loads and builds a scene from a json file and returns a pointer to it. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}{\+\_\+scene\+Type\+To\+Int}} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em Loads and builds a scene from a json file and returns it. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{namespace_parser_afac688a0903dec250282357577787197}{parse\+Scene\+Entities}} (std\+::string name, std\+::string filepath=\char`\"{}Data/Game\+Data/entity\+Data.\+json\char`\"{})
+\begin{DoxyCompactList}\small\item\em Loads and builds all entities of a scene from a json file and returns them. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{namespace_parser_a180dc5ba7567e4b88a57dc0f467c676b}{parse\+Entity}} (nlohmann\+::json entity\+\_\+data)
+\item 
+sf\+::\+Transformable $\ast$ \mbox{\hyperlink{namespace_parser_ae6aeb86c091fed93f41e0d8cce4df40f}{parse\+Transformable}} (nlohmann\+::json transformable\+\_\+iterator)
+\item 
+\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$ \mbox{\hyperlink{namespace_parser_a1db6c9f02fc24dda01ac19b6318e41a2}{parse\+Entity\+Sprite\+Component}} (nlohmann\+::json sprites\+\_\+iterator, sf\+::\+Transformable $\ast$tr)
 \end{DoxyCompactItemize}
 
 
@@ -18,24 +24,6 @@ int \mbox{\hyperlink{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}{\+\_\+s
 Manages Parsing data from json files to make them usable by the game. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}\label{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed}} 
-\index{Parser@{Parser}!\_sceneTypeToInt@{\_sceneTypeToInt}}
-\index{\_sceneTypeToInt@{\_sceneTypeToInt}!Parser@{Parser}}
-\doxysubsubsection{\texorpdfstring{\_sceneTypeToInt()}{\_sceneTypeToInt()}}
-{\footnotesize\ttfamily int Parser\+::\+\_\+scene\+Type\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})}
-
-
-
-Definition at line 8 of file scene\+Loader.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespace_parser_a425e2cae667496fd399c80f6fe08d1ed_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}\label{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329}} 
 \index{Parser@{Parser}!LoadScene@{LoadScene}}
 \index{LoadScene@{LoadScene}!Parser@{Parser}}
@@ -44,7 +32,7 @@ Here is the caller graph for this function\+:
 
 
 
-Loads and builds a scene from a json file and returns a pointer to it. 
+Loads and builds a scene from a json file and returns it. 
 
 Loads \+: \begin{DoxyItemize}
 \item origin \item size\end{DoxyItemize}
@@ -65,7 +53,7 @@ Pointer to the loaded scene
 \end{DoxySeeAlso}
 
 
-Definition at line 19 of file scene\+Loader.\+cpp.
+Definition at line 8 of file scene\+Loader.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -81,5 +69,122 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespace_parser_aa5b7573efb6537c4a3efa8d4bb7d4329_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_parser_a180dc5ba7567e4b88a57dc0f467c676b}\label{namespace_parser_a180dc5ba7567e4b88a57dc0f467c676b}} 
+\index{Parser@{Parser}!parseEntity@{parseEntity}}
+\index{parseEntity@{parseEntity}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parseEntity()}{parseEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}} $\ast$ Parser\+::parse\+Entity (\begin{DoxyParamCaption}\item[{nlohmann\+::json}]{entity\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file scene\+Loader.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_a180dc5ba7567e4b88a57dc0f467c676b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_a180dc5ba7567e4b88a57dc0f467c676b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_parser_a1db6c9f02fc24dda01ac19b6318e41a2}\label{namespace_parser_a1db6c9f02fc24dda01ac19b6318e41a2}} 
+\index{Parser@{Parser}!parseEntitySpriteComponent@{parseEntitySpriteComponent}}
+\index{parseEntitySpriteComponent@{parseEntitySpriteComponent}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parseEntitySpriteComponent()}{parseEntitySpriteComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$ Parser\+::parse\+Entity\+Sprite\+Component (\begin{DoxyParamCaption}\item[{nlohmann\+::json}]{sprites\+\_\+iterator,  }\item[{sf\+::\+Transformable $\ast$}]{tr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 133 of file scene\+Loader.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_a1db6c9f02fc24dda01ac19b6318e41a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_a1db6c9f02fc24dda01ac19b6318e41a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_parser_afac688a0903dec250282357577787197}\label{namespace_parser_afac688a0903dec250282357577787197}} 
+\index{Parser@{Parser}!parseSceneEntities@{parseSceneEntities}}
+\index{parseSceneEntities@{parseSceneEntities}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parseSceneEntities()}{parseSceneEntities()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ Parser\+::parse\+Scene\+Entities (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{filepath = {\ttfamily \char`\"{}Data/GameData/entityData.json\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Loads and builds all entities of a scene from a json file and returns them. 
+
+will return empty vector if the scene doesn\textquotesingle{}t exist or doesn\textquotesingle{}t have any data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the scene to load\\
+\hline
+{\em filepath} & Path to the json file (default \+: \char`\"{}\+Data/\+Game\+Data/entity\+Data.\+json\char`\"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of the loaded entities
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_entity}{Entity}}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]test with entitiless scenes \end{DoxyRefDesc}
+
+
+Definition at line 68 of file scene\+Loader.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_afac688a0903dec250282357577787197_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_afac688a0903dec250282357577787197_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_parser_ae6aeb86c091fed93f41e0d8cce4df40f}\label{namespace_parser_ae6aeb86c091fed93f41e0d8cce4df40f}} 
+\index{Parser@{Parser}!parseTransformable@{parseTransformable}}
+\index{parseTransformable@{parseTransformable}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parseTransformable()}{parseTransformable()}}
+{\footnotesize\ttfamily sf\+::\+Transformable $\ast$ Parser\+::parse\+Transformable (\begin{DoxyParamCaption}\item[{nlohmann\+::json}]{transformable\+\_\+iterator }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file scene\+Loader.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_parser_ae6aeb86c091fed93f41e0d8cce4df40f_icgraph}
 \end{center}
 \end{figure}

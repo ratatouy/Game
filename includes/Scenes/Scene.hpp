@@ -15,10 +15,11 @@
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
 
 
-class Game;       // Forward Declaration of Game //
+class Game;         // Forward Declaration of Game //
 
-class Transition; // Forward Declaration of Transition //
+class RenderEngine; // Forward Declaration of RenderEngine //
 
+class Transition;    // Forward Declaration of Transition //
 
 ////////////////////////////////////////////////////////////
 /// \brief Base class for all Scenes
@@ -136,8 +137,6 @@ public:
     /// The entity has to be fully constructed before adding it to the scene,
     /// this functions just takes a pointer to the entity.
     ///
-    /// \warning Beware of deleting the local pointer to the entity when using this method.
-    ///
     /// \param entity entity to add
     ////////////////////////////////////////////////////////////
     void addEntity(Entity* entity);
@@ -153,6 +152,24 @@ public:
     /// \returns True if a transition should be activated
     ////////////////////////////////////////////////////////////
     bool checkTransition();
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Gives a reference of all drawables to the renderEngine
+    ///
+    /// Asssumes none of those drawables are already attached.
+    /// If they are, they will be rendered twice with the exact same position & everything.
+    /// So beware !!!!!!
+    ///
+    /// It attaches :
+    /// \li the entities
+    ///
+    /// Missing :
+    /// \li Solid Tiles
+    /// \li pure render assets
+    ///
+    /// \param renderEngine Reference to the RenderEngine
+    ////////////////////////////////////////////////////////////
+    void attachDrawablesToRenderEngine(RenderEngine* renderEngine);
 
 protected:
     ////////////////////////////////////////////////////////////

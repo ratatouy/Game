@@ -58,7 +58,7 @@ void EventHandler::processEvent() {
         SceneTransitionEvent* Et = dynamic_cast<SceneTransitionEvent*>(ev.get());
         if (Et) {
             Logger::log(EVENT_HANDLER, INFO, "START SceneTransitionEvent processing");
-            game_->processEvent(Et);
+            game_->distributeEvent(Et);
             Logger::log(EVENT_HANDLER, INFO, "DONE SceneTransitionEvent processing");
             return;
         }
@@ -66,7 +66,7 @@ void EventHandler::processEvent() {
         SpawnEntityEvent* Es = dynamic_cast<SpawnEntityEvent*>(ev.get());
         if (Es) {
             Logger::log(EVENT_HANDLER, INFO, "START SpawnEntityEvent processing");
-            game_->processEvent(Es);
+            game_->distributeEvent(Es);
             Logger::log(EVENT_HANDLER, INFO, "DONE SpawnEntityEvent processing");
             return;
         }
@@ -75,7 +75,7 @@ void EventHandler::processEvent() {
         CustomEvent* Ec = dynamic_cast<CustomEvent*>(ev.get());
         if (Ec) {
             Logger::log(EVENT_HANDLER, INFO, "START CustomEvent processing");
-            game_->processEvent(Ec);
+            game_->distributeEvent(Ec);
             Logger::log(EVENT_HANDLER, INFO, "DONE CustomEvent processing");
             return;
         }

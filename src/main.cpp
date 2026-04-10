@@ -18,30 +18,30 @@ int main() {
     // PhysicEngine* pEngine = new PhysicEngine(0);
 
     Game* game = Game::getInstance();
-    game->loadScene("lvl1");
+    game->loadScene("a1");
 
     sf::Transformable* raptorTransform = new sf::Transformable();
     raptorTransform->setPosition({0, 200});
     raptorTransform->setScale({0.2f, 0.2f});
     EntitySpriteComponent* raptorSprite = new EntitySpriteComponent(raptorTransform);
-    raptorSprite->AddSprite("body", "assets/Sprites/raptorjesus.jpeg");
-    raptorSprite->AddSprite("rechauffeur", "assets/Sprites/rechauffeur.png");
+    raptorSprite->addSprite("body", "assets/Sprites/raptorjesus.jpeg");
+    raptorSprite->addSprite("rechauffeur", "assets/Sprites/rechauffeur.png");
     ColliderComponent* raptorCollider = new ColliderComponent(raptorTransform);
     raptorCollider->setSize({100, 100});
 
     Player* raptor = new Player("player", raptorTransform, raptorSprite, raptorCollider);
+    
+    game->addEntity(raptor);
 
-    sf::Transformable* liliTransformable = new sf::Transformable();
+    /**sf::Transformable* liliTransformable = new sf::Transformable();
     liliTransformable->setPosition({400, 0});
     liliTransformable->setScale({0.1f, 0.1f});
     EntitySpriteComponent* liliSprite = new EntitySpriteComponent(liliTransformable);
-    liliSprite->AddSprite("body", "assets/Sprites/lilimanjaro.jpg");
+    liliSprite->addSprite("body", "assets/Sprites/lilimanjaro.jpg");
     Ennemy* lili = new Ennemy("lili", liliTransformable, liliSprite);
 
 
-    game->addEntity(raptor);
-    game->addEntity(lili);
-
+    game->addEntity(lili); */
 
     sf::Event event;
 
@@ -61,17 +61,19 @@ int main() {
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right)
             {
                 game->getActiveScene()->getEntity("player")->transformable->move({10, 0});
+                game->getEventHandler()->addEvent(std::make_unique<SceneTransitionEvent>("a1"));
             }
             else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left)
             {
                 game->getActiveScene()->getEntity("player")->transformable->move({-10, 0});
-                game->getEventHandler()->addEvent(std::make_unique<SceneTransitionEvent>("lvl2"));
+                game->getEventHandler()->addEvent(std::make_unique<SceneTransitionEvent>("a2"));
             }
         }
         
         while (!game->getEventHandler()->isEmpty())
         {
             game->getEventHandler()->processEvent();
+            std::cout << game->getActiveScene()->getEntity("player")->entitySprite->get_nb_sprites() << std::endl;
         }
         
 

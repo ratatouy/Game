@@ -39,6 +39,7 @@ void Game::loadScene(const std::string& name)
 {
     Logger::log(GAME, INFO, "LOADING scene \""+name+"\"");
     setActiveScene(Parser::LoadScene(name));
+    active_scene_->attachDrawablesToRenderEngine(renderEngine_);
     active_scene_->setGame(this);
 }
 
@@ -115,6 +116,6 @@ void Game::addEntity(Entity* entity)
     {
         std::string drawable_name = entity->getName() + std::string("_") + (std::string)it->first;
 
-        renderEngine_->addDrawable(drawable_name, (sf::Drawable*)&std::get<0>(it->second));
+        renderEngine_->addDrawable(drawable_name, (sf::Drawable*)&it->second.sprite);
     }
 }

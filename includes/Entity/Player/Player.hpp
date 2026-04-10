@@ -22,7 +22,7 @@ public:
     ///
     /// \param name Name of the Player
     ////////////////////////////////////////////////////////////
-    Player(const char* name) : CollidableEntity(name) {};
+    Player(std::string name) : CollidableEntity(name) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Intermediate Transformable Constructor
@@ -31,7 +31,7 @@ public:
     ///
     /// \param transformable Pointer to the sf::Transformable to attach to the player
     ////////////////////////////////////////////////////////////
-    Player(const char* name, sf::Transformable* transformable) : CollidableEntity(name, transformable) {};
+    Player(std::string name, sf::Transformable* transformable) : CollidableEntity(name, transformable) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Full Constructor
@@ -42,7 +42,7 @@ public:
     ///
     /// \param entitySprite Pointer to the EntitySpriteComponent to attache to the player
     ////////////////////////////////////////////////////////////
-    Player(const char* name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite) : CollidableEntity(name, transformable, entitySprite) {};
+    Player(std::string name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite) : CollidableEntity(name, transformable, entitySprite) {};
 
     ////////////////////////////////////////////////////////////
     /// \brief Full Constructor
@@ -55,7 +55,7 @@ public:
     ///
     /// \param collider Pointer to the ColliderComponent to attach to the player
     ////////////////////////////////////////////////////////////
-    Player(const char* name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite, ColliderComponent* collider)
+    Player(std::string name, sf::Transformable* transformable, EntitySpriteComponent* entitySprite, ColliderComponent* collider)
         : CollidableEntity(name, transformable, entitySprite) {collider_ = collider; collider_->setTransformable(transformable);};
 
     ////////////////////////////////////////////////////////////

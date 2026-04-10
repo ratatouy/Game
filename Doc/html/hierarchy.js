@@ -2,10 +2,11 @@ var hierarchy =
 [
     [ "ColliderComponent", "class_collider_component.html", null ],
     [ "Entity", "class_entity.html", [
-      [ "CollidableEntity", "class_collidable_entity.html", null ],
-      [ "Ennemy", "class_ennemy.html", null ],
-      [ "Player", "class_player.html", null ],
-      [ "Projectile", "class_projectile.html", null ]
+      [ "CollidableEntity", "class_collidable_entity.html", [
+        [ "Ennemy", "class_ennemy.html", null ],
+        [ "Player", "class_player.html", null ],
+        [ "Projectile", "class_projectile.html", null ]
+      ] ]
     ] ],
     [ "EntitySpriteComponent", "class_entity_sprite_component.html", null ],
     [ "Event", "class_event.html", [
@@ -26,6 +27,7 @@ var hierarchy =
       [ "GameplayScene", "class_gameplay_scene.html", null ],
       [ "MenuScene", "class_menu_scene.html", null ]
     ] ],
+    [ "SpriteData", "struct_sprite_data.html", null ],
     [ "Transition", "class_transition.html", [
       [ "BorderTransition", "class_border_transition.html", [
         [ "HorizontalTransition", "class_horizontal_transition.html", null ],

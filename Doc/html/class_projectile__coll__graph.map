@@ -1,7 +1,9 @@
 <map id="Projectile" name="Projectile">
-<area shape="rect" id="node1" title=" " alt="" coords="113,260,196,287"/>
-<area shape="rect" id="node2" href="$class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="125,184,185,211"/>
-<area shape="rect" id="node3" href="$class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,95,179,121"/>
-<area shape="rect" id="node4" href="$class_scene.html" title="Base class for all Scenes." alt="" coords="203,95,264,121"/>
-<area shape="rect" id="node5" href="$class_game.html" title="Main class of the game." alt="" coords="203,5,264,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="171,349,253,376"/>
+<area shape="rect" id="node2" href="$class_collidable_entity.html" title=" " alt="" coords="149,273,275,300"/>
+<area shape="rect" id="node3" href="$class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="118,184,178,211"/>
+<area shape="rect" id="node4" href="$class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,95,179,121"/>
+<area shape="rect" id="node5" href="$class_scene.html" title="Base class for all Scenes." alt="" coords="203,95,264,121"/>
+<area shape="rect" id="node6" href="$class_game.html" title="Main class of the game." alt="" coords="203,5,264,32"/>
+<area shape="rect" id="node7" href="$class_collider_component.html" title="Adds a collision box to an object." alt="" coords="203,184,349,211"/>
 </map>

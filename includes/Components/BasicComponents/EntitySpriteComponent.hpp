@@ -10,15 +10,39 @@
 ////////////////////////////////////////////////////////////
 /// \brief Type used to store sprite data
 ///
-/// It's a tuple containing :
+/// It contains :
 /// \li The sprite
 /// \li The local Transformable
 /// \li The texture
 ////////////////////////////////////////////////////////////
-using SpriteData = std::tuple<sf::Sprite,        ///< The sprite
-                              sf::Transformable, ///< The local Transformable
-                              sf::Texture*>;     ///< The texture
+struct SpriteData {
+    sf::Sprite sprite;                 ///< The sprite
+    sf::Transformable transformable;   ///< The local Transformable
+    sf::Texture* texture;              ///< The texture
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Default Constructor
+    ///
+    /// I don't know why this is needed but apparently it is ¯\_(ツ)_/¯
+    ////////////////////////////////////////////////////////////
+    SpriteData() {
+        sprite = sf::Sprite();
+        transformable = sf::Transformable();
+        texture = nullptr;
+    }
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Complete Constructor
+    ///
+    /// \param spr Sprite
+    ///
+    /// \param tr Local Transformable
+    ///
+    /// \param tex Texture
+    ////////////////////////////////////////////////////////////
+    SpriteData(sf::Sprite spr, sf::Transformable tr, sf::Texture* tex)
+        : sprite(spr), transformable(tr), texture(tex) {}
+};
 
 ////////////////////////////////////////////////////////////
 /// \brief Component to manage the sprites of an entity.
@@ -50,7 +74,7 @@ public:
     ///
     /// \param filepath Path to the texture
     ////////////////////////////////////////////////////////////
-    void AddSprite(std::string name, const std::string& filepath);
+    void addSprite(std::string name, const std::string& filepath);
 
     ////////////////////////////////////////////////////////////
     /// \brief Returns a const pointer to the map containing all the sprites
@@ -82,7 +106,7 @@ public:
     ///
     /// \returns const Pointer to the Requested Transformable
     ////////////////////////////////////////////////////////////
-    const sf::Sprite* GetThisSpriteLocalSprite(std::string spriteName) {return &std::get<0>(sprites_data_map_.find(spriteName)->second);}
+    const sf::Sprite* GetThisSpriteLocalSprite(std::string spriteName) {return &sprites_data_map_.find(spriteName)->second.sprite;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the local Transformable of a sprite
@@ -91,7 +115,7 @@ public:
     ///
     /// \returns Pointer to the Requested Transformable
     ////////////////////////////////////////////////////////////
-    sf::Transformable* GetThisSpriteLocalTransformable(std::string spriteName) {return &std::get<1>(sprites_data_map_.find(spriteName)->second);}
+    sf::Transformable* GetThisSpriteLocalTransformable(std::string spriteName) {return &sprites_data_map_.find(spriteName)->second.transformable;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the local Transformable of a sprite
@@ -100,7 +124,7 @@ public:
     ///
     /// \returns const Pointer to the Requested Transformable
     ////////////////////////////////////////////////////////////
-    const sf::Texture* GetThisSpriteLocalTexture(std::string spriteName) {return std::get<2>(sprites_data_map_.find(spriteName)->second);}
+    const sf::Texture* GetThisSpriteLocalTexture(std::string spriteName) {return sprites_data_map_.find(spriteName)->second.texture;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the local transform of a sprite

@@ -86,9 +86,10 @@ $(document).ready(function(){initNavTree('class_collidable_entity.html',''); ini
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_collidable_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CollidableEntity Class Reference</div>  </div>
+<div class="title">CollidableEntity Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -98,8 +99,11 @@ Inheritance diagram for CollidableEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collidable_entity__inherit__graph.png" border="0" usemap="#a_collidable_entity_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_collidable_entity_inherit__map" id="a_collidable_entity_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,131,107"/>
-<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="38,5,98,32"/>
+<area shape="rect" title=" " alt="" coords="73,80,199,107"/>
+<area shape="rect" href="class_ennemy.html" title=" " alt="" coords="5,155,80,181"/>
+<area shape="rect" href="class_player.html" title="class for the Player Entity" alt="" coords="105,155,167,181"/>
+<area shape="rect" href="class_projectile.html" title=" " alt="" coords="192,155,275,181"/>
+<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="106,5,166,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -107,16 +111,26 @@ Collaboration diagram for CollidableEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collidable_entity__coll__graph.png" border="0" usemap="#a_collidable_entity_coll__map" alt="Collaboration graph"/></div>
 <map name="a_collidable_entity_coll__map" id="a_collidable_entity_coll__map">
-<area shape="rect" title=" " alt="" coords="92,260,217,287"/>
-<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="125,184,185,211"/>
+<area shape="rect" title=" " alt="" coords="149,273,275,300"/>
+<area shape="rect" href="class_entity.html" title="An Entity is an object that has an update and a render method." alt="" coords="118,184,178,211"/>
 <area shape="rect" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity." alt="" coords="5,95,179,121"/>
 <area shape="rect" href="class_scene.html" title="Base class for all Scenes." alt="" coords="203,95,264,121"/>
 <area shape="rect" href="class_game.html" title="Main class of the game." alt="" coords="203,5,264,32"/>
+<area shape="rect" href="class_collider_component.html" title="Adds a collision box to an object." alt="" coords="203,184,349,211"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aebfe43f01528d3cd1a6b5f4250104fed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#aebfe43f01528d3cd1a6b5f4250104fed">CollidableEntity</a> (std::string name)</td></tr>
+<tr class="memdesc:aebfe43f01528d3cd1a6b5f4250104fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider.  <a href="class_collidable_entity.html#aebfe43f01528d3cd1a6b5f4250104fed">More...</a><br /></td></tr>
+<tr class="separator:aebfe43f01528d3cd1a6b5f4250104fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa61ad9ffe32a16aa010f8d804e6dbbcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#aa61ad9ffe32a16aa010f8d804e6dbbcc">CollidableEntity</a> (std::string name, sf::Transformable *<a class="el" href="class_entity.html#a453e46ea4f3cec2bcd4aad999700d29d">transformable</a>)</td></tr>
+<tr class="memdesc:aa61ad9ffe32a16aa010f8d804e6dbbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider.  <a href="class_collidable_entity.html#aa61ad9ffe32a16aa010f8d804e6dbbcc">More...</a><br /></td></tr>
+<tr class="separator:aa61ad9ffe32a16aa010f8d804e6dbbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bf02b9af4827bfa0c3f7a2b5977c83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#af9bf02b9af4827bfa0c3f7a2b5977c83">CollidableEntity</a> (std::string name, sf::Transformable *<a class="el" href="class_entity.html#a453e46ea4f3cec2bcd4aad999700d29d">transformable</a>, <a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *sprites)</td></tr>
+<tr class="memdesc:af9bf02b9af4827bfa0c3f7a2b5977c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider.  <a href="class_collidable_entity.html#af9bf02b9af4827bfa0c3f7a2b5977c83">More...</a><br /></td></tr>
+<tr class="separator:af9bf02b9af4827bfa0c3f7a2b5977c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe1f01e237319c1cabbb2d5e4543551"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#aefe1f01e237319c1cabbb2d5e4543551">CollidableEntity</a> (std::string name, sf::Transformable *<a class="el" href="class_entity.html#a453e46ea4f3cec2bcd4aad999700d29d">transformable</a>, <a class="el" href="class_collider_component.html">ColliderComponent</a> *collider)</td></tr>
 <tr class="memdesc:aefe1f01e237319c1cabbb2d5e4543551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider.  <a href="class_collidable_entity.html#aefe1f01e237319c1cabbb2d5e4543551">More...</a><br /></td></tr>
 <tr class="separator:aefe1f01e237319c1cabbb2d5e4543551"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,11 +144,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad776617f7af5a7c496b97e452d8224d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the colliderComponent of the CollidabelEntity.  <a href="class_collidable_entity.html#ad776617f7af5a7c496b97e452d8224d0">More...</a><br /></td></tr>
 <tr class="separator:ad776617f7af5a7c496b97e452d8224d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af7c82cadf8b7d046f3b8c53131dd84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84">isCollidingWith</a> (const <a class="el" href="class_collidable_entity.html">CollidableEntity</a> *other) const</td></tr>
-<tr class="memdesc:a9af7c82cadf8b7d046f3b8c53131dd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check collisions with another collidableEntity.  <a href="class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84">More...</a><br /></td></tr>
+<tr class="memdesc:a9af7c82cadf8b7d046f3b8c53131dd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks collisions with another collidableEntity.  <a href="class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84">More...</a><br /></td></tr>
 <tr class="separator:a9af7c82cadf8b7d046f3b8c53131dd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b19791f9f91c97cbbfa77bcf6d4e255"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#a6b19791f9f91c97cbbfa77bcf6d4e255">processCollision</a> (const <a class="el" href="class_collidable_entity.html">CollidableEntity</a> *other)</td></tr>
-<tr class="memdesc:a6b19791f9f91c97cbbfa77bcf6d4e255"><td class="mdescLeft">&#160;</td><td class="mdescRight">process a Collision with an entity  <a href="class_collidable_entity.html#a6b19791f9f91c97cbbfa77bcf6d4e255">More...</a><br /></td></tr>
-<tr class="separator:a6b19791f9f91c97cbbfa77bcf6d4e255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c607f185e09513d4e519385bca1a43e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#a9c607f185e09513d4e519385bca1a43e">processCollision</a> (const <a class="el" href="class_collidable_entity.html">CollidableEntity</a> *other)=0</td></tr>
+<tr class="memdesc:a9c607f185e09513d4e519385bca1a43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a Collision with an entity.  <a href="class_collidable_entity.html#a9c607f185e09513d4e519385bca1a43e">More...</a><br /></td></tr>
+<tr class="separator:a9c607f185e09513d4e519385bca1a43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40a2229d060248536da8a117c3f76d46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#a40a2229d060248536da8a117c3f76d46">update</a> () override</td></tr>
 <tr class="memdesc:a40a2229d060248536da8a117c3f76d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the collidableComponent.  <a href="class_collidable_entity.html#a40a2229d060248536da8a117c3f76d46">More...</a><br /></td></tr>
 <tr class="separator:a40a2229d060248536da8a117c3f76d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +187,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a37cb335962ddb32dafd558405088ceda inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_custom_event.html">CustomEvent</a>.  <a href="class_entity.html#a37cb335962ddb32dafd558405088ceda">More...</a><br /></td></tr>
 <tr class="separator:a37cb335962ddb32dafd558405088ceda inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af406cf42f7e2e7b0842a37a164e47e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collider_component.html">ColliderComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collidable_entity.html#af406cf42f7e2e7b0842a37a164e47e97">collider_</a></td></tr>
+<tr class="separator:af406cf42f7e2e7b0842a37a164e47e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="memitem:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">current_scene_</a></td></tr>
+<tr class="memdesc:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member Data.  <a href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">More...</a><br /></td></tr>
+<tr class="separator:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d1831c25273574dc266bf762107efc inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a79d1831c25273574dc266bf762107efc">name_</a></td></tr>
+<tr class="memdesc:a79d1831c25273574dc266bf762107efc inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the entity.  <a href="class_entity.html#a79d1831c25273574dc266bf762107efc">More...</a><br /></td></tr>
+<tr class="separator:a79d1831c25273574dc266bf762107efc inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
@@ -182,20 +208,153 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a6ea3b815deb0c987303c8666387b1b05 inherit pub_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6ea3b815deb0c987303c8666387b1b05">entitySprite</a></td></tr>
 <tr class="memdesc:a6ea3b815deb0c987303c8666387b1b05 inherit pub_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the EntitySprite Component.  <a href="class_entity.html#a6ea3b815deb0c987303c8666387b1b05">More...</a><br /></td></tr>
 <tr class="separator:a6ea3b815deb0c987303c8666387b1b05 inherit pub_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
-<tr class="memitem:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">current_scene_</a></td></tr>
-<tr class="memdesc:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member Data.  <a href="class_entity.html#a91027be8d125eb57c233dd631b226e4e">More...</a><br /></td></tr>
-<tr class="separator:a91027be8d125eb57c233dd631b226e4e inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79d1831c25273574dc266bf762107efc inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a79d1831c25273574dc266bf762107efc">name_</a></td></tr>
-<tr class="memdesc:a79d1831c25273574dc266bf762107efc inherit pro_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the entity.  <a href="class_entity.html#a79d1831c25273574dc266bf762107efc">More...</a><br /></td></tr>
-<tr class="separator:a79d1831c25273574dc266bf762107efc inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00010">10</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aebfe43f01528d3cd1a6b5f4250104fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfe43f01528d3cd1a6b5f4250104fed">&#9670;&nbsp;</a></span>CollidableEntity() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollidableEntity::CollidableEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider. </p>
+<p>Creates a transformable then a colliderComponent and attach it to the transformable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00020">20</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa61ad9ffe32a16aa010f8d804e6dbbcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61ad9ffe32a16aa010f8d804e6dbbcc">&#9670;&nbsp;</a></span>CollidableEntity() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollidableEntity::CollidableEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Transformable *&#160;</td>
+          <td class="paramname"><em>transformable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider. </p>
+<p>Creates a collider Component and attach it to the transformable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the entity</td></tr>
+    <tr><td class="paramname">transformable</td><td>Transformable of the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00032">32</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af9bf02b9af4827bfa0c3f7a2b5977c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9bf02b9af4827bfa0c3f7a2b5977c83">&#9670;&nbsp;</a></span>CollidableEntity() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollidableEntity::CollidableEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Transformable *&#160;</td>
+          <td class="paramname"><em>transformable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_entity_sprite_component.html">EntitySpriteComponent</a> *&#160;</td>
+          <td class="paramname"><em>sprites</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider. </p>
+<p>Creates a collider Component and attach it to the transformable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the entity</td></tr>
+    <tr><td class="paramname">transformable</td><td>Transformable of the entity</td></tr>
+    <tr><td class="paramname">sprites</td><td><a class="el" href="class_entity_sprite_component.html" title="Component to manage the sprites of an entity.">EntitySpriteComponent</a> of the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00046">46</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+
+</div>
+</div>
 <a id="aefe1f01e237319c1cabbb2d5e4543551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefe1f01e237319c1cabbb2d5e4543551">&#9670;&nbsp;</a></span>CollidableEntity()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe1f01e237319c1cabbb2d5e4543551">&#9670;&nbsp;</a></span>CollidableEntity() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +394,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a <a class="el" href="class_collidable_entity.html">CollidableEntity</a> from a name, a transformable and a collider. </p>
-<p>The colliderComponent will NOT be attached to the transformable so it is up to the user to attach it beforehand.</p>
+<p>The colliderComponent will be attached to the transformable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Name of the entity</td></tr>
@@ -245,7 +404,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00025">25</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00060">60</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551_cgraph.png" border="0" usemap="#aclass_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551_cgraph" alt=""/></div>
+<map name="aclass_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551_cgraph" id="aclass_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551_cgraph">
+<area shape="rect" title="Creates a CollidableEntity from a name, a transformable and a collider." alt="" coords="5,5,203,47"/>
+<area shape="rect" href="class_collider_component.html#af963d61cf0de0763261a85c8cfcd7552" title="Sets the transformable of the collider." alt="" coords="251,5,405,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -274,7 +442,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00031">31</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00066">66</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,14 +473,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns a const-pointer to the colliderComponent. </p>
 <dl class="section return"><dt>Returns</dt><dd>the const pointer to the <a class="el" href="class_collider_component.html" title="Adds a collision box to an object.">ColliderComponent</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00038">38</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00073">73</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collidable_entity_a725bd97abf4115914447de27b61981f8_icgraph.png" border="0" usemap="#aclass_collidable_entity_a725bd97abf4115914447de27b61981f8_icgraph" alt=""/></div>
 <map name="aclass_collidable_entity_a725bd97abf4115914447de27b61981f8_icgraph" id="aclass_collidable_entity_a725bd97abf4115914447de27b61981f8_icgraph">
 <area shape="rect" title="Returns a const&#45;pointer to the colliderComponent." alt="" coords="792,5,995,47"/>
-<area shape="rect" href="class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84" title="Check collisions with another collidableEntity." alt="" coords="513,13,744,39"/>
+<area shape="rect" href="class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84" title="Checks collisions with another collidableEntity." alt="" coords="513,13,744,39"/>
 <area shape="rect" href="class_gameplay_scene.html#a152b9143efeff8b8ea2f7e9f7e73f1cc" title="Updates all of the entities." alt="" coords="235,13,465,39"/>
 <area shape="rect" href="class_gameplay_scene.html#a8196705b494cceb00a711c0e79ee3a66" title="Update the scene." alt="" coords="5,13,187,39"/>
 </map>
@@ -344,22 +512,22 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Check collisions with another collidableEntity. </p>
+<p>Checks collisions with another collidableEntity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td><a class="el" href="class_collidable_entity.html">CollidableEntity</a> to check collision with</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a bool : true if there is a collision, false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a collision, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00054">54</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00089">89</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_cgraph.png" border="0" usemap="#aclass_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_cgraph" alt=""/></div>
 <map name="aclass_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_cgraph" id="aclass_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_cgraph">
-<area shape="rect" title="Check collisions with another collidableEntity." alt="" coords="5,46,236,73"/>
+<area shape="rect" title="Checks collisions with another collidableEntity." alt="" coords="5,46,236,73"/>
 <area shape="rect" href="class_collidable_entity.html#a725bd97abf4115914447de27b61981f8" title="Returns a const&#45;pointer to the colliderComponent." alt="" coords="284,5,487,47"/>
 <area shape="rect" href="class_collider_component.html#af77d3778829901af2b056f1d9ab46d2d" title="Checks if there is a collision between two colliders." alt="" coords="308,71,463,112"/>
 </map>
@@ -369,7 +537,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_icgraph.png" border="0" usemap="#aclass_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_icgraph" alt=""/></div>
 <map name="aclass_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_icgraph" id="aclass_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_icgraph">
-<area shape="rect" title="Check collisions with another collidableEntity." alt="" coords="513,5,744,32"/>
+<area shape="rect" title="Checks collisions with another collidableEntity." alt="" coords="513,5,744,32"/>
 <area shape="rect" href="class_gameplay_scene.html#a152b9143efeff8b8ea2f7e9f7e73f1cc" title="Updates all of the entities." alt="" coords="235,5,465,32"/>
 <area shape="rect" href="class_gameplay_scene.html#a8196705b494cceb00a711c0e79ee3a66" title="Update the scene." alt="" coords="5,5,187,32"/>
 </map>
@@ -377,8 +545,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a6b19791f9f91c97cbbfa77bcf6d4e255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b19791f9f91c97cbbfa77bcf6d4e255">&#9670;&nbsp;</a></span>processCollision()</h2>
+<a id="a9c607f185e09513d4e519385bca1a43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c607f185e09513d4e519385bca1a43e">&#9670;&nbsp;</a></span>processCollision()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -396,25 +564,27 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>process a Collision with an entity </p>
-<p>Implement this in the Derived Classes</p>
+<p>Process a Collision with an entity. </p>
+<p>To be implemented this in the Derived Classes</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td>entity it collided with </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implemented in <a class="el" href="class_projectile.html#a94c22c1b172266bdbe443c326bebe419">Projectile</a>, <a class="el" href="class_player.html#a9c842aea02130cbedfeb2e9f43524772">Player</a>, and <a class="el" href="class_ennemy.html#afed2451090e1b26835d941a637cf5d5b">Ennemy</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255_icgraph.png" border="0" usemap="#aclass_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255_icgraph" alt=""/></div>
-<map name="aclass_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255_icgraph" id="aclass_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255_icgraph">
-<area shape="rect" title="process a Collision with an entity" alt="" coords="513,5,696,47"/>
+<div class="center"><img src="class_collidable_entity_a9c607f185e09513d4e519385bca1a43e_icgraph.png" border="0" usemap="#aclass_collidable_entity_a9c607f185e09513d4e519385bca1a43e_icgraph" alt=""/></div>
+<map name="aclass_collidable_entity_a9c607f185e09513d4e519385bca1a43e_icgraph" id="aclass_collidable_entity_a9c607f185e09513d4e519385bca1a43e_icgraph">
+<area shape="rect" title="Process a Collision with an entity." alt="" coords="513,5,696,47"/>
 <area shape="rect" href="class_gameplay_scene.html#a152b9143efeff8b8ea2f7e9f7e73f1cc" title="Updates all of the entities." alt="" coords="235,13,465,39"/>
 <area shape="rect" href="class_gameplay_scene.html#a8196705b494cceb00a711c0e79ee3a66" title="Update the scene." alt="" coords="5,13,187,39"/>
 </map>
@@ -454,7 +624,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00045">45</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00080">80</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +655,34 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_entity.html#a59a29d9b7474baf13c9c76859242287d">Entity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00068">68</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+<p>Reimplemented in <a class="el" href="class_projectile.html#ac41ad56034b53e739619fabbd5e49652">Projectile</a>, <a class="el" href="class_player.html#a6912bb6e48efb5845d59f0f4582827ef">Player</a>, and <a class="el" href="class_ennemy.html#a35b503a1ea239fd8b570012bab798dc3">Ennemy</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00103">103</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af406cf42f7e2e7b0842a37a164e47e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af406cf42f7e2e7b0842a37a164e47e97">&#9670;&nbsp;</a></span>collider_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collider_component.html">ColliderComponent</a>* CollidableEntity::collider_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_collidable_entity_8hpp_source.html#l00106">106</a> of file <a class="el" href="_collidable_entity_8hpp_source.html">CollidableEntity.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['iscollidingwith_300',['isCollidingWith',['../class_collider_component.html#af77d3778829901af2b056f1d9ab46d2d',1,'ColliderComponent::isCollidingWith()'],['../class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84',1,'CollidableEntity::isCollidingWith()']]],
-  ['isempty_301',['isEmpty',['../class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6',1,'EventHandler']]]
+  ['loadscene_309',['loadScene',['../class_game.html#a18f1ab35677c36a6a470925d0993e292',1,'Game']]],
+  ['loadscene_310',['LoadScene',['../namespace_parser.html#aa5b7573efb6537c4a3efa8d4bb7d4329',1,'Parser']]],
+  ['log_311',['log',['../class_logger.html#a02426193586d4c570c0bbf4e73807ff3',1,'Logger']]],
+  ['logger_312',['Logger',['../class_logger.html#aefffc02e0c6c0ab09ec1f77fe35f6439',1,'Logger']]]
 ];

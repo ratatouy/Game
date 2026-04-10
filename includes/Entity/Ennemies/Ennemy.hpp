@@ -20,9 +20,9 @@ private:
 
 
 public:
-    Ennemy(const char* name, int health = 7) : CollidableEntity(name), health_(health) {}
-    Ennemy(const char* name, sf::Transformable* transform, int health = 7) : CollidableEntity(name, transform), health_(health) {};
-    Ennemy(const char* name, sf::Transformable* transform, EntitySpriteComponent* sprites, int health = 7) : CollidableEntity(name, transform, sprites), health_(health) {};
+    Ennemy(std::string name, int health = 7) : CollidableEntity(name), health_(health) {}
+    Ennemy(std::string name, sf::Transformable* transform, int health = 7) : CollidableEntity(name, transform), health_(health) {};
+    Ennemy(std::string name, sf::Transformable* transform, EntitySpriteComponent* sprites, int health = 7) : CollidableEntity(name, transform, sprites), health_(health) {};
     
     void update() override;
     

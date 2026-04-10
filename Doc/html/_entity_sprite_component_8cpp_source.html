@@ -98,13 +98,13 @@ $(document).ready(function(){initNavTree('_entity_sprite_component_8cpp_source.h
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">Logger::log</a>(<a class="code" href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d">ENTITY_SPRITE</a>, <a class="code" href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806">INFO</a>, <span class="stringliteral">&quot;DESTRUCTING EntitySpriteComponent&quot;</span>);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">delete</span> std::get&lt;2&gt;(i-&gt;second); <span class="comment">// delete texture</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">delete</span> i-&gt;second.texture;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Doesn&#39;t delete the transformable</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_entity_sprite_component.html#ad38ac17f0cb24f50ad919eaedcc28e4c">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_entity_sprite_component.html#ad38ac17f0cb24f50ad919eaedcc28e4c">EntitySpriteComponent::AddSprite</a>(std::string name, <span class="keyword">const</span> std::string&amp; filepath)</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_entity_sprite_component.html#ae59a454e03ae43cee18aefba966d60da">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_entity_sprite_component.html#ae59a454e03ae43cee18aefba966d60da">EntitySpriteComponent::addSprite</a>(std::string name, <span class="keyword">const</span> std::string&amp; filepath)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">Logger::log</a>(<a class="code" href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d">ENTITY_SPRITE</a>, <a class="code" href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806">INFO</a>, <span class="stringliteral">&quot;ADDING sprite &quot;</span>+name+<span class="stringliteral">&quot; to an entity&quot;</span>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
@@ -120,64 +120,67 @@ $(document).ready(function(){initNavTree('_entity_sprite_component_8cpp_source.h
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        sprite.setScale(entityTransformable_-&gt;getScale());</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        sprites_data_map_[name] = std::make_tuple(sprite, sf::Transformable(), texture);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        nb_sprites_++;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Exception: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">EntitySpriteComponent::SetThisSpriteLocalTransform</a>(std::string spriteName, sf::Vector2f position, <span class="keywordtype">float</span> angle, sf::Vector2f scale) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    sf::Transformable* transformable = <a class="code" href="class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104">GetThisSpriteLocalTransformable</a>(spriteName);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    transformable-&gt;setPosition(position);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    transformable-&gt;setRotation(angle);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    transformable-&gt;setScale(scale);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">EntitySpriteComponent::update</a>() {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        sf::Sprite* sprite = &amp;std::get&lt;0&gt;(i-&gt;second);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        sf::Transformable* localTransfo = &amp;std::get&lt;1&gt;(i-&gt;second);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        sprite-&gt;setPosition(entityTransformable_-&gt;getPosition() + localTransfo-&gt;getPosition());</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        sprite-&gt;setRotation(entityTransformable_-&gt;getRotation() + localTransfo-&gt;getRotation());</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        sprite-&gt;setScale   (entityTransformable_-&gt;getScale().x  * localTransfo-&gt;getScale().x,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                            entityTransformable_-&gt;getScale().y  * localTransfo-&gt;getScale().y);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        sprite-&gt;setOrigin  (entityTransformable_-&gt;getOrigin()   + localTransfo-&gt;getOrigin());</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;yooo&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        sprites_data_map_[name] = <a class="code" href="struct_sprite_data.html">SpriteData</a>(sprite, sf::Transformable(), texture);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;yooo&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        nb_sprites_++;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Exception: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">EntitySpriteComponent::SetThisSpriteLocalTransform</a>(std::string spriteName, sf::Vector2f position, <span class="keywordtype">float</span> angle, sf::Vector2f scale) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    sf::Transformable* transformable = <a class="code" href="class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104">GetThisSpriteLocalTransformable</a>(spriteName);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    transformable-&gt;setPosition(position);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    transformable-&gt;setRotation(angle);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    transformable-&gt;setScale(scale);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">EntitySpriteComponent::update</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = sprites_data_map_.begin(); i != sprites_data_map_.end(); i++)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        sf::Sprite* sprite = &amp;i-&gt;second.sprite;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        sf::Transformable* localTransfo = &amp;i-&gt;second.transformable;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        sprite-&gt;setPosition(entityTransformable_-&gt;getPosition() + localTransfo-&gt;getPosition());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        sprite-&gt;setRotation(entityTransformable_-&gt;getRotation() + localTransfo-&gt;getRotation());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        sprite-&gt;setScale   (entityTransformable_-&gt;getScale().x  * localTransfo-&gt;getScale().x,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                            entityTransformable_-&gt;getScale().y  * localTransfo-&gt;getScale().y);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        sprite-&gt;setOrigin  (entityTransformable_-&gt;getOrigin()   + localTransfo-&gt;getOrigin());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;sf::Texture* EntitySpriteComponent::_LoadTexture(<span class="keyword">const</span> std::string&amp; filepath)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">Logger::log</a>(<a class="code" href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d">ENTITY_SPRITE</a>, <a class="code" href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806">INFO</a>, <span class="stringliteral">&quot;LOADING texture &quot;</span>+filepath);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    sf::Texture* texture = <span class="keyword">new</span> sf::Texture();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// handle load error</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (!texture-&gt;loadFromFile(filepath)) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">delete</span> texture;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">throw</span>(std::runtime_error(<span class="stringliteral">&quot;Failed to load texture&quot;</span>));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> texture;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;sf::Texture* EntitySpriteComponent::_LoadTexture(<span class="keyword">const</span> std::string&amp; filepath)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">Logger::log</a>(<a class="code" href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d">ENTITY_SPRITE</a>, <a class="code" href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806">INFO</a>, <span class="stringliteral">&quot;LOADING texture &quot;</span>+filepath);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    sf::Texture* texture = <span class="keyword">new</span> sf::Texture();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// handle load error</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (!texture-&gt;loadFromFile(filepath)) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">delete</span> texture;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">throw</span>(std::runtime_error(<span class="stringliteral">&quot;Failed to load texture&quot;</span>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> texture;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
 <div class="ttc" id="a_entity_sprite_component_8hpp_html"><div class="ttname"><a href="_entity_sprite_component_8hpp.html">EntitySpriteComponent.hpp</a></div></div>
-<div class="ttc" id="aclass_entity_sprite_component_html_a2ecdfaededab0a5fa61763bccf16021a"><div class="ttname"><a href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">EntitySpriteComponent::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Updates all of the sprites.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00065">EntitySpriteComponent.cpp:65</a></div></div>
-<div class="ttc" id="aclass_entity_sprite_component_html_a4e9269d1ec7cc0cb6a75a8fb0cf86104"><div class="ttname"><a href="class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104">EntitySpriteComponent::GetThisSpriteLocalTransformable</a></div><div class="ttdeci">sf::Transformable * GetThisSpriteLocalTransformable(std::string spriteName)</div><div class="ttdoc">Get the local Transformable of a sprite.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8hpp_source.html#l00094">EntitySpriteComponent.hpp:94</a></div></div>
-<div class="ttc" id="aclass_entity_sprite_component_html_a622a73a94fd597fbe825176da73a7b53"><div class="ttname"><a href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">EntitySpriteComponent::SetThisSpriteLocalTransform</a></div><div class="ttdeci">void SetThisSpriteLocalTransform(std::string spriteName, sf::Vector2f position, float angle, sf::Vector2f scale)</div><div class="ttdoc">Set the local transform of a sprite.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00051">EntitySpriteComponent.cpp:51</a></div></div>
-<div class="ttc" id="aclass_entity_sprite_component_html_ad38ac17f0cb24f50ad919eaedcc28e4c"><div class="ttname"><a href="class_entity_sprite_component.html#ad38ac17f0cb24f50ad919eaedcc28e4c">EntitySpriteComponent::AddSprite</a></div><div class="ttdeci">void AddSprite(std::string name, const std::string &amp;filepath)</div><div class="ttdoc">Adds a sprite to the entity.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00024">EntitySpriteComponent.cpp:24</a></div></div>
+<div class="ttc" id="aclass_entity_sprite_component_html_a2ecdfaededab0a5fa61763bccf16021a"><div class="ttname"><a href="class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a">EntitySpriteComponent::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Updates all of the sprites.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00067">EntitySpriteComponent.cpp:67</a></div></div>
+<div class="ttc" id="aclass_entity_sprite_component_html_a4e9269d1ec7cc0cb6a75a8fb0cf86104"><div class="ttname"><a href="class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104">EntitySpriteComponent::GetThisSpriteLocalTransformable</a></div><div class="ttdeci">sf::Transformable * GetThisSpriteLocalTransformable(std::string spriteName)</div><div class="ttdoc">Get the local Transformable of a sprite.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8hpp_source.html#l00118">EntitySpriteComponent.hpp:118</a></div></div>
+<div class="ttc" id="aclass_entity_sprite_component_html_a622a73a94fd597fbe825176da73a7b53"><div class="ttname"><a href="class_entity_sprite_component.html#a622a73a94fd597fbe825176da73a7b53">EntitySpriteComponent::SetThisSpriteLocalTransform</a></div><div class="ttdeci">void SetThisSpriteLocalTransform(std::string spriteName, sf::Vector2f position, float angle, sf::Vector2f scale)</div><div class="ttdoc">Set the local transform of a sprite.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00053">EntitySpriteComponent.cpp:53</a></div></div>
 <div class="ttc" id="aclass_entity_sprite_component_html_adb4ad7ece3f5d3000e189ebb23cdf175"><div class="ttname"><a href="class_entity_sprite_component.html#adb4ad7ece3f5d3000e189ebb23cdf175">EntitySpriteComponent::~EntitySpriteComponent</a></div><div class="ttdeci">~EntitySpriteComponent()</div><div class="ttdoc">Default Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00007">EntitySpriteComponent.cpp:7</a></div></div>
+<div class="ttc" id="aclass_entity_sprite_component_html_ae59a454e03ae43cee18aefba966d60da"><div class="ttname"><a href="class_entity_sprite_component.html#ae59a454e03ae43cee18aefba966d60da">EntitySpriteComponent::addSprite</a></div><div class="ttdeci">void addSprite(std::string name, const std::string &amp;filepath)</div><div class="ttdoc">Adds a sprite to the entity.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8cpp_source.html#l00024">EntitySpriteComponent.cpp:24</a></div></div>
 <div class="ttc" id="aclass_logger_html_a02426193586d4c570c0bbf4e73807ff3"><div class="ttname"><a href="class_logger.html#a02426193586d4c570c0bbf4e73807ff3">Logger::log</a></div><div class="ttdeci">static void log(LogType type, LogLevel level, const std::string &amp;message, bool typeLogOnly=false)</div><div class="ttdoc">Log a message to the console, general log file and a specific log file.</div><div class="ttdef"><b>Definition:</b> <a href="logger_8hpp_source.html#l00058">logger.hpp:58</a></div></div>
 <div class="ttc" id="alogger_8hpp_html"><div class="ttname"><a href="logger_8hpp.html">logger.hpp</a></div></div>
 <div class="ttc" id="alogger_8hpp_html_aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806"><div class="ttname"><a href="logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806">INFO</a></div><div class="ttdeci">@ INFO</div><div class="ttdef"><b>Definition:</b> <a href="logger_8hpp_source.html#l00011">logger.hpp:11</a></div></div>
 <div class="ttc" id="alogger_8hpp_html_af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d"><div class="ttname"><a href="logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d">ENTITY_SPRITE</a></div><div class="ttdeci">@ ENTITY_SPRITE</div><div class="ttdef"><b>Definition:</b> <a href="logger_8hpp_source.html#l00015">logger.hpp:15</a></div></div>
+<div class="ttc" id="astruct_sprite_data_html"><div class="ttname"><a href="struct_sprite_data.html">SpriteData</a></div><div class="ttdoc">Type used to store sprite data.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_sprite_component_8hpp_source.html#l00018">EntitySpriteComponent.hpp:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

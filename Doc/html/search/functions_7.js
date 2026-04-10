@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hitevent_298',['HitEvent',['../class_hit_event.html#a95e4d4e12df4349794af3d258575ffcd',1,'HitEvent']]],
-  ['horizontaltransition_299',['HorizontalTransition',['../class_horizontal_transition.html#adfb5da266965f8132657b07b236b2853',1,'HorizontalTransition']]]
+  ['iscollidingwith_307',['isCollidingWith',['../class_collider_component.html#af77d3778829901af2b056f1d9ab46d2d',1,'ColliderComponent::isCollidingWith()'],['../class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84',1,'CollidableEntity::isCollidingWith()']]],
+  ['isempty_308',['isEmpty',['../class_event_handler.html#a594d46d9c2105ef7fd3eb337f8bfe1b6',1,'EventHandler']]]
 ];

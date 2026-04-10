@@ -1,5 +1,5 @@
 <map id="Parser::LoadScene" name="Parser::LoadScene">
-<area shape="rect" id="node1" title="Loads and builds a scene from a json file and returns a pointer to it." alt="" coords="749,9,889,36"/>
+<area shape="rect" id="node1" title="Loads and builds a scene from a json file and returns it." alt="" coords="749,9,889,36"/>
 <area shape="rect" id="node2" href="$class_game.html#a18f1ab35677c36a6a470925d0993e292" title=" " alt="" coords="565,9,701,36"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,34,60,61"/>
 <area shape="rect" id="node4" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="361,34,517,61"/>

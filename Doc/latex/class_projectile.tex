@@ -10,17 +10,16 @@ Inheritance diagram for Projectile\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=142pt]{class_projectile__inherit__graph}
+\includegraphics[width=174pt]{class_projectile__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Projectile\+:
-\nopagebreak
+Collaboration diagram for Projectile\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=304pt]{class_projectile__coll__graph}
+\includegraphics[width=338pt]{class_projectile__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -29,7 +28,9 @@ Collaboration diagram for Projectile\+:
 \mbox{\hyperlink{class_projectile_ae3fbb8e8fafb3420adca4220a05087c7}{Projectile}} (const std\+::string \&name, sf\+::\+Vector2f position=\{0, 0\}, sf\+::\+Vector2f speed=\{0, 0\})
 \item 
 void \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{update}} () override
-\begin{DoxyCompactList}\small\item\em Update the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the collidable\+Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a94c22c1b172266bdbe443c326bebe419}{process\+Collision}} (const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$other) override
+\begin{DoxyCompactList}\small\item\em Process a Collision with an entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -54,6 +55,31 @@ Definition at line 4 of file Projectile.\+cpp.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projectile_a94c22c1b172266bdbe443c326bebe419}\label{class_projectile_a94c22c1b172266bdbe443c326bebe419}} 
+\index{Projectile@{Projectile}!processCollision@{processCollision}}
+\index{processCollision@{processCollision}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{processCollision()}{processCollision()}}
+{\footnotesize\ttfamily void Projectile\+::process\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Process a Collision with an entity. 
+
+To be implemented this in the Derived Classes
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & entity it collided with \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_collidable_entity_a9c607f185e09513d4e519385bca1a43e}{Collidable\+Entity}}.
+
+
+
+Definition at line 19 of file Projectile.\+cpp.
+
 \mbox{\Hypertarget{class_projectile_ac41ad56034b53e739619fabbd5e49652}\label{class_projectile_ac41ad56034b53e739619fabbd5e49652}} 
 \index{Projectile@{Projectile}!update@{update}}
 \index{update@{update}!Projectile@{Projectile}}
@@ -62,29 +88,17 @@ Definition at line 4 of file Projectile.\+cpp.
 
 
 
-Update the entity. 
-
-\char`\"{}\+Update\char`\"{} might be a bit misleading as it doesn\textquotesingle{}t fully update the entity. What I mean is it only updates what is possible to update without looking at other entities. Inter-\/entity update is managed in the scenes \+: \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_scene_a7faff47f5c1b1ebc986f768c9b9732ec}{Scene\+::update()}}
-\end{DoxySeeAlso}
-\begin{DoxyNote}{Note}
-Order of Updating should be \+: \begin{DoxyItemize}
-\item independant update (like move or process inputs) \item collisions (check \& process) \item update Entity\+Sprite Component ( \end{DoxyItemize}
-
-\end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{class_entity_sprite_component_a2ecdfaededab0a5fa61763bccf16021a}{Entity\+Sprite\+Component\+::update}}) 
-\end{DoxySeeAlso}
+Updates the collidable\+Component. 
 
 
-Implements \mbox{\hyperlink{class_entity_a59a29d9b7474baf13c9c76859242287d}{Entity}}.
+
+Reimplemented from \mbox{\hyperlink{class_collidable_entity_a40a2229d060248536da8a117c3f76d46}{Collidable\+Entity}}.
 
 
 
 Definition at line 12 of file Projectile.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

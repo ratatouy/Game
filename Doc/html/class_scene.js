@@ -3,6 +3,7 @@ var class_scene =
     [ "Scene", "class_scene.html#a6b04afd7223e00e5b8e901aaae086e9e", null ],
     [ "~Scene", "class_scene.html#a3b8cec2e32546713915f8c6303c951f1", null ],
     [ "addEntity", "class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e", null ],
+    [ "attachDrawablesToRenderEngine", "class_scene.html#a9a2df3d231337abd0ed37540b78909d5", null ],
     [ "checkTransition", "class_scene.html#af024b75792e4a2304ad2eb73779f95be", null ],
     [ "distributeEvent", "class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6", null ],
     [ "extractEntity", "class_scene.html#aefd8a138c9d7c93932baa26014ec3617", null ],

@@ -6,27 +6,31 @@
 
 
 
-Inheritance diagram for Collidable\+Entity\+:
-\nopagebreak
+Inheritance diagram for Collidable\+Entity\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{class_collidable_entity__inherit__graph}
+\includegraphics[width=282pt]{class_collidable_entity__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Collidable\+Entity\+:
-\nopagebreak
+Collaboration diagram for Collidable\+Entity\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=304pt]{class_collidable_entity__coll__graph}
+\includegraphics[width=338pt]{class_collidable_entity__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_collidable_entity_aebfe43f01528d3cd1a6b5f4250104fed}{Collidable\+Entity}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_collidable_entity_aa61ad9ffe32a16aa010f8d804e6dbbcc}{Collidable\+Entity}} (std\+::string name, sf\+::\+Transformable $\ast$\mbox{\hyperlink{class_entity_a453e46ea4f3cec2bcd4aad999700d29d}{transformable}})
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_collidable_entity_af9bf02b9af4827bfa0c3f7a2b5977c83}{Collidable\+Entity}} (std\+::string name, sf\+::\+Transformable $\ast$\mbox{\hyperlink{class_entity_a453e46ea4f3cec2bcd4aad999700d29d}{transformable}}, \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$sprites)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551}{Collidable\+Entity}} (std\+::string name, sf\+::\+Transformable $\ast$\mbox{\hyperlink{class_entity_a453e46ea4f3cec2bcd4aad999700d29d}{transformable}}, \mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$collider)
 \begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_collidable_entity_a5b1d3f388bd047c00ba77c16910fa7b9}{$\sim$\+Collidable\+Entity}} () override
@@ -36,11 +40,16 @@ const \mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$ \m
 void \mbox{\hyperlink{class_collidable_entity_ad776617f7af5a7c496b97e452d8224d0}{set\+Collider}} (\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$collider)
 \begin{DoxyCompactList}\small\item\em Set the collider\+Component of the Collidabel\+Entity. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84}{is\+Colliding\+With}} (const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$other) const
-\begin{DoxyCompactList}\small\item\em Check collisions with another collidable\+Entity. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255}{process\+Collision}} (const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$other)
-\begin{DoxyCompactList}\small\item\em process a Collision with an entity \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Checks collisions with another collidable\+Entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_collidable_entity_a9c607f185e09513d4e519385bca1a43e}{process\+Collision}} (const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$other)=0
+\begin{DoxyCompactList}\small\item\em Process a Collision with an entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_collidable_entity_a40a2229d060248536da8a117c3f76d46}{update}} () override
 \begin{DoxyCompactList}\small\item\em Updates the collidable\+Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$ \mbox{\hyperlink{class_collidable_entity_af406cf42f7e2e7b0842a37a164e47e97}{collider\+\_\+}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -52,17 +61,86 @@ Definition at line 10 of file Collidable\+Entity.\+hpp.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_collidable_entity_aebfe43f01528d3cd1a6b5f4250104fed}\label{class_collidable_entity_aebfe43f01528d3cd1a6b5f4250104fed}} 
+\index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
+\index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
+\doxysubsubsection{\texorpdfstring{CollidableEntity()}{CollidableEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Collidable\+Entity\+::\+Collidable\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. 
+
+Creates a transformable then a collider\+Component and attach it to the transformable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the entity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Collidable\+Entity.\+hpp.
+
+\mbox{\Hypertarget{class_collidable_entity_aa61ad9ffe32a16aa010f8d804e6dbbcc}\label{class_collidable_entity_aa61ad9ffe32a16aa010f8d804e6dbbcc}} 
+\index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
+\index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
+\doxysubsubsection{\texorpdfstring{CollidableEntity()}{CollidableEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Collidable\+Entity\+::\+Collidable\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{sf\+::\+Transformable $\ast$}]{transformable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. 
+
+Creates a collider Component and attach it to the transformable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the entity\\
+\hline
+{\em transformable} & Transformable of the entity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Collidable\+Entity.\+hpp.
+
+\mbox{\Hypertarget{class_collidable_entity_af9bf02b9af4827bfa0c3f7a2b5977c83}\label{class_collidable_entity_af9bf02b9af4827bfa0c3f7a2b5977c83}} 
+\index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
+\index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
+\doxysubsubsection{\texorpdfstring{CollidableEntity()}{CollidableEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Collidable\+Entity\+::\+Collidable\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{sf\+::\+Transformable $\ast$}]{transformable,  }\item[{\mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} $\ast$}]{sprites }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. 
+
+Creates a collider Component and attach it to the transformable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the entity\\
+\hline
+{\em transformable} & Transformable of the entity\\
+\hline
+{\em sprites} & \mbox{\hyperlink{class_entity_sprite_component}{Entity\+Sprite\+Component}} of the entity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Collidable\+Entity.\+hpp.
+
 \mbox{\Hypertarget{class_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551}\label{class_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551}} 
 \index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
 \index{CollidableEntity@{CollidableEntity}!CollidableEntity@{CollidableEntity}}
-\doxysubsubsection{\texorpdfstring{CollidableEntity()}{CollidableEntity()}}
+\doxysubsubsection{\texorpdfstring{CollidableEntity()}{CollidableEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily Collidable\+Entity\+::\+Collidable\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{sf\+::\+Transformable $\ast$}]{transformable,  }\item[{\mbox{\hyperlink{class_collider_component}{Collider\+Component}} $\ast$}]{collider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Creates a \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} from a name, a transformable and a collider. 
 
-The collider\+Component will NOT be attached to the transformable so it is up to the user to attach it beforehand.
+The collider\+Component will be attached to the transformable.
 
 
 \begin{DoxyParams}{Parameters}
@@ -75,8 +153,15 @@ The collider\+Component will NOT be attached to the transformable so it is up to
 \end{DoxyParams}
 
 
-Definition at line 25 of file Collidable\+Entity.\+hpp.
+Definition at line 60 of file Collidable\+Entity.\+hpp.
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_collidable_entity_aefe1f01e237319c1cabbb2d5e4543551_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_collidable_entity_a5b1d3f388bd047c00ba77c16910fa7b9}\label{class_collidable_entity_a5b1d3f388bd047c00ba77c16910fa7b9}} 
 \index{CollidableEntity@{CollidableEntity}!````~CollidableEntity@{$\sim$CollidableEntity}}
 \index{````~CollidableEntity@{$\sim$CollidableEntity}!CollidableEntity@{CollidableEntity}}
@@ -89,7 +174,7 @@ destructor
 
 
 
-Definition at line 31 of file Collidable\+Entity.\+hpp.
+Definition at line 66 of file Collidable\+Entity.\+hpp.
 
 
 
@@ -109,10 +194,9 @@ the const pointer to the \mbox{\hyperlink{class_collider_component}{Collider\+Co
 \end{DoxyReturn}
 
 
-Definition at line 38 of file Collidable\+Entity.\+hpp.
+Definition at line 73 of file Collidable\+Entity.\+hpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -127,7 +211,7 @@ Here is the caller graph for this function\+:
 
 
 
-Check collisions with another collidable\+Entity. 
+Checks collisions with another collidable\+Entity. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -135,51 +219,52 @@ Check collisions with another collidable\+Entity.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a bool \+: true if there is a collision, false otherwise 
+true if there is a collision, false otherwise 
 \end{DoxyReturn}
 
 
-Definition at line 54 of file Collidable\+Entity.\+hpp.
+Definition at line 89 of file Collidable\+Entity.\+hpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_collidable_entity_a9af7c82cadf8b7d046f3b8c53131dd84_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255}\label{class_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255}} 
+\mbox{\Hypertarget{class_collidable_entity_a9c607f185e09513d4e519385bca1a43e}\label{class_collidable_entity_a9c607f185e09513d4e519385bca1a43e}} 
 \index{CollidableEntity@{CollidableEntity}!processCollision@{processCollision}}
 \index{processCollision@{processCollision}!CollidableEntity@{CollidableEntity}}
 \doxysubsubsection{\texorpdfstring{processCollision()}{processCollision()}}
-{\footnotesize\ttfamily virtual void Collidable\+Entity\+::process\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Collidable\+Entity\+::process\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_collidable_entity}{Collidable\+Entity}} $\ast$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-process a Collision with an entity 
+Process a Collision with an entity. 
 
-Implement this in the Derived Classes
+To be implemented this in the Derived Classes
 
 
 \begin{DoxyParams}{Parameters}
 {\em other} & entity it collided with \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Implemented in \mbox{\hyperlink{class_projectile_a94c22c1b172266bdbe443c326bebe419}{Projectile}}, \mbox{\hyperlink{class_player_a9c842aea02130cbedfeb2e9f43524772}{Player}}, and \mbox{\hyperlink{class_ennemy_afed2451090e1b26835d941a637cf5d5b}{Ennemy}}.
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_collidable_entity_a6b19791f9f91c97cbbfa77bcf6d4e255_icgraph}
+\includegraphics[width=350pt]{class_collidable_entity_a9c607f185e09513d4e519385bca1a43e_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_collidable_entity_ad776617f7af5a7c496b97e452d8224d0}\label{class_collidable_entity_ad776617f7af5a7c496b97e452d8224d0}} 
@@ -199,7 +284,7 @@ Set the collider\+Component of the Collidabel\+Entity.
 \end{DoxyParams}
 
 
-Definition at line 45 of file Collidable\+Entity.\+hpp.
+Definition at line 80 of file Collidable\+Entity.\+hpp.
 
 \mbox{\Hypertarget{class_collidable_entity_a40a2229d060248536da8a117c3f76d46}\label{class_collidable_entity_a40a2229d060248536da8a117c3f76d46}} 
 \index{CollidableEntity@{CollidableEntity}!update@{update}}
@@ -217,7 +302,24 @@ Implements \mbox{\hyperlink{class_entity_a59a29d9b7474baf13c9c76859242287d}{Enti
 
 
 
-Definition at line 68 of file Collidable\+Entity.\+hpp.
+Reimplemented in \mbox{\hyperlink{class_projectile_ac41ad56034b53e739619fabbd5e49652}{Projectile}}, \mbox{\hyperlink{class_player_a6912bb6e48efb5845d59f0f4582827ef}{Player}}, and \mbox{\hyperlink{class_ennemy_a35b503a1ea239fd8b570012bab798dc3}{Ennemy}}.
+
+
+
+Definition at line 103 of file Collidable\+Entity.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_collidable_entity_af406cf42f7e2e7b0842a37a164e47e97}\label{class_collidable_entity_af406cf42f7e2e7b0842a37a164e47e97}} 
+\index{CollidableEntity@{CollidableEntity}!collider\_@{collider\_}}
+\index{collider\_@{collider\_}!CollidableEntity@{CollidableEntity}}
+\doxysubsubsection{\texorpdfstring{collider\_}{collider\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collider_component}{Collider\+Component}}$\ast$ Collidable\+Entity\+::collider\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 106 of file Collidable\+Entity.\+hpp.
 
 
 

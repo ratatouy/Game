@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['action_1',['action',['../settings_loader_8cpp.html#a5daefb7b072a911db333e63bbfce9165',1,'settingsLoader.cpp']]],
-  ['adddrawable_2',['addDrawable',['../class_render_engine.html#abffbf20a9d9a68d8e3e69aa0724d0ca5',1,'RenderEngine']]],
-  ['addentity_3',['addEntity',['../class_game.html#a472279479c423e4950f6eedf09bf8bf5',1,'Game::addEntity()'],['../class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e',1,'Scene::addEntity()']]],
-  ['addevent_4',['addEvent',['../class_event_handler.html#aea66f9f4c785d3bb47fe6e9b10e93193',1,'EventHandler']]],
-  ['addshaderdrawable_5',['addShaderDrawable',['../class_render_engine.html#a8a500759abd398b0d3e8b90f5fb16a4a',1,'RenderEngine']]],
-  ['addsprite_6',['AddSprite',['../class_entity_sprite_component.html#ad38ac17f0cb24f50ad919eaedcc28e4c',1,'EntitySpriteComponent']]],
-  ['attachshadertodrawable_7',['attachShaderToDrawable',['../class_render_engine.html#a4b02933b074b755d0b0f3ba6bb64b9d4',1,'RenderEngine']]],
-  ['attack_8',['attack',['../class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9',1,'Player']]]
+  ['bordertransition_9',['BorderTransition',['../class_border_transition.html',1,'BorderTransition'],['../class_border_transition.html#ab2218600ed3ea847458145025578f13c',1,'BorderTransition::BorderTransition()']]],
+  ['bordertransition_2ecpp_10',['BorderTransition.cpp',['../_border_transition_8cpp.html',1,'']]],
+  ['bordertransition_2ehpp_11',['BorderTransition.hpp',['../_border_transition_8hpp.html',1,'']]]
 ];

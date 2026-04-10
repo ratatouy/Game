@@ -1,4 +1,4 @@
 <map id="Projectile::update" name="Projectile::update">
-<area shape="rect" id="node1" title="Update the entity." alt="" coords="5,13,141,39"/>
+<area shape="rect" id="node1" title="Updates the collidableComponent." alt="" coords="5,13,141,39"/>
 <area shape="rect" id="node2" href="$class_entity_sprite_component.html#a2ecdfaededab0a5fa61763bccf16021a" title="Updates all of the sprites." alt="" coords="189,5,363,47"/>
 </map>

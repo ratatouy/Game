@@ -1,6 +1,7 @@
 #include "Scenes/Scene.hpp"
 #include "Transitions/Transition.hpp"
 #include "Game.hpp"
+#include "Engine/RenderEngine.hpp"
 
 #include "logger.hpp"
 
@@ -20,8 +21,9 @@ Scene::~Scene()
 
 void Scene::addEntity(Entity* entity)
 {
-    Logger::log(SCENE, DEBUG, "ADDING entity " + (std::string)entity->getName());
+    Logger::log(SCENE, DEBUG, "ADDING entity " + entity->getName());
     entity_map_[entity->getName()] = entity; // doesn't check for duplicity //
+    Logger::log(SCENE, DEBUG, "ADDING entity " + entity->getName());
     entity->setScene(this);
 }
 
@@ -83,4 +85,21 @@ bool Scene::checkTransition()
             throwEvent(std::make_unique<SceneTransitionEvent>(transition_pair.second->getTargetName()));
     }
     return false;
+}
+
+
+void Scene::attachDrawablesToRenderEngine(RenderEngine* renderEngine)
+{
+    for (auto it : entity_map_)
+    {
+        auto data = it.second->entitySprite->GetSpriteData();
+        
+        // run through the map of the entitySprite
+        for (auto it2 = data->begin(); it2 != data->end(); it2++)
+        {
+            std::string drawable_name = it.first + std::string("_") + (std::string)it2->first;
+
+            renderEngine->addDrawable(drawable_name, (sf::Drawable*)&it2->second.sprite);
+        }
+    }
 }

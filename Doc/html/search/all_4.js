@@ -1,8 +1,27 @@
 var searchData=
 [
-  ['damage_23',['damage',['../struct_hit_data.html#a2a4ef1bb807f4cecd6a9fdb4bf0128e2',1,'HitData']]],
-  ['data_24',['data',['../class_hit_event.html#a6949089d14d184252a87bb36e695b8e2',1,'HitEvent']]],
-  ['dealer_25',['dealer',['../struct_hit_data.html#acbe9b91331220a4a7cf4c88c15b89608',1,'HitData']]],
-  ['debug_26',['DEBUG',['../logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a0593585da9181e972974c1274d8f2b4f',1,'logger.hpp']]],
-  ['distributeevent_27',['distributeEvent',['../class_game.html#ac806107ae54ab10c874cb6cb1c0a5239',1,'Game::distributeEvent(SceneTransitionEvent *event)'],['../class_game.html#a873f6180f357664289bdad560c23216b',1,'Game::distributeEvent(SpawnEntityEvent *event)'],['../class_game.html#a31a02c739ee585c35a164248c7f6900a',1,'Game::distributeEvent(CustomEvent *event)'],['../class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6',1,'Scene::distributeEvent()']]]
+  ['end_5f_29',['end_',['../class_border_transition.html#abb1b96c8cc5a1fd07b6a88c72611e7bc',1,'BorderTransition']]],
+  ['ennemy_30',['Ennemy',['../class_ennemy.html',1,'Ennemy'],['../class_ennemy.html#a9d67f02538a46c2a45af1fc38ed478b1',1,'Ennemy::Ennemy(std::string name, sf::Transformable *transform, EntitySpriteComponent *sprites, int health=7)'],['../class_ennemy.html#aa77c06eade64d30a2faee7e9a9196b76',1,'Ennemy::Ennemy(std::string name, sf::Transformable *transform, int health=7)'],['../class_ennemy.html#a61cc98450907c559f4bee9d6022a9b6e',1,'Ennemy::Ennemy(std::string name, int health=7)']]],
+  ['ennemy_2ecpp_31',['Ennemy.cpp',['../_ennemy_8cpp.html',1,'']]],
+  ['ennemy_2ehpp_32',['Ennemy.hpp',['../_ennemy_8hpp.html',1,'']]],
+  ['entity_33',['Entity',['../class_entity.html',1,'']]],
+  ['entity_34',['ENTITY',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca191ff161671f2d901b7e95db95bd7b8e',1,'logger.hpp']]],
+  ['entity_35',['Entity',['../class_entity.html#af289690a6579f0765d05d46e83aa139e',1,'Entity::Entity(std::string name, sf::Transformable *tr, EntitySpriteComponent *eSpr)'],['../class_entity.html#aeace59eae9ce453d17d2ea0b48e35397',1,'Entity::Entity(std::string name, sf::Transformable *tr)'],['../class_entity.html#a0376dc13a1c12e61dd576ffcd20a34a1',1,'Entity::Entity(std::string name)'],['../class_entity.html#a3170dc9c4995e5bd8e28601807350df9',1,'Entity::Entity()=delete']]],
+  ['entity_2ehpp_36',['Entity.hpp',['../_entity_8hpp.html',1,'']]],
+  ['entity_5fmap_5f_37',['entity_map_',['../class_scene.html#aebec25912861ccf28b75ccb35f69bcf5',1,'Scene']]],
+  ['entity_5fsprite_38',['ENTITY_SPRITE',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca06af21ca37939f7edba62c26a4b97b2d',1,'logger.hpp']]],
+  ['entitysprite_39',['entitySprite',['../class_entity.html#a6ea3b815deb0c987303c8666387b1b05',1,'Entity']]],
+  ['entityspritecomponent_40',['EntitySpriteComponent',['../class_entity_sprite_component.html',1,'EntitySpriteComponent'],['../class_entity_sprite_component.html#afe68eb90666955364b0138a7ba596fd2',1,'EntitySpriteComponent::EntitySpriteComponent()']]],
+  ['entityspritecomponent_2ecpp_41',['EntitySpriteComponent.cpp',['../_entity_sprite_component_8cpp.html',1,'']]],
+  ['entityspritecomponent_2ehpp_42',['EntitySpriteComponent.hpp',['../_entity_sprite_component_8hpp.html',1,'']]],
+  ['error_43',['ERROR',['../logger_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9a2fd6f336d08340583bd620a7f5694c90',1,'logger.hpp']]],
+  ['event_44',['Event',['../class_event.html',1,'Event'],['../class_event.html#a5a40dd4708297f7031e29b39e039ae10',1,'Event::Event()']]],
+  ['event_45',['EVENT',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87ca08d627d21e6424f54671673ff1611d59',1,'logger.hpp']]],
+  ['event_2ehpp_46',['Event.hpp',['../_event_8hpp.html',1,'']]],
+  ['event_5fhandler_47',['EVENT_HANDLER',['../logger_8hpp.html#af67907baa897e9fb84df0cb89795b87caa5bddba3e464aa72f220cb10d6c3ed1e',1,'logger.hpp']]],
+  ['eventa_48',['EventA',['../class_event_a.html',1,'']]],
+  ['eventhandler_49',['EventHandler',['../class_event_handler.html',1,'EventHandler'],['../class_event_handler.html#a432c13d95475e072978e594bf2f09171',1,'EventHandler::EventHandler(Game *game)'],['../class_event_handler.html#a60e6d02d517a43f2da9d8c23d8a8f8f3',1,'EventHandler::EventHandler(const EventHandler &amp;)=delete']]],
+  ['eventhandler_2ecpp_50',['EventHandler.cpp',['../_event_handler_8cpp.html',1,'']]],
+  ['eventhandler_2ehpp_51',['EventHandler.hpp',['../_event_handler_8hpp.html',1,'']]],
+  ['extractentity_52',['extractEntity',['../class_scene.html#aefd8a138c9d7c93932baa26014ec3617',1,'Scene']]]
 ];

@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('_ennemy_8hpp.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="_entity_8hpp_source.html">Entity/Entity.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_collidable_entity_8hpp_source.html">Entity/CollidableEntity.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_event_8hpp_source.html">Events/Event.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_hit_event_8hpp_source.html">Events/CustomEvents/HitEvent.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_entity_sprite_component_8hpp_source.html">Components/BasicComponents/EntitySpriteComponent.hpp</a>&quot;</code><br />
@@ -100,20 +100,22 @@ Include dependency graph for Ennemy.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ennemy_8hpp__incl.png" border="0" usemap="#aincludes_2_entity_2_ennemies_2_ennemy_8hpp" alt=""/></div>
 <map name="aincludes_2_entity_2_ennemies_2_ennemy_8hpp" id="aincludes_2_entity_2_ennemies_2_ennemy_8hpp">
-<area shape="rect" title=" " alt="" coords="495,5,681,47"/>
-<area shape="rect" title=" " alt="" coords="5,273,85,300"/>
-<area shape="rect" href="_entity_8hpp.html" title=" " alt="" coords="524,102,652,129"/>
-<area shape="rect" href="_event_8hpp.html" title=" " alt="" coords="787,273,922,300"/>
-<area shape="rect" href="_entity_sprite_component_8hpp.html" title=" " alt="" coords="301,184,526,225"/>
-<area shape="rect" href="_hit_event_8hpp.html" title=" " alt="" coords="766,95,930,136"/>
-<area shape="rect" title=" " alt="" coords="485,273,632,300"/>
-<area shape="rect" href="logger_8hpp.html" title=" " alt="" coords="185,191,276,218"/>
-<area shape="rect" href="_scene_transition_event_8hpp.html" title=" " alt="" coords="651,184,845,225"/>
-<area shape="rect" href="_custom_event_8hpp.html" title=" " alt="" coords="869,191,1054,218"/>
-<area shape="rect" title=" " alt="" coords="296,273,355,300"/>
-<area shape="rect" title=" " alt="" coords="379,273,453,300"/>
-<area shape="rect" title=" " alt="" coords="110,273,173,300"/>
-<area shape="rect" title=" " alt="" coords="197,273,272,300"/>
+<area shape="rect" title=" " alt="" coords="344,5,531,47"/>
+<area shape="rect" title=" " alt="" coords="5,363,85,389"/>
+<area shape="rect" href="_collidable_entity_8hpp.html" title=" " alt="" coords="543,102,737,129"/>
+<area shape="rect" href="_event_8hpp.html" title=" " alt="" coords="494,363,629,389"/>
+<area shape="rect" href="_entity_sprite_component_8hpp.html" title=" " alt="" coords="877,273,1102,315"/>
+<area shape="rect" href="_hit_event_8hpp.html" title=" " alt="" coords="355,95,519,136"/>
+<area shape="rect" href="_entity_8hpp.html" title=" " alt="" coords="575,191,703,218"/>
+<area shape="rect" href="_collider_component_8hpp.html" title=" " alt="" coords="727,184,953,225"/>
+<area shape="rect" title=" " alt="" coords="916,363,1063,389"/>
+<area shape="rect" href="logger_8hpp.html" title=" " alt="" coords="181,281,272,307"/>
+<area shape="rect" href="_scene_transition_event_8hpp.html" title=" " alt="" coords="609,273,802,315"/>
+<area shape="rect" href="_custom_event_8hpp.html" title=" " alt="" coords="347,281,533,307"/>
+<area shape="rect" title=" " alt="" coords="208,363,267,389"/>
+<area shape="rect" title=" " alt="" coords="291,363,365,389"/>
+<area shape="rect" title=" " alt="" coords="389,363,451,389"/>
+<area shape="rect" title=" " alt="" coords="109,363,184,389"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -121,9 +123,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ennemy_8hpp__dep__incl.png" border="0" usemap="#aincludes_2_entity_2_ennemies_2_ennemy_8hppdep" alt=""/></div>
 <map name="aincludes_2_entity_2_ennemies_2_ennemy_8hppdep" id="aincludes_2_entity_2_ennemies_2_ennemy_8hppdep">
-<area shape="rect" title=" " alt="" coords="63,5,250,47"/>
+<area shape="rect" title=" " alt="" coords="101,5,287,47"/>
 <area shape="rect" href="_ennemy_8cpp.html" title=" " alt="" coords="5,95,156,136"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="180,102,285,129"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="115,259,220,285"/>
+<area shape="rect" href="scene_loader_8hpp.html" title=" " alt="" coords="239,102,483,129"/>
+<area shape="rect" href="scene_loader_8cpp.html" title=" " alt="" coords="257,184,465,211"/>
+<area shape="rect" href="_game_8hpp.html" title=" " alt="" coords="502,184,649,211"/>
+<area shape="rect" href="_render_engine_8cpp.html" title=" " alt="" coords="243,259,454,285"/>
+<area shape="rect" href="_event_handler_8cpp.html" title=" " alt="" coords="479,259,685,285"/>
+<area shape="rect" href="_game_8cpp.html" title=" " alt="" coords="709,259,820,285"/>
+<area shape="rect" href="_scene_8cpp.html" title=" " alt="" coords="844,259,1005,285"/>
 </map>
 </div>
 </div>

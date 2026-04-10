@@ -203,6 +203,7 @@ public:
 
     ////////////////////////////////////////////////////////////
     /// \warning DON'T FORGET TO DELETE THIS TION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
+    ///
     /// \todo delete this
     ////////////////////////////////////////////////////////////
     void addEntity(Entity* entity);

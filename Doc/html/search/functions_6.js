@@ -1,29 +1,5 @@
 var searchData=
 [
-  ['game_272',['Game',['../class_game.html#abb28875d74d25fa9e0dcdbe37c6ad89c',1,'Game::Game(const Game &amp;)=delete'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
-  ['gameplayscene_273',['GameplayScene',['../class_gameplay_scene.html#aea331909b216f556584f02d6cf4e3c8d',1,'GameplayScene']]],
-  ['get_5fnb_5fsprites_274',['get_nb_sprites',['../class_entity_sprite_component.html#a6f7b9792e0bb435e91a9ee7a2df6a016',1,'EntitySpriteComponent']]],
-  ['getactivescene_275',['getActiveScene',['../class_game.html#aac17860938569d9f8e7bb1196f14ff8f',1,'Game::getActiveScene() const'],['../class_game.html#ad10ed0a88180bf31ea13340a5422816b',1,'Game::getActiveScene()']]],
-  ['getcollidercomponent_276',['getColliderComponent',['../class_collidable_entity.html#a725bd97abf4115914447de27b61981f8',1,'CollidableEntity']]],
-  ['getcurrentscene_277',['getCurrentScene',['../class_entity.html#adfb2633935759614c4e3f263e447169f',1,'Entity']]],
-  ['getdata_278',['getData',['../class_custom_event.html#afe9e4741e5d445e29c7fda11fcd63a23',1,'CustomEvent::getData()'],['../class_hit_event.html#a76154ecea159d09b3e78668b1d8bfcc7',1,'HitEvent::getData()']]],
-  ['getdrawable_279',['getDrawable',['../class_render_engine.html#a4b628d94947c770046935faf88fc59ea',1,'RenderEngine']]],
-  ['getentity_280',['getEntity',['../class_spawn_entity_event.html#aa9b772173e62d090e1e0d044570299af',1,'SpawnEntityEvent::getEntity()'],['../class_scene.html#adc1d9e6de5e4d7a9b85dd1af6602448c',1,'Scene::getEntity()']]],
-  ['geteventhandler_281',['getEventHandler',['../class_game.html#ae64f63701924c83c2506c3a506433be2',1,'Game::getEventHandler() const'],['../class_game.html#a436fc8919d4d15983f076379acc00438',1,'Game::getEventHandler()']]],
-  ['gethit_282',['getHit',['../class_ennemy.html#a4784be82a5ce923d1494477c55bbc297',1,'Ennemy']]],
-  ['getinstance_283',['getInstance',['../class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9',1,'Game::getInstance()'],['../class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0',1,'RenderEngine::getInstance()'],['../class_event_handler.html#a258f0a9c3aca4da0b8bf7b994209434e',1,'EventHandler::getInstance()']]],
-  ['getname_284',['getName',['../class_entity.html#a218babc804115cc50d513daa5a286dd9',1,'Entity']]],
-  ['getoffset_285',['getOffset',['../class_collider_component.html#a444a15dfd7f2ecf8bcb1e263c0bab983',1,'ColliderComponent']]],
-  ['getorigin_286',['getOrigin',['../class_scene.html#a7e3f2ea607864c63d1c1fa6c17aa335f',1,'Scene']]],
-  ['getrenderengine_287',['getRenderEngine',['../class_game.html#a7f25e2728d6e9a58fb2d770b574137cf',1,'Game::getRenderEngine() const'],['../class_game.html#ab09c78ab7a7b725eb8aa4724688137d1',1,'Game::getRenderEngine()']]],
-  ['getsize_288',['getSize',['../class_collider_component.html#ac78351d835692dea73c0c765b2225154',1,'ColliderComponent::getSize()'],['../class_scene.html#af5352811e65e1fa37a626fbc2f690584',1,'Scene::getSize()']]],
-  ['getspritedata_289',['GetSpriteData',['../class_entity_sprite_component.html#a6609088990b75ef53c6ac8c58408921e',1,'EntitySpriteComponent']]],
-  ['gettarget_290',['getTarget',['../class_scene_transition_event.html#a05df57ec22c7ac9eebb738100cc46cab',1,'SceneTransitionEvent']]],
-  ['gettargetname_291',['getTargetName',['../class_transition.html#a3cb10e25c70bd60235e2f21d82af5359',1,'Transition']]],
-  ['getthisspritedata_292',['GetThisSpriteData',['../class_entity_sprite_component.html#a92256ef1156a2946db6c8310c2eca67d',1,'EntitySpriteComponent']]],
-  ['getthisspritelocalsprite_293',['GetThisSpriteLocalSprite',['../class_entity_sprite_component.html#a6c9b5509c09333e55275c4cff0d8be4e',1,'EntitySpriteComponent']]],
-  ['getthisspritelocaltexture_294',['GetThisSpriteLocalTexture',['../class_entity_sprite_component.html#a01f39fbc24f9bf6e642668058931431c',1,'EntitySpriteComponent']]],
-  ['getthisspritelocaltransformable_295',['GetThisSpriteLocalTransformable',['../class_entity_sprite_component.html#a4e9269d1ec7cc0cb6a75a8fb0cf86104',1,'EntitySpriteComponent']]],
-  ['gettransformable_296',['getTransformable',['../class_collider_component.html#a07131e94ac1d5cd302503b27279fb9c1',1,'ColliderComponent::getTransformable()'],['../class_entity.html#aea9d6b3132121c8ebc8966c35def9751',1,'Entity::getTransformable()']]],
-  ['getwindow_297',['getWindow',['../class_render_engine.html#aa56d94cb2e25843d6ec6a3b713d97200',1,'RenderEngine::getWindow() const'],['../class_render_engine.html#aec8db646d82d91a8595c22f1d7d61688',1,'RenderEngine::getWindow()']]]
+  ['hitevent_305',['HitEvent',['../class_hit_event.html#a95e4d4e12df4349794af3d258575ffcd',1,'HitEvent']]],
+  ['horizontaltransition_306',['HorizontalTransition',['../class_horizontal_transition.html#adfb5da266965f8132657b07b236b2853',1,'HorizontalTransition']]]
 ];
