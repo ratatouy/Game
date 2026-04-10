@@ -1,8 +1,0 @@
-<map id="Scene::checkTransition" name="Scene::checkTransition">
-<area shape="rect" id="node1" title="Checks if a transition should be activated." alt="" coords="5,31,176,57"/>
-<area shape="rect" id="node2" href="$class_scene.html#adc1d9e6de5e4d7a9b85dd1af6602448c" title="returns a reference to the Entity according to its name" alt="" coords="231,5,359,32"/>
-<area shape="rect" id="node3" href="$class_scene.html#a75990ee1152181d4843dfc8f2e5cff90" title="Throws the event to the parent game object." alt="" coords="224,56,367,83"/>
-<area shape="rect" id="node4" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="832,81,927,108"/>
-<area shape="rect" id="node5" href="$class_game.html#a19446234f66ae67091b3af08c7ba6869" title="Throw an event to the EventHandler." alt="" coords="415,81,557,108"/>
-<area shape="rect" id="node6" href="$class_event_handler.html#aea66f9f4c785d3bb47fe6e9b10e93193" title="Add an event to the queue." alt="" coords="605,132,784,159"/>
-</map>

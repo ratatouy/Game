@@ -1,6 +1,0 @@
-<map id="EventHandler" name="EventHandler">
-<area shape="rect" id="node1" title="Manages the event queue." alt="" coords="110,5,221,32"/>
-<area shape="rect" id="node2" href="$class_game.html" title=" " alt="" coords="135,95,196,121"/>
-<area shape="rect" id="node3" href="$class_render_engine.html" title=" " alt="" coords="5,184,117,211"/>
-<area shape="rect" id="node4" href="$class_scene.html" title=" " alt="" coords="239,184,300,211"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Entity::getTransformable" name="Entity::getTransformable">
-<area shape="rect" id="node1" title="Get the Transformable Component of the entity." alt="" coords="224,31,405,57"/>
-<area shape="rect" id="node2" href="$class_scene.html#af024b75792e4a2304ad2eb73779f95be" title="Checks if a transition should be activated." alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="63,56,118,83"/>
-</map>

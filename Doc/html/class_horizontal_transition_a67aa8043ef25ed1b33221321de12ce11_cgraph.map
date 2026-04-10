@@ -1,7 +1,0 @@
-<map id="HorizontalTransition::checkTransition" name="HorizontalTransition::checkTransition">
-<area shape="rect" id="node1" title="Check if the player is within or past the activation zone of the transition." alt="" coords="5,86,157,127"/>
-<area shape="rect" id="node2" href="$class_scene.html#a7e3f2ea607864c63d1c1fa6c17aa335f" title="Returns the origin of the scene." alt="" coords="218,5,347,32"/>
-<area shape="rect" id="node3" href="$class_collider_component.html#ac78351d835692dea73c0c765b2225154" title="Returns a const reference to the size of the collider." alt="" coords="205,57,360,98"/>
-<area shape="rect" id="node4" href="$class_scene.html#af5352811e65e1fa37a626fbc2f690584" title="Returns the size of the scene." alt="" coords="224,123,341,149"/>
-<area shape="rect" id="node5" href="$class_collider_component.html#a07131e94ac1d5cd302503b27279fb9c1" title="Returns a const pointer to the transformable of the collider." alt="" coords="205,174,360,215"/>
-</map>

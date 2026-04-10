@@ -1,5 +1,0 @@
-<map id="HitEvent" name="HitEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="21,155,99,181"/>
-<area shape="rect" id="node2" href="$class_custom_event.html" title=" " alt="" coords="5,80,115,107"/>
-<area shape="rect" id="node3" href="$class_event.html" title="Abstract class for all events." alt="" coords="31,5,89,32"/>
-</map>

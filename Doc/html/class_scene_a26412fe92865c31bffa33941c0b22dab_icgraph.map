@@ -1,5 +1,0 @@
-<map id="Scene::processEvent" name="Scene::processEvent">
-<area shape="rect" id="node1" title="Process a CustomEvent." alt="" coords="437,5,593,32"/>
-<area shape="rect" id="node2" href="$class_scene.html#a2efbbd9f044ba4b114b0a067b85843c6" title="CustomEvent process distributor." alt="" coords="221,5,389,32"/>
-<area shape="rect" id="node3" href="$class_game.html#a31a02c739ee585c35a164248c7f6900a" title="CustomEvent process distributor." alt="" coords="5,5,173,32"/>
-</map>

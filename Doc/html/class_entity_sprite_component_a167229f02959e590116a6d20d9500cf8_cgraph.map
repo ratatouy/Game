@@ -1,6 +1,0 @@
-<map id="EntitySpriteComponent::SetThisSpriteLocalTransform" name="EntitySpriteComponent::SetThisSpriteLocalTransform">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,220,112"/>
-<area shape="rect" id="node2" href="$class_entity_sprite_component.html#a1207552e09041cb04588a74131babab5" title=" " alt="" coords="269,5,472,47"/>
-<area shape="rect" id="node3" href="$class_entity_sprite_component.html#a385cf72043acd5f996024ad1bc1f8cb6" title=" " alt="" coords="268,71,473,112"/>
-<area shape="rect" id="node4" href="$class_entity_sprite_component.html#ae76247a27bc98af47971ea690a802a85" title=" " alt="" coords="278,136,463,177"/>
-</map>

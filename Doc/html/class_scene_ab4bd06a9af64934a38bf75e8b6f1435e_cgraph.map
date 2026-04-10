@@ -1,6 +1,0 @@
-<map id="Scene::addEntity" name="Scene::addEntity">
-<area shape="rect" id="node1" title="Adds an entity to the scene." alt="" coords="5,56,136,83"/>
-<area shape="rect" id="node2" href="$class_entity.html#a218babc804115cc50d513daa5a286dd9" title="Get the name of the entity." alt="" coords="184,5,311,32"/>
-<area shape="rect" id="node3" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="200,56,295,83"/>
-<area shape="rect" id="node4" href="$class_entity.html#ad840fa8abf45ea14ed5ff7239f2268ff" title="Set the current scene of the entity." alt="" coords="184,107,311,133"/>
-</map>

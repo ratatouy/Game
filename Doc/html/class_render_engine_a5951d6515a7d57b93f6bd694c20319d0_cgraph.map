@@ -1,5 +1,0 @@
-<map id="RenderEngine::getInstance" name="RenderEngine::getInstance">
-<area shape="rect" id="node1" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="5,31,201,57"/>
-<area shape="rect" id="node2" href="$class_logger.html#a02426193586d4c570c0bbf4e73807ff3" title="Log a message to the console, general log file and a specific log file." alt="" coords="307,5,402,32"/>
-<area shape="rect" id="node3" href="$class_render_engine.html#a1afac0b7f77f6774506d8eab5f4a126a" title="Default Constructor." alt="" coords="249,56,460,83"/>
-</map>

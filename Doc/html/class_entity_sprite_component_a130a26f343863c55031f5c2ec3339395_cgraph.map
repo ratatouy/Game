@@ -1,6 +1,0 @@
-<map id="EntitySpriteComponent::AddSprite" name="EntitySpriteComponent::AddSprite">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,179,112"/>
-<area shape="rect" id="node2" href="$class_transformable_component.html#ac1171dc4f5fede3eaa7e8270077ab3f1" title="Position Getter." alt="" coords="227,5,417,47"/>
-<area shape="rect" id="node3" href="$class_transformable_component.html#aaa000304e3d2e68baa78a13855357bff" title="Rotation Getter." alt="" coords="227,71,417,112"/>
-<area shape="rect" id="node4" href="$class_transformable_component.html#a9a5d1925296bec97af794a8eb825fe37" title="Scale Getter." alt="" coords="227,136,417,177"/>
-</map>

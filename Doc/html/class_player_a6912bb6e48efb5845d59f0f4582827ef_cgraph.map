@@ -1,4 +1,0 @@
-<map id="Player::update" name="Player::update">
-<area shape="rect" id="node1" title="Updates the Player." alt="" coords="5,13,121,39"/>
-<area shape="rect" id="node2" href="$class_transformable_component.html#aa5fced3000d00f219a8675c93a4eca20" title=" " alt="" coords="169,5,360,47"/>
-</map>

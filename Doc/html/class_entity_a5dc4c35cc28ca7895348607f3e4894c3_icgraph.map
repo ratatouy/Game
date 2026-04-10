@@ -1,7 +1,0 @@
-<map id="Entity::getName" name="Entity::getName">
-<area shape="rect" id="node1" title=" " alt="" coords="597,31,724,57"/>
-<area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="240,31,371,57"/>
-<area shape="rect" id="node5" href="$class_scene.html#ab4bd06a9af64934a38bf75e8b6f1435e" title="Adds an entity to the scene." alt="" coords="419,56,549,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,5,126,32"/>
-<area shape="rect" id="node4" href="$class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title="Process a SpawnEntityEvent." alt="" coords="5,56,192,83"/>
-</map>

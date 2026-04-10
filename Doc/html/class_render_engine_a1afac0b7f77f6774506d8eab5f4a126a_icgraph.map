@@ -1,7 +1,0 @@
-<map id="RenderEngine::RenderEngine" name="RenderEngine::RenderEngine">
-<area shape="rect" id="node1" title="Default Constructor." alt="" coords="701,5,912,32"/>
-<area shape="rect" id="node2" href="$class_render_engine.html#a5951d6515a7d57b93f6bd694c20319d0" title="Get the instance of the RenderEngine (Singleton), creates it if it doesn&#39;t exist." alt="" coords="457,5,653,32"/>
-<area shape="rect" id="node3" href="$class_game.html#ad59df6562a58a614fda24622d3715b65" title="Default Constructor." alt="" coords="301,5,409,32"/>
-<area shape="rect" id="node4" href="$class_game.html#a19798a4f4c50037e1c5cd8c5d491fef9" title="Get the instance of the Game (Singleton), creates it if it doesn&#39;t exist." alt="" coords="108,5,253,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>

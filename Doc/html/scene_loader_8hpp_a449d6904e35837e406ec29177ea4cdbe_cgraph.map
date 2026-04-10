@@ -1,4 +1,0 @@
-<map id="LoadScene" name="LoadScene">
-<area shape="rect" id="node1" title="Load a scene from a json file." alt="" coords="5,5,97,32"/>
-<area shape="rect" id="node2" href="$class_logger.html#a51d42db0221fc45fe18d43931638157c" title="Log a message to the console, general log file and a specific log file." alt="" coords="145,5,240,32"/>
-</map>

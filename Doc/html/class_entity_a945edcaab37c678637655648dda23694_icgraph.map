@@ -1,7 +1,0 @@
-<map id="Entity::getEntitySprite" name="Entity::getEntitySprite">
-<area shape="rect" id="node1" title="Get the EntitySprite Component of the entity." alt="" coords="419,31,583,57"/>
-<area shape="rect" id="node2" href="$class_game.html#a472279479c423e4950f6eedf09bf8bf5" title=" " alt="" coords="240,56,371,83"/>
-<area shape="rect" id="node5" href="$class_player.html#aeea45f839f224a5320dfadfd2ff3ebe9" title=" " alt="" coords="249,5,361,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,5,126,32"/>
-<area shape="rect" id="node4" href="$class_game.html#a00f5148b5d6a33300719534ec9f0c75b" title="Process a SpawnEntityEvent." alt="" coords="5,56,192,83"/>
-</map>

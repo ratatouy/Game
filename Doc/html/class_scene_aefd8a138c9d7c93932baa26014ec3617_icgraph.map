@@ -1,7 +1,0 @@
-<map id="Scene::extractEntity" name="Scene::extractEntity">
-<area shape="rect" id="node1" title="Extracts an entity from the scene." alt="" coords="565,31,719,57"/>
-<area shape="rect" id="node2" href="$class_game.html#a2a05b266e2a74d2e9f9a590c90e73ade" title="Process a SceneTransitionEvent." alt="" coords="361,31,517,57"/>
-<area shape="rect" id="node3" href="$class_game.html#ac806107ae54ab10c874cb6cb1c0a5239" title="SceneTransitionEvent process distributor." alt="" coords="127,5,295,32"/>
-<area shape="rect" id="node4" href="$class_event_handler.html#a365d58b6e3fb682480ac9b123d16fad1" title="Process the next event." alt="" coords="108,56,313,83"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
-</map>

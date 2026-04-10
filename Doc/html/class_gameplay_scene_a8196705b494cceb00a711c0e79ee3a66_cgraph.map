@@ -1,8 +1,0 @@
-<map id="GameplayScene::update" name="GameplayScene::update">
-<area shape="rect" id="node1" title="Update the scene." alt="" coords="5,75,187,102"/>
-<area shape="rect" id="node2" href="$class_gameplay_scene.html#a152b9143efeff8b8ea2f7e9f7e73f1cc" title="Updates all of the entities." alt="" coords="235,75,465,102"/>
-<area shape="rect" id="node3" href="$class_collidable_entity.html#a9af7c82cadf8b7d046f3b8c53131dd84" title="Checks collisions with another collidableEntity." alt="" coords="513,46,744,73"/>
-<area shape="rect" id="node6" href="$class_collidable_entity.html#a9c607f185e09513d4e519385bca1a43e" title="Process a Collision with an entity." alt="" coords="537,97,720,139"/>
-<area shape="rect" id="node4" href="$class_collidable_entity.html#a725bd97abf4115914447de27b61981f8" title="Returns a const&#45;pointer to the colliderComponent." alt="" coords="792,5,995,47"/>
-<area shape="rect" id="node5" href="$class_collider_component.html#af77d3778829901af2b056f1d9ab46d2d" title="Checks if there is a collision between two colliders." alt="" coords="816,71,971,112"/>
-</map>

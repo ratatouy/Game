@@ -1,7 +1,0 @@
-<map id="Event" name="Event">
-<area shape="rect" id="node1" title="Abstract class for all events." alt="" coords="191,5,249,32"/>
-<area shape="rect" id="node2" href="$class_custom_event.html" title=" " alt="" coords="5,80,115,107"/>
-<area shape="rect" id="node4" href="$class_scene_transition_event.html" title=" " alt="" coords="139,80,301,107"/>
-<area shape="rect" id="node5" href="$class_spawn_entity_event.html" title=" " alt="" coords="325,80,465,107"/>
-<area shape="rect" id="node3" href="$class_hit_event.html" title=" " alt="" coords="21,155,99,181"/>
-</map>

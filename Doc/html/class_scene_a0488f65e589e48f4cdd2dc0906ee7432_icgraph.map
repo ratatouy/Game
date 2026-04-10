@@ -1,5 +1,0 @@
-<map id="Scene::getSize" name="Scene::getSize">
-<area shape="rect" id="node1" title="Returns the size of the scene." alt="" coords="205,46,323,73"/>
-<area shape="rect" id="node2" href="$class_vertical_transition.html#a33037c27d52f84cb042bcc2314ccc8e8" title="Checks if the player is within the activation zone of the transition." alt="" coords="14,5,149,47"/>
-<area shape="rect" id="node3" href="$class_horizontal_transition.html#a843215454768a5d4e0294396c143fbd3" title="Check if the player is within or past the activation zone of the transition." alt="" coords="5,71,157,112"/>
-</map>

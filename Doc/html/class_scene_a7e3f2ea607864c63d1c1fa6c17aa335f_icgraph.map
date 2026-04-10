@@ -1,5 +1,0 @@
-<map id="Scene::getOrigin" name="Scene::getOrigin">
-<area shape="rect" id="node1" title="Returns the origin of the scene." alt="" coords="205,46,335,73"/>
-<area shape="rect" id="node2" href="$class_vertical_transition.html#a8972197e277aa315fa3551af38658663" title="Checks if the player is within the activation zone of the transition." alt="" coords="14,5,149,47"/>
-<area shape="rect" id="node3" href="$class_horizontal_transition.html#a67aa8043ef25ed1b33221321de12ce11" title="Check if the player is within or past the activation zone of the transition." alt="" coords="5,71,157,112"/>
-</map>

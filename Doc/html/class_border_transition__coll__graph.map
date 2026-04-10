@@ -1,6 +1,0 @@
-<map id="BorderTransition" name="BorderTransition">
-<area shape="rect" id="node1" title="Manages transitions from the border of a screen to a neighboring screen." alt="" coords="5,260,133,287"/>
-<area shape="rect" id="node2" href="$class_transition.html" title="Object to manage transitions between Scenes." alt="" coords="27,184,112,211"/>
-<area shape="rect" id="node3" href="$class_scene.html" title="Base class for all Scenes." alt="" coords="39,95,100,121"/>
-<area shape="rect" id="node4" href="$class_game.html" title="Main class of the game." alt="" coords="39,5,100,32"/>
-</map>
