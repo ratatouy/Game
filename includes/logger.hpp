@@ -11,9 +11,12 @@
 enum LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL };
 ///< Enum to represent log levels
 
-enum LogType { MAIN, GAME, RENDER_ENGINE, EVENT_HANDLER, PARSER, 
-    SCENE, ENTITY, ENTITY_SPRITE, PLAYER, EVENT };
+enum LogType { MAIN, GAME, RENDER_ENGINE, PARSER, 
+    SCENE, ENTITY, ENTITY_SPRITE, PLAYER, EVENT,
+    TRANSITION,
+    UNKNOWN };
 ///< Enum to represent log types
+/// Event is also used by the event handler
 
 
 ////////////////////////////////////////////////////////////
@@ -173,7 +176,7 @@ private:
             return (with_space) ? "game   " : "game";
         case RENDER_ENGINE:
             return (with_space) ? "render " : "render";
-        case EVENT_HANDLER:
+        case EVENT:
             return (with_space) ? "event  " : "event";
         case PARSER:
             return (with_space) ? "parser " : "parser";
@@ -183,10 +186,14 @@ private:
             return (with_space) ? "entity " : "entity";
         case ENTITY_SPRITE:
             return (with_space) ? "sprite " : "sprite";
+        case TRANSITION:
+            return (with_space) ? "trans  " : "trans";
         case PLAYER:
             return (with_space) ? "player " : "player";
-        default:
+        case UNKNOWN:
             return (with_space) ? "unknown" : "unknown";
+        default:
+            return "this is weird, it should never happen";
         }
     }
 

@@ -63,13 +63,15 @@ int foo(float var);
 ### Variables and Attributes :
 - Place the comment below the declaration, it can be on the same line if the comment is small enough.
 - Notifying the type of annotation isn't necessary if the comment is small enough.
+- put an underscore at the end for private variables
 - For class attributes use this format :
 ```c++
+private:
 ////////////////////////////////////////////////////////////
 /// Member Data
 ////////////////////////////////////////////////////////////
-    int v1;                   ///< I describe v1
-    int longervariablename;   ///< And I, describe v2
+        int v1_;                  ///< I describe v1
+public: int longervariablename;   ///< And I, describe v2
 ```
 
 
@@ -104,7 +106,7 @@ private:
     ////////////////////////////////////////////////////////////
     /// Member Data
     ////////////////////////////////////////////////////////////
-    int v1;         ///< I describe v1
+    int v1_;         ///< I describe v1
 };
 
 

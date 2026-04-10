@@ -1,12 +1,17 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
+////////////////////////////////////////////////////////////
+// Headers
+////////////////////////////////////////////////////////////
 #include "Entity/CollidableEntity.hpp"
 #include "Entity/Projectile/Projectile.hpp"
 
 #include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
 #include "Events/CustomEvents/HitEvent.hpp"
+
+class SceneTransitionEvent;  // Forward declaration of SceneTransitionEvent //
 
 
 ////////////////////////////////////////////////////////////
@@ -66,9 +71,16 @@ public:
     ////////////////////////////////////////////////////////////
     void update() override;
 
+    void processEvent(SceneTransitionEvent* event);
+
     void processCollision(const CollidableEntity* other) override;
 
     void attack();
+
+    ////////////////////////////////////////////////////////////
+    // Member Data
+    ////////////////////////////////////////////////////////////
+    Projectile* projectile_ = nullptr;
 };
 
 #endif

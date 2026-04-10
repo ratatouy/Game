@@ -9,6 +9,9 @@
 #include "Entity/Player/Player.hpp"
 #include "Entity/Ennemies/Ennemy.hpp"
 
+#include "Transitions/Transition.hpp"
+#include "Transitions/BasicTransitions/BorderTransition.hpp"
+
 #include "Scenes/Scene.hpp"
 #include "Scenes/BasicScenes/MenuScene.hpp"
 #include "Scenes/BasicScenes/GameplayScene.hpp"
@@ -41,6 +44,30 @@ namespace Parser
     /// \see Scene
     ////////////////////////////////////////////////////////////
     Scene* LoadScene(std::string name, std::string filepath = "Data/GameData/sceneData.json");
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Loads and builds all transitions of a scene from a json file and returns them
+    ///
+    /// will return empty vector if the scene doesn't exist or doesn't have any data.
+    ///
+    /// \param name Name of the scene to load
+    ///
+    /// \param filepath Path to the json file (default : "Data/GameData/transitionData.json")
+    ///
+    /// \return List of the loaded entities
+    ///
+    /// \see Transition
+    ////////////////////////////////////////////////////////////
+    std::vector<Transition*> parseSceneTransitions(std::string name, Scene* scene, std::string filepath = "Data/GameData/transitionData.json");
+
+    ///////////////////////////////////////////////////////////
+    /// \brief Builds an transition from json data
+    ///
+    /// \param transition_data Data of the transition in json format
+    ///
+    /// \return Pointer to the loaded transition
+    ///////////////////////////////////////////////////////////
+    Transition* parseTransition(nlohmann::json transition_data, Scene* scene);
 
     ////////////////////////////////////////////////////////////
     /// \brief Loads and builds all entities of a scene from a json file and returns them

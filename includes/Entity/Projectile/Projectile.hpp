@@ -14,6 +14,8 @@ private:
 public:
     Projectile(const std::string& name, sf::Vector2f position = {0,0}, sf::Vector2f speed = {0,0});
 
+    ~Projectile() override;
+
     void update() override;
 
     void processCollision(const CollidableEntity* other) override;

@@ -9,13 +9,17 @@
 #include <iostream>
 
 #include "Engine/RenderEngine.hpp"
+#include "Loaders/sceneLoader.hpp"
 
+#include "Entity/Entity.hpp"
+#include "Entity/Player/Player.hpp"
+
+/// Events
 #include "Events/Event.hpp"
 #include "Events/CustomEvent.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
 #include "Events/BasicEvents/SpawnEntityEvent.hpp"
-#include "Entity/Entity.hpp"
-#include "Loaders/sceneLoader.hpp"
+#include "Events/BasicEvents/DeleteEntityEvent.hpp"
 
 
 class Scene;        // Forward Declaration of Scene        //
@@ -26,7 +30,7 @@ class EventHandler; // Forward Declaration of EventHandler //
 ////////////////////////////////////////////////////////////
 /// \brief Main class of the game
 ///
-/// The game is a collection of scenes, with only one active at a time.
+/// The game contains a collection of scenes, with only one active at a time.
 /// It also is a singleton.
 /// It's role is to bring together the RenderEngine, EventHandler and the active Scene.
 ///
@@ -113,6 +117,13 @@ public:
     const Scene* getActiveScene() const {return active_scene_;}
     Scene* getActiveScene() {return active_scene_;} ///< Returns a non-const pointer to the active Scene
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Load a new scene as the active one 
+    ///
+    /// Throws an error if the scene isn't found.
+    ///
+    /// \param name name of the scene to load
+    ////////////////////////////////////////////////////////////
     void loadScene(const std::string& name);
 
     ////////////////////////////////////////////////////////////
@@ -167,6 +178,24 @@ public:
     void processEvent(SpawnEntityEvent* event);
 
     ////////////////////////////////////////////////////////////
+    /// \brief DeleteEntityEvent process distributor
+    ///
+    /// Distributes the DeleteEntityEvent to the objects that need it :
+    /// \li this
+    /// \li The Scene
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
+    void distributeEvent(DeleteEntityEvent* event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Process a DeleteEntityEvent
+    ///
+    /// \param event Reference to the event
+    ////////////////////////////////////////////////////////////
+    void processEvent(DeleteEntityEvent* event);
+
+    ////////////////////////////////////////////////////////////
     /// \brief CustomEvent process distributor
     ///
     /// We don't know what to do with the CustomEvent so we distribute it to all of the objects :
@@ -185,7 +214,6 @@ public:
     ////////////////////////////////////////////////////////////
     void processEvent(CustomEvent* event);
 
-
     ////////////////////////////////////////////////////////////
     /// \brief Update the Game
     ///
@@ -200,14 +228,28 @@ public:
     ////////////////////////////////////////////////////////////
     void render();
 
-
     ////////////////////////////////////////////////////////////
+    /// \brief adds an entity to the scene & the render engine
+    ///
     /// \warning DON'T FORGET TO DELETE THIS TION, INSTEAD JUST USE LOADSCENE INSTEAD OR MAYBE NOT BUT I KNOW IT'S NOT A STABLE STRUCTURE SO AT LEAST THINK ABOUT IT AND REFORMAT
+    ///
+    /// The rendering order is dependant on the order in which you add the sprite to the entitySpriteComponent
+    ///
+    /// \param entity Reference to the entity
     ///
     /// \todo delete this
     ////////////////////////////////////////////////////////////
     void addEntity(Entity* entity);
 
+    ////////////////////////////////////////////////////////////
+    /// \brief deletes an entity completely
+    ///
+    /// This assumes the entity is in the active scene.
+    /// This will delete the entity entirely and clear it from the render engine.
+    ///
+    /// \param entity Reference to the entity
+    ////////////////////////////////////////////////////////////
+    void deleteEntity(const std::string& name);
 
 private:
     ////////////////////////////////////////////////////////////

@@ -6,19 +6,25 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Graphics.hpp>
 
+#include <optional>
+
 
 ////////////////////////////////////////////////////////////
-/// \brief Type used to store sprite data
+/// \brief Type used to store Sprite Data for a single sprite of an Entity
+///
+/// It's used in the EntitySpriteComponent.
 ///
 /// It contains :
 /// \li The sprite
+/// \li The shader
 /// \li The local Transformable
 /// \li The texture
 ////////////////////////////////////////////////////////////
 struct SpriteData {
-    sf::Sprite sprite;                 ///< The sprite
-    sf::Transformable transformable;   ///< The local Transformable
-    sf::Texture* texture;              ///< The texture
+    sf::Sprite sprite;                  ///< Sprite of the SpriteData
+    std::optional<sf::Shader> shader;   ///< Shader of the SpriteData
+    sf::Transformable transformable;    ///< Local Transformable of the SpriteData
+    sf::Texture* texture;               ///< Texture of the SpriteData
 
     ////////////////////////////////////////////////////////////
     /// \brief Default Constructor
@@ -27,12 +33,13 @@ struct SpriteData {
     ////////////////////////////////////////////////////////////
     SpriteData() {
         sprite = sf::Sprite();
+        shader = std::nullopt;
         transformable = sf::Transformable();
         texture = nullptr;
     }
 
     ////////////////////////////////////////////////////////////
-    /// \brief Complete Constructor
+    /// \brief Basic Constructor
     ///
     /// \param spr Sprite
     ///
@@ -41,16 +48,32 @@ struct SpriteData {
     /// \param tex Texture
     ////////////////////////////////////////////////////////////
     SpriteData(sf::Sprite spr, sf::Transformable tr, sf::Texture* tex)
-        : sprite(spr), transformable(tr), texture(tex) {}
+        : sprite(spr), transformable(tr), texture(tex), shader(std::nullopt) {}
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Constructor with Shader
+    ///
+    /// \param spr Sprite
+    ///
+    /// \param tr Local Transformable
+    ///
+    /// \param tex Texture
+    ///
+    /// \param shader_path Path to the shader
+    ///
+    /// \param shader_type Type of the shader
+    ////////////////////////////////////////////////////////////
+    SpriteData(sf::Sprite spr, sf::Transformable tr, sf::Texture* tex, std::string shader_path, sf::Shader::Type shader_type)
+        : sprite(spr), transformable(tr), texture(tex) { shader.emplace(); shader->loadFromFile(shader_path, shader_type); }
 };
 
 ////////////////////////////////////////////////////////////
-/// \brief Component to manage the sprites of an entity.
+/// \brief Manages the sprites of an entity, there can be none to multiple sprites.
 ///
-/// This stores a map of named sprites and their data (the sprite, the local transformable and the texture).
+/// Each sprite has it's own name for easy access.
+/// Each sprite has a SpriteData struct containing the sprite, the local transformable, the eventual shader and the texture.
+/// As stated above, each sprite can have it's own shader, but it is not mandatory and will be ignored if not set.
 /// Only one EntitySpriteComponent is attached to each entity.
-///
-/// \details Created in order to support multiple sprites attached to a single entity.
 ////////////////////////////////////////////////////////////
 class EntitySpriteComponent
 {
@@ -74,7 +97,18 @@ public:
     ///
     /// \param filepath Path to the texture
     ////////////////////////////////////////////////////////////
-    void addSprite(std::string name, const std::string& filepath);
+    void addSprite(const std::string& spriteName, const std::string& filepath);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Attaches a shader to a sprite of the entity
+    ///
+    /// \param name Name of the sprite
+    ///
+    /// \param shaderPath Path to the shader
+    ///
+    /// \param shaderType Type of the shader
+    ////////////////////////////////////////////////////////////
+    void attachShaderToSprite(const std::string& spriteName, std::string shaderPath, sf::Shader::Type shaderType);
 
     ////////////////////////////////////////////////////////////
     /// \brief Returns a const pointer to the map containing all the sprites
@@ -82,6 +116,7 @@ public:
     /// \return const Pointer to the map
     ////////////////////////////////////////////////////////////
     const auto GetSpriteData() const {return &sprites_data_map_;}
+    auto GetSpriteData() {return &sprites_data_map_;} ///< Same as GetSpriteData() but non-const
 
     ////////////////////////////////////////////////////////////
     /// \brief Returns the number of sprites
@@ -97,7 +132,7 @@ public:
     ///
     /// \returns const Pointer to the Requested Sprite
     ////////////////////////////////////////////////////////////
-    const SpriteData* GetThisSpriteData(std::string spriteName)  {return &sprites_data_map_.find(spriteName)->second;}
+    const SpriteData* GetThisSpriteData(std::string spriteName)  {return sprites_data_map_.find(spriteName)->second;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the local Transformable of a sprite
@@ -106,7 +141,7 @@ public:
     ///
     /// \returns const Pointer to the Requested Transformable
     ////////////////////////////////////////////////////////////
-    const sf::Sprite* GetThisSpriteLocalSprite(std::string spriteName) {return &sprites_data_map_.find(spriteName)->second.sprite;}
+    const sf::Sprite* GetThisSpriteLocalSprite(std::string spriteName) {return &sprites_data_map_.find(spriteName)->second->sprite;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the local Transformable of a sprite
@@ -115,7 +150,7 @@ public:
     ///
     /// \returns Pointer to the Requested Transformable
     ////////////////////////////////////////////////////////////
-    sf::Transformable* GetThisSpriteLocalTransformable(std::string spriteName) {return &sprites_data_map_.find(spriteName)->second.transformable;}
+    sf::Transformable* GetThisSpriteLocalTransformable(std::string spriteName) {return &sprites_data_map_.find(spriteName)->second->transformable;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the local Transformable of a sprite
@@ -124,7 +159,7 @@ public:
     ///
     /// \returns const Pointer to the Requested Transformable
     ////////////////////////////////////////////////////////////
-    const sf::Texture* GetThisSpriteLocalTexture(std::string spriteName) {return sprites_data_map_.find(spriteName)->second.texture;}
+    const sf::Texture* GetThisSpriteLocalTexture(std::string spriteName) {return sprites_data_map_.find(spriteName)->second->texture;}
 
     ////////////////////////////////////////////////////////////
     /// \brief Set the local transform of a sprite
@@ -157,9 +192,9 @@ private:
     ///////////////////////////////////////////////////////////
     /// Member Data
     ///////////////////////////////////////////////////////////
-    int nb_sprites_;                                                    ///< Number of sprites
-    std::unordered_map<std::string, SpriteData> sprites_data_map_;      ///< Map containing all the sprites ( \see SpriteData)
-    sf::Transformable* entityTransformable_;                       ///< Reference to the Entity's Transformable Component
+    int nb_sprites_;                                                  ///< Number of sprites
+    std::unordered_map<std::string, SpriteData*> sprites_data_map_;   ///< Map containing all the sprites ( \see SpriteData)
+    sf::Transformable* entityTransformable_;                          ///< Reference to the Entity's Transformable Component
     
 };
 

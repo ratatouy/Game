@@ -52,7 +52,7 @@ Scene* Parser::LoadScene(std::string name, std::string filepath)
         throw (std::runtime_error(error));
     }
 
-    // Get all entities<
+    // Get all entities
     std::vector<Entity*> entities = parseSceneEntities(name);
 
     // Add them to the scene (works on any kind of scene)
@@ -61,8 +61,92 @@ Scene* Parser::LoadScene(std::string name, std::string filepath)
         scene->addEntity(entity);
     }
 
+    // Get all transitions
+    std::vector<Transition*> transitions = parseSceneTransitions(name, scene);
+
+    // Add them to the scene (works on any kind of scene)
+    for (auto transition : transitions)
+    {
+        if (transition != nullptr)
+          scene->addTransition(transition);
+    }
+
+    Logger::log(PARSER, INFO, "PARSING scene \""+name+"\"");
+
     return scene;
 }
+
+
+
+//==========================================================
+// Transitions
+//==========================================================
+
+std::vector<Transition*> Parser::parseSceneTransitions(std::string name, Scene* scene, std::string filepath)
+{
+    // Open the file
+    std::ifstream f(filepath);
+
+    // Get all of the data
+    nlohmann::json full_data = nlohmann::json::parse(f);
+
+    // Get the scene that we want
+    auto scene_transitions_data = full_data[name];
+    
+    // Declare the vector
+    std::vector<Transition*> transitions = std::vector<Transition*>();
+
+    for (auto it : scene_transitions_data)
+    {
+        transitions.push_back(parseTransition(it, scene));
+    }
+
+    return transitions;
+}
+
+Transition* Parser::parseTransition(nlohmann::json transition_iterator, Scene* scene)
+{
+    Logger::log(SCENE, DEBUG, "PARSING transition");
+
+    std::string type = transition_iterator["type"];
+    std::string name = transition_iterator["name"];
+    std::string target = transition_iterator["target"];
+    
+    if (type == "HORIZONTAL")
+    {
+        int start = transition_iterator["start"];
+        int end = transition_iterator["end"];
+        std::string ori = transition_iterator["orientation"];
+        bool right = (ori == "right");
+
+        return new HorizontalTransition(scene, target, name, start, end, right);
+    }
+    else if (type == "VERTICAL")
+    {
+        int start = transition_iterator["start"];
+        int end = transition_iterator["end"];
+        std::string ori = transition_iterator["orientation"];
+        bool down = (ori == "down");
+
+        return new VerticalTransition(scene, target, name, start, end, down);
+    }
+    else if (type == "ONKEY")
+    {
+        Logger::log(PARSER, WARNING, "ONKEY TR DETECTED");
+        return nullptr;
+    }
+    else
+    {
+        std::string error = "Transition type : \"" + name + "\" unknown";
+        Logger::log(PARSER, ERROR, error);
+        throw (std::runtime_error(error));
+    }
+}
+
+
+//==========================================================
+/// Entities
+//==========================================================
 
 /// \todo test with entitiless scenes
 std::vector<Entity*> Parser::parseSceneEntities(std::string name, std::string filepath)
@@ -89,6 +173,8 @@ std::vector<Entity*> Parser::parseSceneEntities(std::string name, std::string fi
 
 Entity* Parser::parseEntity(nlohmann::json entity_iterator)
 {
+    Logger::log(SCENE, DEBUG, "PARSING entity");
+
     auto type = entity_iterator["type"];
     auto name = entity_iterator["name"];
     auto sprites = entity_iterator["sprites"];
@@ -144,3 +230,6 @@ EntitySpriteComponent* Parser::parseEntitySpriteComponent(nlohmann::json sprites
 
     return sp;
 }
+
+
+

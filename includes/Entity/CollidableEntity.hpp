@@ -11,9 +11,10 @@ class CollidableEntity : public Entity
 {
 public:
     ////////////////////////////////////////////////////////////
-    /// \brief Creates a CollidableEntity from a name, a transformable and a collider
+    /// \brief Creates a CollidableEntity from a name
     ///
-    /// Creates a transformable then a colliderComponent and attach it to the transformable.
+    /// Creates an entity with default sf::Transformable and default EntitySpriteComponent
+    /// Then creates a default ColliderComponent.
     ///
     /// \param name Name of the entity
     ////////////////////////////////////////////////////////////
@@ -21,9 +22,10 @@ public:
         : Entity(name) {collider_ = new ColliderComponent(transformable);}
 
     ////////////////////////////////////////////////////////////
-    /// \brief Creates a CollidableEntity from a name, a transformable and a collider
+    /// \brief Creates a CollidableEntity from a name and a transformable
     ///
-    /// Creates a collider Component and attach it to the transformable.
+    /// Creates an entity with the transformable and the default EntitySpriteComponent
+    /// Then creates a default ColliderComponent.
     ///
     /// \param name Name of the entity
     ///
@@ -33,9 +35,9 @@ public:
         : Entity(name, transformable) {collider_ = new ColliderComponent(transformable);}
 
     ////////////////////////////////////////////////////////////
-    /// \brief Creates a CollidableEntity from a name, a transformable and a collider
+    /// \brief Creates a CollidableEntity from a name, and an EntitySpriteComponent
     ///
-    /// Creates a collider Component and attach it to the transformable.
+    /// Creates a full entity then creates a default ColliderComponent.
     ///
     /// \param name Name of the entity
     ///
@@ -49,7 +51,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Creates a CollidableEntity from a name, a transformable and a collider
     ///
-    /// The colliderComponent will be attached to the transformable.
+    /// Creates an entity with default EntitySpriteComponent, then attaches the collider to it.
     ///
     /// \param name Name of the entity
     ///
@@ -103,6 +105,9 @@ public:
     void update() override {}
 
 protected:
+    ////////////////////////////////////////////////////////////
+    /// Memeber Data
+    ////////////////////////////////////////////////////////////
     ColliderComponent* collider_;
 
 };

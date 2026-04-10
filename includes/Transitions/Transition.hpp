@@ -8,6 +8,8 @@
 #include "SFML/Graphics.hpp"
 #include "Components/BasicComponents/ColliderComponent.hpp"
 
+#include "logger.hpp"
+
 class Scene; // Forward declaration of Scene //
 
 
@@ -33,24 +35,20 @@ public:
     Transition(Scene* scene, std::string target, std::string name) : scene_(scene), target_(target), name_(name) {}
 
     ////////////////////////////////////////////////////////////
-    /// \brief Check if the transition should be activated
+    /// \brief Returns the name of the Transition
     ///
-    /// Pure virtual
-    ///
-    /// \returns True if the Transition should be activated
+    /// \returns Name of the Transition
     ////////////////////////////////////////////////////////////
-    virtual bool checkTransition() const = 0;
+    std::string getName() {return name_;}
 
     ////////////////////////////////////////////////////////////
-    /// \brief Check if the transition should be activated according to the player's sf::Transformable
+    /// \brief Check if the transition should be activated
     ///
-    /// Pure virtual
-    ///
-    /// \param player_tr The player's sf::Transformables
+    /// Override if needed
     ///
     /// \returns True if the Transition should be activated
     ////////////////////////////////////////////////////////////
-    virtual bool checkTransition(ColliderComponent* player_tr) const = 0;
+    virtual bool checkTransition() const {return false;}
 
     ////////////////////////////////////////////////////////////    
     /// \brief Returns the name of the targeted Scene

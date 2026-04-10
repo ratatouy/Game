@@ -1,6 +1,7 @@
 #include "Game.hpp"
 #include "Events/EventHandler.hpp"
 #include "Scenes/Scene.hpp"
+#include "Entity/Player/Player.hpp"
 
 #include "logger.hpp"
 
@@ -59,7 +60,8 @@ void Game::distributeEvent(SceneTransitionEvent* event)
 void Game::processEvent(SceneTransitionEvent* event)
 {
     Logger::log(GAME, INFO, "PROCESSING SceneTransition Event");
-    Entity* pl = active_scene_->extractEntity("player");
+    Player* pl = active_scene_->extractEntity<Player>("player");
+    pl->processEvent(event);
 
     if (!pl) {
         Logger::log(GAME, ERROR, "No player found in scene");
@@ -68,7 +70,7 @@ void Game::processEvent(SceneTransitionEvent* event)
 
     delete active_scene_;
     renderEngine_->clearAll();
-    loadScene(event->getTarget());
+    loadScene(event->getTransition()->getTargetName());
     addEntity(pl);
 }
 
@@ -82,6 +84,22 @@ void Game::processEvent(SpawnEntityEvent* event)
     Logger::log(GAME, INFO, "PROCESSING SpawnEntity Event");
     this->addEntity(event->getEntity());
 }
+
+void Game::distributeEvent(DeleteEntityEvent* event)
+{
+    Logger::log(GAME, INFO, "DISTRIBUTING DeleteEntity Event");
+    this->processEvent(event);
+}
+void Game::processEvent(DeleteEntityEvent* event)
+{
+    Logger::log(GAME, INFO, "PROCESSING DeleteEntity Event");
+    // extract entity from scene & delete it
+    delete active_scene_->extractEntity(event->getName());
+
+    // clear the corresponding ESC
+    renderEngine_->removeESC(event->getName());
+}
+
 
 void Game::distributeEvent(CustomEvent* event)
 {
@@ -109,13 +127,12 @@ void Game::addEntity(Entity* entity)
 {
     active_scene_->addEntity(entity);
 
-    auto data = entity->entitySprite->GetSpriteData();
+    renderEngine_->addESC(entity->getName(), entity->entitySprite);
+}
 
-    // run through the map of the entitySprite
-    for (auto it = data->begin(); it != data->end(); it++)
-    {
-        std::string drawable_name = entity->getName() + std::string("_") + (std::string)it->first;
+void Game::deleteEntity(const std::string& name)
+{
+    delete active_scene_->extractEntity(name);
 
-        renderEngine_->addDrawable(drawable_name, (sf::Drawable*)&it->second.sprite);
-    }
+    renderEngine_->removeESC(name);
 }

@@ -4,18 +4,56 @@
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
+#include <array>
+#include <string>
+#include <vector>
+
 #include <SFML/Graphics.hpp>
 
+#include "Components/BasicComponents/EntitySpriteComponent.hpp"
 
-class Game; // Forward Declaration of Scene //
 
+class Game; // Forward Declaration of Game //
+
+////////////////////////////////////////////////////////////
+/// \brief Enum for the depth of the drawables
+///
+/// BACKGROUND is the farthest, FOREGROUND is the closest.
+/// This means when rendering, BACKGROUND drawbables are drawn first, then DECALS, then GAMEPLAY, then FOREGROUND
+////////////////////////////////////////////////////////////
+enum Depth
+{
+    BACKGROUND = 0,
+    DECALS = 1,
+    GAMEPLAY = 2,
+    FOREGROUND = 3
+};
+
+/// Number of depth levels (size of the enum), don't forget to update this if you add a new depth
+const unsigned int DEPTH_SIZE = 4;
+
+/// Shortcut type
+using ESC = EntitySpriteComponent;
+using ESCDepthList = std::array<std::unordered_map<std::string, ESC*>, DEPTH_SIZE>;
 
 ////////////////////////////////////////////////////////////
 /// \brief Manages Shaders and the RenderWindow
-//
-/// \warning A Drawable shouldn't be added to both drawables_ and shader_drawables_, please use attachShaderToDrawable instead
 ///
-/// \note Singleton
+/// The RenderEngine is in charge of rendering all the drawables and their associated Shaders.
+/// It uses references to the drawables to render them.
+/// When you want to create or delete an object,
+/// you have to create/delete the object itself AND add/remove it from the RenderEngine.
+/// That's why you should use the Game class to add or delete objects, as it also handles the RenderEngine.
+///
+/// For Shaders, the RenderEngine is in charge of creating and deleting them,
+/// you can use addShaderDrawable() to create a Shader Drawable,
+/// and attachShaderToDrawable() to add a Shader to a Drawable.
+///
+/// \warning A Drawable shouldn't be added to both drawables_ and shader_drawables_,
+/// this will cause plenty of issues,
+/// if you want to add a shader to a Drawable, please use attachShaderToDrawable() instead.
+///
+/// \note This object is a Singleton, use getInstance() to get a pointer to it's instance.
 ////////////////////////////////////////////////////////////
 class RenderEngine
 {
@@ -33,7 +71,7 @@ public:
     ///
     /// \return Pointer to the RenderEngine
     ///
-    /// \note the default width and height are 920x480
+    /// \note The default window dimensions are 920x480 px/px
     ////////////////////////////////////////////////////////////
     static RenderEngine* getInstance(Game* game, std::string title = "Game", int width = 920, int height = 480);
 
@@ -82,61 +120,39 @@ public:
     /// \return Pointer to the RenderWindow
     ////////////////////////////////////////////////////////////
     const sf::RenderWindow* getWindow() const {return window_;}
-    sf::RenderWindow* getWindow() {return window_;} ///< \brief same but non-const
+    sf::RenderWindow* getWindow() {return window_;} ///< same thing as getWindow but non-const
     
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Returns a Drawable according to its name
-    /// 
-    /// Returns end() iterator if not found.
-    ///
-    /// \param name Name of the Drawable
-    ///
-    /// \return Pointer to the Drawable
-    ///
-    /// \see Game::addEntity for the name format of an EntitySpriteComponent's Drawable
-    ////////////////////////////////////////////////////////////
-    const sf::Drawable* getDrawable(std::string name) const {return drawables_.find(name)->second;}
-
     ////////////////////////////////////////////////////////////
     /// \brief Adds a Drawable with it's name to the RenderEngine
     ///
-    /// \param name Name of the Drawable
+    /// \param name Name of the Entity possessing the ESC
     ///
-    /// \param drawable Pointer to the Drawable
+    /// \param ESC Pointer to the ESC
+    ///
+    /// \param depth Depth of the ESC (defaults to GAMEPLAY)
     ///
     /// \see addShaderDrawable for ShaderDrawables
     ////////////////////////////////////////////////////////////
-    void addDrawable(const std::string& name, sf::Drawable* drawable);
+    void addESC(const std::string& name, ESC* ESC, Depth depth = GAMEPLAY);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Adds a ShaderDrawable by constructing the shader.
+    /// \brief Removes an ESC from the RenderEngine
     ///
-    /// We get a reference to the Drawable and a path to the Shader File.
+    /// Removes the ESC from the map,
+    /// It will just clear the pointer to the ESC, so the user is responsible for deleting the ESC itself.
     ///
     /// \param name Name of the Drawable
     ///
-    /// \param drawable Pointer to the Drawable
-    ///
-    /// \param filepath Path to the Shader File
-    ///
-    /// \param type Type of the Shader
+    /// \returns true if the ESC was found and removed, false otherwise
     ////////////////////////////////////////////////////////////
-    void addShaderDrawable(std::string name, sf::Drawable* drawable, std::string filepath, sf::Shader::Type type);
+    bool removeESC(const std::string& name);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Attaches a Shader to a Drawable
+    /// \brief Removes all Drawables from the RenderEngine
     ///
-    /// \param drawable_name Name of the Drawable
-    ///
-    /// \param filepath Path to the Shader File
-    ///
-    /// \param type Type of the Shader
-    ////////////////////////////////////////////////////////////
-    void attachShaderToDrawable(std::string drawable_name, std::string filepath, sf::Shader::Type type);
-
     /// Doesn't delete the drawables, just empty the map,
     /// the user is responsible for deleting the drawables
+    ////////////////////////////////////////////////////////////
     void clearAll();
 
     //////////////////////////////////////////////////////////// 
@@ -163,26 +179,12 @@ private:
     ////////////////////////////////////////////////////////////
     /// Member Data
     ////////////////////////////////////////////////////////////
-    static RenderEngine* instance_;     ///< Singleton
-    static bool instantiated_;          ///< Forces Singleton
-    sf::RenderWindow* window_;          ///< RenderWindow Object is stored here
-    Game* game_;                        ///< Reference to the Game
-    sf::Clock total_clock_;             ///< Clock to keep track of total time for Animated Shaders
-    std::unordered_map<std::string, sf::Drawable*> drawables_;
-    ////////////////////////////////////////////////////////////
-    ///< \brief List of all the Drawables that have no Shaders
-    ///
-    /// Each drawable has a 'name', that isn't necessarily unique
-    /// for drawables from an EntitySpriteComponent, the name's format is "[entity's name]_[sprite's name]"
-    ////////////////////////////////////////////////////////////
-    std::unordered_map<std::string, std::pair<sf::Drawable*, sf::Shader>> shader_drawables_;
-    ////////////////////////////////////////////////////////////
-    ///< \brief List of all the Drawables with Shaders
-    ///
-    /// std::pair<Drawable*, Shader> associates each drawable to it's shader
-    /// \see drawables_
-    ////////////////////////////////////////////////////////////
-
+    static RenderEngine* instance_;               ///< Singleton
+    static bool instantiated_;                    ///< Forces Singleton
+    sf::RenderWindow* window_;                    ///< RenderWindow Object is stored here
+    Game* game_;                                  ///< Reference to the Game
+    ESCDepthList ESC_list_;   ///< see type def at the top of file "using..." \see ESCDepthList
+public:    sf::Clock total_clock_;                ///< Clock to keep track of total time for Animated Shaders
 };
 
 #endif

@@ -3,9 +3,9 @@
     {
         "id" : 0,
 
-        "type" : "MENU",
+        "type" : "GAMEPLAY",
 
-        "size" : [720, 720],
+        "size" : [400, 480],
 
         "origin" : [0, 0],
 
@@ -26,9 +26,9 @@
 
         "type" : "GAMEPLAY",
 
-        "size" : [720, 720],
+        "size" : [300, 480],
 
-        "origin" : [720, 0],
+        "origin" : [400, 0],
 
         "colliders": [
             [0, 0, 20, 400],

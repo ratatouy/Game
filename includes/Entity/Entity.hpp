@@ -52,7 +52,6 @@ public:
     Entity(std::string name, sf::Transformable* tr) : name_(name), transformable(tr)
     {entitySprite = new EntitySpriteComponent(transformable);};
 
-
     ////////////////////////////////////////////////////////////
     /// \brief Create an entity from a name, a sf::Transformable and an EntitySpriteComponent
     ///
@@ -73,7 +72,7 @@ public:
     //////////////////////////////////////////////////////////
     virtual ~Entity()
     {
-        Logger::log(ENTITY, DEBUG, "DELETING entity");
+        Logger::log(ENTITY, DEBUG, "DELETING entity "+name_);
         delete entitySprite;
         delete transformable;
     };

@@ -1,4 +1,5 @@
 #include "Scenes/BasicScenes/MenuScene.hpp"
+#include "Game.hpp"
 
 void MenuScene::update()
 {

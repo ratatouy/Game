@@ -1,8 +1,11 @@
 #include "Scenes/BasicScenes/GameplayScene.hpp"
+#include "Game.hpp"
 
 void GameplayScene::update()
 {
     updateEntities();
+    // will send a SceneTransitionEvent if found
+    checkTransition();
 }
 
 void GameplayScene::updateEntities()
@@ -32,6 +35,7 @@ void GameplayScene::updateEntities()
             }
         }
 
+        // Update ESC
         entity_pair.second->entitySprite->update();
     }
 }

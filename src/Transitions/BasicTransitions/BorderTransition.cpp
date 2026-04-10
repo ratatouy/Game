@@ -1,9 +1,12 @@
 #include "Transitions/BasicTransitions/BorderTransition.hpp"
 #include "Scenes/Scene.hpp"
+#include "Entity/Player/Player.hpp"
 
-
-bool VerticalTransition::checkTransition(ColliderComponent* player_col) const
+bool VerticalTransition::checkTransition() const
 {
+    const Player* player = scene_->getEntity<Player>("player");
+    const ColliderComponent* player_col = player->getColliderComponent();
+
     sf::Vector2f player_pos  = player_col->getTransformable()->getPosition();
     sf::Vector2f player_size = player_col->getSize();
     sf::Vector2u scene_size  = scene_->getSize();
@@ -25,19 +28,23 @@ bool VerticalTransition::checkTransition(ColliderComponent* player_col) const
 
 
 
-bool HorizontalTransition::checkTransition(ColliderComponent* player_col) const
+bool HorizontalTransition::checkTransition() const
 {
+    const Player* player = scene_->getEntity<Player>("player");
+    const ColliderComponent* player_col = player->getColliderComponent();
+
     sf::Vector2f player_pos  = player_col->getTransformable()->getPosition();
     sf::Vector2f player_size = player_col->getSize();
     sf::Vector2u scene_size  = scene_->getSize();
     sf::Vector2i scene_pos   = scene_->getOrigin();
 
     // if the player's coordinates do not satisfy the vertical conditions
-    // those conditions being independant of the orientation of the horizontal transition
-    if (player_pos.y > scene_pos.y + start_
-        || player_pos.y + player_size.y < scene_pos.y + end_)
+    // (those conditions being independant of the orientation of the horizontal transition)
+    // return false immediatly
+    if (player_pos.y < scene_pos.y + start_
+     || player_pos.y + player_size.y > scene_pos.y + end_)
         return false;
-
+ 
     // if right check if the player is right of the scene
     // if not (left) check if the player is left of the scene
     return (right_) ?

@@ -7,7 +7,6 @@
 ////////////////////////////////////////////////////////////
 #include "Transitions/Transition.hpp"
 
-
 ////////////////////////////////////////////////////////////
 /// \brief Manages transitions from the border of a screen to a neighboring screen
 ///
@@ -39,24 +38,6 @@ public:
         start_ = start;
         end_ = end;
     }
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Deletes Empty checkTransition
-    ////////////////////////////////////////////////////////////
-    virtual bool checkTransition() const override = 0;
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Check if the transition should be activated according to the player's sf::Transformable
-    ///
-    /// overrides Transition method but still does not implement it,
-    /// as it will be implemented in the subclasses HorizontalTransition and VerticalTransition.
-    ///
-    /// \param player_tr The player's sf::Transformables
-    ///
-    /// \returns True if the Transition should be activated
-    ////////////////////////////////////////////////////////////
-    virtual bool checkTransition(ColliderComponent* player_tr) const override = 0;
-
 
 protected:
     int start_;
@@ -106,16 +87,19 @@ public:
     VerticalTransition(Scene* scene, std::string target, std::string name, int start, int end, bool down = true)
         : BorderTransition(scene, target, name, start, end), down_(down) {}
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Returns a boolean for the orientation of the transition
+    ///
+    /// \returns True if the transition goes down, false if it goes up
+    ////////////////////////////////////////////////////////////
+    bool isGoingDown() const { return down_; }
 
     ////////////////////////////////////////////////////////////
-    /// \brief Checks if the player is within the activation zone of the transition
-    ///
-    /// \param player_tr The player's sf::Transformable
-    ///
+    /// \brief Check if transition should be activated
+    /// 
     /// \returns True if the Transition should be activated
     ////////////////////////////////////////////////////////////
-    bool checkTransition(ColliderComponent* player_tr) const override;
-
+    bool checkTransition() const override;
 
 
 private:
@@ -159,16 +143,19 @@ public:
     HorizontalTransition(Scene* scene, std::string target, std::string name, int start, int end, bool right = true)
         : BorderTransition(scene, target, name, start, end), right_(right) {}
 
+    ////////////////////////////////////////////////////////////
+    /// \brief Returns a boolean for the orientation of the transition
+    ///
+    /// \returns True if the transition goes right, false if it goes left
+    ////////////////////////////////////////////////////////////
+    bool isGoingRight() const { return right_; }
 
     ////////////////////////////////////////////////////////////
-    /// \brief Check if the player is within or past the activation zone of the transition
-    ///
-    /// \param player_tr The player's sf::Transformable
+    /// \brief Check if transition should be activated
     ///
     /// \returns True if the Transition should be activated
     ////////////////////////////////////////////////////////////
-    bool checkTransition(ColliderComponent* player_tr) const override;
-
+    bool checkTransition() const override;
 
 
 private:

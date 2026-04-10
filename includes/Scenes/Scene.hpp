@@ -4,12 +4,13 @@
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
-#include <memory>
-
 #include <SFML/Graphics.hpp>
+#include <memory>
 
 #include "Entity/Entity.hpp"
 #include "Entity/CollidableEntity.hpp"
+
+/// Events
 #include "Events/Event.hpp"
 #include "Events/CustomEvent.hpp"
 #include "Events/BasicEvents/SceneTransitionEvent.hpp"
@@ -75,7 +76,7 @@ public:
     const sf::Vector2u& getSize() const {return size_;}
     
     ////////////////////////////////////////////////////////////
-    /// \brief returns a reference to the Entity according to its name
+    /// \brief returns a const reference to the Entity according to its name
     ///
     /// Returns nullptr if not found.
     ///
@@ -84,10 +85,38 @@ public:
     /// \returns pointer to the entity, nullptr if not found
     ///
     /// \see Entity
-    ///
-    /// \todo Make this const
     ////////////////////////////////////////////////////////////
     const Entity* getEntity(std::string name) const;
+    ///////////////////////////////////////////////////////////
+    /// \brief returns a const reference to the Entity according to its name
+    ///
+    /// If the entity cannot be casted to type T it will return nullptr.
+    /// It also returns nullptr if there is no entity with this name.
+    ///
+    /// \tparam T type of the entity
+    ///
+    /// \param name name of the entity
+    ///
+    /// \returns pointer to the entity, can be nullptr
+    ///
+    /// \see Entity
+    ////////////////////////////////////////////////////////////
+    template <typename T>
+    const T* getEntity(std::string name) const
+    {
+        // The function has to be there because of the template
+        // If I wanted to put it in the cpp file,
+        // I'd have to add one declaration for each type of entity
+        // Which is not good for maintainability
+        for (auto ent : entity_map_) {
+            if (name == ent.first) {
+                T* entity = dynamic_cast<T*>(ent.second);
+                // returns nullptr if casting failed
+                return entity;
+            }
+        }
+        return nullptr;
+    }
 
     ////////////////////////////////////////////////////////////
     /// \brief Extracts an entity from the scene
@@ -97,8 +126,50 @@ public:
     /// \param name name of the entity
     ///
     /// \returns pointer to the entity, nullptr if not found
+    ///
+    /// \see T* extractEntity for templated version
     ////////////////////////////////////////////////////////////
     Entity* extractEntity(std::string name);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Extracts an entity of type T and named name from the scene
+    ///
+    /// Only extracts the entity if it can be casted to type T
+    /// This removes the entity from the map
+    /// 
+    /// \tparam T type of the entity
+    ///
+    /// \param name name of the entity
+    ///
+    /// \returns pointer to the entity, nullptr if not found or cannot be casted
+    ///
+    /// \see Entity* extractEntity for non template version
+    ///
+    /// \todo test this function
+    ////////////////////////////////////////////////////////////
+    template <typename T>
+    T* extractEntity(std::string name)
+    {
+        // The function has to be there because of the template
+        // If I wanted to put it in the cpp file,
+        // I'd have to add one declaration for each type of entity
+        // Which is not good for maintainability
+        Logger::log(SCENE, DEBUG, "EXTRACTING entity " + name);
+        T* entity = nullptr;
+
+        // search for the entity
+        for (auto ent : entity_map_) {
+            // Found the corresponding name
+            if (name == ent.first)
+                entity = dynamic_cast<T*>(ent.second);
+        }
+
+        if (entity == nullptr)
+            Logger::log(SCENE, WARNING, "Extract : Entity " + name + " not found or cannot be casted");
+
+        entity_map_.erase(name);
+        return entity;
+    }
 
     ////////////////////////////////////////////////////////////
     /// \brief CustomEvent process distributor
@@ -132,6 +203,16 @@ public:
     void throwEvent(std::unique_ptr<Event> event);
 
     ////////////////////////////////////////////////////////////
+    /// \brief Adds a transition to the scene
+    ///
+    /// The transition has to be fully constructed before adding it to the scene,
+    /// this functions just takes a pointer to the transition.
+    ///
+    /// \param transition transition to add
+    ////////////////////////////////////////////////////////////
+    void addTransition(Transition* transition);
+
+    ////////////////////////////////////////////////////////////
     /// \brief Adds an entity to the scene
     ///
     /// The entity has to be fully constructed before adding it to the scene,
@@ -154,18 +235,19 @@ public:
     bool checkTransition();
 
     ////////////////////////////////////////////////////////////
-    /// \brief Gives a reference of all drawables to the renderEngine
+    /// \brief Gives a reference of all the drawables of the scene
+    /// to the renderEngine so that they can be rendered
     ///
-    /// Asssumes none of those drawables are already attached.
+    /// Asssumes none of those Drawables are already attached.
     /// If they are, they will be rendered twice with the exact same position & everything.
     /// So beware !!!!!!
     ///
-    /// It attaches :
-    /// \li the entities
+    /// for now it attaches :
+    /// \li the EntitySpriteComponents
     ///
     /// Missing :
     /// \li Solid Tiles
-    /// \li pure render assets
+    /// \li pure render assets (like decals or backgrounds)
     ///
     /// \param renderEngine Reference to the RenderEngine
     ////////////////////////////////////////////////////////////
@@ -178,7 +260,7 @@ protected:
     Game* game_;                                                  ///< Reference to the game object
     std::string name_;                                            ///< Name of the current_scene
     std::unordered_map<std::string, Transition*> transition_map_; ///< Map of the Transitions
-    std::unordered_map<std::string, Entity*> entity_map_;         ///< List of the entities according to their names
+    std::unordered_map<std::string, Entity*> entity_map_;         ///< Map of the Entities
     sf::Vector2i origin_;                                         ///< Origin of the current scene in the global space
     sf::Vector2u size_;                                           ///< Size of the current scene
 

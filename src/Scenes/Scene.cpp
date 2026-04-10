@@ -2,6 +2,7 @@
 #include "Transitions/Transition.hpp"
 #include "Game.hpp"
 #include "Engine/RenderEngine.hpp"
+#include "Entity/Player/Player.hpp"
 
 #include "logger.hpp"
 
@@ -18,12 +19,14 @@ Scene::~Scene()
     entity_map_.clear();
 };
 
+void Scene::addTransition(Transition* transition)
+{
+    transition_map_[transition->getName()] = transition; // doesn't check for duplicity //
+}
 
 void Scene::addEntity(Entity* entity)
 {
-    Logger::log(SCENE, DEBUG, "ADDING entity " + entity->getName());
     entity_map_[entity->getName()] = entity; // doesn't check for duplicity //
-    Logger::log(SCENE, DEBUG, "ADDING entity " + entity->getName());
     entity->setScene(this);
 }
 
@@ -37,23 +40,23 @@ const Entity* Scene::getEntity(std::string name) const
     return nullptr;
 }
 
+
 Entity* Scene::extractEntity(std::string name)
 {
     Logger::log(SCENE, DEBUG, "EXTRACTING entity " + name);
-    Entity* entity = nullptr;
 
     // search for the entity
     for (auto ent : entity_map_) {
+        // Found it
         if (name == ent.first)
-            entity = ent.second;
+        {
+            entity_map_.erase(name);
+            return ent.second;
+        }
     }
-
-    if (entity == nullptr)
-        Logger::log(SCENE, WARNING, "Extract : Entity " + name + " not found");
-
-    entity_map_.erase(name);
-    return entity;
+    return nullptr;
 }
+
 
 void Scene::distributeEvent(CustomEvent* event)
 {
@@ -77,12 +80,13 @@ bool Scene::checkTransition()
 {
     for (auto transition_pair : transition_map_)
     {
-        sf::Transformable* player_transform = getEntity("player")->transformable;
-        if (player_transform == nullptr)
+        const Player* player = getEntity<Player>("player");
+        
+        if (player == nullptr)
             throw(std::runtime_error("Player transform not found"));
         
         if (transition_pair.second->checkTransition())
-            throwEvent(std::make_unique<SceneTransitionEvent>(transition_pair.second->getTargetName()));
+            throwEvent(std::make_unique<SceneTransitionEvent>(transition_pair.second));
     }
     return false;
 }
@@ -92,14 +96,7 @@ void Scene::attachDrawablesToRenderEngine(RenderEngine* renderEngine)
 {
     for (auto it : entity_map_)
     {
-        auto data = it.second->entitySprite->GetSpriteData();
-        
-        // run through the map of the entitySprite
-        for (auto it2 = data->begin(); it2 != data->end(); it2++)
-        {
-            std::string drawable_name = it.first + std::string("_") + (std::string)it2->first;
-
-            renderEngine->addDrawable(drawable_name, (sf::Drawable*)&it2->second.sprite);
-        }
+        // attach each ESCs
+        renderEngine->addESC(it.second->getName(), it.second->entitySprite);
     }
 }
